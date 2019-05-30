@@ -2,98 +2,72 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id B8F902ACCF
-	for <lists+mjpeg-users@lfdr.de>; Mon, 27 May 2019 03:38:13 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 551302FFDA
+	for <lists+mjpeg-users@lfdr.de>; Thu, 30 May 2019 18:06:07 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1hV4aT-00032a-MJ; Mon, 27 May 2019 01:38:05 +0000
+	id 1hWNZ4-0002nw-5Q; Thu, 30 May 2019 16:06:02 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <drewanderson1900@gmail.com>) id 1hV4aS-00032T-NX
- for mjpeg-users@lists.sourceforge.net; Mon, 27 May 2019 01:38:04 +0000
+ (envelope-from <shadowlord@utanet.at>) id 1hWNZ2-0002nh-S5
+ for mjpeg-users@lists.sourceforge.net; Thu, 30 May 2019 16:06:00 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=To:Message-Id:Subject:Date:Mime-Version:
- Content-Transfer-Encoding:Content-Type:From:Sender:Reply-To:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
+ MIME-Version:Date:Message-ID:From:References:To:Subject:Sender:Reply-To:Cc:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=+Fa+3vvewkcx2pb5Ok11IJ5w23UBRdA9dlAqrQS+qEM=; b=Z1uKpkvR/ravOOZVQXcfdHSA7N
- IU1RlkYFtFceXH2oX+6Hqrn5mPj7fucY+FgtVc4gnA7IAGcAMtBgw6oCiZbKXHJz/a7Fx4hbdLt1W
- q8sw0MwXkQk+h+mq3xJkAAE2DJHlHuoQOzbXu05O/r/r8WgyXR1GSw8G60bVEvvv6/ts=;
+ bh=sVm5z7q51cebhKWhIgzAr5c6fwaHRNRmwW3aQaAeL0E=; b=MKrFYO5UEzFmFtu9AkCjDtGgNX
+ 6noZVMJyLfOMSJ08o8ffMBFnAvdGHt77C+6LIwCsoy4Pucke8jn2hNUO74U0r7vo/WcuLEkJe4rue
+ Q30EghmiuYA7+sK2YOjGJ5rMXjlH1M6yODpAl4G3IbxWZB5CNP0UWleYzhm9X9qT4fnw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=To:Message-Id:Subject:Date:Mime-Version:Content-Transfer-Encoding:
- Content-Type:From:Sender:Reply-To:Cc:Content-ID:Content-Description:
- Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
- In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
+ Message-ID:From:References:To:Subject:Sender:Reply-To:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=+Fa+3vvewkcx2pb5Ok11IJ5w23UBRdA9dlAqrQS+qEM=; b=EwG88v9lN53s1fHH7cOjcc5E/s
- od2gJ0Yx8fwz8AwcOgsJNCjOKFXLMUeKwS+x9eWo2ysLJwrxTKiiSI2vkx62PU+aM46U3ZqkZAHqv
- uN41vpF9qKie3l+MS57Z5RjlEc2GWVjkHrL8x5cww1ux48Q5Ke9JiboP5uBlV5OLjJOo=;
-Received: from mail-pg1-f178.google.com ([209.85.215.178])
+ bh=sVm5z7q51cebhKWhIgzAr5c6fwaHRNRmwW3aQaAeL0E=; b=ikMoTv2OdtJiNGHsosjIYBXrJO
+ +si3J5RHTPLeKAkAg/sqWrblA37Bud2anOEyh3mORjckM7Q9QiA5j71fv+526uZDtW5nDEm3vWlo8
+ fmwka5S1eoPx37ne3/ElNwc+Hm7C02+qMIn+yGvDqc2TLPKxyCDKWO3IKm5x3yU2VODc=;
+Received: from taro.utanet.at ([213.90.36.45])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.90_1)
- id 1hV4aR-003qru-H4
- for mjpeg-users@lists.sourceforge.net; Mon, 27 May 2019 01:38:04 +0000
-Received: by mail-pg1-f178.google.com with SMTP id t1so8146956pgc.2
- for <mjpeg-users@lists.sourceforge.net>; Sun, 26 May 2019 18:38:03 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:content-transfer-encoding:mime-version:date:subject:message-id
- :to; bh=+Fa+3vvewkcx2pb5Ok11IJ5w23UBRdA9dlAqrQS+qEM=;
- b=imLqoP1Lpi9T7Babg96DEFrvf0SdXvVyTsYymWtptrxaw1JRUt+vhsdM3nhZhpZTNV
- cINEa/fAs+IIUjT2cTsI8Gks6rz6jfRyIumHyMfvhcN9dVgoBHIyn703LQymMimWy6zb
- T9uQFipKLz2bmk8l3olKYMBR/Bqr/XiNO49T8u6MXpnnwrpndoyTzL1CiblkpZu0LxU/
- YcNIV1mH1Tzln7YdNVwfQHnRjFn1Rpj9L3rtzaQpNEAoXmqBQWKBQY4tS9eqmpM4xlgN
- HnOZ9K47ZyQoKCVcbyORzX12rJ4Jlo3GfbyPUH5xpWwZb5yoizuDD3s72PpfBcA2kn7R
- mzlg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:content-transfer-encoding:mime-version:date
- :subject:message-id:to;
- bh=+Fa+3vvewkcx2pb5Ok11IJ5w23UBRdA9dlAqrQS+qEM=;
- b=l041wynyKAxJGPrpX+yY4NRrZr3jMvEvBjm62qMsa812W0OE8QOy+0+jmDvrR3M/rk
- m6wUtSF9arp4Q+e/T30dOnVe3YxyKW6oMJHDUYRayp116I7aHDJrqSZskedcuijC6LJ3
- sFQaakMVt8hm8qIQMJz9j0GUK79+Qrh3/n7rJpgJB8ykpXIUuKBFb9IR7i2EV59Vsmp7
- 2lHQhQp3nai7RIo+XS9EgIBt4E7sS2LPo/C0YZ4w/ocigCaM/Q4PZ3GyeTXV9exIooeC
- gdTqjUuDU0zKawQrZasUIbhUyXHx+s1f+kirvJFanv9sd/VLN4jXfBKYtbz7uaPa/ec9
- rnHA==
-X-Gm-Message-State: APjAAAVqQARnQn1+PJA66d7MQUUVtZD4NLgzDpKUQEtahI1nUL603VgD
- Gx2cABFaho7wzC/Lro6CcVa3t/dL
-X-Google-Smtp-Source: APXvYqz0EZXhWBLJKY6vU7DNi4Ib5EmQfv0IzK4rdZXVDI9CsV9it5OZk2OTJYK1Y1ulDgtnEtf/1g==
-X-Received: by 2002:a65:5347:: with SMTP id w7mr66954095pgr.375.1558921077589; 
- Sun, 26 May 2019 18:37:57 -0700 (PDT)
-Received: from [192.168.1.6] (cpe-76-90-138-222.socal.res.rr.com.
- [76.90.138.222])
- by smtp.gmail.com with ESMTPSA id l141sm10949826pfd.24.2019.05.26.18.37.57
- for <mjpeg-users@lists.sourceforge.net>
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Sun, 26 May 2019 18:37:57 -0700 (PDT)
-From: Drew Anderson <drewanderson1900@gmail.com>
-Mime-Version: 1.0 (1.0)
-Date: Sun, 26 May 2019 18:37:56 -0700
-Message-Id: <981A6FA6-6DD9-414F-9BD5-444B742D8299@gmail.com>
-To: mjpeg-users@lists.sourceforge.net
-X-Mailer: iPhone Mail (16E227)
-X-Spam-Score: 0.2 (/)
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ id 1hWNZ0-00Ecld-4t
+ for mjpeg-users@lists.sourceforge.net; Thu, 30 May 2019 16:06:00 +0000
+Received: from paris.xoc.tele2net.at ([213.90.36.7])
+ by taro.utanet.at with esmtps (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256)
+ (Exim 4.89) (envelope-from <shadowlord@utanet.at>)
+ id 1hWNJe-0007c1-SA; Thu, 30 May 2019 17:50:06 +0200
+Received: from 193-154-43-49.adsl.highway.telekom.at ([193.154.43.49]
+ helo=[10.20.30.39]) by paris.xoc.tele2net.at with esmtpsa
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.91)
+ (envelope-from <shadowlord@utanet.at>)
+ id 1hWNJe-0004OA-OG; Thu, 30 May 2019 17:50:06 +0200
+To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>,
+ Drew Anderson <drewanderson1900@gmail.com>
+References: <981A6FA6-6DD9-414F-9BD5-444B742D8299@gmail.com>
+From: Bernhard Praschinger <shadowlord@utanet.at>
+Message-ID: <4f2eaa96-4524-e214-89a6-9c4d7e8f9c48@utanet.at>
+Date: Thu, 30 May 2019 17:49:51 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Firefox/52.0 SeaMonkey/2.49.4
+MIME-Version: 1.0
+In-Reply-To: <981A6FA6-6DD9-414F-9BD5-444B742D8299@gmail.com>
+X-TELE2-Authenticated-As: 2492d812503ae882f041a3ed11d939a345349e8a
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- (drewanderson1900[at]gmail.com)
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [209.85.215.178 listed in list.dnswl.org]
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: utanet.at]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends in
- digit (drewanderson1900[at]gmail.com)
- -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
- domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
-X-Headers-End: 1hV4aR-003qru-H4
-Subject: [Mjpeg-users] True cbr for MPEG 1
+X-Headers-End: 1hWNZ0-00Ecld-4t
+Subject: Re: [Mjpeg-users] True cbr for MPEG 1
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -106,19 +80,38 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-Hello,
+Hallo
 
-I need to create MPEG 1 video that is flagged and truly 1500 cbr. I have tried many things. I can submit settings but I wanted to ensure first that cbr is truly still supported. 
+> I need to create MPEG 1 video that is flagged and truly 1500 cbr. I
+> have tried many things. I can submit settings but I wanted to ensure
+> first that cbr is truly still supported.
+It is supported and it should work.
 
-For instance, Format 1 which is VCD comes up variable. Or If I set it to format 0 and use - -cbr alone it will still remain variable. The list goes on...
+Using the -u/--cbr option and -b some-value to get a constant bitrate 
+stream.
 
-Any help is gracefully appreciated,
-Drew
+> For instance, Format 1 which is VCD comes up variable. Or If I set it
+> to format 0 and use - -cbr alone it will still remain variable. The
+> list goes on...
 
+If you set the encoding option -f 1 or --format 1,
+you don't need the -u/--cbr and -b the proper values are set.
+
+If you want a VCD with a non comform bitrate of 1500 kBits/sec, you 
+should use a command like that:
+... | mpeg2enc -f 2 -b 1500 -u -o video.m1v
+
+-- 
+auf hoffentlich bald,
+
+Berni the Chaos of Woodquarter
+
+Email: shadowlord@utanet.at
+www: http://www.lysator.liu.se/~gz/bernhard
 
 
 _______________________________________________
