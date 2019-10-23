@@ -2,77 +2,79 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1CDF0CDA70
-	for <lists+mjpeg-users@lfdr.de>; Mon,  7 Oct 2019 04:32:38 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9A16AE0FF7
+	for <lists+mjpeg-users@lfdr.de>; Wed, 23 Oct 2019 04:16:57 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1iHIp5-0002nI-5R; Mon, 07 Oct 2019 02:32:31 +0000
+	id 1iN6Ch-0003xc-5q; Wed, 23 Oct 2019 02:16:51 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <SRS0=oxnEjO=YA=jankom.net=janos@eigbox.net>)
- id 1iHIp3-0002n8-Ax
- for mjpeg-users@lists.sourceforge.net; Mon, 07 Oct 2019 02:32:29 +0000
+ (envelope-from <SRS0=S7674Y=YQ=jankom.net=janos@eigbox.net>)
+ id 1iN6Ce-0003xF-LX
+ for mjpeg-users@lists.sourceforge.net; Wed, 23 Oct 2019 02:16:49 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Sender:Content-Type:In-Reply-To:MIME-Version:Date:
- Message-ID:From:References:To:Subject:Reply-To:Cc:Content-Transfer-Encoding:
+ Message-ID:References:To:From:Subject:Reply-To:Cc:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=2k8yONGEXrwSZTF/YZUSqLKqP15Zq+O0uK4DpBISleg=; b=BN+B5Px/6HgEkrvQH5tLAZL4SD
- a4I0pW/O49TNzZhYAZwtqBJYgWNK4aH+1MiQ0qa/9RaPeaxmjeMAR/b4yFAO+zk9zg1GuVkuHkQyt
- bjgrLminB3o+FIyHJRuryxtZY2W5bgm2YgnTp/Pd5G0ph4CTE5LQIN9NfvqMXMvhEEds=;
+ bh=5HuPHXoknX3qK520YwkMS5Yu+7ICPvc2VN/KVNBq9+E=; b=i2QR97PisQgs8QmekKiIdCX6GG
+ o0JlCVkHL0Jm2XOTm7zdzk9ot7ssZU30waqdAPT25DhcGs5cZjE3sD015yA6tPaKfdHuXJhnuJ+JU
+ b8fh2LXkMzCAoSHYle9jHRoRhhPaO3mzaCQKT0XDpVkP0qlhMJNTPrqRUePJlhGPNfew=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Sender:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:
- References:To:Subject:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ h=Sender:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:References:
+ To:From:Subject:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=2k8yONGEXrwSZTF/YZUSqLKqP15Zq+O0uK4DpBISleg=; b=QjuDVErGoHgPvmllg3zTdXZ/w/
- MOrefZpKZdvrW3PVkg6r1MP6MiznlpL+iJ+WMC0fKOHF0eRpnwpDJtGdl9v0DOa/2dDdiHvEF5BJE
- b8hBoMbp4ciu3aQtOJaINpAJjDyvZRGa46QnhnuuqwN+bl9cJhS5dpRSJhBLsmABZg2w=;
-Received: from bosmailout07.eigbox.net ([66.96.186.7])
- by sfi-mx-3.v28.lw.sourceforge.com with esmtps
+ bh=5HuPHXoknX3qK520YwkMS5Yu+7ICPvc2VN/KVNBq9+E=; b=eFkxfBO6PZDJ7WZEjZMZKGZVyz
+ xpespiVnFRpdI2myQNGxiGyZh7e+kq8izJVV7+KxvWSy7bNEs7+ZoO8tyin8dUvMW3Ie5CihEZMIi
+ jXt+gkgh9tx68Al1tgkNMHMU5uAx9EMnap4fJ0T+4WUsaS2Y4d0a9oj6CH6y72n3YSRc=;
+Received: from bosmailout07.eigbox.net ([66.96.189.7])
+ by sfi-mx-4.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1iHIoy-001kmA-E5
- for mjpeg-users@lists.sourceforge.net; Mon, 07 Oct 2019 02:32:29 +0000
-Received: from bosmailscan05.eigbox.net ([10.20.15.5])
- by bosmailout07.eigbox.net with esmtp (Exim) id 1iHILY-0003KP-DU
- for mjpeg-users@lists.sourceforge.net; Sun, 06 Oct 2019 22:02:00 -0400
+ id 1iN6Ca-00HQh6-Vz
+ for mjpeg-users@lists.sourceforge.net; Wed, 23 Oct 2019 02:16:48 +0000
+Received: from bosmailscan14.eigbox.net ([10.20.15.14])
+ by bosmailout07.eigbox.net with esmtp (Exim) id 1iN6CU-0007na-Nu
+ for mjpeg-users@lists.sourceforge.net; Tue, 22 Oct 2019 22:16:38 -0400
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=jankom.net; 
  s=dkim;
- h=Sender:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:
- References:To:Subject:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ h=Sender:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:
+ References:To:From:Subject:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=2k8yONGEXrwSZTF/YZUSqLKqP15Zq+O0uK4DpBISleg=; b=tx0dKgRuhgTj4OL4gx4Lehdhk2
- vs+W7NQq25wB6GWamyEmWEH0ZeJ4tOY5v1FsCZOTTWqbMKVaIKdo6Vl5O3z0CznqUbo0eW69+qhPh
- GodzcxqFOmBGR+KmEBLdss5kUsG0rRwI8RW2ulbAxpVScXuYmI+oCcLXdxxcRXv6g4c+wfeOD4Zks
- svdZTbRhDrMmXiwJisP5Ma579pFPMA21tYZlmenFDFozeFqc7m1viOT/RsQatdjjpY52u8wEzHE85
- Zk8ZGsr9l0ZFvtqJZijINCSn6retc0fkbI7RfKPl5mwuQf2Kgblak3OSgbKaMnPia4RxyDf4Et8Px
- RZN9HL8g==;
-Received: from [10.115.3.33] (helo=bosimpout13)
- by bosmailscan05.eigbox.net with esmtp (Exim) id 1iHILY-0007Qa-Ac
- for mjpeg-users@lists.sourceforge.net; Sun, 06 Oct 2019 22:02:00 -0400
-Received: from bosauthsmtp10.yourhostingaccount.com ([10.20.18.10])
- by bosimpout13 with 
- id AS1w210070D2CUy01S1z6M; Sun, 06 Oct 2019 22:02:00 -0400
-X-Authority-Analysis: v=2.2 cv=McAcg93f c=1 sm=1 tr=0
- a=Kpo39fPXdbgqDwiI3/AEUA==:117 a=kOTrr/Y2Bbk5xdrmRE01Sg==:17
- a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=XobE76Q3jBoA:10 a=NDIJpQQ1qYMA:10
- a=r77TgQKjGQsHNAKrUKIA:9 a=R8GGIHSBnN9BsJG3e1YA:9 a=QEXdDO2ut3YA:10
- a=TIP1St4efnc7_uYCm9YA:9 a=bLDaP9q21DhirTXI:21 a=_W_S_7VecoQA:10
-Received: from ip-184-209-22-81.spfdma.spcsdns.net ([184.209.22.81]:37316
- helo=[192.168.43.98]) by bosauthsmtp10.eigbox.net with esmtpa (Exim)
- id 1iHILT-0003wW-Un; Sun, 06 Oct 2019 22:01:56 -0400
-To: Bernhard Praschinger <shadowlord@utanet.at>,
- MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
+ bh=5HuPHXoknX3qK520YwkMS5Yu+7ICPvc2VN/KVNBq9+E=; b=gD53egrbERSTcw4zxaGxupY1yb
+ 5wObVBMlwLvDjryKWQTn8WPh4ugSRTQp9+uF2hpGdVYR/iq+bgVRZvRGJaBsERsVS9Wqm2cfIgj5m
+ tb975dMF95ojVUl+W+hgbSA2AKHovbw/QFLaF+x7GWhAn+j/QpSULnxBuMzfshSFIvT/0DcKpK1Af
+ zQ8EUpYYVwocb1LiNUT1GpetZywuijNjHBgs/dFOeN0VcXu7G5TwZF9L9g+fSCtOG6QLp/dQwHhMw
+ gSZlyUWratyRPD0ljl2y0Ml1usdTedahO3XKGFeRcDUmzpswPPV0MYr4fSa73K2n1OJkhmhGIAXOR
+ tnUKJoeg==;
+Received: from [10.115.3.32] (helo=bosimpout12)
+ by bosmailscan14.eigbox.net with esmtp (Exim) id 1iN6CU-0006PO-ME
+ for mjpeg-users@lists.sourceforge.net; Tue, 22 Oct 2019 22:16:38 -0400
+Received: from bosauthsmtp07.yourhostingaccount.com ([10.20.18.7])
+ by bosimpout12 with 
+ id GqGb21005099BUA01qGejj; Tue, 22 Oct 2019 22:16:38 -0400
+X-Authority-Analysis: v=2.2 cv=BKTDlBYG c=1 sm=1 tr=0
+ a=x8qw8EAkfcRkIpZA8Q87Bg==:117 a=4ZoZwTRS3OZv0fGbSO5GMQ==:17
+ a=jpOVt7BSZ2e4Z31A5e1TngXxSK0=:19 a=XobE76Q3jBoA:10 a=K1r92t-URfIA:10
+ a=r77TgQKjGQsHNAKrUKIA:9 a=orgLIPbXeL1lqqtpy9IA:9 a=QEXdDO2ut3YA:10
+ a=jDPn5Ez8AAAA:8 a=ngaSCEfqfG9fF5WN-qUA:9 a=7noIMNDnCYc2vbC6:21
+ a=_W_S_7VecoQA:10 a=qBBZk9_c10KGGu05SxeP:22
+Received: from ip-184-209-14-133.spfdma.spcsdns.net ([184.209.14.133]:53134
+ helo=[192.168.43.98]) by bosauthsmtp07.eigbox.net with esmtpa (Exim)
+ id 1iN6CR-0002jF-3R
+ for mjpeg-users@lists.sourceforge.net; Tue, 22 Oct 2019 22:16:35 -0400
+From: Janos G Komaromi <janos@jankom.net>
+To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
 References: <72e946c8-6e65-1aac-b0ac-233142a3d85d@jankom.net>
  <f9198f58-8ca5-9b96-b0ff-cc250bd328c3@utanet.at>
-From: Janos G Komaromi <janos@jankom.net>
+ <4d5ce88d-a2b8-d575-6daa-fd693fd15f9b@jankom.net>
 Openpgp: preference=signencrypt
 Autocrypt: addr=janos@jankom.net; prefer-encrypt=mutual; keydata=
  xsFNBFqAWfYBEAC/g2Gi3DFvP019h/YylfkUhetj4N0obXoOUdO43uKQr0CPr1g4Jt7/yRCO
@@ -117,24 +119,26 @@ Autocrypt: addr=janos@jankom.net; prefer-encrypt=mutual; keydata=
  rsuWeyQ15DsQRwNruWNJfCCr50t5FAVenQpDFt1yrPpBEbuzdJwxXfM3ZQsnXJDL49rjQiLS
  6y0DFvkQ2MNyNXqQo68uw5dfEzQVjpMsknt1KCiw8QfUcCP2u9x2gvroYfzLOzPmDDKRcvE9
  UYUTIV2sdQ==
-Message-ID: <4d5ce88d-a2b8-d575-6daa-fd693fd15f9b@jankom.net>
-Date: Sun, 6 Oct 2019 22:01:52 -0400
+Message-ID: <5e0de915-640c-8b5c-0a91-06588580fb6c@jankom.net>
+Date: Tue, 22 Oct 2019 22:16:33 -0400
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.8.0
+ Thunderbird/60.9.0
 MIME-Version: 1.0
-In-Reply-To: <f9198f58-8ca5-9b96-b0ff-cc250bd328c3@utanet.at>
+In-Reply-To: <4d5ce88d-a2b8-d575-6daa-fd693fd15f9b@jankom.net>
 Content-Language: en-US
 X-EN-UserInfo: 44a69bc9b6dca178582a57c3954217da:931c98230c6409dcc37fa7e93b490c27
 X-EN-AuthUser: janos@jankom.net
-X-EN-OrigIP: 184.209.22.81
-X-EN-OrigHost: ip-184-209-22-81.spfdma.spcsdns.net
+X-EN-OrigIP: 184.209.14.133
+X-EN-OrigHost: ip-184-209-14-133.spfdma.spcsdns.net
 X-Spam-Score: 1.1 (+)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: nouveau_vieux_dri.so]
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [66.96.186.7 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [66.96.186.7 listed in wl.mailspike.net]
+ trust [66.96.189.7 listed in list.dnswl.org]
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
  domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -145,7 +149,7 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1iHIoy-001kmA-E5
+X-Headers-End: 1iN6Ca-00HQh6-Vz
 Subject: Re: [Mjpeg-users] capture card not working with nvidia driver
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -159,69 +163,39 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Content-Type: multipart/mixed; boundary="===============8291280285898607567=="
+Content-Type: multipart/mixed; boundary="===============2813953908043036057=="
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format.
---===============8291280285898607567==
+--===============2813953908043036057==
 Content-Type: multipart/alternative;
- boundary="------------E17EF24FC57320D083A4B79E"
+ boundary="------------FE25B7B1E84C72D725754FE3"
 Content-Language: en-US
 
 This is a multi-part message in MIME format.
---------------E17EF24FC57320D083A4B79E
+--------------FE25B7B1E84C72D725754FE3
 Content-Type: text/plain; charset=utf-8
 Content-Transfer-Encoding: quoted-printable
 
-Hallo,
+Update:
 
-On 10/5/19 1:32 AM, Bernhard Praschinger wrote:
-> Hallo
+Found rpm package for the CentOS-6 and installed it after resolving
+libaa and libzvbi dependencies from the same package site. xawtv program
+started OK with blue screen window and complete settings window.
+However, I could not select the shown "overlay" capture option. The
+terminal output after entering xawtv command complains about:
+
+libGL error: could not load nouveau_vieux_dri.so.
+
+=C2=A0
+
+On 10/6/19 10:01 PM, Janos G Komaromi wrote:
 >
-> I'm just guessing but could it be that the nvidia driver expects a
-> different format or calls so it displays the video ? When you write
-> that you had problems with the drm and framebuffer modules, I guess
-> that they expect different API/Header/calls. Did you try a different
-> xawtv version ?
->
-> Did you try the different options xawtv offers ? (-fb, -xv/-noxv,
-> -dga/-nodga and others )
->
-Yes, I've tried them, none made a difference. In fact when I logged off
-(restarting X-server) the machine crashed. The nvidia driver may not be
-very stable on my machine.
-
-Other, related: I installed CentOS-6 (latest available RedHat distro for
-a 32-bit machine). It does have the nvidia equivalent nouveau driver,
-correct screen resolutions, and has not crashed yet. This is somewhat an
-updated version of my old Fedora-3 system that I heavily customized.
-xawtv works well if I boot to that system. So I tried tocompile xawtv on
-the CentOS, but make ended up in error. See below some relevant info:
-
-xawtv-3.95
-
-=2E/configure --enable-alsa --enable-gl --with-x
-
-configure: creating ./config.status
-config.status: creating Makefile
-config.status: creating xawtv.spec
-config.status: creating config.h
-
-console/fbtools.c:24:22: error: asm/page.h: No such file or directory
-console/fbtools.c: In function =E2=80=98fb_init=E2=80=99:
-console/fbtools.c:427: error: =E2=80=98PAGE_MASK=E2=80=99 undeclared (fir=
-st use in this
-function)
-console/fbtools.c:427: error: (Each undeclared identifier is reported
-only once
-console/fbtools.c:427: error: for each function it appears in.)
-make: *** [console/fbtools.o] Error 1
-
-Thanks, and
-Janos
+> Other, related: I installed CentOS-6 (latest available RedHat distro
+> for a 32-bit machine).
 
 
---------------E17EF24FC57320D083A4B79E
+--------------FE25B7B1E84C72D725754FE3
 Content-Type: text/html; charset=utf-8
 Content-Transfer-Encoding: 8bit
 
@@ -230,75 +204,44 @@ Content-Transfer-Encoding: 8bit
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   </head>
   <body bgcolor="#FFFFFF" text="#000000">
-    <font size="+1">Hallo,</font><br>
-    <br>
-    <div class="moz-cite-prefix">On 10/5/19 1:32 AM, Bernhard
-      Praschinger wrote:<br>
+    <font size="+1">Update:<br>
+      <br>
+      Found rpm package for the CentOS-6 and installed it after
+      resolving libaa and libzvbi dependencies from the same package
+      site. xawtv program started OK with blue screen window and
+      complete settings window. However, I could not select the shown
+      "overlay" capture option. The terminal output after entering xawtv
+      command complains about:<br>
+      <br>
+      libGL error: could not load nouveau_vieux_dri.so.<br>
+      <br>
+       <br>
+    </font><br>
+    <div class="moz-cite-prefix">On 10/6/19 10:01 PM, Janos G Komaromi
+      wrote:<br>
     </div>
     <blockquote type="cite"
-      cite="mid:f9198f58-8ca5-9b96-b0ff-cc250bd328c3@utanet.at">Hallo
+      cite="mid:4d5ce88d-a2b8-d575-6daa-fd693fd15f9b@jankom.net">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <br>
-      <br>
-      I'm just guessing but could it be that the nvidia driver expects a
-      different format or calls so it displays the video ? When you
-      write that you had problems with the drm and framebuffer modules,
-      I guess that they expect different API/Header/calls. Did you try a
-      different xawtv version ?
-      <br>
-      <br>
-      Did you try the different options xawtv offers ? (-fb, -xv/-noxv,
-      -dga/-nodga and others )
-      <br>
-      <br>
+      Other, related: I installed CentOS-6 (latest available RedHat
+      distro for a 32-bit machine).<br>
     </blockquote>
-    Yes, I've tried them, none made a difference. In fact when I logged
-    off (restarting X-server) the machine crashed. The nvidia driver may
-    not be very stable on my machine.<br>
-    <br>
-    Other, related: I installed CentOS-6 (latest available RedHat distro
-    for a 32-bit machine). It does have the nvidia equivalent nouveau
-    driver, correct screen resolutions, and has not crashed yet. This is
-    somewhat an updated version of my old Fedora-3 system that I heavily
-    customized. xawtv works well if I boot to that system. So I tried
-    tocompile xawtv on the CentOS, but make ended up in error. See below
-    some relevant info:<br>
-    <br>
-    xawtv-3.95<br>
-    <br>
-    ./configure --enable-alsa --enable-gl --with-x<br>
-    <br>
-    configure: creating ./config.status<br>
-    config.status: creating Makefile<br>
-    config.status: creating xawtv.spec<br>
-    config.status: creating config.h<br>
-    <br>
-    console/fbtools.c:24:22: error: asm/page.h: No such file or
-    directory<br>
-    console/fbtools.c: In function ‘fb_init’:<br>
-    console/fbtools.c:427: error: ‘PAGE_MASK’ undeclared (first use in
-    this function)<br>
-    console/fbtools.c:427: error: (Each undeclared identifier is
-    reported only once<br>
-    console/fbtools.c:427: error: for each function it appears in.)<br>
-    make: *** [console/fbtools.o] Error 1<br>
-    <br>
-    Thanks, and<br>
-    Janos<br>
     <br>
   </body>
 </html>
 
---------------E17EF24FC57320D083A4B79E--
+--------------FE25B7B1E84C72D725754FE3--
 
 
---===============8291280285898607567==
+--===============2813953908043036057==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8291280285898607567==
+--===============2813953908043036057==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -309,5 +252,5 @@ Mjpeg-users mailing list
 Mjpeg-users@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/mjpeg-users
 
---===============8291280285898607567==--
+--===============2813953908043036057==--
 
