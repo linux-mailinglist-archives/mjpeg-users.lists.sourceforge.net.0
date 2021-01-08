@@ -2,116 +2,72 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 850BD2ECE7E
-	for <lists+mjpeg-users@lfdr.de>; Thu,  7 Jan 2021 12:17:51 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 43CB32EF2F6
+	for <lists+mjpeg-users@lfdr.de>; Fri,  8 Jan 2021 14:23:06 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1kxTIU-0007rM-O0; Thu, 07 Jan 2021 11:17:42 +0000
+	id 1kxrjI-0005Pn-EC; Fri, 08 Jan 2021 13:23:00 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <dan.carpenter@oracle.com>) id 1kxSoM-0001dK-D3
- for mjpeg-users@lists.sourceforge.net; Thu, 07 Jan 2021 10:46:34 +0000
+ (envelope-from <zhengyongjun3@huawei.com>) id 1kxnx5-0000VR-KX
+ for mjpeg-users@lists.sourceforge.net; Fri, 08 Jan 2021 09:20:59 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=In-Reply-To:Content-Transfer-Encoding:Content-Type:
- MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=Content-Type:Content-Transfer-Encoding:MIME-Version
+ :Message-ID:Date:Subject:CC:To:From:Sender:Reply-To:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=+nXFbYO12FXZYg/zscsbBhBStV646kHBHdEB2nrr0Bc=; b=gwFjsVPGC4gJLcTiFqSJAL+OW5
- uuJs6l4hpe1mDoyMpGRHRccHA/RlDj8w+kowFjPRQJmzgv9TqwTX2nXs11mEGijvpfKIux2ENQEHi
- eSTGjN1zIdfo/4x2IEMFVHZb5R3T14hsfX15O/IzTWvHPqm3WuyHnO0Fo6bj3sNahygg=;
+ bh=EPUrBwGNRTTFjxWkrCOlXVTb5opbuovcItyCufHUR5k=; b=cadrMhGw2wMSd5g4FOODJiew65
+ C393+c7C7nhmyjYoNxBG1eBHkvvZ4eJ8DoZEw1zZcTOId0edcGZ9OuX9ZhYXZHMMzOAtikr85cGX7
+ 9mYUKZKTYLTko1GefS01PXO3TLrrmxRMK+tgJmKKvurDE4JeSQOSq0H0LUM8QvS9B4y0=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=In-Reply-To:Content-Transfer-Encoding:Content-Type:MIME-Version:
- References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=+nXFbYO12FXZYg/zscsbBhBStV646kHBHdEB2nrr0Bc=; b=j96wUDR3yB9+/Ci9yr2re/0tWQ
- akt6Z2lawJtN3ECr9O9IidfuGBOnpI/MD3iqvyZ9VQSXdCaNVnuzIizzriRNbWL8+exjAYROtc1zM
- wFrYt/XhaGBB6100znem5fI5vgbVTn+Jrp+wV97klgWPlBnVH5U21djB3lGedRVjRDy8=;
-Received: from aserp2120.oracle.com ([141.146.126.78])
+ h=Content-Type:Content-Transfer-Encoding:MIME-Version:Message-ID:Date:
+ Subject:CC:To:From:Sender:Reply-To:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=EPUrBwGNRTTFjxWkrCOlXVTb5opbuovcItyCufHUR5k=; b=I
+ ALIGegN6PEycZY6gti85yO0eIRJeIGKdKi4QuwYi55sTefzCTYafqaF3DU5IrYrXO0nHuvQU7bnLR
+ FrQ8F1sGA8w0yc28B0M+qKmmUn8gwNUoXRLKijkokkmy2KNcZjjUDvtLOCigUX24W4RBErRtU7S5O
+ Bctt14d5nRUfpxBg=;
+Received: from szxga05-in.huawei.com ([45.249.212.191])
  by sfi-mx-3.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1kxSoC-003UmX-1M
- for mjpeg-users@lists.sourceforge.net; Thu, 07 Jan 2021 10:46:34 +0000
-Received: from pps.filterd (aserp2120.oracle.com [127.0.0.1])
- by aserp2120.oracle.com (8.16.0.42/8.16.0.42) with SMTP id 107Ad2RI021237;
- Thu, 7 Jan 2021 10:46:09 GMT
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oracle.com;
- h=date : from : to : cc
- : subject : message-id : references : mime-version : content-type :
- content-transfer-encoding : in-reply-to; s=corp-2020-01-29;
- bh=+nXFbYO12FXZYg/zscsbBhBStV646kHBHdEB2nrr0Bc=;
- b=k5KchOdDK0vlluEtl6ogmdaePJBG7UVjzvwqGPCGBJHYf0uw0Ll9kDy1hlDPIi9FTbJ+
- HLkFk8VJbN1NHaqJzptTYneUm4qmpqbi+i/Q8robgbH/G/Ecm0sFTjdG7XZ5CzHAC9Fj
- 136uKmTA5kg/dAQLIU+vSbDS/1lUVhKmqQEhvshBgWhA6punKy+i1W8id0I407rjUcKC
- VTVprHXakDrSqORmzo79SIAUDORLM6eqWZZnH1596Oq8s01HeUU5TSkqhwT4t7adEgC1
- ueSuRyNg+QRFKqTH5/L83IOMP0xWeEpwxX/0RR1p2decuSJFCoZIPAKEZqfvBOj/yyN2 nQ== 
-Received: from aserp3030.oracle.com (aserp3030.oracle.com [141.146.126.71])
- by aserp2120.oracle.com with ESMTP id 35wepmbuwf-1
- (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=FAIL);
- Thu, 07 Jan 2021 10:46:09 +0000
-Received: from pps.filterd (aserp3030.oracle.com [127.0.0.1])
- by aserp3030.oracle.com (8.16.0.42/8.16.0.42) with SMTP id 107AeWPL190215;
- Thu, 7 Jan 2021 10:46:08 GMT
-Received: from userv0121.oracle.com (userv0121.oracle.com [156.151.31.72])
- by aserp3030.oracle.com with ESMTP id 35v4rdv74f-1
- (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
- Thu, 07 Jan 2021 10:46:08 +0000
-Received: from abhmp0006.oracle.com (abhmp0006.oracle.com [141.146.116.12])
- by userv0121.oracle.com (8.14.4/8.13.8) with ESMTP id 107Ak5XB027722;
- Thu, 7 Jan 2021 10:46:05 GMT
-Received: from kadam (/102.36.221.92) by default (Oracle Beehive Gateway v4.0)
- with ESMTP ; Thu, 07 Jan 2021 02:46:04 -0800
-Date: Thu, 7 Jan 2021 13:45:57 +0300
-From: Dan Carpenter <dan.carpenter@oracle.com>
-To: LABBE Corentin <clabbe@baylibre.com>
-Message-ID: <20210107104557.GA5083@kadam>
-References: <20210106131702.32507-1-zhengyongjun3@huawei.com>
- <20210106145100.GJ2809@kadam> <X/Ybbj6gN2xrhIwP@Red>
+ id 1kxnx1-009Zgn-Ez
+ for mjpeg-users@lists.sourceforge.net; Fri, 08 Jan 2021 09:20:59 +0000
+Received: from DGGEMS406-HUB.china.huawei.com (unknown [172.30.72.59])
+ by szxga05-in.huawei.com (SkyGuard) with ESMTP id 4DByGr12f7zMH8R;
+ Fri,  8 Jan 2021 17:19:32 +0800 (CST)
+Received: from ubuntu.network (10.175.138.68) by
+ DGGEMS406-HUB.china.huawei.com (10.3.19.206) with Microsoft SMTP Server id
+ 14.3.498.0; Fri, 8 Jan 2021 17:20:34 +0800
+From: Zheng Yongjun <zhengyongjun3@huawei.com>
+To: <clabbe@baylibre.com>, <mchehab@kernel.org>,
+ <mjpeg-users@lists.sourceforge.net>, <linux-media@vger.kernel.org>,
+ <devel@driverdev.osuosl.org>, <linux-kernel@vger.kernel.org>
+Date: Fri, 8 Jan 2021 17:21:19 +0800
+Message-ID: <20210108092119.18642-1-zhengyongjun3@huawei.com>
+X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <X/Ybbj6gN2xrhIwP@Red>
-User-Agent: Mutt/1.9.4 (2018-02-28)
-X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9856
- signatures=668683
-X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 mlxlogscore=999
- mlxscore=0 bulkscore=0
- suspectscore=0 spamscore=0 adultscore=0 malwarescore=0 phishscore=0
- classifier=spam adjust=0 reason=mlx scancount=1 engine=8.12.0-2009150000
- definitions=main-2101070064
-X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9856
- signatures=668683
-X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 adultscore=0
- bulkscore=0 spamscore=0
- impostorscore=0 phishscore=0 lowpriorityscore=0 suspectscore=0
- priorityscore=1501 mlxscore=0 malwarescore=0 clxscore=1015 mlxlogscore=999
- classifier=spam adjust=0 reason=mlx scancount=1 engine=8.12.0-2009150000
- definitions=main-2101070064
-X-Spam-Score: -0.3 (/)
+X-Originating-IP: [10.175.138.68]
+X-CFilter-Loop: Reflected
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
- domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [141.146.126.78 listed in wl.mailspike.net]
  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
  for more information. [URIs: huawei.com]
- 0.0 UNPARSEABLE_RELAY Informational: message has unparseable relay lines
- -0.2 DKIMWL_WL_HIGH         DKIMwl.org - High trust sender
-X-Headers-End: 1kxSoC-003UmX-1M
-X-Mailman-Approved-At: Thu, 07 Jan 2021 11:17:41 +0000
-Subject: Re: [Mjpeg-users] [PATCH -next] media: zoran: use resource_size
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [45.249.212.191 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+X-Headers-End: 1kxnx1-009Zgn-Ez
+X-Mailman-Approved-At: Fri, 08 Jan 2021 13:22:59 +0000
+Subject: [Mjpeg-users] [PATCH v2 -next] media: zoran: convert comma to
+ semicolon
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -124,55 +80,33 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Cc: devel@driverdev.osuosl.org, gregkh@linuxfoundation.org,
- linux-kernel@vger.kernel.org, Zheng Yongjun <zhengyongjun3@huawei.com>,
- mjpeg-users@lists.sourceforge.net, mchehab@kernel.org,
- linux-media@vger.kernel.org
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: gregkh@linuxfoundation.org, Zheng Yongjun <zhengyongjun3@huawei.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-On Wed, Jan 06, 2021 at 09:19:58PM +0100, LABBE Corentin wrote:
-> Le Wed, Jan 06, 2021 at 05:51:00PM +0300, Dan Carpenter a =E9crit :
-> > On Wed, Jan 06, 2021 at 09:17:02PM +0800, Zheng Yongjun wrote:
-> > > Use resource_size rather than a verbose computation on
-> > > the end and start fields.
-> > > =
+Replace a comma between expression statements by a semicolon.
 
-> > > Signed-off-by: Zheng Yongjun <zhengyongjun3@huawei.com>
-> > > ---
-> > >  drivers/staging/media/zoran/zoran_driver.c | 2 +-
-> > >  1 file changed, 1 insertion(+), 1 deletion(-)
-> > > =
+Signed-off-by: Zheng Yongjun <zhengyongjun3@huawei.com>
+---
+ drivers/staging/media/zoran/zoran_driver.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-> > > diff --git a/drivers/staging/media/zoran/zoran_driver.c b/drivers/sta=
-ging/media/zoran/zoran_driver.c
-> > > index 808196ea5b81..d60b4c73ea80 100644
-> > > --- a/drivers/staging/media/zoran/zoran_driver.c
-> > > +++ b/drivers/staging/media/zoran/zoran_driver.c
-> > > @@ -1020,7 +1020,7 @@ int zoran_queue_init(struct zoran *zr, struct v=
-b2_queue *vq)
-> > >  	vq->buf_struct_size =3D sizeof(struct zr_buffer);
-> > >  	vq->ops =3D &zr_video_qops;
-> > >  	vq->mem_ops =3D &vb2_dma_contig_memops;
-> > > -	vq->gfp_flags =3D GFP_DMA32,
-> > > +	vq->gfp_flags =3D GFP_DMA32;
-> > =
-
-> > The commit doesn't match the patch.  Also this driver is in
-> > staging because it's going to be deleted soon so there probably isn't
-> > much point doing cleanups.
-> > =
-
-> =
-
-> No, the driver just came back in staging since I fixed the videobuf2 conv=
-ersion.
-
-Ah... Thanks.
-
-regards,
-dan carpenter
+diff --git a/drivers/staging/media/zoran/zoran_driver.c b/drivers/staging/media/zoran/zoran_driver.c
+index 808196ea5b81..d60b4c73ea80 100644
+--- a/drivers/staging/media/zoran/zoran_driver.c
++++ b/drivers/staging/media/zoran/zoran_driver.c
+@@ -1020,7 +1020,7 @@ int zoran_queue_init(struct zoran *zr, struct vb2_queue *vq)
+ 	vq->buf_struct_size = sizeof(struct zr_buffer);
+ 	vq->ops = &zr_video_qops;
+ 	vq->mem_ops = &vb2_dma_contig_memops;
+-	vq->gfp_flags = GFP_DMA32,
++	vq->gfp_flags = GFP_DMA32;
+ 	vq->timestamp_flags = V4L2_BUF_FLAG_TIMESTAMP_MONOTONIC;
+ 	vq->min_buffers_needed = 9;
+ 	vq->lock = &zr->lock;
+-- 
+2.22.0
 
 
 
