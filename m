@@ -2,95 +2,97 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id ADBBB309A45
+	by mail.lfdr.de (Postfix) with ESMTPS id 239AB309A44
 	for <lists+mjpeg-users@lfdr.de>; Sun, 31 Jan 2021 05:58:42 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1l64ok-0005bE-Bj; Sun, 31 Jan 2021 04:58:34 +0000
+	id 1l64ok-0005bN-HS; Sun, 31 Jan 2021 04:58:34 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <lumwaiman@gmail.com>) id 1l60Kn-00053Z-DS
- for mjpeg-users@lists.sourceforge.net; Sun, 31 Jan 2021 00:11:21 +0000
+ (envelope-from <lumwaiman@gmail.com>) id 1l60Oo-0003jw-Q9
+ for mjpeg-users@lists.sourceforge.net; Sun, 31 Jan 2021 00:15:30 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:To:Subject:Message-ID:Date:From:
- MIME-Version:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=GVJAcXFSa5oZQOHz3BJWyfggYW7BGJrJb+GWHCdOwAY=; b=ZGakegIlqJYX+fJWluF+McMZuz
- IXtN5EwGsWjMME21/++u2urC1jBYXW2TP7EPafv4DMtVhRprZThGFiVx05Bw+A4grC1aVxqnX7s75
- 6O3/6Mxt+TRZulRb0hE3JQgAj6UIJ/zX7AxMZhQldvrqqtQL1f1Yw2YYRYuNeviK0kZU=;
+ In-Reply-To:References:MIME-Version:Sender:Reply-To:Cc:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=WnyOndfHlxzxsisOXWsszA16dBU07WrbDWZSki5knHI=; b=MZLLiHXwoJJbb/Zr/37Kev7Xi
+ WfwajyZXyaW+C9OAms2nKQ04XIcRWyprwbQQuHaJnv+zH5+pM4KQJNev/f9ssiMVcdt5/ihCr/wKM
+ jWvNcgTW73mOUODlqLEdb/AbPOI9yoa0bbAQVyiz2WQRfom1T/IzvEfRukGHV4/PwVn+E=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:To:Subject:Message-ID:Date:From:MIME-Version:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=GVJAcXFSa5oZQOHz3BJWyfggYW7BGJrJb+GWHCdOwAY=; b=b
- dXpq119RKTzVMJEWqkbo8dpNNK6azXNuREOObOiil9r0WFYi0thjueng+zRN67+esOGBWPsAvHePH
- /z51h8tj+xL9vzZLCxK1DC99O8thnVV2fHiuMx4Llg4gr+kwL0NYl8aTtIChukacwGqyfDgAm/RNc
- EIsB5BQ86IjrARP4=;
-Received: from mail-lf1-f52.google.com ([209.85.167.52])
+ h=Content-Type:To:Subject:Message-ID:Date:From:In-Reply-To:References:
+ MIME-Version:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=WnyOndfHlxzxsisOXWsszA16dBU07WrbDWZSki5knHI=; b=JRWG2Z14w2W3V6Fi2PqvDss6cU
+ FYu/TKXChkxI/C1Tx7OdwXclm3Wo1fTTJa50PhBt1M8vLYwk5KJQQbav+XheMV2G3dTRZ8SgcWujE
+ KtIqk9FScRd8iAmIKkUR0qYp4kCshnul14wbRYP4BM47trXw/FRZkuZ0nvoKtPeqGRqg=;
+Received: from mail-lj1-f173.google.com ([209.85.208.173])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.2)
- id 1l60Ke-006HP4-LQ
- for mjpeg-users@lists.sourceforge.net; Sun, 31 Jan 2021 00:11:21 +0000
-Received: by mail-lf1-f52.google.com with SMTP id u25so17742953lfc.2
- for <mjpeg-users@lists.sf.net>; Sat, 30 Jan 2021 16:11:12 -0800 (PST)
+ id 1l60Oe-006HvW-4a
+ for mjpeg-users@lists.sourceforge.net; Sun, 31 Jan 2021 00:15:30 +0000
+Received: by mail-lj1-f173.google.com with SMTP id c18so15016794ljd.9
+ for <mjpeg-users@lists.sf.net>; Sat, 30 Jan 2021 16:15:20 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:from:date:message-id:subject:to;
- bh=GVJAcXFSa5oZQOHz3BJWyfggYW7BGJrJb+GWHCdOwAY=;
- b=imko7qbNeiAH2ExeUGi4mavFN66C8qvHnvKxW52QCzcZ3OYSrHu6JOPPRWA1RKGRuI
- mU928qcxmmuYaOyBmKcvtPtQJ6XtanCGwlvM0hQrVHu0ktfEE6Dyc0quT7PqthWrXyqN
- iG1cg6VE2NRHl6lpC96nqy3PCdMlzbzHjdGYiID2tj77Lcg/G1qRAzf3nQ8IFXrHb6Nb
- oCKqDuleNKNsSQVF4iwjW/TAdCpHB2ASF8jhDpRMTKn2h3Z2aHHRvwqQl91oDV24JRcN
- 4UJgx13pjT1SgX0v7rmQCUfAzFRE5gQkW8NRKdLIHRcmO8xbsOzOI1jMtWylb15rd+5l
- PsIA==
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+ bh=WnyOndfHlxzxsisOXWsszA16dBU07WrbDWZSki5knHI=;
+ b=EevhX/Ele+BCwJ0F4t46LMw2RTMoeXNSPC+CRsAC8He0F1YqrkC+1MhOoV4OyR6+T9
+ r7zExahTThMLs06WEg2wyF2v4is5QVbVNuo/0onEm+IrxGVPS2N1TGwcT/6tZTxJoRRX
+ pdu/1J1IeK7vx8RJvKH14s8qbwpciG7KXX0gLH5fzw3LjbkHRT/udmyw1FNx5PXuyx2H
+ qTbBcPyiARbfq7BYDAHl6xseo99cmLWfbO6vAFu9qbKEOhRBBt7SUpmiieaXglW0QyYQ
+ OmlGtUlYkRW/omi3BhyD3Xy45lA7plp7yzDl+EzUWUZw5xMqN2IiNZA7n2nIw63yvzAu
+ TEwA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
- bh=GVJAcXFSa5oZQOHz3BJWyfggYW7BGJrJb+GWHCdOwAY=;
- b=N5ogiHzEao4sRLk8wzCde28JZHitVsCbJK6mysKU9RuOYkT/Bo8a2xFOandrXmrgMm
- ZIY27LIrAVmYyppB0HaCOH1qcoLp1IxSwBCms7voo0G7V9jzqE08JZEWz8/g3NtWFQ7q
- k8R7ebp/1SpjTHDZFhsK+zCSjChey9qqX2JDCwotlFn2sji1k0SH2NKiIf9XKlJw/Wrd
- aA5s7lV05vdEuQ6MGsRMVC9ymE1hqML8PHaMUpiTT+yrVgz5JFrBx0WAL6EDj/VtJA1r
- UmmISIDeCoVpsY7IyMHX3GfbfYlT/P0twMeS1MevPST+q2sFwPw6/YqeEYkLPYqgGaNY
- ZjEg==
-X-Gm-Message-State: AOAM530DCgRx5QNkBelJ8hs2a1yV3Yp5xcd0UauXxAsDx2TrpEe+d4LC
- gVqFe8d30oStHzThMQVmRnjrLE91Q7aPhTr36iKv7iHT6gw=
-X-Google-Smtp-Source: ABdhPJwrgN/PNH/MaIZErGMDJDDkYXjAgGq7gXylLuBC8Tz4Fa/KJkl5Eu0oEmmO06mTBdec+eMOgacr+KeGmzUDjTg=
-X-Received: by 2002:a05:6512:51b:: with SMTP id
- o27mr5590293lfb.544.1612051865241; 
- Sat, 30 Jan 2021 16:11:05 -0800 (PST)
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to;
+ bh=WnyOndfHlxzxsisOXWsszA16dBU07WrbDWZSki5knHI=;
+ b=gS4ovB7eazgYAMJWj/huAqcpNM1gCIpwAH0Ly6SrtRwUMDC+QYQy9MMNyj/6aJSIkZ
+ m1V4P2UUf6kaa+6I6e7GT1ZnVYcpTigEEPudc5zbJt9O4R138POMVHRBA3zNDaq4pqyG
+ HllK5Qbukycx95nPQQsCu6nZfAB1HHKTvky7LP6h6Ib+kBScARSf2z4pJQwDsAirsAVE
+ NCxoTsY76mz4Si0fYhf2ffyotIufjh8iN0t5NODAmWTqI1h4Kj+w7TgNQI26ZLruGQiz
+ fK2hENtsib7c20gy3FsxI48nKw4tSESziZ/h5AJnxzKWK7OwjtiynSpyd2EK0hFd+6tp
+ MfLg==
+X-Gm-Message-State: AOAM532CcS2b8oVBdStNK1/f/ZQwn0wE6W/yf8LSdfwuWMfZMpnZ7u9c
+ lgCh7bfoeNL6x/jFuNfAyjrL6l2rHOMhy7Qg3rAjWzC1
+X-Google-Smtp-Source: ABdhPJwkzkJN2k/DlA6LCn8WPE3RR+r5SgeEhR/ovlr1pFty7UtFtxv3dAc55omfcdv0sAyUI2tgataryCiGWt3YFWo=
+X-Received: by 2002:a2e:a312:: with SMTP id l18mr5537208lje.243.1612052112709; 
+ Sat, 30 Jan 2021 16:15:12 -0800 (PST)
 MIME-Version: 1.0
+References: <CA+84gYsnKaCg_q5hvoeNeHNOR+QfBMs_UP5P6HvgZ1GLyxRnwA@mail.gmail.com>
+In-Reply-To: <CA+84gYsnKaCg_q5hvoeNeHNOR+QfBMs_UP5P6HvgZ1GLyxRnwA@mail.gmail.com>
 From: William Lum <lumwaiman@gmail.com>
-Date: Sat, 30 Jan 2021 19:10:55 -0500
-Message-ID: <CA+84gYsnKaCg_q5hvoeNeHNOR+QfBMs_UP5P6HvgZ1GLyxRnwA@mail.gmail.com>
+Date: Sat, 30 Jan 2021 19:15:02 -0500
+Message-ID: <CA+84gYusFAQ5krJkttDuaA=_1gEJeU=OJhdPvZOXGKYisNa5Ew@mail.gmail.com>
 To: mjpeg-users@lists.sf.net
-X-Spam-Score: 2.5 (++)
+X-Spam-Score: 2.1 (++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
  (lumwaiman[at]gmail.com)
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.52 listed in wl.mailspike.net]
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [209.85.167.52 listed in list.dnswl.org]
+ trust [209.85.208.173 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.208.173 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.6 HTML_IMAGE_RATIO_02    BODY: HTML has a low ratio of text to image area
+ 1.2 HTML_IMAGE_RATIO_04    BODY: HTML has a low ratio of text to image area
  1.0 HTML_MESSAGE           BODY: HTML included in message
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1l60Ke-006HP4-LQ
+X-Headers-End: 1l60Oe-006HvW-4a
 X-Mailman-Approved-At: Sun, 31 Jan 2021 04:58:31 +0000
-Subject: [Mjpeg-users] Lubuntu doesn't seem to recognize IOmega Buz capture
- card
+Subject: Re: [Mjpeg-users] Lubuntu doesn't seem to recognize IOmega Buz
+ capture card
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -103,120 +105,135 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Content-Type: multipart/mixed; boundary="===============1145503622387600065=="
+Content-Type: multipart/mixed; boundary="===============5134268109408483112=="
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
---===============1145503622387600065==
-Content-Type: multipart/related; boundary="000000000000c9fc0a05ba27124a"
+--===============5134268109408483112==
+Content-Type: multipart/related; boundary="0000000000008aa6af05ba272157"
 
---000000000000c9fc0a05ba27124a
-Content-Type: multipart/alternative; boundary="000000000000c9fc0805ba271249"
+--0000000000008aa6af05ba272157
+Content-Type: multipart/alternative; boundary="0000000000008aa6ae05ba272156"
 
---000000000000c9fc0805ba271249
+--0000000000008aa6ae05ba272156
 Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi,
+On Sat, Jan 30, 2021 at 7:10 PM William Lum <lumwaiman@gmail.com> wrote:
 
-I have a Zoran based capture card that Lubuntu doesn't seem to recognize.
-Here is what I have done so far.  I'm new to linux so please take that into
-consideration with you instructions.
+> Hi,
+>
+> I have a Zoran based capture card that Lubuntu doesn't seem to recognize.
+> Here is what I have done so far.  I'm new to linux (Lubuntu 20.10) so
+> please take that into consideration with you instructions.
+>
+>
+>    1. lspci | grep Zoran
+>    [image: image.png]
+>
+>    2. sudo dmidecode -t 2
+>
+> Is there support for AMD 790FX chipset?
+>
+> [image: image.png]
+>
+> 3. Kernel.org
+> https://www.kernel.org/doc/html/v4.14/media/v4l-drivers/zoran.html=EF=BB=
+=BF
+> <https://www.kernel.org/doc/html/v4.14/media/v4l-drivers/zoran.html>
+>
+> "unified zoran driver (zr360x7, zoran, buz, dc10(+), dc30(+), lml33)"
+>
+> I think this covers my card right?
+>
+>
+> 4. Tried steps
+>
+> https://www.kernel.org/doc/html/v4.14/media/v4l-drivers/zoran.html#how-do=
+-i-get-this-damn-thing-to-work
+>
+> Looking for the Zoran Conf file but it's not there
+>
+> [image: image.png]
+>
+>
+> 5. Load zr36067.o.
+> How do I do that?
+>
+>    1. run =E2=80=98v4l-conf -c <device>=E2=80=99
+>    what do I use for the device?  Is it some part of what I found in
+>    lspci?  The numeric portion (is that an ID?)
+>
+> Thanks in advance for your help.
+>
+> William
+>
+>
 
-
-   1. lspci | grep Zoran
-   [image: image.png]
-
-   2. sudo dmidecode -t 2
-
-Is there support for AMD 790FX chipset?
-
-[image: image.png]
-
-3. Kernel.org
-https://www.kernel.org/doc/html/v4.14/media/v4l-drivers/zoran.html=EF=BB=BF
-<https://www.kernel.org/doc/html/v4.14/media/v4l-drivers/zoran.html>
-
-"unified zoran driver (zr360x7, zoran, buz, dc10(+), dc30(+), lml33)"
-
-I think this covers my card right?
-
-
-4. Tried steps
-https://www.kernel.org/doc/html/v4.14/media/v4l-drivers/zoran.html#how-do-i=
--get-this-damn-thing-to-work
-
-Looking for the Zoran Conf file but it's not there
-
-[image: image.png]
-
-
-5. Load zr36067.o.
-How do I do that?
-
-   1. run =E2=80=98v4l-conf -c <device>=E2=80=99
-   what do I use for the device?  Is it some part of what I found in
-   lspci?  The numeric portion (is that an ID?)
-
-Thanks in advance for your help.
-
-William
-
---000000000000c9fc0805ba271249
+--0000000000008aa6ae05ba272156
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div>Hi=
-,</div><br>I have a Zoran based capture card that Lubuntu doesn&#39;t seem =
-to recognize.=C2=A0 Here is what I have done so=C2=A0far.=C2=A0 I&#39;m new=
- to linux so please take that into consideration with you instructions.<div=
-><br></div><div><ol style=3D"padding-left:0px;margin-left:1.7em;color:rgb(5=
-0,55,63);font-family:Avenir,Arial,sans-serif;font-size:15px"><li style=3D"m=
-argin-bottom:0.4em">lspci | grep Zoran<br><img src=3D"cid:ii_kkkdwixl1" alt=
-=3D"image.png" width=3D"542" height=3D"41"><br><br></li><li style=3D"margin=
--bottom:0.4em">sudo dmidecode -t 2</li></ol><p style=3D"margin-top:0.6em;ma=
-rgin-bottom:0.65em;color:rgb(50,55,63);font-family:Avenir,Arial,sans-serif;=
-font-size:15px">Is there support for AMD 790FX chipset?</p><p style=3D"marg=
-in-top:0.6em;margin-bottom:0.65em;color:rgb(50,55,63);font-family:Avenir,Ar=
-ial,sans-serif;font-size:15px"></p><img src=3D"cid:ii_kkkdx1g12" alt=3D"ima=
-ge.png" width=3D"538" height=3D"245"><p style=3D"margin-top:0.6em;margin-bo=
-ttom:0.65em;color:rgb(50,55,63);font-family:Avenir,Arial,sans-serif;font-si=
-ze:15px">3. Kernel.org=C2=A0<a title=3D"https://www.kernel.org/doc/html/v4.=
-14/media/v4l-drivers/zoran.html" href=3D"https://www.kernel.org/doc/html/v4=
-.14/media/v4l-drivers/zoran.html" style=3D"background-color:transparent;col=
-or:rgb(21,91,218)" target=3D"_blank">https://www.kernel.org/doc/html/v4.14/=
-media/v4l-drivers/zoran.html=EF=BB=BF</a></p><p style=3D"margin-top:0.6em;m=
-argin-bottom:0.65em;color:rgb(50,55,63);font-family:Avenir,Arial,sans-serif=
-;font-size:15px">&quot;unified zoran driver (zr360x7, zoran, buz, dc10(+), =
-dc30(+), lml33)&quot;</p><p style=3D"margin-top:0.6em;margin-bottom:0.65em;=
-color:rgb(50,55,63);font-family:Avenir,Arial,sans-serif;font-size:15px">I t=
-hink this covers my card right?</p><p style=3D"margin-top:0.6em;margin-bott=
+<div dir=3D"ltr"><div dir=3D"ltr"><div><div dir=3D"ltr" class=3D"gmail_sign=
+ature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><br></div><=
+/div></div></div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" clas=
+s=3D"gmail_attr">On Sat, Jan 30, 2021 at 7:10 PM William Lum &lt;<a href=3D=
+"mailto:lumwaiman@gmail.com">lumwaiman@gmail.com</a>&gt; wrote:<br></div><b=
+lockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-le=
+ft:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div>Hi,</div><br>I have a Zoran=
+ based capture card that Lubuntu doesn&#39;t seem to recognize.=C2=A0 Here =
+is what I have done so=C2=A0far.=C2=A0 I&#39;m new to linux <font color=3D"=
+#ff0000" style=3D"background-color:rgb(255,255,255)">(Lubuntu 20.10)</font>=
+ so please take that into consideration with you instructions.<div><br></di=
+v><div><ol style=3D"padding-left:0px;margin-left:1.7em;color:rgb(50,55,63);=
+font-family:Avenir,Arial,sans-serif;font-size:15px"><li style=3D"margin-bot=
+tom:0.4em">lspci | grep Zoran<br><img src=3D"cid:ii_kkkdwixl1" alt=3D"image=
+.png" width=3D"542" height=3D"41"><br><br></li><li style=3D"margin-bottom:0=
+.4em">sudo dmidecode -t 2</li></ol><p style=3D"margin-top:0.6em;margin-bott=
 om:0.65em;color:rgb(50,55,63);font-family:Avenir,Arial,sans-serif;font-size=
-:15px"><br>4. Tried steps<br><a title=3D"https://www.kernel.org/doc/html/v4=
-.14/media/v4l-drivers/zoran.html#how-do-i-get-this-damn-thing-to-work" href=
-=3D"https://www.kernel.org/doc/html/v4.14/media/v4l-drivers/zoran.html#how-=
-do-i-get-this-damn-thing-to-work" style=3D"background-color:transparent;col=
-or:rgb(21,91,218)" target=3D"_blank">https://www.kernel.org/doc/html/v4.14/=
-media/v4l-drivers/zoran.html#how-do-i-get-this-damn-thing-to-work</a></p><p=
- style=3D"margin-top:0.6em;margin-bottom:0.65em;color:rgb(50,55,63);font-fa=
-mily:Avenir,Arial,sans-serif;font-size:15px">Looking for the Zoran Conf fil=
-e but it&#39;s not there<br></p><p style=3D"margin-top:0.6em;margin-bottom:=
-0.65em;color:rgb(50,55,63);font-family:Avenir,Arial,sans-serif;font-size:15=
-px"></p><img src=3D"cid:ii_kkkdzu5e4" alt=3D"image.png" width=3D"542" heigh=
-t=3D"403"><p style=3D"margin-top:0.6em;margin-bottom:0.65em;color:rgb(50,55=
-,63);font-family:Avenir,Arial,sans-serif;font-size:15px"><br></p><p style=
-=3D"margin-top:0.6em;margin-bottom:0.65em;color:rgb(50,55,63);font-family:A=
-venir,Arial,sans-serif;font-size:15px">5. Load zr36067.o.<br>How do I do th=
-at?</p><ol start=3D"6" style=3D"padding-left:0px;margin-left:1.7em;color:rg=
-b(50,55,63);font-family:Avenir,Arial,sans-serif;font-size:15px"><li style=
-=3D"margin-bottom:0.4em">run =E2=80=98v4l-conf -c &lt;device&gt;=E2=80=99<b=
-r>what do I use for the device?=C2=A0 Is it some part of what I found in ls=
-pci?=C2=A0 The numeric portion (is that an ID?)</li></ol><div>Thanks in adv=
-ance for your help.</div><div><br clear=3D"all"><div><div dir=3D"ltr"><div =
-dir=3D"ltr"><div>William <br><br></div></div></div></div></div></div></div>=
-</div></div></div>
+:15px">Is there support for AMD 790FX chipset?</p><p style=3D"margin-top:0.=
+6em;margin-bottom:0.65em;color:rgb(50,55,63);font-family:Avenir,Arial,sans-=
+serif;font-size:15px"></p><img src=3D"cid:ii_kkkdx1g12" alt=3D"image.png" w=
+idth=3D"538" height=3D"245"><p style=3D"margin-top:0.6em;margin-bottom:0.65=
+em;color:rgb(50,55,63);font-family:Avenir,Arial,sans-serif;font-size:15px">=
+3. Kernel.org=C2=A0<a title=3D"https://www.kernel.org/doc/html/v4.14/media/=
+v4l-drivers/zoran.html" href=3D"https://www.kernel.org/doc/html/v4.14/media=
+/v4l-drivers/zoran.html" style=3D"background-color:transparent;color:rgb(21=
+,91,218)" target=3D"_blank">https://www.kernel.org/doc/html/v4.14/media/v4l=
+-drivers/zoran.html=EF=BB=BF</a></p><p style=3D"margin-top:0.6em;margin-bot=
+tom:0.65em;color:rgb(50,55,63);font-family:Avenir,Arial,sans-serif;font-siz=
+e:15px">&quot;unified zoran driver (zr360x7, zoran, buz, dc10(+), dc30(+), =
+lml33)&quot;</p><p style=3D"margin-top:0.6em;margin-bottom:0.65em;color:rgb=
+(50,55,63);font-family:Avenir,Arial,sans-serif;font-size:15px">I think this=
+ covers my card right?</p><p style=3D"margin-top:0.6em;margin-bottom:0.65em=
+;color:rgb(50,55,63);font-family:Avenir,Arial,sans-serif;font-size:15px"><b=
+r>4. Tried steps<br><a title=3D"https://www.kernel.org/doc/html/v4.14/media=
+/v4l-drivers/zoran.html#how-do-i-get-this-damn-thing-to-work" href=3D"https=
+://www.kernel.org/doc/html/v4.14/media/v4l-drivers/zoran.html#how-do-i-get-=
+this-damn-thing-to-work" style=3D"background-color:transparent;color:rgb(21=
+,91,218)" target=3D"_blank">https://www.kernel.org/doc/html/v4.14/media/v4l=
+-drivers/zoran.html#how-do-i-get-this-damn-thing-to-work</a></p><p style=3D=
+"margin-top:0.6em;margin-bottom:0.65em;color:rgb(50,55,63);font-family:Aven=
+ir,Arial,sans-serif;font-size:15px">Looking for the Zoran Conf file but it&=
+#39;s not there<br></p><p style=3D"margin-top:0.6em;margin-bottom:0.65em;co=
+lor:rgb(50,55,63);font-family:Avenir,Arial,sans-serif;font-size:15px"></p><=
+img src=3D"cid:ii_kkkdzu5e4" alt=3D"image.png" width=3D"542" height=3D"403"=
+><p style=3D"margin-top:0.6em;margin-bottom:0.65em;color:rgb(50,55,63);font=
+-family:Avenir,Arial,sans-serif;font-size:15px"><br></p><p style=3D"margin-=
+top:0.6em;margin-bottom:0.65em;color:rgb(50,55,63);font-family:Avenir,Arial=
+,sans-serif;font-size:15px">5. Load zr36067.o.<br>How do I do that?</p><ol =
+start=3D"6" style=3D"padding-left:0px;margin-left:1.7em;color:rgb(50,55,63)=
+;font-family:Avenir,Arial,sans-serif;font-size:15px"><li style=3D"margin-bo=
+ttom:0.4em">run =E2=80=98v4l-conf -c &lt;device&gt;=E2=80=99<br>what do I u=
+se for the device?=C2=A0 Is it some part of what I found in lspci?=C2=A0 Th=
+e numeric portion (is that an ID?)</li></ol><div>Thanks in advance for your=
+ help.</div><div><br clear=3D"all"><div><div dir=3D"ltr"><div dir=3D"ltr"><=
+div>William <br><br></div></div></div></div></div></div></div></div></div><=
+/div>
+</blockquote></div></div>
 
---000000000000c9fc0805ba271249--
---000000000000c9fc0a05ba27124a
+--0000000000008aa6ae05ba272156--
+--0000000000008aa6af05ba272157
 Content-Type: image/png; name="image.png"
 Content-Disposition: inline; filename="image.png"
 Content-Transfer-Encoding: base64
@@ -500,7 +517,7 @@ tKKQbFWof60KWX1ZfRkGDAOGAcOAYcAwYBgwDBgGDAO9gQEj0EagbaXJMGAYMAwYBgwDhgHDgGHA
 MGAYMAwYBhQYMAKtKKTeWLmwOG1FzDBgGDAMGAYMA4YBw4BhwDBgGDAM9C8MGIE2Am0rTYYBw4Bh
 wDBgGDAMGAYMA4YBw4BhwDCgwIARaEUh2apQ/1oVsvqy+jIMGAYMA4YBw4BhwDBgGDAMGAZ6AQP/
 Hwqu94JXiJY5AAAAAElFTkSuQmCC
---000000000000c9fc0a05ba27124a
+--0000000000008aa6af05ba272157
 Content-Type: image/png; name="image.png"
 Content-Disposition: inline; filename="image.png"
 Content-Transfer-Encoding: base64
@@ -1023,7 +1040,7 @@ spFF640srE2sTQwDhoGOxoARDSMaRjQMA4YBw4BhwDDQNAwY0TBwNQ1cHc2aLT8bqRkGDAOGgdbD
 gBENIxpGNAwDhgHDgGHAMNA0DBjRMHA1DVw2smi9kYW1ibWJYcAw0NEYMKJhRMOIhmHAMGAYMAwY
 BpqGASMaBq6mgaujWbPlZyM1w4BhwDDQehgwomFEw4iGYcAwYBgwDBgGmoWB/x/dLvx5fVRvoAAA
 AABJRU5ErkJggg==
---000000000000c9fc0a05ba27124a
+--0000000000008aa6af05ba272157
 Content-Type: image/png; name="image.png"
 Content-Disposition: inline; filename="image.png"
 Content-Transfer-Encoding: base64
@@ -2081,17 +2098,17 @@ wHs2cEtWxnuVkXWRdZE2kDaQNpA2kDaQNpA2kDZQ28AtV65c6a3k38GDB3urVq0qvzVr1ty0dbFt
 e9PT0wPxDh061Dt//vzIuAv1rjcqnc2bN5d3npqa6l26dOmme9ctW7b023TPnj0T+35L0f9vlI3V
 +bKx1atXlzbZuHHjQHvs2rWr31barY6X10uLA+b6DV1u7bNv376+ra1fv35Otnbu3Ll+3J07d84p
 7nKrp+VU3v8DrHfSZybSPsMAAAAASUVORK5CYII=
---000000000000c9fc0a05ba27124a--
+--0000000000008aa6af05ba272157--
 
 
---===============1145503622387600065==
+--===============5134268109408483112==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============1145503622387600065==
+--===============5134268109408483112==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -2102,5 +2119,5 @@ Mjpeg-users mailing list
 Mjpeg-users@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/mjpeg-users
 
---===============1145503622387600065==--
+--===============5134268109408483112==--
 
