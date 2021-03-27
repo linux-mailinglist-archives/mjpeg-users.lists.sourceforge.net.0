@@ -2,103 +2,76 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 276C6344CB0
-	for <lists+mjpeg-users@lfdr.de>; Mon, 22 Mar 2021 18:04:57 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 386E834B857
+	for <lists+mjpeg-users@lfdr.de>; Sat, 27 Mar 2021 17:56:52 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1lONyx-0004mz-Gf; Mon, 22 Mar 2021 17:04:47 +0000
+	id 1lQCEs-0008NQ-Kq; Sat, 27 Mar 2021 16:56:42 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <lumwaiman@gmail.com>) id 1lO0ih-00045u-I0
- for mjpeg-users@lists.sourceforge.net; Sun, 21 Mar 2021 16:14:27 +0000
+ (envelope-from <shadowlord@utanet.at>) id 1lQCEr-0008K6-Fe
+ for mjpeg-users@lists.sourceforge.net; Sat, 27 Mar 2021 16:56:41 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Cc:To:Subject:Message-ID:Date:From:
- In-Reply-To:References:MIME-Version:Sender:Reply-To:Content-Transfer-Encoding
- :Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
+ MIME-Version:Date:Message-ID:From:References:To:Subject:Sender:Reply-To:Cc:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=QuIwxSJAFEa/Zz4/+RSipS1070rl2bUmxnnekXA4hW4=; b=VAHHDqjXpgDGne2WVVmmrfqb7w
- aUYSA/v7q2AaSXWzyTR0xWuerfuIZTx4OhZDiRylEy38EsUS0HjIwVjw+84JxScXLSxn2f6roAsru
- gAw+cMXoLia1iY2MestljsSOXRlQspxmNiZEGrZXxWgMPi2tMalE3EEtD0xXlvhbNWpc=;
+ bh=EzV9Q/2Sk7/xv/ywiOrrFrpHwa4ZUzrZunpnmzyhZCI=; b=ZlvQOqkBE7G5o+RMLCEpIZyng9
+ vtZrs2uqA8N5sIVJ6lcp7QtB4ImwmCijrLOgoQZzvjhy/yneWpijo7Okf8wSno+OoPBLT7fxLjlbh
+ T9DZRPKMDeqJWXLPEr1HiJKFCXMVVCt7jfx+UgPPshfrcJX9B6x9wlXlnVRSRnoSBfPU=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Cc:To:Subject:Message-ID:Date:From:In-Reply-To:References:
- MIME-Version:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
+ Message-ID:From:References:To:Subject:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=QuIwxSJAFEa/Zz4/+RSipS1070rl2bUmxnnekXA4hW4=; b=mcCkv+mAWbTKrFasclVPcR3qAN
- qWxMTRMoUIjcuMrN7SuHiYFpQtLqwRkgebmC/DWPrOx7vdH2M8c+NUkxCBPhZLyq0za5hupxC/UHf
- bJXfgAfkn0nHbp4muT9m87qxwNw4Zox98cc0ArFZnK7+YYPoqpNlwB4wNs6bocFd2zwo=;
-Received: from mail-lj1-f172.google.com ([209.85.208.172])
+ bh=EzV9Q/2Sk7/xv/ywiOrrFrpHwa4ZUzrZunpnmzyhZCI=; b=hVNNCdlcUWWo+/n2ib3+nmbsgD
+ njqfnwPNBEMGzhimWQDVifoU6AfSFxy3IO8CbgMRoS5achYT/2sy5Eo1ufJ9/L945CuN2Iip22DuU
+ exmh4linB1ild49fGgiAPuAfMyf+oU2yik7ZrtCqQeM37jh8M1M/VL+PNVEmzvUaqVtc=;
+Received: from taro-1.utanet.at ([213.90.36.44])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.2)
- id 1lO0ib-00ATdF-CB
- for mjpeg-users@lists.sourceforge.net; Sun, 21 Mar 2021 16:14:27 +0000
-Received: by mail-lj1-f172.google.com with SMTP id y1so18021046ljm.10
- for <mjpeg-users@lists.sourceforge.net>; Sun, 21 Mar 2021 09:14:21 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=QuIwxSJAFEa/Zz4/+RSipS1070rl2bUmxnnekXA4hW4=;
- b=RBz78LI0KQ0xr3J2cHUTBCnyBI3l0uuz7Tl2AHgkK39AA7SARi1ikJld3dbA3Zi6Ze
- 1z9bExfC42qH4nnPGkmytUMpM0qx2761Hms92G7wq3Shhea2fOdRc9i+k3qvJJCWDOUa
- rOsutwyCHb+6YXZ/7PuFWmdx09fVBZ8r55rf5TnHnVmxg61F+0Snp6Vv6hWLjab5u3BA
- 0ENU1lujj2I8UW1Hjt+KErVeJflvPW4qfP7rYbbMKsHh7rJEG8rFxz1mkV5aKigAcq5i
- r7DpnOzySkjng6PmsUhcE0KIqZ9yeJR9Ju2t9VDELEaYAU/UjqNizownBWj0DlvA6mmF
- f5fQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=QuIwxSJAFEa/Zz4/+RSipS1070rl2bUmxnnekXA4hW4=;
- b=GSwe2AxjYFzdmWMrsillbRcil01sdKdb8Xoc1tYdE1n28vxRxqd59qvr82eOOeaV+v
- oQbDGibo/P7pe2eCeukuw+Bfb6MDoFnXsRKEUgjI85knvROX/mQP5Eq/Qj0LnVmds8Zf
- V58Mdjoi6ckuElYBfOlO/F7eFTy8WlKsaZzlp0bUZs+P5cyZsJiZqErtINKOiyX1QZI2
- SiiGHu02RHKIrA1hpJ/NZJAYbtYFIQ9U29rOvysQ/VXPGUJMGfp2zdD2SAkHKBdC0kZ+
- wyX5kxO/lqINDsV1SIKQe4tRZYYwAfxElBRYbaIj6OtlUQnwfZs9HK9ZhYZYCYTy4n/S
- EoXQ==
-X-Gm-Message-State: AOAM530CqVRPdAReiQ+wHa+R63D08eBzHqWbbCKeZYbAwZM9DXS4eFBT
- XVDIf6ZpGHLGqDvMEg5kPD6/qigrYSidi1pPHQ0=
-X-Google-Smtp-Source: ABdhPJxgZae+szzdoComsWbIFvlXYCk9qVaEgdeyqk+midUncbzfWhEOBxkMLRTq+W+yq35k5xPq1PbQr7xbZr5lOuw=
-X-Received: by 2002:a2e:a0d0:: with SMTP id f16mr7289720ljm.215.1616343254332; 
- Sun, 21 Mar 2021 09:14:14 -0700 (PDT)
-MIME-Version: 1.0
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
+ id 1lQBuh-0011bo-Ve
+ for mjpeg-users@lists.sourceforge.net; Sat, 27 Mar 2021 16:36:07 +0000
+Received: from paris-s.drei.host ([213.90.36.62])
+ by taro.utanet.at with esmtps (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256)
+ (Exim 4.89) (envelope-from <shadowlord@utanet.at>)
+ id 1lQBuU-00004s-OQ; Sat, 27 Mar 2021 17:35:38 +0100
+Received: from 193-83-254-34.oan.highway.a1.net ([193.83.254.34]
+ helo=[10.20.30.37])
+ by paris-s.drei.host with esmtpsa (TLS1.3:ECDHE_RSA_AES_128_GCM_SHA256:128)
+ (Exim 4.92) (envelope-from <shadowlord@utanet.at>)
+ id 1lQDo5-0002Oi-N6; Sat, 27 Mar 2021 19:37:09 +0100
+To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>,
+ William Lum <lumwaiman@gmail.com>
 References: <CA+84gYsnKaCg_q5hvoeNeHNOR+QfBMs_UP5P6HvgZ1GLyxRnwA@mail.gmail.com>
  <b12d2efc-73a6-adf0-09db-313ab9861d7d@utanet.at>
  <CA+84gYtje4TyUPNA_-ntjKOO-c2Ar3wjc==X7UH6Rka0khhC5g@mail.gmail.com>
  <32f0a419-2012-a662-5d8a-4d2b039942ec@utanet.at>
  <CA+84gYvj12J_kyxHdu9aNR9djm4JY1Qmywz3A9rXCLN07o=Y8g@mail.gmail.com>
  <48397ad2-f5c7-8472-c048-ebfeb0f5ca0d@utanet.at>
-In-Reply-To: <48397ad2-f5c7-8472-c048-ebfeb0f5ca0d@utanet.at>
-From: William Lum <lumwaiman@gmail.com>
-Date: Sun, 21 Mar 2021 12:14:03 -0400
-Message-ID: <CA+84gYvq74z3mTp5OpY10jSVPWQtDUPO-YybOj=gNqoyEUWPbg@mail.gmail.com>
-To: Bernhard Praschinger <shadowlord@utanet.at>
-X-Spam-Score: 0.9 (/)
+ <CA+84gYvq74z3mTp5OpY10jSVPWQtDUPO-YybOj=gNqoyEUWPbg@mail.gmail.com>
+From: Bernhard Praschinger <shadowlord@utanet.at>
+Message-ID: <15ef888e-1545-1db9-2782-6a7a5c132d82@utanet.at>
+Date: Sat, 27 Mar 2021 17:35:35 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Firefox/60.0 SeaMonkey/2.53.5.1
+MIME-Version: 1.0
+In-Reply-To: <CA+84gYvq74z3mTp5OpY10jSVPWQtDUPO-YybOj=gNqoyEUWPbg@mail.gmail.com>
+X-H3G-Authenticated-As: 2492d812503ae882f041a3ed11d939a345349e8a
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- (lumwaiman[at]gmail.com)
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.208.172 listed in wl.mailspike.net]
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [209.85.208.172 listed in list.dnswl.org]
  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
  for more information. [URIs: liu.se]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
- domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
-X-Headers-End: 1lO0ib-00ATdF-CB
-X-Mailman-Approved-At: Mon, 22 Mar 2021 17:04:39 +0000
+ 0.0 TIME_LIMIT_EXCEEDED    Exceeded time limit / deadline
+X-Headers-End: 1lQBuh-0011bo-Ve
 Subject: Re: [Mjpeg-users] Lubuntu doesn't seem to recognize IOmega Buz
  capture card
 X-BeenThere: mjpeg-users@lists.sourceforge.net
@@ -113,243 +86,90 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Cc: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Content-Type: multipart/mixed; boundary="===============1635791184992975874=="
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
---===============1635791184992975874==
-Content-Type: multipart/alternative; boundary="00000000000082776905be0e3d0d"
-
---00000000000082776905be0e3d0d
-Content-Type: text/plain; charset="UTF-8"
-
-Yes my card does have the SCSI connector for the external drive which I
-don't use and the 15 pin for the breakout box.
-
-When you say switch is it physical?  Do I need to set it to a certain
-config?
-
-Thanks,
-
-
-On Sun., Mar. 21, 2021, 11:33 a.m. Bernhard Praschinger, <
-shadowlord@utanet.at> wrote:
-
-> Hallo,
->
-> sorry I was offline for quite a while.
->
-> You write in the subject that you have a Iomega Buz card, but the lspci
-> output say's ZR36057. Which was used in the DC10/DC30. Does your card
-> have a SCSI interface connector and a 15 pin connector on the backplane ?
-> The buz was the most problematic card, because it had a PCI Switch on
-> the card for the ZR36067 and the SCSI controller.
->
-> William Lum wrote:
-> > Hello,
-> >
-> > Following your instructions here is what I found.
-> >
-> > I should also note that I am testing on a live USB stick vs installed on
-> > ssd.  This was mainly because I had installed 3-5 different versions and
-> > flavours of linux trying to get this to work and wanted to avoid
-> > installing more until I find a solution.  Please let me know if this is
-> > an issue.
-> >
-> > On Ubuntu 15.04 (Linux ubuntu 3.19.0-15-generic)
-> > The hardware is the IOmega Buz (0.6:09.0 Multimedia video controller
-> > [0400]: Zoran Corporation *ZR36057*PQC Video cutting chipset [11de:6057]
-> > (rev 01)
-> >
-> > I looked for drivers in /lib/modules/  that took me to
-> > /lib/modules/3.19.0-15-generic/kernel/driver/media/pci/zoran where I
-> found:
-> > - videocodec.ko
-> > - zr36016.ko
-> > - zr36050.ko
-> > - zr36060.ko
-> > - zr36067.ko
-> > none seem to be a direct match for the zr36057
-> That should be no problem just use the zr36067 instead.
->
-> > Tried to load the driver  "modprobe -n -v --show-depends zoran" this
-> > resulted "FATAL: Module zoran not found."
-> >
-> > Then tried "modprobe -n -v --show-depends zr36067" this seemed to
-> > install modules
-> > insmod /lib/modeules/3.19.0-15-generic/kernel/driver/...ko (ic2/alogo,
-> > media, V4l2, videocodec, zr36067)
-> It should also load the driver for the TV decoder and encoder.
->
-> When you do a lsmod | grep zr you should see the loaded modules. Are
-> some v4l (video4linux) modules loaded too ?
->
-> > but when I "lspci -nnk" it still does not show any subsystem or driver
-> > in use so not sure if it worked... also wanted to try testing it with
-> > VLC but couldn't install as the Ubuntu software center is too old and
-> > the links no longer seem to work.  This worries me, if I do get this
-> > working will I be able to install any software (i.e. Kdenlive etc).
-> > Don;t know how to do this if the ubuntu software center isn't working.
-> > apt get also had errors as the folders for this version of ubuntu seem
-> > to no longer exist.
-> I don't know if it is a problem if the lspci does not show you the card.
-> Does the lspci command (or some boot log) show you a hint that the scsi
-> controller ist recognized.
->
-> When you start in a 2nd terminal a command like that:
-> tail -f /var/log/messages
->
-> You should see the messages when the kernel loads the driver. That
-> output would be very helpful.
->
-> > Thoughts on how I should proceed?
-> The output from the kernel when you load the drivers should be very
-> helpful. To see if that kernel recognizes the card.
->
->
-> auf hoffentlich bald,
->
-> Berni the Chaos of Woodquarter
->
-> Email: shadowlord@utanet.at
-> www: http://www.lysator.liu.se/~gz/bernhard
->
-
---00000000000082776905be0e3d0d
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"auto"><div>Yes my card does have the SCSI connector for the ext=
-ernal drive which I don&#39;t use and the 15 pin for the breakout box.</div=
-><div dir=3D"auto"><br></div><div dir=3D"auto">When you say switch is it ph=
-ysical?=C2=A0 Do I need to set it to a certain config?</div><div dir=3D"aut=
-o"><br></div><div dir=3D"auto">Thanks,</div><div dir=3D"auto"><br><br><div =
-class=3D"gmail_quote" dir=3D"auto"><div dir=3D"ltr" class=3D"gmail_attr">On=
- Sun., Mar. 21, 2021, 11:33 a.m. Bernhard Praschinger, &lt;<a href=3D"mailt=
-o:shadowlord@utanet.at">shadowlord@utanet.at</a>&gt; wrote:<br></div><block=
-quote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc=
- solid;padding-left:1ex">Hallo,<br>
-<br>
-sorry I was offline for quite a while.<br>
-<br>
-You write in the subject that you have a Iomega Buz card, but the lspci <br=
->
-output say&#39;s ZR36057. Which was used in the DC10/DC30. Does your card <=
-br>
-have a SCSI interface connector and a 15 pin connector on the backplane ?<b=
-r>
-The buz was the most problematic card, because it had a PCI Switch on <br>
-the card for the ZR36067 and the SCSI controller.<br>
-<br>
-William Lum wrote:<br>
-&gt; Hello,<br>
-&gt; <br>
-&gt; Following your instructions here is what I found.<br>
-&gt; <br>
-&gt; I should also note that I am testing on a live USB stick vs installed =
-on <br>
-&gt; ssd.=C2=A0 This was mainly because I had installed 3-5 different versi=
-ons and <br>
-&gt; flavours of linux trying to get this to work and wanted to avoid <br>
-&gt; installing more until I find a solution.=C2=A0 Please let me know if t=
-his is <br>
-&gt; an issue.<br>
-&gt; <br>
-&gt; On Ubuntu 15.04 (Linux=C2=A0ubuntu 3.19.0-15-generic)<br>
-&gt; The hardware is the IOmega Buz (0.6:09.0 Multimedia video controller <=
-br>
-&gt; [0400]: Zoran Corporation *ZR36057*PQC Video cutting chipset [11de:605=
-7] <br>
-&gt; (rev 01)<br>
-&gt; <br>
-&gt; I looked for drivers in /lib/modules/=C2=A0 that took me to <br>
-&gt; /lib/modules/3.19.0-15-generic/kernel/driver/media/pci/zoran where I f=
-ound:<br>
-&gt; - videocodec.ko<br>
-&gt; - zr36016.ko<br>
-&gt; - zr36050.ko<br>
-&gt; - zr36060.ko<br>
-&gt; - zr36067.ko<br>
-&gt; none seem to be a direct match for the zr36057<br>
-That should be no problem just use the zr36067 instead.<br>
-<br>
-&gt; Tried to load the driver=C2=A0 &quot;modprobe -n -v --show-depends zor=
-an&quot; this <br>
-&gt; resulted &quot;FATAL: Module zoran not found.&quot;<br>
-&gt; <br>
-&gt; Then tried &quot;modprobe -n -v --show-depends zr36067&quot; this seem=
-ed to <br>
-&gt; install modules<br>
-&gt; insmod /lib/modeules/3.19.0-15-generic/kernel/driver/...ko (ic2/alogo,=
- <br>
-&gt; media, V4l2, videocodec, zr36067)<br>
-It should also load the driver for the TV decoder and encoder.<br>
-<br>
-When you do a lsmod | grep zr you should see the loaded modules. Are <br>
-some v4l (video4linux) modules loaded too ?<br>
-<br>
-&gt; but when I &quot;lspci -nnk&quot; it still does not show any subsystem=
- or driver <br>
-&gt; in use so not sure if it worked... also wanted to try testing it with =
-<br>
-&gt; VLC but couldn&#39;t install as the Ubuntu software center is too old =
-and <br>
-&gt; the links no longer seem to work.=C2=A0 This worries me, if I do get t=
-his <br>
-&gt; working will I be able to install any software (i.e. Kdenlive etc).=C2=
-=A0 <br>
-&gt; Don;t know how to do this if the ubuntu software center isn&#39;t work=
-ing.=C2=A0 <br>
-&gt; apt get also had errors as the folders for this version of ubuntu seem=
- <br>
-&gt; to no longer exist.<br>
-I don&#39;t know if it is a problem if the lspci does not show you the card=
-. <br>
-Does the lspci command (or some boot log) show you a hint that the scsi <br=
->
-controller ist recognized.<br>
-<br>
-When you start in a 2nd terminal a command like that:<br>
-tail -f /var/log/messages<br>
-<br>
-You should see the messages when the kernel loads the driver. That <br>
-output would be very helpful.<br>
-<br>
-&gt; Thoughts on how I should proceed?<br>
-The output from the kernel when you load the drivers should be very <br>
-helpful. To see if that kernel recognizes the card.<br>
-<br>
-<br>
-auf hoffentlich bald,<br>
-<br>
-Berni the Chaos of Woodquarter<br>
-<br>
-Email: <a href=3D"mailto:shadowlord@utanet.at" target=3D"_blank" rel=3D"nor=
-eferrer">shadowlord@utanet.at</a><br>
-www: <a href=3D"http://www.lysator.liu.se/~gz/bernhard" rel=3D"noreferrer n=
-oreferrer" target=3D"_blank">http://www.lysator.liu.se/~gz/bernhard</a><br>
-</blockquote></div></div></div>
-
---00000000000082776905be0e3d0d--
-
-
---===============1635791184992975874==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============1635791184992975874==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-_______________________________________________
-Mjpeg-users mailing list
-Mjpeg-users@lists.sourceforge.net
-https://lists.sourceforge.net/lists/listinfo/mjpeg-users
-
---===============1635791184992975874==--
-
+SGFsbG8sCgpXaWxsaWFtIEx1bSB3cm90ZToKPiBZZXMgbXkgY2FyZCBkb2VzIGhhdmUgdGhlIFND
+U0kgY29ubmVjdG9yIGZvciB0aGUgZXh0ZXJuYWwgZHJpdmUgd2hpY2ggSSAKPiBkb24ndCB1c2Ug
+YW5kIHRoZSAxNSBwaW4gZm9yIHRoZSBicmVha291dCBib3guCklzIHRoZSBTQ1NJIEFkYXB0ZXIg
+cmVjb2duaXplZCBpbiB0aGUgc3lzdGVtID8KVGhlIFBDSSBCcmlkZ2UgaXN0IHRoZSBOYXRpb25h
+bCAgUGljb3xQb3dlciBJQy4gVGhlIEFkdmFuc3lzIHNob3VsZCBiZSAKdGhlIFNDU0kgY29udHJv
+bGxlci4KCklzIHRoZSBkcml2ZXIgYWxyZWFkeSBsb2FkZWQgPwpUYWtlIGEgbG9vayBpbiAvcHJv
+Yy9zY3NpIHRoZXJlIHNob3VsZCBiZSAgc2NzaSBmaWxlIHlvdSBjYW4gdmlldy4KCk9yIHlvdSB0
+cnkgbG9hZGluZyB0aGUgZHJpdmVyIGZvciB0aGUgU0NTSSBjb250cm9sbGVyOgppbnNtb2Qgb3Ig
+bW9kcHJvYmUgYWR2YW5zeXMKCldoZW4geW91IGxvYWQgdGhlIG1vZHVsZSBpdCB3b3VsZCBiZSBn
+b29kIHRvIGNoZWNrIGlmIHRoZSBrZXJuZWwgd3JpdGVzIApzb21ldGhpbmcgdG8gL3Zhci9sb2cv
+bWVzc2FnZXMKCj4gV2hlbiB5b3Ugc2F5IHN3aXRjaCBpcyBpdCBwaHlzaWNhbD/CoCBEbyBJIG5l
+ZWQgdG8gc2V0IGl0IHRvIGEgY2VydGFpbiAKPiBjb25maWc/CkkgZG9uJ3Qga25vdyBpZiB0aGVy
+ZSBpcyBhIHBvc3NpYmlsaXR5IHRvIHNldCBhbnl0aGluZy4KCldoZW4geW91IHNlYXJjaCB0aGUg
+L3Zhci9sb2cvYm9vdC5sb2cgIGFuZCAvdmFyL2xvZy9ib290Lm1zZwpkbyB5b3UgZmluZCBhbnkg
+aGludHMgYWJvdXQgdGhlIGJ1eiwgYWR2YW5zeXMgb3Igem9yYW4gPwoKZG1lc2cgbGV0cyB5b3Ug
+dmlldyB0aGUgYm9vdCBtZXNzYWdlcyAocHJvYmFibHkgYSBmaWxlIGluIC92YXIvbG9nKSBhbnkg
+CmhpbnQgYWJvdXQgdGhlIHpvcmFuIGFuZCB0aGUgZHJpdmVyIHdvdWxkIGJlIHZlcnkgaGVscGZ1
+bC4KCj4gT24gU3VuLiwgTWFyLiAyMSwgMjAyMSwgMTE6MzMgYS5tLiBCZXJuaGFyZCBQcmFzY2hp
+bmdlciwgCj4gPHNoYWRvd2xvcmRAdXRhbmV0LmF0IDxtYWlsdG86c2hhZG93bG9yZEB1dGFuZXQu
+YXQ+PiB3cm90ZToKPiAKPiAgICAgSGFsbG8sCj4gCj4gICAgIHNvcnJ5IEkgd2FzIG9mZmxpbmUg
+Zm9yIHF1aXRlIGEgd2hpbGUuCj4gCj4gICAgIFlvdSB3cml0ZSBpbiB0aGUgc3ViamVjdCB0aGF0
+IHlvdSBoYXZlIGEgSW9tZWdhIEJ1eiBjYXJkLCBidXQgdGhlIGxzcGNpCj4gICAgIG91dHB1dCBz
+YXkncyBaUjM2MDU3LiBXaGljaCB3YXMgdXNlZCBpbiB0aGUgREMxMC9EQzMwLiBEb2VzIHlvdXIg
+Y2FyZAo+ICAgICBoYXZlIGEgU0NTSSBpbnRlcmZhY2UgY29ubmVjdG9yIGFuZCBhIDE1IHBpbiBj
+b25uZWN0b3Igb24gdGhlCj4gICAgIGJhY2twbGFuZSA/Cj4gICAgIFRoZSBidXogd2FzIHRoZSBt
+b3N0IHByb2JsZW1hdGljIGNhcmQsIGJlY2F1c2UgaXQgaGFkIGEgUENJIFN3aXRjaCBvbgo+ICAg
+ICB0aGUgY2FyZCBmb3IgdGhlIFpSMzYwNjcgYW5kIHRoZSBTQ1NJIGNvbnRyb2xsZXIuCj4gCj4g
+ICAgIFdpbGxpYW0gTHVtIHdyb3RlOgo+ICAgICAgPiBIZWxsbywKPiAgICAgID4KPiAgICAgID4g
+Rm9sbG93aW5nIHlvdXIgaW5zdHJ1Y3Rpb25zIGhlcmUgaXMgd2hhdCBJIGZvdW5kLgo+ICAgICAg
+Pgo+ICAgICAgPiBJIHNob3VsZCBhbHNvIG5vdGUgdGhhdCBJIGFtIHRlc3Rpbmcgb24gYSBsaXZl
+IFVTQiBzdGljayB2cwo+ICAgICBpbnN0YWxsZWQgb24KPiAgICAgID4gc3NkLsKgIFRoaXMgd2Fz
+IG1haW5seSBiZWNhdXNlIEkgaGFkIGluc3RhbGxlZCAzLTUgZGlmZmVyZW50Cj4gICAgIHZlcnNp
+b25zIGFuZAo+ICAgICAgPiBmbGF2b3VycyBvZiBsaW51eCB0cnlpbmcgdG8gZ2V0IHRoaXMgdG8g
+d29yayBhbmQgd2FudGVkIHRvIGF2b2lkCj4gICAgICA+IGluc3RhbGxpbmcgbW9yZSB1bnRpbCBJ
+IGZpbmQgYSBzb2x1dGlvbi7CoCBQbGVhc2UgbGV0IG1lIGtub3cgaWYKPiAgICAgdGhpcyBpcwo+
+ICAgICAgPiBhbiBpc3N1ZS4KPiAgICAgID4KPiAgICAgID4gT24gVWJ1bnR1IDE1LjA0IChMaW51
+eMKgdWJ1bnR1IDMuMTkuMC0xNS1nZW5lcmljKQo+ICAgICAgPiBUaGUgaGFyZHdhcmUgaXMgdGhl
+IElPbWVnYSBCdXogKDAuNjowOS4wIE11bHRpbWVkaWEgdmlkZW8gY29udHJvbGxlcgo+ICAgICAg
+PiBbMDQwMF06IFpvcmFuIENvcnBvcmF0aW9uICpaUjM2MDU3KlBRQyBWaWRlbyBjdXR0aW5nIGNo
+aXBzZXQKPiAgICAgWzExZGU6NjA1N10KPiAgICAgID4gKHJldiAwMSkKPiAgICAgID4KPiAgICAg
+ID4gSSBsb29rZWQgZm9yIGRyaXZlcnMgaW4gL2xpYi9tb2R1bGVzL8KgIHRoYXQgdG9vayBtZSB0
+bwo+ICAgICAgPiAvbGliL21vZHVsZXMvMy4xOS4wLTE1LWdlbmVyaWMva2VybmVsL2RyaXZlci9t
+ZWRpYS9wY2kvem9yYW4KPiAgICAgd2hlcmUgSSBmb3VuZDoKPiAgICAgID4gLSB2aWRlb2NvZGVj
+LmtvCj4gICAgICA+IC0genIzNjAxNi5rbwo+ICAgICAgPiAtIHpyMzYwNTAua28KPiAgICAgID4g
+LSB6cjM2MDYwLmtvCj4gICAgICA+IC0genIzNjA2Ny5rbwo+ICAgICAgPiBub25lIHNlZW0gdG8g
+YmUgYSBkaXJlY3QgbWF0Y2ggZm9yIHRoZSB6cjM2MDU3Cj4gICAgIFRoYXQgc2hvdWxkIGJlIG5v
+IHByb2JsZW0ganVzdCB1c2UgdGhlIHpyMzYwNjcgaW5zdGVhZC4KPiAKPiAgICAgID4gVHJpZWQg
+dG8gbG9hZCB0aGUgZHJpdmVywqAgIm1vZHByb2JlIC1uIC12IC0tc2hvdy1kZXBlbmRzIHpvcmFu
+IiB0aGlzCj4gICAgICA+IHJlc3VsdGVkICJGQVRBTDogTW9kdWxlIHpvcmFuIG5vdCBmb3VuZC4i
+Cj4gICAgICA+Cj4gICAgICA+IFRoZW4gdHJpZWQgIm1vZHByb2JlIC1uIC12IC0tc2hvdy1kZXBl
+bmRzIHpyMzYwNjciIHRoaXMgc2VlbWVkIHRvCj4gICAgICA+IGluc3RhbGwgbW9kdWxlcwo+ICAg
+ICAgPiBpbnNtb2QgL2xpYi9tb2RldWxlcy8zLjE5LjAtMTUtZ2VuZXJpYy9rZXJuZWwvZHJpdmVy
+Ly4uLmtvCj4gICAgIChpYzIvYWxvZ28sCj4gICAgICA+IG1lZGlhLCBWNGwyLCB2aWRlb2NvZGVj
+LCB6cjM2MDY3KQo+ICAgICBJdCBzaG91bGQgYWxzbyBsb2FkIHRoZSBkcml2ZXIgZm9yIHRoZSBU
+ViBkZWNvZGVyIGFuZCBlbmNvZGVyLgo+IAo+ICAgICBXaGVuIHlvdSBkbyBhIGxzbW9kIHwgZ3Jl
+cCB6ciB5b3Ugc2hvdWxkIHNlZSB0aGUgbG9hZGVkIG1vZHVsZXMuIEFyZQo+ICAgICBzb21lIHY0
+bCAodmlkZW80bGludXgpIG1vZHVsZXMgbG9hZGVkIHRvbyA/Cj4gCj4gICAgICA+IGJ1dCB3aGVu
+IEkgImxzcGNpIC1ubmsiIGl0IHN0aWxsIGRvZXMgbm90IHNob3cgYW55IHN1YnN5c3RlbSBvcgo+
+ICAgICBkcml2ZXIKPiAgICAgID4gaW4gdXNlIHNvIG5vdCBzdXJlIGlmIGl0IHdvcmtlZC4uLiBh
+bHNvIHdhbnRlZCB0byB0cnkgdGVzdGluZyBpdAo+ICAgICB3aXRoCj4gICAgICA+IFZMQyBidXQg
+Y291bGRuJ3QgaW5zdGFsbCBhcyB0aGUgVWJ1bnR1IHNvZnR3YXJlIGNlbnRlciBpcyB0b28gb2xk
+Cj4gICAgIGFuZAo+ICAgICAgPiB0aGUgbGlua3Mgbm8gbG9uZ2VyIHNlZW0gdG8gd29yay7CoCBU
+aGlzIHdvcnJpZXMgbWUsIGlmIEkgZG8gZ2V0IHRoaXMKPiAgICAgID4gd29ya2luZyB3aWxsIEkg
+YmUgYWJsZSB0byBpbnN0YWxsIGFueSBzb2Z0d2FyZSAoaS5lLiBLZGVubGl2ZSBldGMpLgo+ICAg
+ICAgPiBEb247dCBrbm93IGhvdyB0byBkbyB0aGlzIGlmIHRoZSB1YnVudHUgc29mdHdhcmUgY2Vu
+dGVyIGlzbid0Cj4gICAgIHdvcmtpbmcuCj4gICAgICA+IGFwdCBnZXQgYWxzbyBoYWQgZXJyb3Jz
+IGFzIHRoZSBmb2xkZXJzIGZvciB0aGlzIHZlcnNpb24gb2YgdWJ1bnR1Cj4gICAgIHNlZW0KPiAg
+ICAgID4gdG8gbm8gbG9uZ2VyIGV4aXN0Lgo+ICAgICBJIGRvbid0IGtub3cgaWYgaXQgaXMgYSBw
+cm9ibGVtIGlmIHRoZSBsc3BjaSBkb2VzIG5vdCBzaG93IHlvdSB0aGUKPiAgICAgY2FyZC4KPiAg
+ICAgRG9lcyB0aGUgbHNwY2kgY29tbWFuZCAob3Igc29tZSBib290IGxvZykgc2hvdyB5b3UgYSBo
+aW50IHRoYXQgdGhlIHNjc2kKPiAgICAgY29udHJvbGxlciBpc3QgcmVjb2duaXplZC4KPiAKPiAg
+ICAgV2hlbiB5b3Ugc3RhcnQgaW4gYSAybmQgdGVybWluYWwgYSBjb21tYW5kIGxpa2UgdGhhdDoK
+PiAgICAgdGFpbCAtZiAvdmFyL2xvZy9tZXNzYWdlcwo+IAo+ICAgICBZb3Ugc2hvdWxkIHNlZSB0
+aGUgbWVzc2FnZXMgd2hlbiB0aGUga2VybmVsIGxvYWRzIHRoZSBkcml2ZXIuIFRoYXQKPiAgICAg
+b3V0cHV0IHdvdWxkIGJlIHZlcnkgaGVscGZ1bC4KPiAKPiAgICAgID4gVGhvdWdodHMgb24gaG93
+IEkgc2hvdWxkIHByb2NlZWQ/Cj4gICAgIFRoZSBvdXRwdXQgZnJvbSB0aGUga2VybmVsIHdoZW4g
+eW91IGxvYWQgdGhlIGRyaXZlcnMgc2hvdWxkIGJlIHZlcnkKPiAgICAgaGVscGZ1bC4gVG8gc2Vl
+IGlmIHRoYXQga2VybmVsIHJlY29nbml6ZXMgdGhlIGNhcmQuCmF1ZiBob2ZmZW50bGljaCBiYWxk
+LAoKQmVybmkgdGhlIENoYW9zIG9mIFdvb2RxdWFydGVyCgpFbWFpbDogc2hhZG93bG9yZEB1dGFu
+ZXQuYXQKd3d3OiBodHRwOi8vd3d3Lmx5c2F0b3IubGl1LnNlL35nei9iZXJuaGFyZAoKCl9fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCk1qcGVnLXVzZXJzIG1h
+aWxpbmcgbGlzdApNanBlZy11c2Vyc0BsaXN0cy5zb3VyY2Vmb3JnZS5uZXQKaHR0cHM6Ly9saXN0
+cy5zb3VyY2Vmb3JnZS5uZXQvbGlzdHMvbGlzdGluZm8vbWpwZWctdXNlcnMK
