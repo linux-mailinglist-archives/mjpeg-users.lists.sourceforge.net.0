@@ -2,107 +2,66 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5C5E6379532
-	for <lists+mjpeg-users@lfdr.de>; Mon, 10 May 2021 19:13:43 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4753C37ACBD
+	for <lists+mjpeg-users@lfdr.de>; Tue, 11 May 2021 19:10:23 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.92.3)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1lg9TQ-0003hu-Bd; Mon, 10 May 2021 17:13:40 +0000
+	id 1lgVtk-00084E-Dy; Tue, 11 May 2021 17:10:20 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <ecree.xilinx@gmail.com>)
- id 1lg6yt-0003D3-PA; Mon, 10 May 2021 14:33:59 +0000
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ (envelope-from <tytso@mit.edu>)
+ id 1lgBUD-0000E1-TA; Mon, 10 May 2021 19:22:37 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
- MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
+ d=sourceforge.net; s=x; h=In-Reply-To:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=iXsxoOt9fS3DXvxCyyFOaJfbPkU6WlTqA1MG4BgEpJA=; b=jdhP96iZQL7dJh6rZDVslng7Ne
- z4SNlBHOSNUrKHeRsVuqrj9X7SC5vBh/Swgd7lVj9dWdnWB5p1XpnPaFPx1d97sjtoJg4R1GKcmVy
- ycgrNlPwAUKMOagQJSRQnrBpA/ed883gWhFJD94KmPbMyHexth2jrVOEllZgKK5l0c04=;
+ bh=im7yptB7Cnn0+/0nEjxp2q806kDi7qdxtBjeZI/94RE=; b=TZBbig48xKUagoQT6OYx+QkYky
+ XdVBi0d5H/1QQUD72onrFsk6/QsLUshi5bi3+mNyMkHQ+HRMwGJEcuZJ3HOHvdY8LmSYKs9HyMSto
+ Wf7NaXKZ4pWbq8j8rok+UmHs14yQiv6o0c0Spcebx3xZsygV7nRZASF7nXUlHJapT3CY=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
- Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:Content-ID:
+ h=In-Reply-To:Content-Transfer-Encoding:Content-Type:MIME-Version:
+ References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=iXsxoOt9fS3DXvxCyyFOaJfbPkU6WlTqA1MG4BgEpJA=; b=CzHfu/UZPGx0t+yQ45xg904Y3t
- Lxm8whCBTvG4iKDW44CWLZaQ81kfR3ZUsn+ma5Koy88nI63lV1cxWJIViRUEoNxGTxzaP8yQNDdsr
- 0lYfnkesHNxvBj1u4+nh+Xl1qSVtL5KFdpWuSRy+k2SuxIvWNvDqvpijhEbeNB9CDlEY=;
-Received: from mail-wr1-f46.google.com ([209.85.221.46])
+ bh=im7yptB7Cnn0+/0nEjxp2q806kDi7qdxtBjeZI/94RE=; b=iqk1UCGTePE8qVBFpwN/aQjzBr
+ yVm04PM5bvRc4wYnjqJokP0hi4dBHUjAQsd9wo99Guf6rRdfhzetOmcpEe19soXY6U8BmqND45zP7
+ FGt7oa4zdr+e0vBjMu7NHGZLajmZkpBkq8YUeOCEeiMlA+uj3qk3x4+5zXZUCSI51Cpc=;
+Received: from outgoing-auth-1.mit.edu ([18.9.28.11] helo=outgoing.mit.edu)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
- id 1lg6yp-0004lI-68; Mon, 10 May 2021 14:33:59 +0000
-Received: by mail-wr1-f46.google.com with SMTP id t18so16891380wry.1;
- Mon, 10 May 2021 07:33:55 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:cc:references:from:message-id:date:user-agent
- :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=iXsxoOt9fS3DXvxCyyFOaJfbPkU6WlTqA1MG4BgEpJA=;
- b=jIc4OS4UG1e9Htue39hs2SdJXCmPLn+MTostxG/pw06sXYt4cF0beJY8cOPd4XkNvN
- wMkWqq4rS4nqVWqmlHYwknDCThc4F5oj3a10x6AGXMwZ0Kkxjgx6mU53ky5S6gct5IOF
- gb8YE/CdqFeQhJSfkuXg75IoXDsEW/QKbfnCDm8DSyF/6zHxA2in236S9Jv233h02Cag
- nY/zUkluYzDhxrfM75C6Qnf/beBRBG9DBN2uslTW/jB8AmOrnU4strwuRTlIYCmTiED9
- Adakd2gy/AYmhY6PfiGery2Nb+BVYLJb2xN6RqR96XQSpLkoAkrrTIc1zJH3tzspThUx
- eDlQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:message-id:date
- :user-agent:mime-version:in-reply-to:content-language
- :content-transfer-encoding;
- bh=iXsxoOt9fS3DXvxCyyFOaJfbPkU6WlTqA1MG4BgEpJA=;
- b=V1LAUnd7ZYeOcpjCaG+jU4hXPex1SwxF2y+ywavVkRqXIFxphyoVQJMzjpyw5ccgGR
- waB+NT7aXmGb6gWk3pP3YwtzkiNCk1Z0i8J3BeU7iCV+8HqsO8gHHTZXKVthzOWEKjvX
- x5LUjFY0+iku0Z++TFY78XlGYRk63PMBixrSlHdQ1PiHj1yP8v/hgPOdQrsmFoA+b6q1
- 2WC43DNhXfRkNLeza6psdgusmj7rjKdRMbo+YtOjS89L6aKkbM3ag+30W2KY1K2Km3B2
- gAMqV58tRo+nlQfbBAom3pXxOdpGXLt4D+UolB+qt6l/U6hp8u7gRlcBuM4LV7uAadXz
- 2soQ==
-X-Gm-Message-State: AOAM533jP0hokg6eCEz+UzcQmwgkfou6ipHChUBsnm/WC5hE6ze2Vyx+
- IMxY1CKx4JvQnPtCUgZSbjY=
-X-Google-Smtp-Source: ABdhPJze1q8t3iuv5DjzOv0RveTjqSpEwnprh+IG3St78u9eWCZrU93KSEZYLbobgkyZLBZ/m0bYBQ==
-X-Received: by 2002:adf:e98c:: with SMTP id h12mr30469476wrm.314.1620657229579; 
- Mon, 10 May 2021 07:33:49 -0700 (PDT)
-Received: from [192.168.1.122]
- (cpc159425-cmbg20-2-0-cust403.5-4.cable.virginm.net. [86.7.189.148])
- by smtp.gmail.com with ESMTPSA id h9sm20117820wmb.35.2021.05.10.07.33.47
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Mon, 10 May 2021 07:33:48 -0700 (PDT)
-To: Matthew Wilcox <willy@infradead.org>
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ id 1lgBU8-0005tg-Sp; Mon, 10 May 2021 19:22:37 +0000
+Received: from cwcc.thunk.org (pool-72-74-133-215.bstnma.fios.verizon.net
+ [72.74.133.215]) (authenticated bits=0)
+ (User authenticated as tytso@ATHENA.MIT.EDU)
+ by outgoing.mit.edu (8.14.7/8.12.4) with ESMTP id 14AJM3dI013584
+ (version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+ Mon, 10 May 2021 15:22:05 -0400
+Received: by cwcc.thunk.org (Postfix, from userid 15806)
+ id F267215C3CD9; Mon, 10 May 2021 15:22:02 -0400 (EDT)
+Date: Mon, 10 May 2021 15:22:02 -0400
+From: "Theodore Ts'o" <tytso@mit.edu>
+To: David Woodhouse <dwmw2@infradead.org>
+Message-ID: <YJmH2irxoRsyNudb@mit.edu>
 References: <cover.1620641727.git.mchehab+huawei@kernel.org>
  <2ae366fdff4bd5910a2270823e8da70521c859af.camel@infradead.org>
  <20210510135518.305cc03d@coco.lan>
- <df6b4567-030c-a480-c5a6-fe579830e8c0@gmail.com>
- <YJk8LMFViV7Z3Uu7@casper.infradead.org>
-From: Edward Cree <ecree.xilinx@gmail.com>
-Message-ID: <ed65025c-1087-9672-7451-6d28e7ab8f92@gmail.com>
-Date: Mon, 10 May 2021 15:33:47 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
- Thunderbird/78.5.0
+ <de6d1fa5b7934f4afd61370d9c58502bef588466.camel@infradead.org>
 MIME-Version: 1.0
-In-Reply-To: <YJk8LMFViV7Z3Uu7@casper.infradead.org>
-Content-Language: en-GB
-X-Spam-Score: -0.1 (/)
+Content-Disposition: inline
+In-Reply-To: <de6d1fa5b7934f4afd61370d9c58502bef588466.camel@infradead.org>
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- (ecree.xilinx[at]gmail.com)
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [209.85.221.46 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.221.46 listed in wl.mailspike.net]
- -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
- domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
- -0.0 NICE_REPLY_A           Looks like a legit reply (A)
-X-Headers-End: 1lg6yp-0004lI-68
-X-Mailman-Approved-At: Mon, 10 May 2021 17:13:35 +0000
+X-Headers-End: 1lgBU8-0005tg-Sp
+X-Mailman-Approved-At: Tue, 11 May 2021 17:10:15 +0000
 Subject: Re: [Mjpeg-users] [PATCH 00/53] Get rid of UTF-8 chars that can be
  mapped as ASCII
 X-BeenThere: mjpeg-users@lists.sourceforge.net
@@ -132,44 +91,32 @@ Cc: alsa-devel@alsa-project.org, kvm@vger.kernel.org,
  linux-edac@vger.kernel.org, linux-hwmon@vger.kernel.org,
  netdev@vger.kernel.org, linux-usb@vger.kernel.org,
  linux-kernel@vger.kernel.org, linux-f2fs-devel@lists.sourceforge.net,
- linux-rdma@vger.kernel.org, linux-integrity@vger.kernel.org,
- David Woodhouse <dwmw2@infradead.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+ linux-rdma@vger.kernel.org, linux-integrity@vger.kernel.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-On 10/05/2021 14:59, Matthew Wilcox wrote:
-> Most of these
-> UTF-8 characters come from latex conversions and really aren't
-> necessary (and are being used incorrectly).
-I fully agree with fixing those.
-The cover-letter, however, gave the impression that that was not the
- main purpose of this series; just, perhaps, a happy side-effect.
-
-> You seem quite knowedgeable about the various differences.  Perhaps
-> you'd be willing to write a document for Documentation/doc-guide/
-> that provides guidance for when to use which kinds of horizontal
-> line?I have Opinions about the proper usage of punctuation, but I also know
- that other people have differing opinions.  For instance, I place
- spaces around an em dash, which is nonstandard according to most
- style guides.  Really this is an individual enough thing that I'm not
- sure we could have a "kernel style guide" that would be more useful
- than general-purpose guidance like the page you linked.
-Moreover, such a guide could make non-native speakers needlessly self-
- conscious about their writing and discourage them from contributing
- documentation at all.  I'm not advocating here for trying to push
- kernel developers towards an eats-shoots-and-leaves level of
- linguistic pedantry; rather, I merely think that existing correct
- usages should be left intact (and therefore, excising incorrect usage
- should only be attempted by someone with both the expertise and time
- to check each case).
-
-But if you really want such a doc I wouldn't mind contributing to it.
-
--ed
-
-
-_______________________________________________
-Mjpeg-users mailing list
-Mjpeg-users@lists.sourceforge.net
-https://lists.sourceforge.net/lists/listinfo/mjpeg-users
+T24gTW9uLCBNYXkgMTAsIDIwMjEgYXQgMDI6NDk6NDRQTSArMDEwMCwgRGF2aWQgV29vZGhvdXNl
+IHdyb3RlOgo+IE9uIE1vbiwgMjAyMS0wNS0xMCBhdCAxMzo1NSArMDIwMCwgTWF1cm8gQ2FydmFs
+aG8gQ2hlaGFiIHdyb3RlOgo+ID4gVGhpcyBwYXRjaCBzZXJpZXMgaXMgZG9pbmcgY29udmVyc2lv
+biBvbmx5IHdoZW4gdXNpbmcgQVNDSUkgbWFrZXMKPiA+IG1vcmUgc2Vuc2UgdGhhbiB1c2luZyBV
+VEYtOC4gCj4gPiAKPiA+IFNlZSwgYSBudW1iZXIgb2YgY29udmVydGVkIGRvY3VtZW50cyBlbmRl
+ZCB3aXRoIHdlaXJkIGNoYXJhY3RlcnMKPiA+IGxpa2UgWkVSTyBXSURUSCBOTy1CUkVBSyBTUEFD
+RSAoVStGRUZGKSBjaGFyYWN0ZXIuIFRoaXMgc3BlY2lmaWMKPiA+IGNoYXJhY3RlciBkb2Vzbid0
+IGRvIGFueSBnb29kLgo+ID4gCj4gPiBPdGhlcnMgdXNlIE5PLUJSRUFLIFNQQUNFIChVK0EwKSBp
+bnN0ZWFkIG9mIDB4MjAuIEhhcm1sZXNzLCB1bnRpbAo+ID4gc29tZW9uZSB0cmllcyB0byB1c2Ug
+Z3JlcFsxXS4KPiAKPiBSZXBsYWNpbmcgdGhvc2UgbWFrZXMgc2Vuc2UuIEJ1dCByZXBsYWNpbmcg
+ZW1kYXNoZXMg4oCUIHdoaWNoIGFyZSBhCj4gZGlzdGluY3QgY2hhcmFjdGVyIHRoYXQgaGFzIG5v
+IGRpcmVjdCByZXBsYWNlbWVudCBpbiBBU0NJSSBhbmQgd2hpY2gKPiBwZW9wbGUgZG8gKmRlbGli
+ZXJhdGVseSogdXNlIGluc3RlYWQgb2YgaHlwaGVuLW1pbnVzIOKAlCBkb2VzIG5vdC4KCkkgcmVn
+dWxhcmx5IHVzZSAtLS0gZm9yIGVtLWRhc2hlcyBhbmQgLS0gZm9yIGVuLWRhc2hlcy4gIE1hcmtk
+b3duIHdpbGwKYXV0b21hdGljYWxseSB0cmFuc2xhdGUgMyBBU0NJSSBoeXBlbnMgdG8gZW0tZGFz
+aGVzLCBhbmQgMiBBU0NJSQpoeXBoZW5zIHRvIGVuLWRhc2hlcy4gIEl0J3MgbXVjaCwgbXVjaCBl
+YXNpZXIgZm9yIG1lIHRvIHR5cGUgMiBvciAzCmh5cGVucyBpbnRvIG15IHRleHQgZWRpdG9yIG9m
+IGNob2ljZSB0aGFuIHRyeWluZyB0byBlbnRlciB0aGUgVVRGLTgKY2hhcmFjdGVycy4gIElmIHdl
+IGNhbiBtYWtlIHNwaGlueCBkbyB0aGlzIHRyYW5zbGF0aW9uLCBtYXliZSB0aGF0J3MKdGhlIGJl
+c3Qgd2F5IG9mIGRlYWxpbmcgd2l0aCB0aGVzZSB0d28gY2hhcmFjdGVycz8KCkNoZWVycywKCgkJ
+CQkJLSBUZWQKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+XwpNanBlZy11c2VycyBtYWlsaW5nIGxpc3QKTWpwZWctdXNlcnNAbGlzdHMuc291cmNlZm9yZ2Uu
+bmV0Cmh0dHBzOi8vbGlzdHMuc291cmNlZm9yZ2UubmV0L2xpc3RzL2xpc3RpbmZvL21qcGVnLXVz
+ZXJzCg==
