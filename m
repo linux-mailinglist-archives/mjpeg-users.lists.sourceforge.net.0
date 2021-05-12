@@ -2,27 +2,27 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 03E5937CE75
+	by mail.lfdr.de (Postfix) with ESMTPS id 134AE37CE78
 	for <lists+mjpeg-users@lfdr.de>; Wed, 12 May 2021 19:22:11 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
 	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1lgsYh-0001wL-Lb; Wed, 12 May 2021 17:22:07 +0000
+	id 1lgsYh-0001wU-NB; Wed, 12 May 2021 17:22:07 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
  (envelope-from
  <BATV+f64ad8f4af131d8b84a6+6471+infradead.org+dwmw2@bombadil.srs.infradead.org>)
- id 1lgsKf-00049E-2H; Wed, 12 May 2021 17:07:37 +0000
+ id 1lgsPw-0004H0-Om; Wed, 12 May 2021 17:13:04 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Mime-Version:Content-Type:References:In-Reply-To:
  Date:Cc:To:From:Subject:Message-ID:Sender:Reply-To:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=CGAim91g54du1h6JaU0Xbf2gPO4So65H4Ue8vHSi7L4=; b=CZSJuVwNGm/geshetUrgidtcxB
- ry2quRWV+dkYZ1TmPJkTZD7rmyCGzoAmOe+nzcbqzAPO3nfXTahqfCGDhfhTbeW6W+1grn2QiCzAy
- riX7o/udiO28HK0Y4WMnjEnbOpgs55VdOvpIvZ9ozpBho3wzAgv3VhQE0W8THid73GHk=;
+ bh=Bbe/giLRixNHZfVxrsBWK3QD/DvA2E8vNtncCgEH6tY=; b=BI0xchNT//E87/FkbRYCHyhiZ4
+ 9U1+lpKkREcvTm7pl43nGoOrzrTIj5wA0mbOPn2luaYJWgTI8UsCFtj8bNriaXubV5By6Jq5ONsqy
+ pqNKMc2LyLuWqvnYahkgiOSXw8SJPpnewwimEhhkneReH58g6YjVtUq38236GzNS3IsU=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Mime-Version:Content-Type:References:In-Reply-To:Date:Cc:To:From:Subject:
@@ -30,34 +30,35 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=CGAim91g54du1h6JaU0Xbf2gPO4So65H4Ue8vHSi7L4=; b=lLKkpYZjBoCkHjzMZA68wNxf9l
- j0aCYDnPyHfZyUVD2B7QHOXPYeaIwj44tvg3wPoNKFHlF1vIPt8sz6+qIj1iGl7L5F1Tq8lnyqH2v
- MyTwbqw6xuJ11AxrJW4/zgnO8GGub/6zQ646RgTdUwHprhXRfLrFe9tskLc1n4ktwuJU=;
+ bh=Bbe/giLRixNHZfVxrsBWK3QD/DvA2E8vNtncCgEH6tY=; b=eb8Nm8JTTb2kRlW16tUmlTla1s
+ lld6hYvKdON7kn/1c0RxB8mwu31NRO6jx3ng2Q4NjCKEaUUnxtSAA4qlM2W2UzDNHeYDgFPlYCvKH
+ iHAkAWdmlmfEKt3dTcMb1ksvRggjNT0zJ17+GHTbLn+ZE00EopJeMwttHwznaT5nwUdE=;
 Received: from bombadil.infradead.org ([198.137.202.133])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1lgsKc-005ipT-Bz; Wed, 12 May 2021 17:07:38 +0000
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ id 1lgsPm-0000PX-0H; Wed, 12 May 2021 17:13:04 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=infradead.org; s=bombadil.20210309; h=Mime-Version:Content-Type:References:
  In-Reply-To:Date:Cc:To:From:Subject:Message-ID:Sender:Reply-To:
  Content-Transfer-Encoding:Content-ID:Content-Description;
- bh=CGAim91g54du1h6JaU0Xbf2gPO4So65H4Ue8vHSi7L4=; b=4i55lXobtCkItqSLIXSNM1KdvS
- D2h7l9pabkZpuJmEYHHSArPzaLESyqMTrsXZvx1pJB6QmhgVRHcQwyFSRVsmtSW/54sfR3dVLrQVe
- aPalSZxx0LhVdnoX6jaUcYsm4ag50Xgys+KwncC8wH0oqG5NXdpUtaHgRPbPh797IL4MYp4pncU0A
- C+hTboFmMq9+W13++P+k4J7XyhskOt2AxIIPo8aMyo1DWlOC7Fv3RLdqIZrfhzm4Y25v26SZkkyOq
- 98ArH+Ndhg+U+YIqKcVFbS9VO5Kubn1uaeOk0h+8F6Av1nOvq9jJjDTMCTcpoJOPh06yPpkDXZY6B
- LtaqwHaQ==;
+ bh=Bbe/giLRixNHZfVxrsBWK3QD/DvA2E8vNtncCgEH6tY=; b=GMyx8yNb1WU+k0lf4hnLOgZHBr
+ 6DFDVEZXTOLWMsR8c+DFSqytTjIYYEdjxaixq5vRe3+3JWR59MOXd/W8EDHvUxuOfMniJtjC7qemY
+ xjWsT8/erX8vmk23Ssat6lHd6OnEvhlJOV+WAGGL+AqjSi5Z1HY6veeTfwqvgf2BCwXLFjuBqRLmy
+ eChY1b3iu2fMKuB2WLM6NbgnMZ0AfKtp9a670pjykiwtv49KoHHXLZ9qKXnB8cceJrdyUmpGpk0vm
+ FOwCw9zzsVV5nAOzGYvVHRudpwMhKlH1f9Y9YLfhCUnOYbYtyvlEGDEZRwcjLejXp+2r18iytiQ9m
+ ICcU8TEw==;
 Received: from 54-240-197-236.amazon.com ([54.240.197.236]
  helo=u3832b3a9db3152.ant.amazon.com)
  by bombadil.infradead.org with esmtpsa (Exim 4.94 #2 (Red Hat Linux))
- id 1lgsKF-00Ad4i-7g; Wed, 12 May 2021 17:07:11 +0000
-Message-ID: <d2fed242fbe200706b8d23a53512f0311d900297.camel@infradead.org>
+ id 1lgsPT-00AdJd-Be; Wed, 12 May 2021 17:12:35 +0000
+Message-ID: <cca519da5a3af70297bf1b75b9dbcb0c98ed3eaf.camel@infradead.org>
 From: David Woodhouse <dwmw2@infradead.org>
-To: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>, Linux Doc Mailing
- List <linux-doc@vger.kernel.org>
-Date: Wed, 12 May 2021 18:07:04 +0100
-In-Reply-To: <cover.1620823573.git.mchehab+huawei@kernel.org>
+To: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>, Theodore Ts'o
+ <tytso@mit.edu>
+Date: Wed, 12 May 2021 18:12:27 +0100
+In-Reply-To: <20210512171741.2870bcbc@coco.lan>
 References: <cover.1620823573.git.mchehab+huawei@kernel.org>
+ <YJvi1L2ss5Tfi+My@mit.edu> <20210512171741.2870bcbc@coco.lan>
 X-Mailer: Evolution 3.28.5-0ubuntu0.18.04.2 
 Mime-Version: 1.0
 X-SRS-Rewrite: SMTP reverse-path rewritten from <dwmw2@infradead.org> by
@@ -72,7 +73,7 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1lgsKc-005ipT-Bz
+X-Headers-End: 1lgsPm-0000PX-0H
 X-Mailman-Approved-At: Wed, 12 May 2021 17:22:06 +0000
 Subject: Re: [Mjpeg-users] [PATCH v2 00/40] Use ASCII subset instead of
  UTF-8 alternate symbols
@@ -88,7 +89,8 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Cc: alsa-devel@alsa-project.org, kvm@vger.kernel.org, linux-iio@vger.kernel.org,
+Cc: alsa-devel@alsa-project.org, kvm@vger.kernel.org,
+ Linux Doc Mailing List <linux-doc@vger.kernel.org>, linux-iio@vger.kernel.org,
  linux-pci@vger.kernel.org, dri-devel@lists.freedesktop.org,
  keyrings@vger.kernel.org, linux-sgx@vger.kernel.org,
  Jonathan Corbet <corbet@lwn.net>, linux-rdma@vger.kernel.org,
@@ -102,58 +104,68 @@ Cc: alsa-devel@alsa-project.org, kvm@vger.kernel.org, linux-iio@vger.kernel.org,
  netdev@vger.kernel.org, linux-usb@vger.kernel.org,
  linux-kernel@vger.kernel.org, linux-f2fs-devel@lists.sourceforge.net,
  linux-integrity@vger.kernel.org
-Content-Type: multipart/mixed; boundary="===============6183931473279034023=="
+Content-Type: multipart/mixed; boundary="===============1355540562581566050=="
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
 
---===============6183931473279034023==
+--===============1355540562581566050==
 Content-Type: multipart/signed; micalg="sha-256";
 	protocol="application/x-pkcs7-signature";
-	boundary="=-/FPptejB83YswlzTVxow"
+	boundary="=-hWc+xAn5S+EFrraSjweQ"
 
 
---=-/FPptejB83YswlzTVxow
+--=-hWc+xAn5S+EFrraSjweQ
 Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-Your title 'Use ASCII subset' is now at least a bit *closer* to
-describing what the patches are actually doing, but it's still a bit
-misleading because you're only doing it for *some* characters.
-
-And the wording is still indicative of a fundamentally *misguided*
-motivation for doing any of this. Your commit comments should be about
-fixing a specific thing, nothing to do with "use ASCII subset", which
-is pointless in itself.
-
-On Wed, 2021-05-12 at 14:50 +0200, Mauro Carvalho Chehab wrote:
-> Such conversion tools - plus some text editor like LibreOffice  or simila=
-r  - have
-> a set of rules that turns some typed ASCII characters into UTF-8 alternat=
-ives,
-> for instance converting commas into curly commas and adding non-breakable
-> spaces. All of those are meant to produce better results when the text is
-> displayed in HTML or PDF formats.
-
-And don't we render our documentation into HTML or PDF formats? Are
-some of those non-breaking spaces not actually *useful* for their
-intended purpose?
-
-> While it is perfectly fine to use UTF-8 characters in Linux, and speciall=
-y at
-> the documentation,  it is better to  stick to the ASCII subset  on such
-> particular case,  due to a couple of reasons:
+On Wed, 2021-05-12 at 17:17 +0200, Mauro Carvalho Chehab wrote:
+> Em Wed, 12 May 2021 10:14:44 -0400
+> "Theodore Ts'o" <tytso@mit.edu> escreveu:
 >=20
-> 1. it makes life easier for tools like grep;
+> > On Wed, May 12, 2021 at 02:50:04PM +0200, Mauro Carvalho Chehab wrote:
+> > > v2:
+> > > - removed EM/EN DASH conversion from this patchset; =20
+> >=20
+> > Are you still thinking about doing the
+> >=20
+> > EN DASH --> "--"
+> > EM DASH --> "---"
+> >=20
+> > conversion? =20
+>=20
+> Yes, but I intend to submit it on a separate patch series, probably after
+> having this one merged. Let's first cleanup the large part of the=20
+> conversion-generated UTF-8 char noise ;-)
+>=20
+> > That's not going to change what the documentation will
+> > look like in the HTML and PDF output forms, and I think it would make
+> > life easier for people are reading and editing the Documentation/*
+> > files in text form.
+>=20
+> Agreed. I'm also considering to add a couple of cases of this char:
+>=20
+> 	- U+2026 ('=E2=80=A6'): HORIZONTAL ELLIPSIS
+>=20
+> As Sphinx also replaces "..." into HORIZONTAL ELLIPSIS.
 
-Barely, as noted, because of things like line feeds.
+Er, what?
 
-> 2. they easier to edit with the some commonly used text/source
->    code editors.
+The *only* part of this whole enterprise that actually seemed to make
+even a tiny bit of sense =E2=80=94 rather than seeming like a thinly veiled
+retrospective excuse for dragging us back in time by 30 years =E2=80=94 was=
+ the
+bit about making it easier to grep.
 
-That is nonsense. Any but the most broken and/or anachronistic
-environments and editors will be just fine.
+But if I understand you correctly, you're talking about using something
+like C trigraphs to represent the perfectly reasonable text emdash
+character ("=E2=80=94") as two hyphen-minuses ("--") in the source code of =
+the
+documentation? Isn't that going to achieve precisely the *opposite*? If
+I select some text in the HTML output of the docs and then search for
+it in the source code, that's going to *stop* it matching my search?
 
---=-/FPptejB83YswlzTVxow
+
+--=-hWc+xAn5S+EFrraSjweQ
 Content-Type: application/x-pkcs7-signature; name="smime.p7s"
 Content-Disposition: attachment; filename="smime.p7s"
 Content-Transfer-Encoding: base64
@@ -236,33 +248,33 @@ BAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAY
 BgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMT0wOwYDVQQDEzRDT01PRE8gUlNBIENsaWVudCBBdXRo
 ZW50aWNhdGlvbiBhbmQgU2VjdXJlIEVtYWlsIENBAhEA4rtJSHkq7AnpxKUY8ZlYZjANBglghkgB
 ZQMEAgEFAKCCAe0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjEw
-NTEyMTcwNzA0WjAvBgkqhkiG9w0BCQQxIgQgrbbFRoqK/Il2tfAAOjreV59AGIBtL1DK//rjr81v
-3I8wgb4GCSsGAQQBgjcQBDGBsDCBrTCBlzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIg
+NTEyMTcxMjI3WjAvBgkqhkiG9w0BCQQxIgQg3XpAgHXtlhpeOzv/dEVijB6FV2B1P1ORW7ixkdff
+lPowgb4GCSsGAQQBgjcQBDGBsDCBrTCBlzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIg
 TWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQx
 PTA7BgNVBAMTNENPTU9ETyBSU0EgQ2xpZW50IEF1dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1h
 aWwgQ0ECEQDiu0lIeSrsCenEpRjxmVhmMIHABgsqhkiG9w0BCRACCzGBsKCBrTCBlzELMAkGA1UE
 BhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgG
 A1UEChMRQ09NT0RPIENBIExpbWl0ZWQxPTA7BgNVBAMTNENPTU9ETyBSU0EgQ2xpZW50IEF1dGhl
 bnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0ECEQDiu0lIeSrsCenEpRjxmVhmMA0GCSqGSIb3
-DQEBAQUABIIBAKX4AuZ2PO116yKAaN0onYdGfrl/MlcME1r6njraDJQrEFr4nrLYQPfpiXbp1oTB
-S676SpFIK+i3I5Dm7sPcwrMj4GwwY6N1TZAwaSLIbPiSSeVvfWCk6EKrUPiRtKJiffVAU9H3+1n4
-lWF6s9mq3Oopw2UBBKgi3Mbfe4nsYUYn3ZwcKLSvGZPPtQ64gNGfNttskpSjxcvleeVCI6vE7mdy
-aR5mQgudud0ou19a+EBzRxr9hEnbOKKc333vHLKCOZH3S5JbqD/6Tfoe1ffeLQR37ul1+cB2ndrJ
-+6nEeHNGmAXUgV+sbdglQd3UwExYPXWySsvI92XKWqXkRuUwIxAAAAAAAAA=
+DQEBAQUABIIBAF05KQACeazolZqXWhE2RG343uRTkhj6gM65QVXqz6/sGDDgTvqLiikBTTMAeiUZ
+EpaD3Gbwmez7WY6axWZ3pR3lnqhyBH+tr5O1DSTEWA0WyUJJ4jtz5ait1Im4CexPphbaiJB+KveN
+61GcukywzZhUNMJL/rN0hUglCtGjGJHeTIJ0bSU6WI2KOGYEmR/yH1sEwbZhEjbIwduWC6SL+r6H
+jPI99OwT+Q3uxRwTqA4ljPDZhihqihDFDwX0GNYMl3vGQAhG/XSQjPEzKaoPf03i8dfF/I4u2aWW
+rWNeVL4q2Zvu+0N4+t6bkchYY+agiEPi5RrkSAmkYVfVuiYBwHUAAAAAAAA=
 
 
---=-/FPptejB83YswlzTVxow--
+--=-hWc+xAn5S+EFrraSjweQ--
 
 
 
---===============6183931473279034023==
+--===============1355540562581566050==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6183931473279034023==
+--===============1355540562581566050==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -273,6 +285,6 @@ Mjpeg-users mailing list
 Mjpeg-users@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/mjpeg-users
 
---===============6183931473279034023==--
+--===============1355540562581566050==--
 
 
