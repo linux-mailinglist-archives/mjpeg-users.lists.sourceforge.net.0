@@ -2,62 +2,73 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1C6C337CE7A
+	by mail.lfdr.de (Postfix) with ESMTPS id 07BFD37CE76
 	for <lists+mjpeg-users@lfdr.de>; Wed, 12 May 2021 19:22:11 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
 	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1lgsYh-0001w3-IV; Wed, 12 May 2021 17:22:07 +0000
+	id 1lgsYh-0001wC-K3; Wed, 12 May 2021 17:22:07 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <tytso@mit.edu>)
- id 1lgpdy-0000Jy-G8; Wed, 12 May 2021 14:15:22 +0000
+ (envelope-from <mchehab+huawei@kernel.org>)
+ id 1lgqcf-0003OD-3q; Wed, 12 May 2021 15:18:05 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=In-Reply-To:Content-Type:MIME-Version:References:
- Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :References:In-Reply-To:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=o97F3Fr9+SNazjGuRfxB4iVRudNPfSsu2VSdVvH974s=; b=YFGtagoSmerXWdAB/DzcTJuN5T
- ghDYOUjJe6Nbt1Seaaskyjgot1Ip+bbu0xvAdSA6Ye7IAhjPZ4/9kPpTEFJIOfFns/ryb7ny7Gp8D
- RxB1v0sxKwu4rqeIMyURjJgfEvoG/n+zsQGyoYKFUp0hQjjn/4ImBZPAqvyTuoBcSprY=;
+ bh=2xN+R39aaeOZ1c9zQ3zvMUpB70ZLuvOfU+/UcsP16Rk=; b=cqVE6ixaSWRrF1RlkF/y08S46z
+ eFu5ZZpA12QouaftkOWZHjvXYDkmpJIukD5CiBR1F7lbbGQ4k4KJalcpB0d1GIdQwIoCEakfSlU9z
+ dpbTKzLCTo9oZoN6O0ouIkz6ISYzOZmB/DnP3WBlTcj152t+tvPXhN30c74lWK1m3LvA=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:Subject:Cc:To
- :From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:
+ In-Reply-To:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=o97F3Fr9+SNazjGuRfxB4iVRudNPfSsu2VSdVvH974s=; b=hR8dLSOyo5wQxk7g/PmAI/LzbF
- E4CQQl2CXFr04ScvQO/qDfxASyB1XOx0EmJlXnkIiVxhDfzQr8HROUVxYXQdmqVPTgoL8xi+9kF8O
- iSD9t+QzVPMyOSZMo2NVQT1E2AxnmJ64rNx1exaVSD9iRgb4V0omQcQHeyBKUl9zL+ZY=;
-Received: from outgoing-auth-1.mit.edu ([18.9.28.11] helo=outgoing.mit.edu)
+ bh=2xN+R39aaeOZ1c9zQ3zvMUpB70ZLuvOfU+/UcsP16Rk=; b=nNowtB564hxDqA+bsPpvr2sttY
+ 3rVmNtorznZhM2rXI2VndFeLZxrq/2H3onuvygNd75AfX3UNvS6dBPjSClXi9UagHbGVyranQ6CEc
+ wA9Q0mt0FGBEZvBQuLCUOECctex51IvZVrNGtc7boO2evIJe4kewm8B8NmHAGldSebEU=;
+Received: from mail.kernel.org ([198.145.29.99])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1lgpdo-0003z0-BL; Wed, 12 May 2021 14:15:22 +0000
-Received: from cwcc.thunk.org (pool-72-74-133-215.bstnma.fios.verizon.net
- [72.74.133.215]) (authenticated bits=0)
- (User authenticated as tytso@ATHENA.MIT.EDU)
- by outgoing.mit.edu (8.14.7/8.12.4) with ESMTP id 14CEEiap031112
- (version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
- Wed, 12 May 2021 10:14:45 -0400
-Received: by cwcc.thunk.org (Postfix, from userid 15806)
- id 448C815C39C2; Wed, 12 May 2021 10:14:44 -0400 (EDT)
-Date: Wed, 12 May 2021 10:14:44 -0400
-From: "Theodore Ts'o" <tytso@mit.edu>
-To: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>
-Message-ID: <YJvi1L2ss5Tfi+My@mit.edu>
+ id 1lgqcc-0000Jp-Da; Wed, 12 May 2021 15:18:04 +0000
+Received: by mail.kernel.org (Postfix) with ESMTPSA id 455F961C3E;
+ Wed, 12 May 2021 15:17:44 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=k20201202; t=1620832672;
+ bh=zB2G4t5ozyJ72g68BGRplKf2lQRTS6CtRvJ7FVX3NWE=;
+ h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
+ b=DBjrvZcbfODq6o/u3ovhcKp34o3mQ/2g2kqOKbw7rqi0UbJcuDmNkgLMMy0M05dFs
+ mwfV7fdqIvkaHvs5FkFIxP3pQ5mW2wuelKsM0Zg1XI928MZ1g6hDtwlC/lZ6mTYtDn
+ L0yXyxJPdKzjgMXD6Vs/vdQOXuvQV+DBBKSwRDhM/LlZ9x9/DV6Qnq7MjBym4Ue3He
+ LklNFflnfSaW1SCikrvqRJriPDliUiNhIaGm2pb/3nXItDzT/4/obeOPpO0NPN/v0m
+ Pwish5sD0axq4vDEIuCSUJZyKrnPcy3P6Nd30IKN+fHXybC5E+QSyK+xdLgaNeWw/l
+ +EUyGcBOd8VUw==
+Date: Wed, 12 May 2021 17:17:41 +0200
+From: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>
+To: "Theodore Ts'o" <tytso@mit.edu>
+Message-ID: <20210512171741.2870bcbc@coco.lan>
+In-Reply-To: <YJvi1L2ss5Tfi+My@mit.edu>
 References: <cover.1620823573.git.mchehab+huawei@kernel.org>
+ <YJvi1L2ss5Tfi+My@mit.edu>
+X-Mailer: Claws Mail 3.17.8 (GTK+ 2.24.33; x86_64-redhat-linux-gnu)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <cover.1620823573.git.mchehab+huawei@kernel.org>
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: -0.8 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-X-Headers-End: 1lgpdo-0003z0-BL
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ -0.7 DKIMWL_WL_HIGH         DKIMwl.org - High trust sender
+X-Headers-End: 1lgqcc-0000Jp-Da
 X-Mailman-Approved-At: Wed, 12 May 2021 17:22:06 +0000
 Subject: Re: [Mjpeg-users] [PATCH v2 00/40] Use ASCII subset instead of
  UTF-8 alternate symbols
@@ -88,28 +99,31 @@ Cc: alsa-devel@alsa-project.org, kvm@vger.kernel.org,
  netdev@vger.kernel.org, linux-usb@vger.kernel.org,
  linux-kernel@vger.kernel.org, linux-f2fs-devel@lists.sourceforge.net,
  linux-integrity@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-On Wed, May 12, 2021 at 02:50:04PM +0200, Mauro Carvalho Chehab wrote:
-> v2:
-> - removed EM/EN DASH conversion from this patchset;
-
-Are you still thinking about doing the
-
-EN DASH --> "--"
-EM DASH --> "---"
-
-conversion?  That's not going to change what the documentation will
-look like in the HTML and PDF output forms, and I think it would make
-life easier for people are reading and editing the Documentation/*
-files in text form.
-
-				- Ted
-
-
-_______________________________________________
-Mjpeg-users mailing list
-Mjpeg-users@lists.sourceforge.net
-https://lists.sourceforge.net/lists/listinfo/mjpeg-users
+RW0gV2VkLCAxMiBNYXkgMjAyMSAxMDoxNDo0NCAtMDQwMAoiVGhlb2RvcmUgVHMnbyIgPHR5dHNv
+QG1pdC5lZHU+IGVzY3JldmV1OgoKPiBPbiBXZWQsIE1heSAxMiwgMjAyMSBhdCAwMjo1MDowNFBN
+ICswMjAwLCBNYXVybyBDYXJ2YWxobyBDaGVoYWIgd3JvdGU6Cj4gPiB2MjoKPiA+IC0gcmVtb3Zl
+ZCBFTS9FTiBEQVNIIGNvbnZlcnNpb24gZnJvbSB0aGlzIHBhdGNoc2V0OyAgCj4gCj4gQXJlIHlv
+dSBzdGlsbCB0aGlua2luZyBhYm91dCBkb2luZyB0aGUKPiAKPiBFTiBEQVNIIC0tPiAiLS0iCj4g
+RU0gREFTSCAtLT4gIi0tLSIKPiAKPiBjb252ZXJzaW9uPyAgCgpZZXMsIGJ1dCBJIGludGVuZCB0
+byBzdWJtaXQgaXQgb24gYSBzZXBhcmF0ZSBwYXRjaCBzZXJpZXMsIHByb2JhYmx5IGFmdGVyCmhh
+dmluZyB0aGlzIG9uZSBtZXJnZWQuIExldCdzIGZpcnN0IGNsZWFudXAgdGhlIGxhcmdlIHBhcnQg
+b2YgdGhlIApjb252ZXJzaW9uLWdlbmVyYXRlZCBVVEYtOCBjaGFyIG5vaXNlIDstKQoKPiBUaGF0
+J3Mgbm90IGdvaW5nIHRvIGNoYW5nZSB3aGF0IHRoZSBkb2N1bWVudGF0aW9uIHdpbGwKPiBsb29r
+IGxpa2UgaW4gdGhlIEhUTUwgYW5kIFBERiBvdXRwdXQgZm9ybXMsIGFuZCBJIHRoaW5rIGl0IHdv
+dWxkIG1ha2UKPiBsaWZlIGVhc2llciBmb3IgcGVvcGxlIGFyZSByZWFkaW5nIGFuZCBlZGl0aW5n
+IHRoZSBEb2N1bWVudGF0aW9uLyoKPiBmaWxlcyBpbiB0ZXh0IGZvcm0uCgpBZ3JlZWQuIEknbSBh
+bHNvIGNvbnNpZGVyaW5nIHRvIGFkZCBhIGNvdXBsZSBvZiBjYXNlcyBvZiB0aGlzIGNoYXI6CgoJ
+LSBVKzIwMjYgKCfigKYnKTogSE9SSVpPTlRBTCBFTExJUFNJUwoKQXMgU3BoaW54IGFsc28gcmVw
+bGFjZXMgIi4uLiIgaW50byBIT1JJWk9OVEFMIEVMTElQU0lTLgoKLQoKQW55d2F5LCBJJ20gb3B0
+aW5nIHRvIHN1Ym1pdHRpbmcgdGhvc2UgaW4gc2VwYXJhdGUgYmVjYXVzZSBpdCBzZWVtcwp0aGF0
+IGF0IGxlYXN0IHNvbWUgbWFpbnRhaW5lcnMgYWRkZWQgRU0vRU4gREFTSCBpbnRlbnRpb25hbGx5
+LgoKU28sIGl0IG1heSBnZW5lcmF0ZSBjYXNlLXBlci1jYXNlIGRpc2N1c3Npb25zLgoKQWxzbywg
+SU1PLCBhdCBsZWFzdCBhIGNvdXBsZSBvZiBFTi9FTSBEQVNIIGNhc2VzIHdvdWxkIGJlIGJldHRl
+ciBzZXJ2ZWQgCndpdGggYSBzaW5nbGUgaHlwaGVuLgoKVGhhbmtzLApNYXVybwoKCl9fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCk1qcGVnLXVzZXJzIG1haWxp
+bmcgbGlzdApNanBlZy11c2Vyc0BsaXN0cy5zb3VyY2Vmb3JnZS5uZXQKaHR0cHM6Ly9saXN0cy5z
+b3VyY2Vmb3JnZS5uZXQvbGlzdHMvbGlzdGluZm8vbWpwZWctdXNlcnMK
