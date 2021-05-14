@@ -2,82 +2,111 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id D4E50380C40
+	by mail.lfdr.de (Postfix) with ESMTPS id C8D31380C3E
 	for <lists+mjpeg-users@lfdr.de>; Fri, 14 May 2021 16:49:37 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
 	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1lhZ8A-0006QJ-25; Fri, 14 May 2021 14:49:34 +0000
+	id 1lhZ8A-0006QS-40; Fri, 14 May 2021 14:49:34 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from
- <BATV+1f59752eb0922dde12da+6473+infradead.org+dwmw2@bombadil.srs.infradead.org>)
- id 1lhTm9-0002pX-Gc; Fri, 14 May 2021 09:06:29 +0000
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ (envelope-from <ecree.xilinx@gmail.com>)
+ id 1lhVgW-0006K7-U5; Fri, 14 May 2021 11:08:49 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Mime-Version:Content-Type:References:In-Reply-To:
- Date:Cc:To:From:Subject:Message-ID:Sender:Reply-To:Content-Transfer-Encoding:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
+ MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=wJ/s2QfMNTOyTmAVrtCY2CXjxIzIo3n63jc+NCKOLVA=; b=dhU7JpuE023nVgTgQZiFj55MC4
- 9N1oqnTs3H6Jlip2y0ekxLycPGlK2R1Dx4xVcto6hzqK/o8HJxgwAiRCg15MQPyJ1rwpRYZGLd6ly
- HNwiKbHc9BYW7gI66F0cbxN9MwrKfb8F/V1D4ffi0w8tIe/5ZMV8qCOK2XoJmnbdnARU=;
+ bh=DnsDrIqkWnYf7da8HpIWFBQQt2XImu+6ZyHWBvjrfcE=; b=eSoKkMMrI0S4PA7izkEuwLFeKe
+ DZJniFWggiEJZXSOJRtxOScFYOrhinjC1ovH6eCveNrEiSNdNrU8NPRBUw+YEMf4xUJWQaxfDoZz2
+ g0cDqyEpkkoCH9huOP5nUCIG5n+wqrMtdidFgoQ4g/wk5S3AnctTV1HFg4P1PcKFE0jU=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Mime-Version:Content-Type:References:In-Reply-To:Date:Cc:To:From:Subject:
- Message-ID:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
+ Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=wJ/s2QfMNTOyTmAVrtCY2CXjxIzIo3n63jc+NCKOLVA=; b=f077KN/1NIR1PujbB1HTfP3xsI
- oftjHLam1ma0U4PTqc03rx75CZ+Xg0S0TeCs0RsfK7jO4TnTKEXUfjUcio0mnhUAJGt+wrQGufT9h
- BoFBgjbv2BhmAoV9Qk9CpJHkz3rHt5FQsfqY9kSRyYFLYxJEgbfX5KKR+M9l4XXOb4Xw=;
-Received: from bombadil.infradead.org ([198.137.202.133])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1lhTm4-0080Gd-BM; Fri, 14 May 2021 09:06:29 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=bombadil.20210309; h=Mime-Version:Content-Type:References:
- In-Reply-To:Date:Cc:To:From:Subject:Message-ID:Sender:Reply-To:
- Content-Transfer-Encoding:Content-ID:Content-Description;
- bh=wJ/s2QfMNTOyTmAVrtCY2CXjxIzIo3n63jc+NCKOLVA=; b=qSdZ8XEu7oRfN3BBgzEHopiTqS
- jG82n131hUCIcPhL/w7BpeBcjIKG4Se8cut+H2eYH3uOfbcNc7XGdGIVO0uSQfx4iK4PzAeAUbF47
- s4NeyxYEZrokaZG8vXvllhAVi13S8TKrRyssrgAp/z1xL56gQXAHbyDmNqp2B+nCcPBR4b3vKKP/6
- WZap8/pZ+M0Fu6/S+LcKQXTZOBM21oBFJBC6bs4YY8zXYLoGfBXcTU+OOoEdKTC+f8945eYS5r8vY
- zeI/I13z7D3mRVVokdlbY8t5yWaIvIxQI9QWgqVafmOYRy9Cc/IPb3MSh4WbRqO6atJAiwzvd5UcX
- 0kfhSlGA==;
-Received: from 54-240-197-239.amazon.com ([54.240.197.239]
- helo=iad7-dhcp-95-145-115.iad7.amazon.com)
- by bombadil.infradead.org with esmtpsa (Exim 4.94 #2 (Red Hat Linux))
- id 1lhTln-00BqP5-JN; Fri, 14 May 2021 09:06:08 +0000
-Message-ID: <61c286b7afd6c4acf71418feee4eecca2e6c80c8.camel@infradead.org>
-From: David Woodhouse <dwmw2@infradead.org>
-To: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>
-Date: Fri, 14 May 2021 10:06:01 +0100
-In-Reply-To: <20210514102118.1b71bec3@coco.lan>
+ bh=DnsDrIqkWnYf7da8HpIWFBQQt2XImu+6ZyHWBvjrfcE=; b=DBht9ekUs0rWhYUTzENm5Mon2/
+ NoQrAfUogC4PHcUojcN3xyD2mImdHZQJ3wId/GpLeMxuXns62tWZrbLCTid5eq4ausq1Cn8Sj2/nv
+ ptEFqiuvZMes9mLTxqN3kDms4JqwUN60nMosdPEDwqxTnnR4jLnzAoQ2Aag+P8T6x9rU=;
+Received: from mail-wm1-f44.google.com ([209.85.128.44])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
+ id 1lhVgR-0003hw-Kw; Fri, 14 May 2021 11:08:48 +0000
+Received: by mail-wm1-f44.google.com with SMTP id
+ y124-20020a1c32820000b029010c93864955so1222427wmy.5; 
+ Fri, 14 May 2021 04:08:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=subject:to:cc:references:from:message-id:date:user-agent
+ :mime-version:in-reply-to:content-language:content-transfer-encoding;
+ bh=DnsDrIqkWnYf7da8HpIWFBQQt2XImu+6ZyHWBvjrfcE=;
+ b=sDX/4vOZ59ic93Kj1k7EQHH5H75TwRxFQdfU97NsB2/Y+xVttZgCu6VcmdiZBbTXV4
+ Yd9dS94Y1asR2VIYZN7NEerfwgmtEUFK3NZSUIzeY6J/4AmyVofgnwxiuO5puvulkCHX
+ zAH+iCNJUU2yLFhQkplxklOlcyZUbrmQbTIThNq4BukYbZy9X610Bla24hpoPnMCKKtF
+ HaX7GWwtAjZyjiNuvWcCoIBPkXTf9xY5aCFfjMGcrbRCdRoMLY/c+VX1+t1XGHSYNqtQ
+ /vEAS8jymBn+QTD3oR/5dtU3nH62pPJpzKh6iPn38AjBb8Fr8EpkCArPsjTRrMSNZ8n3
+ 9CtA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:subject:to:cc:references:from:message-id:date
+ :user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=DnsDrIqkWnYf7da8HpIWFBQQt2XImu+6ZyHWBvjrfcE=;
+ b=cj1OSzLknqWPLU6Y5+ldEXyjD+evj0nEMvltFDZc+ishUJYXtDH1rBwetRopuUGXc7
+ 9h1Ij03CLS6LQ4ralghL7jYsuWqW6/Lg50uyBZpzpgURRldfNtngu8ExItMofi6O1N++
+ tfYrQdOcHDD5jhudlpvvw0QXvvAlzMWg1sSNnRHA3UDpjAPMwJOiJuKfbx/FfNqoEflh
+ HNmXqmwwdNSzx5PoQ2NB1+ZRjwnG5OZ+RhtOZbmj88ZO8tY6MGX/SrCcnYMTpn8EpubO
+ AbJ6XXtA5W4O5aJ9Sdpnjaw6Yr2SE17joKmYfrVuTj4/DOqOPEB3MXmfyLxoAr4UnSKT
+ cgYg==
+X-Gm-Message-State: AOAM530X02CQYLe7CGJfy0SEVUf9kS2CwdPAQkUFbWPc/+4K8CckV3O1
+ JIcYcGI6nZ/9G4PdbR8ks0aKq99qE6g2Nw==
+X-Google-Smtp-Source: ABdhPJwViz0BDPUuVH349RqXP0p4zCVFhrVjXNorTYnm55dAjMiaqH0FajvtM+sJwCYcinjBh5k1qQ==
+X-Received: by 2002:a7b:c005:: with SMTP id c5mr21007074wmb.113.1620990517974; 
+ Fri, 14 May 2021 04:08:37 -0700 (PDT)
+Received: from [192.168.1.122]
+ (cpc159425-cmbg20-2-0-cust403.5-4.cable.virginm.net. [86.7.189.148])
+ by smtp.gmail.com with ESMTPSA id b10sm7116349wrr.27.2021.05.14.04.08.36
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Fri, 14 May 2021 04:08:37 -0700 (PDT)
+To: David Woodhouse <dwmw2@infradead.org>,
+ Mauro Carvalho Chehab <mchehab+huawei@kernel.org>
 References: <cover.1620823573.git.mchehab+huawei@kernel.org>
  <d2fed242fbe200706b8d23a53512f0311d900297.camel@infradead.org>
  <20210514102118.1b71bec3@coco.lan>
-X-Mailer: Evolution 3.28.5-0ubuntu0.18.04.2 
-Mime-Version: 1.0
-X-SRS-Rewrite: SMTP reverse-path rewritten from <dwmw2@infradead.org> by
- bombadil.infradead.org. See http://www.infradead.org/rpr.html
+ <61c286b7afd6c4acf71418feee4eecca2e6c80c8.camel@infradead.org>
+From: Edward Cree <ecree.xilinx@gmail.com>
+Message-ID: <8b8bc929-2f07-049d-f24c-cb1f1d85bbaa@gmail.com>
+Date: Fri, 14 May 2021 12:08:36 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
+ Thunderbird/78.5.0
+MIME-Version: 1.0
+In-Reply-To: <61c286b7afd6c4acf71418feee4eecca2e6c80c8.camel@infradead.org>
+Content-Language: en-GB
 X-Spam-Score: -0.1 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: infradead.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ for more information. [URIs: wikipedia.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+ trust [209.85.128.44 listed in list.dnswl.org]
+ 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+ (ecree.xilinx[at]gmail.com)
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.128.44 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1lhTm4-0080Gd-BM
+ -0.0 NICE_REPLY_A           Looks like a legit reply (A)
+X-Headers-End: 1lhVgR-0003hw-Kw
 X-Mailman-Approved-At: Fri, 14 May 2021 14:49:33 +0000
 Subject: Re: [Mjpeg-users] [PATCH v2 00/40] Use ASCII subset instead of
  UTF-8 alternate symbols
@@ -108,319 +137,32 @@ Cc: alsa-devel@alsa-project.org, kvm@vger.kernel.org,
  netdev@vger.kernel.org, linux-usb@vger.kernel.org,
  linux-kernel@vger.kernel.org, linux-f2fs-devel@lists.sourceforge.net,
  linux-integrity@vger.kernel.org
-Content-Type: multipart/mixed; boundary="===============5078637226064661483=="
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-
---===============5078637226064661483==
-Content-Type: multipart/signed; micalg="sha-256";
-	protocol="application/x-pkcs7-signature";
-	boundary="=-yaWQTSPMGuNj6joXfKRG"
-
-
---=-yaWQTSPMGuNj6joXfKRG
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-On Fri, 2021-05-14 at 10:21 +0200, Mauro Carvalho Chehab wrote:
-> Em Wed, 12 May 2021 18:07:04 +0100
-> David Woodhouse <dwmw2@infradead.org> escreveu:
->=20
-> > On Wed, 2021-05-12 at 14:50 +0200, Mauro Carvalho Chehab wrote:
-> > > Such conversion tools - plus some text editor like LibreOffice  or si=
-milar  - have
-> > > a set of rules that turns some typed ASCII characters into UTF-8 alte=
-rnatives,
-> > > for instance converting commas into curly commas and adding non-break=
-able
-> > > spaces. All of those are meant to produce better results when the tex=
-t is
-> > > displayed in HTML or PDF formats. =20
-> >=20
-> > And don't we render our documentation into HTML or PDF formats?=20
->=20
-> Yes.
->=20
-> > Are
-> > some of those non-breaking spaces not actually *useful* for their
-> > intended purpose?
->=20
-> No.
->=20
-> The thing is: non-breaking space can cause a lot of problems.
->=20
-> We even had to disable Sphinx usage of non-breaking space for
-> PDF outputs, as this was causing bad LaTeX/PDF outputs.
->=20
-> See, commit: 3b4c963243b1 ("docs: conf.py: adjust the LaTeX document outp=
-ut")
->=20
-> The afore mentioned patch disables Sphinx default behavior of
-> using NON-BREAKABLE SPACE on literal blocks and strings, using this
-> special setting: "parsedliteralwraps=3Dtrue".
->=20
-> When NON-BREAKABLE SPACE were used on PDF outputs, several parts of=20
-> the media uAPI docs were violating the document margins by far,
-> causing texts to be truncated.
->=20
-> So, please **don't add NON-BREAKABLE SPACE**, unless you test
-> (and keep testing it from time to time) if outputs on all
-> formats are properly supporting it on different Sphinx versions.
-
-And there you have a specific change with a specific fix. Nothing to do
-with whether NON-BREAKABLE SPACE is =E2=88=89 ASCII, and *certainly* nothin=
-g to
-do with the fact that, like *every* character in every kernel file
-except the *binary* files, it's representable in UTF-8.
-
-By all means fix the specific characters which are typographically
-wrong or which, like NON-BREAKABLE SPACE, cause problems for rendering
-the documentation.
-
-
-> Also, most of those came from conversion tools, together with other
-> eccentricities, like the usage of U+FEFF (BOM) character at the
-> start of some documents. The remaining ones seem to came from=20
-> cut-and-paste.
-
-... or which are just entirely redundant and gratuitous, like a BOM in
-an environment where all files are UTF-8 and never 16-bit encodings
-anyway.
-
-> > > While it is perfectly fine to use UTF-8 characters in Linux, and spec=
-ially at
-> > > the documentation,  it is better to  stick to the ASCII subset  on su=
-ch
-> > > particular case,  due to a couple of reasons:
-> > >=20
-> > > 1. it makes life easier for tools like grep; =20
-> >=20
-> > Barely, as noted, because of things like line feeds.
->=20
-> You can use grep with "-z" to seek for multi-line strings(*), Like:
->=20
-> 	$ grep -Pzl 'grace period started,\s*then' $(find Documentation/ -type f=
-)
-> 	Documentation/RCU/Design/Data-Structures/Data-Structures.rst
-
-Yeah, right. That works if you don't just use the text that you'll have
-seen in the HTML/PDF "grace period started, then", and if you instead
-craft a *regex* for it, replacing the spaces with '\s*'. Or is that
-[[:space:]]* if you don't want to use the experimental Perl regex
-feature?
-
- $ grep -zlr 'grace[[:space:]]\+period[[:space:]]\+started,[[:space:]]\+the=
-n' Documentation/RCU
-Documentation/RCU/Design/Data-Structures/Data-Structures.rst
-
-And without '-l' it'll obviously just give you the whole file. No '-A5
--B5' to see the surroundings... it's hardly a useful thing, is it?
-
-> (*) Unfortunately, while "git grep" also has a "-z" flag, it
->     seems that this is (currently?) broken with regards of handling multi=
-lines:
->=20
-> 	$ git grep -Pzl 'grace period started,\s*then'
-> 	$
-
-Even better. So no, multiline grep isn't really a commonly usable
-feature at all.
-
-This is why we prefer to put user-visible strings on one line in C
-source code, even if it takes the lines over 80 characters =E2=80=94 to all=
-ow
-for grep to find them.
-
-> > > 2. they easier to edit with the some commonly used text/source
-> > >    code editors. =20
-> >=20
-> > That is nonsense. Any but the most broken and/or anachronistic
-> > environments and editors will be just fine.
->=20
-> Not really.
->=20
-> I do use a lot of UTF-8 here, as I type texts in Portuguese, but I rely
-> on the US-intl keyboard settings, that allow me to type as "'a" for =C3=
-=A1.
-> However, there's no shortcut for non-Latin UTF-codes, as far as I know.
->=20
-> So, if would need to type a curly comma on the text editors I normally=
-=20
-> use for development (vim, nano, kate), I would need to cut-and-paste
-> it from somewhere[1].
-
-That's entirely irrelevant. You don't need to be able to *type* every
-character that you see in front of you, as long as your editor will
-render it correctly and perhaps let you cut/paste it as you're editing
-the document if you're moving things around.
-
-> [1] If I have a table with UTF-8 codes handy, I could type the UTF-8=20
->     number manually... However, it seems that this is currently broken=
-=20
->     at least on Fedora 33 (with Mate Desktop and US intl keyboard with=
-=20
->     dead keys).
->=20
->     Here, <CTRL><SHIFT>U is not working. No idea why. I haven't=20
->     test it for *years*, as I din't see any reason why I would
->     need to type UTF-8 characters by numbers until we started
->     this thread.
-
-Please provide the bug number for this; I'd like to track it.
-
-> But even in the best case scenario where I know the UTF-8 and
-> <CTRL><SHIFT>U works, if I wanted to use, for instance, a curly
-> comma, the keystroke sequence would be:
->=20
-> 	<CTRL><SHIFT>U201csome string<CTRL><SHIFT>U201d
->=20
-> That's a lot harder than typing and has a higher chances of
-> mistakenly add a wrong symbol than just typing:
->=20
-> 	"some string"
->=20
-> Knowing that both will produce *exactly* the same output, why
-> should I bother doing it the hard way?
-
-Nobody's asked you to do it the "hard way". That's completely
-irrelevant to the discussion we were having.
-
-> Now, I'm not arguing that you can't use whatever UTF-8 symbol you
-> want on your docs. I'm just saying that, now that the conversion=20
-> is over and a lot of documents ended getting some UTF-8 characters
-> by accident, it is time for a cleanup.
-
-All text documents are *full* of UTF-8 characters. If there is a file
-in the source code which has *any* non-UTF8, we call that a 'binary
-file'.
-
-Again, if you want to make specific fixes like removing non-breaking
-spaces and byte order marks, with specific reasons, then those make
-sense. But it's got very little to do with UTF-8 and how easy it is to
-type them. And the excuse you've put in the commit comment for your
-patches is utterly bogus.
-
-
---=-yaWQTSPMGuNj6joXfKRG
-Content-Type: application/x-pkcs7-signature; name="smime.p7s"
-Content-Disposition: attachment; filename="smime.p7s"
-Content-Transfer-Encoding: base64
-
-MIAGCSqGSIb3DQEHAqCAMIACAQExDzANBglghkgBZQMEAgEFADCABgkqhkiG9w0BBwEAAKCCECow
-ggUcMIIEBKADAgECAhEA4rtJSHkq7AnpxKUY8ZlYZjANBgkqhkiG9w0BAQsFADCBlzELMAkGA1UE
-BhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgG
-A1UEChMRQ09NT0RPIENBIExpbWl0ZWQxPTA7BgNVBAMTNENPTU9ETyBSU0EgQ2xpZW50IEF1dGhl
-bnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0EwHhcNMTkwMTAyMDAwMDAwWhcNMjIwMTAxMjM1
-OTU5WjAkMSIwIAYJKoZIhvcNAQkBFhNkd213MkBpbmZyYWRlYWQub3JnMIIBIjANBgkqhkiG9w0B
-AQEFAAOCAQ8AMIIBCgKCAQEAsv3wObLTCbUA7GJqKj9vHGf+Fa+tpkO+ZRVve9EpNsMsfXhvFpb8
-RgL8vD+L133wK6csYoDU7zKiAo92FMUWaY1Hy6HqvVr9oevfTV3xhB5rQO1RHJoAfkvhy+wpjo7Q
-cXuzkOpibq2YurVStHAiGqAOMGMXhcVGqPuGhcVcVzVUjsvEzAV9Po9K2rpZ52FE4rDkpDK1pBK+
-uOAyOkgIg/cD8Kugav5tyapydeWMZRJQH1vMQ6OVT24CyAn2yXm2NgTQMS1mpzStP2ioPtTnszIQ
-Ih7ASVzhV6csHb8Yrkx8mgllOyrt9Y2kWRRJFm/FPRNEurOeNV6lnYAXOymVJwIDAQABo4IB0zCC
-Ac8wHwYDVR0jBBgwFoAUgq9sjPjF/pZhfOgfPStxSF7Ei8AwHQYDVR0OBBYEFLfuNf820LvaT4AK
-xrGK3EKx1DE7MA4GA1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUF
-BwMEBggrBgEFBQcDAjBGBgNVHSAEPzA9MDsGDCsGAQQBsjEBAgEDBTArMCkGCCsGAQUFBwIBFh1o
-dHRwczovL3NlY3VyZS5jb21vZG8ubmV0L0NQUzBaBgNVHR8EUzBRME+gTaBLhklodHRwOi8vY3Js
-LmNvbW9kb2NhLmNvbS9DT01PRE9SU0FDbGllbnRBdXRoZW50aWNhdGlvbmFuZFNlY3VyZUVtYWls
-Q0EuY3JsMIGLBggrBgEFBQcBAQR/MH0wVQYIKwYBBQUHMAKGSWh0dHA6Ly9jcnQuY29tb2RvY2Eu
-Y29tL0NPTU9ET1JTQUNsaWVudEF1dGhlbnRpY2F0aW9uYW5kU2VjdXJlRW1haWxDQS5jcnQwJAYI
-KwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmNvbW9kb2NhLmNvbTAeBgNVHREEFzAVgRNkd213MkBpbmZy
-YWRlYWQub3JnMA0GCSqGSIb3DQEBCwUAA4IBAQALbSykFusvvVkSIWttcEeifOGGKs7Wx2f5f45b
-nv2ghcxK5URjUvCnJhg+soxOMoQLG6+nbhzzb2rLTdRVGbvjZH0fOOzq0LShq0EXsqnJbbuwJhK+
-PnBtqX5O23PMHutP1l88AtVN+Rb72oSvnD+dK6708JqqUx2MAFLMevrhJRXLjKb2Mm+/8XBpEw+B
-7DisN4TMlLB/d55WnT9UPNHmQ+3KFL7QrTO8hYExkU849g58Dn3Nw3oCbMUgny81ocrLlB2Z5fFG
-Qu1AdNiBA+kg/UxzyJZpFbKfCITd5yX49bOriL692aMVDyqUvh8fP+T99PqorH4cIJP6OxSTdxKM
-MIIFHDCCBASgAwIBAgIRAOK7SUh5KuwJ6cSlGPGZWGYwDQYJKoZIhvcNAQELBQAwgZcxCzAJBgNV
-BAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAY
-BgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMT0wOwYDVQQDEzRDT01PRE8gUlNBIENsaWVudCBBdXRo
-ZW50aWNhdGlvbiBhbmQgU2VjdXJlIEVtYWlsIENBMB4XDTE5MDEwMjAwMDAwMFoXDTIyMDEwMTIz
-NTk1OVowJDEiMCAGCSqGSIb3DQEJARYTZHdtdzJAaW5mcmFkZWFkLm9yZzCCASIwDQYJKoZIhvcN
-AQEBBQADggEPADCCAQoCggEBALL98Dmy0wm1AOxiaio/bxxn/hWvraZDvmUVb3vRKTbDLH14bxaW
-/EYC/Lw/i9d98CunLGKA1O8yogKPdhTFFmmNR8uh6r1a/aHr301d8YQea0DtURyaAH5L4cvsKY6O
-0HF7s5DqYm6tmLq1UrRwIhqgDjBjF4XFRqj7hoXFXFc1VI7LxMwFfT6PStq6WedhROKw5KQytaQS
-vrjgMjpICIP3A/CroGr+bcmqcnXljGUSUB9bzEOjlU9uAsgJ9sl5tjYE0DEtZqc0rT9oqD7U57My
-ECIewElc4VenLB2/GK5MfJoJZTsq7fWNpFkUSRZvxT0TRLqznjVepZ2AFzsplScCAwEAAaOCAdMw
-ggHPMB8GA1UdIwQYMBaAFIKvbIz4xf6WYXzoHz0rcUhexIvAMB0GA1UdDgQWBBS37jX/NtC72k+A
-CsaxitxCsdQxOzAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEF
-BQcDBAYIKwYBBQUHAwIwRgYDVR0gBD8wPTA7BgwrBgEEAbIxAQIBAwUwKzApBggrBgEFBQcCARYd
-aHR0cHM6Ly9zZWN1cmUuY29tb2RvLm5ldC9DUFMwWgYDVR0fBFMwUTBPoE2gS4ZJaHR0cDovL2Ny
-bC5jb21vZG9jYS5jb20vQ09NT0RPUlNBQ2xpZW50QXV0aGVudGljYXRpb25hbmRTZWN1cmVFbWFp
-bENBLmNybDCBiwYIKwYBBQUHAQEEfzB9MFUGCCsGAQUFBzAChklodHRwOi8vY3J0LmNvbW9kb2Nh
-LmNvbS9DT01PRE9SU0FDbGllbnRBdXRoZW50aWNhdGlvbmFuZFNlY3VyZUVtYWlsQ0EuY3J0MCQG
-CCsGAQUFBzABhhhodHRwOi8vb2NzcC5jb21vZG9jYS5jb20wHgYDVR0RBBcwFYETZHdtdzJAaW5m
-cmFkZWFkLm9yZzANBgkqhkiG9w0BAQsFAAOCAQEAC20spBbrL71ZEiFrbXBHonzhhirO1sdn+X+O
-W579oIXMSuVEY1LwpyYYPrKMTjKECxuvp24c829qy03UVRm742R9Hzjs6tC0oatBF7KpyW27sCYS
-vj5wbal+TttzzB7rT9ZfPALVTfkW+9qEr5w/nSuu9PCaqlMdjABSzHr64SUVy4ym9jJvv/FwaRMP
-gew4rDeEzJSwf3eeVp0/VDzR5kPtyhS+0K0zvIWBMZFPOPYOfA59zcN6AmzFIJ8vNaHKy5QdmeXx
-RkLtQHTYgQPpIP1Mc8iWaRWynwiE3ecl+PWzq4i+vdmjFQ8qlL4fHz/k/fT6qKx+HCCT+jsUk3cS
-jDCCBeYwggPOoAMCAQICEGqb4Tg7/ytrnwHV2binUlYwDQYJKoZIhvcNAQEMBQAwgYUxCzAJBgNV
-BAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAY
-BgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMSswKQYDVQQDEyJDT01PRE8gUlNBIENlcnRpZmljYXRp
-b24gQXV0aG9yaXR5MB4XDTEzMDExMDAwMDAwMFoXDTI4MDEwOTIzNTk1OVowgZcxCzAJBgNVBAYT
-AkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAYBgNV
-BAoTEUNPTU9ETyBDQSBMaW1pdGVkMT0wOwYDVQQDEzRDT01PRE8gUlNBIENsaWVudCBBdXRoZW50
-aWNhdGlvbiBhbmQgU2VjdXJlIEVtYWlsIENBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
-AQEAvrOeV6wodnVAFsc4A5jTxhh2IVDzJXkLTLWg0X06WD6cpzEup/Y0dtmEatrQPTRI5Or1u6zf
-+bGBSyD9aH95dDSmeny1nxdlYCeXIoymMv6pQHJGNcIDpFDIMypVpVSRsivlJTRENf+RKwrB6vcf
-WlP8dSsE3Rfywq09N0ZfxcBa39V0wsGtkGWC+eQKiz4pBZYKjrc5NOpG9qrxpZxyb4o4yNNwTqza
-aPpGRqXB7IMjtf7tTmU2jqPMLxFNe1VXj9XB1rHvbRikw8lBoNoSWY66nJN/VCJv5ym6Q0mdCbDK
-CMPybTjoNCQuelc0IAaO4nLUXk0BOSxSxt8kCvsUtQIDAQABo4IBPDCCATgwHwYDVR0jBBgwFoAU
-u69+Aj36pvE8hI6t7jiY7NkyMtQwHQYDVR0OBBYEFIKvbIz4xf6WYXzoHz0rcUhexIvAMA4GA1Ud
-DwEB/wQEAwIBhjASBgNVHRMBAf8ECDAGAQH/AgEAMBEGA1UdIAQKMAgwBgYEVR0gADBMBgNVHR8E
-RTBDMEGgP6A9hjtodHRwOi8vY3JsLmNvbW9kb2NhLmNvbS9DT01PRE9SU0FDZXJ0aWZpY2F0aW9u
-QXV0aG9yaXR5LmNybDBxBggrBgEFBQcBAQRlMGMwOwYIKwYBBQUHMAKGL2h0dHA6Ly9jcnQuY29t
-b2RvY2EuY29tL0NPTU9ET1JTQUFkZFRydXN0Q0EuY3J0MCQGCCsGAQUFBzABhhhodHRwOi8vb2Nz
-cC5jb21vZG9jYS5jb20wDQYJKoZIhvcNAQEMBQADggIBAHhcsoEoNE887l9Wzp+XVuyPomsX9vP2
-SQgG1NgvNc3fQP7TcePo7EIMERoh42awGGsma65u/ITse2hKZHzT0CBxhuhb6txM1n/y78e/4ZOs
-0j8CGpfb+SJA3GaBQ+394k+z3ZByWPQedXLL1OdK8aRINTsjk/H5Ns77zwbjOKkDamxlpZ4TKSDM
-KVmU/PUWNMKSTvtlenlxBhh7ETrN543j/Q6qqgCWgWuMAXijnRglp9fyadqGOncjZjaaSOGTTFB+
-E2pvOUtY+hPebuPtTbq7vODqzCM6ryEhNhzf+enm0zlpXK7q332nXttNtjv7VFNYG+I31gnMrwfH
-M5tdhYF/8v5UY5g2xANPECTQdu9vWPoqNSGDt87b3gXb1AiGGaI06vzgkejL580ul+9hz9D0S0U4
-jkhJiA7EuTecP/CFtR72uYRBcunwwH3fciPjviDDAI9SnC/2aPY8ydehzuZutLbZdRJ5PDEJM/1t
-yZR2niOYihZ+FCbtf3D9mB12D4ln9icgc7CwaxpNSCPt8i/GqK2HsOgkL3VYnwtx7cJUmpvVdZ4o
-gnzgXtgtdk3ShrtOS1iAN2ZBXFiRmjVzmehoMof06r1xub+85hFQzVxZx5/bRaTKTlL8YXLI8nAb
-R9HWdFqzcOoB/hxfEyIQpx9/s81rgzdEZOofSlZHynoSMYIDyjCCA8YCAQEwga0wgZcxCzAJBgNV
-BAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAY
-BgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMT0wOwYDVQQDEzRDT01PRE8gUlNBIENsaWVudCBBdXRo
-ZW50aWNhdGlvbiBhbmQgU2VjdXJlIEVtYWlsIENBAhEA4rtJSHkq7AnpxKUY8ZlYZjANBglghkgB
-ZQMEAgEFAKCCAe0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjEw
-NTE0MDkwNjAxWjAvBgkqhkiG9w0BCQQxIgQgRtNzbeu5bsoNcbDbiy2DI8xBXrnEUoNy+3PeRBi7
-ocwwgb4GCSsGAQQBgjcQBDGBsDCBrTCBlzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIg
-TWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQx
-PTA7BgNVBAMTNENPTU9ETyBSU0EgQ2xpZW50IEF1dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1h
-aWwgQ0ECEQDiu0lIeSrsCenEpRjxmVhmMIHABgsqhkiG9w0BCRACCzGBsKCBrTCBlzELMAkGA1UE
-BhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgG
-A1UEChMRQ09NT0RPIENBIExpbWl0ZWQxPTA7BgNVBAMTNENPTU9ETyBSU0EgQ2xpZW50IEF1dGhl
-bnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0ECEQDiu0lIeSrsCenEpRjxmVhmMA0GCSqGSIb3
-DQEBAQUABIIBAG4iEcQoKZbciqO8UTjj3Ul3XZurUfbBSxRFkr4krMkAtIXtGzBe5kw5UgEtQ43c
-adrLgLYJ5JYMqy67j+r7p8zEgeXNx9rUvKjuR0eQsUyBEfmTQIuYgX67ChBAONPO/cDR6AqQP2Kc
-scoU4Lzl2O+p+KE0kPvscY2Mm91fuwKxarqZY9lNI+VoyW9uYIuD6BSiZIaWpZiuaryxLelhWHay
-8OYH/pRSvgjry42MLa1GUePUXm5M4NqeD0vKZVyzpFAftfHc6urFB3TNQ8yjeSBaxw3wkVBShkuB
-yhc3/6yoegNWASNgF5veVsrZ/2L+VxVQi7icYamHNJ9gu4g7KkgAAAAAAAA=
-
-
---=-yaWQTSPMGuNj6joXfKRG--
-
-
-
---===============5078637226064661483==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============5078637226064661483==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-_______________________________________________
-Mjpeg-users mailing list
-Mjpeg-users@lists.sourceforge.net
-https://lists.sourceforge.net/lists/listinfo/mjpeg-users
-
---===============5078637226064661483==--
-
-
+PiBPbiBGcmksIDIwMjEtMDUtMTQgYXQgMTA6MjEgKzAyMDAsIE1hdXJvIENhcnZhbGhvIENoZWhh
+YiB3cm90ZToKPj4gSSBkbyB1c2UgYSBsb3Qgb2YgVVRGLTggaGVyZSwgYXMgSSB0eXBlIHRleHRz
+IGluIFBvcnR1Z3Vlc2UsIGJ1dCBJIHJlbHkKPj4gb24gdGhlIFVTLWludGwga2V5Ym9hcmQgc2V0
+dGluZ3MsIHRoYXQgYWxsb3cgbWUgdG8gdHlwZSBhcyAiJ2EiIGZvciDDoS4KPj4gSG93ZXZlciwg
+dGhlcmUncyBubyBzaG9ydGN1dCBmb3Igbm9uLUxhdGluIFVURi1jb2RlcywgYXMgZmFyIGFzIEkg
+a25vdy4KPj4KPj4gU28sIGlmIHdvdWxkIG5lZWQgdG8gdHlwZSBhIGN1cmx5IGNvbW1hIG9uIHRo
+ZSB0ZXh0IGVkaXRvcnMgSSBub3JtYWxseSAKPj4gdXNlIGZvciBkZXZlbG9wbWVudCAodmltLCBu
+YW5vLCBrYXRlKSwgSSB3b3VsZCBuZWVkIHRvIGN1dC1hbmQtcGFzdGUKPj4gaXQgZnJvbSBzb21l
+d2hlcmUKCkZvciBhbnlvbmUgd2hvIGRvZXNuJ3Qga25vdyBhYm91dCBpdDogWCBoYXMgdGhpcyB3
+b25kZXJmdWwgdGhpbmcgY2FsbGVkCiB0aGUgQ29tcG9zZSBrZXlbMV0uICBGb3IgaW5zdGFuY2Us
+IHR5cGUg4o6ELS0tIHRvIGdldCDigJQsIG9yIOKOhDwiIGZvciDigJwuCk11Y2ggbW9yZSBtbmVt
+b25pYyB0aGFuIFVuaWNvZGUgY29kZXBvaW50czsgYW5kIHlvdSBjYW4gZXh0ZW5kIGl0IHdpdGgK
+IHVzZXItZGVmaW5lZCBzZXF1ZW5jZXMgaW4geW91ciB+Ly5YQ29tcG9zZSBmaWxlLgooSSBhc3N1
+bWUgV2F5bGFuZCBzdXBwb3J0cyBhbGwgdGhpcyB0b28sIGJ1dCBkb24ndCBrbm93IHRoZSBkZXRh
+aWxzLikKCk9uIDE0LzA1LzIwMjEgMTA6MDYsIERhdmlkIFdvb2Rob3VzZSB3cm90ZToKPiBBZ2Fp
+biwgaWYgeW91IHdhbnQgdG8gbWFrZSBzcGVjaWZpYyBmaXhlcyBsaWtlIHJlbW92aW5nIG5vbi1i
+cmVha2luZwo+IHNwYWNlcyBhbmQgYnl0ZSBvcmRlciBtYXJrcywgd2l0aCBzcGVjaWZpYyByZWFz
+b25zLCB0aGVuIHRob3NlIG1ha2UKPiBzZW5zZS4gQnV0IGl0J3MgZ290IHZlcnkgbGl0dGxlIHRv
+IGRvIHdpdGggVVRGLTggYW5kIGhvdyBlYXN5IGl0IGlzIHRvCj4gdHlwZSB0aGVtLiBBbmQgdGhl
+IGV4Y3VzZSB5b3UndmUgcHV0IGluIHRoZSBjb21taXQgY29tbWVudCBmb3IgeW91cgo+IHBhdGNo
+ZXMgaXMgdXR0ZXJseSBib2d1cy4KCisxCgotZWQKClsxXSBodHRwczovL2VuLndpa2lwZWRpYS5v
+cmcvd2lraS9Db21wb3NlX2tleQoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fCk1qcGVnLXVzZXJzIG1haWxpbmcgbGlzdApNanBlZy11c2Vyc0BsaXN0cy5z
+b3VyY2Vmb3JnZS5uZXQKaHR0cHM6Ly9saXN0cy5zb3VyY2Vmb3JnZS5uZXQvbGlzdHMvbGlzdGlu
+Zm8vbWpwZWctdXNlcnMK
