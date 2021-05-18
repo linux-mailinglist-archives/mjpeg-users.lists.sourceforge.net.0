@@ -2,98 +2,101 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id D3093387D54
+	by mail.lfdr.de (Postfix) with ESMTPS id C10F7387D51
 	for <lists+mjpeg-users@lfdr.de>; Tue, 18 May 2021 18:26:09 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1lj2Xl-0002av-3s; Tue, 18 May 2021 16:26:05 +0000
+	id 1lj2Xl-0002b6-8Y; Tue, 18 May 2021 16:26:05 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- (envelope-from <clabbe@baylibre.com>) id 1lizR2-0001Rp-0w
- for mjpeg-users@lists.sourceforge.net; Tue, 18 May 2021 13:06:56 +0000
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <clabbe@baylibre.com>) id 1lizRn-0006lf-4V
+ for mjpeg-users@lists.sourceforge.net; Tue, 18 May 2021 13:07:43 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:MIME-Version:Message-Id:
- Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:MIME-Version:References:
+ In-Reply-To:Message-Id:Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=lFCCf9Zadqmdb5+PTGtOnmwq2MMa2WLH4wJ8jc9X6CI=; b=Uwj64W0CirJ7G6TKzWXg5vkJAD
- wVpikvM/cy0PdalGRoEdOr2nxgEZr4KCyeuO4eKSMLJrKQMlzvW3QlhoG6B9P+RltLmM4VBLGGWk4
- +GKcr41iRRm/XQLM6DwpEW/MSdw3ef55Kq7r2VfA34DksumXzgXBG2nkLlIZxpoV/yuY=;
+ bh=WjRHSWLwcQME27BIqP7xhnH4Ry5mnwpaQ96JB5epsUo=; b=URBKG+uCLEfIxVabdpYYmkfNSP
+ 0ZRV40HRDovbIQ9k5E923mN1i4KnMAhRoXZN+Wm5wmcdEtKyciqaa89w9rRAcmAJB9mN9pgb2/VpG
+ 1Nfp3MHPh2y86YqTWecB79bla63ZNGi3nyzfVRrRwDNyVPO+SQWuzajKr6fGfDmdYU1I=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:MIME-Version:Message-Id:Date:Subject:Cc:To:From
- :Sender:Reply-To:Content-Type:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=lFCCf9Zadqmdb5+PTGtOnmwq2MMa2WLH4wJ8jc9X6CI=; b=M
- V4KfBSAgePipMrHs3HTCVeFSRXltGgKfUxUgwj4JtNs5Afo4BIPfh4imeFgTbWyoLkrCwxmmeNzZj
- JNv7UNKsE1FJPqaW2wLk7WtWXr9sV71dmCONn1HAYwRzajdiAiFFdBywfyuzenzAm73M+SrM1LDmx
- +dlEg4fy7FE59ZCc=;
-Received: from mail-wm1-f43.google.com ([209.85.128.43])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
- id 1lizQr-0002Oy-3d
- for mjpeg-users@lists.sourceforge.net; Tue, 18 May 2021 13:06:55 +0000
-Received: by mail-wm1-f43.google.com with SMTP id b7so4791354wmh.5
- for <mjpeg-users@lists.sourceforge.net>; Tue, 18 May 2021 06:06:45 -0700 (PDT)
+ h=Content-Transfer-Encoding:MIME-Version:References:In-Reply-To:Message-Id:
+ Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=WjRHSWLwcQME27BIqP7xhnH4Ry5mnwpaQ96JB5epsUo=; b=bkAX2yFQpUcqSX/HpyOS7VHAtp
+ L7nAsJIOWF8VWcfaB1KYdW/y3fqCFV1OdAhzZ0YU3ktoml7jFWGGtElV0ROWsyV18hCF0Ad3lUDJ/
+ XkrCUc8abfQ0foYLHITZRGBr8h1J1JxD6z3Hw1N0chhfDS3dMIQiE1X7/6rJoFjvWan0=;
+Received: from mail-wm1-f53.google.com ([209.85.128.53])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.2)
+ id 1lizRd-00ChHx-TE
+ for mjpeg-users@lists.sourceforge.net; Tue, 18 May 2021 13:07:43 +0000
+Received: by mail-wm1-f53.google.com with SMTP id
+ b19-20020a05600c06d3b029014258a636e8so1441567wmn.2
+ for <mjpeg-users@lists.sourceforge.net>; Tue, 18 May 2021 06:07:33 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=lFCCf9Zadqmdb5+PTGtOnmwq2MMa2WLH4wJ8jc9X6CI=;
- b=hz3iR9DZKzar9RisXj35P/cH4E/OklwqizSwOuKA+P9jci3qo9hMZ5gzlW/sly9SSh
- 6zunLWBZkCgMuU35+SsWvaK0mxu/AeNbjZseOjdVrexcKt09np5AIsYVvl2B52U9gDwc
- qJ2lshVMVJmcmbcghh+x2hJnN4IC33aSAG8DLhpiTMgsIiUNokQWYIFs6iNcIrimpGrJ
- jw1xNvkl30OO/7EfYyK5inByFH26Ikzqjvi9a/AhcQoUj6X/hPtfBuUdob4hkWtdp53s
- CSEergk0MLXB8nTpbipmSk4Ptrw1EFC5/4PT4O5RdVfnsU7ucVu3+afhx7bbXAG4Ft0X
- grQQ==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=WjRHSWLwcQME27BIqP7xhnH4Ry5mnwpaQ96JB5epsUo=;
+ b=aEOs2pqTM7bgFZWltKS5/yTJ5nc0SPOS0E8G71ozYxMUL3X4o1FIS+4lmw8v3jPOkH
+ /YqkTuO9MSu9hMtUzlsJEfPbCApqWDRnOvMUtjXZbhIkG9+Kd7hcOd9NvPGDzbjXgXkM
+ qynSwrKCf5w8Lgh+gNBnX1ikcKw2SzoL+z+9uYoJBweHs3uLp4wc2S9YuhUQ9ytE5MTh
+ E/Ep/Li/rIZpxsk9ldLjIvdw64yp5OY89RQ9x00NCGdyzDlYmaeCIghjw2UOnPr/GGMc
+ /3ijhHABMHEDEmf+7V2rNqSgnXm3Mkx7w/RwsEfPP3cGO54V1p/z2HAfOL/yA7bIo0ZX
+ ZKZw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=lFCCf9Zadqmdb5+PTGtOnmwq2MMa2WLH4wJ8jc9X6CI=;
- b=G4o9ArcyER5TdppiNsYPtHIFqm9b9M5DROlNUiGB7fyYKnTWS+UJR+8mYBb5KFBjJn
- XBGEVJmI/WMboSxl1t+993UDN3gatsirugoRIwfZltjEKqPd1q5iF6lkE8T5eLZK6n+N
- v9FsNGzUaDldMfcixtJcbkpM4VR6kuvJSfFa5UZXKDzqCgnLIIXBQGdKmc9m0speI4en
- qa/oHzEXEbTlmpDTsm7eupwheLkqD1CY36cVeKZpdbpi9W/jdrw3CySf02QGblXAZIeD
- 28cxgGCE6VNPfo4MsXy2+jJQf/rbqwsuF0VzeoKlHUY9F1rI3CK/enjkf52wUy82+g5C
- 9l5Q==
-X-Gm-Message-State: AOAM531c7uZf7si+aeM8Y3jUV5v9cViyBs6SRHooood63RlYQb7BA2pV
- rWyBAZLAGJvfO1fK8hm6H7D7WYNQCINnjA==
-X-Google-Smtp-Source: ABdhPJzSy40WfPhdwmshIXqLyiDyN0wXHif79hqRyhwDPulgerCWoG4o2VFd5eyuQ+IzM/rfmKmLtw==
-X-Received: by 2002:a1c:4c10:: with SMTP id z16mr4887905wmf.134.1621341680913; 
- Tue, 18 May 2021 05:41:20 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=WjRHSWLwcQME27BIqP7xhnH4Ry5mnwpaQ96JB5epsUo=;
+ b=TAZ6SaALmdJJOf0un0Qqf1L094jsBOHB/obW+yubjqdyYmwuIdw427E29yGmWEplxk
+ tv1qtJTKwhmQyfXN8IWE2sfSLX9eagOKc8SXdLQn9jl8YMZxLeohS4REV1Z8JN4Xy4YD
+ jy6rwwtNqn7fJ1NeQgWp9I5omSapcLaXcjWCj/p6l7rW2N06iQISVoYjD3d15NOJfpRl
+ q8HyC3wGBhsY/DuIFxelcrYMWAliHHw7poMygOvp8jllHfw7uEhnyXxk89dlLleqHSm3
+ 0eHTCNcKYdIkmtVkF6YgGO/6LZoWyPF1mtOrcFV8ba50o8eaQ/eIrySjERSvGIYy4gOK
+ pNEA==
+X-Gm-Message-State: AOAM530kpT5hvnU7pzrc4U3Yo8cMW4TqtFtuskThCePx4W7qabsbV0PS
+ EZgHuGEb2KP3pZVGpYcok7p5xwZk7c3Y8A==
+X-Google-Smtp-Source: ABdhPJzB0CCRFlZQVb49HxHbUpFADNosNUydFeMQcfZfN6BewWshxLe7tXdzO7i5EwCH5Swmw0HlVQ==
+X-Received: by 2002:a1c:1bcc:: with SMTP id b195mr5341668wmb.51.1621341681841; 
+ Tue, 18 May 2021 05:41:21 -0700 (PDT)
 Received: from localhost.localdomain
  (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id z3sm1677239wrq.42.2021.05.18.05.41.19
+ by smtp.googlemail.com with ESMTPSA id z3sm1677239wrq.42.2021.05.18.05.41.21
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 18 May 2021 05:41:20 -0700 (PDT)
+ Tue, 18 May 2021 05:41:21 -0700 (PDT)
 From: Corentin Labbe <clabbe@baylibre.com>
 To: gregkh@linuxfoundation.org,
 	mchehab@kernel.org
-Date: Tue, 18 May 2021 12:41:09 +0000
-Message-Id: <20210518124113.1823055-1-clabbe@baylibre.com>
+Date: Tue, 18 May 2021 12:41:10 +0000
+Message-Id: <20210518124113.1823055-2-clabbe@baylibre.com>
 X-Mailer: git-send-email 2.25.1
+In-Reply-To: <20210518124113.1823055-1-clabbe@baylibre.com>
+References: <20210518124113.1823055-1-clabbe@baylibre.com>
 MIME-Version: 1.0
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [209.85.128.43 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.128.43 listed in wl.mailspike.net]
+ trust [209.85.128.53 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.128.53 listed in wl.mailspike.net]
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1lizQr-0002Oy-3d
+X-Headers-End: 1lizRd-00ChHx-TE
 X-Mailman-Approved-At: Tue, 18 May 2021 16:26:04 +0000
-Subject: [Mjpeg-users] [PATCH 1/5] staging: media: zoran: remove
- detect_guest_activity
+Subject: [Mjpeg-users] [PATCH 2/5] staging: media: zoran: multiple
+ assignments should be avoided
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -113,83 +116,78 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-The detect_guest_activity function is no longer used, so lets removed it.
+Remove all multiple assignments.
 
 Signed-off-by: Corentin Labbe <clabbe@baylibre.com>
 ---
- drivers/staging/media/zoran/zoran_device.c | 46 ----------------------
- drivers/staging/media/zoran/zoran_device.h |  2 -
- 2 files changed, 48 deletions(-)
+ drivers/staging/media/zoran/zoran_driver.c | 6 ++++--
+ drivers/staging/media/zoran/zr36016.c      | 3 ++-
+ drivers/staging/media/zoran/zr36050.c      | 3 ++-
+ drivers/staging/media/zoran/zr36060.c      | 3 ++-
+ 4 files changed, 10 insertions(+), 5 deletions(-)
 
-diff --git a/drivers/staging/media/zoran/zoran_device.c b/drivers/staging/media/zoran/zoran_device.c
-index cf788d9cd1df..7d2718744d18 100644
---- a/drivers/staging/media/zoran/zoran_device.c
-+++ b/drivers/staging/media/zoran/zoran_device.c
-@@ -166,52 +166,6 @@ static void dump_guests(struct zoran *zr)
+diff --git a/drivers/staging/media/zoran/zoran_driver.c b/drivers/staging/media/zoran/zoran_driver.c
+index e8902f824d6c..46382e43f1bf 100644
+--- a/drivers/staging/media/zoran/zoran_driver.c
++++ b/drivers/staging/media/zoran/zoran_driver.c
+@@ -678,12 +678,14 @@ static int zoran_g_selection(struct file *file, void *__fh, struct v4l2_selectio
+ 		sel->r.height = zr->jpg_settings.img_height;
+ 		break;
+ 	case V4L2_SEL_TGT_CROP_DEFAULT:
+-		sel->r.top = sel->r.left = 0;
++		sel->r.top = 0;
++		sel->r.left = 0;
+ 		sel->r.width = BUZ_MIN_WIDTH;
+ 		sel->r.height = BUZ_MIN_HEIGHT;
+ 		break;
+ 	case V4L2_SEL_TGT_CROP_BOUNDS:
+-		sel->r.top = sel->r.left = 0;
++		sel->r.top = 0;
++		sel->r.left = 0;
+ 		sel->r.width = BUZ_MAX_WIDTH;
+ 		sel->r.height = BUZ_MAX_HEIGHT;
+ 		break;
+diff --git a/drivers/staging/media/zoran/zr36016.c b/drivers/staging/media/zoran/zr36016.c
+index 2d7dc7abde79..82702a13b05f 100644
+--- a/drivers/staging/media/zoran/zr36016.c
++++ b/drivers/staging/media/zoran/zr36016.c
+@@ -361,7 +361,8 @@ static int zr36016_setup(struct videocodec *codec)
+ 		return -ENOSPC;
  	}
- }
+ 	//mem structure init
+-	codec->data = ptr = kzalloc(sizeof(struct zr36016), GFP_KERNEL);
++	ptr = kzalloc(sizeof(struct zr36016), GFP_KERNEL);
++	codec->data = ptr;
+ 	if (!ptr)
+ 		return -ENOMEM;
  
--void detect_guest_activity(struct zoran *zr)
--{
--	int timeout, i, j, res, guest[8], guest0[8], change[8][3];
--	ktime_t t0, t1;
--
--	/* do not print random data */
--	guest[0] = 0;
--	guest0[0] = 0;
--
--	dump_guests(zr);
--	pci_info(zr->pci_dev, "Detecting guests activity, please wait...\n");
--	for (i = 1; i < 8; i++) /* Don't read jpeg codec here */
--		guest0[i] = guest[i] = post_office_read(zr, i, 0);
--
--	timeout = 0;
--	j = 0;
--	t0 = ktime_get();
--	while (timeout < 10000) {
--		udelay(10);
--		timeout++;
--		for (i = 1; (i < 8) && (j < 8); i++) {
--			res = post_office_read(zr, i, 0);
--			if (res != guest[i]) {
--				t1 = ktime_get();
--				change[j][0] = ktime_to_us(ktime_sub(t1, t0));
--				t0 = t1;
--				change[j][1] = i;
--				change[j][2] = res;
--				j++;
--				guest[i] = res;
--			}
--		}
--		if (j >= 8)
--			break;
--	}
--
--	pci_info(zr->pci_dev, "Guests: %*ph\n", 8, guest0);
--
--	if (j == 0) {
--		pci_info(zr->pci_dev, "No activity detected.\n");
--		return;
--	}
--	for (i = 0; i < j; i++)
--		pci_info(zr->pci_dev, "%6d: %d => 0x%02x\n", change[i][0], change[i][1], change[i][2]);
--}
--
- /*
-  * JPEG Codec access
-  */
-diff --git a/drivers/staging/media/zoran/zoran_device.h b/drivers/staging/media/zoran/zoran_device.h
-index 24be19a61b6d..6c5d70238228 100644
---- a/drivers/staging/media/zoran/zoran_device.h
-+++ b/drivers/staging/media/zoran/zoran_device.h
-@@ -20,8 +20,6 @@ extern int post_office_wait(struct zoran *zr);
- extern int post_office_write(struct zoran *zr, unsigned int guest, unsigned int reg, unsigned int value);
- extern int post_office_read(struct zoran *zr, unsigned int guest, unsigned int reg);
+diff --git a/drivers/staging/media/zoran/zr36050.c b/drivers/staging/media/zoran/zr36050.c
+index 2826f4e5d37b..a78862852a47 100644
+--- a/drivers/staging/media/zoran/zr36050.c
++++ b/drivers/staging/media/zoran/zr36050.c
+@@ -754,7 +754,8 @@ static int zr36050_setup(struct videocodec *codec)
+ 		return -ENOSPC;
+ 	}
+ 	//mem structure init
+-	codec->data = ptr = kzalloc(sizeof(struct zr36050), GFP_KERNEL);
++	ptr = kzalloc(sizeof(struct zr36050), GFP_KERNEL);
++	codec->data = ptr;
+ 	if (!ptr)
+ 		return -ENOMEM;
  
--extern void detect_guest_activity(struct zoran *zr);
--
- extern void jpeg_codec_sleep(struct zoran *zr, int sleep);
- extern int jpeg_codec_reset(struct zoran *zr);
+diff --git a/drivers/staging/media/zoran/zr36060.c b/drivers/staging/media/zoran/zr36060.c
+index 4f9eb9ff2c42..1c3af11b5f24 100644
+--- a/drivers/staging/media/zoran/zr36060.c
++++ b/drivers/staging/media/zoran/zr36060.c
+@@ -790,7 +790,8 @@ static int zr36060_setup(struct videocodec *codec)
+ 		return -ENOSPC;
+ 	}
+ 	//mem structure init
+-	codec->data = ptr = kzalloc(sizeof(*ptr), GFP_KERNEL);
++	ptr = kzalloc(sizeof(*ptr), GFP_KERNEL);
++	codec->data = ptr;
+ 	if (!ptr)
+ 		return -ENOMEM;
  
 -- 
 2.26.3
