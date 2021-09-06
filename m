@@ -2,88 +2,101 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3C580401DF1
-	for <lists+mjpeg-users@lfdr.de>; Mon,  6 Sep 2021 18:00:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 35BF2401DEE
+	for <lists+mjpeg-users@lfdr.de>; Mon,  6 Sep 2021 18:00:44 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1mNH30-0007hf-NQ; Mon, 06 Sep 2021 16:00:38 +0000
+	id 1mNH30-0007ho-SL; Mon, 06 Sep 2021 16:00:38 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <hverkuil@xs4all.nl>) id 1mNCQ3-0007tM-53
- for mjpeg-users@lists.sourceforge.net; Mon, 06 Sep 2021 11:04:07 +0000
+ (envelope-from <clabbe@baylibre.com>) id 1mNEo2-0002z7-9d
+ for mjpeg-users@lists.sourceforge.net; Mon, 06 Sep 2021 13:37:02 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
- MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
+ d=sourceforge.net; s=x; h=In-Reply-To:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=mDvtFV9UjP+KgBf+7q8PbDmYnyjvS8LhvtNWmmO4/Uk=; b=ZLgwWCj9Xywk/IHbG5U25mKciL
- 9XND5sfLUFqlctbf18BdPk/v3d4HXgUhpxwkgAL2Kyr72CRe2dwPjo/W9ND56sXy5gyDaBVmbM9jT
- AtIZ9Z1t4/GNf8xv2BHUMmsWKbNI8cZBHRq2NuUTCCx6yurywBgN3LKaR4mN97itGaK8=;
+ bh=BAhGQaiUNFMd0cF59B0SMEJVdU2tWj7S2/LF/UKcv6g=; b=HF8I5Vx8fNsBk/bi2DPopneUPb
+ S35/IHreLrfp0/FLWLQUlUOyt2yH+hmEd6Pn8H/SOoPkheh+1wNA6A71zBXLA+AnH9KGHfWdfTUpK
+ huBdFznTY3CvL0xazJPxZKKQ1KfsCRIUozEnLteM4WUa8IO7LPmd8SJ6dv/5Fiafhwx4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
- Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:Content-ID:
+ h=In-Reply-To:Content-Transfer-Encoding:Content-Type:MIME-Version:
+ References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=mDvtFV9UjP+KgBf+7q8PbDmYnyjvS8LhvtNWmmO4/Uk=; b=Dn+qukMXYST/2iZuPJFgFdk5Ae
- SXDD8Il6EHXWE6qkfGghhXKekUwsFlXGgbWrRwMkz7KJYYKax2NBEjGtvtgzUUAg50oVlXhYKAUSJ
- 9cOF3CmjPkblRYfCZf4UMaD1utGwU/MmFzXYiaFKIMBPO4DwMhqoomrZfOEHXf7cBMd0=;
-Received: from lb2-smtp-cloud9.xs4all.net ([194.109.24.26])
+ bh=BAhGQaiUNFMd0cF59B0SMEJVdU2tWj7S2/LF/UKcv6g=; b=M0gK7CUDf9vio6VZ8rCRCMr1UX
+ 1mTzkdlr825TaHpa1mbk/j1BNT56vbWqWirlzvcwDHZrA23u0qkAda3z8SzDRumzcNaZbYSCp7yy0
+ cEP5zs3NGssjfC5uYRQBuzn761lUO1AJFN+5Agp09kPD2qCuzf/xoXBlS+anYs3Jrm+Q=;
+Received: from mail-wm1-f46.google.com ([209.85.128.46])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mNCQ1-0002Af-KH
- for mjpeg-users@lists.sourceforge.net; Mon, 06 Sep 2021 11:04:07 +0000
-Received: from cust-b5b5937f ([IPv6:fc0c:c16d:66b8:757f:c639:739b:9d66:799d])
- by smtp-cloud9.xs4all.net with ESMTPA
- id NCPsm6vHllQKhNCPtmQzSN; Mon, 06 Sep 2021 13:03:57 +0200
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=xs4all.nl; s=s2;
- t=1630926237; bh=mDvtFV9UjP+KgBf+7q8PbDmYnyjvS8LhvtNWmmO4/Uk=;
- h=Subject:To:From:Message-ID:Date:MIME-Version:Content-Type:From:
- Subject;
- b=h7YHvb1CK1GEjunBsOYuF/d6z4r+chqjsNh4lVpvYcvwoggkr4d9tYKnqKfINSEkt
- oo+pfgRxAFKClLK8f7S5Cxmb+6WBbilsxULb2HqKSrdzNG2S4OPrqQhobmFdiJ76XA
- UjIEQnAOGIIRaiKIs1IMMxISszv0m84Hmrpg0g3u+g9oRRIRjpW3Hs6qUHrzadWh/r
- M1BMshXgsVbw6VB0fcF2oKPxtmysahQJ7qv2zXi0XQBOyFCnZ3Krl7G3yHkpjF463j
- F7l655g6L9dcZQ5xWMWXvEm+Ra7SahOoRKdIqsBfr+N+Rlsy9Whja/YFCR6NYZG+8h
- M2tVIjrgQSzKw==
-To: Corentin Labbe <clabbe@baylibre.com>, gregkh@linuxfoundation.org,
- mchehab@kernel.org
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
+ id 1mNEnw-0005Bg-7H
+ for mjpeg-users@lists.sourceforge.net; Mon, 06 Sep 2021 13:37:02 +0000
+Received: by mail-wm1-f46.google.com with SMTP id e26so4630689wmk.2
+ for <mjpeg-users@lists.sourceforge.net>; Mon, 06 Sep 2021 06:36:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:content-transfer-encoding:in-reply-to;
+ bh=BAhGQaiUNFMd0cF59B0SMEJVdU2tWj7S2/LF/UKcv6g=;
+ b=RYSOiZFCjTkL418WGcVP8CEyv+CIL2CdD4Mr508ZMphamikcEWmCQYwh2rSgJSpjIj
+ R7adpHoBEoteB8/pbIsVPFHdfwKjhMAEQ8Zpi/YujLxueK6V4bjolnfkAZ1KnlyMZez6
+ A0r4Cs6ZxfawdLnGEnPiY1iRnYAkxaIQJceBww/0hDtoj8PxdMAXVK1qOz/VO5b/zzbQ
+ CqGWUqebJtpfryjTuDyFV7TfNsN6KW9hIyWluZ5qM1rJV/XDF0+LeC6SvnRl224EEW8T
+ HL6BXgWe0j32pQZ/DlegkQa6ym5eozBwadSbkxve+gfZ45jinlFvgqEipB+Eb8PycuDV
+ WOBQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:content-transfer-encoding
+ :in-reply-to;
+ bh=BAhGQaiUNFMd0cF59B0SMEJVdU2tWj7S2/LF/UKcv6g=;
+ b=EWAHwq141GbBGImTr0d+dUgylXxb2iWeCFKx0MLvpvfmrxlwPsnfL7gCnV2Fa0KGqb
+ 2407TgMlOerbuRicWh8ZuUkbfWM8AJBAn0+ruEfZdPU2oQpcjB7IWVeihirUVA/2YBRO
+ Ov8WLlyq8gFffrcc29hDvY6R7oeE1aN6LycS0unPxoQOrCq5Pb1rkUrso2nUI9zUCz1I
+ CCqBBUPVYVYZW3c9Tm8gOWFgJfEjW5t0X1Iwp+X4pfowvbkDIDzlkZK+C9amO7mLQXGW
+ jxSVXsSWSofq32yAAC+2sXqHHhEKjNSH4aiYZl0aP3EQTudfqPv//WZBrm8rnyUU2O3D
+ a64g==
+X-Gm-Message-State: AOAM532iqmXJ7rUIbRYIuzknlljjx6x+D1FxB3D0kECe3xhjLyxMas1C
+ CYQX+heEP1v1M8XD/XP0t9q9rg==
+X-Google-Smtp-Source: ABdhPJxhQ8DPhLD12SafiRBRfu4OijkIySpx5v+sXRBz4eKpz4sMYsbNfXMKlBllmBy+mdlAHXWmwQ==
+X-Received: by 2002:a05:600c:3502:: with SMTP id
+ h2mr11686505wmq.182.1630935409867; 
+ Mon, 06 Sep 2021 06:36:49 -0700 (PDT)
+Received: from Red ([2a01:cb1d:3d5:a100:264b:feff:fe03:2806])
+ by smtp.googlemail.com with ESMTPSA id q195sm7559994wme.37.2021.09.06.06.36.48
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 06 Sep 2021 06:36:49 -0700 (PDT)
+Date: Mon, 6 Sep 2021 15:36:43 +0200
+From: LABBE Corentin <clabbe@baylibre.com>
+To: Greg KH <gregkh@linuxfoundation.org>
+Message-ID: <YTYZaxjiKzVurMEF@Red>
 References: <20210903191540.3052775-1-clabbe@baylibre.com>
-From: Hans Verkuil <hverkuil@xs4all.nl>
-Message-ID: <efe035cc-1839-210f-c0d4-4d58801aa65c@xs4all.nl>
-Date: Mon, 6 Sep 2021 13:03:56 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
- Thunderbird/78.13.0
+ <20210903191540.3052775-5-clabbe@baylibre.com>
+ <YTMJvI1C1OmBgdeI@kroah.com>
 MIME-Version: 1.0
-In-Reply-To: <20210903191540.3052775-1-clabbe@baylibre.com>
-Content-Language: en-US
-X-CMAE-Envelope: MS4xfJIXL08RwQgMNMzOYbe0M0VJlLntr2uNqP+LLvSAcYVjylm6uej9Wx4ry4BYBNOsaxT/1woOlqCnq/HGjhbnPEot+2QLc9CggTOnJLFl8Io7omw+8BB8
- mGgN2mJrKsxT1QWv3Wav2WvQeSKCDOjGtPVjZnxkcKCCloHzN+HUPdkEvciFs2VX5enEbb6BWK8b/XtG/JijRKRwyEnC+2WP4a7GNmjxAHPzHnvgbUKbsAaU
- vKgmsnxUXksAcIfM/GlTYRh2XqsWniIpRrHkYMBkYkBjwHmud7iu53p5qNvfwluIkJn//RrJXHrZ/opgKXK5lDFXfDhGI/XzP5QQSAv3y9zEbta4h2+XKEJr
- qGItXiPM+S8oWacsLHcDVlW2TNlzCYyQoqzsNmgNRbBazbvAESHGyA5StVfaACqcpndLDGaVkBRjX6xe/tY380px5hnViikZFiieqbsW6JZ3g54H6K0jEvMz
- 9nJcfvc1bcJ9S9QjAnMQq8c3KsyLj4i0Irt470PW/ozYNJ1yZf2nxW0P7Q8=
-X-Spam-Score: -2.4 (--)
+Content-Disposition: inline
+In-Reply-To: <YTMJvI1C1OmBgdeI@kroah.com>
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [194.109.24.26 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+ trust [209.85.128.46 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.128.46 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
- domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- -2.3 NICE_REPLY_A           Looks like a legit reply (A)
-X-Headers-End: 1mNCQ1-0002Af-KH
+X-Headers-End: 1mNEnw-0005Bg-7H
 X-Mailman-Approved-At: Mon, 06 Sep 2021 16:00:35 +0000
-Subject: Re: [Mjpeg-users] [PATCH 0/8] staging: media: zoran: fusion in one
- module
+Subject: Re: [Mjpeg-users] [PATCH 4/8] staging: media: zoran: add debugfs
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -96,73 +109,58 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Cc: mjpeg-users@lists.sourceforge.net, linux-staging@lists.linux.dev,
- linux-kernel@vger.kernel.org, linux-media@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: linux-staging@lists.linux.dev, mjpeg-users@lists.sourceforge.net,
+ mchehab@kernel.org, linux-kernel@vger.kernel.org, linux-media@vger.kernel.org
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-Hi Corentin,
+Le Sat, Sep 04, 2021 at 07:53:00AM +0200, Greg KH a =E9crit :
+> On Fri, Sep 03, 2021 at 07:15:36PM +0000, Corentin Labbe wrote:
+> > Add debugfs for displaying zoran debug and stats information.
+> > =
 
-I finally had the opportunity to test the staging zoran driver.
+> > Signed-off-by: Corentin Labbe <clabbe@baylibre.com>
+> > ---
+> >  drivers/staging/media/zoran/Kconfig      | 10 ++++++
+> >  drivers/staging/media/zoran/zoran.h      |  5 +++
+> >  drivers/staging/media/zoran/zoran_card.c | 39 ++++++++++++++++++++++++
+> >  3 files changed, 54 insertions(+)
+> > =
 
-I found several issues when running v4l2-compliance -s (I posted a patch
-for that), but more seriously is the fact that trying to capture MJPG
-at resolutions 384x288 or less just hangs my PC. It works OK with 768x576.
+> > +#ifdef CONFIG_VIDEO_ZORAN_DEBUG
+> > +	struct dentry *dbgfs_dir;
+> > +	struct dentry *dbgfs_file;
+> =
 
-I discovered this when running 'v4l2-compliance -s -a -f'.
+> No need for these, the file is never referenced and the directory can be
+> looked up when you want to remove it.
+> =
 
-BTW, why isn't the initial format equal to MJPG 768x576?
-I would expect that for these boards that should be the default format.
+> > +#endif
+[...]
+> > +#ifdef CONFIG_VIDEO_ZORAN_DEBUG
+> > +	zr->dbgfs_dir =3D debugfs_create_dir(ZR_DEVNAME(zr), NULL);
+> > +	zr->dbgfs_file =3D debugfs_create_file("debug", 0444,
+> > +					      zr->dbgfs_dir, zr,
+> > +					      &zoran_debugfs_fops);
+> > +#endif
+> =
 
-Another issue is that the TODO should mention that for video output there
-should be a second video device node. And that's really something that
-has to be done before the zoran driver can be moved out of staging.
+> Wait, when are you removing the files when the device is removed?
+> =
 
-It shouldn't be that hard to implement, I think.
+> That needs to be fixed no matter what before this patch is accepted.
+> =
 
-Right now it is impossible to run the compliance test for the output, since
-it doesn't even see it as an output.
 
-Regards,
+Hello
 
-	Hans
+Sorry to have forgotten this.
+I will fix this.
 
-On 03/09/2021 21:15, Corentin Labbe wrote:
-> Hello
-> 
-> The main change of this serie is to fusion all zoran related modules in
-> one.
-> This fixes the load order problem when everything is built-in.
-> 
-> Regards
-> 
-> Corentin Labbe (8):
->   staging: media: zoran: move module parameter checks to zoran_probe
->   staging: media: zoran: use module_pci_driver
->   staging: media: zoran: rename debug module parameter
->   staging: media: zoran: add debugfs
->   staging: media: zoran: videocode: remove procfs
->   staging: media: zoran: fusion all modules
->   staging: media: zoran: remove vidmem
->   staging: media: zoran: move videodev alloc
-> 
->  drivers/staging/media/zoran/Kconfig        |  24 +-
->  drivers/staging/media/zoran/Makefile       |   8 +-
->  drivers/staging/media/zoran/videocodec.c   |  60 +----
->  drivers/staging/media/zoran/videocodec.h   |   5 +
->  drivers/staging/media/zoran/zoran.h        |   7 +-
->  drivers/staging/media/zoran/zoran_card.c   | 259 +++++++++++++--------
->  drivers/staging/media/zoran/zoran_driver.c |   5 +-
->  drivers/staging/media/zoran/zr36016.c      |  23 +-
->  drivers/staging/media/zoran/zr36016.h      |   2 +
->  drivers/staging/media/zoran/zr36050.c      |  20 +-
->  drivers/staging/media/zoran/zr36050.h      |   2 +
->  drivers/staging/media/zoran/zr36060.c      |  20 +-
->  drivers/staging/media/zoran/zr36060.h      |   2 +
->  13 files changed, 229 insertions(+), 208 deletions(-)
-> 
-
+Thanks
+Regards
 
 
 _______________________________________________
