@@ -2,26 +2,26 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id AC72542D16B
-	for <lists+mjpeg-users@lfdr.de>; Thu, 14 Oct 2021 06:17:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 33B8442D170
+	for <lists+mjpeg-users@lfdr.de>; Thu, 14 Oct 2021 06:17:44 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1masBW-0006Dj-5w; Thu, 14 Oct 2021 04:17:38 +0000
+	id 1masBW-0006EJ-T2; Thu, 14 Oct 2021 04:17:38 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- (envelope-from <clabbe@baylibre.com>) id 1majtH-00057E-8e
- for mjpeg-users@lists.sourceforge.net; Wed, 13 Oct 2021 19:26:15 +0000
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <clabbe@baylibre.com>) id 1majqc-0001AR-W1
+ for mjpeg-users@lists.sourceforge.net; Wed, 13 Oct 2021 19:23:31 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:MIME-Version:References:
  In-Reply-To:Message-Id:Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=EkJ4cziLX4onCvAcIGYJLg+49tXxNFwoBxX9uTdyC70=; b=AD9lLOOMhiV8y1AFhV3cvHJT4G
- 0+JoCsACdqeAXkPsfCUhozmMHOfL5xOLJusbSnWrW4E0rXa3szUwN2pE52YmG6eVD2tRovanTOIyb
- +vXWBjEcL9tfD/uyurdm/96X9ZKmA+/DfTSApwvGjnSqQQbjNBtxkak8G9aT3x0Mj8UA=;
+ bh=rNu7tGzS3a9nNAG4wYt+tSxCNINIYaiwOvt4CtHF4Gs=; b=m1n+32qrFfQiM7FxK/H4viDUMx
+ uy+NEdWV6WgJbvp32hhwOiBymG+T4wZpROtiUggcHetdXItTC/SPxr07eyjuH4xNJz4nv+2uPmFS2
+ /nKyllcUn841rH1ber8uhRrPmQ9pjkiCL1yxqQLoEOHf69ic6iDppeavEeNXbqy9//No=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:MIME-Version:References:In-Reply-To:Message-Id:
@@ -29,54 +29,54 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=EkJ4cziLX4onCvAcIGYJLg+49tXxNFwoBxX9uTdyC70=; b=PudlyoQklVr1XCtURgGB96DygR
- tYVj4rBmqmIfnhYuREbriUCnSks4W4FAqpOoGRHVyu433f5ZoezHZfsOLJRAFKp8xTMXtijZKeIi9
- woE0g9Hd3j78iElMUCBRC4AynJak2OMFilAI+aXKDmtPz6XkTg0FA9yhAbh4hMYmG1SI=;
-Received: from mail-lf1-f53.google.com ([209.85.167.53])
+ bh=rNu7tGzS3a9nNAG4wYt+tSxCNINIYaiwOvt4CtHF4Gs=; b=ZEVllxP88lAYPA6BUZC8typmgq
+ xDDseGUCbCvt6lVy+kzKtmQ8pxoW5soZcH1CODEEu7f/dRT00SmCBj0fq9xe1nfd5ejHK1Zx/Rit1
+ XOfc7Cxv16CHGTakKW4jnKydzAYR1JMaKWBb2XWwpJd+4q1p1ZwPxNYqSJv4FcWXhPCY=;
+Received: from mail-wr1-f46.google.com ([209.85.221.46])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
- id 1majtF-00964V-BF
- for mjpeg-users@lists.sourceforge.net; Wed, 13 Oct 2021 19:26:15 +0000
-Received: by mail-lf1-f53.google.com with SMTP id y26so16442152lfa.11
- for <mjpeg-users@lists.sourceforge.net>; Wed, 13 Oct 2021 12:26:13 -0700 (PDT)
+ id 1majqY-0095iy-Ur
+ for mjpeg-users@lists.sourceforge.net; Wed, 13 Oct 2021 19:23:30 +0000
+Received: by mail-wr1-f46.google.com with SMTP id k7so11676677wrd.13
+ for <mjpeg-users@lists.sourceforge.net>; Wed, 13 Oct 2021 12:23:26 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20210112.gappssmtp.com; s=20210112;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=EkJ4cziLX4onCvAcIGYJLg+49tXxNFwoBxX9uTdyC70=;
- b=XV+BOcJtF1hZeTxKarHMaQL9Ni43gVuKWBwRDss9l9yjAOMPAv47nhVVoJIUyzfOML
- v6U7UxtweoyWZx+3aeLEF4KIkfIji4dVsfuvNeQ1G6Qcm41tCO2o42PPKFHJGetILi9S
- WhYKyDYo+R2RtI5AHU1vDe2TcFuCCvbPeUnyzPuH7vDpuQXAx/5U4t+ZDPSJYKJiQQur
- Vdu9SaG45DTZm1g7lexw/wppRvP2/9ftrZATN2qzSdYE1q61Sl/9Jw0XL0FXYx0Nzlpm
- 9N9Sb88FOoF4KKgDMGJmIqjFb2le8rX3C/WZe3Yj1LE3qNZjL0u1uQ6xRRf/CAmKEVcM
- u9gA==
+ bh=rNu7tGzS3a9nNAG4wYt+tSxCNINIYaiwOvt4CtHF4Gs=;
+ b=bQL8cJwTetQRi7wJWtinf4IweToaAa7IwT8GlJMAwUncH5Ig6a3S5/fp4xd41Ag0qv
+ Ymh15/WjH0C7BdXmn2cAlMyA0a+jT4XF1hr1CScg5ub96GCYFcBQDeYcU87tOPRaFW20
+ g1Yj67rsoFvIc2u5mN+fJZlnhfd5vD6kjbqww7Dsg10KmOMpfen2qQ0ggEM+06MrgU1n
+ REMzYftS6Em4YqZp+bEkwR5IBTALkD2POfnL1P8yDI6ACPZuxE7AA0Zd3b8uiLygwOVT
+ Vva5EaewNxnAdY8wou1TTimWIA2XYhDqs40KGQtm3BgS4Ce/hcfKaAlNyKAKLnhR/6sV
+ 9VyA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20210112;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=EkJ4cziLX4onCvAcIGYJLg+49tXxNFwoBxX9uTdyC70=;
- b=6REPohtmhiqnCVLsZ2b2O22ttixyb/flfs3yE2WL6FIrv6wHzrTqduUlmOKRV2o+DH
- lhe/5fVH0Pw/1XxR15fd+PjvXKcx0AJt5APIkN0ma4IH3wPr2BVtpKmafE0hf8o1BX/Q
- QL6yNfOGdh6rDVfFqyAMSR9zohz/4KJqiqbOoQDotlQorWVKyp9jFrg+/iKd2T+Gj8CY
- qQIvE2XxWAuG9rNBpXUJK5KCYgNMQuqZX8cceNKI9SfMPbi8AUq6TkxUjuNO+tcfdJ0r
- /sI1tFfE8dBxpr5bD0VycFK7kyxHA5AGdS77dUdcqcmK+EmgB0j8GQ9sV1ftLQL+ESTQ
- CkWw==
-X-Gm-Message-State: AOAM532zWKrMUqW2ywZaQUFirogcBNVEBZxh0/C8Qle/lMSc2h6JgkFm
- HlwWPViGaiMlV7vCdHcLA82QUNEO8+Pb4A==
-X-Google-Smtp-Source: ABdhPJzuFm4/bPvGn8Pv1Kj2vVWDnqqDFfIjX15GZ8PVSP7VWr+CFnw8Xr6HVydapFAHpcDu5+9HiQ==
-X-Received: by 2002:a5d:6982:: with SMTP id g2mr1018418wru.51.1634151500819;
- Wed, 13 Oct 2021 11:58:20 -0700 (PDT)
+ bh=rNu7tGzS3a9nNAG4wYt+tSxCNINIYaiwOvt4CtHF4Gs=;
+ b=2Wal/g7tdnoI/YMH+r7EaAw8d84g7Lji2ED+jwlqU//g4eewawzji46KcJMInpnIIq
+ Y3nZ2rRSEzfTtVPpTuEU+h3QzLiiU7aY2XmmqTq4+L5xP5TZXY5cA4rXWcB4hci91BAM
+ j54WQ/QWfA/VPavYmsRz6uVEM0xASLAyuNoQnm55TIVevrLSKMGOoJdaGefq7viMTCAA
+ Q8qL1ZzDG3YiDETlUiCzxsb7XbKmFz1+ow6WGUmb/92HxT43pWCs+/tOAgRJDmnDjPKe
+ ev7/JwgM0tPldlBvCEhdeJ3z1qQWXDEZ77YuQtj68tOidL75ksCPC7J2nKhJTg8yoW+l
+ UncA==
+X-Gm-Message-State: AOAM533mq7wQEoXkV65YxfgbipK8FCQFiuB8tpo6qbbVgYnBFQjr/GtE
+ AHtvxrsWQmXVNQ+BlCyaH3TAiNqUTZhbHg==
+X-Google-Smtp-Source: ABdhPJym/BQ+gvcyW+RLAZRdCdxHXNEUma6ef+jjFcJGlqSkU8HBxE3bmbBujd3Eh2yS6WmosQ7jbw==
+X-Received: by 2002:adf:bc14:: with SMTP id s20mr1075733wrg.8.1634151501402;
+ Wed, 13 Oct 2021 11:58:21 -0700 (PDT)
 Received: from localhost.localdomain
  (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
  by smtp.googlemail.com with ESMTPSA id e8sm573059wrg.48.2021.10.13.11.58.20
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 13 Oct 2021 11:58:20 -0700 (PDT)
+ Wed, 13 Oct 2021 11:58:21 -0700 (PDT)
 From: Corentin Labbe <clabbe@baylibre.com>
 To: mchehab@kernel.org,
 	hverkuil@xs4all.nl,
 	gregkh@linuxfoundation.org
-Date: Wed, 13 Oct 2021 18:58:06 +0000
-Message-Id: <20211013185812.590931-5-clabbe@baylibre.com>
+Date: Wed, 13 Oct 2021 18:58:07 +0000
+Message-Id: <20211013185812.590931-6-clabbe@baylibre.com>
 X-Mailer: git-send-email 2.25.1
 In-Reply-To: <20211013185812.590931-1-clabbe@baylibre.com>
 References: <20211013185812.590931-1-clabbe@baylibre.com>
@@ -88,26 +88,27 @@ X-Spam-Report: Spam detection software,
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Add debugfs for displaying zoran debug and stats information.
- Signed-off-by: Corentin Labbe <clabbe@baylibre.com> ---
- drivers/staging/media/zoran/Kconfig
- | 9 ++++++ drivers/staging/media/zoran/zoran.h | 4 +++
- drivers/staging/media/zoran/zoran_card.c | 41 +++++++ [...] 
+ Content preview:  Now we have a debugfs, we can remove all PROCFS stuff. We
+ keep videocodec_debugfs_show(), it will be used later Signed-off-by: Corentin
+ Labbe <clabbe@baylibre.com> --- drivers/staging/media/zoran/videocodec.c
+ | 24 ++ drivers/staging/media/zoran/videocodec.h | 5 +++++ 2 files changed,
+ 7 ins [...] 
  Content analysis details:   (-0.0 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.221.46 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.53 listed in wl.mailspike.net]
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.53 listed in list.dnswl.org]
+ [209.85.221.46 listed in wl.mailspike.net]
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
-X-Headers-End: 1majtF-00964V-BF
-X-Mailman-Approved-At: Thu, 14 Oct 2021 04:17:36 +0000
-Subject: [Mjpeg-users] [PATCH v2 04/10] staging: media: zoran: add debugfs
+X-Headers-End: 1majqY-0095iy-Ur
+X-Mailman-Approved-At: Thu, 14 Oct 2021 04:17:37 +0000
+Subject: [Mjpeg-users] [PATCH v2 05/10] staging: media: zoran: videocode:
+ remove procfs
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -127,120 +128,92 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-Add debugfs for displaying zoran debug and stats information.
+Now we have a debugfs, we can remove all PROCFS stuff.
+We keep videocodec_debugfs_show(), it will be used later
 
 Signed-off-by: Corentin Labbe <clabbe@baylibre.com>
 ---
- drivers/staging/media/zoran/Kconfig      |  9 ++++++
- drivers/staging/media/zoran/zoran.h      |  4 +++
- drivers/staging/media/zoran/zoran_card.c | 41 ++++++++++++++++++++++++
- 3 files changed, 54 insertions(+)
+ drivers/staging/media/zoran/videocodec.c | 24 ++----------------------
+ drivers/staging/media/zoran/videocodec.h |  5 +++++
+ 2 files changed, 7 insertions(+), 22 deletions(-)
 
-diff --git a/drivers/staging/media/zoran/Kconfig b/drivers/staging/media/zoran/Kconfig
-index 7874842033ca..06f79b91cda7 100644
---- a/drivers/staging/media/zoran/Kconfig
-+++ b/drivers/staging/media/zoran/Kconfig
-@@ -74,3 +74,12 @@ config VIDEO_ZORAN_AVS6EYES
- 	select VIDEO_KS0127 if MEDIA_SUBDRV_AUTOSELECT
- 	help
- 	  Support for the AverMedia 6 Eyes video surveillance card.
-+
-+config VIDEO_ZORAN_DEBUG
-+	bool "Enable zoran debugfs"
-+	depends on VIDEO_ZORAN
-+	depends on DEBUG_FS
-+	help
-+	  Say y to enable zoran debug file.
-+	  This will create /sys/kernel/debug/CARD_NAME/debug for displaying
-+	  stats and debug information.
-diff --git a/drivers/staging/media/zoran/zoran.h b/drivers/staging/media/zoran/zoran.h
-index b1ad2a2b914c..c37d064ff11d 100644
---- a/drivers/staging/media/zoran/zoran.h
-+++ b/drivers/staging/media/zoran/zoran.h
-@@ -18,6 +18,7 @@
- #ifndef _BUZ_H_
- #define _BUZ_H_
+diff --git a/drivers/staging/media/zoran/videocodec.c b/drivers/staging/media/zoran/videocodec.c
+index 31019b5f377e..3d5a83a07e07 100644
+--- a/drivers/staging/media/zoran/videocodec.c
++++ b/drivers/staging/media/zoran/videocodec.c
+@@ -16,14 +16,6 @@
+ #include <linux/types.h>
+ #include <linux/slab.h>
+ 
+-// kernel config is here (procfs flag)
+-
+-#ifdef CONFIG_PROC_FS
+-#include <linux/proc_fs.h>
+-#include <linux/seq_file.h>
+-#include <linux/uaccess.h>
+-#endif
+-
+ #include "videocodec.h"
+ 
+ static int videocodec_debug;
+@@ -265,8 +257,8 @@ int videocodec_unregister(const struct videocodec *codec)
+ }
+ EXPORT_SYMBOL(videocodec_unregister);
+ 
+-#ifdef CONFIG_PROC_FS
+-static int proc_videocodecs_show(struct seq_file *m, void *v)
++#ifdef CONFIG_VIDEO_ZORAN_DEBUG
++int videocodec_debugfs_show(struct seq_file *m)
+ {
+ 	struct codec_list *h = codeclist_top;
+ 	struct attached_list *a;
+@@ -300,25 +292,13 @@ static int proc_videocodecs_show(struct seq_file *m, void *v)
+ /* ===================== */
+ static int __init videocodec_init(void)
+ {
+-#ifdef CONFIG_PROC_FS
+-	static struct proc_dir_entry *videocodec_proc_entry;
+-#endif
+-
+ 	pr_info("Linux video codec intermediate layer: %s\n", VIDEOCODEC_VERSION);
+ 
+-#ifdef CONFIG_PROC_FS
+-	videocodec_proc_entry = proc_create_single("videocodecs", 0, NULL, proc_videocodecs_show);
+-	if (!videocodec_proc_entry)
+-		pr_err("videocodec: can't init procfs.\n");
+-#endif
+ 	return 0;
+ }
+ 
+ static void __exit videocodec_exit(void)
+ {
+-#ifdef CONFIG_PROC_FS
+-	remove_proc_entry("videocodecs", NULL);
+-#endif
+ }
+ 
+ module_init(videocodec_init);
+diff --git a/drivers/staging/media/zoran/videocodec.h b/drivers/staging/media/zoran/videocodec.h
+index 8a5003dda9f4..f2e17566795e 100644
+--- a/drivers/staging/media/zoran/videocodec.h
++++ b/drivers/staging/media/zoran/videocodec.h
+@@ -123,6 +123,7 @@ M                       zr36055[1] 0001 0000c001 00000000 (zr36050[1])
+ #ifndef __LINUX_VIDEOCODEC_H
+ #define __LINUX_VIDEOCODEC_H
  
 +#include <linux/debugfs.h>
- #include <media/v4l2-device.h>
- #include <media/v4l2-ctrls.h>
- #include <media/videobuf2-core.h>
-@@ -295,6 +296,9 @@ struct zoran {
- 	struct list_head queued_bufs;
- 	spinlock_t queued_bufs_lock; /* Protects queued_bufs */
- 	struct zr_buffer *inuse[BUZ_NUM_STAT_COM * 2];
-+#ifdef CONFIG_VIDEO_ZORAN_DEBUG
-+	struct dentry *dbgfs_dir;
-+#endif
- };
+ #include <linux/videodev2.h>
  
- static inline struct zoran *to_zoran(struct v4l2_device *v4l2_dev)
-diff --git a/drivers/staging/media/zoran/zoran_card.c b/drivers/staging/media/zoran/zoran_card.c
-index f1465fbf98af..6f29986a3fc2 100644
---- a/drivers/staging/media/zoran/zoran_card.c
-+++ b/drivers/staging/media/zoran/zoran_card.c
-@@ -945,6 +945,8 @@ static void zoran_remove(struct pci_dev *pdev)
- 	if (!zr->initialized)
- 		goto exit_free;
+ #define CODEC_DO_COMPRESSION 0
+@@ -305,4 +306,8 @@ extern int videocodec_unregister(const struct videocodec *);
  
-+	debugfs_remove_recursive(zr->dbgfs_dir);
-+
- 	zoran_queue_exit(zr);
- 
- 	/* unregister videocodec bus */
-@@ -1051,6 +1053,39 @@ static const struct v4l2_ctrl_ops zoran_video_ctrl_ops = {
- 	.s_ctrl = zoran_video_set_ctrl,
- };
+ /* the other calls are directly done via the videocodec structure! */
  
 +#ifdef CONFIG_VIDEO_ZORAN_DEBUG
-+static int zoran_debugfs_show(struct seq_file *seq, void *v)
-+{
-+	struct zoran *zr = seq->private;
-+
-+	seq_printf(seq, "Running mode %x\n", zr->running);
-+	seq_printf(seq, "Codec mode %x\n", zr->codec_mode);
-+	seq_printf(seq, "Norm %llx\n", zr->norm);
-+	seq_printf(seq, "Input %d\n", zr->input);
-+	seq_printf(seq, "Buffersize %d\n", zr->buffer_size);
-+
-+	seq_printf(seq, "V4L width %dx%d\n", zr->v4l_settings.width, zr->v4l_settings.height);
-+	seq_printf(seq, "V4L bytesperline %d\n", zr->v4l_settings.bytesperline);
-+
-+	seq_printf(seq, "JPG decimation %u\n", zr->jpg_settings.decimation);
-+	seq_printf(seq, "JPG hor_dcm %u\n", zr->jpg_settings.hor_dcm);
-+	seq_printf(seq, "JPG ver_dcm %u\n", zr->jpg_settings.ver_dcm);
-+	seq_printf(seq, "JPG tmp_dcm %u\n", zr->jpg_settings.tmp_dcm);
-+	seq_printf(seq, "JPG odd_even %u\n", zr->jpg_settings.odd_even);
-+	seq_printf(seq, "JPG crop %dx%d %d %d\n",
-+		zr->jpg_settings.img_x,
-+		zr->jpg_settings.img_y,
-+		zr->jpg_settings.img_width,
-+		zr->jpg_settings.img_height);
-+
-+	seq_printf(seq, "Prepared %u\n", zr->prepared);
-+	seq_printf(seq, "Queued %u\n", zr->queued);
-+	return 0;
-+}
-+
-+DEFINE_SHOW_ATTRIBUTE(zoran_debugfs);
++int videocodec_debugfs_show(struct seq_file *m);
 +#endif
 +
- /*
-  *   Scan for a Buz card (actually for the PCI controller ZR36057),
-  *   request the irq and map the io memory
-@@ -1286,6 +1321,12 @@ static int zoran_probe(struct pci_dev *pdev, const struct pci_device_id *ent)
- 
- 	zr->map_mode = ZORAN_MAP_MODE_RAW;
- 
-+#ifdef CONFIG_VIDEO_ZORAN_DEBUG
-+	zr->dbgfs_dir = debugfs_create_dir(ZR_DEVNAME(zr), NULL);
-+	debugfs_create_file("debug", 0444,
-+					      zr->dbgfs_dir, zr,
-+					      &zoran_debugfs_fops);
-+#endif
- 	return 0;
- 
- zr_detach_vfe:
+ #endif				/*ifndef __LINUX_VIDEOCODEC_H */
 -- 
 2.32.0
 
