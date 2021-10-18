@@ -2,116 +2,101 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id EBCEB4324C6
+	by mail.lfdr.de (Postfix) with ESMTPS id EBF5D4324C7
 	for <lists+mjpeg-users@lfdr.de>; Mon, 18 Oct 2021 19:19:14 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1mcWI1-0007Ih-5K; Mon, 18 Oct 2021 17:19:09 +0000
+	id 1mcWI1-0007Iq-6t; Mon, 18 Oct 2021 17:19:09 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <clabbe@baylibre.com>) id 1mcCu7-0003v5-AJ
- for mjpeg-users@lists.sourceforge.net; Sun, 17 Oct 2021 20:37:11 +0000
+ (envelope-from <hverkuil@xs4all.nl>) id 1mcPN7-0003Hq-FV
+ for mjpeg-users@lists.sourceforge.net; Mon, 18 Oct 2021 09:55:57 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=In-Reply-To:Content-Transfer-Encoding:Content-Type:
- MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
+ MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=B17ugjfsl4NIFBjvUZANXnVzu0w3U/j7jZVs0/846lc=; b=ZD6Om+Up5iXiFtY8JLmvxx4/Nv
- i0JhxqlfJRqyIoV86QhGZYzg/YT1XD3zheF2D/AjlP7twn452k1vaign9l9e0Gw4F4Y/JZrMg3Z18
- qgV3MvigzqJ0IhYUadIF/EgRyb1JauRtojZC3c93vKTRpIh08i5qcGI+tkICn1UYJkWw=;
+ bh=hZHvQDSjUd8uW3oRdpn55CUce4TBNbqxu4Un/iM6Hic=; b=H4bvKNTjwGdAIQVKWd/gwEDs59
+ ffgLEtF0zBsoMO0KjekVMgwE4RfJKfGoEgchSIbA8M/gGATP7GhRxMxK7p30UMnj3Rv0AEZQUZoVX
+ M6tvsB+H/eWlJGXZjXbudeiO832r/nkCtvUy2oxK5gqKfwa7X2qUbXgVVqEE+0btz/aw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=In-Reply-To:Content-Transfer-Encoding:Content-Type:MIME-Version:
- References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
+ Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=B17ugjfsl4NIFBjvUZANXnVzu0w3U/j7jZVs0/846lc=; b=gYWY7dArg2/hI7X6PdMeR3EPF1
- GDAW+eoOiHVXiUIJXXKWRPhivAOR0XFTpqo99Tc5TAtiX7T+bf4kOMzIxGWydNQFEtkxX8Oiz1aLy
- CZSmUhEudlPt4/KdlviNncb9UNQk2kTn9vFeQ7UtqYAKaJzjNfcP+eFV8/iQZ1R1n/so=;
-Received: from mail-wm1-f46.google.com ([209.85.128.46])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
- id 1mcCu2-003U2w-4s
- for mjpeg-users@lists.sourceforge.net; Sun, 17 Oct 2021 20:37:11 +0000
-Received: by mail-wm1-f46.google.com with SMTP id
- y16-20020a05600c17d000b0030db7a51ee2so4817123wmo.0
- for <mjpeg-users@lists.sourceforge.net>; Sun, 17 Oct 2021 13:37:06 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20210112.gappssmtp.com; s=20210112;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:content-transfer-encoding:in-reply-to;
- bh=B17ugjfsl4NIFBjvUZANXnVzu0w3U/j7jZVs0/846lc=;
- b=DATvT66RtKTqRcxQ9DWqOw2LxPNEGsz9rz51ZHhCY7hkVrbU3TM8WgLKtqB+1j4NyL
- wOUXP5Pc+qYbRIzl7Tmo3hruNmndRq3PUSPs5fER8llI/32hmJv0tuy87Fx0l4yMBSGJ
- QAcLnAD7mLHM3T/rr5ozBJ6lOdIMuIFy998tMTx1IB6/njjPVVAG3de0W+hPKZy2zyno
- bZALe76UMxF0bMwyhigeepcN8QLEwXmQqVCLv52NpX8Pf9y6tb0gPapICKaYvo7I6yJd
- wBSQ2o112Ll/ch3V1LYR7ZpcNLZ9lq6kEIutd5V5Rs7ZmMSuZRHpem2O3Fl9FiffYya7
- JXpQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20210112;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:content-transfer-encoding
- :in-reply-to;
- bh=B17ugjfsl4NIFBjvUZANXnVzu0w3U/j7jZVs0/846lc=;
- b=oKKPuD0EnjSM7+/IjvCSlxAEHBJvh0Wg/WptX5R4J244mcWg2am3X8XsURZfR1NA3n
- EZtcgUTtVnS8PYo9xzV54SGkVBHAUWHeQvlrBUQ0l1BkUhXVLdP4m5oBV6mDqoAnN+yE
- OYHXpKKKLBgQLzfUHKCfV+/esw+8Xbps6UGPDCuADok7ns1iA/QytNZEhN4pnCRW8/S2
- skQ8nMHJre2200Nbsrdsm3Z4kWzGe2EHd2/uKv3rOni7bFN6nUzlUidyaAQoQWvOlud0
- jM4SvpZuIT1LfUgrD+Rn4YxakS4AylD9LNV7FRA+vT6rh7pjgxocYjMgIx0XW6B+sztX
- /E7g==
-X-Gm-Message-State: AOAM531jr1kkdAXQR9/DZECv7fR5cPda5e8kCd3L+ZSN2r0XulditC+m
- cyQM/g4vVm8fJjv58vuRwwR6f4c2Hbcy1Q==
-X-Google-Smtp-Source: ABdhPJwcDtpPg2mxmJM2XYwjmyUOwrYqD4Lkj7YPm36EiMTbS1W1XW9FfS2RUez7WsF+rqNC5j9qSQ==
-X-Received: by 2002:a05:600c:1989:: with SMTP id
- t9mr26088433wmq.48.1634501108682; 
- Sun, 17 Oct 2021 13:05:08 -0700 (PDT)
-Received: from Red ([2a01:cb1d:3d5:a100:264b:feff:fe03:2806])
- by smtp.googlemail.com with ESMTPSA id z6sm10909246wro.25.2021.10.17.13.05.08
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Sun, 17 Oct 2021 13:05:08 -0700 (PDT)
-Date: Sun, 17 Oct 2021 22:05:06 +0200
-From: LABBE Corentin <clabbe@baylibre.com>
-To: Dan Carpenter <dan.carpenter@oracle.com>
-Message-ID: <YWyB8kwsqAvHMuhb@Red>
+ bh=hZHvQDSjUd8uW3oRdpn55CUce4TBNbqxu4Un/iM6Hic=; b=faU/ctrp+oR3z9hwYXpjPpsYfR
+ yuuvKea7rxo6/W01wFrev1GvB2sgofwps+r18Yu4QCQi2T7rqvLkYWyPlhty11lQt4XegccO+tVb8
+ h5C8cjI9F4NYNYRsGd6uL5K58oHaBpspZubYOVzU8LjBOPDZhGkfwREYJ2uUXUIXUITs=;
+Received: from lb2-smtp-cloud7.xs4all.net ([194.109.24.28])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ id 1mcPN5-0001pG-CT
+ for mjpeg-users@lists.sourceforge.net; Mon, 18 Oct 2021 09:55:57 +0000
+Received: from cust-b5b5937f ([IPv6:fc0c:c16d:66b8:757f:c639:739b:9d66:799d])
+ by smtp-cloud7.xs4all.net with ESMTPA
+ id cPMqmtvAyk3b0cPMtmhFmf; Mon, 18 Oct 2021 11:55:44 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=xs4all.nl; s=s2;
+ t=1634550944; bh=hZHvQDSjUd8uW3oRdpn55CUce4TBNbqxu4Un/iM6Hic=;
+ h=Subject:To:From:Message-ID:Date:MIME-Version:Content-Type:From:
+ Subject;
+ b=s3GGNa29SESwabTksdMf/5josVX9HhU3ePTNA246K69Yd3XDAITe9bvm313pDt+lA
+ aat4e/vbTGP8jAP3mhHO232WBsR0Fa1Aawidgcu/PL/oAI/Ubv2Xw1obHAN9CamE7u
+ DSqW79QI22E2hVg3NC9DK4invFPwMoWlZY0drYCZmLylxgLQrxGiN9k7dN1jMgUSn1
+ YuHV3YlOhL+ViAYNIHNID7fukzTx87+MNDchi7VwqICd1Ysyu9kQyZjIjpw0DWD7kP
+ NdMcObb4Ur0NGgl7DgdFybqt5t67E+9CUmF1TFLdi87tgXex6IZUQ5ILlajrzL1gge
+ 89oFSv83ZDUdg==
+To: Corentin Labbe <clabbe@baylibre.com>, mchehab@kernel.org,
+ gregkh@linuxfoundation.org
 References: <20211013185812.590931-1-clabbe@baylibre.com>
- <20211013185812.590931-5-clabbe@baylibre.com>
- <20211014073752.GM8429@kadam>
+From: Hans Verkuil <hverkuil@xs4all.nl>
+Message-ID: <c2474663-3fe0-b0cd-ecb5-57ec370481e3@xs4all.nl>
+Date: Mon, 18 Oct 2021 11:55:40 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
+ Firefox/78.0 Thunderbird/78.14.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20211014073752.GM8429@kadam>
-X-Spam-Score: -0.0 (/)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+In-Reply-To: <20211013185812.590931-1-clabbe@baylibre.com>
+Content-Language: en-US
+X-CMAE-Envelope: MS4xfABpTiDbIOWqhv/J0KgHGejzgKsf74X+dQmYcsnG5aGEDJ2FA6OqGsDMvag3VOhBTkdexTPFa2yBDbLg8ONSLHsP4VKJGynHGfctWki387MdEc5UqsZz
+ XlUENWwO2mW8uj2mdYo/IJECKp2EvM2IKe3+flx+UsqDcqkrct4B7j62CscVc4HSqTHGCb9IGAgP2o75qBUBstZ71HfpoGcfmaU5V0SFnUYoF5CvYz/Z7IEk
+ uYRbugx0l3E8e8ZkskU+sCt2/8xOG8XVCQ0n1k/6dBBgsAHYYbBxUM4J3vWtLNFkn1cp1A9rtAVlZX500Lfk78vNnAIarVhibjRO5Mqp/QFFWtUB5Pg/6+j+
+ YSJjPN4cPvz+mzRjjCTJCy30AZGycLBu/n6/lR0xfpcBHZGql6bqYirh3XpNM5ilE+uW6AIOmGDny01E93w4wFaVU6BDwQ==
+X-Spam-Score: -2.9 (--)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Le Thu, Oct 14, 2021 at 10:37:52AM +0300, Dan Carpenter a
-   écrit : > On Wed, Oct 13, 2021 at 06:58:06PM +0000, Corentin Labbe wrote:
-   > > +config VIDEO_ZORAN_DEBUG > > + bool "Enable zoran debugfs" > > [...] 
- 
- Content analysis details:   (-0.0 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Hi Corentin, I noticed some code review comments from Dan
+ and a kernel test robot issue. Can you post a v3 fixing those by the end of
+ the week? Next week I will have access again to my zoran board, so then I
+ can t [...] 
+ Content analysis details:   (-2.9 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
-                              no trust
-                             [209.85.128.46 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [209.85.128.46 listed in wl.mailspike.net]
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [194.109.24.28 listed in list.dnswl.org]
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [194.109.24.28 listed in wl.mailspike.net]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
-X-Headers-End: 1mcCu2-003U2w-4s
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ -2.0 NICE_REPLY_A           Looks like a legit reply (A)
+X-Headers-End: 1mcPN5-0001pG-CT
 X-Mailman-Approved-At: Mon, 18 Oct 2021 17:18:55 +0000
-Subject: Re: [Mjpeg-users] [PATCH v2 04/10] staging: media: zoran: add
- debugfs
+Subject: Re: [Mjpeg-users] [PATCH v2 00/10] staging: media: zoran: fusion in
+ one module
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -124,55 +109,70 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Cc: gregkh@linuxfoundation.org, linux-staging@lists.linux.dev,
- linux-kernel@vger.kernel.org, hverkuil@xs4all.nl,
- mjpeg-users@lists.sourceforge.net, mchehab@kernel.org,
- linux-media@vger.kernel.org
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: mjpeg-users@lists.sourceforge.net, linux-staging@lists.linux.dev,
+ linux-kernel@vger.kernel.org, linux-media@vger.kernel.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-Le Thu, Oct 14, 2021 at 10:37:52AM +0300, Dan Carpenter a =E9crit :
-> On Wed, Oct 13, 2021 at 06:58:06PM +0000, Corentin Labbe wrote:
-> > +config VIDEO_ZORAN_DEBUG
-> > +	bool "Enable zoran debugfs"
-> > +	depends on VIDEO_ZORAN
-> > +	depends on DEBUG_FS
-> > +	help
-> > +	  Say y to enable zoran debug file.
-> > +	  This will create /sys/kernel/debug/CARD_NAME/debug for displaying
-> > +	  stats and debug information.
-> =
+Hi Corentin,
 
-> Why bother with a CONFIG?  Just make it always on?
-> =
+I noticed some code review comments from Dan and a kernel test robot issue.
+Can you post a v3 fixing those by the end of the week? Next week I will have
+access again to my zoran board, so then I can test the v3 series.
 
+BTW, I agree with Dan, just drop the 'Enable zoran debugfs' config option. It's
+not worth the additional complexity. Instead, just #ifdef CONFIG_DEBUG_FS
+where necessary (in most cases you shouldn't even have to do that since the
+since you have dummy debug_fs_* functions if CONFIG_DEBUG_FS isn't set).
 
-Hello
+Regards,
 
-I love to provides choice to user (and so avoid a dep on DEBUG_FS), even if=
- I think I am the only one remaining user.
+	Hans
 
-> > @@ -1286,6 +1321,12 @@ static int zoran_probe(struct pci_dev *pdev, con=
-st struct pci_device_id *ent)
-> >  =
+On 13/10/2021 20:58, Corentin Labbe wrote:
+> Hello
+> 
+> The main change of this serie is to fusion all zoran related modules in
+> one.
+> This fixes the load order problem when everything is built-in.
+> 
+> Regards
+> 
+> Changes since v1:
+> - add missing debugfs cleaning
+> - clean some remaining module_get/put functions which made impossible to
+>   remove the zoran module
+> - added the two latest patchs
+> 
+> Corentin Labbe (10):
+>   staging: media: zoran: move module parameter checks to zoran_probe
+>   staging: media: zoran: use module_pci_driver
+>   staging: media: zoran: rename debug module parameter
+>   staging: media: zoran: add debugfs
+>   staging: media: zoran: videocode: remove procfs
+>   staging: media: zoran: fusion all modules
+>   staging: media: zoran: remove vidmem
+>   staging: media: zoran: move videodev alloc
+>   staging: media: zoran: move config select on primary kconfig
+>   staging: media: zoran: introduce zoran_i2c_init
+> 
+>  drivers/staging/media/zoran/Kconfig        |  46 +--
+>  drivers/staging/media/zoran/Makefile       |   8 +-
+>  drivers/staging/media/zoran/videocodec.c   |  68 +----
+>  drivers/staging/media/zoran/videocodec.h   |   6 +-
+>  drivers/staging/media/zoran/zoran.h        |   6 +-
+>  drivers/staging/media/zoran/zoran_card.c   | 328 ++++++++++++++-------
+>  drivers/staging/media/zoran/zoran_driver.c |   5 +-
+>  drivers/staging/media/zoran/zr36016.c      |  24 +-
+>  drivers/staging/media/zoran/zr36016.h      |   2 +
+>  drivers/staging/media/zoran/zr36050.c      |  21 +-
+>  drivers/staging/media/zoran/zr36050.h      |   2 +
+>  drivers/staging/media/zoran/zr36060.c      |  21 +-
+>  drivers/staging/media/zoran/zr36060.h      |   2 +
+>  13 files changed, 291 insertions(+), 248 deletions(-)
+> 
 
-> >  	zr->map_mode =3D ZORAN_MAP_MODE_RAW;
-> >  =
-
-> > +#ifdef CONFIG_VIDEO_ZORAN_DEBUG
-> > +	zr->dbgfs_dir =3D debugfs_create_dir(ZR_DEVNAME(zr), NULL);
-> > +	debugfs_create_file("debug", 0444,
-> > +					      zr->dbgfs_dir, zr,
-> > +					      &zoran_debugfs_fops);
-> =
-
-> This whitespace is weird.
-
-Definitively Yes, fixed!
-
-Thanks
-Regards
 
 
 _______________________________________________
