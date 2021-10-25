@@ -2,103 +2,113 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9B4BC439B75
-	for <lists+mjpeg-users@lfdr.de>; Mon, 25 Oct 2021 18:23:59 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.92.3)
+	by mail.lfdr.de (Postfix) with ESMTPS id CDA2543AAD5
+	for <lists+mjpeg-users@lfdr.de>; Tue, 26 Oct 2021 05:48:20 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1mf2lQ-0006Wk-1B; Mon, 25 Oct 2021 16:23:56 +0000
+	id 1mfDRf-0001VI-Bw; Tue, 26 Oct 2021 03:48:15 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <hverkuil@xs4all.nl>) id 1mf1f5-0002ec-DP
- for mjpeg-users@lists.sourceforge.net; Mon, 25 Oct 2021 15:13:19 +0000
+ (envelope-from <clabbe@baylibre.com>) id 1mf4fb-0006kh-DB
+ for mjpeg-users@lists.sourceforge.net; Mon, 25 Oct 2021 18:26:03 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
- MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
+ d=sourceforge.net; s=x; h=In-Reply-To:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=fIY1GIaSVdj5U3XrMAxDyWv4KHAUORx2wUkdkjhqXC8=; b=YKWYh8Y6ocQRpoI22nuc1Bqb1V
- oT9jKXFYjCalcJRcR7+C4O2fx3aXdTNxtJz4c+Q54uWgB50A17SCn4Z1xqof8EIZA0oUyOvsnVeFm
- t7xadOEccol7oscLvBXFfpGCsCfMUFImlVUQZIgUcgCZPc8BZKaocSO/8yvbpiaeC4is=;
+ bh=9HKZ3WHs39Ll1KFWQ7mEVgrxMfllF9VNmXJhWSD6zbg=; b=RHGARZaODj2TTOsZ0AdNn3cq4u
+ PUhKEZGUVawFgSk7wZldLvwODq8drKtp707dwCU/HJMkFoMiCkVT8ZTWQ0FuwE43wL+ofWeTiUBNb
+ bmfpWjhx7QIp8EyZSoi9RUlzwmGA/MMc/knOctyWNyIZPT8n56T7PZNKCzJElAON4W2s=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
- Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:Content-ID:
+ h=In-Reply-To:Content-Transfer-Encoding:Content-Type:MIME-Version:
+ References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=fIY1GIaSVdj5U3XrMAxDyWv4KHAUORx2wUkdkjhqXC8=; b=PFSSqGjs/cY8laBW1SA+g+AcmT
- Xkr/SEdz4VQX1Npmwp6APJ+50qatFAZt+odvG1qpM4ICDBwN7Vn8zPcutMYCLIbNpUiVOquECqtsN
- 4Z5AulBrnQXtQ2kk5L4huBC0THQX3CoOCX260clHvNtTkWvh7WD4Gzs3Ob+NyJBp/D5w=;
-Received: from lb1-smtp-cloud8.xs4all.net ([194.109.24.21])
+ bh=9HKZ3WHs39Ll1KFWQ7mEVgrxMfllF9VNmXJhWSD6zbg=; b=REq5aGCJCTuX36t6EJbiFec4p/
+ tcXmQyObMiysUHMSKifE2IshY8vr7n89wme7N6Tt71JbpjwLcIgIbDelE4ZcFv4xBnOBYOb4CrTrW
+ 0512rMALfBgtkLWaA9hqHlKl03yq1RMBvSnRmaULoEdVpgaqH1OTrJcFAhAUPsQsZSBw=;
+Received: from mail-wr1-f42.google.com ([209.85.221.42])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mf1f1-00FoIa-5x
- for mjpeg-users@lists.sourceforge.net; Mon, 25 Oct 2021 15:13:19 +0000
-Received: from cust-b5b5937f ([IPv6:fc0c:c16d:66b8:757f:c639:739b:9d66:799d])
- by smtp-cloud8.xs4all.net with ESMTPA
- id f1eqmGoUiFfMif1ermUucr; Mon, 25 Oct 2021 17:13:05 +0200
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=xs4all.nl; s=s2;
- t=1635174785; bh=fIY1GIaSVdj5U3XrMAxDyWv4KHAUORx2wUkdkjhqXC8=;
- h=Subject:To:From:Message-ID:Date:MIME-Version:Content-Type:From:
- Subject;
- b=aQWf8mKI/N+PtAuoDrZ04aYbmjcG+AVRujs+lv+EPoaW0Jd4kZ7nxAWRIehWqjPym
- IjRZZKVeZ6jNUY/gnKntbtfxPxzwz5IrEaAzcbba35fQ6SVLdPElqYITmJKxahxgHF
- 1mFqwIhxTVvpr0LQHa+s+CHQzaCUZAiyiewyG5b5aY/P1bDBhZp6aqlW/utymYoYQY
- /BbWK5u8sE9Ub5UCs8V9x/niNdwSWr1RWHayQpz9BO/Y8plwQoNboM44E2uxelpEWW
- cUrZW0T3y9+x/6PUT74qw9s7fk3YMwOz2waNgvvnryid60AV2EuhYNDLd+n6oMaL3k
- iOWMOKf//suMQ==
-To: LABBE Corentin <clabbe@baylibre.com>
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
+ id 1mf4fT-00FyLo-56
+ for mjpeg-users@lists.sourceforge.net; Mon, 25 Oct 2021 18:26:03 +0000
+Received: by mail-wr1-f42.google.com with SMTP id d13so11951878wrf.11
+ for <mjpeg-users@lists.sourceforge.net>; Mon, 25 Oct 2021 11:25:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20210112.gappssmtp.com; s=20210112;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:content-transfer-encoding:in-reply-to;
+ bh=9HKZ3WHs39Ll1KFWQ7mEVgrxMfllF9VNmXJhWSD6zbg=;
+ b=eGWi6BKNAikOTbSn81Sa7AREWjMIxOWCW6giZfRNlMcPV+2EmLigPFn+O2Z62O0sYa
+ iV0pfEifAhHfWukClZSiKZWUtW6KfA7KRV1ZDicdiR3B8Sti9c4fE1nIPwnUH2j2+yy7
+ CgbPrMSi7sMfeIugSlIidXNRbM0IBSpjeIFgbji9Hlzij/fQbDLUW6hA78f7gB7wW0sh
+ hdnUjbbgGjOghJEuveE8BUrJhuo37fkdHCNOCAypzkv6cD2ED+omeKUvRLDqTFZ9dh6M
+ fECVzVUsc+MnoY5NLk4U5AI8Mgr9mJEWB5ALlZ9FiHJ7gBZ6yAXbyhgvuYQRMS/29qp6
+ LSTg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20210112;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:content-transfer-encoding
+ :in-reply-to;
+ bh=9HKZ3WHs39Ll1KFWQ7mEVgrxMfllF9VNmXJhWSD6zbg=;
+ b=t0jLm4JSiHkvq3V7SdoKmr3U0Ya1DRkb3pQymull+qVAmqY25T2rZmYSkpDFx5kQ94
+ J535dMexcqFTKeNzt0xAgMVkHSFGevwryPWpN4ZvsXL3iY2CoTd/NtXG5e4LZ2lutyBF
+ C4rcwWHCMxDQFKtm21I3VyHIiNzZEOqmDJ1+8T2u8gGWkz5fT19PK1KdLPNm850ylL6X
+ q1E/SmNonADOD2+c4uolFldYNOWjNGVZ/D4daJIJe1E+khpy63gJqqN35xYv085EO+n+
+ +XfbajBG86oAtHlRqh4Vff7nWMSMiw3cppNQ1dGjdtHAa824UtUJnHoF+84qg2kiMEmU
+ Z9cA==
+X-Gm-Message-State: AOAM5306t/c5tLHItXuLPT9WPTRQCHuMsS5VzdLrqWso+M6H7h8vut7v
+ I70Ru5glZx1yoQjaKbX+sHJDsQ==
+X-Google-Smtp-Source: ABdhPJwsdj/Ufj88FsRkYCdm3EHNUiDfxilc2w021XdzcMTc2/IYksh4yPlv764YLumxYKv43oMz1A==
+X-Received: by 2002:adf:f9d2:: with SMTP id w18mr12644602wrr.86.1635186348799; 
+ Mon, 25 Oct 2021 11:25:48 -0700 (PDT)
+Received: from Red ([2a01:cb1d:3d5:a100:264b:feff:fe03:2806])
+ by smtp.googlemail.com with ESMTPSA id l1sm7730050wrb.73.2021.10.25.11.25.48
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 25 Oct 2021 11:25:48 -0700 (PDT)
+Date: Mon, 25 Oct 2021 20:25:46 +0200
+From: LABBE Corentin <clabbe@baylibre.com>
+To: Hans Verkuil <hverkuil@xs4all.nl>
+Message-ID: <YXb2quNLuUTKtjux@Red>
 References: <20211013185812.590931-1-clabbe@baylibre.com>
- <da925d73-fdf0-3962-3841-a1dd53b5c5dd@xs4all.nl> <YXa9WGs7ewyaHmI9@Red>
-From: Hans Verkuil <hverkuil@xs4all.nl>
-Message-ID: <71b72175-538e-87e4-d662-e59fd4131a43@xs4all.nl>
-Date: Mon, 25 Oct 2021 17:13:04 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
- Thunderbird/78.14.0
+ <da925d73-fdf0-3962-3841-a1dd53b5c5dd@xs4all.nl>
+ <YXa9WGs7ewyaHmI9@Red>
+ <71b72175-538e-87e4-d662-e59fd4131a43@xs4all.nl>
 MIME-Version: 1.0
-In-Reply-To: <YXa9WGs7ewyaHmI9@Red>
-Content-Language: en-US
-X-CMAE-Envelope: MS4xfKXsBZKZjWokjLzBUxVr/rlum1dMNHkXzuENEFfg6JbvVbzYGvw51c/XiE9qdH7QayonRkvslocJlN2TO65u3IEbETfbPC5AAscqAB7vmwlKUZOCQkrj
- NVyvRNnzcgzX6ZidqYF2R7xlTzbOL/I7c1uon5WmiiCiJ1uDJ3UEYTqWrE7AMkhycfqBECWYc9xWHiUOdEF0TWvXOe62sDWn1kpczQDyWyh8RpJ9OGSjS7qj
- zBz80kwslj7Z4Mh8z9Kjq7AMfyp2GJ+2tt709rTB2m1XVvTFGVB1agtjRLB6ZFZLDeTShk0nTxrHCvL5NUCpJTe0mi4ANgCVA1W5QMfDglEq0eRQZcDBb2Qk
- bdJE+sLv9HQfIy/4lL+Tgv6nqQcgUtpIQevsf0QPV6Q/imzqDUUiB4tMvX52/qd9MTJWhnGopfvZl28d1WSArALQtA0Nn4Cz5Xx2MbehNFPSdP7pcE8d9rGc
- jsbZ0Pyu1CFnbL1X4R2lrhUvD26XC1Yxb/EnzJrfwXJkpNXq7mf5WW1+M4E=
-X-Spam-Score: -2.2 (--)
+Content-Disposition: inline
+In-Reply-To: <71b72175-538e-87e4-d662-e59fd4131a43@xs4all.nl>
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  On 25/10/2021 16:21, LABBE Corentin wrote: > Le Mon, Oct 25,
-    2021 at 02:45:02PM +0200, Hans Verkuil a Ã©crit : >> Hi Corentin, >> >> On
-    13/10/2021 20:58, Corentin Labbe wrote: >>> Hello >>> >>> The ma [...] 
+ Content preview:  Le Mon, Oct 25, 2021 at 05:13:04PM +0200, Hans Verkuil a écrit
+    : > On 25/10/2021 16:21, LABBE Corentin wrote: > > Le Mon, Oct 25, 2021 at
+    02:45:02PM +0200, Hans Verkuil a écrit : > >> Hi Corentin, > > [...] 
  
- Content analysis details:   (-2.2 points, 6.0 required)
+ Content analysis details:   (-0.0 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
                               no trust
-                             [194.109.24.21 listed in list.dnswl.org]
-  0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
-                             [194.109.24.21 listed in wl.mailspike.net]
+                             [209.85.221.42 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [209.85.221.42 listed in wl.mailspike.net]
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
  -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
   0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
                              valid
-  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- -2.0 NICE_REPLY_A           Looks like a legit reply (A)
-X-Headers-End: 1mf1f1-00FoIa-5x
-X-Mailman-Approved-At: Mon, 25 Oct 2021 16:23:54 +0000
+X-Headers-End: 1mf4fT-00FyLo-56
+X-Mailman-Approved-At: Tue, 26 Oct 2021 03:48:13 +0000
 Subject: Re: [Mjpeg-users] [PATCH v2 00/10] staging: media: zoran: fusion in
  one module
 X-BeenThere: mjpeg-users@lists.sourceforge.net
@@ -116,49 +126,92 @@ Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
 Cc: gregkh@linuxfoundation.org, linux-staging@lists.linux.dev,
  linux-kernel@vger.kernel.org, mjpeg-users@lists.sourceforge.net,
  mchehab@kernel.org, linux-media@vger.kernel.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-T24gMjUvMTAvMjAyMSAxNjoyMSwgTEFCQkUgQ29yZW50aW4gd3JvdGU6Cj4gTGUgTW9uLCBPY3Qg
-MjUsIDIwMjEgYXQgMDI6NDU6MDJQTSArMDIwMCwgSGFucyBWZXJrdWlsIGEgw6ljcml0IDoKPj4g
-SGkgQ29yZW50aW4sCj4+Cj4+IE9uIDEzLzEwLzIwMjEgMjA6NTgsIENvcmVudGluIExhYmJlIHdy
-b3RlOgo+Pj4gSGVsbG8KPj4+Cj4+PiBUaGUgbWFpbiBjaGFuZ2Ugb2YgdGhpcyBzZXJpZSBpcyB0
-byBmdXNpb24gYWxsIHpvcmFuIHJlbGF0ZWQgbW9kdWxlcyBpbgo+Pj4gb25lLgo+Pj4gVGhpcyBm
-aXhlcyB0aGUgbG9hZCBvcmRlciBwcm9ibGVtIHdoZW4gZXZlcnl0aGluZyBpcyBidWlsdC1pbi4K
-Pj4+Cj4+PiBSZWdhcmRzCj4+Pgo+Pj4gQ2hhbmdlcyBzaW5jZSB2MToKPj4+IC0gYWRkIG1pc3Np
-bmcgZGVidWdmcyBjbGVhbmluZwo+Pj4gLSBjbGVhbiBzb21lIHJlbWFpbmluZyBtb2R1bGVfZ2V0
-L3B1dCBmdW5jdGlvbnMgd2hpY2ggbWFkZSBpbXBvc3NpYmxlIHRvCj4+PiAgIHJlbW92ZSB0aGUg
-em9yYW4gbW9kdWxlCj4+PiAtIGFkZGVkIHRoZSB0d28gbGF0ZXN0IHBhdGNocwo+Pgo+PiBTb21l
-dGhpbmcgd2VpcmQgaXMgd3Jvbmcgd2l0aCB0aGlzIHNlcmllcy4gSSBoYXZlIGEgREMzMCwgYnV0
-IGxvYWRpbmcgdGhpcyB3aXRoOgo+Pgo+PiBtb2Rwcm9iZSB6cjM2MDY3IGNhcmQ9Mwo+Pgo+PiBy
-ZXN1bHRzIGluIHRoaXMgZXJyb3IgbWVzc2FnZSBpbiB0aGUga2VybmVsIGxvZzoKPj4KPj4gWyAg
-IDU4LjY0NTU1N10genIzNjA2NzogbW9kdWxlIGlzIGZyb20gdGhlIHN0YWdpbmcgZGlyZWN0b3J5
-LCB0aGUgcXVhbGl0eSBpcyB1bmtub3duLCB5b3UgaGF2ZSBiZWVuIHdhcm5lZC4KPj4gWyAgIDU4
-LjY0NjY1OF0genIzNjA2NyAwMDAwOjAzOjAwLjA6IFpvcmFuIE1KUEVHIGJvYXJkIGRyaXZlciB2
-ZXJzaW9uIDAuMTAuMQo+PiBbICAgNTguNjQ2NzkzXSB6cjM2MDY3IDAwMDA6MDM6MDAuMDogWm9y
-YW4gWlIzNjA1NyAocmV2IDEpLCBpcnE6IDE4LCBtZW1vcnk6IDB4ZjQwMDAwMDAKPj4gWyAgIDU4
-LjY0ODgyMV0genIzNjA2NyAwMDAwOjAzOjAwLjA6IEluaXRpYWxpemluZyBpMmMgYnVzLi4uCj4+
-IFsgICA1OC42NjI0MjBdIHZweDMyMjAgMjItMDA0NzogdnB4MzIxNmIgZm91bmQgQCAweDhlIChE
-QzMwWzBdKQo+PiBbICAgNTguNzM3NDQ1XSB6cjM2MDY3IDAwMDA6MDM6MDAuMDogRmFpbCB0byBn
-ZXQgZW5jb2Rlcgo+Pgo+PiBUaGlzIHdvcmtzIGJlZm9yZSwgc28gd2h5IHRoaXMgaXMgbm93IGZh
-aWxpbmcgaXMgbm90IGNsZWFyIHRvIG1lLgo+Pgo+PiBJdCBkb2VzIHdvcmsgd2l0aCAnY2FyZD0w
-JywgYnV0IEkgcmVhbGx5IGhhdmUgYSBEQzMwLgo+Pgo+PiBJZiBJIHRlc3Qgd2l0aCAnY2FyZD0w
-JyB0aGVuIHRoZSBybW1vZCBpc3N1ZSBpcyBub3cgc29sdmVkLgo+IAo+IEV2ZXJ5dGhpbmcgbm9y
-bWFsLCBzaW5jZSBjYXJkIDAgZG9lcyBub3QgaGF2ZSBlbmNvZGVyLgo+IENvdWxkIHlvdSBjaGVj
-ayB0aGF0IGFkdjcxNzUgaXMgY29tcGlsZWQgPwoKWWVzLCBhbmQgaXQgbG9hZGVkIGFzIHdlbGwg
-KEkgc2VlIGl0IHdpdGggbHNtb2QpLgoKSG93ZXZlciwgdGhlcmUgaXMgbm8gYWR2NzE3NSBvbiBt
-eSBib2FyZCwgaW5zdGVhZCBpdCBhcHBlYXJzIHRvIGhhdmUgYW4gSVRUIE1TRTMwMDAuClRoZXJl
-IGlzIG5vIGRyaXZlciBmb3IgdGhpcyBvbmUgKGFuZCBJIGRvbid0IGV2ZW4gdGhpbmsgaXQgaXMg
-YW4gaTJjIGRldmljZSksIHNvCkkgc3VzcGVjdCB0aGF0IGJlZm9yZSB0aGUgZHJpdmVyIGp1c3Qg
-Y29udGludWVkIHdpdGhvdXQgZW5jb2RlciBzdXBwb3J0LCB3aGVyZWFzIG5vdwppdCBmYWlscyB3
-aGVuIGl0IGNhbid0IGxvYWQgdGhlIGVuY29kZXIuCgpDb3VsZCB0aGF0IGJlIHRoZSByZWFzb24/
-IEluIHRoZSBhYnNlbmNlIG9mIGFuIGVuY29kZXIsIEkgdGhpbmsgaXQgc2hvdWxkIGp1c3QKY29u
-dGludWUsIGVzcC4gc2luY2UgdGhlIGRyaXZlciBkb2Vzbid0IHVzZSB0aGUgZW5jb2RlciBhbnl3
-YXkuCgpSZWdhcmRzLAoKCUhhbnMKCj4gCj4gSSBnb3QgdGhlIHNhbWUgcHJvYmxlbSB3aXRoIG15
-IERDMTArIHdoZXJlIHNhYTcxMTAgd2FzIG5vdCBjb21waWxlZC4KPiBUaGlzIGlzc3VlIHdhcyBy
-ZXByb2R1Y2VkIHJhbmRvbWx5IGFuZCBJIGhhdmUgbm8gZXhwbGFuYXRpb24uIChrY29uZmlnIHBy
-b2JsZW0gPykKPiAKPiBSZWdhcmRzCj4gCgoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fCk1qcGVnLXVzZXJzIG1haWxpbmcgbGlzdApNanBlZy11c2Vyc0Bs
-aXN0cy5zb3VyY2Vmb3JnZS5uZXQKaHR0cHM6Ly9saXN0cy5zb3VyY2Vmb3JnZS5uZXQvbGlzdHMv
-bGlzdGluZm8vbWpwZWctdXNlcnMK
+Le Mon, Oct 25, 2021 at 05:13:04PM +0200, Hans Verkuil a =E9crit :
+> On 25/10/2021 16:21, LABBE Corentin wrote:
+> > Le Mon, Oct 25, 2021 at 02:45:02PM +0200, Hans Verkuil a =E9crit :
+> >> Hi Corentin,
+> >>
+> >> On 13/10/2021 20:58, Corentin Labbe wrote:
+> >>> Hello
+> >>>
+> >>> The main change of this serie is to fusion all zoran related modules =
+in
+> >>> one.
+> >>> This fixes the load order problem when everything is built-in.
+> >>>
+> >>> Regards
+> >>>
+> >>> Changes since v1:
+> >>> - add missing debugfs cleaning
+> >>> - clean some remaining module_get/put functions which made impossible=
+ to
+> >>>   remove the zoran module
+> >>> - added the two latest patchs
+> >>
+> >> Something weird is wrong with this series. I have a DC30, but loading =
+this with:
+> >>
+> >> modprobe zr36067 card=3D3
+> >>
+> >> results in this error message in the kernel log:
+> >>
+> >> [   58.645557] zr36067: module is from the staging directory, the qual=
+ity is unknown, you have been warned.
+> >> [   58.646658] zr36067 0000:03:00.0: Zoran MJPEG board driver version =
+0.10.1
+> >> [   58.646793] zr36067 0000:03:00.0: Zoran ZR36057 (rev 1), irq: 18, m=
+emory: 0xf4000000
+> >> [   58.648821] zr36067 0000:03:00.0: Initializing i2c bus...
+> >> [   58.662420] vpx3220 22-0047: vpx3216b found @ 0x8e (DC30[0])
+> >> [   58.737445] zr36067 0000:03:00.0: Fail to get encoder
+> >>
+> >> This works before, so why this is now failing is not clear to me.
+> >>
+> >> It does work with 'card=3D0', but I really have a DC30.
+> >>
+> >> If I test with 'card=3D0' then the rmmod issue is now solved.
+> > =
+
+> > Everything normal, since card 0 does not have encoder.
+> > Could you check that adv7175 is compiled ?
+> =
+
+> Yes, and it loaded as well (I see it with lsmod).
+> =
+
+> However, there is no adv7175 on my board, instead it appears to have an I=
+TT MSE3000.
+> There is no driver for this one (and I don't even think it is an i2c devi=
+ce), so
+> I suspect that before the driver just continued without encoder support, =
+whereas now
+> it fails when it can't load the encoder.
+> =
+
+> Could that be the reason? In the absence of an encoder, I think it should=
+ just
+> continue, esp. since the driver doesn't use the encoder anyway.
+> =
+
+
+So probably the card list is wrong against DC30.
+I checked high resolution photo of DC30 on internet, and it confirms the fa=
+ct that DC30 does not have adv7175.
+
+Since DC30 and DC30+ are identical in the card list, perhaps it is a very o=
+ld copy/paste error.
+
+So I will add a patch removing adv7175 from DC30.
+
+Thanks for the report
+Regards
+
+
+_______________________________________________
+Mjpeg-users mailing list
+Mjpeg-users@lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/mjpeg-users
