@@ -2,109 +2,118 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 99D6D4447CC
-	for <lists+mjpeg-users@lfdr.de>; Wed,  3 Nov 2021 18:55:41 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5F956446816
+	for <lists+mjpeg-users@lfdr.de>; Fri,  5 Nov 2021 18:48:16 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1miKU6-0004JK-Pk; Wed, 03 Nov 2021 17:55:38 +0000
+	id 1mj3Jx-0003Nd-Mt; Fri, 05 Nov 2021 17:48:09 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <hverkuil@xs4all.nl>) id 1miJ9P-0005pm-F1
- for mjpeg-users@lists.sourceforge.net; Wed, 03 Nov 2021 16:30:11 +0000
+ (envelope-from <clabbe@baylibre.com>) id 1mj0b0-0007b6-01
+ for mjpeg-users@lists.sourceforge.net; Fri, 05 Nov 2021 14:53:34 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
- MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
+ d=sourceforge.net; s=x; h=In-Reply-To:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=q06/a6NhPPbSu2bM9BmCNRxXQvZOuI61JEGUeXJUBmk=; b=iMlQnYKwuajrnVE8ZyPYniKrNq
- DCRH43AXxjwY85hrr8H4jquffb6+DrFaFZCcVWCZmZMCAwD4tlV6Uybt/DIiAKWRxKYac9GSq+9K1
- kiJv+6y0eCp1HjH5SGh5LsJMhngskZegOfPTtldryBObcKpPVfuH3wWkvgHULOwUBXXM=;
+ bh=iXLTZXL1GQP1HI9r/QvQqQsWuhIIrqOsmFlp8xIa9EA=; b=ZCbOrzZuhEANWxzBoBx0nEgywm
+ /GEH1jjyXgjurv6EcoAR37sGBXYb6T0/2eT/neH9ZJ9pagOkFCMAEATNPDags6dbjF4YXqqOZA3kM
+ 0GFTHE+WanOu95hMkBCt5qlOM0TKnhR3+i1+q5GR/YWbpmT0L5aC/R4bab+c6RnSYJT4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
- Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:Content-ID:
+ h=In-Reply-To:Content-Transfer-Encoding:Content-Type:MIME-Version:
+ References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=q06/a6NhPPbSu2bM9BmCNRxXQvZOuI61JEGUeXJUBmk=; b=iAHN54JnoL9fh6hF770IRdSxOw
- HsgtAsmwzRPNaVj7CvMDRMLCIoYsGc5IssX2oKLv7bgIdDLWz7KCBwu6v5DJkjjbs0UQLT9XJiNDQ
- rG1wi5GRWsaNY0MPeIwYriPM4dJxoZ0U3qpg4qIZN05AbvqMZNyudt1wEeVyXshJy3/I=;
-Received: from [194.109.24.28] (helo=lb2-smtp-cloud7.xs4all.net)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1miJ9I-00H3Fl-2H
- for mjpeg-users@lists.sourceforge.net; Wed, 03 Nov 2021 16:30:08 +0000
-Received: from cust-b5b5937f ([IPv6:fc0c:c16d:66b8:757f:c639:739b:9d66:799d])
- by smtp-cloud7.xs4all.net with ESMTPA
- id iJ90mznJMFZvciJ91maBfP; Wed, 03 Nov 2021 17:29:47 +0100
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=xs4all.nl; s=s2;
- t=1635956987; bh=q06/a6NhPPbSu2bM9BmCNRxXQvZOuI61JEGUeXJUBmk=;
- h=Subject:To:From:Message-ID:Date:MIME-Version:Content-Type:From:
- Subject;
- b=j/kIIE5G6Foqc83nOSk9Sh0Lg1YlXEsAlPBK9A0zJ1ZADDVtyGLzOLvxnYOwZL7Ny
- zq4JC8OhYKbtfvfjSOfTN/jqD3QbAUQF57ueUlwGuCPMw3ZmdTA/1PhGBDNkyVEBNS
- OThhJVaPRbeL4Q2Sbvcxdw+V6i+t5iMF6J/qoJfL84WKC5ZyAysxcjWuIwn76+Efct
- zPpVf/+rBrsUQcKir0t7KVz2Q4Pt8q9NI40foLj0uOeVjCyStIQ5PgKX1jzUVuCRl9
- 4615UuzmEnSPwYeHvMI8hszR+tqI29K6/EX7BhLgTKyhLpBfxdCQesPOk3bmSXz7IY
- AsrVrzgutv06Q==
-To: LABBE Corentin <clabbe@baylibre.com>
+ bh=iXLTZXL1GQP1HI9r/QvQqQsWuhIIrqOsmFlp8xIa9EA=; b=VBhef4JhyXrBjS0pnSXwbwHJN2
+ HYubXyf5kVuDNprQSAOpHvplE5Ib2Or3Uu8M7swGSb8VRC0B6HqBPqFDWQ54flFm8/lVQm2LeeZTC
+ P/1MUIH2d1ReSgZDYmTZ3UbVE/uY2TRE5tMxMmluiNDnyc6MOJ5wgrhmS6W6qxisN81E=;
+Received: from mail-wr1-f53.google.com ([209.85.221.53])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
+ id 1mj0ay-0004W4-9D
+ for mjpeg-users@lists.sourceforge.net; Fri, 05 Nov 2021 14:53:33 +0000
+Received: by mail-wr1-f53.google.com with SMTP id d24so14187712wra.0
+ for <mjpeg-users@lists.sourceforge.net>; Fri, 05 Nov 2021 07:53:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20210112.gappssmtp.com; s=20210112;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:content-transfer-encoding:in-reply-to;
+ bh=iXLTZXL1GQP1HI9r/QvQqQsWuhIIrqOsmFlp8xIa9EA=;
+ b=s378FoYPpbOvJEqqeuzFQJJ/PPT9UGPGFyvQK0kJrjUMl2vqYFjnIhRzfAnD+Yxz1c
+ wIWQgEUjUATKcu7zviAitnD/Kie0GKxCSKrdD0wQCE2YJGSwszme8HZ9ZSBGebjlDBo5
+ dqXiiaekTEhL9vCP4akjSRj1o/YDfHW5Y9Sj5csljI8CRXuFq9nlAqszS+LCN7geWUGh
+ XDzAn/HLJlqqMF8gy9fr/hHew3Q+BSekoWPpu/AadusPqwVYsu/sW4chCOa4Wdb35QdV
+ EgD0LU1GwIeQ0qqC06iAe3H13Apk5m19FItjl+O4uT1WjFfdy15xIumAswsGjEZT4qjv
+ 9xBw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20210112;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:content-transfer-encoding
+ :in-reply-to;
+ bh=iXLTZXL1GQP1HI9r/QvQqQsWuhIIrqOsmFlp8xIa9EA=;
+ b=cNkWaZ9jEn58WZmYaRWkxeib/4hokhXPzi/KaNBzpwShS+hXHOhc4Xpl8csJdeiYyo
+ aJ1g4M38zNyhBFy2ybZke4VqYlxlM6EKVyaUZji3FWK0PSZrYosjo0x5e/016J7k3jE9
+ iTFvhrSI1FRga/gXs4fFYO7WbMJUjYfOFAjcZRjcsMSvSmIZtoQji9yPZ8YyED7gvID4
+ yzEGUKmCtACnZDIcQnfUidcUBSwHeXjTepMtsSu1t6udRyUD0HtDs00sktBRlbirQ/BW
+ tFYQ2NmtN/oF65JBDesFFg7OKMaMoYisP5mHw8KQbN1hlKgKGEbH3q7Aj3zPROA80hho
+ ABnQ==
+X-Gm-Message-State: AOAM532X9vLHzXk4hJoG8yoGhmElM383ZXVA68gzrVMb3C2DVHVPjUj1
+ xGWws9BuW18X86bkBpzuN0QCqw==
+X-Google-Smtp-Source: ABdhPJz1uQp/2OsYlQ22lcK92G8Yg5XjL99UT2p/Zrqni2zAlPmMdHMthVbcYCmG7zZys8uRoXs7hg==
+X-Received: by 2002:adf:e306:: with SMTP id b6mr73651599wrj.244.1636124005867; 
+ Fri, 05 Nov 2021 07:53:25 -0700 (PDT)
+Received: from Red ([2a01:cb1d:3d5:a100:264b:feff:fe03:2806])
+ by smtp.googlemail.com with ESMTPSA id q84sm14380782wme.3.2021.11.05.07.53.24
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 05 Nov 2021 07:53:25 -0700 (PDT)
+Date: Fri, 5 Nov 2021 15:53:23 +0100
+From: LABBE Corentin <clabbe@baylibre.com>
+To: Hans Verkuil <hverkuil@xs4all.nl>
+Message-ID: <YYVFY6NSdlKiIKK3@Red>
 References: <20211026193416.1176797-1-clabbe@baylibre.com>
- <a85c93db-e118-274f-d86a-d127c7399926@xs4all.nl> <YYKxTrWI299pvqo7@Red>
-From: Hans Verkuil <hverkuil@xs4all.nl>
-Message-ID: <2bbce7ef-acf8-3c0f-2705-09d34b2d92be@xs4all.nl>
-Date: Wed, 3 Nov 2021 17:29:46 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
- Thunderbird/78.14.0
+ <a85c93db-e118-274f-d86a-d127c7399926@xs4all.nl>
+ <YYKxTrWI299pvqo7@Red>
+ <2bbce7ef-acf8-3c0f-2705-09d34b2d92be@xs4all.nl>
 MIME-Version: 1.0
-In-Reply-To: <YYKxTrWI299pvqo7@Red>
-Content-Language: en-US
-X-CMAE-Envelope: MS4xfKrptr7PwToxoeIwYq/ugkCAdgOjfHO4zoLTeUBEDSS/u2innE/hGUZ66Te3fyxbTkVjBMlRxerT3S8vy6mKT8e5hyfuOIm4ZhZb193v1+PhlqRDShU5
- 3Fcd+ERqqWANpALMP3bJvxke6askZfGEdVCJMJ3pD0WhsQmOv+8Q64aT5c9T0lEfqLMS7N1/CHKi4F4cZpDgkwUqss9R+h1x0Fs+NCj62m8+Dfhb5BJHRLP4
- Lc3MtciN5t3KEQtzwIyw88PWxgHhX40mT35qSDwx27L5WyH0khNv+cRr0eQgle18szH8IUKMhPfSPowK1oIQU/dS8okPCv1kKwgLl/b63zc5/TXicx3TUV5Z
- LTAUfEqIbmwQJItBhdL5029ynzl6tOQgtBctN/CqTyMYRRpABwMNxiBG5wHf7bmCIapWuWKmUWh7PRtToTcgR7RftBSPpV4MU5C1hhazh7zhHYKFV7HylSJ6
- GRGcRDChddSg4Wqs/llAZJr6dCbxmis9FmknTZSBI7wN1Xo0m8wQO+4QnAg=
-X-Spam-Score: -0.9 (/)
+Content-Disposition: inline
+In-Reply-To: <2bbce7ef-acf8-3c0f-2705-09d34b2d92be@xs4all.nl>
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  On 03/11/2021 16:57, LABBE Corentin wrote: > Le Wed, Nov 03,
-    2021 at 04:21:02PM +0100, Hans Verkuil a Ã©crit : >> Hi Corentin, >> >> On
-    26/10/2021 21:34, Corentin Labbe wrote: >>> Hello >>> >>> The ma [...] 
+ Content preview:  Le Wed, Nov 03, 2021 at 05:29:46PM +0100, Hans Verkuil a écrit
+    : > On 03/11/2021 16:57, LABBE Corentin wrote: > > Le Wed, Nov 03, 2021 at
+    04:21:02PM +0100, Hans Verkuil a écrit : > >> Hi Corentin, > > [...] 
  
- Content analysis details:   (-0.9 points, 6.0 required)
+ Content analysis details:   (0.0 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
                               no trust
-                             [194.109.24.28 listed in list.dnswl.org]
+                             [209.85.221.53 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [209.85.221.53 listed in wl.mailspike.net]
   0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
                              blocked.  See
                              http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
                               for more information.
-                             [URIs: xs4all.nl]
-  0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
-                             [194.109.24.28 listed in wl.mailspike.net]
+                             [URIs: linuxtv.org]
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
   0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
                              valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
-  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
- -2.0 NICE_REPLY_A           Looks like a legit reply (A)
-X-Headers-End: 1miJ9I-00H3Fl-2H
-X-Mailman-Approved-At: Wed, 03 Nov 2021 17:55:36 +0000
+X-Headers-End: 1mj0ay-0004W4-9D
+X-Mailman-Approved-At: Fri, 05 Nov 2021 17:48:07 +0000
 Subject: Re: [Mjpeg-users] [PATCH v3 00/14] staging: media: zoran: fusion in
  one module
 X-BeenThere: mjpeg-users@lists.sourceforge.net
@@ -122,56 +131,218 @@ Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
 Cc: gregkh@linuxfoundation.org, linux-staging@lists.linux.dev,
  linux-kernel@vger.kernel.org, mjpeg-users@lists.sourceforge.net,
  mchehab@kernel.org, linux-media@vger.kernel.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-T24gMDMvMTEvMjAyMSAxNjo1NywgTEFCQkUgQ29yZW50aW4gd3JvdGU6Cj4gTGUgV2VkLCBOb3Yg
-MDMsIDIwMjEgYXQgMDQ6MjE6MDJQTSArMDEwMCwgSGFucyBWZXJrdWlsIGEgw6ljcml0IDoKPj4g
-SGkgQ29yZW50aW4sCj4+Cj4+IE9uIDI2LzEwLzIwMjEgMjE6MzQsIENvcmVudGluIExhYmJlIHdy
-b3RlOgo+Pj4gSGVsbG8KPj4+Cj4+PiBUaGUgbWFpbiBjaGFuZ2Ugb2YgdGhpcyBzZXJpZSBpcyB0
-byBmdXNpb24gYWxsIHpvcmFuIHJlbGF0ZWQgbW9kdWxlcyBpbgo+Pj4gb25lLgo+Pj4gVGhpcyBm
-aXhlcyB0aGUgbG9hZCBvcmRlciBwcm9ibGVtIHdoZW4gZXZlcnl0aGluZyBpcyBidWlsdC1pbi4K
-Pj4KPj4gSSd2ZSBiZWVuIHRlc3RpbmcgdGhpcyBzZXJpZXMsIGFuZCB3aGlsZSB0aGUgbW9kdWxl
-IGxvYWQvdW5sb2FkIGlzIG5vdyB3b3JraW5nLAo+PiBJJ20gcnVubmluZyBpbnRvIGEgbG90IG9m
-IG90aGVyIHY0bDIgY29tcGxpYW5jZSBpc3N1ZXMuCj4+Cj4+IEkndmUgZml4ZWQgdmFyaW91cyBp
-c3N1ZXMgaW4gc29tZSBmb2xsb3ctdXAgcGF0Y2hlcyBhdmFpbGFibGUgaW4gbXkgdHJlZToKPj4K
-Pj4gaHR0cHM6Ly9naXQubGludXh0di5vcmcvaHZlcmt1aWwvbWVkaWFfdHJlZS5naXQvbG9nLz9o
-PXpvcmFuCj4+Cj4+IEF0IGxlYXN0IHNvbWUgb2YgdGhlIHdvcnN0IG9mZmVuZGVycyBhcmUgbm93
-IHJlc29sdmVkLiBOb3RlIHRoYXQgdGhlIHBhdGNoCj4+IGRyb3BwaW5nIHJlYWQvd3JpdGUgc3Vw
-cG9ydCByZWxpZXMgb24gdGhpcyBwYXRjaDoKPj4KPj4gaHR0cHM6Ly9wYXRjaHdvcmsubGludXh0
-di5vcmcvcHJvamVjdC9saW51eC1tZWRpYS9wYXRjaC80Zjg5YjEzOS0xM2I3LWVlZTYtOTY2Mi05
-OTY2MjZiNzc4YjBAeHM0YWxsLm5sLwo+IAo+IEhlbGxvCj4gCj4gTXkgdGVzdCBicmFuY2ggYWxy
-ZWFkeSBpbmNsdWRlZCB5b3VyICJ6b3JhbjogZml4IHZhcmlvdXMgVjRMMiBjb21wbGlhbmNlIGVy
-cm9ycyIKPiBJIGhhdmUgcXVpY2tseSBjaGVja2VkIG90aGVyIHBhdGNoIGFuZCBJIGFtIG9rIHdp
-dGggdGhlbS4KPiBJIHdpbGwgYWRkIGFuZCB0ZXN0IHdpdGggdGhlbS4KPiAKPj4KPj4gQnV0IHRo
-ZXJlIGlzIG9uZSByZWFsbHkgbWFqb3IgYnVnIHRoYXQgbWFrZXMgbWUgaGVzaXRhbnQgdG8gbWVy
-Z2UgdGhpczoKPj4KPj4gVGhpcyB3b3JrczoKPj4KPj4gdjRsMi1jdGwgLXYgcGl4ZWxmb3JtYXQ9
-TUpQRyx3aWR0aD03NjgsaGVpZ2h0PTU3Ngo+PiB2NGwyLWN0bCAtLXN0cmVhbS1tbWFwCj4+Cj4+
-IFRoaXMgZmFpbHM6Cj4+Cj4+IHY0bDItY3RsIC12IHBpeGVsZm9ybWF0PU1KUEcsd2lkdGg9NzY4
-LGhlaWdodD0yODgKPj4gdjRsMi1jdGwgLS1zdHJlYW0tbW1hcAo+Pgo+PiBJdCdzIGFuIGltbWVk
-aWF0ZSBsb2NrIHVwIHdpdGggbm90aGluZyB0byBpbmRpY2F0ZSB3aGF0IGlzIHdyb25nLgo+PiBB
-cyBzb29uIGFzIHRoZSBoZWlnaHQgaXMgMjg4IG9yIGxlc3MsIHRoaXMgaGFwcGVucy4KPj4KPj4g
-Qm90aCB3aXRoIG15IERDMzAgYW5kIERDMzBELgo+IAo+IEp1c3QgZm9yIGN1cmlvc2l0eSwgd2hh
-dCBpcyB0aGUgZGlmZmVyZW5jZSBiZXR3ZWVuIHRob3NlcyB0d28gPwoKSXQncyB0aGUgREMzMCB2
-YXJpYW50IHdpdGhvdXQgYW4gYWR2NzE3NS4KCj4gCj4+Cj4+IERvIHlvdSBzZWUgdGhlIHNhbWU/
-IEFueSBpZGVhIHdoYXQgaXMgZ29pbmcgb24/IEkgd291bGQgZmVlbCBtdWNoIGhhcHBpZXIKPj4g
-aWYgdGhpcyBpcyBmaXhlZC4KPj4KPj4gTm90ZSB0aGF0IHRoZSBzYW1lIHByb2JsZW0gaXMgcHJl
-c2VudCB3aXRob3V0IHRoaXMgcGF0Y2ggc2VyaWVzLCBzbyBpdCdzCj4+IGJlZW4gdGhlcmUgZm9y
-IHNvbWUgdGltZS4KPj4KPiAKPiBJIHdpbGwgc3RhcnQgb24gZGlnZ2luZyB0aGlzIHByb2JsZW0g
-YW5kIGFkZCB0aG9zZXMgY29tbWFuZHMgdG8gbXkgQ0kuCj4gQW5kIEkga25vdyB0aGVyZSBhcmUg
-YSBodWdlIHF1YW50aXR5IG9mIHByb2JsZW0gc2luY2Ugb3JpZ2lucy4KPiBBIHNpbXBsZSBleGFt
-cGxlIGlzIHRoYXQganVzdCBzZXR0aW5nIE1KUEVHIGFzIGRlZmF1bHQgaW5wdXQgZm9ybWF0IGRv
-ZXMgbm90IHdvcmsuCj4gCj4gQnV0IHNpbmNlIGl0IGlzIG5vdCByZWxhdGVkIHRvIG15IHNlcmll
-LCBjYW4geW91IHBsZWFzZSBtZXJnZSBpdC4KCkJlZm9yZSBJIGRvIHRoYXQsIEkgd291bGQgcmVh
-bGx5IGxpa2UgdG8ga25vdyBhIGJpdCBtb3JlIGFib3V0IHRoaXMgaXNzdWU6CmNhbiB5b3UgcmVw
-cm9kdWNlIGl0PyBJcyBpdCBEQzMwIHNwZWNpZmljIG9yIGEgZ2VuZXJhbCBwcm9ibGVtIHdpdGgg
-em9yYW4/CgpUaGUgcHJvYmxlbSB3aXRoIHRoaXMgaGFyZCBoYW5nIGlzIHRoYXQgaXQgaXMgaGFy
-ZCB0byBkbyByZWdyZXNzaW9uIHRlc3RpbmcKd2l0aCB2NGwyLWNvbXBsaWFuY2UsIHNpbmNlIGl0
-IHdpbGwgaGFuZyBhcyBzb29uIGFzIE1KUEcgcGl4ZWxmb3JtYXQgaXMKdGVzdGVkLgoKSSB3b3Vs
-ZCBmZWVsIG11Y2ggaGFwcGllciBpZiB0aGUgaGFuZyBjYW4gYmUgYXZvaWRlZCwgZXZlbiBpZiBp
-dCBpcyBqdXN0CndpdGggYSB0ZW1wb3JhcnkgaGFjay4gSXQgd2lsbCBtYWtlIGl0IG11Y2ggZWFz
-aWVyIGdvaW5nIGZvcndhcmQuCgpSZWdhcmRzLAoKCUhhbnMKCgpfX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fXwpNanBlZy11c2VycyBtYWlsaW5nIGxpc3QKTWpw
-ZWctdXNlcnNAbGlzdHMuc291cmNlZm9yZ2UubmV0Cmh0dHBzOi8vbGlzdHMuc291cmNlZm9yZ2Uu
-bmV0L2xpc3RzL2xpc3RpbmZvL21qcGVnLXVzZXJzCg==
+Le Wed, Nov 03, 2021 at 05:29:46PM +0100, Hans Verkuil a =E9crit :
+> On 03/11/2021 16:57, LABBE Corentin wrote:
+> > Le Wed, Nov 03, 2021 at 04:21:02PM +0100, Hans Verkuil a =E9crit :
+> >> Hi Corentin,
+> >>
+> >> On 26/10/2021 21:34, Corentin Labbe wrote:
+> >>> Hello
+> >>>
+> >>> The main change of this serie is to fusion all zoran related modules =
+in
+> >>> one.
+> >>> This fixes the load order problem when everything is built-in.
+> >>
+> >> I've been testing this series, and while the module load/unload is now=
+ working,
+> >> I'm running into a lot of other v4l2 compliance issues.
+> >>
+> >> I've fixed various issues in some follow-up patches available in my tr=
+ee:
+> >>
+> >> https://git.linuxtv.org/hverkuil/media_tree.git/log/?h=3Dzoran
+> >>
+> >> At least some of the worst offenders are now resolved. Note that the p=
+atch
+> >> dropping read/write support relies on this patch:
+> >>
+> >> https://patchwork.linuxtv.org/project/linux-media/patch/4f89b139-13b7-=
+eee6-9662-996626b778b0@xs4all.nl/
+> > =
+
+> > Hello
+> > =
+
+> > My test branch already included your "zoran: fix various V4L2 complianc=
+e errors"
+> > I have quickly checked other patch and I am ok with them.
+> > I will add and test with them.
+> > =
+
+> >>
+> >> But there is one really major bug that makes me hesitant to merge this:
+> >>
+> >> This works:
+> >>
+> >> v4l2-ctl -v pixelformat=3DMJPG,width=3D768,height=3D576
+> >> v4l2-ctl --stream-mmap
+> >>
+> >> This fails:
+> >>
+> >> v4l2-ctl -v pixelformat=3DMJPG,width=3D768,height=3D288
+> >> v4l2-ctl --stream-mmap
+> >>
+> >> It's an immediate lock up with nothing to indicate what is wrong.
+> >> As soon as the height is 288 or less, this happens.
+> >>
+> >> Both with my DC30 and DC30D.
+> > =
+
+> > Just for curiosity, what is the difference between thoses two ?
+> =
+
+> It's the DC30 variant without an adv7175.
+
+So my patch removing adv7175 from DC30 is wrong.
+I need to add a new DC30D.
+
+> =
+
+> > =
+
+> >>
+> >> Do you see the same? Any idea what is going on? I would feel much happ=
+ier
+> >> if this is fixed.
+> >>
+> >> Note that the same problem is present without this patch series, so it=
+'s
+> >> been there for some time.
+> >>
+> > =
+
+> > I will start on digging this problem and add thoses commands to my CI.
+> > And I know there are a huge quantity of problem since origins.
+> > A simple example is that just setting MJPEG as default input format doe=
+s not work.
+> > =
+
+> > But since it is not related to my serie, can you please merge it.
+> =
+
+> Before I do that, I would really like to know a bit more about this issue:
+> can you reproduce it? Is it DC30 specific or a general problem with zoran?
+> =
+
+> The problem with this hard hang is that it is hard to do regression testi=
+ng
+> with v4l2-compliance, since it will hang as soon as MJPG pixelformat is
+> tested.
+> =
+
+> I would feel much happier if the hang can be avoided, even if it is just
+> with a temporary hack. It will make it much easier going forward.
+> =
+
+
+I hit the same problem with my DC10+.
+I got the following trace:
+[   97.022391] BUG: kernel NULL pointer dereference, address: 0000000000000=
+018
+[   97.029357] #PF: supervisor write access in kernel mode
+[   97.034579] #PF: error_code(0x0002) - not-present page
+[   97.039712] PGD 100e30067 P4D 100e30067 PUD 11c958067 PMD 0 =
+
+[   97.045370] Oops: 0002 [#1] PREEMPT SMP NOPTI
+[   97.049723] CPU: 0 PID: 0 Comm: swapper/0 Tainted: G         C        5.=
+15.0-next-20211105+ #126
+[   97.058500] Hardware name: To Be Filled By O.E.M. To Be Filled By O.E.M.=
+/K10N78, BIOS P2.00 07/01/2010
+[   97.067791] RIP: 0010:zoran_irq+0x178/0x2e0 [zr36067]
+[   97.072845] Code: 01 8d 5c 00 01 48 8b 85 90 0c 00 00 48 63 db 44 8b 2c =
+98 41 f6 c5 01 0f 84 64 01 00 00 4c 8b bc dd 38 0d 00 00 e8 98 72 a1 fa <49=
+> 89 47 18 83 bd 90 0b 00 00 01 0f 84 da 00 00 00 48 8b 85 68 0c
+[   97.091590] RSP: 0018:ffffa57040003f00 EFLAGS: 00010016
+[   97.096807] RAX: 000000169273a7d2 RBX: 0000000000000001 RCX: 00000000000=
+00018
+[   97.103932] RDX: 000000830c927d90 RSI: 000000000000d33a RDI: 00041965ba8=
+7a734
+[   97.111063] RBP: ffff9d845cce1028 R08: 00000000005b6db7 R09: 00000000000=
+00000
+[   97.118188] R10: 0000000000000000 R11: ffffa57040003ff8 R12: 00000000000=
+00065
+[   97.125312] R13: 0000000004027541 R14: ffff9d845cce1d58 R15: 00000000000=
+00000
+[   97.132434] FS:  0000000000000000(0000) GS:ffff9d845fc00000(0000) knlGS:=
+0000000000000000
+[   97.140513] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[   97.146249] CR2: 0000000000000018 CR3: 000000011c956000 CR4: 00000000000=
+006f0
+[   97.153374] Call Trace:
+[   97.155822]  <IRQ>
+[   97.157840]  __handle_irq_event_percpu+0x35/0x180
+[   97.162546]  handle_irq_event+0x50/0xb0
+[   97.166384]  handle_fasteoi_irq+0x8b/0x1e0
+[   97.170483]  __common_interrupt+0x64/0x100
+[   97.174581]  common_interrupt+0x9f/0xc0
+[   97.178414]  </IRQ>
+[   97.180510]  <TASK>
+[   97.182609]  asm_common_interrupt+0x1e/0x40
+[   97.186793] RIP: 0010:acpi_idle_do_entry+0x47/0x50
+[   97.191585] Code: 08 48 8b 15 1f db 5d 01 ed c3 e9 64 fd ff ff 65 48 8b =
+04 25 00 ad 01 00 48 8b 00 a8 08 75 ea eb 07 0f 00 2d 0b 80 5b 00 fb f4 <fa=
+> c3 cc cc cc cc cc cc cc 41 56 49 89 f6 41 55 41 89 d5 41 54 55
+[   97.210323] RSP: 0018:ffffffffbc603e30 EFLAGS: 00000246
+[   97.215539] RAX: 0000000000004000 RBX: ffff9d84413f1c00 RCX: 00000000000=
+0001f
+[   97.222666] RDX: ffff9d845fc00000 RSI: ffff9d8440165000 RDI: ffff9d84401=
+65064
+[   97.229798] RBP: ffff9d8440165064 R08: 000000000001184d R09: 00000000000=
+00018
+[   97.236921] R10: 00000000000029cc R11: 000000000000318c R12: 00000000000=
+00001
+[   97.244046] R13: ffffffffbc7c3e20 R14: 0000000000000001 R15: 00000000000=
+00000
+[   97.251178]  acpi_idle_enter+0x99/0xe0
+[   97.254931]  cpuidle_enter_state+0x84/0x360
+[   97.259118]  cpuidle_enter+0x24/0x40
+[   97.262698]  do_idle+0x1d0/0x250
+[   97.265928]  cpu_startup_entry+0x14/0x20
+[   97.269846]  start_kernel+0x63a/0x65f
+[   97.273514]  secondary_startup_64_no_verify+0xc2/0xcb
+[   97.278565]  </TASK>
+[   97.280748] Modules linked in: adv7175 saa7110 zr36067(C) videobuf2_dma_=
+contig
+[   97.287970] CR2: 0000000000000018
+[   97.291279] ---[ end trace 0ee22c5269015e89 ]---
+[   97.295888] RIP: 0010:zoran_irq+0x178/0x2e0 [zr36067]
+[   97.300941] Code: 01 8d 5c 00 01 48 8b 85 90 0c 00 00 48 63 db 44 8b 2c =
+98 41 f6 c5 01 0f 84 64 01 00 00 4c 8b bc dd 38 0d 00 00 e8 98 72 a1 fa <49=
+> 89 47 18 83 bd 90 0b 00 00 01 0f 84 da 00 00 00 48 8b 85 68 0c
+[   97.319679] RSP: 0018:ffffa57040003f00 EFLAGS: 00010016
+[   97.324896] RAX: 000000169273a7d2 RBX: 0000000000000001 RCX: 00000000000=
+00018
+[   97.332019] RDX: 000000830c927d90 RSI: 000000000000d33a RDI: 00041965ba8=
+7a734
+[   97.339144] RBP: ffff9d845cce1028 R08: 00000000005b6db7 R09: 00000000000=
+00000
+[   97.346276] R10: 0000000000000000 R11: ffffa57040003ff8 R12: 00000000000=
+00065
+[   97.353401] R13: 0000000004027541 R14: ffff9d845cce1d58 R15: 00000000000=
+00000
+[   97.360525] FS:  0000000000000000(0000) GS:ffff9d845fc00000(0000) knlGS:=
+0000000000000000
+[   97.368603] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[   97.374340] CR2: 0000000000000018 CR3: 000000011c956000 CR4: 00000000000=
+006f0
+[   97.381464] Kernel panic - not syncing: Fatal exception in interrupt
+[   97.387810] Kernel Offset: 0x39c00000 from 0xffffffff81000000 (relocatio=
+n range: 0xffffffff80000000-0xffffffffbfffffff)
+[   97.398580] ---[ end Kernel panic - not syncing: Fatal exception in inte=
+rrupt ]---
+
+x86_64-pc-linux-gnu-addr2line -e vmlinux zoran_irq+0x16f/0x2e0
+/usr/src/linux-next/arch/x86/include/asm/processor.h:443
+
+I have no more clue for the moment.
+
+
+_______________________________________________
+Mjpeg-users mailing list
+Mjpeg-users@lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/mjpeg-users
