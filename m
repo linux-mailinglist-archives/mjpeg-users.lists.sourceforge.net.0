@@ -2,103 +2,115 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id AB373449B9F
-	for <lists+mjpeg-users@lfdr.de>; Mon,  8 Nov 2021 19:25:08 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id D96F8453849
+	for <lists+mjpeg-users@lfdr.de>; Tue, 16 Nov 2021 18:08:20 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1mk9KI-0005O6-HF; Mon, 08 Nov 2021 18:25:02 +0000
+	id 1mn1wF-0003RO-71; Tue, 16 Nov 2021 17:08:08 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <hverkuil@xs4all.nl>) id 1mjzuT-0005ok-5i
- for mjpeg-users@lists.sourceforge.net; Mon, 08 Nov 2021 08:21:45 +0000
+ (envelope-from <clabbe@baylibre.com>) id 1mmzD5-00008M-6d
+ for mjpeg-users@lists.sourceforge.net; Tue, 16 Nov 2021 14:13:19 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
- MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
+ d=sourceforge.net; s=x; h=In-Reply-To:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=RFoi1u36o6iwyIcIT7Vfr6GvFlphxvGIuYKIC0G16z8=; b=bNBaGGpF77vEQI7ZNhU75WITKo
- yTbuh1adh+zwDZu4UMNy+O2X+qz/QhYCE5JxlkPHo0R1z/CpCdNwTNFEZSdOG/TDHOvtZj/vbONXl
- BPYJNtGPGWYtZKl+H58CirZyvPMPwTRUgYm1vubGlPpRGytsY11+k/GSub+An+bM/I1E=;
+ bh=Hw7z2DE+F8UBs0gio938IkOrZbQGq0DztTjnNTwE29I=; b=lHtFs2XxOcrqgx9D1f9eGZHz1c
+ DxqHZn7VNiUm+cG/dFzTKhEQJoXgAdjtIw2yrIoeT3CQKBf8Bc7FvFSigjCckjOrcz/VCt9YHUxZq
+ mHQlQQQFs5uaWrOgOLxlpyJ6v21QToRcn7Ul8T/npj+WcSt6sGXs3eJcTXjvpjhs/Wuo=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
- Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:Content-ID:
+ h=In-Reply-To:Content-Transfer-Encoding:Content-Type:MIME-Version:
+ References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=RFoi1u36o6iwyIcIT7Vfr6GvFlphxvGIuYKIC0G16z8=; b=lwa1Z+wKwsnbk0xunrQoeRYgwI
- 4Azx78Z5oPozJa5KGwSEMRstVNQXE6gYqY9NizdMsTPgLrtBrJgsNmCIAGjHkYI+TESG+SOxgtaJk
- t6k4DtPZS79xPHSg5b1rbOAUsB+sHKn8iMVNMoPlLUSwfp1SOeWbrlGtHahZFIwXjJ04=;
-Received: from lb1-smtp-cloud7.xs4all.net ([194.109.24.24])
+ bh=Hw7z2DE+F8UBs0gio938IkOrZbQGq0DztTjnNTwE29I=; b=fyBfI1XNXNG4710BjsFZDAhG3M
+ rtXOWx9PFTSwuitLW6gE+T+bhZBkcuUq6M0dkH3r8whLO663ly+cdj56VfN8iotvnn4GPiEBJGUjN
+ w3yy8po4I08lxMjwWDjrb8MlFDhKCDrWW334AA+FUe837ifuBjzZDu+duPH9rQg5W0R0=;
+Received: from mail-wr1-f46.google.com ([209.85.221.46])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mjzuK-005ozA-N2
- for mjpeg-users@lists.sourceforge.net; Mon, 08 Nov 2021 08:21:43 +0000
-Received: from cust-b5b5937f ([IPv6:fc0c:c16d:66b8:757f:c639:739b:9d66:799d])
- by smtp-cloud7.xs4all.net with ESMTPA
- id jzu6meHPuFZvcjzuAmu9fn; Mon, 08 Nov 2021 09:21:26 +0100
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=xs4all.nl; s=s2;
- t=1636359686; bh=RFoi1u36o6iwyIcIT7Vfr6GvFlphxvGIuYKIC0G16z8=;
- h=Subject:To:From:Message-ID:Date:MIME-Version:Content-Type:From:
- Subject;
- b=FmWXh+KlD4fw8k9Mlz5sCVoP0jXPQBTB8oCx95xYkaJvXSO5FmPjGFtJbHclZ8PD4
- WUYd9L/ElX/yy2gVTTosgeZ2WkLIoFWacijEcjqs0KOlwTdEM/HNrD/lOEQtgZWX4x
- vLXT5e4Fl7GwR2Qa1uaYcoAhSY0eugicZj0mFaaC0bl0NMmXx6pbiQRfy5rELTxWM5
- OZEs5I+GOYYxAwO8xLwgnTDg9qj40dtDhkuj1HNiFV8WGGceb1fHKa4BwCpMqDeWvb
- mQNJXxr2lF5PEbBZgFbUfX7x5z3cE/jQHZyIX6tnVG2QNqjvQkCbbHxtYq/FysBsyr
- XWGXfWR5cbImQ==
-To: LABBE Corentin <clabbe@baylibre.com>
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
+ id 1mmzCx-00EtcV-H3
+ for mjpeg-users@lists.sourceforge.net; Tue, 16 Nov 2021 14:13:19 +0000
+Received: by mail-wr1-f46.google.com with SMTP id r8so37791269wra.7
+ for <mjpeg-users@lists.sourceforge.net>; Tue, 16 Nov 2021 06:13:10 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20210112.gappssmtp.com; s=20210112;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:content-transfer-encoding:in-reply-to;
+ bh=Hw7z2DE+F8UBs0gio938IkOrZbQGq0DztTjnNTwE29I=;
+ b=D8fdejX/rCNDBoHiV4LiynBJx18EM/ZjvMMkJpbuoSlDJdlr7b2U39xUO91b7HWq0C
+ 8ANdlnsOY0N04/lXVqSO1XMvljvxKTMljsm/omCsmStxLTzIlNGJKDkn4uL4IFDu1O7l
+ yEiDYt4zoE+vkdWBsWn1lKOjOL0NBYRB/nxoyO/vxoLwWT9JMG+hwV7vYZfxwrgpR45D
+ ZbbC8gU0LfHvQKbbZJo5yNirplHMDwvzqTdwVtx3rqZpMh4l1x2kCzfy7E4WBmjTy0RG
+ +3TVBOxOlv1ajb/37JZskVapp3DRMgnhvrWsOTbAkNeybm+Pd5HHVUXmUmRJsilTZf7n
+ jiqA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20210112;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:content-transfer-encoding
+ :in-reply-to;
+ bh=Hw7z2DE+F8UBs0gio938IkOrZbQGq0DztTjnNTwE29I=;
+ b=p0sRgVsBCyM/K4i7WyiqnipeyhAG/CynmrxrXVRA7dYTz09ToH9CBOLoMqoAowUk2R
+ jLHlPR/V630afPRTjJLa8OITt7zukVSl3xtq6XWMtiaXQlZl+SqQc+o0+mJ2aeKV1xSq
+ x1U3h/WdwovEwCqUHo5Zgi9LCyEOmqEzxh+GVWfhiUvKjQcDihW7nWryDIZnkqYjuw5j
+ NR/iPirT/geEVzJbpwgMaoRS3OsykpP9mUTsv5MTSLASp/ooGiK1N96VkEo40uX8ysCQ
+ JxYOYg4+LCISKpvvCfW7r9wIdGt/Lfz8L8wn1crU1AHUPiJrbP2cQtb/3ZjbiUnvFJcB
+ 2pOA==
+X-Gm-Message-State: AOAM531x/BTa427kLv4TeaGnPqkjIpr+TwrsO2RzgE6bJyBo6k1SmWYH
+ FJH8B8doPK0Y8IfVUv07kBB2dQ==
+X-Google-Smtp-Source: ABdhPJx6YJZlTa5B4GfDTwox4+qJjdQGXyHLa50AzCSZZtUd61i17/1U90BHUfQGFlbWjKTqNjS2Kg==
+X-Received: by 2002:a5d:42cc:: with SMTP id t12mr9608486wrr.129.1637071980582; 
+ Tue, 16 Nov 2021 06:13:00 -0800 (PST)
+Received: from Red ([2a01:cb1d:3d5:a100:264b:feff:fe03:2806])
+ by smtp.googlemail.com with ESMTPSA id h18sm18751493wre.46.2021.11.16.06.12.59
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 16 Nov 2021 06:13:00 -0800 (PST)
+Date: Tue, 16 Nov 2021 15:12:58 +0100
+From: LABBE Corentin <clabbe@baylibre.com>
+To: Hans Verkuil <hverkuil@xs4all.nl>
+Message-ID: <YZO8an3L6gay0isM@Red>
 References: <20211026193416.1176797-1-clabbe@baylibre.com>
- <a85c93db-e118-274f-d86a-d127c7399926@xs4all.nl> <YYKxTrWI299pvqo7@Red>
- <2bbce7ef-acf8-3c0f-2705-09d34b2d92be@xs4all.nl> <YYgAb76mrMb1ERMW@Red>
-From: Hans Verkuil <hverkuil@xs4all.nl>
-Message-ID: <87357802-1723-0471-d963-252ec54ececd@xs4all.nl>
-Date: Mon, 8 Nov 2021 09:21:22 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
- Firefox/78.0 Thunderbird/78.14.0
+ <a85c93db-e118-274f-d86a-d127c7399926@xs4all.nl>
+ <YYKxTrWI299pvqo7@Red>
+ <2bbce7ef-acf8-3c0f-2705-09d34b2d92be@xs4all.nl>
+ <YYgAb76mrMb1ERMW@Red>
+ <87357802-1723-0471-d963-252ec54ececd@xs4all.nl>
 MIME-Version: 1.0
-In-Reply-To: <YYgAb76mrMb1ERMW@Red>
-Content-Language: en-US
-X-CMAE-Envelope: MS4xfP5ngz4eur2Syuo88BiDaT7tMabv/5gsQciFAKhEtNKRlsnKewfCSyIo2j0Hy2m4b3rLR1r+pHYti5VaKPUjrSJyajsNGIID2kaCprZ+6u6X/XKB0wrP
- y8l/xqa0S5O7vH2VUYXdgqaqxJgXaecwh6FydjolW02dGuztf8tN6ycHeH7APdnipuj11+qrGH6M4k4CCTt6XqPaSYW93bRnmoCOggcbNjyVwKNih0eGI3Yj
- yy86dTtudyxW8yNp0SuIkD10RFBzIg/7/4Jhim/VUSDm/TsaQL4uYUSdam6RAJRRr8W7JN1Y4NU8Nffj+6FabtaIS9NhYJu+dPN9aLslU7cJpiithmwKXdt3
- P1g4yWaiXsORa2l6mrGDsL3bGry4dzISfsXlUk3GJnbJgxoVUgqao9Xw363uI/HZ+hpwKB018xAnnlZbrTDNI8StNs711Q==
-X-Spam-Score: -2.2 (--)
+Content-Disposition: inline
+In-Reply-To: <87357802-1723-0471-d963-252ec54ececd@xs4all.nl>
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  On 07/11/2021 17:35, LABBE Corentin wrote: > Le Wed, Nov 03,
-    2021 at 05:29:46PM +0100, Hans Verkuil a Ã©crit : >> On 03/11/2021 16:57,
-    LABBE Corentin wrote: >>> Le Wed, Nov 03, 2021 at 04:21:02PM +010 [...] 
+ Content preview:  Le Mon, Nov 08, 2021 at 09:21:22AM +0100, Hans Verkuil a écrit
+    : > On 07/11/2021 17:35, LABBE Corentin wrote: > > Le Wed, Nov 03, 2021 at
+    05:29:46PM +0100, Hans Verkuil a écrit : > >> On 03/11/2021 16 [...] 
  
- Content analysis details:   (-2.2 points, 6.0 required)
+ Content analysis details:   (-0.0 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
-                             [194.109.24.24 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [209.85.221.46 listed in wl.mailspike.net]
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
                               no trust
-                             [194.109.24.24 listed in list.dnswl.org]
+                             [209.85.221.46 listed in list.dnswl.org]
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
   0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
                              valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
-  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- -2.0 NICE_REPLY_A           Looks like a legit reply (A)
-X-Headers-End: 1mjzuK-005ozA-N2
-X-Mailman-Approved-At: Mon, 08 Nov 2021 18:25:01 +0000
+X-Headers-End: 1mmzCx-00EtcV-H3
+X-Mailman-Approved-At: Tue, 16 Nov 2021 17:08:06 +0000
 Subject: Re: [Mjpeg-users] [PATCH v3 00/14] staging: media: zoran: fusion in
  one module
 X-BeenThere: mjpeg-users@lists.sourceforge.net
@@ -116,69 +128,138 @@ Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
 Cc: gregkh@linuxfoundation.org, linux-staging@lists.linux.dev,
  linux-kernel@vger.kernel.org, mjpeg-users@lists.sourceforge.net,
  mchehab@kernel.org, linux-media@vger.kernel.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-T24gMDcvMTEvMjAyMSAxNzozNSwgTEFCQkUgQ29yZW50aW4gd3JvdGU6Cj4gTGUgV2VkLCBOb3Yg
-MDMsIDIwMjEgYXQgMDU6Mjk6NDZQTSArMDEwMCwgSGFucyBWZXJrdWlsIGEgw6ljcml0IDoKPj4g
-T24gMDMvMTEvMjAyMSAxNjo1NywgTEFCQkUgQ29yZW50aW4gd3JvdGU6Cj4+PiBMZSBXZWQsIE5v
-diAwMywgMjAyMSBhdCAwNDoyMTowMlBNICswMTAwLCBIYW5zIFZlcmt1aWwgYSDDqWNyaXQgOgo+
-Pj4+IEhpIENvcmVudGluLAo+Pj4+Cj4+Pj4gT24gMjYvMTAvMjAyMSAyMTozNCwgQ29yZW50aW4g
-TGFiYmUgd3JvdGU6Cj4+Pj4+IEhlbGxvCj4+Pj4+Cj4+Pj4+IFRoZSBtYWluIGNoYW5nZSBvZiB0
-aGlzIHNlcmllIGlzIHRvIGZ1c2lvbiBhbGwgem9yYW4gcmVsYXRlZCBtb2R1bGVzIGluCj4+Pj4+
-IG9uZS4KPj4+Pj4gVGhpcyBmaXhlcyB0aGUgbG9hZCBvcmRlciBwcm9ibGVtIHdoZW4gZXZlcnl0
-aGluZyBpcyBidWlsdC1pbi4KPj4+Pgo+Pj4+IEkndmUgYmVlbiB0ZXN0aW5nIHRoaXMgc2VyaWVz
-LCBhbmQgd2hpbGUgdGhlIG1vZHVsZSBsb2FkL3VubG9hZCBpcyBub3cgd29ya2luZywKPj4+PiBJ
-J20gcnVubmluZyBpbnRvIGEgbG90IG9mIG90aGVyIHY0bDIgY29tcGxpYW5jZSBpc3N1ZXMuCj4+
-Pj4KPj4+PiBJJ3ZlIGZpeGVkIHZhcmlvdXMgaXNzdWVzIGluIHNvbWUgZm9sbG93LXVwIHBhdGNo
-ZXMgYXZhaWxhYmxlIGluIG15IHRyZWU6Cj4+Pj4KPj4+PiBodHRwczovL2dpdC5saW51eHR2Lm9y
-Zy9odmVya3VpbC9tZWRpYV90cmVlLmdpdC9sb2cvP2g9em9yYW4KPj4+Pgo+Pj4+IEF0IGxlYXN0
-IHNvbWUgb2YgdGhlIHdvcnN0IG9mZmVuZGVycyBhcmUgbm93IHJlc29sdmVkLiBOb3RlIHRoYXQg
-dGhlIHBhdGNoCj4+Pj4gZHJvcHBpbmcgcmVhZC93cml0ZSBzdXBwb3J0IHJlbGllcyBvbiB0aGlz
-IHBhdGNoOgo+Pj4+Cj4+Pj4gaHR0cHM6Ly9wYXRjaHdvcmsubGludXh0di5vcmcvcHJvamVjdC9s
-aW51eC1tZWRpYS9wYXRjaC80Zjg5YjEzOS0xM2I3LWVlZTYtOTY2Mi05OTY2MjZiNzc4YjBAeHM0
-YWxsLm5sLwo+Pj4KPj4+IEhlbGxvCj4+Pgo+Pj4gTXkgdGVzdCBicmFuY2ggYWxyZWFkeSBpbmNs
-dWRlZCB5b3VyICJ6b3JhbjogZml4IHZhcmlvdXMgVjRMMiBjb21wbGlhbmNlIGVycm9ycyIKPj4+
-IEkgaGF2ZSBxdWlja2x5IGNoZWNrZWQgb3RoZXIgcGF0Y2ggYW5kIEkgYW0gb2sgd2l0aCB0aGVt
-Lgo+Pj4gSSB3aWxsIGFkZCBhbmQgdGVzdCB3aXRoIHRoZW0uCj4+Pgo+Pj4+Cj4+Pj4gQnV0IHRo
-ZXJlIGlzIG9uZSByZWFsbHkgbWFqb3IgYnVnIHRoYXQgbWFrZXMgbWUgaGVzaXRhbnQgdG8gbWVy
-Z2UgdGhpczoKPj4+Pgo+Pj4+IFRoaXMgd29ya3M6Cj4+Pj4KPj4+PiB2NGwyLWN0bCAtdiBwaXhl
-bGZvcm1hdD1NSlBHLHdpZHRoPTc2OCxoZWlnaHQ9NTc2Cj4+Pj4gdjRsMi1jdGwgLS1zdHJlYW0t
-bW1hcAo+Pj4+Cj4+Pj4gVGhpcyBmYWlsczoKPj4+Pgo+Pj4+IHY0bDItY3RsIC12IHBpeGVsZm9y
-bWF0PU1KUEcsd2lkdGg9NzY4LGhlaWdodD0yODgKPj4+PiB2NGwyLWN0bCAtLXN0cmVhbS1tbWFw
-Cj4+Pj4KPj4+PiBJdCdzIGFuIGltbWVkaWF0ZSBsb2NrIHVwIHdpdGggbm90aGluZyB0byBpbmRp
-Y2F0ZSB3aGF0IGlzIHdyb25nLgo+Pj4+IEFzIHNvb24gYXMgdGhlIGhlaWdodCBpcyAyODggb3Ig
-bGVzcywgdGhpcyBoYXBwZW5zLgo+Pj4+Cj4+Pj4gQm90aCB3aXRoIG15IERDMzAgYW5kIERDMzBE
-Lgo+Pj4KPj4+IEp1c3QgZm9yIGN1cmlvc2l0eSwgd2hhdCBpcyB0aGUgZGlmZmVyZW5jZSBiZXR3
-ZWVuIHRob3NlcyB0d28gPwo+Pgo+PiBJdCdzIHRoZSBEQzMwIHZhcmlhbnQgd2l0aG91dCBhbiBh
-ZHY3MTc1Lgo+Pgo+Pj4KPj4+Pgo+Pj4+IERvIHlvdSBzZWUgdGhlIHNhbWU/IEFueSBpZGVhIHdo
-YXQgaXMgZ29pbmcgb24/IEkgd291bGQgZmVlbCBtdWNoIGhhcHBpZXIKPj4+PiBpZiB0aGlzIGlz
-IGZpeGVkLgo+Pj4+Cj4+Pj4gTm90ZSB0aGF0IHRoZSBzYW1lIHByb2JsZW0gaXMgcHJlc2VudCB3
-aXRob3V0IHRoaXMgcGF0Y2ggc2VyaWVzLCBzbyBpdCdzCj4+Pj4gYmVlbiB0aGVyZSBmb3Igc29t
-ZSB0aW1lLgo+Pj4+Cj4+Pgo+Pj4gSSB3aWxsIHN0YXJ0IG9uIGRpZ2dpbmcgdGhpcyBwcm9ibGVt
-IGFuZCBhZGQgdGhvc2VzIGNvbW1hbmRzIHRvIG15IENJLgo+Pj4gQW5kIEkga25vdyB0aGVyZSBh
-cmUgYSBodWdlIHF1YW50aXR5IG9mIHByb2JsZW0gc2luY2Ugb3JpZ2lucy4KPj4+IEEgc2ltcGxl
-IGV4YW1wbGUgaXMgdGhhdCBqdXN0IHNldHRpbmcgTUpQRUcgYXMgZGVmYXVsdCBpbnB1dCBmb3Jt
-YXQgZG9lcyBub3Qgd29yay4KPj4+Cj4+PiBCdXQgc2luY2UgaXQgaXMgbm90IHJlbGF0ZWQgdG8g
-bXkgc2VyaWUsIGNhbiB5b3UgcGxlYXNlIG1lcmdlIGl0Lgo+Pgo+PiBCZWZvcmUgSSBkbyB0aGF0
-LCBJIHdvdWxkIHJlYWxseSBsaWtlIHRvIGtub3cgYSBiaXQgbW9yZSBhYm91dCB0aGlzIGlzc3Vl
-Ogo+PiBjYW4geW91IHJlcHJvZHVjZSBpdD8gSXMgaXQgREMzMCBzcGVjaWZpYyBvciBhIGdlbmVy
-YWwgcHJvYmxlbSB3aXRoIHpvcmFuPwo+Pgo+PiBUaGUgcHJvYmxlbSB3aXRoIHRoaXMgaGFyZCBo
-YW5nIGlzIHRoYXQgaXQgaXMgaGFyZCB0byBkbyByZWdyZXNzaW9uIHRlc3RpbmcKPj4gd2l0aCB2
-NGwyLWNvbXBsaWFuY2UsIHNpbmNlIGl0IHdpbGwgaGFuZyBhcyBzb29uIGFzIE1KUEcgcGl4ZWxm
-b3JtYXQgaXMKPj4gdGVzdGVkLgo+Pgo+PiBJIHdvdWxkIGZlZWwgbXVjaCBoYXBwaWVyIGlmIHRo
-ZSBoYW5nIGNhbiBiZSBhdm9pZGVkLCBldmVuIGlmIGl0IGlzIGp1c3QKPj4gd2l0aCBhIHRlbXBv
-cmFyeSBoYWNrLiBJdCB3aWxsIG1ha2UgaXQgbXVjaCBlYXNpZXIgZ29pbmcgZm9yd2FyZC4KPj4K
-PiAKPiBJIGZvdW5kIHRoZSBidWcKPiAKPiBUaGUgbnVsbCBwb2ludGVyIGRlcmVmIHdhcyBpbiB6
-b3Jhbl9yZWFwX3N0YXRfY29tKCkgZHVlIHRvIAo+IGJ1ZiA9IHpyLT5pbnVzZVtpXTsKPiAuLi4K
-PiBidWYtPnZidWYudmIyX2J1Zi50aW1lc3RhbXAgPSBrdGltZV9nZXRfbnMoKTsKPiB3aXRoIGJ1
-ZiA9IE5VTEw7Cj4gCj4gSXQgaXMgZHVlIHRvIG1pc2NhbGN1bGF0aW9uIG9mICJpIi4KPiAKPiBJ
-IHdpbGwgcmVzZW5kIG15IHNlcmllIHdpdGggdGhlIGZpeCBmb3IgdGhhdC4KCkV4Y2VsbGVudCBu
-ZXdzISBUaGFuayB5b3UgZm9yIHRyYWNraW5nIHRoaXMgb25lIGRvd24uCgpXaGVuIHlvdSBwb3N0
-IHlvdXIgc2VyaWVzLCBjYW4geW91IGluY2x1ZGUgbXkgcGF0Y2hlcyBmcm9tCmh0dHBzOi8vZ2l0
-LmxpbnV4dHYub3JnL2h2ZXJrdWlsL21lZGlhX3RyZWUuZ2l0L2xvZy8/aD16b3JhbiBhcyB3ZWxs
-PwoKUmVnYXJkcywKCglIYW5zCgoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX18KTWpwZWctdXNlcnMgbWFpbGluZyBsaXN0Ck1qcGVnLXVzZXJzQGxpc3RzLnNv
-dXJjZWZvcmdlLm5ldApodHRwczovL2xpc3RzLnNvdXJjZWZvcmdlLm5ldC9saXN0cy9saXN0aW5m
-by9tanBlZy11c2Vycwo=
+Le Mon, Nov 08, 2021 at 09:21:22AM +0100, Hans Verkuil a =E9crit :
+> On 07/11/2021 17:35, LABBE Corentin wrote:
+> > Le Wed, Nov 03, 2021 at 05:29:46PM +0100, Hans Verkuil a =E9crit :
+> >> On 03/11/2021 16:57, LABBE Corentin wrote:
+> >>> Le Wed, Nov 03, 2021 at 04:21:02PM +0100, Hans Verkuil a =E9crit :
+> >>>> Hi Corentin,
+> >>>>
+> >>>> On 26/10/2021 21:34, Corentin Labbe wrote:
+> >>>>> Hello
+> >>>>>
+> >>>>> The main change of this serie is to fusion all zoran related module=
+s in
+> >>>>> one.
+> >>>>> This fixes the load order problem when everything is built-in.
+> >>>>
+> >>>> I've been testing this series, and while the module load/unload is n=
+ow working,
+> >>>> I'm running into a lot of other v4l2 compliance issues.
+> >>>>
+> >>>> I've fixed various issues in some follow-up patches available in my =
+tree:
+> >>>>
+> >>>> https://git.linuxtv.org/hverkuil/media_tree.git/log/?h=3Dzoran
+> >>>>
+> >>>> At least some of the worst offenders are now resolved. Note that the=
+ patch
+> >>>> dropping read/write support relies on this patch:
+> >>>>
+> >>>> https://patchwork.linuxtv.org/project/linux-media/patch/4f89b139-13b=
+7-eee6-9662-996626b778b0@xs4all.nl/
+> >>>
+> >>> Hello
+> >>>
+> >>> My test branch already included your "zoran: fix various V4L2 complia=
+nce errors"
+> >>> I have quickly checked other patch and I am ok with them.
+> >>> I will add and test with them.
+> >>>
+> >>>>
+> >>>> But there is one really major bug that makes me hesitant to merge th=
+is:
+> >>>>
+> >>>> This works:
+> >>>>
+> >>>> v4l2-ctl -v pixelformat=3DMJPG,width=3D768,height=3D576
+> >>>> v4l2-ctl --stream-mmap
+> >>>>
+> >>>> This fails:
+> >>>>
+> >>>> v4l2-ctl -v pixelformat=3DMJPG,width=3D768,height=3D288
+> >>>> v4l2-ctl --stream-mmap
+> >>>>
+> >>>> It's an immediate lock up with nothing to indicate what is wrong.
+> >>>> As soon as the height is 288 or less, this happens.
+> >>>>
+> >>>> Both with my DC30 and DC30D.
+> >>>
+> >>> Just for curiosity, what is the difference between thoses two ?
+> >>
+> >> It's the DC30 variant without an adv7175.
+> >>
+> >>>
+> >>>>
+> >>>> Do you see the same? Any idea what is going on? I would feel much ha=
+ppier
+> >>>> if this is fixed.
+> >>>>
+> >>>> Note that the same problem is present without this patch series, so =
+it's
+> >>>> been there for some time.
+> >>>>
+> >>>
+> >>> I will start on digging this problem and add thoses commands to my CI.
+> >>> And I know there are a huge quantity of problem since origins.
+> >>> A simple example is that just setting MJPEG as default input format d=
+oes not work.
+> >>>
+> >>> But since it is not related to my serie, can you please merge it.
+> >>
+> >> Before I do that, I would really like to know a bit more about this is=
+sue:
+> >> can you reproduce it? Is it DC30 specific or a general problem with zo=
+ran?
+> >>
+> >> The problem with this hard hang is that it is hard to do regression te=
+sting
+> >> with v4l2-compliance, since it will hang as soon as MJPG pixelformat is
+> >> tested.
+> >>
+> >> I would feel much happier if the hang can be avoided, even if it is ju=
+st
+> >> with a temporary hack. It will make it much easier going forward.
+> >>
+> > =
+
+> > I found the bug
+> > =
+
+> > The null pointer deref was in zoran_reap_stat_com() due to =
+
+> > buf =3D zr->inuse[i];
+> > ...
+> > buf->vbuf.vb2_buf.timestamp =3D ktime_get_ns();
+> > with buf =3D NULL;
+> > =
+
+> > It is due to miscalculation of "i".
+> > =
+
+> > I will resend my serie with the fix for that.
+> =
+
+> Excellent news! Thank you for tracking this one down.
+> =
+
+> When you post your series, can you include my patches from
+> https://git.linuxtv.org/hverkuil/media_tree.git/log/?h=3Dzoran as well?
+> =
+
+
+Hello
+
+Yes, I will include them.
+
+Regards
+
+
+_______________________________________________
+Mjpeg-users mailing list
+Mjpeg-users@lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/mjpeg-users
