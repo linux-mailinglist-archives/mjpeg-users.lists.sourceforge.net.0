@@ -2,193 +2,127 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id F216250A733
-	for <lists+mjpeg-users@lfdr.de>; Thu, 21 Apr 2022 19:34:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 05B7450A734
+	for <lists+mjpeg-users@lfdr.de>; Thu, 21 Apr 2022 19:34:12 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
 	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1nhagz-0005td-6D; Thu, 21 Apr 2022 17:34:08 +0000
+	id 1nhagz-0005tk-Af; Thu, 21 Apr 2022 17:34:08 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <dan.carpenter@oracle.com>) id 1nhXhl-0006UE-Gy
- for mjpeg-users@lists.sourceforge.net; Thu, 21 Apr 2022 14:22:44 +0000
+ (envelope-from <ian@linux.cowan.aero>) id 1nhYdW-00074Z-FG
+ for mjpeg-users@lists.sourceforge.net; Thu, 21 Apr 2022 15:22:25 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=MIME-Version:In-Reply-To:Content-Type:References:
+ d=sourceforge.net; s=x; h=In-Reply-To:Content-Type:MIME-Version:References:
  Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=nt1Kb0Tlh7IntxaL+Aht4MVHaOGIT09PdVyd60eqOiI=; b=auKYaqPpYatPnsIssZyOCYIl/b
- uaaAxMp1MkFzXhg8SjCD3vZ4K5NahjztJxz4lJaFddw2The9tuReGrxHakuo+DJ19Tjq0r7OC4AKm
- b4zV0RiYcMfq+DkuadV+vyHsOkVVdW9EtJq/FxUFmSQV0Dl/dq3ruCBXYNdcUWStbUBU=;
+ bh=YpK0IB0ISdK2Q+IAE4RyhzfZLNmrH3FCsTZtzMJjiEM=; b=MeRU7ewbdFhMFQnh8BweOe/Rp6
+ gU+PheTI+hfF2cIFsIdeiM/exf6B8t7Ddy317KXRx+FYB9dNTvXP2etKFwYmJgr6pPT6ARiXZ+iRO
+ NBjJEkGhbyf6k8bRYzgpiTRJ/Ib8tZLSI/SfNJgKBOHg7IfcNOdS2/voPPOljBZGvnz4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=MIME-Version:In-Reply-To:Content-Type:References:Message-ID:Subject:Cc:To
+ h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:Subject:Cc:To
  :From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=nt1Kb0Tlh7IntxaL+Aht4MVHaOGIT09PdVyd60eqOiI=; b=UVQuzhH4R8TeWzEHwerxr/bcH2
- 8F79KJEbCGLVfMrPUb99WKi+2xizxsKPA+QCTl3sd1efeQGFH3xzE8tYzZ1RgsYVpzL041TUTupHc
- JnTUfmAxwQOH/QdbSCXpYvaXQ5IYq40mjdXUITvTB1IvLRXEDW5v00qbyjR0Ezoy7j/k=;
-Received: from mx0a-00069f02.pphosted.com ([205.220.165.32])
+ bh=YpK0IB0ISdK2Q+IAE4RyhzfZLNmrH3FCsTZtzMJjiEM=; b=VJ+lD2Yo8da42G0GwAlX1wgpGK
+ ltEqCbiYtQaSN/h4cO1oQB542rjM2FTstYqCo5jMohHdyKPvU+22hnB2lahNJSskZcRWXvO9KyREk
+ Lg1Y87HPCvDtuI2I2KpQLDdhF5+XZSux1NsEG0va6WQr7mkv+/k/n/lR2i+uM71PZp7g=;
+Received: from buffalo.birch.relay.mailchannels.net ([23.83.209.24])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1nhXhf-005dm7-Ih
- for mjpeg-users@lists.sourceforge.net; Thu, 21 Apr 2022 14:22:43 +0000
-Received: from pps.filterd (m0246627.ppops.net [127.0.0.1])
- by mx0b-00069f02.pphosted.com (8.16.1.2/8.16.1.2) with SMTP id 23LBwbRn019753; 
- Thu, 21 Apr 2022 14:22:19 GMT
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oracle.com;
- h=date : from : to : cc
- : subject : message-id : references : content-type : in-reply-to :
- mime-version; s=corp-2021-07-09;
- bh=nt1Kb0Tlh7IntxaL+Aht4MVHaOGIT09PdVyd60eqOiI=;
- b=Zbo0eQolonIqKTLeSLgohNgGcuWxFLx8EuLrUnrSMEUu2q7zSqG+bhqIKgB+9D+963N2
- 0jnt4EVZW5AYLChw5Fi80Rnx1HE0R5QUt/epbJsVadjkfyK9uZOIV9dkuje71TW7zETB
- kSXsFanIgn/L4r/jioU6Adb4s17FyZO+p9H/okb7QlsZKSM6+iIa2S+NGLFIN1EQJwia
- xvH36gvOmrIgQ6gLCebybiGddc2j0pY1TDCEvuYacqGmi6YqOnmBh2HQTlK4bl+NQ3RV
- OEgmIpSfW7o6a+lMmQvwj/YJ14Ukgaj0ig8gjC/8Ei86jDHRpugfs62koLEXXlV8USWL NA== 
-Received: from phxpaimrmta03.imrmtpd1.prodappphxaev1.oraclevcn.com
- (phxpaimrmta03.appoci.oracle.com [138.1.37.129])
- by mx0b-00069f02.pphosted.com with ESMTP id 3ffmd1c7qg-1
- (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
- Thu, 21 Apr 2022 14:22:19 +0000
-Received: from pps.filterd
- (phxpaimrmta03.imrmtpd1.prodappphxaev1.oraclevcn.com [127.0.0.1])
- by phxpaimrmta03.imrmtpd1.prodappphxaev1.oraclevcn.com (8.16.1.2/8.16.1.2)
- with SMTP id 23LEFq8H011302; Thu, 21 Apr 2022 14:22:18 GMT
-Received: from nam11-bn8-obe.outbound.protection.outlook.com
- (mail-bn8nam11lp2173.outbound.protection.outlook.com [104.47.58.173])
- by phxpaimrmta03.imrmtpd1.prodappphxaev1.oraclevcn.com with ESMTP id
- 3ffm8bcvmk-1
- (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
- Thu, 21 Apr 2022 14:22:18 +0000
-ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=iRxKvGN8LoK2TMTrEhXayM1x6lwOxMXOZTgg/ytRbivM7ObQsV2t54LemBeXrm//L/9XQUTxfB6p6FyOe7hSt7IEHHZQn2d4ujDpl+Ee6Rl1hX1uxOyU+zal9V8jmAfA0pR0TiMDzqeNuSKKjQyU+KDKxT31oflYpWspP9PGUon4Rl5puG4GgAucydE2sI+xpEIBDKQiFIQyRecb1ZeCjTt0JMU3TufIMX3nroyl9YFYaHyft7kfuJBK3XqkTjhK/VY3bIuycZoW/krSQp6Ef0aZRPhrYFR1Lr7jDvBU/YSDP3Q0vJl81JxFK3lh7itZg5YUq/JqW2NhbnG1D7WTEA==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
- bh=nt1Kb0Tlh7IntxaL+Aht4MVHaOGIT09PdVyd60eqOiI=;
- b=jZ/+TCkkrVziJszhz6OpHzMWgJ1icLlg8jrPlspIJ7ru1dE8qKat3pgng9oeAfxIWXBaccZQiaf8vhHcuMJn78+xTDljFCXISb6G36ErfenNqfNR5cEs+2pCHISfToeQwQTjdkMJYWZZ6V42ocrYsHa6Z1OXFGR26iy5mnIhbDuri80hYs57Gygk/o4PQpZwl4zwWU8P+UPJ2tHExmT9bEEnGlRBVUyEf+uTIFrjqKs68giILoymO31BOKJo41HA7WxjgZh6QBBX9BC2iVa3pb5JxMVuKnkw+5fBbDBrA9Png5yugExJNNlUlqkUqk9P6UoCDBpZLXPFMZ3KKZCVsQ==
-ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
- smtp.mailfrom=oracle.com; dmarc=pass action=none header.from=oracle.com;
- dkim=pass header.d=oracle.com; arc=none
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=oracle.onmicrosoft.com; s=selector2-oracle-onmicrosoft-com;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=nt1Kb0Tlh7IntxaL+Aht4MVHaOGIT09PdVyd60eqOiI=;
- b=M1VNrXYeObniiMatbzdeF6h46hIFdJwIoSyWY7KPAe0zKwF3McSG/W/YjYJbCygBLVXiSXM6tT4Qq5+Sy8Y40eOYJVRUOsFuuG+6WSahWXbH91yshdwQfkGsEjZISHORkCgWl3wCTWVKSNbmr2C2MOaNdjfXCcHM5rZau81DKVI=
-Received: from MWHPR1001MB2365.namprd10.prod.outlook.com
- (2603:10b6:301:2d::28) by BYAPR10MB3223.namprd10.prod.outlook.com
- (2603:10b6:a03:157::30) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5186.14; Thu, 21 Apr
- 2022 14:22:16 +0000
-Received: from MWHPR1001MB2365.namprd10.prod.outlook.com
- ([fe80::b5d5:7b39:ca2d:1b87]) by MWHPR1001MB2365.namprd10.prod.outlook.com
- ([fe80::b5d5:7b39:ca2d:1b87%5]) with mapi id 15.20.5164.025; Thu, 21 Apr 2022
- 14:22:16 +0000
-Date: Thu, 21 Apr 2022 17:21:54 +0300
-From: Dan Carpenter <dan.carpenter@oracle.com>
-To: Ian Cowan <ian@linux.cowan.aero>
-Message-ID: <20220421142153.GA2462@kadam>
+ id 1nhYdN-005ftV-5S
+ for mjpeg-users@lists.sourceforge.net; Thu, 21 Apr 2022 15:22:25 +0000
+Received: from relay.mailchannels.net (localhost [127.0.0.1])
+ by relay.mailchannels.net (Postfix) with ESMTP id 233B6121205;
+ Thu, 21 Apr 2022 15:22:04 +0000 (UTC)
+Received: from pdx1-sub0-mail-a217.dreamhost.com (unknown [127.0.0.6])
+ (Authenticated sender: dreamhost)
+ by relay.mailchannels.net (Postfix) with ESMTPA id A7C04120BB7;
+ Thu, 21 Apr 2022 15:22:03 +0000 (UTC)
+ARC-Seal: i=1; s=arc-2022; d=mailchannels.net; t=1650554523; a=rsa-sha256;
+ cv=none;
+ b=0OwiDxXzeD7RW2i7GISr6ArhIi0KZ1PxkasNcGG5TG9YQd6bp853Wp0FPcgSNb3EiuFvxP
+ aZFYhY4ziLri0IKeRrB8v95gcaOov+U9pCTwnPV/IfVw+N6k0JfuHVufmEmxisbwNkf+VL
+ MKhXMgLmuRS+V4nY3iZM68AGJRuqAH/FHb1UbGTk3kIGd39elxhUiRAgWXRJwRsQH89h/C
+ U5PZE2SlIpyR45E05fq0H/og8HUjdJUlDNmX96WbxmC1LUxnQ3bURFDGkP9f1kWDJ4q/2K
+ zEijyDyh5VLRgUadUTgYnBjEMa9eByDqAd71WsrYnIOtg7X/nVnRLDGZC1W45g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=mailchannels.net; s=arc-2022; t=1650554523;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ in-reply-to:in-reply-to:references:references:dkim-signature;
+ bh=YpK0IB0ISdK2Q+IAE4RyhzfZLNmrH3FCsTZtzMJjiEM=;
+ b=7o9MUZJfufB2zueungao+vWZtz5Q1qA+49Fu8Eb89+B9ozdqUvA/7XeYomaoq6ctr8PHSd
+ FJp+5m6+hOQq1Q29GSqYglVc6r7R7iSdZRhFSbY8N0UFO73mqDrAtxT0mv9LiV1xMQQjVp
+ kCBg3uUrq7JRzoSmQR6ujVFh5FA14rtPUFN2KsLtz1FRq0jmaI+GJrMfnlPmwZfaqrsULc
+ 0y0s2izEkh4T056ErmrR81BdJnErvRzSMF9+/UvH9DquWprKz2qdvry5h6uuZAYTCU7auT
+ OGnDNLVnJAsLgK9yPKrhB6w4K6+KyeENzuiQju8hsO+E3HHt8OpqvMJJCsTGIw==
+ARC-Authentication-Results: i=1; rspamd-7968956b8c-krz2z;
+ auth=pass smtp.auth=dreamhost smtp.mailfrom=ian@linux.cowan.aero
+X-MC-Relay: Neutral
+X-MailChannels-SenderId: dreamhost|x-authsender|ian@linux.cowan.aero
+X-MailChannels-Auth-Id: dreamhost
+X-Soft-Lonely: 4f2287555838409e_1650554523973_4074984897
+X-MC-Loop-Signature: 1650554523973:1017771326
+X-MC-Ingress-Time: 1650554523972
+Received: from pdx1-sub0-mail-a217.dreamhost.com (pop.dreamhost.com
+ [64.90.62.162]) (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384)
+ by 100.121.210.138 (trex/6.7.1); Thu, 21 Apr 2022 15:22:03 +0000
+Received: from fedora (unknown [69.12.38.97])
+ (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+ key-exchange ECDHE (P-256) server-signature RSA-PSS (2048 bits) server-digest
+ SHA256) (No client certificate requested)
+ (Authenticated sender: ian@linux.cowan.aero)
+ by pdx1-sub0-mail-a217.dreamhost.com (Postfix) with ESMTPSA id 4Kkh9654PMz1N9; 
+ Thu, 21 Apr 2022 08:22:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linux.cowan.aero;
+ s=dreamhost; t=1650554523;
+ bh=YpK0IB0ISdK2Q+IAE4RyhzfZLNmrH3FCsTZtzMJjiEM=;
+ h=Date:From:To:Cc:Subject:Content-Type;
+ b=dQDGdo94HXpqlcVZlUO2Gpcg070aN2YmnIWOsfgG5LvsBSqJsX57NZZa3Io9t43bm
+ Z1tNy2KCcCaThMvvvwkV4GTfUjHU+C9jTpTvmkhWd1hsSnQq6S8yzgv8diKWbPAJCr
+ IIYfHaG6eOxfQJaSe7IF4X1etJNPcedV3Y/+z4EZ7CZKCcUAF1s8iLchRVEcXvGUqc
+ EiBGpPf8JesXgu1ZOJzBSo72ny4bJeCywDJyIrMljXlZJ5dfXiDqfCQJf4Y/gk3GpM
+ WDLOQB5ugZ+rLBu9/6OkHfHzgEMHtXOUFjJSW1M07yTC4d+WLGytQuz7yjHK7J9owx
+ m9uAp1TK1a4Xw==
+Date: Thu, 21 Apr 2022 11:22:00 -0400
+From: Ian Cowan <ian@linux.cowan.aero>
+To: Dan Carpenter <dan.carpenter@oracle.com>
+Message-ID: <YmF2mM+Lqv/HOgFl@fedora>
 References: <20220421002316.873109-1-ian@linux.cowan.aero>
-Content-Disposition: inline
-In-Reply-To: <20220421002316.873109-1-ian@linux.cowan.aero>
-User-Agent: Mutt/1.9.4 (2018-02-28)
-X-ClientProxiedBy: JNXP275CA0039.ZAFP275.PROD.OUTLOOK.COM (2603:1086:0:18::27)
- To MWHPR1001MB2365.namprd10.prod.outlook.com
- (2603:10b6:301:2d::28)
+ <20220421142153.GA2462@kadam>
 MIME-Version: 1.0
-X-MS-PublicTrafficType: Email
-X-MS-Office365-Filtering-Correlation-Id: faf55bd4-099d-476e-2a09-08da23a254f4
-X-MS-TrafficTypeDiagnostic: BYAPR10MB3223:EE_
-X-Microsoft-Antispam-PRVS: <BYAPR10MB3223D0BDD8BDE07A40602B568EF49@BYAPR10MB3223.namprd10.prod.outlook.com>
-X-MS-Exchange-SenderADCheck: 1
-X-MS-Exchange-AntiSpam-Relay: 0
-X-Microsoft-Antispam: BCL:0;
-X-Microsoft-Antispam-Message-Info: gY2Wzi8Pei/Ydxlyo7XdvR7HMWVcZ0fXGVcnSBrxk4Qr6fyI7T7/1PSRLnWRpulQxlHK7rLBHrgbLl13cSGQvGRlhngIY4Y98lIrKau++T2ccjvw2a+Z51fEGz+v0hvII3ROrkXyLJ22h+5EKuhfETyb+2dD7NIXAM6Yp+WH9nwHB/Mbu00TwRSOhQNAeR4McsYO16PmiveGZdos9HfrZhXknMTsToAHlQa0v9wUhB6AY+7MG84fv3lleF+vFZ2E7hD9JFdA68d13mlYLsAixvyANSie5/VFCEijubh92h5PBDGXH8mUZxPc3ZV+Y3LyMGaWmA5wtWMhle9K62XByI/acdMcRUJqTQj0aiYxpn2uZrD98s2o+SeWwLxToQHS3gKOqCrZgayGHbn0RgLevwcNX7h6+k8O1Ni/FqxK013px/feXA9b7DLlUF2Uvgg0lcjp2+8sAzjkJ5PX424arTXqVnhgdVAMva7bo/Eemy4iOMaiaQSm6ZJyTQ8EAPPHG5YTnHxLjZHI3ME1+sYpvhhxY9qg8W0spGGFxF+9j68KT1pHy6se/TgGTl3hcfc9rJnqAcYpAGApPJykAlsKvqDwVvUcxozSCghhzrYrsZuMMe6MdwNltG+whC5ZiAkWjxXFNCUZIfut49FINmAA26ZctShV2goKy6I4icq9a6IZYPtZxN+vIx9Qw3Az3v9mCkM5qZneOrrdP2ABEn7wEQ==
-X-Forefront-Antispam-Report: CIP:255.255.255.255; CTRY:; LANG:en; SCL:1; SRV:;
- IPV:NLI; SFV:NSPM; H:MWHPR1001MB2365.namprd10.prod.outlook.com; PTR:; CAT:NONE;
- SFS:(13230001)(7916004)(366004)(2906002)(33716001)(316002)(6916009)(8936002)(44832011)(33656002)(6666004)(6506007)(83380400001)(9686003)(6512007)(38350700002)(52116002)(38100700002)(26005)(6486002)(66476007)(86362001)(508600001)(186003)(66556008)(1076003)(66946007)(4326008)(5660300002)(8676002);
- DIR:OUT; SFP:1101; 
-X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
-X-MS-Exchange-AntiSpam-MessageData-0: =?us-ascii?Q?HnLpgxaj5Yc7iPsQj87quGuZ4SHFJaSE/a4yDFBmNR02FcpotnxCDXPETcgG?=
- =?us-ascii?Q?I1OTwxcPsgOU9Zrb+vw6UxndneY7X803VI+ieQJ5hf9EFvn3DIhsLY7ImYdi?=
- =?us-ascii?Q?3mkyd0q51C2cGs6W7QzemsvUiB5eVem4hbxZNQ9xcfS6vtvtLHmH3ZLsXKYY?=
- =?us-ascii?Q?kfqbEVztBmhJc1PDdeeX1AzVWQZnHRJJgnuCZqPUelXsxQVGlp19tAYFBO8g?=
- =?us-ascii?Q?acRgmR2e3qnq9fECZ0HkAXI/3mk3I84UczAF6w2xj9dVX+cMgpGaqvPPEHrr?=
- =?us-ascii?Q?OGD/6fMzIHrzaSUCtv0C5LGKK3nd10roRurC7Pq1LhUozgr5+N/8Li5scc7k?=
- =?us-ascii?Q?aIB/xn1Pgh6FW7Kd1ayUAsNI5EAzf/ej4svo176oZ7GPykkdGaqO9xSKWaKU?=
- =?us-ascii?Q?PsrJjJE+cuCViGrbSlAXroOZxsp8PxepKLcgrspzW/nQpZWpoIZxD8Hj0pJ7?=
- =?us-ascii?Q?RaxuIPJBG1VYlLyC7Mp8Uq1IlrINC8+ztsPGkROAlwuEThJCVtKQtq+a/6wW?=
- =?us-ascii?Q?zFPxYEE0wJVY0iJVpPDrp2efLeJYL5DMg5cJM9bzBmDZRXIYOuJpLmqkFsYr?=
- =?us-ascii?Q?WSxFZsuou/rY+8spNH7tZfHAMpxPINLo80QaieNGUg9PcjP62Y8/y7y5aHpL?=
- =?us-ascii?Q?UlYPxmpOdFgnQRK4a6rI3T6cwcITFbxusr39rCUQ/U5tyvSuwOQf4YDaGmBX?=
- =?us-ascii?Q?I30uHUTQw/bUQdd6XMVWoGiPOVaPsQUPcPjkHZ2gWvIGUxSSADC4MEPpcQzH?=
- =?us-ascii?Q?2IPM2giVfrE2neCLFLzzNgoerwub4wGHwQ2m+oz6X+sM/jay9J7Zsii5fj7J?=
- =?us-ascii?Q?c50FHIxc4xP9Q9UA/U7cIc7t0RdAL+nu8ANmIlh7BW8Ox5iic5LLKcmSTSi7?=
- =?us-ascii?Q?0Y3DK326p/oH2sMxg7ha1rmFQQFsKB3ToPRSsGNve0Gmg6fkwpdhz1t47h+0?=
- =?us-ascii?Q?HC2GyXANYDHL9ZAbayDxVP9eDwT1w1AfwwQHspxWgml84vAtj0reZZNdvrFc?=
- =?us-ascii?Q?fXHWPSbJU0Zs19fktKFiCqXVkyjn0z66Ndsq2Ty/Zu1e37KoMrl9zGHA3pYH?=
- =?us-ascii?Q?FKd8cMumCyycq3P2QCY3sO9vNCRGj7X31lR8PJl3cxiP0VYM347lEGtuYuCj?=
- =?us-ascii?Q?8LxqSPJhx/1GcuaaAqkOK711fErbRXwPbqAnxNE7LEYFFhawPDLBEcWko7iX?=
- =?us-ascii?Q?Oq0zNtW5JCHrOgUBq76wth3dAMEGW9A0jX8ILKKoBZ7fgIVvpp43tW9ToppZ?=
- =?us-ascii?Q?VuWSgKevM8PNO/iLIYf5RFmUlmxOQb4s0zih52oFWBWNOhocP6ho304QvkBw?=
- =?us-ascii?Q?yufS3h64ZmiopsE5OrRNzfT7F5k2M86UG9DXCCWs2OyillHtEKsF3xASWdOT?=
- =?us-ascii?Q?mVdtJXq4fgBnJ3tXJHvGkXbG20TNKP5nW8pgv8voSkCMRnX2bMxkucRLlEcl?=
- =?us-ascii?Q?3jbgi1Zk+AgsyBC9aBQ5138hgH/KIMhQZpjRiEXaNnToq1OV6S9A/0KE7Dmv?=
- =?us-ascii?Q?eLnssddzNrMBIzFnEO9Qzbj9m5TZ8K7mP4rha+qn5les8DX96l1LQMzS48pC?=
- =?us-ascii?Q?FOnuZO3TO9F29JGdQbmubzHgPOyaZTpZh1Jn4Wi/QEripcFzmIia1MXtl2bY?=
- =?us-ascii?Q?BRgBDqNDvGljd1Hg2vFGl4H2HMOHHcA6OTalAfKZc5K1otZCOKe59w2VRc77?=
- =?us-ascii?Q?wdBMabh9xSpnz4jj9PNMVZJC9unVdRT7b2rkc8J3Xj4wiIvifmJ2N9fRANAI?=
- =?us-ascii?Q?msc0FaqfFQz+57LudUkCRS1eePn7yzs=3D?=
-X-OriginatorOrg: oracle.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: faf55bd4-099d-476e-2a09-08da23a254f4
-X-MS-Exchange-CrossTenant-AuthSource: MWHPR1001MB2365.namprd10.prod.outlook.com
-X-MS-Exchange-CrossTenant-AuthAs: Internal
-X-MS-Exchange-CrossTenant-OriginalArrivalTime: 21 Apr 2022 14:22:16.0181 (UTC)
-X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
-X-MS-Exchange-CrossTenant-Id: 4e2c6054-71cb-48f1-bd6c-3a9705aca71b
-X-MS-Exchange-CrossTenant-MailboxType: HOSTED
-X-MS-Exchange-CrossTenant-UserPrincipalName: DjxBzmNNo0MNviwp6DNQSPJthTKX7t2I6hVOnLkUTNoYFajQnX7l/aO3suCLGtymU0zEFt16yURs0JeS8dL2Xbzb2xZntfpRKs7VsOQJIcw=
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: BYAPR10MB3223
-X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.486, 18.0.858
- definitions=2022-04-21_01:2022-04-21,
- 2022-04-21 signatures=0
-X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 mlxscore=0
- phishscore=0 malwarescore=0
- suspectscore=0 spamscore=0 mlxlogscore=999 adultscore=0 bulkscore=0
- classifier=spam adjust=0 reason=mlx scancount=1 engine=8.12.0-2202240000
- definitions=main-2204210078
-X-Proofpoint-ORIG-GUID: pi9MFdoyKS0NQkO0t5lCvVjfP8aXO3zf
-X-Proofpoint-GUID: pi9MFdoyKS0NQkO0t5lCvVjfP8aXO3zf
-X-Spam-Score: -0.9 (/)
+Content-Disposition: inline
+In-Reply-To: <20220421142153.GA2462@kadam>
+X-Spam-Score: -0.1 (/)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  On Wed, Apr 20, 2022 at 08:23:16PM -0400, Ian Cowan wrote:
- > This is a patch to refactor the zoran debugging function. This function
- > existed in all of the changed files and they also all import the [...] 
- Content analysis details:   (-0.9 points, 6.0 required)
+ Content preview:  On Thu, Apr 21, 2022 at 05:21:54PM +0300,
+ Dan Carpenter wrote:
+ > On Wed, Apr 20, 2022 at 08:23:16PM -0400, Ian Cowan wrote: > > This is
+ a patch to refactor the zoran debugging function. This function [...] 
+ Content analysis details:   (-0.1 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [23.83.209.24 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [205.220.165.32 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
-X-Headers-End: 1nhXhf-005dm7-Ih
+X-Headers-End: 1nhYdN-005ftV-5S
 X-Mailman-Approved-At: Thu, 21 Apr 2022 17:34:07 +0000
 Subject: Re: [Mjpeg-users] [PATCH] media: staging: zoran: refactor printk
  debugging function
@@ -211,67 +145,51 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-On Wed, Apr 20, 2022 at 08:23:16PM -0400, Ian Cowan wrote:
-> This is a patch to refactor the zoran debugging function. This function
-> existed in all of the changed files and they also all import the
-> videocodec header file. This patch moves the dprintk function into the
-> videocodec header file and out of each of the individual files.
-> 
-> Signed-off-by: Ian Cowan <ian@linux.cowan.aero>
-> ---
->  drivers/staging/media/zoran/videocodec.c | 67 +++++++++++++--------
->  drivers/staging/media/zoran/videocodec.h |  7 +++
->  drivers/staging/media/zoran/zr36016.c    | 48 ++++++++-------
->  drivers/staging/media/zoran/zr36050.c    | 77 ++++++++++++------------
->  drivers/staging/media/zoran/zr36060.c    | 54 ++++++++---------
->  5 files changed, 141 insertions(+), 112 deletions(-)
-> 
-> diff --git a/drivers/staging/media/zoran/videocodec.c b/drivers/staging/media/zoran/videocodec.c
-> index 3af7d02bd910..e35d1f54d9b8 100644
-> --- a/drivers/staging/media/zoran/videocodec.c
-> +++ b/drivers/staging/media/zoran/videocodec.c
-> @@ -20,12 +20,6 @@ static int videocodec_debug;
->  module_param(videocodec_debug, int, 0);
->  MODULE_PARM_DESC(videocodec_debug, "Debug level (0-4)");
->  
-> -#define dprintk(num, format, args...) \
-> -	do { \
-> -		if (videocodec_debug >= num) \
-> -			printk(format, ##args); \
-> -	} while (0)
-> -
->  struct attached_list {
->  	struct videocodec *codec;
->  	struct attached_list *next;
-> @@ -56,8 +50,8 @@ struct videocodec *videocodec_attach(struct videocodec_master *master)
->  		return NULL;
->  	}
->  
-> -	dprintk(2, "%s: '%s', flags %lx, magic %lx\n", __func__,
-> -		master->name, master->flags, master->magic);
-> +	dprintk(videocodec_debug, 2, "%s: '%s', flags %lx, magic %lx\n",
-> +		__func__, master->name, master->flags, master->magic);
-
+On Thu, Apr 21, 2022 at 05:21:54PM +0300, Dan Carpenter wrote:
+> On Wed, Apr 20, 2022 at 08:23:16PM -0400, Ian Cowan wrote:
+> > This is a patch to refactor the zoran debugging function. This function
+> > existed in all of the changed files and they also all import the
+> > videocodec header file. This patch moves the dprintk function into the
+> > videocodec header file and out of each of the individual files.
+> > 
+> > -#define dprintk(num, format, args...) \
+> > -	do { \
+> > -		if (videocodec_debug >= num) \
+> > -			printk(format, ##args); \
+> > -	} while (0)
+> > -
 [ snip ]
+> 
+> > +/* Print debug information based on the specified level of debugging */
+> > +#define dprintk(debug, num, format, args...) \
+> > +do { \
+> > +	if (debug > num) \
+> > +		printk(format, ##args); \
+> > +} while (0)
+> > +
+> 
+> I don't like the new format.  It needs to have a KERN_DEBUG at the
+> start.  Passing the param_module is awkward.  No one knows what the
+> magic "num" things are.
 
-> +/* Print debug information based on the specified level of debugging */
-> +#define dprintk(debug, num, format, args...) \
-> +do { \
-> +	if (debug > num) \
-> +		printk(format, ##args); \
-> +} while (0)
-> +
+I was going to put KERN_DEBUG at the beginning, but it appears that some
+of the calls already include KERN_ERR, KERN_WARNING, or KERN_INFO, but
+most of them do not. Would it be better to split these into multiple
+macros or use printk in those specific spots that difer?
 
-I don't like the new format.  It needs to have a KERN_DEBUG at the
-start.  Passing the param_module is awkward.  No one knows what the
-magic "num" things are.
+> Using a module parameter is old school badness.  The standard dev_dbg()
+> macros are better and more flexible.  Just use them instead.
+> 
+> regards,
+> dan carpenter
+> 
 
-Using a module parameter is old school badness.  The standard dev_dbg()
-macros are better and more flexible.  Just use them instead.
+For using the dev_dbg() macro, do you define this in the header file
+(i.e. for this it would be videocodec.h), or where should this be
+included from?
 
-regards,
-dan carpenter
-
+---
+Ian Cowan
 
 
 _______________________________________________
