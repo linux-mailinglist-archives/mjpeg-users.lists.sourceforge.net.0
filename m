@@ -2,98 +2,98 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id BA02950E544
+	by mail.lfdr.de (Postfix) with ESMTPS id C1CE450E549
 	for <lists+mjpeg-users@lfdr.de>; Mon, 25 Apr 2022 18:11:46 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1nj1JN-0007AW-QM; Mon, 25 Apr 2022 16:11:42 +0000
+	id 1nj1JN-0007Ab-V9; Mon, 25 Apr 2022 16:11:43 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <ian@linux.cowan.aero>) id 1ninVE-0001Jf-14
- for mjpeg-users@lists.sourceforge.net; Mon, 25 Apr 2022 01:27:01 +0000
+ (envelope-from <ian@linux.cowan.aero>) id 1ninVO-0006qU-5n
+ for mjpeg-users@lists.sourceforge.net; Mon, 25 Apr 2022 01:27:08 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:MIME-Version:Message-Id:
  Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=03zhN+hBW8OaOUeJAmtwzMX7G3KCH/6OA0MvZT3k0A8=; b=Wv0YJGY4Uu2YoSUtgfqvO93Pz+
- ePaOAg6MxPGbO39kMEAQWZ3STYEJil4dfjwX2YBej/zfazJaypSKEXvZ1ICeAH64U5gZoitPBC2Mj
- 8G4bNbV1fX/WJb3W9MAwH5Cv8R/gPQydXHjrXIDUlcN4r3CJ/3QTVILkuH9+0yi9DKqI=;
+ bh=s5AE6U1EnsQ1lOXAx7PW4d2cLdYTvCRln/x/datINi8=; b=ARTNiJqGhwnY75S5/D9t0SqXPd
+ c2phhsx7hxgFdgvMPGqmR6RGWy3tQqoix/LQpUJ8R+Ksvnqrct6nsJx9md3MOkURMarEgW/PLkWhw
+ J2aF5z8fQCj4N4OTfmcCmkSKCV2z/hRFiyg1vKOjH6nd3lJxcKrlEWUxL/e5/+/j9BWo=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:MIME-Version:Message-Id:Date:Subject:Cc:To:From
  :Sender:Reply-To:Content-Type:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=03zhN+hBW8OaOUeJAmtwzMX7G3KCH/6OA0MvZT3k0A8=; b=M
- HeyjDpn3bOXP9VFCQEWYuvinw964kHovcZ9yNHEZaoZ/djSt2ZMleOBpj4TJznt2B/QLng23gSC7s
- +2vPlz+rqdpYFIXbMMOkt8xAqB9gF9Jlh+AGGoy97DbmFwZdQ9KTxMkzTxzxkcHMWTk0vPWUA/AuY
- 7BBHVrgpdtL9b6x4=;
-Received: from fly.ash.relay.mailchannels.net ([23.83.222.61])
+ List-Owner:List-Archive; bh=s5AE6U1EnsQ1lOXAx7PW4d2cLdYTvCRln/x/datINi8=; b=c
+ Y9pmPyboRFOjCVs+6a2Q9oU2fUa3MAYaPvZjoZ2pBWWgX5DKneLx5BNKgqO02LIB2SDcRwBoXtZHn
+ 6vvcHwh1WbG/+p6NHKEe4pVWtet1k2+XWQGezVym5wLsHPXydMDESuZGMhS6DIfsFzp8jr9/a3sPS
+ pkv8ROyuXhuRSF3U=;
+Received: from olivedrab.birch.relay.mailchannels.net ([23.83.209.135])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1ninV4-0000qX-PC
- for mjpeg-users@lists.sourceforge.net; Mon, 25 Apr 2022 01:27:00 +0000
+ id 1ninVK-0000rD-D5
+ for mjpeg-users@lists.sourceforge.net; Mon, 25 Apr 2022 01:27:08 +0000
 Received: from relay.mailchannels.net (localhost [127.0.0.1])
- by relay.mailchannels.net (Postfix) with ESMTP id D5FC6801B70;
- Mon, 25 Apr 2022 01:26:33 +0000 (UTC)
+ by relay.mailchannels.net (Postfix) with ESMTP id BA3F98E0B9F;
+ Mon, 25 Apr 2022 01:26:55 +0000 (UTC)
 Received: from pdx1-sub0-mail-a217.dreamhost.com (unknown [127.0.0.6])
  (Authenticated sender: dreamhost)
- by relay.mailchannels.net (Postfix) with ESMTPA id 35B6A801A4A;
- Mon, 25 Apr 2022 01:26:31 +0000 (UTC)
-ARC-Seal: i=1; s=arc-2022; d=mailchannels.net; t=1650849991; a=rsa-sha256;
+ by relay.mailchannels.net (Postfix) with ESMTPA id 1F2C88E0E54;
+ Mon, 25 Apr 2022 01:26:55 +0000 (UTC)
+ARC-Seal: i=1; s=arc-2022; d=mailchannels.net; t=1650850015; a=rsa-sha256;
  cv=none;
- b=iRRJFa1e/JA+9YzA3x+wb3FEMytBTLDQ+5EXv21unfUDQA25oxtUOo7dEo0gp6aFacLqvO
- R7MDTX7x7BCrhOxRCK5YkY1wpcqsMWO44sod03NvgYXnUsvxX0Kb4hhV7dFqLQFjGaMtL2
- uPYGHfo7ur8aJ4dveSWJoW5s0q1bkAwpuT92rKhplSKyxibKwaVflSYPgJrzIISi8+qEgF
- n9v/U1dq4/HRU1hQ+36JAywcny6IH9Rqgn48y5UYKbO0SGm1cqJChAR2Hhi9O0FxHgusVs
- IbpR1YMSOdeik2cDWx6xIu0yaw5pfyfFkfXc2GRjSW5miKjNXZ6WBk5TuwtxBQ==
+ b=AJTc5pceriIXzpoC45Di3Lyrr0fstNJmdAtNj0FOFOjfmUoNEZlWGppsZdGv/vI+ErZSAU
+ E9+IgGK8EuoxIagX2zShgaAW30/IpPu7jSkh29Ek0es61WQzLNiu3vWOZ8FNMHgs53mu9R
+ +1jcIVkI17uGpJWpompXlWCgca5AmPBLSkpbmfvcO/USapf1q2kfRFkIVaHOCEHCm1dnz5
+ kPx+Gnu7TOib0ghbqEHE4pcz7Rk3+ktCcabaUo562QOuiXq3AlyHhlHsj6iX8KSewyDvWa
+ 5cnztJicF0ceNb70JgLDLRtBTbbYUyh3xCwH0QCQPgADl7bkHEdfkMT/Oj3WSw==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
- d=mailchannels.net; s=arc-2022; t=1650849991;
+ d=mailchannels.net; s=arc-2022; t=1650850015;
  h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
  to:to:cc:cc:mime-version:mime-version:
  content-transfer-encoding:content-transfer-encoding:dkim-signature;
- bh=03zhN+hBW8OaOUeJAmtwzMX7G3KCH/6OA0MvZT3k0A8=;
- b=nuAgkgp7Pg+Z3fN13uwNt1MdqXTy+X3VGumLIHT7D88iSV0AiMgM7j56H6GvNBm1LEV3vS
- b875xM//hAf4dW2acvVuJISV2AhehBuTllfX1r3DohJzsfN9IixRbMyJ+Ay4G/IIXctlE+
- KhcGkNtaJwyvHbEu2QjUDWbQ3UZ+OB9Tah+xCuvMFU2Br1GrCotf+7x0GtCPHIiI2b/LeA
- ieKKzNGR1V0P5LD3GKMSeIYsu7BaEx+LVRHtQrL0fRST6cK9+A0ESYlkkoe6MTqxNN95Hd
- 8y6zr0aghBdElbaP9yLrCCtlqKhAncRBj95Fw8cj+dc3tkSvPrJYlBc8Z23MZg==
-ARC-Authentication-Results: i=1; rspamd-67b64f579b-chnfp;
+ bh=s5AE6U1EnsQ1lOXAx7PW4d2cLdYTvCRln/x/datINi8=;
+ b=tjFrNQgRa6H/A/f8j9f9/NckO8ZAQJTgsrh2poA+2gaU/MFdywciJh53FFteIgjMssUaT6
+ 1rlxC5whnRs4CFw60nBt4HiO5iS/fWJVWVdGCLtviciGb8jvnK2Od2fpcoqOwQO6zCs2NK
+ rL+LV1lAFmERvpsKOsRbU/i7170+ku/AuXrGW8lw6M0xcBm5b1rEjHhly4BLvOOyIDI8Xo
+ um/KrKsoQjYfqen6h+193Tnm5vuK9Tbg70Dbl2HOex47zGnaU5lp9KeKepS0e/2TKrMBGT
+ KGxLODZuCdL0JQMW4u+IBS8lZbkOrYzIeAT29XyYiZE/TwS4FMIgWZRDkhSHZg==
+ARC-Authentication-Results: i=1; rspamd-6dfbdcb948-tsjnr;
  auth=pass smtp.auth=dreamhost smtp.mailfrom=ian@linux.cowan.aero
 X-MC-Relay: Neutral
 X-MailChannels-SenderId: dreamhost|x-authsender|ian@linux.cowan.aero
 X-MailChannels-Auth-Id: dreamhost
-X-Daffy-Grain: 201401b6165c6f65_1650849993595_2915795923
-X-MC-Loop-Signature: 1650849993595:373555036
-X-MC-Ingress-Time: 1650849993595
+X-Bored-Turn: 1d5ead037e07d7bd_1650850015369_2800847731
+X-MC-Loop-Signature: 1650850015369:3213417145
+X-MC-Ingress-Time: 1650850015369
 Received: from pdx1-sub0-mail-a217.dreamhost.com (pop.dreamhost.com
  [64.90.62.162]) (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384)
- by 100.112.55.255 (trex/6.7.1); Mon, 25 Apr 2022 01:26:33 +0000
+ by 100.127.95.118 (trex/6.7.1); Mon, 25 Apr 2022 01:26:55 +0000
 Received: from localhost.localdomain (unknown [69.12.38.97])
  (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
  key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
  (No client certificate requested)
  (Authenticated sender: ian@linux.cowan.aero)
- by pdx1-sub0-mail-a217.dreamhost.com (Postfix) with ESMTPSA id 4KmnRB1WCMznZ; 
- Sun, 24 Apr 2022 18:26:30 -0700 (PDT)
+ by pdx1-sub0-mail-a217.dreamhost.com (Postfix) with ESMTPSA id 4KmnRf0lvBz1K1; 
+ Sun, 24 Apr 2022 18:26:54 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linux.cowan.aero;
- s=dreamhost; t=1650849991;
- bh=03zhN+hBW8OaOUeJAmtwzMX7G3KCH/6OA0MvZT3k0A8=;
+ s=dreamhost; t=1650850014;
+ bh=s5AE6U1EnsQ1lOXAx7PW4d2cLdYTvCRln/x/datINi8=;
  h=From:To:Cc:Subject:Date:Content-Transfer-Encoding;
- b=vchpmPZdFA4Ks5K5zDB+4D5GE7YuOWIy/yeW8O6dmBFHGJvUvKo5E3aj0PUxtg9nq
- hpzyyOkVqBdbdtj1T8ah7ZWokZKZ/SSEuh8mf6dQA70c0we0Bnh0RPS79yeyvC2vo8
- x7Og8PNrPqWHttmHw7hmBnODVGYnNZmzcazk4dG7uH/Q03Fxv8zklmF+A5FMrS+1E/
- gKuMA0deqXuHcz5YeyTGJOlGZ+t+ZTX54IE4row92B8WClQjrPO3F0e87DU8/afBB7
- AXQcMum/2mia6ZJrxVBS2fSv9iUKcnAI9OUH4UjwD3VGTz8FPxsVtAHSZLg697EuN4
- UrluQzBMa50zQ==
+ b=QxjzROhG7uV5c6ih0J1Jn1MWnplsVCDqINNSVCJqBwTNgBPkF3mMPaT/Fuqmu5bAF
+ bSmyXGk6wjDvguQuSUHEW1Kngf6qzZqjtiPKz7IwqNd+90k0+gbuPRYD3ged5qhNJM
+ AXdvWqauKCDpa2WOhm7AqcdHQCVYt5BxKld0lskveDrDFn1LHKkYLPVCpKQQsBZnrF
+ Df9tZN71Y9Jdat46jQdrGh3/tebpgkWQxDaFF2iVr98sMHRCxZ+mxJ6XY+X3JoMkWa
+ f/O/UJBiQ6kI7VQ96DzcFWDwoQPelKmJGixPYCcVmQz/2hLgsOIsGRg0CPnt5uzjvW
+ HiH8lfdH19Yog==
 From: Ian Cowan <ian@linux.cowan.aero>
 To: Corentin Labbe <clabbe@baylibre.com>
-Date: Sun, 24 Apr 2022 21:26:18 -0400
-Message-Id: <20220425012618.440474-1-ian@linux.cowan.aero>
+Date: Sun, 24 Apr 2022 21:26:40 -0400
+Message-Id: <20220425012640.440717-1-ian@linux.cowan.aero>
 X-Mailer: git-send-email 2.35.1
 MIME-Version: 1.0
 X-Spam-Score: -0.1 (/)
@@ -103,15 +103,12 @@ X-Spam-Report: Spam detection software,
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  This adds the zrdev_dbg() (pointing to pci_dbg()),
- zrdev_err()
- (pointing to pci_err()), and zrdev_info() (pointing to pci_info()) macros
- to the zoran drivers. These are the preferred method for debugg [...] 
+ Content preview: This adds inline functions in the videocodec header file to
+ convert the videocodec and videocodec_master structs to their respective
+ contained zoran struct. This will be used to pass the zoran struct [...] 
  Content analysis details:   (-0.1 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [23.83.222.61 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -119,9 +116,12 @@ X-Spam-Report: Spam detection software,
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
-X-Headers-End: 1ninV4-0000qX-PC
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [23.83.209.135 listed in list.dnswl.org]
+X-Headers-End: 1ninVK-0000rD-D5
 X-Mailman-Approved-At: Mon, 25 Apr 2022 16:11:41 +0000
-Subject: [Mjpeg-users] [PATCH 1/4] staging: media: zoran: add logging macros
+Subject: [Mjpeg-users] [PATCH 2/4] staging: media: zoran: setup videocodec
+ header for debugging macros
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -143,47 +143,57 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-This adds the zrdev_dbg() (pointing to pci_dbg()), zrdev_err() (pointing
-to pci_err()), and zrdev_info() (pointing to pci_info()) macros to the
-zoran drivers. These are the preferred method for debugging and this
-will allow to extract the device from the zoran struct to make the call.
+This adds inline functions in the videocodec header file to convert the
+videocodec and videocodec_master structs to their respective contained
+zoran struct. This will be used to pass the zoran struct to the
+zrdev_XXX() macros defined in the zoran header.
+
+In the zoran header, the new include is added to ensure all variables
+can be completely defined with the zoran and videocodec includes where
+they are located.
 
 Signed-off-by: Ian Cowan <ian@linux.cowan.aero>
 ---
- drivers/staging/media/zoran/zoran.h | 13 +++++++++++++
- 1 file changed, 13 insertions(+)
+ drivers/staging/media/zoran/videocodec.h | 15 +++++++++++++++
+ drivers/staging/media/zoran/zoran.h      |  1 +
+ 2 files changed, 16 insertions(+)
 
+diff --git a/drivers/staging/media/zoran/videocodec.h b/drivers/staging/media/zoran/videocodec.h
+index 9dea348fee40..5e6057edd339 100644
+--- a/drivers/staging/media/zoran/videocodec.h
++++ b/drivers/staging/media/zoran/videocodec.h
+@@ -307,4 +307,19 @@ extern int videocodec_unregister(const struct videocodec *);
+ 
+ int videocodec_debugfs_show(struct seq_file *m);
+ 
++#include "zoran.h"
++static inline struct zoran *videocodec_master_to_zoran(struct videocodec_master *master)
++{
++	struct zoran *zr = master->data;
++
++	return zr;
++}
++
++static inline struct zoran *videocodec_to_zoran(struct videocodec *codec)
++{
++	struct videocodec_master *master = codec->master_data;
++
++	return videocodec_master_to_zoran(master);
++}
++
+ #endif				/*ifndef __LINUX_VIDEOCODEC_H */
 diff --git a/drivers/staging/media/zoran/zoran.h b/drivers/staging/media/zoran/zoran.h
-index 654c95fa5aba..4f7f71d8e93c 100644
+index 42b86356c022..674658154e88 100644
 --- a/drivers/staging/media/zoran/zoran.h
 +++ b/drivers/staging/media/zoran/zoran.h
-@@ -19,6 +19,7 @@
- #define _BUZ_H_
+@@ -20,6 +20,7 @@
  
  #include <linux/debugfs.h>
-+#include <linux/pci.h>
+ #include <linux/dev_printk.h>
++#include <linux/i2c-algo-bit.h>
  #include <media/v4l2-device.h>
  #include <media/v4l2-ctrls.h>
  #include <media/videobuf2-core.h>
-@@ -301,6 +302,18 @@ static inline struct zoran *to_zoran(struct v4l2_device *v4l2_dev)
- 
- #endif
- 
-+/**
-+ * Debugging macros
-+ */
-+#define zrdev_dbg(zr, format, args...) \
-+	pci_dbg(zr->pci_dev, format, ##args) \
-+
-+#define zrdev_err(zr, format, args...) \
-+	pci_err(zr->pci_dev, format, ##args) \
-+
-+#define zrdev_info(zr, format, args...) \
-+	pci_info(zr->pci_dev, format, ##args) \
-+
- int zoran_queue_init(struct zoran *zr, struct vb2_queue *vq, int dir);
- void zoran_queue_exit(struct zoran *zr);
- int zr_set_buf(struct zoran *zr);
 -- 
 2.35.1
 
