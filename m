@@ -2,127 +2,197 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id C32ED50E54A
-	for <lists+mjpeg-users@lfdr.de>; Mon, 25 Apr 2022 18:11:46 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 711B05100F6
+	for <lists+mjpeg-users@lfdr.de>; Tue, 26 Apr 2022 16:52:08 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1nj1JQ-0007CW-74; Mon, 25 Apr 2022 16:11:45 +0000
+	id 1njMXs-0006B2-In; Tue, 26 Apr 2022 14:52:03 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <ian@linux.cowan.aero>) id 1nizuR-0000Tr-2W
- for mjpeg-users@lists.sourceforge.net; Mon, 25 Apr 2022 14:41:49 +0000
+ (envelope-from <dan.carpenter@oracle.com>) id 1njGCz-0001Ey-IQ
+ for mjpeg-users@lists.sourceforge.net; Tue, 26 Apr 2022 08:06:04 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:MIME-Version:Message-Id:
- Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:Content-ID:
+ d=sourceforge.net; s=x; h=MIME-Version:In-Reply-To:Content-Type:Message-ID:
+ Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ :Resent-Message-ID:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=05Mweot+ojh0zTSOokJnFBngeZ/lzOkLg56VU81WwD4=; b=W55kyLTWi4/Ge+UUnPEs6D6WTX
- FwZ0/A1CjproSD1OKsT3uNwsz/3V4am3BHAMjYzrwZLG7oejNqerp0hiKIAZ6aOLBTHJiOwf4VqLh
- heV1DEZEBg2LAK6C6X+QzeEKfVYpUBHV/0BAFavnPRAIvHpLOp8w29G9Icfy1+m6lIBk=;
+ bh=7A6p86d1CILvGm97lc3WvHM9y3XAezTezMp1eBSjXtU=; b=R7ZVixZ/0hEVPdmFaPwZs9hxOP
+ E1hjoXboFW33ItN0K/d1A6pxAcsBPoRCWgWmlZ8XqczbnWRDkTxkpAqxms1IoddvFWU6jv7vcOyXv
+ SepveUD21glnpI7sjtRaHWNDMjld7dfDY1XRXR/e/Mb5CYrJTM4k0c7z/g4AK9u2SSpo=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:MIME-Version:Message-Id:Date:Subject:Cc:To:From
- :Sender:Reply-To:Content-Type:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=MIME-Version:In-Reply-To:Content-Type:Message-ID:Subject:Cc:To:From:Date:
+ Sender:Reply-To:Content-Transfer-Encoding:Content-ID:Content-Description:
+ Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=05Mweot+ojh0zTSOokJnFBngeZ/lzOkLg56VU81WwD4=; b=g
- b8HypgwSHa6GWiznxlamhyxsN1Mw5rIpByxCE5+2omWyu70wO+EDpKVdrztoSU+3glxRPrTjag9LK
- z1ysxMYnyEa2CqNMyhXCjTzNoMV4DbBP8ADvfYjrSS2MV8FFzFRbE6vGPOvUj0EIERAzKX8CinLbk
- bUnrUSCXwNCGj+G8=;
-Received: from olivedrab.birch.relay.mailchannels.net ([23.83.209.135])
+ List-Owner:List-Archive; bh=7A6p86d1CILvGm97lc3WvHM9y3XAezTezMp1eBSjXtU=; b=V
+ QoO7jYWaB458/Gqs6fcPMhYBLYrNwODpIjsyPaP3pDx8g+RxMno8qj0yhrvftJUWPOQ23C22jBqQO
+ kg24WBpu/cepWwiEPgq42/wGsOEO1o6BBw4/syKCojXzj1N/z2iJAAu764GVUwkbkR/FnswyG/PcA
+ SPOGn74dglGCLvmU=;
+Received: from mx0b-00069f02.pphosted.com ([205.220.177.32])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1nizuK-009mC7-GI
- for mjpeg-users@lists.sourceforge.net; Mon, 25 Apr 2022 14:41:49 +0000
-Received: from relay.mailchannels.net (localhost [127.0.0.1])
- by relay.mailchannels.net (Postfix) with ESMTP id B893D2A25A4;
- Mon, 25 Apr 2022 14:41:32 +0000 (UTC)
-Received: from pdx1-sub0-mail-a217.dreamhost.com (unknown [127.0.0.6])
- (Authenticated sender: dreamhost)
- by relay.mailchannels.net (Postfix) with ESMTPA id 126AC2A24A0;
- Mon, 25 Apr 2022 14:41:31 +0000 (UTC)
-ARC-Seal: i=1; s=arc-2022; d=mailchannels.net; t=1650897692; a=rsa-sha256;
- cv=none;
- b=x+ew0KM2BY/ZHUiXF954wNaAtiK/mMdnVXwKBcsS/AcOaw4D8iu3vM3S+XntZBErUeSjX7
- wjODAYfXuO8kEBQh8z8/WJCSgXoWRoBoDXqxCahOaoEkKryO+TKVyvMlCtQyT3D3CkQW7M
- e4DjpcHfO1QhWr0Li7bFayaAIzwGHeVpB48x9AvOZNQrOhli9RBBcVD0KMymcU1fakoZnR
- IB9plPq+Mm+zTL5LIlGGSHMLJ5brP34TGO9Gq8rggXMfXG24zndBo5EZSjnhSM8dobsud2
- dElyVHyqOSChk04QdsYZfeXbSxagPXxTVB0skEmiuXA5v/m/wpE+gnpwV1lVvw==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
- d=mailchannels.net; s=arc-2022; t=1650897692;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:
- content-transfer-encoding:content-transfer-encoding:dkim-signature;
- bh=05Mweot+ojh0zTSOokJnFBngeZ/lzOkLg56VU81WwD4=;
- b=cDwHJ8G5rLMwANexfyZkDlHNf+XGFyGX2aWY+zBIw4hgQiwJhDM02WAYlF4FO6FiLKgV5s
- ApZwXpt6iesBGEMkuuRgKbDvNwR2v0UIjMO0Shx9U/mvJzptvy+PRBnDQrbzenYa/45AYS
- EYhgSI5+WHqgxXh30hnD4wtYCW5q/MOE5n0SDPqgiw0mhp28FoLga3btllA/Adt4gbkLpc
- ODyF+4GT6mtJh6ndh3e4QWVX0XXXyI/RhcuFUchemMy84Zbim4Bv4gC3ReLxL3gLQ/skbE
- Aomx5fFf7oev7bW2ydlaIY2n59ahy/+sWseLOBY1Ye5NyYMcSHe+pHCPCj8JCg==
-ARC-Authentication-Results: i=1; rspamd-67b64f579b-xftg8;
- auth=pass smtp.auth=dreamhost smtp.mailfrom=ian@linux.cowan.aero
-X-MC-Relay: Neutral
-X-MailChannels-SenderId: dreamhost|x-authsender|ian@linux.cowan.aero
-X-MailChannels-Auth-Id: dreamhost
-X-Little-Hysterical: 1b2d62ce11d21cba_1650897692459_131318409
-X-MC-Loop-Signature: 1650897692459:3564636864
-X-MC-Ingress-Time: 1650897692458
-Received: from pdx1-sub0-mail-a217.dreamhost.com (pop.dreamhost.com
- [64.90.62.162]) (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384)
- by 100.121.210.129 (trex/6.7.1); Mon, 25 Apr 2022 14:41:32 +0000
-Received: from localhost.localdomain (unknown [69.12.38.97])
- (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
- key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
- (No client certificate requested)
- (Authenticated sender: ian@linux.cowan.aero)
- by pdx1-sub0-mail-a217.dreamhost.com (Postfix) with ESMTPSA id 4Kn74V4Pf7znb; 
- Mon, 25 Apr 2022 07:41:30 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linux.cowan.aero;
- s=dreamhost; t=1650897691;
- bh=05Mweot+ojh0zTSOokJnFBngeZ/lzOkLg56VU81WwD4=;
- h=From:To:Cc:Subject:Date:Content-Transfer-Encoding;
- b=Y028je4bcEPUJMexID9Ux01kwpvnI4sscbs7zXlj2i6dQvMqFFkB4AhkEErtVL0XI
- F0UINE9dwnQtBtvfZLe57Nvq+hBy/qqLlqsmFLQkOyUQPcO+YMGyCQtqthbmzV/ze7
- ssSe271z8PSvXKqcuY4GZKoegbXpdiuEEnsF9Jbj1n4sLwPA8I0As1x5y6ZVftWX00
- ya1TDdJjCL9aAQugBd+JX2lxTDv0NnWDMC30PiIupjaRRmkee4+ycpFs+ZN2v8HDBZ
- g0QsUNMF+edWXXNawZmtL26g6vHk2aHY6NU74fVw2XyqrQi/yhdn4s/h6LVfrt/tMk
- Wr926lyrBms+Q==
-From: Ian Cowan <ian@linux.cowan.aero>
-To: Corentin Labbe <clabbe@baylibre.com>
-Date: Mon, 25 Apr 2022 10:41:10 -0400
-Message-Id: <20220425144110.133316-1-ian@linux.cowan.aero>
-X-Mailer: git-send-email 2.35.1
+ id 1njGCn-00ATOG-3t
+ for mjpeg-users@lists.sourceforge.net; Tue, 26 Apr 2022 08:06:03 +0000
+Received: from pps.filterd (m0246632.ppops.net [127.0.0.1])
+ by mx0b-00069f02.pphosted.com (8.17.1.5/8.17.1.5) with ESMTP id 23Q45xpw022267;
+ Tue, 26 Apr 2022 08:05:36 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oracle.com;
+ h=date : from : to : cc
+ : subject : message-id : content-type : in-reply-to : mime-version;
+ s=corp-2021-07-09; bh=7A6p86d1CILvGm97lc3WvHM9y3XAezTezMp1eBSjXtU=;
+ b=B/MPS2QMjA06nY1JVS3PDlZSrPxcKBR9sNqqWSakqbYh8BsBubManZEdTK9d0EbdYz28
+ i7RkeBdozXQB/keShVLHh9zleygL0v8HvU0NGtoeLcdJewCEZt+Cm3PsHivMtxDMNCgD
+ 1HHpMV/q70fDtDw1HICOkzTno1hmUscQKcGBAwY2RX3J4oHtIu2ZDLWsRdwbeE6WI5V0
+ oZ22kUUBVhngcfNbdL/9oSIlmdZ5GCYzEx0U13TxwBFY/7ET6DVOr6/bEfnFsthur2Rm
+ 3VAMci4xRn6NLhwkgpQKlE1CEHAEn9yCARLSyuHFSoLJMMdF2Zl+LsIv78clXwsjEvIt Hg== 
+Received: from phxpaimrmta01.imrmtpd1.prodappphxaev1.oraclevcn.com
+ (phxpaimrmta01.appoci.oracle.com [138.1.114.2])
+ by mx0b-00069f02.pphosted.com (PPS) with ESMTPS id 3fmaw4dd0c-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Tue, 26 Apr 2022 08:05:35 +0000
+Received: from pps.filterd
+ (phxpaimrmta01.imrmtpd1.prodappphxaev1.oraclevcn.com [127.0.0.1])
+ by phxpaimrmta01.imrmtpd1.prodappphxaev1.oraclevcn.com (8.16.1.2/8.16.1.2)
+ with SMTP id 23Q80TJi020863; Tue, 26 Apr 2022 08:05:34 GMT
+Received: from nam11-co1-obe.outbound.protection.outlook.com
+ (mail-co1nam11lp2174.outbound.protection.outlook.com [104.47.56.174])
+ by phxpaimrmta01.imrmtpd1.prodappphxaev1.oraclevcn.com with ESMTP id
+ 3fm7w2hv0t-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Tue, 26 Apr 2022 08:05:34 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=lUAjUmBC8zEbVh5mZ9pALai5T8PIDOatYay/rznptADwbW7HGJ7rOi5LEQfoiVI7uExjkGdAPXJbzdWM6FV6PJdSsRcg0Ey7jEQYl2gg6RQ/RCzkf3D/+HU2cVmk5ZztjynEAi4H/u+XfHIIGX7Ln+/qkK/5nsO+diT4kXD9DVHG+Vm2n0QYjxOyA6CShsSh1Jql5VQwQRw1UGXXz54H6VDcQGfT7psTuHc9hJ89iWE8SMyr2cKpdUrNQPnQxwqTqS4axbOqd1pzUs4e6kSAk89QzzNseVLh9pFJ1VN3HPemjGfYpj5K+Sq3BobuOsAlHp1w2GA7dXP9CHL+vYckaA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=7A6p86d1CILvGm97lc3WvHM9y3XAezTezMp1eBSjXtU=;
+ b=kvdxxTumkR/Y5bcYvl3v2t7UnhrLhUr3ArcQkl7ixFR8SmJP0en57PIgshJ2SgYowyMZUpolDj07BRSmAxneh+PcH6EQ89zu6CHL4ef2Y8ikZaGZO/hxJ4QBQpYAgPr6FIK1vfbfjcAzU7McsAjAMvORYiwRTlUC3Q6UhWn62oqs5df0a5NN2tQA2BC7rIr4OEse8NMDiOHwnBGuhqNHdpTiYLAnz021WfSCnJckvw6rkuJhUOtFrx8RQBMnA6qNoTcBzlXrdtsRfzYYbHKgG/pYFtVz/gAz2nbhOl+FYQuCnAmhOuSl9Xn+rpSViL8XYmyfDboMzKIiFvFK8kW5+w==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=oracle.com; dmarc=pass action=none header.from=oracle.com;
+ dkim=pass header.d=oracle.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=oracle.onmicrosoft.com; s=selector2-oracle-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=7A6p86d1CILvGm97lc3WvHM9y3XAezTezMp1eBSjXtU=;
+ b=q0OGHE6lt1jZvSgRoNIjjIxDbHi7xHG9iPWnXaiuzpLjmrf3ofA3z/FjRO48WhxpoK/j7CYvlySF05rzJxb7przDwxbGcK3cTo6OUG3FF/ZW36+t/g42cLZRC0qarUa4eI3fhSS3yV5yylKyLJGjJggcXCLX7o/rS/97/St4od8=
+Received: from MWHPR1001MB2365.namprd10.prod.outlook.com
+ (2603:10b6:301:2d::28) by DS7PR10MB5198.namprd10.prod.outlook.com
+ (2603:10b6:5:3a5::24) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5186.13; Tue, 26 Apr
+ 2022 08:05:32 +0000
+Received: from MWHPR1001MB2365.namprd10.prod.outlook.com
+ ([fe80::b5d5:7b39:ca2d:1b87]) by MWHPR1001MB2365.namprd10.prod.outlook.com
+ ([fe80::b5d5:7b39:ca2d:1b87%5]) with mapi id 15.20.5164.025; Tue, 26 Apr 2022
+ 08:05:32 +0000
+Date: Tue, 26 Apr 2022 11:05:09 +0300
+From: Dan Carpenter <dan.carpenter@oracle.com>
+To: kbuild@lists.01.org, Ian Cowan <ian@linux.cowan.aero>, clabbe@baylibre.com
+Message-ID: <202204260911.PpSNCMg4-lkp@intel.com>
+Content-Disposition: inline
+In-Reply-To: <20220423051821.293133-1-ian@linux.cowan.aero>
+User-Agent: Mutt/1.9.4 (2018-02-28)
+X-ClientProxiedBy: JNAP275CA0068.ZAFP275.PROD.OUTLOOK.COM (2603:1086:0:4f::16)
+ To MWHPR1001MB2365.namprd10.prod.outlook.com
+ (2603:10b6:301:2d::28)
 MIME-Version: 1.0
-X-Spam-Score: -0.1 (/)
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: f00ab350-da69-4a63-9160-08da275b892b
+X-MS-TrafficTypeDiagnostic: DS7PR10MB5198:EE_
+X-Microsoft-Antispam-PRVS: <DS7PR10MB51981161806713B4AFE53E688EFB9@DS7PR10MB5198.namprd10.prod.outlook.com>
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam: BCL:0;
+X-Microsoft-Antispam-Message-Info: 52FJZKExsECSbjaDlAxo4HtIXflSHrfX7RMTG0m1ofG4sWbshJkc+TckcylbeCwqX+fJj1H8xXG4q54/gW2KpQv0+B9j5jO+QO55ho5WhMkkvfLhYc5bqpt1MTkRb9UKk/lxuiStR6d+v/xE9llhiuwLbCTsfyfmwi9d4Pv76lRuMcXmb5N8w8EyiNgVxDVvhxcc43z023asy+ggL4MUhDuhIuvvURD3/c4H4iOqPayubFja6GNPjw8fy6bxW4mAmrFh6YjIzVlcW53qfe1SaHsnA1GGaQ9hQP3Iksh1qIHRhvbBTdfUUo5IowQ0Qcz9qJt/T6Za9c5PdHfGHciJ5wU00clpqStwfwNHiu8SCQYWmSY0auOCcjWGmBvyfoh4NkrEzEa9tYD9Pkkibc9eEovIj+HgPZHXLTVsmSXQVR+uWmu6Xkl3Ta6BT6iADKBo8hHbEJDcFMsfbq7WacD9whWLwMJqwkiy4pU0zyDfdmObZRVEgHQ3jMNznyjJfAolfZQwZp/lqxJufu2YsN161hawpKKIlbXAyzx6/zNtwqCoJMlICjuvcmpRBl08w51KVAcRYtnmWSeT0y8jB3EmLHjxE2iKlSmI+CsIpsDGosT+WMBT3TuhYFpuZfJztuxGULObjs6WxGo4B7JHfhs+Blcm95nb3x+H5KVRnJ1diIzlNmQVsaE/W6H3ShWYUE2UgListpur2ZplwtmgrM6Ho/7z2jLnlExUFkBw+aSzrUB153+fp0e31+m3ZMxJR6JMAYL2qiYd7Z4ETaG1gBLduDCI6WW3qaqBMBd7usTolODzXjf8tVmBnv/CRUR72JAYiv0IPKLQLCJnLQoHjLZ9Pw==
+X-Forefront-Antispam-Report: CIP:255.255.255.255; CTRY:; LANG:en; SCL:1; SRV:;
+ IPV:NLI; SFV:NSPM; H:MWHPR1001MB2365.namprd10.prod.outlook.com; PTR:; CAT:NONE;
+ SFS:(13230001)(366004)(38350700002)(38100700002)(4001150100001)(2906002)(83380400001)(508600001)(52116002)(6666004)(966005)(6506007)(6512007)(9686003)(6486002)(36756003)(1076003)(7416002)(316002)(26005)(186003)(86362001)(5660300002)(8936002)(66476007)(8676002)(4326008)(66556008)(66946007)(44832011)(30864003);
+ DIR:OUT; SFP:1101; 
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0: =?us-ascii?Q?IPeklpj5Qdb94Sna/JqjS2UyuBDkfNSzzQZTEpNC9cdRhypzx9+GT5kMFCC4?=
+ =?us-ascii?Q?KSGPnrz0i8rxJRa1GjSyM5QEWkoCPP+3zm2IiFD0Go/oHpCBQG/2XIGJag4M?=
+ =?us-ascii?Q?6QkyeUny4IZ7APEAoI15a0ju0iht8sRs2khp5YPT/7V8pw7/FHVIEqZG/c+3?=
+ =?us-ascii?Q?LIAvP+Q2T8uhPq+uPdNxgz7bU/pgUcKu+1FUzh9aQ5Ucw2tFvxDpdOBN7cfv?=
+ =?us-ascii?Q?BVkXtprcjBcqRxJ8LcmbAONxq28db08FYnUv2KC0osfG8JIWhaN1GgopFge+?=
+ =?us-ascii?Q?ticfTKAtsf9hcwQtJDoymRNQ1E6BcYQyQMDb16RlGrPTPzcxBQl7zJVfJq8g?=
+ =?us-ascii?Q?L3liSjrO2h3Eftwm/IO0R/i501LBL+mTZl1bGDMUAhYGXRO7OXq+uisqiCUm?=
+ =?us-ascii?Q?LnjxmE7nzrWUekUcAOdTHbkiC5bYGHUoU1ESEYu7oKxXw1LIapeJbP44u/2h?=
+ =?us-ascii?Q?Tl7FelFlw3jYm8O7t6l9vSsn79BCaVYVJ2eWeT/8rIIjjpVaKD2TljpTvdFe?=
+ =?us-ascii?Q?wCIT+PLnZLgv+r0aPGY16Qn4kbdEEabH/n11bbs8LjvdiD4+kGy086p9p416?=
+ =?us-ascii?Q?9/xrWifjKeY3QnjDhWBUEADwIyLuUulSGwsE5JnEucvt+m/F/ZI22YxyfoSp?=
+ =?us-ascii?Q?+zz4tDhLz/Zu3nu8ge9hRS6t1NrwBdrAP/umKFOfzQMp0LZcd2I4HJOj6NXe?=
+ =?us-ascii?Q?BIcmfMOHi4ezZ47Y6vNgmlANMliQA3APuwDxJcj8USgDxn3AdtaYoBh2fyF5?=
+ =?us-ascii?Q?NNaU9kR7KJPHjiGUTjS4sRnkj2LAWwGFv8jv+C9OWjQrP9b4DjQmb6qqUjHC?=
+ =?us-ascii?Q?obX3i1p4UpdVTRaD1iLDqSClYBeC9TaryOIU0c6hoNXzhoh8FpkBBE1iuQ2a?=
+ =?us-ascii?Q?I2q1KkirSd29RddcA59jnn8izbxoJQj6H5xaN0dxtbw4X2kqAZV1ZMaqd8t6?=
+ =?us-ascii?Q?n5lnd1cUkItNvitNCinZG2np7w1bXzYAuS+tbDMhqJ1qMUIpII+XT9I8r4Cm?=
+ =?us-ascii?Q?m2pYsoA/7nUhS477G383MISpxS8PlZkDpTRcANsbdbqoUjw4GlSZM+lovlSs?=
+ =?us-ascii?Q?1C0ph+YjjLGu9MRjrPabBZ+yd+wFwlHRneKwoBl7G8kBJBouiMznrHT3Bzj/?=
+ =?us-ascii?Q?6IL+XjNEJ8AYycnqTvWJOUAR3lihBRsktZrjqrnhY5Mkvgd04wL5G+VAMw1P?=
+ =?us-ascii?Q?BDSRIe0//SFHfpSCUhF45BU5/HhLkeMVKhOz42ovoKyy1ZiR/yxX2gJ9xMfJ?=
+ =?us-ascii?Q?iQnDp4fUpgBWAE1ybz64Ky91HUb9KEQd+SaHTxk82Ra90Hsi60W/2sTHF7FC?=
+ =?us-ascii?Q?Vnj+41jZ93qCgKps3OtxKOxxAFO86l64s9IjYhIJzocJsxtCcAiaeVk3hYLC?=
+ =?us-ascii?Q?wlIs9xmuhp/RZbZreFtJ0D5+9hiY5zIUi4GwtB+qQULmFCSKNEcDQZGUcZvE?=
+ =?us-ascii?Q?rA2L6RWP9GfZOsNoaSHu91nDNfeMNF8dWBlO8EQft/lXO6w1FkrtwnRmcoQO?=
+ =?us-ascii?Q?uRqXKC/E5u2QOkjPHkJ7YT3fIZI3PM3qA3+Q+rNYvb4eRRw8l2f5d7PbolXF?=
+ =?us-ascii?Q?7RqbQOo/g96e6feXfngJzhs/mkuBSIiNmLSrLOZbsXIzViWXE5QqXbIoIdfa?=
+ =?us-ascii?Q?rAVu+HOyEJymT9P6HvDS8sw7+BnEBEBe746CpMqmeMuhDvbeQNe32wDgawqw?=
+ =?us-ascii?Q?V80KvDgcsrhSxboGagkdYRxVq63FRaLaFdHilum84d30L+WzAd5W0gdij2Ws?=
+ =?us-ascii?Q?zO4odJFQszvfJacgGllduStWBpK6cpA=3D?=
+X-OriginatorOrg: oracle.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: f00ab350-da69-4a63-9160-08da275b892b
+X-MS-Exchange-CrossTenant-AuthSource: MWHPR1001MB2365.namprd10.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 26 Apr 2022 08:05:32.6937 (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: 4e2c6054-71cb-48f1-bd6c-3a9705aca71b
+X-MS-Exchange-CrossTenant-MailboxType: HOSTED
+X-MS-Exchange-CrossTenant-UserPrincipalName: fLH72p/7xJOQb5qZenpqYIBUMwJNrDXZOzJEHahEs8nNLrb5U/iT3Yqiv7QGEarsTysuCrpEwlfdXjVy59ksUF/zpzP1WYrutmt1In6fvvw=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DS7PR10MB5198
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.486, 18.0.858
+ definitions=2022-04-26_02:2022-04-25,
+ 2022-04-26 signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 mlxscore=0
+ suspectscore=0
+ malwarescore=0 spamscore=0 phishscore=0 bulkscore=0 mlxlogscore=999
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.12.0-2202240000 definitions=main-2204260053
+X-Proofpoint-GUID: gOokeE8jdIj2EGDgo2SzNuT_w7yzDljb
+X-Proofpoint-ORIG-GUID: gOokeE8jdIj2EGDgo2SzNuT_w7yzDljb
+X-Spam-Score: 0.1 (/)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: This replaces all of the dprintk() macro calls to the
- zrdev_dbg(), 
- zrdev_info(), or zrdev_err() calls as appropriate. This allows for the removal
- of the dprintk() macro from each file it is defined in [...] 
- Content analysis details:   (-0.1 points, 6.0 required)
+ Content preview:  Hi Ian,
+ url: https://github.com/intel-lab-lkp/linux/commits/Ian-Cowan/staging-media-zoran-add-zrdev_dbg-macros/20220425-092814
+ base: https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git
+ 1efba7ef [...] 
+ Content analysis details:   (0.1 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [205.220.177.32 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [23.83.209.135 listed in list.dnswl.org]
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
-X-Headers-End: 1nizuK-009mC7-GI
-X-Mailman-Approved-At: Mon, 25 Apr 2022 16:11:41 +0000
-Subject: [Mjpeg-users] [PATCH v2 4/4] staging: media: zoran: replace dprintk
- with new debugging macros
+ 0.0 FAKE_REPLY_C           No description available.
+ 1.0 HEXHASH_WORD           Multiple instances of word + hexadecimal hash
+X-Headers-End: 1njGCn-00ATOG-3t
+X-Mailman-Approved-At: Tue, 26 Apr 2022 14:52:03 +0000
+Subject: Re: [Mjpeg-users] [PATCH 3/4] staging: media: zoran: replace all
+ pr_err() with zrdev_err()
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -135,960 +205,227 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Cc: Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- linux-staging@lists.linux.dev, linux-kernel@vger.kernel.org,
- mjpeg-users@lists.sourceforge.net, Ian Cowan <ian@linux.cowan.aero>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- Dan Carpenter <dan.carpenter@oracle.com>, linux-media@vger.kernel.org
+Cc: kbuild-all@lists.01.org, lkp@intel.com, gregkh@linuxfoundation.org,
+ linux-staging@lists.linux.dev, mjpeg-users@lists.sourceforge.net,
+ ian@linux.cowan.aero, mchehab@kernel.org, dan.carpenter@oracle.com,
+ linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-This replaces all of the dprintk() macro calls to the zrdev_dbg(),
-zrdev_info(), or zrdev_err() calls as appropriate. This allows for the
-removal of the dprintk() macro from each file it is defined in, along
-with removal of the module params that track the debugging level.
+Hi Ian,
 
-In the case that a debugging level was used in a comparison, this has
-been replaced with checking the console level debugging and making a
-decision from there. If the console debugging level is at least the
-KERN_ debugging level equivalent, then the comparison will evaluate as
-true.
+url:    https://github.com/intel-lab-lkp/linux/commits/Ian-Cowan/staging-media-zoran-add-zrdev_dbg-macros/20220425-092814
+base:   https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git 1efba7ef1d7da5944493728c5375fef5b2130de4
+config: i386-randconfig-m021-20220425 (https://download.01.org/0day-ci/archive/20220426/202204260911.PpSNCMg4-lkp@intel.com/config)
+compiler: gcc-11 (Debian 11.2.0-20) 11.2.0
 
-There are a few instances where pr_debug() must be used over the
-zrdev_dbg(). These occur in the module cleanup functions because there
-should be no devices defined once we get to those modules, so we have no
-devices to pass to zrdev_dbg().
+If you fix the issue, kindly add following tag as appropriate
+Reported-by: kernel test robot <lkp@intel.com>
+Reported-by: Dan Carpenter <dan.carpenter@oracle.com>
 
-Signed-off-by: Ian Cowan <ian@linux.cowan.aero>
----
- drivers/staging/media/zoran/videocodec.c |  55 ++++------
- drivers/staging/media/zoran/zr36016.c    |  60 +++++------
- drivers/staging/media/zoran/zr36050.c    | 131 +++++++++++------------
- drivers/staging/media/zoran/zr36060.c    |  74 ++++++-------
- 4 files changed, 143 insertions(+), 177 deletions(-)
+smatch warnings:
+drivers/staging/media/zoran/videocodec.c:55 videocodec_attach() warn: variable dereferenced before check 'master' (see line 50)
+drivers/staging/media/zoran/videocodec.c:124 videocodec_detach() warn: variable dereferenced before check 'codec' (see line 120)
+drivers/staging/media/zoran/videocodec.c:177 videocodec_register() warn: variable dereferenced before check 'codec' (see line 175)
+drivers/staging/media/zoran/videocodec.c:210 videocodec_unregister() warn: variable dereferenced before check 'codec' (see line 208)
 
-diff --git a/drivers/staging/media/zoran/videocodec.c b/drivers/staging/media/zoran/videocodec.c
-index cabb291d302c..64ca3efbd3f5 100644
---- a/drivers/staging/media/zoran/videocodec.c
-+++ b/drivers/staging/media/zoran/videocodec.c
-@@ -16,16 +16,6 @@
- 
- #include "videocodec.h"
- 
--static int videocodec_debug;
--module_param(videocodec_debug, int, 0);
--MODULE_PARM_DESC(videocodec_debug, "Debug level (0-4)");
--
--#define dprintk(num, format, args...) \
--	do { \
--		if (videocodec_debug >= num) \
--			printk(format, ##args); \
--	} while (0)
--
- struct attached_list {
- 	struct videocodec *codec;
- 	struct attached_list *next;
-@@ -69,7 +59,7 @@ struct videocodec *videocodec_attach(struct videocodec_master *master)
- 		// attach only if the slave has at least the flags
- 		// expected by the master
- 		if ((master->flags & h->codec->flags) == master->flags) {
--			dprintk(4, "%s: try '%s'\n", __func__, h->codec->name);
-+			zrdev_dbg(zr, "%s: try '%s'\n", __func__, h->codec->name);
- 
- 			codec = kmemdup(h->codec, sizeof(struct videocodec), GFP_KERNEL);
- 			if (!codec)
-@@ -80,7 +70,7 @@ struct videocodec *videocodec_attach(struct videocodec_master *master)
- 			codec->master_data = master;
- 			res = codec->setup(codec);
- 			if (res == 0) {
--				dprintk(3, "%s: '%s'\n", __func__, codec->name);
-+				zrdev_dbg(zr, "%s: '%s'\n", __func__, codec->name);
- 				ptr = kzalloc(sizeof(*ptr), GFP_KERNEL);
- 				if (!ptr)
- 					goto out_kfree;
-@@ -89,12 +79,13 @@ struct videocodec *videocodec_attach(struct videocodec_master *master)
- 				a = h->list;
- 				if (!a) {
- 					h->list = ptr;
--					dprintk(4, "videocodec: first element\n");
-+					zrdev_dbg(zr, "videocodec: first element\n");
- 				} else {
- 					while (a->next)
- 						a = a->next;	// find end
- 					a->next = ptr;
--					dprintk(4, "videocodec: in after '%s'\n", h->codec->name);
-+					zrdev_dbg(zr, "videocodec: in after '%s'\n",
-+						  h->codec->name);
- 				}
- 
- 				h->attached += 1;
-@@ -126,8 +117,8 @@ int videocodec_detach(struct videocodec *codec)
- 		return -EINVAL;
- 	}
- 
--	dprintk(2, "%s: '%s', type: %x, flags %lx, magic %lx\n", __func__,
--		codec->name, codec->type, codec->flags, codec->magic);
-+	zrdev_dbg(zr, "%s: '%s', type: %x, flags %lx, magic %lx\n", __func__,
-+		  codec->name, codec->type, codec->flags, codec->magic);
- 
- 	if (!h) {
- 		zrdev_err(zr, "%s: no device left...\n", __func__);
-@@ -141,7 +132,7 @@ int videocodec_detach(struct videocodec *codec)
- 			if (codec == a->codec) {
- 				res = a->codec->unset(a->codec);
- 				if (res >= 0) {
--					dprintk(3, "%s: '%s'\n", __func__, a->codec->name);
-+					zrdev_dbg(zr, "%s: '%s'\n", __func__, a->codec->name);
- 					a->codec->master_data = NULL;
- 				} else {
- 					zrdev_err(zr, "%s: '%s'\n", __func__, a->codec->name);
-@@ -149,10 +140,10 @@ int videocodec_detach(struct videocodec *codec)
- 				}
- 				if (!prev) {
- 					h->list = a->next;
--					dprintk(4, "videocodec: delete first\n");
-+					zrdev_dbg(zr, "videocodec: delete first\n");
- 				} else {
- 					prev->next = a->next;
--					dprintk(4, "videocodec: delete middle\n");
-+					zrdev_dbg(zr, "videocodec: delete middle\n");
- 				}
- 				kfree(a->codec);
- 				kfree(a);
-@@ -179,9 +170,8 @@ int videocodec_register(const struct videocodec *codec)
- 		return -EINVAL;
- 	}
- 
--	dprintk(2,
--		"videocodec: register '%s', type: %x, flags %lx, magic %lx\n",
--		codec->name, codec->type, codec->flags, codec->magic);
-+	zrdev_dbg(zr, "videocodec: register '%s', type: %x, flags %lx, magic %lx\n",
-+		  codec->name, codec->type, codec->flags, codec->magic);
- 
- 	ptr = kzalloc(sizeof(*ptr), GFP_KERNEL);
- 	if (!ptr)
-@@ -190,13 +180,13 @@ int videocodec_register(const struct videocodec *codec)
- 
- 	if (!h) {
- 		codeclist_top = ptr;
--		dprintk(4, "videocodec: hooked in as first element\n");
-+		zrdev_dbg(zr, "videocodec: hooked in as first element\n");
- 	} else {
- 		while (h->next)
- 			h = h->next;	// find the end
- 		h->next = ptr;
--		dprintk(4, "videocodec: hooked in after '%s'\n",
--			h->codec->name);
-+		zrdev_dbg(zr, "videocodec: hooked in after '%s'\n",
-+			  h->codec->name);
- 	}
- 
- 	return 0;
-@@ -212,9 +202,8 @@ int videocodec_unregister(const struct videocodec *codec)
- 		return -EINVAL;
- 	}
- 
--	dprintk(2,
--		"videocodec: unregister '%s', type: %x, flags %lx, magic %lx\n",
--		codec->name, codec->type, codec->flags, codec->magic);
-+	zrdev_dbg(zr, "videocodec: unregister '%s', type: %x, flags %lx, magic %lx\n",
-+		  codec->name, codec->type, codec->flags, codec->magic);
- 
- 	if (!h) {
- 		zrdev_err(zr, "%s: no device left...\n", __func__);
-@@ -227,16 +216,14 @@ int videocodec_unregister(const struct videocodec *codec)
- 				zrdev_err(zr, "videocodec: '%s' is used\n", h->codec->name);
- 				return -EBUSY;
- 			}
--			dprintk(3, "videocodec: unregister '%s' is ok.\n",
--				h->codec->name);
-+			zrdev_dbg(zr, "videocodec: unregister '%s' is ok.\n",
-+				  h->codec->name);
- 			if (!prev) {
- 				codeclist_top = h->next;
--				dprintk(4,
--					"videocodec: delete first element\n");
-+				zrdev_dbg(zr, "videocodec: delete first element\n");
- 			} else {
- 				prev->next = h->next;
--				dprintk(4,
--					"videocodec: delete middle element\n");
-+				zrdev_dbg(zr, "videocodec: delete middle element\n");
- 			}
- 			kfree(h);
- 			return 0;
-diff --git a/drivers/staging/media/zoran/zr36016.c b/drivers/staging/media/zoran/zr36016.c
-index 3e3376af0cfa..afdd74e7c59f 100644
---- a/drivers/staging/media/zoran/zr36016.c
-+++ b/drivers/staging/media/zoran/zr36016.c
-@@ -22,16 +22,6 @@
- /* amount of chips attached via this driver */
- static int zr36016_codecs;
- 
--static int zr36016_debug;
--module_param(zr36016_debug, int, 0);
--MODULE_PARM_DESC(zr36016_debug, "Debug level (0-4)");
--
--#define dprintk(num, format, args...) \
--	do { \
--		if (zr36016_debug >= num) \
--			printk(format, ##args); \
--	} while (0)
--
- /* =========================================================================
-    Local hardware I/O functions:
- 
-@@ -50,7 +40,7 @@ static u8 zr36016_read(struct zr36016 *ptr, u16 reg)
- 	else
- 		zrdev_err(zr, "%s: invalid I/O setup, nothing read!\n", ptr->name);
- 
--	dprintk(4, "%s: reading from 0x%04x: %02x\n", ptr->name, reg, value);
-+	zrdev_dbg(zr, "%s: reading from 0x%04x: %02x\n", ptr->name, reg, value);
- 
- 	return value;
- }
-@@ -59,7 +49,7 @@ static void zr36016_write(struct zr36016 *ptr, u16 reg, u8 value)
- {
- 	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 
--	dprintk(4, "%s: writing 0x%02x to 0x%04x\n", ptr->name, value, reg);
-+	zrdev_dbg(zr, "%s: writing 0x%02x to 0x%04x\n", ptr->name, value, reg);
- 
- 	// just in case something is wrong...
- 	if (ptr->codec->master_data->writereg)
-@@ -84,7 +74,7 @@ static u8 zr36016_readi(struct zr36016 *ptr, u16 reg)
- 		zrdev_err(zr, "%s: invalid I/O setup, nothing read (i)!\n", ptr->name);
- 	}
- 
--	dprintk(4, "%s: reading indirect from 0x%04x: %02x\n", ptr->name, reg, value);
-+	zrdev_dbg(zr, "%s: reading indirect from 0x%04x: %02x\n", ptr->name, reg, value);
- 	return value;
- }
- 
-@@ -92,8 +82,8 @@ static void zr36016_writei(struct zr36016 *ptr, u16 reg, u8 value)
- {
- 	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 
--	dprintk(4, "%s: writing indirect 0x%02x to 0x%04x\n", ptr->name,
--		value, reg);
-+	zrdev_dbg(zr, "%s: writing indirect 0x%02x to 0x%04x\n", ptr->name,
-+		  value, reg);
- 
- 	/* just in case something is wrong... */
- 	if (ptr->codec->master_data->writereg) {
-@@ -127,14 +117,14 @@ static int zr36016_basic_test(struct zr36016 *ptr)
- {
- 	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 
--	if (zr36016_debug) {
-+	if (*KERN_INFO <= CONSOLE_LOGLEVEL_DEFAULT) {
- 		int i;
- 
- 		zr36016_writei(ptr, ZR016I_PAX_LO, 0x55);
--		dprintk(1, KERN_INFO "%s: registers: ", ptr->name);
-+		zrdev_info(zr, "%s: registers: ", ptr->name);
- 		for (i = 0; i <= 0x0b; i++)
--			dprintk(1, "%02x ", zr36016_readi(ptr, i));
--		dprintk(1, "\n");
-+			zrdev_dbg(zr, "%02x ", zr36016_readi(ptr, i));
-+		zrdev_dbg(zr, "\n");
- 	}
- 	// for testing just write 0, then the default value to a register and read
- 	// it back in both cases
-@@ -171,10 +161,11 @@ static int zr36016_pushit(struct zr36016 *ptr,
- 			   u16             len,
- 			   const char     *data)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	int i = 0;
- 
--	dprintk(4, "%s: write data block to 0x%04x (len=%d)\n",
--		ptr->name, startreg, len);
-+	zrdev_dbg(zr, "%s: write data block to 0x%04x (len=%d)\n",
-+		  ptr->name, startreg, len);
- 	while (i < len) {
- 		zr36016_writei(ptr, startreg++,  data[i++]);
- 	}
-@@ -232,8 +223,9 @@ static void zr36016_init(struct zr36016 *ptr)
- static int zr36016_set_mode(struct videocodec *codec, int mode)
- {
- 	struct zr36016 *ptr = (struct zr36016 *)codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 
--	dprintk(2, "%s: set_mode %d call\n", ptr->name, mode);
-+	zrdev_dbg(zr, "%s: set_mode %d call\n", ptr->name, mode);
- 
- 	if ((mode != CODEC_DO_EXPANSION) && (mode != CODEC_DO_COMPRESSION))
- 		return -EINVAL;
-@@ -249,11 +241,12 @@ static int zr36016_set_video(struct videocodec *codec, const struct tvnorm *norm
- 			     struct vfe_settings *cap, struct vfe_polarity *pol)
- {
- 	struct zr36016 *ptr = (struct zr36016 *)codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 
--	dprintk(2, "%s: set_video %d.%d, %d/%d-%dx%d (0x%x) call\n",
--		ptr->name, norm->h_start, norm->v_start,
--		cap->x, cap->y, cap->width, cap->height,
--		cap->decimation);
-+	zrdev_dbg(zr, "%s: set_video %d.%d, %d/%d-%dx%d (0x%x) call\n",
-+		  ptr->name, norm->h_start, norm->v_start,
-+		  cap->x, cap->y, cap->width, cap->height,
-+		  cap->decimation);
- 
- 	/* if () return -EINVAL;
- 	 * trust the master driver that it knows what it does - so
-@@ -283,9 +276,10 @@ static int zr36016_set_video(struct videocodec *codec, const struct tvnorm *norm
- static int zr36016_control(struct videocodec *codec, int type, int size, void *data)
- {
- 	struct zr36016 *ptr = (struct zr36016 *)codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 	int *ival = (int *)data;
- 
--	dprintk(2, "%s: control %d call with %d byte\n", ptr->name, type, size);
-+	zrdev_dbg(zr, "%s: control %d call with %d byte\n", ptr->name, type, size);
- 
- 	switch (type) {
- 	case CODEC_G_STATUS:	/* get last status - we don't know it ... */
-@@ -332,11 +326,12 @@ static int zr36016_control(struct videocodec *codec, int type, int size, void *d
- static int zr36016_unset(struct videocodec *codec)
- {
- 	struct zr36016 *ptr = codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 
- 	if (ptr) {
- 		/* do wee need some codec deinit here, too ???? */
- 
--		dprintk(1, "%s: finished codec #%d\n", ptr->name, ptr->num);
-+		zrdev_dbg(zr, "%s: finished codec #%d\n", ptr->name, ptr->num);
- 		kfree(ptr);
- 		codec->data = NULL;
- 
-@@ -362,7 +357,7 @@ static int zr36016_setup(struct videocodec *codec)
- 	struct zr36016 *ptr;
- 	int res;
- 
--	dprintk(2, "zr36016: initializing VFE subsystem #%d.\n", zr36016_codecs);
-+	zrdev_dbg(zr, "zr36016: initializing VFE subsystem #%d.\n", zr36016_codecs);
- 
- 	if (zr36016_codecs == MAX_CODECS) {
- 		zrdev_err(zr, "zr36016: Can't attach more codecs!\n");
-@@ -392,7 +387,7 @@ static int zr36016_setup(struct videocodec *codec)
- 	ptr->ydec = 0;
- 	zr36016_init(ptr);
- 
--	dprintk(1, KERN_INFO "%s: codec v%d attached and running\n", ptr->name, ptr->version);
-+	zrdev_info(zr, "%s: codec v%d attached and running\n", ptr->name, ptr->version);
- 
- 	return 0;
- }
-@@ -425,9 +420,8 @@ int zr36016_init_module(void)
- void zr36016_cleanup_module(void)
- {
- 	if (zr36016_codecs) {
--		dprintk(1,
--			"zr36016: something's wrong - %d codecs left somehow.\n",
--			zr36016_codecs);
-+		pr_debug("zr36016: something's wrong - %d codecs left somehow.\n",
-+			 zr36016_codecs);
- 	}
- 	videocodec_unregister(&zr36016_codec);
- }
-diff --git a/drivers/staging/media/zoran/zr36050.c b/drivers/staging/media/zoran/zr36050.c
-index 950dd79f5c81..b26b0711461c 100644
---- a/drivers/staging/media/zoran/zr36050.c
-+++ b/drivers/staging/media/zoran/zr36050.c
-@@ -29,17 +29,6 @@
- /* amount of chips attached via this driver */
- static int zr36050_codecs;
- 
--/* debugging is available via module parameter */
--static int zr36050_debug;
--module_param(zr36050_debug, int, 0);
--MODULE_PARM_DESC(zr36050_debug, "Debug level (0-4)");
--
--#define dprintk(num, format, args...) \
--	do { \
--		if (zr36050_debug >= num) \
--			printk(format, ##args); \
--	} while (0)
--
- /* =========================================================================
-    Local hardware I/O functions:
- 
-@@ -49,32 +38,32 @@ MODULE_PARM_DESC(zr36050_debug, "Debug level (0-4)");
- /* read and write functions */
- static u8 zr36050_read(struct zr36050 *ptr, u16 reg)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	u8 value = 0;
- 
- 	/* just in case something is wrong... */
- 	if (ptr->codec->master_data->readreg)
- 		value = (ptr->codec->master_data->readreg(ptr->codec, reg)) & 0xFF;
- 	else
--		dprintk(1,
--			KERN_ERR "%s: invalid I/O setup, nothing read!\n", ptr->name);
-+		zrdev_err(zr, "%s: invalid I/O setup, nothing read!\n", ptr->name);
- 
--	dprintk(4, "%s: reading from 0x%04x: %02x\n", ptr->name, reg, value);
-+	zrdev_dbg(zr, "%s: reading from 0x%04x: %02x\n", ptr->name, reg, value);
- 
- 	return value;
- }
- 
- static void zr36050_write(struct zr36050 *ptr, u16 reg, u8 value)
- {
--	dprintk(4, "%s: writing 0x%02x to 0x%04x\n", ptr->name, value, reg);
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
-+
-+	zrdev_dbg(zr, "%s: writing 0x%02x to 0x%04x\n", ptr->name, value, reg);
- 
- 	/* just in case something is wrong... */
- 	if (ptr->codec->master_data->writereg)
- 		ptr->codec->master_data->writereg(ptr->codec, reg, value);
- 	else
--		dprintk(1,
--			KERN_ERR
--			"%s: invalid I/O setup, nothing written!\n",
--			ptr->name);
-+		zrdev_err(zr, "%s: invalid I/O setup, nothing written!\n",
-+			  ptr->name);
- }
- 
- /* =========================================================================
-@@ -117,14 +106,14 @@ static u16 zr36050_read_scalefactor(struct zr36050 *ptr)
- 
- static void zr36050_wait_end(struct zr36050 *ptr)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	int i = 0;
- 
- 	while (!(zr36050_read_status1(ptr) & 0x4)) {
- 		udelay(1);
- 		if (i++ > 200000) {	// 200ms, there is for sure something wrong!!!
--			dprintk(1,
--				"%s: timeout at wait_end (last status: 0x%02x)\n",
--				ptr->name, ptr->status1);
-+			zrdev_dbg(zr, "%s: timeout at wait_end (last status: 0x%02x)\n",
-+				  ptr->name, ptr->status1);
- 			break;
- 		}
- 	}
-@@ -138,33 +127,29 @@ static void zr36050_wait_end(struct zr36050 *ptr)
- 
- static int zr36050_basic_test(struct zr36050 *ptr)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
-+
- 	zr36050_write(ptr, ZR050_SOF_IDX, 0x00);
- 	zr36050_write(ptr, ZR050_SOF_IDX + 1, 0x00);
- 	if ((zr36050_read(ptr, ZR050_SOF_IDX) |
- 	     zr36050_read(ptr, ZR050_SOF_IDX + 1)) != 0x0000) {
--		dprintk(1,
--			KERN_ERR
--			"%s: attach failed, can't connect to jpeg processor!\n",
--			ptr->name);
-+		zrdev_err(zr, "%s: attach failed, can't connect to jpeg processor!\n",
-+			  ptr->name);
- 		return -ENXIO;
- 	}
- 	zr36050_write(ptr, ZR050_SOF_IDX, 0xff);
- 	zr36050_write(ptr, ZR050_SOF_IDX + 1, 0xc0);
- 	if (((zr36050_read(ptr, ZR050_SOF_IDX) << 8) |
- 	     zr36050_read(ptr, ZR050_SOF_IDX + 1)) != 0xffc0) {
--		dprintk(1,
--			KERN_ERR
--			"%s: attach failed, can't connect to jpeg processor!\n",
--			ptr->name);
-+		zrdev_err(zr, "%s: attach failed, can't connect to jpeg processor!\n",
-+			  ptr->name);
- 		return -ENXIO;
- 	}
- 
- 	zr36050_wait_end(ptr);
- 	if ((ptr->status1 & 0x4) == 0) {
--		dprintk(1,
--			KERN_ERR
--			"%s: attach failed, jpeg processor failed (end flag)!\n",
--			ptr->name);
-+		zrdev_err(zr, "%s: attach failed, jpeg processor failed (end flag)!\n",
-+			  ptr->name);
- 		return -EBUSY;
- 	}
- 
-@@ -179,10 +164,11 @@ static int zr36050_basic_test(struct zr36050 *ptr)
- 
- static int zr36050_pushit(struct zr36050 *ptr, u16 startreg, u16 len, const char *data)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	int i = 0;
- 
--	dprintk(4, "%s: write data block to 0x%04x (len=%d)\n", ptr->name,
--		startreg, len);
-+	zrdev_dbg(zr, "%s: write data block to 0x%04x (len=%d)\n", ptr->name,
-+		  startreg, len);
- 	while (i < len)
- 		zr36050_write(ptr, startreg++, data[i++]);
- 
-@@ -305,11 +291,12 @@ static const char zr36050_decimation_v[8] = { 1, 1, 1, 0, 0, 0, 0, 0 };
- 
- static int zr36050_set_sof(struct zr36050 *ptr)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	char sof_data[34];	// max. size of register set
- 	int i;
- 
--	dprintk(3, "%s: write SOF (%dx%d, %d components)\n", ptr->name,
--		ptr->width, ptr->height, NO_OF_COMPONENTS);
-+	zrdev_dbg(zr, "%s: write SOF (%dx%d, %d components)\n", ptr->name,
-+		  ptr->width, ptr->height, NO_OF_COMPONENTS);
- 	sof_data[0] = 0xff;
- 	sof_data[1] = 0xc0;
- 	sof_data[2] = 0x00;
-@@ -336,10 +323,11 @@ static int zr36050_set_sof(struct zr36050 *ptr)
- 
- static int zr36050_set_sos(struct zr36050 *ptr)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	char sos_data[16];	// max. size of register set
- 	int i;
- 
--	dprintk(3, "%s: write SOS\n", ptr->name);
-+	zrdev_dbg(zr, "%s: write SOS\n", ptr->name);
- 	sos_data[0] = 0xff;
- 	sos_data[1] = 0xda;
- 	sos_data[2] = 0x00;
-@@ -363,9 +351,10 @@ static int zr36050_set_sos(struct zr36050 *ptr)
- 
- static int zr36050_set_dri(struct zr36050 *ptr)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	char dri_data[6];	// max. size of register set
- 
--	dprintk(3, "%s: write DRI\n", ptr->name);
-+	zrdev_dbg(zr, "%s: write DRI\n", ptr->name);
- 	dri_data[0] = 0xff;
- 	dri_data[1] = 0xdd;
- 	dri_data[2] = 0x00;
-@@ -390,7 +379,7 @@ static void zr36050_init(struct zr36050 *ptr)
- 	long bitcnt, tmp;
- 
- 	if (ptr->mode == CODEC_DO_COMPRESSION) {
--		dprintk(2, "%s: COMPRESSION SETUP\n", ptr->name);
-+		zrdev_dbg(zr, "%s: COMPRESSION SETUP\n", ptr->name);
- 
- 		/* 050 communicates with 057 in master mode */
- 		zr36050_write(ptr, ZR050_HARDWARE, ZR050_HW_MSTR);
-@@ -420,7 +409,7 @@ static void zr36050_init(struct zr36050 *ptr)
- 
- 		/* setup the fixed jpeg tables - maybe variable, though -
- 		 * (see table init section above) */
--		dprintk(3, "%s: write DQT, DHT, APP\n", ptr->name);
-+		zrdev_dbg(zr, "%s: write DQT, DHT, APP\n", ptr->name);
- 		sum += zr36050_pushit(ptr, ZR050_DQT_IDX,
- 				      sizeof(zr36050_dqt), zr36050_dqt);
- 		sum += zr36050_pushit(ptr, ZR050_DHT_IDX,
-@@ -443,8 +432,8 @@ static void zr36050_init(struct zr36050 *ptr)
- 
- 		zr36050_write(ptr, ZR050_GO, 1);	// launch codec
- 		zr36050_wait_end(ptr);
--		dprintk(2, "%s: Status after table preload: 0x%02x\n",
--			ptr->name, ptr->status1);
-+		zrdev_dbg(zr, "%s: Status after table preload: 0x%02x\n",
-+			  ptr->name, ptr->status1);
- 
- 		if ((ptr->status1 & 0x4) == 0) {
- 			zrdev_err(zr, "%s: init aborted!\n", ptr->name);
-@@ -458,9 +447,8 @@ static void zr36050_init(struct zr36050 *ptr)
- 		bitcnt = sum << 3;	/* need the size in bits */
- 
- 		tmp = bitcnt >> 16;
--		dprintk(3,
--			"%s: code: csize=%d, tot=%d, bit=%ld, highbits=%ld\n",
--			ptr->name, sum, ptr->real_code_vol, bitcnt, tmp);
-+		zrdev_dbg(zr, "%s: code: csize=%d, tot=%d, bit=%ld, highbits=%ld\n",
-+			  ptr->name, sum, ptr->real_code_vol, bitcnt, tmp);
- 		zr36050_write(ptr, ZR050_TCV_NET_HI, tmp >> 8);
- 		zr36050_write(ptr, ZR050_TCV_NET_MH, tmp & 0xff);
- 		tmp = bitcnt & 0xffff;
-@@ -471,8 +459,8 @@ static void zr36050_init(struct zr36050 *ptr)
- 		bitcnt -= ((bitcnt * 5) >> 6);	// bits without eob
- 
- 		tmp = bitcnt >> 16;
--		dprintk(3, "%s: code: nettobit=%ld, highnettobits=%ld\n",
--			ptr->name, bitcnt, tmp);
-+		zrdev_dbg(zr, "%s: code: nettobit=%ld, highnettobits=%ld\n",
-+			  ptr->name, bitcnt, tmp);
- 		zr36050_write(ptr, ZR050_TCV_DATA_HI, tmp >> 8);
- 		zr36050_write(ptr, ZR050_TCV_DATA_MH, tmp & 0xff);
- 		tmp = bitcnt & 0xffff;
-@@ -490,7 +478,7 @@ static void zr36050_init(struct zr36050 *ptr)
- 			      ((ptr->app.len > 0) ? ZR050_ME_APP : 0) |
- 			      ((ptr->com.len > 0) ? ZR050_ME_COM : 0));
- 	} else {
--		dprintk(2, "%s: EXPANSION SETUP\n", ptr->name);
-+		zrdev_dbg(zr, "%s: EXPANSION SETUP\n", ptr->name);
- 
- 		/* 050 communicates with 055 in master mode */
- 		zr36050_write(ptr, ZR050_HARDWARE,
-@@ -503,7 +491,7 @@ static void zr36050_init(struct zr36050 *ptr)
- 		zr36050_write(ptr, ZR050_INT_REQ_0, 0);
- 		zr36050_write(ptr, ZR050_INT_REQ_1, 3);	// low 2 bits always 1
- 
--		dprintk(3, "%s: write DHT\n", ptr->name);
-+		zrdev_dbg(zr, "%s: write DHT\n", ptr->name);
- 		zr36050_pushit(ptr, ZR050_DHT_IDX, sizeof(zr36050_dht),
- 			       zr36050_dht);
- 
-@@ -512,8 +500,8 @@ static void zr36050_init(struct zr36050 *ptr)
- 
- 		zr36050_write(ptr, ZR050_GO, 1);	// launch codec
- 		zr36050_wait_end(ptr);
--		dprintk(2, "%s: Status after table preload: 0x%02x\n",
--			ptr->name, ptr->status1);
-+		zrdev_dbg(zr, "%s: Status after table preload: 0x%02x\n",
-+			  ptr->name, ptr->status1);
- 
- 		if ((ptr->status1 & 0x4) == 0) {
- 			zrdev_err(zr, "%s: init aborted!\n", ptr->name);
-@@ -540,8 +528,9 @@ static void zr36050_init(struct zr36050 *ptr)
- static int zr36050_set_mode(struct videocodec *codec, int mode)
- {
- 	struct zr36050 *ptr = (struct zr36050 *)codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 
--	dprintk(2, "%s: set_mode %d call\n", ptr->name, mode);
-+	zrdev_dbg(zr, "%s: set_mode %d call\n", ptr->name, mode);
- 
- 	if ((mode != CODEC_DO_EXPANSION) && (mode != CODEC_DO_COMPRESSION))
- 		return -EINVAL;
-@@ -557,12 +546,13 @@ static int zr36050_set_video(struct videocodec *codec, const struct tvnorm *norm
- 			     struct vfe_settings *cap, struct vfe_polarity *pol)
- {
- 	struct zr36050 *ptr = (struct zr36050 *)codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 	int size;
- 
--	dprintk(2, "%s: set_video %d.%d, %d/%d-%dx%d (0x%x) q%d call\n",
--		ptr->name, norm->h_start, norm->v_start,
--		cap->x, cap->y, cap->width, cap->height,
--		cap->decimation, cap->quality);
-+	zrdev_dbg(zr, "%s: set_video %d.%d, %d/%d-%dx%d (0x%x) q%d call\n",
-+		  ptr->name, norm->h_start, norm->v_start,
-+		  cap->x, cap->y, cap->width, cap->height,
-+		  cap->decimation, cap->quality);
- 	/* if () return -EINVAL;
- 	 * trust the master driver that it knows what it does - so
- 	 * we allow invalid startx/y and norm for now ... */
-@@ -595,10 +585,11 @@ static int zr36050_set_video(struct videocodec *codec, const struct tvnorm *norm
- static int zr36050_control(struct videocodec *codec, int type, int size, void *data)
- {
- 	struct zr36050 *ptr = (struct zr36050 *)codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 	int *ival = (int *)data;
- 
--	dprintk(2, "%s: control %d call with %d byte\n", ptr->name, type,
--		size);
-+	zrdev_dbg(zr, "%s: control %d call with %d byte\n", ptr->name, type,
-+		  size);
- 
- 	switch (type) {
- 	case CODEC_G_STATUS:	/* get last status */
-@@ -714,12 +705,12 @@ static int zr36050_control(struct videocodec *codec, int type, int size, void *d
- static int zr36050_unset(struct videocodec *codec)
- {
- 	struct zr36050 *ptr = codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 
- 	if (ptr) {
- 		/* do wee need some codec deinit here, too ???? */
- 
--		dprintk(1, "%s: finished codec #%d\n", ptr->name,
--			ptr->num);
-+		zrdev_dbg(zr, "%s: finished codec #%d\n", ptr->name, ptr->num);
- 		kfree(ptr);
- 		codec->data = NULL;
- 
-@@ -742,14 +733,14 @@ static int zr36050_unset(struct videocodec *codec)
- static int zr36050_setup(struct videocodec *codec)
- {
- 	struct zr36050 *ptr;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 	int res;
- 
--	dprintk(2, "zr36050: initializing MJPEG subsystem #%d.\n",
--		zr36050_codecs);
-+	zrdev_dbg(zr, "zr36050: initializing MJPEG subsystem #%d.\n",
-+		  zr36050_codecs);
- 
- 	if (zr36050_codecs == MAX_CODECS) {
--		dprintk(1,
--			KERN_ERR "zr36050: Can't attach more codecs!\n");
-+		zrdev_err(zr, "zr36050: Can't attach more codecs!\n");
- 		return -ENOSPC;
- 	}
- 	//mem structure init
-@@ -790,8 +781,7 @@ static int zr36050_setup(struct videocodec *codec)
- 
- 	zr36050_init(ptr);
- 
--	dprintk(1, KERN_INFO "%s: codec attached and running\n",
--		ptr->name);
-+	zrdev_info(zr, "%s: codec attached and running\n", ptr->name);
- 
- 	return 0;
- }
-@@ -824,9 +814,8 @@ int zr36050_init_module(void)
- void zr36050_cleanup_module(void)
- {
- 	if (zr36050_codecs) {
--		dprintk(1,
--			"zr36050: something's wrong - %d codecs left somehow.\n",
--			zr36050_codecs);
-+		pr_debug("zr36050: something's wrong - %d codecs left somehow.\n",
-+			 zr36050_codecs);
- 	}
- 	videocodec_unregister(&zr36050_codec);
- }
-diff --git a/drivers/staging/media/zoran/zr36060.c b/drivers/staging/media/zoran/zr36060.c
-index c09910669585..81e8bfd05d6a 100644
---- a/drivers/staging/media/zoran/zr36060.c
-+++ b/drivers/staging/media/zoran/zr36060.c
-@@ -32,16 +32,6 @@ static bool low_bitrate;
- module_param(low_bitrate, bool, 0);
- MODULE_PARM_DESC(low_bitrate, "Buz compatibility option, halves bitrate");
- 
--static int zr36060_debug;
--module_param(zr36060_debug, int, 0);
--MODULE_PARM_DESC(zr36060_debug, "Debug level (0-4)");
--
--#define dprintk(num, format, args...) \
--	do { \
--		if (zr36060_debug >= num) \
--			printk(format, ##args); \
--	} while (0)
--
- /* =========================================================================
-  * Local hardware I/O functions:
-  * read/write via codec layer (registers are located in the master device)
-@@ -66,7 +56,7 @@ static void zr36060_write(struct zr36060 *ptr, u16 reg, u8 value)
- {
- 	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 
--	dprintk(4, "0x%02x @0x%04x\n", value, reg);
-+	zrdev_dbg(zr, "0x%02x @0x%04x\n", value, reg);
- 
- 	// just in case something is wrong...
- 	if (ptr->codec->master_data->writereg)
-@@ -104,14 +94,14 @@ static u16 zr36060_read_scalefactor(struct zr36060 *ptr)
- /* wait if codec is ready to proceed (end of processing) or time is over */
- static void zr36060_wait_end(struct zr36060 *ptr)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	int i = 0;
- 
- 	while (zr36060_read_status(ptr) & ZR060_CFSR_BUSY) {
- 		udelay(1);
- 		if (i++ > 200000) {	// 200ms, there is for sure something wrong!!!
--			dprintk(1,
--				"%s: timeout at wait_end (last status: 0x%02x)\n",
--				ptr->name, ptr->status);
-+			zrdev_dbg(zr, "%s: timeout at wait_end (last status: 0x%02x)\n",
-+				  ptr->name, ptr->status);
- 			break;
- 		}
- 	}
-@@ -140,10 +130,11 @@ static int zr36060_basic_test(struct zr36060 *ptr)
- /* simple loop for pushing the init datasets */
- static int zr36060_pushit(struct zr36060 *ptr, u16 startreg, u16 len, const char *data)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	int i = 0;
- 
--	dprintk(4, "%s: write data block to 0x%04x (len=%d)\n", ptr->name,
--		startreg, len);
-+	zrdev_dbg(zr, "%s: write data block to 0x%04x (len=%d)\n", ptr->name,
-+		  startreg, len);
- 	while (i < len)
- 		zr36060_write(ptr, startreg++, data[i++]);
- 
-@@ -254,11 +245,12 @@ static const char zr36060_decimation_v[8] = { 1, 1, 1, 0, 0, 0, 0, 0 };
- /* SOF (start of frame) segment depends on width, height and sampling ratio of each color component */
- static int zr36060_set_sof(struct zr36060 *ptr)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	char sof_data[34];	// max. size of register set
- 	int i;
- 
--	dprintk(3, "%s: write SOF (%dx%d, %d components)\n", ptr->name,
--		ptr->width, ptr->height, NO_OF_COMPONENTS);
-+	zrdev_dbg(zr, "%s: write SOF (%dx%d, %d components)\n", ptr->name,
-+		  ptr->width, ptr->height, NO_OF_COMPONENTS);
- 	sof_data[0] = 0xff;
- 	sof_data[1] = 0xc0;
- 	sof_data[2] = 0x00;
-@@ -282,10 +274,11 @@ static int zr36060_set_sof(struct zr36060 *ptr)
- /* SOS (start of scan) segment depends on the used scan components of each color component */
- static int zr36060_set_sos(struct zr36060 *ptr)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	char sos_data[16];	// max. size of register set
- 	int i;
- 
--	dprintk(3, "%s: write SOS\n", ptr->name);
-+	zrdev_dbg(zr, "%s: write SOS\n", ptr->name);
- 	sos_data[0] = 0xff;
- 	sos_data[1] = 0xda;
- 	sos_data[2] = 0x00;
-@@ -307,9 +300,10 @@ static int zr36060_set_sos(struct zr36060 *ptr)
- /* DRI (define restart interval) */
- static int zr36060_set_dri(struct zr36060 *ptr)
- {
-+	struct zoran *zr = videocodec_to_zoran(ptr->codec);
- 	char dri_data[6];	// max. size of register set
- 
--	dprintk(3, "%s: write DRI\n", ptr->name);
-+	zrdev_dbg(zr, "%s: write DRI\n", ptr->name);
- 	dri_data[0] = 0xff;
- 	dri_data[1] = 0xdd;
- 	dri_data[2] = 0x00;
-@@ -329,7 +323,7 @@ static void zr36060_init(struct zr36060 *ptr)
- 	long bitcnt, tmp;
- 
- 	if (ptr->mode == CODEC_DO_COMPRESSION) {
--		dprintk(2, "%s: COMPRESSION SETUP\n", ptr->name);
-+		zrdev_dbg(zr, "%s: COMPRESSION SETUP\n", ptr->name);
- 
- 		zr36060_write(ptr, ZR060_LOAD, ZR060_LOAD_SYNC_RST);
- 
-@@ -382,9 +376,8 @@ static void zr36060_init(struct zr36060 *ptr)
- 		bitcnt = sum << 3;	/* need the size in bits */
- 
- 		tmp = bitcnt >> 16;
--		dprintk(3,
--			"%s: code: csize=%d, tot=%d, bit=%ld, highbits=%ld\n",
--			ptr->name, sum, ptr->real_code_vol, bitcnt, tmp);
-+		zrdev_dbg(zr, "%s: code: csize=%d, tot=%d, bit=%ld, highbits=%ld\n",
-+			  ptr->name, sum, ptr->real_code_vol, bitcnt, tmp);
- 		zr36060_write(ptr, ZR060_TCV_NET_HI, tmp >> 8);
- 		zr36060_write(ptr, ZR060_TCV_NET_MH, tmp & 0xff);
- 		tmp = bitcnt & 0xffff;
-@@ -395,8 +388,8 @@ static void zr36060_init(struct zr36060 *ptr)
- 		bitcnt -= ((bitcnt * 5) >> 6);	// bits without eob
- 
- 		tmp = bitcnt >> 16;
--		dprintk(3, "%s: code: nettobit=%ld, highnettobits=%ld\n",
--			ptr->name, bitcnt, tmp);
-+		zrdev_dbg(zr, "%s: code: nettobit=%ld, highnettobits=%ld\n",
-+			  ptr->name, bitcnt, tmp);
- 		zr36060_write(ptr, ZR060_TCV_DATA_HI, tmp >> 8);
- 		zr36060_write(ptr, ZR060_TCV_DATA_MH, tmp & 0xff);
- 		tmp = bitcnt & 0xffff;
-@@ -414,7 +407,7 @@ static void zr36060_init(struct zr36060 *ptr)
- 		zr36060_write(ptr, ZR060_VCR, ZR060_VCR_RANGE);
- 
- 	} else {
--		dprintk(2, "%s: EXPANSION SETUP\n", ptr->name);
-+		zrdev_dbg(zr, "%s: EXPANSION SETUP\n", ptr->name);
- 
- 		zr36060_write(ptr, ZR060_LOAD, ZR060_LOAD_SYNC_RST);
- 
-@@ -447,7 +440,7 @@ static void zr36060_init(struct zr36060 *ptr)
- 	/* Load the tables */
- 	zr36060_write(ptr, ZR060_LOAD, ZR060_LOAD_SYNC_RST | ZR060_LOAD_LOAD);
- 	zr36060_wait_end(ptr);
--	dprintk(2, "%s: Status after table preload: 0x%02x\n", ptr->name, ptr->status);
-+	zrdev_dbg(zr, "%s: Status after table preload: 0x%02x\n", ptr->name, ptr->status);
- 
- 	if (ptr->status & ZR060_CFSR_BUSY) {
- 		zrdev_err(zr, "%s: init aborted!\n", ptr->name);
-@@ -467,8 +460,9 @@ static void zr36060_init(struct zr36060 *ptr)
- static int zr36060_set_mode(struct videocodec *codec, int mode)
- {
- 	struct zr36060 *ptr = (struct zr36060 *)codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 
--	dprintk(2, "%s: set_mode %d call\n", ptr->name, mode);
-+	zrdev_dbg(zr, "%s: set_mode %d call\n", ptr->name, mode);
- 
- 	if (mode != CODEC_DO_EXPANSION && mode != CODEC_DO_COMPRESSION)
- 		return -EINVAL;
-@@ -484,11 +478,12 @@ static int zr36060_set_video(struct videocodec *codec, const struct tvnorm *norm
- 			     struct vfe_settings *cap, struct vfe_polarity *pol)
- {
- 	struct zr36060 *ptr = (struct zr36060 *)codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 	u32 reg;
- 	int size;
- 
--	dprintk(2, "%s: set_video %d/%d-%dx%d (%%%d) call\n", ptr->name,
--		cap->x, cap->y, cap->width, cap->height, cap->decimation);
-+	zrdev_dbg(zr, "%s: set_video %d/%d-%dx%d (%%%d) call\n", ptr->name,
-+		  cap->x, cap->y, cap->width, cap->height, cap->decimation);
- 
- 	/* if () return -EINVAL;
- 	 * trust the master driver that it knows what it does - so
-@@ -643,10 +638,11 @@ static int zr36060_set_video(struct videocodec *codec, const struct tvnorm *norm
- static int zr36060_control(struct videocodec *codec, int type, int size, void *data)
- {
- 	struct zr36060 *ptr = (struct zr36060 *)codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 	int *ival = (int *)data;
- 
--	dprintk(2, "%s: control %d call with %d byte\n", ptr->name, type,
--		size);
-+	zrdev_dbg(zr, "%s: control %d call with %d byte\n", ptr->name, type,
-+		  size);
- 
- 	switch (type) {
- 	case CODEC_G_STATUS:	/* get last status */
-@@ -759,11 +755,12 @@ static int zr36060_control(struct videocodec *codec, int type, int size, void *d
- static int zr36060_unset(struct videocodec *codec)
- {
- 	struct zr36060 *ptr = codec->data;
-+	struct zoran *zr = videocodec_to_zoran(codec);
- 
- 	if (ptr) {
- 		/* do wee need some codec deinit here, too ???? */
- 
--		dprintk(1, "%s: finished codec #%d\n", ptr->name, ptr->num);
-+		zrdev_dbg(zr, "%s: finished codec #%d\n", ptr->name, ptr->num);
- 		kfree(ptr);
- 		codec->data = NULL;
- 
-@@ -787,7 +784,7 @@ static int zr36060_setup(struct videocodec *codec)
- 	struct zr36060 *ptr;
- 	int res;
- 
--	dprintk(2, "zr36060: initializing MJPEG subsystem #%d.\n", zr36060_codecs);
-+	zrdev_dbg(zr, "zr36060: initializing MJPEG subsystem #%d.\n", zr36060_codecs);
- 
- 	if (zr36060_codecs == MAX_CODECS) {
- 		zrdev_err(zr, "zr36060: Can't attach more codecs!\n");
-@@ -830,7 +827,7 @@ static int zr36060_setup(struct videocodec *codec)
- 
- 	zr36060_init(ptr);
- 
--	dprintk(1, KERN_INFO "%s: codec attached and running\n", ptr->name);
-+	zrdev_info(zr, "%s: codec attached and running\n", ptr->name);
- 
- 	return 0;
- }
-@@ -859,9 +856,8 @@ int zr36060_init_module(void)
- void zr36060_cleanup_module(void)
- {
- 	if (zr36060_codecs) {
--		dprintk(1,
--			"zr36060: something's wrong - %d codecs left somehow.\n",
--			zr36060_codecs);
-+		pr_debug("zr36060: something's wrong - %d codecs left somehow.\n",
-+			 zr36060_codecs);
- 	}
- 
- 	/* however, we can't just stay alive */
+vim +/master +55 drivers/staging/media/zoran/videocodec.c
+
+5e195bbddabdd9 Corentin Labbe 2020-09-25   47  struct videocodec *videocodec_attach(struct videocodec_master *master)
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   48  {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   49  	struct codec_list *h = codeclist_top;
+a0a095d4ab6241 Ian Cowan      2022-04-23  @50  	struct zoran *zr = videocodec_master_to_zoran(master);
+                                                                                              ^^^^^^
+Dereferenced inside function call.
+
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   51  	struct attached_list *a, *ptr;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   52  	struct videocodec *codec;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   53  	int res;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   54  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  @55  	if (!master) {
+                                                    ^^^^^^^
+Checked too late.  The "master" pointer can't actually be NULL so just
+delete this if statement.
+
+a0a095d4ab6241 Ian Cowan      2022-04-23   56  		zrdev_err(zr, "%s: no data\n", __func__);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   57  		return NULL;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   58  	}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   59  
+a0a095d4ab6241 Ian Cowan      2022-04-23   60  	zrdev_dbg(zr, "%s: '%s', flags %lx, magic %lx\n", __func__,
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   61  		  master->name, master->flags, master->magic);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   62  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   63  	if (!h) {
+a0a095d4ab6241 Ian Cowan      2022-04-23   64  		zrdev_err(zr, "%s: no device available\n", __func__);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   65  		return NULL;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   66  	}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   67  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   68  	while (h) {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   69  		// attach only if the slave has at least the flags
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   70  		// expected by the master
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   71  		if ((master->flags & h->codec->flags) == master->flags) {
+5e195bbddabdd9 Corentin Labbe 2020-09-25   72  			dprintk(4, "%s: try '%s'\n", __func__, h->codec->name);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   73  
+5e195bbddabdd9 Corentin Labbe 2020-09-25   74  			codec = kmemdup(h->codec, sizeof(struct videocodec), GFP_KERNEL);
+5e195bbddabdd9 Corentin Labbe 2020-09-25   75  			if (!codec)
+fe047de480ca23 Corentin Labbe 2021-12-14   76  				goto out_kfree;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   77  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   78  			res = strlen(codec->name);
+5e195bbddabdd9 Corentin Labbe 2020-09-25   79  			snprintf(codec->name + res, sizeof(codec->name) - res, "[%d]", h->attached);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   80  			codec->master_data = master;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   81  			res = codec->setup(codec);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   82  			if (res == 0) {
+5e195bbddabdd9 Corentin Labbe 2020-09-25   83  				dprintk(3, "%s: '%s'\n", __func__, codec->name);
+5e195bbddabdd9 Corentin Labbe 2020-09-25   84  				ptr = kzalloc(sizeof(*ptr), GFP_KERNEL);
+5e195bbddabdd9 Corentin Labbe 2020-09-25   85  				if (!ptr)
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   86  					goto out_kfree;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   87  				ptr->codec = codec;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   88  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   89  				a = h->list;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   90  				if (!a) {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   91  					h->list = ptr;
+5e195bbddabdd9 Corentin Labbe 2020-09-25   92  					dprintk(4, "videocodec: first element\n");
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   93  				} else {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   94  					while (a->next)
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   95  						a = a->next;	// find end
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   96  					a->next = ptr;
+5e195bbddabdd9 Corentin Labbe 2020-09-25   97  					dprintk(4, "videocodec: in after '%s'\n", h->codec->name);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   98  				}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25   99  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  100  				h->attached += 1;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  101  				return codec;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  102  			} else {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  103  				kfree(codec);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  104  			}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  105  		}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  106  		h = h->next;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  107  	}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  108  
+a0a095d4ab6241 Ian Cowan      2022-04-23  109  	zrdev_err(zr, "%s: no codec found!\n", __func__);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  110  	return NULL;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  111  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  112   out_kfree:
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  113  	kfree(codec);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  114  	return NULL;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  115  }
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  116  
+5e195bbddabdd9 Corentin Labbe 2020-09-25  117  int videocodec_detach(struct videocodec *codec)
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  118  {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  119  	struct codec_list *h = codeclist_top;
+a0a095d4ab6241 Ian Cowan      2022-04-23 @120  	struct zoran *zr = videocodec_to_zoran(codec);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  121  	struct attached_list *a, *prev;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  122  	int res;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  123  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25 @124  	if (!codec) {
+
+The "codec" variable can be NULL so this code can crash.  Move the
+dereference after the check.
+
+a0a095d4ab6241 Ian Cowan      2022-04-23  125  		zrdev_err(zr, "%s: no data\n", __func__);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  126  		return -EINVAL;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  127  	}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  128  
+5e195bbddabdd9 Corentin Labbe 2020-09-25  129  	dprintk(2, "%s: '%s', type: %x, flags %lx, magic %lx\n", __func__,
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  130  		codec->name, codec->type, codec->flags, codec->magic);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  131  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  132  	if (!h) {
+a0a095d4ab6241 Ian Cowan      2022-04-23  133  		zrdev_err(zr, "%s: no device left...\n", __func__);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  134  		return -ENXIO;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  135  	}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  136  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  137  	while (h) {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  138  		a = h->list;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  139  		prev = NULL;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  140  		while (a) {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  141  			if (codec == a->codec) {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  142  				res = a->codec->unset(a->codec);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  143  				if (res >= 0) {
+5e195bbddabdd9 Corentin Labbe 2020-09-25  144  					dprintk(3, "%s: '%s'\n", __func__, a->codec->name);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  145  					a->codec->master_data = NULL;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  146  				} else {
+a0a095d4ab6241 Ian Cowan      2022-04-23  147  					zrdev_err(zr, "%s: '%s'\n", __func__, a->codec->name);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  148  					a->codec->master_data = NULL;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  149  				}
+5e195bbddabdd9 Corentin Labbe 2020-09-25  150  				if (!prev) {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  151  					h->list = a->next;
+5e195bbddabdd9 Corentin Labbe 2020-09-25  152  					dprintk(4, "videocodec: delete first\n");
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  153  				} else {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  154  					prev->next = a->next;
+5e195bbddabdd9 Corentin Labbe 2020-09-25  155  					dprintk(4, "videocodec: delete middle\n");
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  156  				}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  157  				kfree(a->codec);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  158  				kfree(a);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  159  				h->attached -= 1;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  160  				return 0;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  161  			}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  162  			prev = a;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  163  			a = a->next;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  164  		}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  165  		h = h->next;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  166  	}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  167  
+a0a095d4ab6241 Ian Cowan      2022-04-23  168  	zrdev_err(zr, "%s: given codec not found!\n", __func__);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  169  	return -EINVAL;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  170  }
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  171  
+5e195bbddabdd9 Corentin Labbe 2020-09-25  172  int videocodec_register(const struct videocodec *codec)
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  173  {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  174  	struct codec_list *ptr, *h = codeclist_top;
+a0a095d4ab6241 Ian Cowan      2022-04-23 @175  	struct zoran *zr = videocodec_to_zoran((struct videocodec *)codec);
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Dereference
+
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  176  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25 @177  	if (!codec) {
+
+Check
+
+a0a095d4ab6241 Ian Cowan      2022-04-23  178  		zrdev_err(zr, "%s: no data!\n", __func__);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  179  		return -EINVAL;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  180  	}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  181  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  182  	dprintk(2,
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  183  		"videocodec: register '%s', type: %x, flags %lx, magic %lx\n",
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  184  		codec->name, codec->type, codec->flags, codec->magic);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  185  
+5e195bbddabdd9 Corentin Labbe 2020-09-25  186  	ptr = kzalloc(sizeof(*ptr), GFP_KERNEL);
+5e195bbddabdd9 Corentin Labbe 2020-09-25  187  	if (!ptr)
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  188  		return -ENOMEM;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  189  	ptr->codec = codec;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  190  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  191  	if (!h) {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  192  		codeclist_top = ptr;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  193  		dprintk(4, "videocodec: hooked in as first element\n");
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  194  	} else {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  195  		while (h->next)
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  196  			h = h->next;	// find the end
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  197  		h->next = ptr;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  198  		dprintk(4, "videocodec: hooked in after '%s'\n",
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  199  			h->codec->name);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  200  	}
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  201  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  202  	return 0;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  203  }
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  204  
+5e195bbddabdd9 Corentin Labbe 2020-09-25  205  int videocodec_unregister(const struct videocodec *codec)
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  206  {
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  207  	struct codec_list *prev = NULL, *h = codeclist_top;
+a0a095d4ab6241 Ian Cowan      2022-04-23 @208  	struct zoran *zr = videocodec_to_zoran((struct videocodec *)codec);
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Dereference
+
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  209  
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25 @210  	if (!codec) {
+
+Check
+
+a0a095d4ab6241 Ian Cowan      2022-04-23  211  		zrdev_err(zr, "%s: no data!\n", __func__);
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  212  		return -EINVAL;
+61c3b19f7b9eb7 Corentin Labbe 2020-09-25  213  	}
+
 -- 
-2.35.1
+0-DAY CI Kernel Test Service
+https://01.org/lkp
 
 
 
