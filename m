@@ -2,105 +2,107 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id BB40D57D967
-	for <lists+mjpeg-users@lfdr.de>; Fri, 22 Jul 2022 06:19:36 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1A0F357DEE6
+	for <lists+mjpeg-users@lfdr.de>; Fri, 22 Jul 2022 12:08:29 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1oEk8O-0000Dg-G6; Fri, 22 Jul 2022 04:19:29 +0000
+	id 1oEpa4-00075u-5S; Fri, 22 Jul 2022 10:08:23 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <abhijeet.srivastava2308@gmail.com>)
- id 1oEa7P-0000vn-UY
- for mjpeg-users@lists.sourceforge.net; Thu, 21 Jul 2022 17:37:46 +0000
+ (envelope-from <philipp.g.hortmann@gmail.com>) id 1oEkgn-0001KP-Q8
+ for mjpeg-users@lists.sourceforge.net; Fri, 22 Jul 2022 04:55:01 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:MIME-Version:Message-Id:
- Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
+ From:References:Cc:To:Subject:MIME-Version:Date:Message-ID:Sender:Reply-To:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=7A7f3vsCoMPD+oJ+DRhT8m5bm216n3txZjp85zwns54=; b=O6SDN+vN3aP15kn5Zu3vZZeXnm
- gIJtNQnuYNfVXdc/EoG/mza2G8fQ4twBhcDZYgAWP0Kz+lSW2MUieOntMQh4YQ1HU2WPsWfnyLrd7
- qWuVs1COwHCCLt0QvHixJGZfF7ZIjPQz7Ttxksh+TNRMDGFuKuRSxAAr9lMSGi10WwUU=;
+ bh=BAspDEPCtXjW6B387M1BEwowk25i6EDgUSDlagLj1Hk=; b=UJdQp/WAC94EQCtPUJskmoE4fM
+ gd1z4uk9qiYt4PhAjEiYMMGvGwK+eJoWYInROsQCF3TgdeFUBg6gFcyxWTx6+dlc8ZyLhsrESTd1A
+ uf8hI//1lwDF2VK50WbMAWsbywF2mA8I4Ali+ov0jHZByH4nm8i/fZftCiKBJbDO5eNY=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:MIME-Version:Message-Id:Date:Subject:Cc:To:From
- :Sender:Reply-To:Content-Type:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=7A7f3vsCoMPD+oJ+DRhT8m5bm216n3txZjp85zwns54=; b=d
- u9+9I4ikJWKLJTMhZnOniKqe1u6ee5trtChjt/+W+n0MamQPNfCitZq1jExBi7HxrwQlsnY6qv7Mh
- Sx17iovLJP5ZhjoD895bHyEuare4QHWgR9cap0m4VQVLy5QGZ7eeqUJfJ9DHz+zjY48oAtOVYlTzA
- QLHEmPFp+eotMbts=;
-Received: from mail-pj1-f53.google.com ([209.85.216.53])
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:From:References:Cc:To:
+ Subject:MIME-Version:Date:Message-ID:Sender:Reply-To:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=BAspDEPCtXjW6B387M1BEwowk25i6EDgUSDlagLj1Hk=; b=YmG0C1wbJVI65Gz0dlZdh9WH5h
+ iGGA0OfjoxjAvbURWOUAhtGrTDAXamZFLpheGTnwz0pYkV1R2Gx5IifdQ5knr6SzqQF9rl4SxuaVG
+ EDueDUiG1rpivmOZ+zKf/bFzvem2zGbOWnZFoDI9PaP59DanuNqvlkRoaPb0CRnfcuPs=;
+Received: from mail-ej1-f48.google.com ([209.85.218.48])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.94.2)
- id 1oEa7M-0007KU-Q4
- for mjpeg-users@lists.sourceforge.net; Thu, 21 Jul 2022 17:37:46 +0000
-Received: by mail-pj1-f53.google.com with SMTP id
- q43-20020a17090a17ae00b001f1f67e053cso2055271pja.4
- for <mjpeg-users@lists.sourceforge.net>; Thu, 21 Jul 2022 10:37:44 -0700 (PDT)
+ id 1oEkgj-0004QD-1j
+ for mjpeg-users@lists.sourceforge.net; Fri, 22 Jul 2022 04:55:01 +0000
+Received: by mail-ej1-f48.google.com with SMTP id j22so6667759ejs.2
+ for <mjpeg-users@lists.sourceforge.net>; Thu, 21 Jul 2022 21:54:56 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=7A7f3vsCoMPD+oJ+DRhT8m5bm216n3txZjp85zwns54=;
- b=fcxHtD+v0Oc9pKDm4ZTw/rm1K57I0OQz/UHDeHsDbMw+3Td+wBMXFhXOHEGrAhrxr3
- SLLB/p1ps0OE6wLB8PRZh26P8D25wo2Vh8f8aZ1YIclS6UbuStT/fV+15MWMKgS3PUt/
- EkHav+1hzaMnAMZyRndLXSlViTpoZvO7c6qGu7vztPAHHScqrmqgrJhLD0hhq6yZNi1k
- 5ogKzoifhm4vADyYuT5/WqSQGRZOLHZoDG0iDh1Q3HO/nu5Q2azJ7e99v+Cbyu+Pdlsy
- 9Bz6MPEmHJ5aBGbIwP5pMfhTZ17GC8Xv73ZuVfYmjXxw22bzndmo76HMMlLuF8TFpNum
- FJjg==
+ h=message-id:date:mime-version:user-agent:subject:content-language:to
+ :cc:references:from:in-reply-to:content-transfer-encoding;
+ bh=BAspDEPCtXjW6B387M1BEwowk25i6EDgUSDlagLj1Hk=;
+ b=LGnXKOwviOg2k81AVWVpNLFmzOUc5v70JFyf7x43iWW2Hh0JUjh2YK4xmryjna91dF
+ ZucFalVj9ZG/7e8avCiu9XE5b1O4rX3UEGx3wj4uIj4g1OAX5d2sfDZtzQz2WADF0GI/
+ SjnazoFgrEmEbXuZM/h2zjjr+X61q+OwGTwmoXFevCYp5gWTKHudLHabEJGW8wcwmhtr
+ 35Dbfu7NAaLJ/zDMp9nbpTvnN/0KQYpFtK5r8LhLiqFjxSZUS+8PmmIbHo/URaFT6mnX
+ qnp7wwq00SnFpHD/3ZIQQF0EAULCUTJYdaR1sAr5RsmwCA3piXhbaLj3R1kr80JwxU1D
+ B3qw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20210112;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ h=x-gm-message-state:message-id:date:mime-version:user-agent:subject
+ :content-language:to:cc:references:from:in-reply-to
  :content-transfer-encoding;
- bh=7A7f3vsCoMPD+oJ+DRhT8m5bm216n3txZjp85zwns54=;
- b=2ds/YdlM60VUrWw/cUpCXjS1/mqZkbiTYNw90E3CGFUpBdABhgob2tTaa1XQmP8NX5
- vMN3yxgPLlsNEN/YBlzs7NDdx89Dcb5PMvX744WcnfF3OCQWi/RRs3U6DgevmQhp/rBx
- gRK+DhiaGfdwi3wPp0f4Q4alvQ5uldcxq1tdMAytlSQ9GOB8fOe323a4R9AhCUMI7rEq
- t8L/8I4nP0ldlIdzZP+Kf2vJgpyP4mSS+3+5QhKZgK8IAJwjwh0RQeP4ASFuEEvEojf9
- vurIUzqTWupcIQPyYeIhlXeV+hp9ngahv6W9lDottRYzAQFbKzHhDAfvZMD9OMbCqE31
- AEWw==
-X-Gm-Message-State: AJIora9hTgAv3BsOFK3pZxkI5EY1Wzp3EhMeUTWDPF86RgKE5vbGA9RD
- MWJ2FNhUCnfkYJ6TPkqWBic=
-X-Google-Smtp-Source: AGRyM1uHlIPUVPRS+0S6K83Tv/R6O1KC9VAqTt4sA26lM1hbFUgDjkfUujDhCqIiUbzhOB/8olB6fA==
-X-Received: by 2002:a17:90b:4b81:b0:1ef:cd2c:bf2e with SMTP id
- lr1-20020a17090b4b8100b001efcd2cbf2emr12282986pjb.137.1658425059113; 
- Thu, 21 Jul 2022 10:37:39 -0700 (PDT)
-Received: from localhost.localdomain ([2405:201:d01c:7038:1b61:a224:b8d7:290b])
- by smtp.googlemail.com with ESMTPSA id
- q9-20020a17090a7a8900b001f219c5ae7dsm1711714pjf.31.2022.07.21.10.37.36
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 21 Jul 2022 10:37:38 -0700 (PDT)
-From: Abhijeet Srivastava <abhijeet.srivastava2308@gmail.com>
-To: 
-Date: Thu, 21 Jul 2022 23:07:22 +0530
-Message-Id: <20220721173729.63844-1-abhijeet.srivastava2308@gmail.com>
-X-Mailer: git-send-email 2.34.1
+ bh=BAspDEPCtXjW6B387M1BEwowk25i6EDgUSDlagLj1Hk=;
+ b=0DOICEg/fQIP2/Snq2i8x/zxz4sGuim0/Ox/wnCRvgmcNn9bCAGXcH2wKgxCn17xSG
+ iEtUJEX9ryLlLh69qikbI6Jvpoz2/AHVdvLVO2vCQx1ZEkCp1YbFOQtGWMnABE4EV9Y1
+ y1TpPf5tbDCPRtAEJvZRki1GKTNVnvZzG5/uaHw9x3qBfCGGMZBCqpIW4T2Lz0VgJD27
+ z5MqvZ9geWTNe3V0WyUNTld/sKiDjsHyUZEQ7AfCyaxrbsLXzyKGcOIIgDX2draF6lPx
+ /h+fgW11DVYg6aGTZ5hUhBBqmLkh6xhI01A1SPJhaZ/DmbK3P96Y6vral929HV/eZay9
+ /GjQ==
+X-Gm-Message-State: AJIora8JAroD1LiPSOhk6GO9pBlzhnKKLjMK74IoXT8F+1sQsRL81kXy
+ 2FQNQ+28wF0XrMto8aokD68=
+X-Google-Smtp-Source: AGRyM1sHXShGR6o1qcwrokXbBl+lV1+M3JghaQXqCevUiOPwb4M9Sy+r3nydB9pqTt5VqYROK9/k3A==
+X-Received: by 2002:a17:907:7290:b0:72b:3799:624c with SMTP id
+ dt16-20020a170907729000b0072b3799624cmr1648824ejc.108.1658465690190; 
+ Thu, 21 Jul 2022 21:54:50 -0700 (PDT)
+Received: from ?IPV6:2003:c7:8f2e:6979:bc71:385a:5363:16f9?
+ (p200300c78f2e6979bc71385a536316f9.dip0.t-ipconnect.de.
+ [2003:c7:8f2e:6979:bc71:385a:5363:16f9])
+ by smtp.gmail.com with ESMTPSA id
+ c1-20020a17090618a100b0072321c99b78sm1560487ejf.57.2022.07.21.21.54.49
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Thu, 21 Jul 2022 21:54:49 -0700 (PDT)
+Message-ID: <11b4ef15-9fb5-2c40-90ae-11ee434bbea3@gmail.com>
+Date: Fri, 22 Jul 2022 06:54:48 +0200
 MIME-Version: 1.0
-X-Spam-Score: 0.1 (/)
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101
+ Thunderbird/91.11.0
+Content-Language: en-US
+To: Abhijeet Srivastava <abhijeet.srivastava2308@gmail.com>
+References: <20220721150055.52096-1-abhijeet.srivastava2308@gmail.com>
+From: Philipp Hortmann <philipp.g.hortmann@gmail.com>
+In-Reply-To: <20220721150055.52096-1-abhijeet.srivastava2308@gmail.com>
+X-Spam-Score: -2.2 (--)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Warning found by checkpatch.pl script. Signed-off-by:
- Abhijeet
- Srivastava --- drivers/staging/media/zoran/zoran_driver.c | 6 ++++-- 1 file
- changed, 4 insertions(+),
- 2 deletions(-) diff --git a/drivers/staging/media/zoran/zoran_driver.c
- b/drivers/staging/media/zoran/zoran_driver.c index 4304b7e21709..b408c1d4e0a7
- 100644 --- a/drivers/staging/media/zoran/zoran_driver.c +++ b/driv [...] 
- Content analysis details:   (0.1 points, 6.0 required)
+ Content preview:  On 7/21/22 17:00, Abhijeet Srivastava wrote: > Warning found
+ by checkpatch.pl script. > > Signed-off-by: Abhijeet Srivastava > --- >
+ drivers/staging/media/zoran/zoran_card.c
+ | 4 ++-- > 1 file change [...] 
+ Content analysis details:   (-2.2 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit [abhijeet.srivastava2308[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [abhijeet.srivastava2308[at]gmail.com]
+ provider [philipp.g.hortmann[at]gmail.com]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.218.48 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -109,15 +111,13 @@ X-Spam-Report: Spam detection software,
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.216.53 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.216.53 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
-X-Headers-End: 1oEa7M-0007KU-Q4
-X-Mailman-Approved-At: Fri, 22 Jul 2022 04:19:26 +0000
-Subject: [Mjpeg-users] [PATCH] media: staging: media: zoran: Fixed Block
- comments
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.218.48 listed in wl.mailspike.net]
+ -2.0 NICE_REPLY_A           Looks like a legit reply (A)
+X-Headers-End: 1oEkgj-0004QD-1j
+X-Mailman-Approved-At: Fri, 22 Jul 2022 10:08:19 +0000
+Subject: Re: [Mjpeg-users] [PATCH] media: staging: media: zoran: Removed
+ braces for single statement block
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -130,43 +130,48 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Cc: abhijeet.srivastava2308@gmail.com, linux-staging@lists.linux.dev,
- linux-kernel@vger.kernel.org, mjpeg-users@lists.sourceforge.net,
- Corentin Labbe <clabbe@baylibre.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+Cc: Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ linux-staging@lists.linux.dev, linux-kernel@vger.kernel.org,
+ mjpeg-users@lists.sourceforge.net, Corentin Labbe <clabbe@baylibre.com>,
  Mauro Carvalho Chehab <mchehab@kernel.org>, linux-media@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-Warning found by checkpatch.pl script.
+On 7/21/22 17:00, Abhijeet Srivastava wrote:
+> Warning found by checkpatch.pl script.
+> 
+> Signed-off-by: Abhijeet Srivastava <abhijeet.srivastava2308@gmail.com>
+> ---
+>   drivers/staging/media/zoran/zoran_card.c | 4 ++--
+>   1 file changed, 2 insertions(+), 2 deletions(-)
+> 
+> diff --git a/drivers/staging/media/zoran/zoran_card.c b/drivers/staging/media/zoran/zoran_card.c
+> index 26f978a1cc72..0c138d47d0c3 100644
+> --- a/drivers/staging/media/zoran/zoran_card.c
+> +++ b/drivers/staging/media/zoran/zoran_card.c
+> @@ -1038,9 +1038,9 @@ static int zr36057_init(struct zoran *zr)
+>   	zr->stat_com = dma_alloc_coherent(&zr->pci_dev->dev,
+>   					  BUZ_NUM_STAT_COM * sizeof(u32),
+>   					  &zr->p_sc, GFP_KERNEL);
+> -	if (!zr->stat_com) {
+> +	if (!zr->stat_com)
+>   		return -ENOMEM;
+> -	}
+> +
+>   	for (j = 0; j < BUZ_NUM_STAT_COM; j++)
+>   		zr->stat_com[j] = cpu_to_le32(1); /* mark as unavailable to zr36057 */
+>   
 
-Signed-off-by: Abhijeet Srivastava <abhijeet.srivastava2308@gmail.com>
----
- drivers/staging/media/zoran/zoran_driver.c | 6 ++++--
- 1 file changed, 4 insertions(+), 2 deletions(-)
 
-diff --git a/drivers/staging/media/zoran/zoran_driver.c b/drivers/staging/media/zoran/zoran_driver.c
-index 4304b7e21709..b408c1d4e0a7 100644
---- a/drivers/staging/media/zoran/zoran_driver.c
-+++ b/drivers/staging/media/zoran/zoran_driver.c
-@@ -746,9 +746,11 @@ static const struct v4l2_ioctl_ops zoran_ioctl_ops = {
- 	.vidioc_enum_input		    = zoran_enum_input,
- 	.vidioc_g_input			    = zoran_g_input,
- 	.vidioc_s_input			    = zoran_s_input,
-+
- /*	.vidioc_enum_output		    = zoran_enum_output,
--	.vidioc_g_output		    = zoran_g_output,
--	.vidioc_s_output		    = zoran_s_output,*/
-+ *	.vidioc_g_output		    = zoran_g_output,
-+ *	.vidioc_s_output		    = zoran_s_output,
-+ */
- 	.vidioc_g_std			    = zoran_g_std,
- 	.vidioc_s_std			    = zoran_s_std,
- 	.vidioc_create_bufs		    = vb2_ioctl_create_bufs,
--- 
-2.34.1
+Why does the subject line start with "media:" The subsystem is 
+"staging:" so the subject should start with "staging: media: ..."
 
+I have no clue if this is accepted.
+
+Regards,
+
+Philipp
 
 
 _______________________________________________
