@@ -2,80 +2,97 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4CC1C5F860C
-	for <lists+mjpeg-users@lfdr.de>; Sat,  8 Oct 2022 18:31:25 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 666815F8630
+	for <lists+mjpeg-users@lfdr.de>; Sat,  8 Oct 2022 19:15:25 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1ohCjO-0006F9-3R;
-	Sat, 08 Oct 2022 16:31:18 +0000
+	id 1ohDQ1-00014r-Vn;
+	Sat, 08 Oct 2022 17:15:21 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <janos@andraslinux.jgklinux.jankom.net>)
- id 1ohAY9-0000Fw-UO for mjpeg-users@lists.sourceforge.net;
- Sat, 08 Oct 2022 14:11:33 +0000
+ (envelope-from <bernhard@griesbach.at>) id 1ohDPv-00014j-BZ
+ for mjpeg-users@lists.sourceforge.net;
+ Sat, 08 Oct 2022 17:15:15 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :References:In-Reply-To:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
+ MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Vxug14Skdwc+4fyTecEYQHXO4Ip8StiikYgFlmYUnZA=; b=nCaKniVvqP+fixTf0OWLycP6R1
- 1PuRIFdQvYpy4EwEYAdUo33u9CFVXp+b+C/ZD9Ozx3HO11wp3O75s38bR0z5FDDJbXEKHyKDH4gAZ
- JCiz2iEsqz3hlyuvuJcxqtqfwOEU8nBl/yVbdTn3KPY0uVLCXLfsvGT+cpnvlY5PXZSc=;
+ bh=Tg+ZRlLRUl6a3QTD2CmD1y5nr2uirMYoMQWpqhYRuJY=; b=Wpc/9rV6B8wTZddZ0QBxF3wxt6
+ Jc0rmNd4fedIvCsgtNHQLaVIWZd0w3CD5uR7cy/2Qa+Jr9ehKUdXD0Hm/OwAEHy1lnLnmHlI5WqtW
+ s8d+TzyvHj+cGKTOnWK8jYinAArH1uJNNEmB+OLiiJ7R1poKMkfax8EBocNpdvy2M1W0=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:
- In-Reply-To:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
+ Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=Vxug14Skdwc+4fyTecEYQHXO4Ip8StiikYgFlmYUnZA=; b=fEUh+r4KABPR09r+w/UnrReLot
- LdhUUAIoIhybE7G8ostN1Sme0gs8l4W9gAyA2xmNDU+iwI/1SoPiSuXtTEzzNXKDKZwETW5uSXefg
- WkoRDH5RPOozx4kiPNpJZowCHQ6LH7rHxq2cbZzOPUyD8ZwIdI/4ZdPVYNzyMhXpXYjk=;
-Received: from 203.sub-174-242-137.myvzw.com ([174.242.137.203]
- helo=andraslinux.jgklinux.jankom.net)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1ohAY8-0002rA-MI for mjpeg-users@lists.sourceforge.net;
- Sat, 08 Oct 2022 14:11:33 +0000
-Received: from andraslinux (jgklinux [10.8.0.1])
- by andraslinux.jgklinux.jankom.net (Postfix) with ESMTPS id 7B68E4080E;
- Sat,  8 Oct 2022 09:53:51 -0400 (EDT)
-Date: Sat, 8 Oct 2022 09:53:45 -0400
-From: Janos G Komaromi <janos@andraslinux.jgklinux.jankom.net>
-To: Bernhard Praschinger <bernhard@griesbach.at>
-Message-ID: <20221008095345.23b41f1a@andraslinux>
-In-Reply-To: <74c98e9f-ac31-e318-8d53-f62c7705fdab@griesbach.at>
+ bh=Tg+ZRlLRUl6a3QTD2CmD1y5nr2uirMYoMQWpqhYRuJY=; b=g/pK5Yxw5m5fLDmXIfE4Pt+5H/
+ 35ZtYaQoJEnRN0ENpqUDRw/ZXoBdTTygF65WDbAxAj3DTYMNiL+ixCmIWyd0Nrj6cyJE6+w6Up4Cy
+ 5pfG/dkw94G8yovTsa/RMt0i2svYvamAkJEDN2c6q99tTT23h6bvVL1mgKyn59ATn2iI=;
+Received: from srv211.suspace.net ([176.28.0.211] helo=srv1.suspace.net)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
+ id 1ohDPu-00GwwC-7g for mjpeg-users@lists.sourceforge.net;
+ Sat, 08 Oct 2022 17:15:15 +0000
+Received: from srv1.suspace.net (localhost.localdomain [127.0.0.1])
+ by srv1.suspace.net (Postfix) with ESMTP id D25F716209A;
+ Sat,  8 Oct 2022 19:15:05 +0200 (CEST)
+Authentication-Results: srv1.suspace.net;
+ spf=pass (sender IP is 127.0.0.1) smtp.mailfrom=bernhard@griesbach.at
+ smtp.helo=srv1.suspace.net
+Received-SPF: pass (srv1.suspace.net: localhost is always allowed.)
+ client-ip=127.0.0.1; envelope-from=bernhard@griesbach.at;
+ helo=srv1.suspace.net; 
+X-Spam-Flag: NO
+X-Spam-Score: -2.901
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.901 tagged_above=-9999 required=2
+ tests=[ALL_TRUSTED=-1, BAYES_00=-1.9, NICE_REPLY_A=-0.001,
+ SPF_PASS=-0.001, URIBL_BLOCKED=0.001] autolearn=ham autolearn_force=no
+Received: from srv1.suspace.net ([127.0.0.1])
+ by srv1.suspace.net (srv1.suspace.net [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id jG0TR337or18; Sat,  8 Oct 2022 19:15:05 +0200 (CEST)
+Received: from [10.20.30.37] (193-83-8-41.oan.highway.a1.net [193.83.8.41])
+ by srv1.suspace.net (Postfix) with ESMTPSA id 43E2B1604B4;
+ Sat,  8 Oct 2022 19:15:05 +0200 (CEST)
+Received-SPF: pass (srv1.suspace.net: connection is authenticated)
+To: Janos G Komaromi <janos@andraslinux.jgklinux.jankom.net>
 References: <1f684654-8907-655c-b8c0-ed5bb8a15d82@griesbach.at>
  <9f4c6922fbd9940e07875116618012df8a133c6a.camel@jankom.net>
  <20221006092153.1d76bbd3@andraslinux>
  <74c98e9f-ac31-e318-8d53-f62c7705fdab@griesbach.at>
-Organization: fitlet_andraslinux_home
-X-Mailer: Claws Mail 4.1.0 (GTK 3.24.34; x86_64-pc-linux-gnu)
+ <20221008095345.23b41f1a@andraslinux>
+From: Bernhard Praschinger <bernhard@griesbach.at>
+Message-ID: <2a17fa6e-a342-1cb9-f75c-03106b139078@griesbach.at>
+Date: Sat, 8 Oct 2022 19:15:04 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
+ Firefox/68.0 SeaMonkey/2.53.13
 MIME-Version: 1.0
-X-Spam-Score: 3.9 (+++)
+In-Reply-To: <20221008095345.23b41f1a@andraslinux>
+X-PPP-Message-ID: <166524930549.4804.18350138746150552070@srv1.suspace.net>
+X-PPP-Vhost: griesbach.at
+X-Spam-Score: -3.6 (---)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Yes Bernie, that's it. My distro is Gentoo, which means it
- i compiled from a Gentoo source. I believe I can recompile it with the
- yuv4mpeg
- use flag. I'll post another message once I succeed with the o [...] 
- Content analysis details:   (3.9 points, 6.0 required)
+ Content preview:  Hallo Janos G Komaromi wrote: > Yes Bernie, that's it. My
+ distro is Gentoo, which means it i compiled > from a Gentoo source. I believe
+ I can recompile it with the yuv4mpeg use > flag. I'll post another mes [...]
+ Content analysis details:   (-3.6 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 3.6 RCVD_IN_PBL            RBL: Received via a relay in Spamhaus PBL
- [174.242.137.203 listed in zen.spamhaus.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
- dynamic-looking rDNS
-X-Headers-End: 1ohAY8-0002rA-MI
-X-Mailman-Approved-At: Sat, 08 Oct 2022 16:31:17 +0000
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -3.6 NICE_REPLY_A           Looks like a legit reply (A)
+X-Headers-End: 1ohDPu-00GwwC-7g
 Subject: Re: [Mjpeg-users] glav error opening .avi file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -90,130 +107,63 @@ List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
 Cc: mjpeg-users@lists.sourceforge.net
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-WWVzIEJlcm5pZSwgdGhhdCdzIGl0LiBNeSBkaXN0cm8gaXMgR2VudG9vLCB3aGljaCBtZWFucyBp
-dCBpIGNvbXBpbGVkCmZyb20gYSBHZW50b28gc291cmNlLiBJIGJlbGlldmUgSSBjYW4gcmVjb21w
-aWxlIGl0IHdpdGggdGhlIHl1djRtcGVnIHVzZQpmbGFnLiBJJ2xsIHBvc3QgYW5vdGhlciBtZXNz
-YWdlIG9uY2UgSSBzdWNjZWVkIHdpdGggdGhlIG9yaWdpbmFsIGNvbW1hbmQKc2V0IGp1c3QgdG8g
-Y2xvc2UgdGhpcyB0aHJlYWQuIFRoYW5rIHlvdSBmb3IgeW91ciBoZWxwIC0gSmFub3MKCk9uIFNh
-dCwgOCBPY3QgMjAyMiAwNjoyOToyMiArMDIwMApCZXJuaGFyZCBQcmFzY2hpbmdlciA8YmVybmhh
-cmRAZ3JpZXNiYWNoLmF0PiB3cm90ZToKCj4gSGFsbG8sCj4gCj4gSXQgc2VlbXMgdGhhdCB5b3Vy
-IHZlcnNpb24gb2YgbXBsYXllciB3YXMgbm90IGNvbXBsaWVkIHdpdGggdGhlCj4gVGhhdCBpcyB0
-aGUgaW1wb3J0YW50IGxpbmU6IEVycm9yIG9wZW5pbmcvaW5pdGlhbGl6aW5nIHRoZSBzZWxlY3Rl
-ZCAKPiB2aWRlb19vdXQgKC12bykgZGV2aWNlLgo+IAo+IFBsZWFzZSBkbyBhIHRlc3Q6ID4gbXBs
-YXllciAtdm8gaGVscAo+IFlvdSBzaG91bGQgZmluZCBhIGxpbmUgbGlrZToKPiAJeXV2NG1wZWcJ
-eXV2NG1wZWcgb3V0cHV0IGZvciBtanBlZ3Rvb2xzCj4gCj4gSWYgbm90LCBpdCB3b3VsZCBtZWFu
-IHRvIG1lIHRoYXQgbXBsYXllciB3YXMgY29tcGlsZWQgd2l0aG91dAo+IHl1djRtcGVnIHN1cHBv
-cnQuIE15IHZlcnNpb24gb2YgbXBsYXllcjogTVBsYXllciAxLjQtNwo+IAo+IElmIHlvdSBkaWQg
-Y29tcGlsZSBpdCBvbiB5b3Ugb3duIHBsZWFzZSBjaGVjayB3aGVuIHJ1bm5pbmcgdAo+IGNvbmZp
-Z3VyZSB0aGF0IHlvdSBmaW5kIGluIHRoZSBlbmFibGVkIGRyaXZlciB5dXY0bXBlZy4KPiAgIEVu
-YWJsZWQgb3B0aW9uYWwgZHJpdmVyczoKPiAgICAgIElucHV0OiBmdHAgcHZyIHR2LXY0bDIgdHYg
-Y2RkYiBjZGRhIGR2ZHJlYWQgdmNkIGR2YiBuZXR3b3JraW5nCj4gICAgICBDb2RlY3M6IGxpYnZw
-eCB4dmlkIGZmbXBlZyhpbnRlcm5hbCkgcmVhbCB4YW5pbSBmYWFjIGxpYm1wZWcyIAo+IG1wZzEy
-MyBzcGVleAo+ICAgICAgQXVkaW8gb3V0cHV0OiBhbHNhIHB1bHNlIG9zcyB2NGwyIHNkbCBtcGVn
-cGVzKGR2YikKPiAgICAgIFZpZGVvIG91dHB1dDogdjRsMiBtYXRyaXh2aWV3IG9wZW5nbCBzZGwg
-cG5tIGpwZWcgbXBlZ3BlcyhkdmIpIAo+IGZiZGV2IHh2aWRpeCBjdmlkaXggeDExIHhvdmVyIHl1
-djRtcGVnIG1kNXN1bSB0Z2EKPiAtLS1FTkQtLS0KPiAKPiBJZiB5b3UgdXNlIHRoZSBwcmVjb21w
-aWxlZCB2ZXJzaW9uIGZyb20geW91ciBkaXN0cmlidXRpb24gSSB3b3VsZCAKPiByZWNvbW1lbmQg
-dGhhdCB5b3UgZG93bmxvYWQgdGhlIHNvdXJjZSBhbmQgY29tcGlsZSBpdCBvbiB5b3VyIG93bi4K
-PiAKPiAKPiBKYW5vcyBHIEtvbWFyb21pIHdyb3RlOgo+ID4gSGVsbG8gQmVybmllLCB0aGFua3Mu
-IEhlcmUgaXMgd2hhdCBoYXBwZW5lZDoKPiA+IAo+ID4gamFub3NAYW5kcmFzbGludXggfi90bXAg
-JCBjYXQgc3RyZWFtLnl1diB8IHl1dnNjYWxlciAtTyBTVkNEIHwKPiA+IG1wZWcyZW5jIC1mIDQg
-LW8gdmlkZW9fc3ZjZC5tMnYgJiBtcGxheWVyIC1ub3NvdW5kIC1ub2ZyYW1lZHJvcCAtdm8KPiA+
-IHl1djRtcGVnIGV6Y2FwMDAwMS5hdmkKPiA+IAo+ID4gWzFdIDIxNTM1IElORk86IFt5dXZzY2Fs
-ZXJdIHl1dnNjYWxlciAyLjIuMSAxMS1EZWMtMjAwNwo+ID4gICAgIElORk86IFt5dXZzY2FsZXJd
-IChDKSAyMDAxLTIwMDQgWGF2aWVyIEJpcXVhcmQKPiA+IDx4YmlxdWFyZEBmcmVlLmZyPiwgeXV2
-c2NhbGVyIC1oIGZvciBoZWxwLCBvciBtYW4geXV2c2NhbGVyIElORk86Cj4gPiBbbXBlZzJlbmNd
-IFNFVFRJTkcgRVhURU5ERUQgTU1YIGZvciBNT1RJT04hIElORk86IFttcGVnMmVuY10KPiA+IFNF
-VFRJTkcgU1NFIGFuZCBNTVggZm9yIFRSQU5TRk9STSEgSU5GTzogW21wZWcyZW5jXSBTRVRUSU5H
-Cj4gPiBFWFRFTkRFRCBNTVggZm9yIFBSRURJQ1RJT04hIE1QbGF5ZXIgMS40LTExLjMuMCAoQykg
-MjAwMC0yMDE5Cj4gPiBNUGxheWVyIFRlYW0KPiA+IAo+ID4gUGxheWluZyBlemNhcDAwMDEuYXZp
-Lgo+ID4gbGliYXZmb3JtYXQgdmVyc2lvbiA1OC43Ni4xMDAgKGV4dGVybmFsKQo+ID4gQVZJIGZp
-bGUgZm9ybWF0IGRldGVjdGVkLgo+ID4gW2F2aWhlYWRlcl0gVmlkZW8gc3RyZWFtIGZvdW5kLCAt
-dmlkIDAKPiA+IFthdmloZWFkZXJdIEF1ZGlvIHN0cmVhbSBmb3VuZCwgLWFpZCAxCj4gPiBWSURF
-TzogIFtYVklEXSAgODAweDU5MiAgMjRicHAgIDMwLjAwMCBmcHMgIDg5Ni41IGticHMgKDEwOS40
-Cj4gPiBrYnl0ZS9zKSBFcnJvciBvcGVuaW5nL2luaXRpYWxpemluZyB0aGUgc2VsZWN0ZWQgdmlk
-ZW9fb3V0ICgtdm8pCj4gPiBkZXZpY2UuIE5vIHN0cmVhbSBmb3VuZC4KPiA+IAo+ID4gCj4gPiBF
-eGl0aW5nLi4uIChFbmQgb2YgZmlsZSkKPiA+IGphbm9zQGFuZHJhc2xpbnV4IH4vdG1wICQgbHMK
-PiA+IGV6Y2FwMDAwMS5hdmkgIHN0cmVhbS55dXYKPiA+IAo+ID4gSSBkb24ndCB1bmRlcnN0YW5k
-LiBpZiBJIGlzc3VlIGNvbW1hbmQKPiA+IAo+ID4gamFub3NAYW5kcmFzbGludXggfi90bXAgJCBt
-cGxheWVyIGV6Y2FwMDAwMS5hdmkKPiA+IAo+ID4gTVBsYXllciAxLjQtMTEuMy4wIChDKSAyMDAw
-LTIwMTkgTVBsYXllciBUZWFtCj4gPiAKPiA+IFBsYXlpbmcgZXpjYXAwMDAxLmF2aS4KPiA+IGxp
-YmF2Zm9ybWF0IHZlcnNpb24gNTguNzYuMTAwIChleHRlcm5hbCkKPiA+IEFWSSBmaWxlIGZvcm1h
-dCBkZXRlY3RlZC4KPiA+IFthdmloZWFkZXJdIFZpZGVvIHN0cmVhbSBmb3VuZCwgLXZpZCAwCj4g
-PiBbYXZpaGVhZGVyXSBBdWRpbyBzdHJlYW0gZm91bmQsIC1haWQgMQo+ID4gVklERU86ICBbWFZJ
-RF0gIDgwMHg1OTIgIDI0YnBwICAzMC4wMDAgZnBzICA4OTYuNSBrYnBzICgxMDkuNAo+ID4ga2J5
-dGUvcykKPiA+ID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
-PT09PT09PT09PT09PT09PT09PT09PT09PT09Cj4gPiBPcGVuaW5nIHZpZGVvIGRlY29kZXI6IFtm
-Zm1wZWddIEZGbXBlZydzIGxpYmF2Y29kZWMgY29kZWMgZmFtaWx5Cj4gPiBsaWJhdmNvZGVjIHZl
-cnNpb24gNTguMTM0LjEwMCAoZXh0ZXJuYWwpIFttcGVnNCBACj4gPiAweDdmZjZiYTNhOGY2MF1S
-ZXF1ZXN0ZWQgZnJhbWUgdGhyZWFkaW5nIHdpdGggYSBjdXN0b20KPiA+IGdldF9idWZmZXIyKCkg
-aW1wbGVtZW50YXRpb24gd2hpY2ggaXMgbm90IG1hcmtlZCBhcyB0aHJlYWQgc2FmZS4KPiA+IFRo
-aXMgaXMgbm90IHN1cHBvcnRlZCBhbnltb3JlLCBtYWtlIHlvdXIgY2FsbGJhY2sgdGhyZWFkLXNh
-ZmUuCj4gPiBTZWxlY3RlZCB2aWRlbyBjb2RlYzogW2Zmb2RpdnhdIHZmbTogZmZtcGVnIChGRm1w
-ZWcgTVBFRy00KQo+ID4gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
-PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KPiA+IExvYWQgc3VidGl0bGVzIGluIC4v
-Cj4gPiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
-PT09PT09PT09PT09PT09PT09PT09PQo+ID4gT3BlbmluZyBhdWRpbyBkZWNvZGVyOiBbbXBnMTIz
-XSBNUEVHIDEuMC8yLjAvMi41IGxheWVycyBJLCBJSSwgSUlJCj4gPiBBVURJTzogNDQxMDAgSHos
-IDIgY2gsIHMxNmxlLCA2NC4wIGtiaXQvNC41NCUgKHJhdGlvOiA4MDAwLT4xNzY0MDApCj4gPiBT
-ZWxlY3RlZCBhdWRpbyBjb2RlYzogW21wZzEyM10gYWZtOiBtcGcxMjMgKE1QRUcgMS4wLzIuMC8y
-LjUgbGF5ZXJzCj4gPiBJLCBJSSwgSUlJKQo+ID4gPT09PT09PT09PT09PT09PT09PT09PT09PT09
-PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KPiA+IEFPOiBb
-YWxzYV0gNDgwMDBIeiAyY2ggczE2bGUgKDIgYnl0ZXMgcGVyIHNhbXBsZSkgU3RhcnRpbmcKPiA+
-IHBsYXliYWNrLi4uIE1vdmllLUFzcGVjdCBpcyB1bmRlZmluZWQgLSBubyBwcmVzY2FsaW5nIGFw
-cGxpZWQuCj4gPiBWTzogW3h2XSA4MDB4NTkyID0+IDgwMHg1OTIgUGxhbmFyIFlWMTIKPiA+IE1v
-dmllLUFzcGVjdCBpcyAxLjM1OjEgLSBwcmVzY2FsaW5nIHRvIGNvcnJlY3QgbW92aWUgYXNwZWN0
-Lgo+ID4gVk86IFt4dl0gODAweDU5MiA9PiA4MDB4NTkyIFBsYW5hciBZVjEyCj4gPiBBOiAgMTYu
-MiBWOiAgMTYuMiBBLVY6IC0wLjAwMSBjdDogIDAuMDEyIDQ4Ni80ODYgMjclICAwJSAgMC45JSAx
-NyAwCj4gPiAKPiA+IEV4aXRpbmcuLi4gKFF1aXQpCj4gPiBqYW5vc0BhbmRyYXNsaW51eCB+L3Rt
-cCAkCj4gPiAKPiA+IHRoZSBmaWxlIHN0YXJ0cyB0byBwbGF5IGFsbW9zdCBpbWVkaWF0ZWx5IGlu
-IGEgbmV3IHdpbmRvdywgcGVyZmVjdGx5Cj4gPiB3aXRoIHNvdW5kIGFuZCBwaWN0dXJlLiBTbyB0
-aGUgdmlkZW8tb3V0ICgtdm8pIGRldmljZSB3b3Jrcwo+ID4gYXV0b21hdGljYWxseSB3aXRoIG1w
-bGF5ZXIuCj4gPiAKPiA+IEphbm9zCj4gPiBQLlMuIEknbSBzZW5kaW5nIHRoaXMgbWVzc2FnZSBm
-cm9tIG15IG90aGVyIGVtYWlsIGFkZHJlc3MsIGEKPiA+IG1haWxzZXJ2ZXIgb24gbXkgZml0bGV0
-IG1hY2hpbmUgd2hlcmUgSSB0cnkgZ2xhdiwgZXRjLgo+ID4gCj4gPiBPbiBUaHUsIDA2IE9jdCAy
-MDIyIDA4OjA2OjE5IC0wNDAwCj4gPiAiSmFub3MgRy4gS29tYXJvbWkiIDxqYW5vc0BqYW5rb20u
-bmV0PiB3cm90ZToKPiA+ICAgCj4gPj4gLS0tLS0tLS0gRm9yd2FyZGVkIE1lc3NhZ2UgLS0tLS0t
-LS0KPiA+PiBGcm9tOiBCZXJuaGFyZCBQcmFzY2hpbmdlciA8YmVybmhhcmRAZ3JpZXNiYWNoLmF0
-Pgo+ID4+IFRvOiBKYW5vcyBHLiBLb21hcm9taSA8amFub3NAamFua29tLm5ldD4sIE1KUEVHLXRv
-b2xzIHVzZXIgbGlzdAo+ID4+IDxtanBlZy11c2Vyc0BsaXN0cy5zb3VyY2Vmb3JnZS5uZXQ+Cj4g
-Pj4gU3ViamVjdDogUmU6IFtNanBlZy11c2Vyc10gZ2xhdiBlcnJvciBvcGVuaW5nIC5hdmkgZmls
-ZQo+ID4+IERhdGU6IFRodSwgNiBPY3QgMjAyMiAwNjoyNzowMCArMDIwMAo+ID4+IE1haWxlcjog
-TW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0OyBydjo2OC4wKSBHZWNrby8yMDEwMDEwMQo+
-ID4+IEZpcmVmb3gvNjguMCBTZWFNb25rZXkvMi41My4xMwo+ID4+Cj4gPj4gSGFsbG8sCj4gPj4K
-PiA+PiBta2ZpZm8gY3JlYXRlcyBhIGZpbGUgd2hlcmUgb25lIGZpbGUvcHJvY2VzcyByZWFkcyBp
-dCdzIGNvbnRlbnQsCj4gPj4gYW5kIGFub3RoZXIgcHJvY2VzcyBwdXRzIGRhdGEgaW50by4gWW91
-IG5lZWQgaXMgd2hlbiBwcm9ncmFtIGRhdGEKPiA+PiBjYW4ndCBwaXBlCj4gPj4gZGlyZWN0IHRv
-IGVhY2ggb3RoZXIuIFNvIHlvdSBjcmVhdGUgdGhlIG5hbWVkIHBpcGUuIFlvdSBzdGFydAo+ID4+
-IGFmdGVyd2FyZHMKPiA+PiB0aGUgcHJvY2VzcyB0aGF0IHJlYWRzIHRoZSBkYXRhIGFuZCBhcyBs
-YXN0IHN0ZXAgeW91IHB1dCB0aGUgZGF0YQo+ID4+IGludG8gaXQuCj4gPj4KPiA+PiBUaGUgY29t
-bWFuZHMgZm9yIHRoZSB2aWRlbyB3b3VsZCB0aGFuIGJlIGluIG9uZSB0ZXJtaW5hbCB3aW5kb3c6
-ICAKPiA+PiAgwqA+IG1rZmlmbyBzdHJlYW0ueXV2Cj4gPj4gIMKgPiBjYXQgc3RyZWFtLnl1diDi
-lIIgeXV2c2NhbGVyIC1PIFNWQ0Qg4pSCIG1wZWcyZW5jIC1mIDQgLW8gIAo+ID4+IHZpZGVvX3N2
-Y2QubTJ2ICYgIAo+ID4+ICDCoD4gbXBsYXllciAtbm9zb3VuZCAtbm9mcmFtZWRyb3AgLXZvIHl1
-djRtcGVnIGV6Y2FwMDAwMS5hdmkgIAo+ID4+Cj4gPj4gRG9uJ3QgZm9yZ2V0IHRvIGFkZCB0aGUg
-JiBpbiB0aGUgMm5kIGxpbmUgdG8gc3RhcnQgdGhlIHByb2Nlc3MgaW4KPiA+PiB0aGUgYmFja2dy
-b3VuZC4gWW91IGRvbid0IG5lZWQgdG8gc3RhcnQgbXBsYXllciBpbiB0aGUgYmFja2dyb3VuZC4K
-PiA+Pgo+ID4+IEZvciBhdWRpbzogIAo+ID4+ICDCoD4gbXBsYXllciAtdm8gbnVsbCAtYW8gcGNt
-OmZpbGU9YXVkaW8ud2F2IGV6Y2FwMDAwMS5hdmkKPiA+PiAgwqA+IGNhdCBhdWRpby53YXYg4pSC
-IG1wMmVuYyAtdiAyIC1WIC1vIHNvdW5kLm1wMiAgCj4gPj4KPiA+PiBBZnRlcndhcmRzIG11dGlw
-bGV4IHRoZSBmaWxlcyB0b2dldGhlciB3aXRoOgo+ID4+IG1wbGV4IC1mIDQgc291bmQubXAyIHZp
-ZGVvX3N2Y2QubTJ2IC1vIFNWQ0QubXBnCj4gPj4KPiA+PiBZb3UgaGF2ZSB0aGVuIGEgZW5jb2Rl
-ZCBNUEVHIGZpbGUgd2l0aCBpc3Qgc3VpdGFibGUgZm9yIFNWQ0QuIFlvdQo+ID4+IG5lZWQgdG8g
-Y2hhbmdlIHRoZSBjb21tYW5kcyBmb3IgeW91IG5lZWQuCj4gPj4gV2hhdCBkbyB5b3Ugd2FudCB3
-aXRoIHRoZSBBVkkgZmlsZSA/Cj4gPj4KPiA+PiBJZiB5b3UgZW5jb3VudGVyIGVycm9ycyBwbGVh
-c2UgYWRkIHRoZSBvdXRwdXQgdG8gdGhlIG1haWwuCj4gPj4KPiA+PiBKYW5vcyBHLiBLb21hcm9t
-aSB3cm90ZTogIAo+ID4+PiBIaSBCZXJuaWUsIHRoYW5rcyBmb3IgeW91ciBhbnN3ZXIuIFNvcnJ5
-LCBJIGhhdmUgbm90IGJlZW4gZG9pbmcKPiA+Pj4gdmlkZW8gZWRpdHMgbGF0ZWx5LCBzbyBJIG5l
-ZWQgYSBsaXR0bGUgbW9yZSBoZWxwLiBMYXQgdGltZSBJIHVzZWQKPiA+Pj4gQ2luZWxlcnJhIGZv
-ciB2aWRlbyBlZGl0IG9uIG15IG9sZCBGQy0zIGRlc2t0b3AuICAKPiBhdWYgaG9mZmVudGxpY2gg
-YmFsZCwKPiAKPiBCZXJuaSB0aGUgQ2hhb3Mgb2YgV29vZHF1YXJ0ZXIKPiAKPiBFbWFpbDogYmVy
-bmhhcmRAZ3JpZXNiYWNoLmF0Cj4gd3d3OiBodHRwOi8vd3d3Lmx5c2F0b3IubGl1LnNlL35nei9i
-ZXJuaGFyZAoKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-XwpNanBlZy11c2VycyBtYWlsaW5nIGxpc3QKTWpwZWctdXNlcnNAbGlzdHMuc291cmNlZm9yZ2Uu
-bmV0Cmh0dHBzOi8vbGlzdHMuc291cmNlZm9yZ2UubmV0L2xpc3RzL2xpc3RpbmZvL21qcGVnLXVz
-ZXJzCg==
+Hallo
+
+Janos G Komaromi wrote:
+> Yes Bernie, that's it. My distro is Gentoo, which means it i compiled
+> from a Gentoo source. I believe I can recompile it with the yuv4mpeg use
+> flag. I'll post another message once I succeed with the original command
+> set just to close this thread. Thank you for your help - Janos
+One thing comes into my mind, it might be that the configure script 
+checks if the mjpegtools libraries are available and only activates it 
+automatic if it finds them the Option that force yuv4mpeg is: 
+--enable-yuv4mpeg.
+
+
+> On Sat, 8 Oct 2022 06:29:22 +0200
+> Bernhard Praschinger <bernhard@griesbach.at> wrote:
+> 
+>> Hallo,
+>>
+>> It seems that your version of mplayer was not complied with the
+>> That is the important line: Error opening/initializing the selected
+>> video_out (-vo) device.
+>>
+>> Please do a test: > mplayer -vo help
+>> You should find a line like:
+>> 	yuv4mpeg	yuv4mpeg output for mjpegtools
+>>
+>> If not, it would mean to me that mplayer was compiled without
+>> yuv4mpeg support. My version of mplayer: MPlayer 1.4-7
+>>
+>> If you did compile it on you own please check when running t
+>> configure that you find in the enabled driver yuv4mpeg.
+>>    Enabled optional drivers:
+>>       Input: ftp pvr tv-v4l2 tv cddb cdda dvdread vcd dvb networking
+>>       Codecs: libvpx xvid ffmpeg(internal) real xanim faac libmpeg2
+>> mpg123 speex
+>>       Audio output: alsa pulse oss v4l2 sdl mpegpes(dvb)
+>>       Video output: v4l2 matrixview opengl sdl pnm jpeg mpegpes(dvb)
+>> fbdev xvidix cvidix x11 xover yuv4mpeg md5sum tga
+>> ---END---
+>>
+>> If you use the precompiled version from your distribution I would
+>> recommend that you download the source and compile it on your own.
+>>
+>>
+auf hoffentlich bald,
+
+Berni the Chaos of Woodquarter
+
+Email: bernhard@griesbach.at
+www: http://www.lysator.liu.se/~gz/bernhard
+
+
+_______________________________________________
+Mjpeg-users mailing list
+Mjpeg-users@lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/mjpeg-users
