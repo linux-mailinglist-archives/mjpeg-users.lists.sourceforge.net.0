@@ -2,133 +2,74 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id BFF055FFE7C
-	for <lists+mjpeg-users@lfdr.de>; Sun, 16 Oct 2022 11:47:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C764E6014A7
+	for <lists+mjpeg-users@lfdr.de>; Mon, 17 Oct 2022 19:20:50 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1ok0ET-0002Z3-AS;
-	Sun, 16 Oct 2022 09:46:57 +0000
+	id 1okTnA-0003o7-SJ;
+	Mon, 17 Oct 2022 17:20:44 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <molletts@yahoo.com>) id 1ok0E0-0002Yf-FO
- for mjpeg-users@lists.sourceforge.net;
- Sun, 16 Oct 2022 09:46:28 +0000
+ (envelope-from <janos@andraslinux.jgklinux.jankom.net>)
+ id 1okGHu-0003OT-WE for mjpeg-users@lists.sourceforge.net;
+ Mon, 17 Oct 2022 02:55:35 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
- From:References:To:Subject:MIME-Version:Date:Message-ID:Sender:Reply-To:Cc:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :References:In-Reply-To:Message-ID:Subject:To:From:Date:Sender:Reply-To:Cc:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=QK+6sCZ+R7wPFDsxynhB5/kad5ImpueJ8jqru9PgF8c=; b=lzdE1hbO6T87UxFHKylHXm9feH
- exlZkl9ciw04nsfoxQ0+FP5gh5uYtDnpo4vPdxmwCicTjpl9EFUHsAM+4OMfL812lda6g1aY3gzaw
- q+HTKED7XsZz49cgU5UMX8r0Ew5qsIveXmascHTSBitgQuW0wX56+vGqwJk0/Cbw6zC4=;
+ bh=poVx2OcKZbWoHh393mr7Bl7qJYVkEyYjk63d2bb6eS0=; b=JnP3VEGoe38dFYhBFTrgvK3usI
+ Gg2SwCITASkMk63MlI2iRAvmDYIlze5ep3IX90GZcagtLSJu6qUBpn0hN9FQ/dEHnClMvB3cH1tJS
+ nkrvuOWGUxzmmkhbNwabG4E92LLh1cf2Q+CLyTO5tKR4Ihz2UR/dDU/NFYJ1z9Vsp+rY=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:From:References:To:
- Subject:MIME-Version:Date:Message-ID:Sender:Reply-To:Cc:Content-ID:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:
+ In-Reply-To:Message-ID:Subject:To:From:Date:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=QK+6sCZ+R7wPFDsxynhB5/kad5ImpueJ8jqru9PgF8c=; b=g5lbiMgzL6oKBF+AxIyKAS7D1w
- slmzFb01jC8Ys/35KrtdmSsO8iS8Jg0wVvcVQ4ktF4JuH4fkA6HwaNd4eJIPSXHmVH4U9NefkKDqE
- qDFEE4Ip+b+7I+TJCcUqta1x4mB8Vv4BaBpLjPbY+JMtvUNeTCBA/s9MtjKGUKIV4Rq4=;
-Received: from sonic301-31.consmr.mail.ne1.yahoo.com ([66.163.184.200])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1ok0Dy-00016z-Nf for mjpeg-users@lists.sourceforge.net;
- Sun, 16 Oct 2022 09:46:28 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048;
- t=1665913581; bh=QK+6sCZ+R7wPFDsxynhB5/kad5ImpueJ8jqru9PgF8c=;
- h=Date:Subject:To:References:From:In-Reply-To:From:Subject:Reply-To;
- b=ioTKeBgKK4npua+Ao03lBWxl4KXQAhRP/m1+y3/rSyCKlYh8cyo41Gm5VjsyRGQ2FEDOCyoYqqmHPvlptkaifUrNB9BCj4CJ/wEAGKbnu/vf9ex0tQwx/UaFLtjzgYa3q+cbSY8DS0MJMXTpqtUi4eXieQX9IzUtFVlqJbsWUq0/A/VE6G1AqEn6YTUo4JtniYybQ2yRJGuhUdAuEhNOUR1ITwOfJDC6D5xCtg0lTuJfc1JSOqgFyLlbf6uFtUwWBkGPEyMdOv0tmwEa/3N5VYwR0W/GH2qEOCyzMo2Ogj+1sVtlHUzX9s7vbvPXkYxsGZ9gUprYIR3uXBM9nHmRZw==
-X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048;
- t=1665913581; bh=88d9EV/Olbh3zD7RafoTHIM85dpSvbLBIYPNiPbGar+=;
- h=X-Sonic-MF:Date:Subject:To:From:From:Subject;
- b=BW+nEdNvpo7Ehsz1T+xQxUNCUA+VkwjlFbU68pNa5pNvS0Ag+DMd7sA9w8QEQrCkUvPzJfXqj1wj8SC+Oxkvfp2yuxtTO2iy+JCw78c4td/XHeot5B1Rhkiyv9TRZGugsfH4WsYERHE9Qlt/bBpRjQzIOohY06Yx5Qj6xuMwckil7+VM50ScIbqgugJYCXmQdyaAZ3J/Ic1ZM2LHtpVFpUT65NswlPt1IdpFtxHVPIaNsJyL4vfHQl10AQkpr/mj1aBcURVkWBIoPE9DwldLRkAuxlUxpL/iD5tkfw8FWDYXROEpnY/PX9c+eDOpJguBlIwX55gSGIUq9oEGMQq/ew==
-X-YMail-OSG: 6BClBloVM1ltIbJmTd7D7RY.84W73XKevs8FUPz2t3bU.usrhzzXlaisk3e.dFQ
- m684fFlXQh7Il2CQwiM7CxITGMeI8rX.azBpO5pVCpyxYZnPkH0.7Yhp280BjOrKjCNmg5NNzbAA
- M82MzILnNTyZ72VN1LEU.yMz.rFEXx6Csz4U5cDEYROaI57WIzT2al800ufklc0GK3tKeR0mOLVa
- NP1hGDyUkRCeYM2VIMSD.cT79XNLRpwNCRYj9nuTW5QpH1pne.Ae1pAj.LFBDyuvg85oJ8kQFJ8V
- 2DRm2WINUybbbuI.ss29U5mKYvp17YsM2KCbYmUYfaXjvklV4uR8QhTTrnOQF7VTItL8rL_8mb.I
- t7IdWbuLrfCzo8qSe5nWV7CdNFfwWxJOJJ6J_9xcGvswJiyZhPMp_fuZvoGBdNPaHk8zPUucZqc2
- SLH654Kgeygx4OnIdsU.4OHHBIakPdaXRPqSYdQI_BO5JTVFodRcOTyq1mmBb3h.EUwvQ.jhmkXD
- 4Q1qSX8S_x4sVrkEOw_YVuvSdfKgFZO.CiQIlNbhrDbSnTbthmeKrMlH.W7V62vGQeVDHGPcccVT
- OqKd5ER7Df61d0s8gdaMfuVsSKjse5E546AMVoUPLg6zfTJRV_n94kuHW_lnW03_92QXOCLQTqpt
- PPjL8YtX2pptmKYyEo1x9.g4SyAOwcZr..xgufhzaWhgr42UstuOeADUt7zxqedfXMvTy.tpeY62
- 6HEADzrivYq2qGOvERuAtJxGgR2kLlqBUB5JkWy.qarvbk.0QgryJeoQAM10FYPp3..ecCv9eO4L
- BFSiVjxefpJc3EYXY9IpYiJ9SGEP6fE_iU6OW526S1qjNaE2yBPgmOInjH.ZwSg9SyXSS_3oHdw5
- pdzxdfAKeRhf6K3.vk0v6Bm8bXS8OUIfyP_f_FsKgBxL1KOE68YG3MGfliSmmOoZ2BUBtewwrZXw
- bAkpmyTZ35DT3QGHaxmCtc40Iwl8oj1IOvAur0l3_M9oUkdHNBUcoLyb0ZknbMIvLRaD1Skpisaa
- fpeqeVAQt2O9TFqCwJYGTn6vRFO1fZPmeJiTDIiTYqZ1I0LKFU0yvIiUtg3GLJ7o9vjwU8Xz7mj9
- nmzse0Sgw3qj5qOZxq9ZjJNLZCG.JxU8YYObJ_cvHxwJxMMkr4oUyxRff7ywaJgKJPk2Nqu7BO8.
- DiTAJuDdaAprEny9bZ9Gr2CiFyWMhs0P_t4WjVUKpEaElDt7KHYNayaB98hbZddcvEgI8UprYmLW
- uaq3x5mqbs3EsM4IkI49I0BUOi_tAjWMuz2ZqbFhHIyyp5fHbgHxiRU7tQrPdZ87R0lYkXJJN5KC
- FvGM8Gc0gIytFqSZES5EpJN2ssvpec9un8qisaRZKzzNhon5_VzSGuY1ErrdoG1PyoF.2_HhiDB8
- v.Ha8SrtfVioMUlhb1HZRAFA9tHIaFHfA9KkFGNSZms2_RdsbGAPZsTgrZhSibri29CJ.YrSG7SR
- 9iS1fgH7w4LCNhVbpaP9gQlwlUm8uZblon3ZsfaSCcduOCq7u2JZd1FNURPdGi5ybbGXlj4ntTY4
- 1E_4Og1dAwEN8FOP7SLQ_YMYFqBQDK8HoX2MzisGZcxjDlkyp.N70A1CoO4Z4VBFcjMtu_.NzTR0
- WPtmCBn2T7wPRwg9DYkFGhs3mBz7XVaWCyBzMx.KdJW281YHVb8Zt2Kz5XR_akW8T._71Ruejt_1
- nYw5bagbMT8XG9L7YdtIpAR6oqRJOQC1qEQ_slYb4DmhJqRALIbPFPfW.XgHoFsR5dJIRfJwFVQa
- arbm4kQewHRp9hOEEpCqeKOZic_4hfRRQrMdP1HGjyYkGygcvZVufhfRvXCv42n7JWk2fiVY.mEJ
- nyfFqT_tMdMXz5ecCFKolrUPC6ZXkqSuvv9YnKXB8SQcOm5.jZZk7xLkFJZOgiWNfy19jGwcRePq
- X_IOhRXZvGnxHRTsz5gxLsoiUm9iH_qMGMHhgIRmlpHN5xjhzFrFj6Vt1Nj6UWRWkqQ0xlO3btnP
- L8U02zBhpQbQ9Lp9.qo_LKYU85FiQP62hxLf9t.Lx5Og6zkaONM.rwDq2EcX.YantGqqGrdDpv_v
- qIou22JTKap6He81MT7yWOF.QGsEYlS6bcQUwy27ews8HRjj1cWNyHAnxwT5oO3JgCvedNig03oE
- 7mc7dgIotNrat6UUDMvhzdCv.oaEnG75p5RaRbjNWs4k3FrKTUZKFTqyQ4dGBjK5F8OZUpV.i_h3
- 5soCSEtwRR_qKcgU.ryV0T3F9qh607BlOuLW_u7f0jsyZvbNZwSw-
-X-Sonic-MF: <molletts@yahoo.com>
-Received: from sonic.gate.mail.ne1.yahoo.com by
- sonic301.consmr.mail.ne1.yahoo.com with HTTP; Sun, 16 Oct 2022 09:46:21 +0000
-Received: by hermes--production-ir2-6c65697d7-5d96b (Yahoo Inc. Hermes SMTP
- Server) with ESMTPA ID 983f1b890feb599bf02b7aba0854765e; 
- Sun, 16 Oct 2022 09:46:15 +0000 (UTC)
-Message-ID: <bd339e0e-7d58-78ed-e66d-3bd6921fad81@yahoo.com>
-Date: Sun, 16 Oct 2022 10:46:14 +0100
+ bh=poVx2OcKZbWoHh393mr7Bl7qJYVkEyYjk63d2bb6eS0=; b=bmt1fPs7Y5TAGZyzoCeEczKMuK
+ oSt976/IyhP9qFIUlacHEYaohF9Gf719iBZP67J+7aF975n8R2xS3PIfXaTD/oQNl7TJ5RDzEPjX7
+ 7ogcK+T4fnhvQ2x4vEsI/Kro/MaapHSLKgUKeZDDHC+Vfvl+2IV/4T94TyWbQ4uNW84M=;
+Received: from jgklinux.jankom.net ([198.74.55.83]
+ helo=andraslinux.jgklinux.jankom.net)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1okGHs-0008Oh-CT for mjpeg-users@lists.sourceforge.net;
+ Mon, 17 Oct 2022 02:55:34 +0000
+Received: from andraslinux (jgklinux [10.8.0.1])
+ by andraslinux.jgklinux.jankom.net (Postfix) with ESMTPS id 6E9E7400ED;
+ Sun, 16 Oct 2022 22:55:25 -0400 (EDT)
+Date: Sun, 16 Oct 2022 22:55:22 -0400
+From: Janos G Komaromi <janos@andraslinux.jgklinux.jankom.net>
+To: "Janos G. Komaromi" <janos@jankom.net>, <molletts@yahoo.com>,
+ mjpeg-users@lists.sourceforge.net
+Message-ID: <20221016225522.33775e6d@andraslinux>
+In-Reply-To: <e194723a719d70a337182e6bfc286f3eca80cb9f.camel@jankom.net>
+References: <bd339e0e-7d58-78ed-e66d-3bd6921fad81@yahoo.com>
+ <e194723a719d70a337182e6bfc286f3eca80cb9f.camel@jankom.net>
+Organization: fitlet_andraslinux_home
+X-Mailer: Claws Mail 4.1.0 (GTK 3.24.34; x86_64-pc-linux-gnu)
 MIME-Version: 1.0
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101
- Thunderbird/102.3.1
-To: mjpeg-users@lists.sourceforge.net, janos@jankom.net
-References: <1f684654-8907-655c-b8c0-ed5bb8a15d82@griesbach.at>
- <9f4c6922fbd9940e07875116618012df8a133c6a.camel@jankom.net>
- <20221006092153.1d76bbd3@andraslinux>
- <74c98e9f-ac31-e318-8d53-f62c7705fdab@griesbach.at>
- <20221008095345.23b41f1a@andraslinux>
- <2a17fa6e-a342-1cb9-f75c-03106b139078@griesbach.at>
- <20221010145111.65e78e39@andraslinux> <20221015111424.55e183bf@andraslinux>
-Content-Language: en-GB
-In-Reply-To: <20221015111424.55e183bf@andraslinux>
-X-Mailer: WebService/1.1.20740
- mail.backend.jedi.jws.acl:role.jedi.acl.token.atz.jws.hermes.yahoo
-X-Spam-Score: -2.2 (--)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hi Janos, I know I'm coming into this discussion a bit late
- but what kind of editing do you need to do on the files? If it's just "topping
- and tailing" - extracting specific timed sections out of the capture fi [...]
- Content analysis details:   (-2.2 points, 6.0 required)
+ Content preview:  Hi Stephen, Thank you for your very useful comments. Yes,
+ it is clear for me how to use ffmpeg for "topping and tailing" and will try
+ that, and add it to my toolbox. Presenty I'm proceeding along Bernie's instruc
+ [...] Content analysis details:   (0.0 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [66.163.184.200 listed in list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [molletts[at]yahoo.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -2.0 NICE_REPLY_A           Looks like a legit reply (A)
-X-Headers-End: 1ok0Dy-00016z-Nf
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+X-Headers-End: 1okGHs-0008Oh-CT
+X-Mailman-Approved-At: Mon, 17 Oct 2022 17:20:42 +0000
 Subject: Re: [Mjpeg-users] glav error opening .avi file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -141,107 +82,94 @@ List-Post: <mailto:mjpeg-users@lists.sourceforge.net>
 List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
-From: Stephen Mollett via Mjpeg-users <mjpeg-users@lists.sourceforge.net>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Cc: Stephen Mollett <molletts@yahoo.com>
-Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-Hi Janos,
-
-I know I'm coming into this discussion a bit late but what kind of 
-editing do you need to do on the files? If it's just "topping and 
-tailing" - extracting specific timed sections out of the capture files 
-and encoding them to another file - then the way I do it is with ffmpeg 
-using something like:
-
-$ ffmpeg -accurate_seek -ss $START_TIME_SECS -t $DURATION_SECS \
--i $SOURCE_FILE -c:v $VIDEO_CODEC $VIDEO_CODEC_OPTIONS -vtag $FOURCC \
--c:a $AUDIO_CODEC $AUDIO_CODEC_OPTIONS $OUTPUT_FILE
-
-Hopefully, the shell variables are self-explanatory. I can get the times 
-by simply playing the video with vlc or similar and using the fine 
-adjustment controls and/or reduced play speed. You can add in filters as 
-necessary to sharpen/denoise/crop.
-
-I used to do this quite regularly and had a script to automate it, which 
-I dumped onto github a few years ago at:
-https://github.com/molletts/handy-scripts/tree/master/cut-video
-in case someone somewhere found it useful. It's some years since I last 
-used it so I don't know whether it still works. Both components (the 
-main script and the helper which it calls) need to be in $PATH.
-
-I've never tried Kdenlive or Pitivi so I don't know what they're like 
-but I've seen them both mentioned as good-enough video editors for basic 
-work. They've both got ebuilds in the main Gentoo repo so it may be 
-worth giving one or both a try. (Kdenlive is likely to pull in a ton of 
-KDE dependencies, of course.)
-
-Hope this helps,
-Stephen
-
-On 15/10/2022 16:14, Janos G Komaromi wrote:
-> Progress report after reading the FM.
-> 
-> Executed the followig commands:
-> mplayer -ao pcm:fast:file=audio.wav -v null ezcap0001.avi
-> cat audio.wav | mp2enc -o audio.mp2
-> mplex audio.mp2 video_svcd.m2v -o test.mpg
-> mplex -V -r 1740 audio.mp2 video_svcd.m2v -o test.mpg
-> mplayer test.mpg
-> glav test.mpg
-> 
-> Results:
-> (1) mplex in either forms complains about too many frames dropped and
-> then quits.
-> (2) mplayer plays the file, but it is a long video, so I stopped B4
-> completion.
-> (3) glav has the same error as in my initial post.
-> 
-> So I'm still asking for help. There is no video editor available for
-> Gentoo. I like glav and would like to use it for my video files
-> transferred from old video recorder tapes.
-> 
-> Thx - Janos
-> 
-> 
-> On Mon, 10 Oct 2022 14:51:11 -0400
-> Janos G Komaromi <janos@andraslinux.jgklinux.jankom.net> wrote:
-> 
->> Hi,
->>
->> Thanks, Bernie. One step closer.
->> I recompiled mplayer, and now the command works. I now have a
->> "video_svcd.m2v" file. It plays with mplayer but there is no sound.
->> So the next step: how do I make a complete file, video and sound, that
->> glav will be able to process for editing?
->>
->> Regards,
->>
->> Janos
->>
->> On Sat, 8 Oct 2022 19:15:04 +0200
->> Bernhard Praschinger <bernhard@griesbach.at> wrote:
->>
->>> Hallo
->>>
->>> Janos G Komaromi wrote:
->>>> Yes Bernie, that's it. My distro is Gentoo, which means it i
->>>> compiled from a Gentoo source. I believe I can recompile it with
->>>> the yuv4mpeg use flag. I'll post another message once I succeed
->>>> with the original command set just to close this thread. Thank you
->>>> for your help - Janos
->>> One thing comes into my mind, it might be that the configure script
->>> checks if the mjpegtools libraries are available and only activates
->>> it automatic if it finds them the Option that force yuv4mpeg is:
->>> --enable-yuv4mpeg.
-> 
-> 
-> 
-
-
-_______________________________________________
-Mjpeg-users mailing list
-Mjpeg-users@lists.sourceforge.net
-https://lists.sourceforge.net/lists/listinfo/mjpeg-users
+SGkgU3RlcGhlbiwKClRoYW5rIHlvdSBmb3IgeW91ciB2ZXJ5IHVzZWZ1bCBjb21tZW50cy4gWWVz
+LCBpdCBpcyBjbGVhciBmb3IgbWUgaG93IHRvCnVzZSBmZm1wZWcgZm9yICJ0b3BwaW5nIGFuZCB0
+YWlsaW5nIiBhbmQgd2lsbCB0cnkgdGhhdCwgYW5kIGFkZCBpdCB0byBteQp0b29sYm94LiBQcmVz
+ZW50eSBJJ20gcHJvY2VlZGluZyBhbG9uZyBCZXJuaWUncyBpbnN0cnVjdGlvbnMgc28gdGhhdCBJ
+CmNhbiBtYXN0ZXIgZ2xhdi4gRm9yIG5vdyBJJ20gbG9va2luZyBmb3Igc2ltcGxlLCBub3QgZmFu
+Y3kgbWV0aG9kcywgYnV0CndpbGwgZXZlbnR1YWxseSBsb29rIGF0IHBpdGl2aSBhcyB3ZWxsLgoK
+UmVnYXJkcywKCkphbm9zClAuUy4gc2VuZGluZyB0aGlzIGZyb20gbXkgbWFjaGluZSB3aGVyZSBJ
+IGRvIHRoZSB2aWRlbyBzdHVmZi4gCgpPbiBTdW4sIDE2IE9jdCAyMDIyIDExOjI4OjU5IC0wNDAw
+CiJKYW5vcyBHLiBLb21hcm9taSIgPGphbm9zQGphbmtvbS5uZXQ+IHdyb3RlOgoKPiAtLS0tLS0t
+LSBGb3J3YXJkZWQgTWVzc2FnZSAtLS0tLS0tLQo+IEZyb206IFN0ZXBoZW4gTW9sbGV0dCA8bW9s
+bGV0dHNAeWFob28uY29tPgo+IFRvOiBtanBlZy11c2Vyc0BsaXN0cy5zb3VyY2Vmb3JnZS5uZXQs
+IGphbm9zQGphbmtvbS5uZXQKPiBTdWJqZWN0OiBSZTogW01qcGVnLXVzZXJzXSBnbGF2IGVycm9y
+IG9wZW5pbmcgLmF2aSBmaWxlCj4gRGF0ZTogU3VuLCAxNiBPY3QgMjAyMiAxMDo0NjoxNCArMDEw
+MAo+IE1haWxlcjogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0OyBydjoxMDIuMCkgR2Vj
+a28vMjAxMDAxMDEKPiBUaHVuZGVyYmlyZC8xMDIuMy4xCj4gCj4gSGkgSmFub3MsCj4gCj4gSSBr
+bm93IEknbSBjb21pbmcgaW50byB0aGlzIGRpc2N1c3Npb24gYSBiaXQgbGF0ZSBidXQgd2hhdCBr
+aW5kIG9mIAo+IGVkaXRpbmcgZG8geW91IG5lZWQgdG8gZG8gb24gdGhlIGZpbGVzPyBJZiBpdCdz
+IGp1c3QgInRvcHBpbmcgYW5kIAo+IHRhaWxpbmciIC0gZXh0cmFjdGluZyBzcGVjaWZpYyB0aW1l
+ZCBzZWN0aW9ucyBvdXQgb2YgdGhlIGNhcHR1cmUKPiBmaWxlcyBhbmQgZW5jb2RpbmcgdGhlbSB0
+byBhbm90aGVyIGZpbGUgLSB0aGVuIHRoZSB3YXkgSSBkbyBpdCBpcwo+IHdpdGggZmZtcGVnIHVz
+aW5nIHNvbWV0aGluZyBsaWtlOgo+IAo+ICQgZmZtcGVnIC1hY2N1cmF0ZV9zZWVrIC1zcyAkU1RB
+UlRfVElNRV9TRUNTIC10ICREVVJBVElPTl9TRUNTIFwKPiAtaSAkU09VUkNFX0ZJTEUgLWM6diAk
+VklERU9fQ09ERUMgJFZJREVPX0NPREVDX09QVElPTlMgLXZ0YWcgJEZPVVJDQyBcCj4gLWM6YSAk
+QVVESU9fQ09ERUMgJEFVRElPX0NPREVDX09QVElPTlMgJE9VVFBVVF9GSUxFCj4gCj4gSG9wZWZ1
+bGx5LCB0aGUgc2hlbGwgdmFyaWFibGVzIGFyZSBzZWxmLWV4cGxhbmF0b3J5LiBJIGNhbiBnZXQg
+dGhlCj4gdGltZXMgCj4gYnkgc2ltcGx5IHBsYXlpbmcgdGhlIHZpZGVvIHdpdGggdmxjIG9yIHNp
+bWlsYXIgYW5kIHVzaW5nIHRoZSBmaW5lIAo+IGFkanVzdG1lbnQgY29udHJvbHMgYW5kL29yIHJl
+ZHVjZWQgcGxheSBzcGVlZC4gWW91IGNhbiBhZGQgaW4gZmlsdGVycwo+IGFzIAo+IG5lY2Vzc2Fy
+eSB0byBzaGFycGVuL2Rlbm9pc2UvY3JvcC4KPiAKPiBJIHVzZWQgdG8gZG8gdGhpcyBxdWl0ZSBy
+ZWd1bGFybHkgYW5kIGhhZCBhIHNjcmlwdCB0byBhdXRvbWF0ZSBpdCwKPiB3aGljaCAKPiBJIGR1
+bXBlZCBvbnRvIGdpdGh1YiBhIGZldyB5ZWFycyBhZ28gYXQ6Cj4gaHR0cHM6Ly9naXRodWIuY29t
+L21vbGxldHRzL2hhbmR5LXNjcmlwdHMvdHJlZS9tYXN0ZXIvY3V0LXZpZGVvCj4gaW4gY2FzZSBz
+b21lb25lIHNvbWV3aGVyZSBmb3VuZCBpdCB1c2VmdWwuIEl0J3Mgc29tZSB5ZWFycyBzaW5jZSBJ
+Cj4gbGFzdCB1c2VkIGl0IHNvIEkgZG9uJ3Qga25vdyB3aGV0aGVyIGl0IHN0aWxsIHdvcmtzLiBC
+b3RoIGNvbXBvbmVudHMKPiAodGhlIG1haW4gc2NyaXB0IGFuZCB0aGUgaGVscGVyIHdoaWNoIGl0
+IGNhbGxzKSBuZWVkIHRvIGJlIGluICRQQVRILgo+IAo+IEkndmUgbmV2ZXIgdHJpZWQgS2Rlbmxp
+dmUgb3IgUGl0aXZpIHNvIEkgZG9uJ3Qga25vdyB3aGF0IHRoZXkncmUgbGlrZSAKPiBidXQgSSd2
+ZSBzZWVuIHRoZW0gYm90aCBtZW50aW9uZWQgYXMgZ29vZC1lbm91Z2ggdmlkZW8gZWRpdG9ycyBm
+b3IKPiBiYXNpYyAKPiB3b3JrLiBUaGV5J3ZlIGJvdGggZ290IGVidWlsZHMgaW4gdGhlIG1haW4g
+R2VudG9vIHJlcG8gc28gaXQgbWF5IGJlIAo+IHdvcnRoIGdpdmluZyBvbmUgb3IgYm90aCBhIHRy
+eS4gKEtkZW5saXZlIGlzIGxpa2VseSB0byBwdWxsIGluIGEgdG9uCj4gb2YgS0RFIGRlcGVuZGVu
+Y2llcywgb2YgY291cnNlLikKPiAKPiBIb3BlIHRoaXMgaGVscHMsCj4gU3RlcGhlbgo+IAo+IE9u
+IDE1LzEwLzIwMjIgMTY6MTQsIEphbm9zIEcgS29tYXJvbWkgd3JvdGU6Cj4gPiBQcm9ncmVzcyBy
+ZXBvcnQgYWZ0ZXIgcmVhZGluZyB0aGUgRk0uCj4gPiAKPiA+IEV4ZWN1dGVkIHRoZSBmb2xsb3dp
+ZyBjb21tYW5kczoKPiA+IG1wbGF5ZXIgLWFvIHBjbTpmYXN0OmZpbGU9YXVkaW8ud2F2IC12IG51
+bGwgZXpjYXAwMDAxLmF2aQo+ID4gY2F0IGF1ZGlvLndhdiB8IG1wMmVuYyAtbyBhdWRpby5tcDIK
+PiA+IG1wbGV4IGF1ZGlvLm1wMiB2aWRlb19zdmNkLm0ydiAtbyB0ZXN0Lm1wZwo+ID4gbXBsZXgg
+LVYgLXIgMTc0MCBhdWRpby5tcDIgdmlkZW9fc3ZjZC5tMnYgLW8gdGVzdC5tcGcKPiA+IG1wbGF5
+ZXIgdGVzdC5tcGcKPiA+IGdsYXYgdGVzdC5tcGcKPiA+IAo+ID4gUmVzdWx0czoKPiA+ICgxKSBt
+cGxleCBpbiBlaXRoZXIgZm9ybXMgY29tcGxhaW5zIGFib3V0IHRvbyBtYW55IGZyYW1lcyBkcm9w
+cGVkCj4gPiBhbmQgdGhlbiBxdWl0cy4KPiA+ICgyKSBtcGxheWVyIHBsYXlzIHRoZSBmaWxlLCBi
+dXQgaXQgaXMgYSBsb25nIHZpZGVvLCBzbyBJIHN0b3BwZWQgQjQKPiA+IGNvbXBsZXRpb24uCj4g
+PiAoMykgZ2xhdiBoYXMgdGhlIHNhbWUgZXJyb3IgYXMgaW4gbXkgaW5pdGlhbCBwb3N0Lgo+ID4g
+Cj4gPiBTbyBJJ20gc3RpbGwgYXNraW5nIGZvciBoZWxwLiBUaGVyZSBpcyBubyB2aWRlbyBlZGl0
+b3IgYXZhaWxhYmxlIGZvcgo+ID4gR2VudG9vLiBJIGxpa2UgZ2xhdiBhbmQgd291bGQgbGlrZSB0
+byB1c2UgaXQgZm9yIG15IHZpZGVvIGZpbGVzCj4gPiB0cmFuc2ZlcnJlZCBmcm9tIG9sZCB2aWRl
+byByZWNvcmRlciB0YXBlcy4KPiA+IAo+ID4gVGh4IC0gSmFub3MKPiA+IAo+ID4gCj4gPiBPbiBN
+b24sIDEwIE9jdCAyMDIyIDE0OjUxOjExIC0wNDAwCj4gPiBKYW5vcyBHIEtvbWFyb21pIDxqYW5v
+c0BhbmRyYXNsaW51eC5qZ2tsaW51eC5qYW5rb20ubmV0PiB3cm90ZToKPiA+ICAgCj4gPiA+IEhp
+LAo+ID4gPiAKPiA+ID4gVGhhbmtzLCBCZXJuaWUuIE9uZSBzdGVwIGNsb3Nlci4KPiA+ID4gSSBy
+ZWNvbXBpbGVkIG1wbGF5ZXIsIGFuZCBub3cgdGhlIGNvbW1hbmQgd29ya3MuIEkgbm93IGhhdmUg
+YQo+ID4gPiAidmlkZW9fc3ZjZC5tMnYiIGZpbGUuIEl0IHBsYXlzIHdpdGggbXBsYXllciBidXQg
+dGhlcmUgaXMgbm8KPiA+ID4gc291bmQuIFNvIHRoZSBuZXh0IHN0ZXA6IGhvdyBkbyBJIG1ha2Ug
+YSBjb21wbGV0ZSBmaWxlLCB2aWRlbyBhbmQKPiA+ID4gc291bmQsIHRoYXQKPiA+ID4gZ2xhdiB3
+aWxsIGJlIGFibGUgdG8gcHJvY2VzcyBmb3IgZWRpdGluZz8KPiA+ID4gCj4gPiA+IFJlZ2FyZHMs
+Cj4gPiA+IAo+ID4gPiBKYW5vcwo+ID4gPiAKPiA+ID4gT24gU2F0LCA4IE9jdCAyMDIyIDE5OjE1
+OjA0ICswMjAwCj4gPiA+IEJlcm5oYXJkIFByYXNjaGluZ2VyIDxiZXJuaGFyZEBncmllc2JhY2gu
+YXQ+IHdyb3RlOgo+ID4gPiAgIAo+ID4gPiA+IEhhbGxvCj4gPiA+ID4gCj4gPiA+ID4gSmFub3Mg
+RyBLb21hcm9taSB3cm90ZTogIAo+ID4gPiA+ID4gWWVzIEJlcm5pZSwgdGhhdCdzIGl0LiBNeSBk
+aXN0cm8gaXMgR2VudG9vLCB3aGljaCBtZWFucyBpdCBpCj4gPiA+ID4gPiBjb21waWxlZCBmcm9t
+IGEgR2VudG9vIHNvdXJjZS4gSSBiZWxpZXZlIEkgY2FuIHJlY29tcGlsZSBpdAo+ID4gPiA+ID4g
+d2l0aAo+ID4gPiA+ID4gdGhlIHl1djRtcGVnIHVzZSBmbGFnLiBJJ2xsIHBvc3QgYW5vdGhlciBt
+ZXNzYWdlIG9uY2UgSQo+ID4gPiA+ID4gc3VjY2VlZCB3aXRoIHRoZSBvcmlnaW5hbCBjb21tYW5k
+IHNldCBqdXN0IHRvIGNsb3NlIHRoaXMKPiA+ID4gPiA+IHRocmVhZC4gVGhhbmsgeW91Cj4gPiA+
+ID4gPiBmb3IgeW91ciBoZWxwIC0gSmFub3MgIAo+ID4gPiA+IE9uZSB0aGluZyBjb21lcyBpbnRv
+IG15IG1pbmQsIGl0IG1pZ2h0IGJlIHRoYXQgdGhlIGNvbmZpZ3VyZQo+ID4gPiA+IHNjcmlwdAo+
+ID4gPiA+IGNoZWNrcyBpZiB0aGUgbWpwZWd0b29scyBsaWJyYXJpZXMgYXJlIGF2YWlsYWJsZSBh
+bmQgb25seQo+ID4gPiA+IGFjdGl2YXRlcwo+ID4gPiA+IGl0IGF1dG9tYXRpYyBpZiBpdCBmaW5k
+cyB0aGVtIHRoZSBPcHRpb24gdGhhdCBmb3JjZSB5dXY0bXBlZyBpczoKPiA+ID4gPiAtLWVuYWJs
+ZS15dXY0bXBlZy4gIAo+ID4gCj4gPiAKPiA+ICAgCgotLSAKc2VudCBmcm9tIEphbm9zJyBIaWxs
+YXJ5IHNlcnZlciBhbmQKTk9UIGZyb20gaVBob25lIG5vciBHb29nbGUKZmFjZWJvb2ssIGluc3Rh
+Z3JhbSwgdmliZXIsIHNuYXBjaGF0LCB0d2l0dGVyLCB0aWstdG9rLCBldGMuCi0gbmVpdGhlciBv
+ZiBsaWtlIHRob3NlLgpodHRwczovL2FuZHJhc2xpbnV4Lmpna2xpbnV4LmphbmtvbS5uZXQvCuKA
+iwoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCk1qcGVn
+LXVzZXJzIG1haWxpbmcgbGlzdApNanBlZy11c2Vyc0BsaXN0cy5zb3VyY2Vmb3JnZS5uZXQKaHR0
+cHM6Ly9saXN0cy5zb3VyY2Vmb3JnZS5uZXQvbGlzdHMvbGlzdGluZm8vbWpwZWctdXNlcnMK
