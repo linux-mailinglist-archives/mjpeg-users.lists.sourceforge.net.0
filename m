@@ -2,123 +2,123 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id B3BBF835A42
-	for <lists+mjpeg-users@lfdr.de>; Mon, 22 Jan 2024 06:32:33 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 78417837047
+	for <lists+mjpeg-users@lfdr.de>; Mon, 22 Jan 2024 19:41:38 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
 	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1rRmv2-0004Kf-Hr;
-	Mon, 22 Jan 2024 05:32:25 +0000
+	id 1rRzEf-0006ij-7N;
+	Mon, 22 Jan 2024 18:41:29 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <onemda@gmail.com>) id 1rRWIV-0000Ck-37
- for Mjpeg-users@lists.sourceforge.net;
- Sun, 21 Jan 2024 11:47:32 +0000
+ (envelope-from <schultz1010@gmail.com>) id 1rRzEd-0006ic-VD
+ for mjpeg-users@lists.sourceforge.net;
+ Mon, 22 Jan 2024 18:41:29 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Cc:To:Subject:Message-ID:Date:From:
- In-Reply-To:References:MIME-Version:Sender:Reply-To:Content-Transfer-Encoding
- :Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=fSTA0xguyj6HEEdVc5w5ZLUPuQC/i/HCjdNKtI0ZUOU=; b=EJgfgs/vZk333nXGoNDeUUuS3s
- L7jTh8jSlW1EV6Cq2WUoEPZNLGiOT2uDS6P742FWn80Q5I6gr8JQJJ0ghvlSj1SrDK7HoHqIrc/Le
- xPIIyelN88yLpXvO4j1na/eAtViFo4V6hqUHO4OZveohlspHSgxMUS7UkNULjPlYHZFY=;
+ d=sourceforge.net; s=x; h=Content-Type:To:Subject:Message-ID:Date:From:
+ In-Reply-To:References:MIME-Version:Sender:Reply-To:Cc:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=oXc7RX0zCqucZn5hwmEyPCnWYkdth4r3juwMP3Ul03s=; b=ALIl4C9uieo25bIWPC2DPKTN1P
+ gr8aZCX7uNXcE0vnt2zesLpOOb39F+J3wd0mEeZkmDnw53Lviv4C1JP807AuahpqMnI4493Lhk5JQ
+ y91FxEIAw57r2qSp1IuZA4CS59ikABZFa06ezCfFn8NOrziKw311jSA2iuooYLVP6tpw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Cc:To:Subject:Message-ID:Date:From:In-Reply-To:References:
- MIME-Version:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
+ h=Content-Type:To:Subject:Message-ID:Date:From:In-Reply-To:References:
+ MIME-Version:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=fSTA0xguyj6HEEdVc5w5ZLUPuQC/i/HCjdNKtI0ZUOU=; b=WgB9l8hIrugVR5GFhHBPjepFlG
- 64sCEYDZpa3tsWRk2mfCUBOdBvF0Ig8ppq8z+2HNb7zVIu8fOIqRNoxEWlVcu3LGkaCKPwYAa5Al/
- pbkiPqtrHmiiN7LKyIMV033MN1F+GPhfZkJdthQxJmOnHUGZvTbb4ayQXYaCmP9OW7sE=;
-Received: from mail-qk1-f171.google.com ([209.85.222.171])
+ bh=oXc7RX0zCqucZn5hwmEyPCnWYkdth4r3juwMP3Ul03s=; b=mGoUQ8wzKxjRi2V/0KCjgKBoHf
+ YxFp2eVIlz9Ff+yQX+rmegIfArvBG8a0OGd/L1P3znBTxMnpbth3TuSu1gu7eiebsBou4Fc6iRmx0
+ nLKprBSnqGxySvRHF/JwVNSnx2kJhQswWNj1cMHdhLPxWg57zjTcEb4pYcAbvJrDkevg=;
+Received: from mail-yb1-f173.google.com ([209.85.219.173])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1rRWIQ-0001an-E6 for Mjpeg-users@lists.sourceforge.net;
- Sun, 21 Jan 2024 11:47:31 +0000
-Received: by mail-qk1-f171.google.com with SMTP id
- af79cd13be357-7831be84f4eso204469385a.0
- for <Mjpeg-users@lists.sourceforge.net>; Sun, 21 Jan 2024 03:47:25 -0800 (PST)
+ id 1rRzEY-0001aM-M8 for mjpeg-users@lists.sourceforge.net;
+ Mon, 22 Jan 2024 18:41:28 +0000
+Received: by mail-yb1-f173.google.com with SMTP id
+ 3f1490d57ef6-dc24ead4428so2241958276.1
+ for <mjpeg-users@lists.sourceforge.net>; Mon, 22 Jan 2024 10:41:22 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20230601; t=1705837640; x=1706442440; darn=lists.sourceforge.net;
- h=cc:to:subject:message-id:date:from:in-reply-to:references
- :mime-version:from:to:cc:subject:date:message-id:reply-to;
- bh=fSTA0xguyj6HEEdVc5w5ZLUPuQC/i/HCjdNKtI0ZUOU=;
- b=NlKHis+GQzJUM+nfryd0kZ/l3nhLWDYhEZwTwvi9KnRXyE/yH0X6IKU9kF6lasx0DM
- 6AJMCPGN3dcgyCnv6Juo33TRzyXgdNlfxG75wEv3TBtZjdwgWPiANLwxsXocX8YigHax
- lsQe1jlsWf4Dv7KI8OIHamQ9cYjngd7eJePrqwMwH9E4QNqF//F27df76yoBYFNmlL2X
- RCtSTUCOUk/ZPi09vrPJ0/8dLrSWLG2L5xe4LiiaqxgYEQWd2o8c3Fh1hB6LqUp7IuqE
- GEbxNtFzyBN5Rgvnbe7dW8xbRoWPWqLQhg7haJM0gxQ/4llM8tJfE5w/zmZLxPlySEbH
- XEUA==
+ d=gmail.com; s=20230601; t=1705948876; x=1706553676; darn=lists.sourceforge.net;
+ h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+ :from:to:cc:subject:date:message-id:reply-to;
+ bh=oXc7RX0zCqucZn5hwmEyPCnWYkdth4r3juwMP3Ul03s=;
+ b=DJO257ZuPQHmaQXgJjLFS2bsLL8NLAornhrt999Xtby0i7HYMoO5GLXnhFgsmjOWVG
+ sTiTF1yX4f1ZyHNBooB/VKCDH/8gqZMxOW3PH5Z+dl20VVI2/+lZ6isRCTR3II0fvdTL
+ 7nRmX9QA7FUG/v1ibjxGN/LE6zG3u4h96FpLf6DoWujTIjfpO/D4GV/SlC+HxEy7/t8u
+ aDkBWYj2o7fNVdpY2r+2JxR0ZaAiZ/Yu8299CfkAtwoXka3Jy2NQQJvdm1eWcettzVBw
+ E3anSB5TY3aFq4DoIRLfzVIaKCaaGe5Ys2SRfJIliJD7EOfeb7iA78R3boldhKUAsdXS
+ /JXg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20230601; t=1705837640; x=1706442440;
- h=cc:to:subject:message-id:date:from:in-reply-to:references
- :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
- :reply-to;
- bh=fSTA0xguyj6HEEdVc5w5ZLUPuQC/i/HCjdNKtI0ZUOU=;
- b=mfSLgCsBa5JCeE8kTr1vozx9fH7g1+kDJ4xpRDhN9AbW9WR3GJXj0NnWn4fH6NgfxD
- abg22xci1dM/eYbBLDx7zop/L/40/59dAkw+FTytH2wETlEod1X0BImhAwIHu16OwDt/
- BP3OXxwx3HM7BXFXqNLLkzRJI+Ohf9CTpqw0X1KVPfFUR/hdJY0quh16HbwFZnpbhmhK
- g2RW5mOyFfyB/qHhkI6uE7r1MpEznACb4w+BYNBX3SSer3DB9Y5kv1W5nctKSn5FqMrF
- GQmxvSJOD1jiLfAoIOKQfC9cIdStB78JC13mWPDeSSD9Fy7ThDh9Dq2Boa2AzJiEulZD
- hAbw==
-X-Gm-Message-State: AOJu0YygXgFG7Kb8f5oIt5jylOZ+NHKsghyOEwd7Dx43awInbhPnDS0Z
- +9HDZfleViy74jikuJDKRgc6G7NaTvhOjcXxQNFonl2ym/UPtdEpxbkcKDR49I95RfidcnJNfSQ
- ue7jEejlOgX1QkPv+A4aOjsK/KsJbiOj6fBA=
-X-Google-Smtp-Source: AGHT+IEWb0TD20tvzXDxdCYcBYsVX6VbDD7PXWuJFwGRbL5vAAtGv1hlRKMCDCyCv6WWi53MUXcRWhlru2KHiSIEoqI=
-X-Received: by 2002:a05:620a:2489:b0:783:4037:1923 with SMTP id
- i9-20020a05620a248900b0078340371923mr4503611qkn.64.1705837639707; Sun, 21 Jan
- 2024 03:47:19 -0800 (PST)
+ d=1e100.net; s=20230601; t=1705948876; x=1706553676;
+ h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+ :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+ bh=oXc7RX0zCqucZn5hwmEyPCnWYkdth4r3juwMP3Ul03s=;
+ b=qMGuX5vUuiDDB2HkEKzFvEFYsGbFMbSYnuuoIERR9bVKhNn/zrtufNQm1v5amOQtr4
+ b1HZr86vNv9YGLnrOGxjYDHEiMxC5PrD7GX/iHg2NYRHQ0Z/lo7znpA5SjP3rc1Go8RK
+ kPDVTQxIa23Q28tCQ0L+yT0AJQB+anAweh4/JN9QEW2M3xegwEHC8KTiC5oR1RFnYShN
+ d/I5vMwtRyd9XnVXUv7JGWzw2pr0v9EXjeOrI5y3p2z+1H7xSICvPqFQRfIvnCMtlDhP
+ vgNER7NdgkhZyjkSVht+YV++EEo/GqFAm91tnfkMbi61OwhoAxuVZyejdtWCoRI+TO7B
+ IzEA==
+X-Gm-Message-State: AOJu0YxLq7bO0abz8RRWgcC1cuzzb8n56NZyYcJeRZiNSWVm4z09Gw9N
+ b9rfVOfyWNDJcBViGe8Dj0SedF/xfPFtiLg9dQeVpsHT01R95JrF119rMDySWh3kUSS8yXpTJOz
+ Q2IbE1eSYY4PiE2b7LeIe8EiWNeh+uZOAqwQ=
+X-Google-Smtp-Source: AGHT+IFMS2n8LzK6S9meVkMThcb+oJgoiUSQgDgGaOjy5AUwA2nLhztk6VPAj8q4BkSCs6pf1/sAsoskbhDYUrZclFI=
+X-Received: by 2002:a05:6902:240b:b0:dbd:7426:41f1 with SMTP id
+ dr11-20020a056902240b00b00dbd742641f1mr2301261ybb.128.1705948875917; Mon, 22
+ Jan 2024 10:41:15 -0800 (PST)
 MIME-Version: 1.0
-References: <CA+rFky5pNGoR2NeKkWpZS4i8dJvMpW2pXa1uqCeBFwyRxKAt2g@mail.gmail.com>
-In-Reply-To: <CA+rFky5pNGoR2NeKkWpZS4i8dJvMpW2pXa1uqCeBFwyRxKAt2g@mail.gmail.com>
-From: Paul B Mahol <onemda@gmail.com>
-Date: Sun, 21 Jan 2024 12:47:00 +0100
-Message-ID: <CAPYw7P4=TQaa4o_2JCCwzCNax+okV2CxHxgr_NszLrxKGaAuiA@mail.gmail.com>
-To: FFmpeg user questions <ffmpeg-user@ffmpeg.org>
-X-Spam-Score: -0.2 (/)
+References: <CA+rFky7PBF93-UnMyD7MQyivMBeO-2kSc4kp6HoOTU-4z9B_sQ@mail.gmail.com>
+In-Reply-To: <CA+rFky7PBF93-UnMyD7MQyivMBeO-2kSc4kp6HoOTU-4z9B_sQ@mail.gmail.com>
+From: Steven Schultz <schultz1010@gmail.com>
+Date: Mon, 22 Jan 2024 12:41:05 -0600
+Message-ID: <CADpxD9NoebaqEWmY3iJvrMq9hB+UEdRTqAFeAj52Fj5-Rb73qQ@mail.gmail.com>
+To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  /* no traces of 44100 and 32000Hz in any commercial software
-    or player */ On Sun, Jan 21, 2024 at 3:44 AM Andrew Randrianasulu < wrote:
-    > According to this source (vlc) lpcm dvd audio supports lower frequencies
-    > like 44100/32000 hz - useful for direct dv transcoding for example ....
-    > > https://github.com/videolan/vlc/blob/master/mod [...] 
+ Content preview:  On Sun, Jan 21, 2024 at 6:55 AM Andrew Randrianasulu < wrote:
+    > Using svn code from > > svn checkout https://svn.code.sf.net/p/mjpeg/Code/
+    mjpeg-Code > looked good to me and didn't appear to break anything. the patch
+    has been committed 
  
- Content analysis details:   (-0.2 points, 6.0 required)
+ Content analysis details:   (0.0 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
                               no trust
-                             [209.85.222.171 listed in list.dnswl.org]
+                             [209.85.219.173 listed in list.dnswl.org]
+  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+                             in digit
+                             [schultz1010[at]gmail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
   0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
                              provider
-                             [onemda[at]gmail.com]
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [209.85.222.171 listed in wl.mailspike.net]
+                             [schultz1010[at]gmail.com]
   0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
   0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
                              valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
                              envelope-from domain
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [209.85.219.173 listed in wl.mailspike.net]
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-X-Headers-End: 1rRWIQ-0001an-E6
-X-Mailman-Approved-At: Mon, 22 Jan 2024 05:32:24 +0000
-Subject: Re: [Mjpeg-users] [FFmpeg-user] LPCM in DVD - 44.1/32khz sample
- rate?
+X-Headers-End: 1rRzEY-0001aM-M8
+Subject: Re: [Mjpeg-users] mplex patch adding support for 32/44.1khz lpcm
+ streams?
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -131,120 +131,56 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Cc: "Cinelerra.GG" <cin@lists.cinelerra-gg.org>,
- Mjpeg-users@lists.sourceforge.net
-Content-Type: multipart/mixed; boundary="===============9083076977887114699=="
+Content-Type: multipart/mixed; boundary="===============2704127640104065351=="
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
---===============9083076977887114699==
-Content-Type: multipart/alternative; boundary="0000000000008f2fef060f734625"
+--===============2704127640104065351==
+Content-Type: multipart/alternative; boundary="000000000000c10d44060f8d2c44"
 
---0000000000008f2fef060f734625
+--000000000000c10d44060f8d2c44
 Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-/* no traces of 44100 and 32000Hz in any commercial software or player */
-
-On Sun, Jan 21, 2024 at 3:44=E2=80=AFAM Andrew Randrianasulu <
+On Sun, Jan 21, 2024 at 6:55=E2=80=AFAM Andrew Randrianasulu <
 randrianasulu@gmail.com> wrote:
 
-> According to this source (vlc) lpcm dvd audio supports lower frequencies
-> like 44100/32000 hz - useful for direct dv transcoding for example ....
+> Using svn code from
 >
-> https://github.com/videolan/vlc/blob/master/modules/codec/lpcm.c
->
-> see lines 524, 608
->
-> Does this mean that libavcodec/pcm-dvdenc.c can be trivially extended to
-> support those ?
->
-> Same question for mplex. (it only supports 48/96 khz lpcm audio).
->
-> I also found this table via mjpeg-users archives:
->
-> https://dvd.sourceforge.net/dvdinfo/lpcm.html
->
-> it lists dynamic range/gain (?) setting equations.
->
-> Not mplex nor ffmpeg support setting this to anything but hardcoded 0x80
->
-> This might be source of my "too loud" lpcm dvd experiments because I was
-> making lpcm file via cinelerra-gg's raw pcm output format (using libsndfi=
-le
-> internally).
-> _______________________________________________
-> ffmpeg-user mailing list
-> ffmpeg-user@ffmpeg.org
-> https://ffmpeg.org/mailman/listinfo/ffmpeg-user
->
-> To unsubscribe, visit link above, or email
-> ffmpeg-user-request@ffmpeg.org with subject "unsubscribe".
+> svn checkout https://svn.code.sf.net/p/mjpeg/Code/ mjpeg-Code
 >
 
---0000000000008f2fef060f734625
+looked good to me and didn't appear to break anything.   the patch has been
+committed
+
+--000000000000c10d44060f8d2c44
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr">/* no traces of 44100 and 32000Hz in any commercial softwa=
-re or player */</div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=
-=3D"gmail_attr">On Sun, Jan 21, 2024 at 3:44=E2=80=AFAM Andrew Randrianasul=
-u &lt;<a href=3D"mailto:randrianasulu@gmail.com">randrianasulu@gmail.com</a=
->&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px=
- 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Acc=
-ording to this source (vlc) lpcm dvd audio supports lower frequencies<br>
-like 44100/32000 hz - useful for direct dv transcoding for example ....<br>
+<div dir=3D"ltr"><div dir=3D"ltr"><br></div><br><div class=3D"gmail_quote">=
+<div dir=3D"ltr" class=3D"gmail_attr">On Sun, Jan 21, 2024 at 6:55=E2=80=AF=
+AM Andrew Randrianasulu &lt;<a href=3D"mailto:randrianasulu@gmail.com">rand=
+rianasulu@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quot=
+e" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-styl=
+e:solid;border-left-color:rgb(204,204,204);padding-left:1ex">Using svn code=
+ from<br>
 <br>
-<a href=3D"https://github.com/videolan/vlc/blob/master/modules/codec/lpcm.c=
-" rel=3D"noreferrer" target=3D"_blank">https://github.com/videolan/vlc/blob=
-/master/modules/codec/lpcm.c</a><br>
-<br>
-see lines 524, 608<br>
-<br>
-Does this mean that libavcodec/pcm-dvdenc.c can be trivially extended to<br=
->
-support those ?<br>
-<br>
-Same question for mplex. (it only supports 48/96 khz lpcm audio).<br>
-<br>
-I also found this table via mjpeg-users archives:<br>
-<br>
-<a href=3D"https://dvd.sourceforge.net/dvdinfo/lpcm.html" rel=3D"noreferrer=
-" target=3D"_blank">https://dvd.sourceforge.net/dvdinfo/lpcm.html</a><br>
-<br>
-it lists dynamic range/gain (?) setting equations.<br>
-<br>
-Not mplex nor ffmpeg support setting this to anything but hardcoded 0x80<br=
->
-<br>
-This might be source of my &quot;too loud&quot; lpcm dvd experiments becaus=
-e I was<br>
-making lpcm file via cinelerra-gg&#39;s raw pcm output format (using libsnd=
-file<br>
-internally).<br>
-_______________________________________________<br>
-ffmpeg-user mailing list<br>
-<a href=3D"mailto:ffmpeg-user@ffmpeg.org" target=3D"_blank">ffmpeg-user@ffm=
-peg.org</a><br>
-<a href=3D"https://ffmpeg.org/mailman/listinfo/ffmpeg-user" rel=3D"noreferr=
-er" target=3D"_blank">https://ffmpeg.org/mailman/listinfo/ffmpeg-user</a><b=
-r>
-<br>
-To unsubscribe, visit link above, or email<br>
-<a href=3D"mailto:ffmpeg-user-request@ffmpeg.org" target=3D"_blank">ffmpeg-=
-user-request@ffmpeg.org</a> with subject &quot;unsubscribe&quot;.<br>
-</blockquote></div>
+svn checkout <a href=3D"https://svn.code.sf.net/p/mjpeg/Code/" rel=3D"noref=
+errer" target=3D"_blank">https://svn.code.sf.net/p/mjpeg/Code/</a> mjpeg-Co=
+de<br></blockquote><div><br></div><div>looked good to me and didn&#39;t app=
+ear to break anything. =C2=A0 the patch has been committed</div><div>=C2=A0=
+</div></div></div>
 
---0000000000008f2fef060f734625--
+--000000000000c10d44060f8d2c44--
 
 
---===============9083076977887114699==
+--===============2704127640104065351==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============9083076977887114699==
+--===============2704127640104065351==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -255,5 +191,5 @@ Mjpeg-users mailing list
 Mjpeg-users@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/mjpeg-users
 
---===============9083076977887114699==--
+--===============2704127640104065351==--
 
