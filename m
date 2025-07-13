@@ -2,118 +2,97 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id DF28285421E
-	for <lists+mjpeg-users@lfdr.de>; Wed, 14 Feb 2024 05:52:52 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id C8238B0637A
+	for <lists+mjpeg-users@lfdr.de>; Tue, 15 Jul 2025 17:51:01 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
+	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
+	List-Id:Subject:MIME-Version:Message-ID:Date:To:From:Sender:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=sMAi7d2b9YKLh4f8QqMyZsZlyFpWhg8R1FgtArHIsCo=; b=dS4n3iL3T4Mom9t9gLu+uGWs7+
+	D6iD7gWrCLV+z0YNHoU8oTs0adfnKTsozOODjp2bmHML7CzoXXr4QbMr0G+ENqvrCytdRZ0MNQUQo
+	y1LDYJFxsd58mskXiWjSTNMJUktexKuJPXTO1z6I1Tc/d6oPmQnhqN4pSCHcNZdQa5bw=;
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1ra7GI-0000US-18;
-	Wed, 14 Feb 2024 04:52:46 +0000
-Received: from [172.30.20.202] (helo=mx.sourceforge.net)
+	id 1ubhvk-0006qG-LO;
+	Tue, 15 Jul 2025 15:50:56 +0000
+Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <randrianasulu@gmail.com>) id 1ra7GG-0000UK-Ey
- for Mjpeg-users@lists.sourceforge.net;
- Wed, 14 Feb 2024 04:52:44 +0000
+ (envelope-from <linux@treblig.org>) id 1ub12L-0005Ml-46
+ for mjpeg-users@lists.sourceforge.net;
+ Sun, 13 Jul 2025 18:02:53 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:To:Subject:Message-ID:Date:From:
- MIME-Version:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:MIME-Version:Message-ID:
+ Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=QVDzzEUp/sSRHg+JAfB5vK5+wBKsWidOuYPwuxqk7Xg=; b=gBgR+4W5t0ISvrvrcnnuvw+1uB
- llvppDugOcIpjnB1fB2WO6zwkywAAVoS/lAHaMzsPuEklVuIgdxqHGhO2wPsi+X/Qlg+cF2DJScWb
- DExVlftPHacXlLMdoCbGoBoOoafZkBDhD+MrFyjVTn7k8+0hPtbPyfLmqPJHojiw5vdM=;
+ bh=KhHj/5VYrCrDjXwAFx8MG3eFf+YqsuNGtQA1PpGFXwM=; b=Aa9U2s6fhpVdXXwKA7mAjIg0s9
+ oZJBzNEiQTPWd4/XtSYBDyrkE2iqJNwj3LPcGlR2L6ZQeOwVoVvFNpFhR4sz3oH3imTUZqI+9RH34
+ Rk4fmP5iN9IzVrJjwTJXHAeBC8juxq3z4lpMZOj5M/SUoAzKNb+kcMIIw9YceMDYqwI4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:To:Subject:Message-ID:Date:From:MIME-Version:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ h=Content-Transfer-Encoding:MIME-Version:Message-ID:Date:Subject:Cc:To:From
+ :Sender:Reply-To:Content-Type:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=QVDzzEUp/sSRHg+JAfB5vK5+wBKsWidOuYPwuxqk7Xg=; b=Z
- yMDwnH5/TcAKICQLLJWL+7XOzIqqt2bdSRpOmq4SI5ibEWCPShBKiNaTzEaBPkDYGy8r7xFcJqtKI
- ggEe/54NLI3wnakvaUrmp9HdK1qmdIU47thLLs1Zl7y/yiQln6bnut2N6WAF7s47/WQSva4eHtZRU
- 8B9h460/pzsRTw1o=;
-Received: from mail-pl1-f176.google.com ([209.85.214.176])
+ List-Owner:List-Archive; bh=KhHj/5VYrCrDjXwAFx8MG3eFf+YqsuNGtQA1PpGFXwM=; b=W
+ chk8qAtZvYHBObV6SIV793ZGSirT5elRyMjZMt0B1eIqPbw38Wrn0AhkrFR4KCbV4PU1Z/C7G06TA
+ 4aRgGp/6qmwiyvwCrqhhaeAhlCqLscOh0nit6H2dZSfLy9lRFm0ps4GhEJgp4w8aTbaV/SfiH7hgZ
+ WlejleFqgXjVrhZI=;
+Received: from mx.treblig.org ([46.235.229.95])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1ra7GF-00064v-5x for Mjpeg-users@lists.sourceforge.net;
- Wed, 14 Feb 2024 04:52:44 +0000
-Received: by mail-pl1-f176.google.com with SMTP id
- d9443c01a7336-1d9b2400910so2822785ad.0
- for <Mjpeg-users@lists.sourceforge.net>; Tue, 13 Feb 2024 20:52:43 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20230601; t=1707886353; x=1708491153; darn=lists.sourceforge.net;
- h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
- :date:message-id:reply-to;
- bh=QVDzzEUp/sSRHg+JAfB5vK5+wBKsWidOuYPwuxqk7Xg=;
- b=B7ZS2t1u47+w9g1YCYqcNA6nO0IcBsuBDsxYWiVVuPxhN7ZbILpdYpStoleYMbP2Hf
- M7zDrVrHH/USDkwxSpsIGNQe4wUoZKyYn7gDe2fd8WcOo1RGsc+PMFgJ+4gDusJB811g
- 0KDt4cGgsJd/hTYpT1+vHKq1vx8nmEpGPC4qQ4bGFwFx5Y9lkbMX3GhU0kT+F4Qlz/Vz
- 78cDkSLS4TJZ5/Rf5DSCIaIak3gGSi4QUxhuvj/5ufqvLINXAkN0jcOdDT/LqrfNKwdj
- f3teyeFa829DqYkNa7BluJx95CDbjaj31cD3YB5pHviWMwrvNkybAtNt+4MGCyBobSgE
- 70qw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20230601; t=1707886353; x=1708491153;
- h=to:subject:message-id:date:from:mime-version:x-gm-message-state
- :from:to:cc:subject:date:message-id:reply-to;
- bh=QVDzzEUp/sSRHg+JAfB5vK5+wBKsWidOuYPwuxqk7Xg=;
- b=hzV8rA+LBkoBDrXfEJg3xkiq9pj04p9zE5ocjLW6zXxCvCXtS5UDhAgor5uKwkAaE1
- VISvC4rmhL/77M6GmejXgVbbO6kTlhzXsdHaSbMsMDzwwn2+pFFT6l2kuskMwhk9YRK4
- yhwceryMI4Lu5i6qOl9l2OMRXFYpzBeXrH/FJjkTc5hAHLa3o4BrMJsn0KKUeAs7cv+3
- /WIH2Ph7wOs/GEGiZl1GaVyWiUdXNREVN51zkXsOwzc38ezb1g0m6m2QNF/fPgH781DX
- UBOV1dmL80OtkKG6q1aong1wrNWbYfTyzLj0W8QtGBa0rSYV8O4bo1V+w7SeVu3plGym
- FRJw==
-X-Forwarded-Encrypted: i=1;
- AJvYcCUgBazJbjx3R0XQF/FgdwteB1wp77Nm03fZlvKwXuwo5ogbQzQr/wM2nfkUoSL/Xs4o8Y5M8VyOJ0vWGeZ7j5jeSKTKrIGA/x0NSZhBdxQ14qI=
-X-Gm-Message-State: AOJu0Yzn6gT/NCVmYDaTyb3hLxb87fXNTNNCBB0Kd/w7DWpflCVgMbAM
- 70ggze8ankQYu1B4Pl3FjLsUfcQc8RICbSGdM+NMcacftv94i0ejzz18kBQ+jRbqwTROut+jufn
- /6VBxt04Qn0VvzWdUSMB0HWwQFDLaHzrZHYZh9A==
-X-Google-Smtp-Source: AGHT+IHVxd2TXuuWCcYKilTHrIbw0kWii2Bk9UFqsWLfaaVCCaHSVoaBjkKzbcob5H5wl2sR6XxIrhoxl6x7xYOUpeY=
-X-Received: by 2002:a17:902:e74d:b0:1d7:17e6:44fb with SMTP id
- p13-20020a170902e74d00b001d717e644fbmr1506586plf.32.1707886352826; Tue, 13
- Feb 2024 20:52:32 -0800 (PST)
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1ub12K-0006IN-Nl for mjpeg-users@lists.sourceforge.net;
+ Sun, 13 Jul 2025 18:02:53 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=treblig.org
+ ; s=bytemarkmx;
+ h=MIME-Version:Message-ID:Date:Subject:From:Content-Type:From
+ :Subject; bh=KhHj/5VYrCrDjXwAFx8MG3eFf+YqsuNGtQA1PpGFXwM=; b=e31CTjy1FSq5tSKi
+ 8XO3Yn9PcjmjDwWOWW/WS9t2B++sirF+oFqpinIrqv7e3bi6EIBvjCtHFMU935gY49lwUgMtJRV6n
+ vuTvFp+zqL4dwaLrkHA9yPKXBK2S+HiyeQy5lwQJfl2AGCRi7jsZJXdTcKIgnMhY6jEOhdj27jMbE
+ pDV7F2+lNIaxFIwyxEsS2KZIfKuc3+nt00iGatPus4a7eg2HhMd2G1GynWOxV/n30GBOUJhvkA0MR
+ aKHjx6r1QhhiyHiJDVP2QyE/TTi11NPcyF/leonQltOL9i9TgS7bq5wWe1WkXH96irR6wGD6iZDn3
+ HDzYXTsup0dGJbuCdA==;
+Received: from localhost ([127.0.0.1] helo=dalek.home.treblig.org)
+ by mx.treblig.org with esmtp (Exim 4.96)
+ (envelope-from <linux@treblig.org>) id 1ub0ZS-00Fo6P-1u;
+ Sun, 13 Jul 2025 17:33:02 +0000
+From: linux@treblig.org
+To: clabbe@baylibre.com,
+	mchehab@kernel.org
+Date: Sun, 13 Jul 2025 18:33:01 +0100
+Message-ID: <20250713173301.246043-1-linux@treblig.org>
+X-Mailer: git-send-email 2.50.1
 MIME-Version: 1.0
-From: Andrew Randrianasulu <randrianasulu@gmail.com>
-Date: Wed, 14 Feb 2024 07:52:20 +0300
-Message-ID: <CA+rFky5c=UqFRNH7Pbc6fCS4t4XYHdKenX54sQEmCd44K6UAZg@mail.gmail.com>
-To: "Cinelerra.GG" <cin@lists.cinelerra-gg.org>, 
- MJPEG-tools user list <Mjpeg-users@lists.sourceforge.net>
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Was looking for xing media software,
- found this little open-source
- utility printing info on mpeg audio files, including this rare multichannel
- extension! https://mp3guessenc.sourceforge.io/ Was looking for xing media
- software, found this little open-source utility printing info on mpeg audio
- files, including this rare multichannel extension! 
- Content analysis details:   (-0.2 points, 6.0 required)
+ Content preview:  From: "Dr. David Alan Gilbert" <linux@treblig.org> Nothing
+ has checked the zr36067_debug variable since 2021 after commit efdd0d42e276
+ ("media: staging: media: zoran: remove detect_guest_activity") It's set as
+ a module parameter, remove it. 
+ Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [randrianasulu[at]gmail.com]
- 0.0 HTML_MESSAGE           BODY: HTML included in message
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.214.176 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.214.176 listed in wl.mailspike.net]
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-X-Headers-End: 1ra7GF-00064v-5x
-Subject: [Mjpeg-users] OT: mp3guessenc
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+X-Headers-End: 1ub12K-0006IN-Nl
+X-Mailman-Approved-At: Tue, 15 Jul 2025 15:50:52 +0000
+Subject: [Mjpeg-users] [PATCH] media: pci: zoran: Remove unused debug
+ parameter
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -126,51 +105,60 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Content-Type: multipart/mixed; boundary="===============1952991090197751562=="
+Cc: mjpeg-users@lists.sourceforge.net, linux-kernel@vger.kernel.org,
+ "Dr. David Alan Gilbert" <linux@treblig.org>, linux-media@vger.kernel.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
---===============1952991090197751562==
-Content-Type: multipart/alternative; boundary="00000000000060889d061150476e"
+From: "Dr. David Alan Gilbert" <linux@treblig.org>
 
---00000000000060889d061150476e
-Content-Type: text/plain; charset="UTF-8"
+Nothing has checked the zr36067_debug variable since 2021 after
+commit efdd0d42e276 ("media: staging: media: zoran: remove
+detect_guest_activity")
 
-Was looking for xing media software, found this little open-source utility
-printing info on mpeg audio files, including this rare multichannel
-extension!
+It's set as a module parameter, remove it.
 
-https://mp3guessenc.sourceforge.io/
+Signed-off-by: Dr. David Alan Gilbert <linux@treblig.org>
+---
+ drivers/media/pci/zoran/zoran_card.c | 4 ----
+ drivers/media/pci/zoran/zoran_card.h | 2 --
+ 2 files changed, 6 deletions(-)
 
---00000000000060889d061150476e
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+diff --git a/drivers/media/pci/zoran/zoran_card.c b/drivers/media/pci/zoran/zoran_card.c
+index e31f9f19a48a..d81facf735d9 100644
+--- a/drivers/media/pci/zoran/zoran_card.c
++++ b/drivers/media/pci/zoran/zoran_card.c
+@@ -67,10 +67,6 @@ module_param(pass_through, int, 0644);
+ MODULE_PARM_DESC(pass_through,
+ 		 "Pass TV signal through to TV-out when idling");
+ 
+-int zr36067_debug = 1;
+-module_param_named(debug, zr36067_debug, int, 0644);
+-MODULE_PARM_DESC(debug, "Debug level (0-5)");
+-
+ #define ZORAN_VERSION "0.10.1"
+ 
+ MODULE_DESCRIPTION("Zoran-36057/36067 JPEG codec driver");
+diff --git a/drivers/media/pci/zoran/zoran_card.h b/drivers/media/pci/zoran/zoran_card.h
+index 518cb426b446..c4f81777e6ce 100644
+--- a/drivers/media/pci/zoran/zoran_card.h
++++ b/drivers/media/pci/zoran/zoran_card.h
+@@ -12,8 +12,6 @@
+ #ifndef __ZORAN_CARD_H__
+ #define __ZORAN_CARD_H__
+ 
+-extern int zr36067_debug;
+-
+ /* Anybody who uses more than four? */
+ #define BUZ_MAX 4
+ 
+-- 
+2.50.1
 
-<div dir=3D"auto">Was looking for xing media software, found this little op=
-en-source utility printing info on mpeg audio files, including this rare mu=
-ltichannel extension!<div dir=3D"auto"><br></div><div dir=3D"auto"><a href=
-=3D"https://mp3guessenc.sourceforge.io/">https://mp3guessenc.sourceforge.io=
-/</a><br></div></div>
 
---00000000000060889d061150476e--
-
-
---===============1952991090197751562==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============1952991090197751562==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Mjpeg-users mailing list
 Mjpeg-users@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/mjpeg-users
-
---===============1952991090197751562==--
-
