@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3AB79B18EEC
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DA79AB18EFF
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=/PUPw6j0QhdskASyq2OXr9kuBcYv3iWk9wgZ8i7fVAA=; b=LWauZ7kDecsbkllOxenE5dtWtI
-	fgTOdxC+850UyI4W4o6MoSJ9QunUsru6nAkQKrFXfkm/NSJQTvOBZDaK6xOShlFr2z9rkuD4RLO42
-	FwbjoKGAeHlKYwvpuAsS1LTmNLc/wxqK5DPwIwEmMGbmdAx//nUdgW2+gCMk56GjJ15I=;
+	bh=YrWlEketUjhZ14B+G6FSEk6GRRY9taYKtjo6jH3exkM=; b=d4udRlU94OC9CbfVKD5LYyyFxo
+	bFgmLcqyZVkmqctuDpaMaNlRw1R0NPQZAtB1efhQj3UAO4m6HG+lBNYkBDHs/oFGOwtwkF9UY/Z+r
+	2Q3XfxGdIMW5Cd5p4K/IklKOtTnjvdaZHIKBOAmxk74aZdRfjN0ugiB/qMDswKK+bllU=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChu-0006dB-0z;
-	Sat, 02 Aug 2025 13:55:30 +0000
+	id 1uiCi0-0006o8-Ns;
+	Sat, 02 Aug 2025 13:55:36 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8lh-00019U-I6
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8nN-0005pY-Sg
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:43:09 +0000
+ Sat, 02 Aug 2025 09:44:54 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=7RBO3RPVTOjSV/mvWa+qfX0ttDZXd47QGeTNbpWRpDM=; b=HUl8GZI+UsIHrjCz2pJ91Bp8cS
- c782oYFmQIMFzgUAUVt0zZ/Iku30/xica2h9gs0bG8C1uXc3LPSv91uVXffae+UDA8acIfB9H1YZi
- x10LFM3AN94m8ruqhLKAQ4p/fZnwg84v5LJ7sHaC+ANLzltDD2Xq1mho2r3gLGv6m89A=;
+ bh=MfkygKBAllaxYSomZp33hStnwFG7WvKqBhoXuXfN69g=; b=IzoDaf9z3OiPMS6VTzOoKJsPaa
+ crrs2vzAFVWdCseEDLn2Ki1lAJ1UPKMEjEmXxvf7HwgQnbJ+tX60qvLjHQ4dATCfJYOEAcegmuBmH
+ 2K8OiJX2GOoV5SjdZ/UxYegNd6ByVvUk3wor0tvMIfCUbpEWYEBtOiKjpZRhXsSMcaUw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=7RBO3RPVTOjSV/mvWa+qfX0ttDZXd47QGeTNbpWRpDM=; b=FcS2ckZ7RTYMy+pshGVTRH4gtJ
- /4Nu5iLFmQx4GXcBpG76UwarGrtexXzg2cpOP9yDZ964623r1IkzoBNdtMxdvCqMELaudnYP1vdYA
- N6nqHX8HzutpW6KkCjIb8w5qb/IF8szAodwAyWg370YcckRX15qQKperfgkkC47umqwo=;
+ bh=MfkygKBAllaxYSomZp33hStnwFG7WvKqBhoXuXfN69g=; b=j9ShNYioPwbcmPtk7bSKdUZZzR
+ YkvhoqJcPO+BozuWb3oBtstk+MXx+xbmStqlvlF2VKk2zk2tb0DT7SuBgHK3jdZZ7ZNagiklTXoRn
+ 2I+o1sti2xf8Yryl7rtI/HGHEuuOio5FiLQDoJtlwNyV5rqofVdyr+zns6ejLzDzRsWA=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8lg-0005qo-Vp for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:43:09 +0000
+ id 1ui8nO-0005zL-5A for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:44:54 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id CEC0B3AC8;
- Sat,  2 Aug 2025 11:26:14 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 60F9E3B4D;
+ Sat,  2 Aug 2025 11:26:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754126784;
- bh=PZLQVaI1vZKi0WIr3Q878QLqEaTr0uij9E9KhgQTBLY=;
+ s=mail; t=1754126795;
+ bh=rizlCTL3Kt0Hf0axm/Qmz2Cg8LZmpWFMmM2fmmL3vuU=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=glpozsiMSkAdE8qk8DV+qPeB3taW375MoVrWdOB4cufVoZ/iT2/9a/sHUU6CS0d5I
- riolvMj1G/tGQ7S2/0rHQQjGwNysQGwANruXqaKpTG39MMXBMknM5lc8YSPrjUgIai
- 9jDndo/hQZm6gNe2reNXZU/1z+kKk7B/biiUSd+U=
+ b=h56Mr/7tp64+ZUhXR58WHpxs6lTXlvIdWjSre1q0GxY0AMddJguHdhZYEOteHkdeS
+ CBgbgSTk/vlVrlmR0hdREsQR6fwfP5gkZc9sUwWCIPIUHQcbqSPnfLz/3itJS7qh03
+ keO6FDaO/hOqJ+zbi8EnAsSQX573NZTL3KgY3IRE=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:22:44 +0200
+Date: Sat, 02 Aug 2025 11:22:45 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-22-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-23-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,21 +141,21 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=2406;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=1678;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=T7tnvhAAkedHKQQVRtKCkxG+wcLOyWF1XErsaMtfBYY=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj59XaFL/Sd0BVhJH0Xfg7Vmb1RhxbHsvp6x
- 5ltEdCDgMOJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+QAKCRByNAaPFqFW
- PCwcEACdclKr4oR/Yg45NonSfNvh7MFckOXskhI7d8HCP6X6W2mxvMN2af258eUD0Po2k7UJAdg
- yhzWebC08rW11AJ0yJ3BPh7FKCi1eL6HmLvL6gUYdf/HFCIzVRaXRBIrvgCE9Z7XiMpZOvHml3U
- PH+YUa/VZZd/SLAZtNbWr1356EBCqBLxuvqCV9B0zyLAgNGvv1CoyeO3pbvl2oNL7OJyn7v2mof
- YqY9cFeaIDMIhiDfZ4xNa4r/eQ1DT43YITKFB8bZmFcojlHmuByILVOj+o9uOTJWeMFIl2UC5F/
- YZxhB+yQInGuMlJVYQkGvBp06TE3kgE3NjJyhV52/FwlfnUdSo0d1/HxG4QxVaoAUp9BsuJKAwS
- eJ4eo9xwhHWzs06HcHx1Kt/YmtN/QJJd6Ukjby5WdtpRpmAARIgr5LwfiYuysqD9N3VRbKq+9fZ
- kLJ0e40lPrCJaeDc36gAl0dUgo8OeDcuHcWRiUL3uOHxA9+U0oRdQ15nEgmGY1MxnBeO/hLMLkI
- G3PtZs8kgWlBW8b/bMN28rvvgm9rR7VUuvAk/4f9p+dgDkhu4ZTPyheBI2V4JRgGlleR7vVeSTm
- UZvbPhAiM16/87VqLg31yijDZzm1Zn8du/yPyJN8U7+HyQIBTjVVhYTrY9eD0NO9TTEdkwfHdsx
- 5RIsN9qBKPBFCrw==
+ bh=VFmrROMakbnqJAC4dcjyTjUYRV1GRcf+sO37WGrNLcg=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj6i6wiSBh9v/UN9HA32pPRH6ApLAr4OEu5V
+ Jmtrtm6bUSJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+gAKCRByNAaPFqFW
+ PP3WD/9aG4apNvm9piPJBuxrdRZiK04I5I+fGvAE8sc6cPA2ebtyKA/1vW4z17ikyaAXLSfj+XZ
+ e+QhTIIgGHBQxP95xByIpTkMEJQzV26c3v2FCazou0nFI2a5rlgyDMb80UGI7eDeH2TZV+NuKYm
+ 3gvu+Z2pvEFpnfPIgPjKHJYuSYR0tTuEkXnOwKuBPASdT9lbdclnSvqENlUB3RYFENXKdDsJV3r
+ vEmDioX9y5CbnHaNXZ3bazhmprLRP50X+HnqzPZYPJQ0pwS9NkhoEeIX/gg4My1a81hy0s2rj3p
+ QQKtoBkF8ugKa2Cl8vElby1slbn8GWdWhUX6XKj0PF/EbHFoMX0WpL6MNz7627PHesJBFkCSj3V
+ pKa928ZrOZlEnqLoCwpNeK0g8trbUg57fCg8+AptrrtOT7Vl4tcbRuseBA2fnm+LNxFhi4jSKFS
+ Oy+eHwc3b+O6RWSWp42qu0WvbZ3R5UlgAGG/TxRbys5spBYfEhWS2ea+e7g5QP0X3EC/96IGpwA
+ 1Aid4Grvx67Ighft5mH6q/oEC3SJWJY/8hy3nfbluwXHzFDxeL6qPSFQ0CkAgijSO3+/MsYF/Om
+ 3lW783CSzxb/dv4pC/MFVIZzz0HUrusA0EoYhNrW3ctLJ2apvab3fv5V4uJ32uDrR6/F/QNkmDA
+ xEw42OCIaIk6GOg==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
@@ -167,9 +167,8 @@ X-Spam-Report: Spam detection software,
  the administrator of that system for details.
  Content preview:  From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
  In preparation for a tree-wide rework automated with coccinelle that will
- need to access a struct file pointer in the iris_v4l2_fh_init() and
- iris_v4l2_fh_deinit()
- functions, pass it from the callers. [...] 
+ affect file->private_data, v4l2_fh_add() and v4l2_fh_del(), move setting
+ file->private_data from the callers to the iris_v4l2_ [...] 
  Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
@@ -180,10 +179,10 @@ X-Spam-Report: Spam detection software,
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1ui8lg-0005qo-Vp
-X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 22/65] media: qcom: iris: Pass file pointer to
- iris_v4l2_fh_(de)init()
+X-Headers-End: 1ui8nO-0005zL-5A
+X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:16 +0000
+Subject: [Mjpeg-users] [PATCH 23/65] media: qcom: iris: Set
+ file->private_data in iris_v4l2_fh_(de)init()
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -212,64 +211,49 @@ Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 
 In preparation for a tree-wide rework automated with coccinelle that
-will need to access a struct file pointer in the iris_v4l2_fh_init() and
-iris_v4l2_fh_deinit() functions, pass it from the callers. There is not
-functional change yet.
+will affect file->private_data, v4l2_fh_add() and v4l2_fh_del(), move
+setting file->private_data from the callers to the iris_v4l2_fh_init()
+and iris_v4l2_fh_deinit() functions. There is not functional change yet.
 
 Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/platform/qcom/iris/iris_vidc.c | 10 +++++-----
- 1 file changed, 5 insertions(+), 5 deletions(-)
+ drivers/media/platform/qcom/iris/iris_vidc.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/media/platform/qcom/iris/iris_vidc.c b/drivers/media/platform/qcom/iris/iris_vidc.c
-index 0c3b47b9958aa3388d91ffda9b2acfbb53f09f59..d5f99519def45d1c5859e641eed490ec9ad5784a 100644
+index d5f99519def45d1c5859e641eed490ec9ad5784a..73c96498759cbde8e1d9870336023e7773f6f28b 100644
 --- a/drivers/media/platform/qcom/iris/iris_vidc.c
 +++ b/drivers/media/platform/qcom/iris/iris_vidc.c
-@@ -21,14 +21,14 @@
- #define STEP_WIDTH 1
- #define STEP_HEIGHT 1
- 
--static void iris_v4l2_fh_init(struct iris_inst *inst)
-+static void iris_v4l2_fh_init(struct iris_inst *inst, struct file *filp)
- {
+@@ -26,10 +26,12 @@ static void iris_v4l2_fh_init(struct iris_inst *inst, struct file *filp)
  	v4l2_fh_init(&inst->fh, inst->core->vdev_dec);
  	inst->fh.ctrl_handler = &inst->ctrl_handler;
  	v4l2_fh_add(&inst->fh);
++	filp->private_data = &inst->fh;
  }
  
--static void iris_v4l2_fh_deinit(struct iris_inst *inst)
-+static void iris_v4l2_fh_deinit(struct iris_inst *inst, struct file *filp)
+ static void iris_v4l2_fh_deinit(struct iris_inst *inst, struct file *filp)
  {
++	filp->private_data = NULL;
  	v4l2_fh_del(&inst->fh);
  	inst->fh.ctrl_handler = NULL;
-@@ -164,7 +164,7 @@ int iris_open(struct file *filp)
- 	init_completion(&inst->completion);
- 	init_completion(&inst->flush_completion);
+ 	v4l2_fh_exit(&inst->fh);
+@@ -185,7 +187,6 @@ int iris_open(struct file *filp)
+ 	iris_add_session(inst);
  
--	iris_v4l2_fh_init(inst);
-+	iris_v4l2_fh_init(inst, filp);
+ 	inst->fh.m2m_ctx = inst->m2m_ctx;
+-	filp->private_data = &inst->fh;
  
- 	inst->m2m_dev = v4l2_m2m_init(&iris_m2m_ops);
- 	if (IS_ERR_OR_NULL(inst->m2m_dev)) {
-@@ -194,7 +194,7 @@ int iris_open(struct file *filp)
- fail_m2m_release:
- 	v4l2_m2m_release(inst->m2m_dev);
- fail_v4l2_fh_deinit:
--	iris_v4l2_fh_deinit(inst);
-+	iris_v4l2_fh_deinit(inst, filp);
+ 	return 0;
+ 
+@@ -269,7 +270,6 @@ int iris_close(struct file *filp)
  	mutex_destroy(&inst->ctx_q_lock);
  	mutex_destroy(&inst->lock);
  	kfree(inst);
-@@ -259,7 +259,7 @@ int iris_close(struct file *filp)
- 	iris_vdec_inst_deinit(inst);
- 	iris_session_close(inst);
- 	iris_inst_change_state(inst, IRIS_INST_DEINIT);
--	iris_v4l2_fh_deinit(inst);
-+	iris_v4l2_fh_deinit(inst, filp);
- 	iris_destroy_all_internal_buffers(inst, V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE);
- 	iris_destroy_all_internal_buffers(inst, V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE);
- 	iris_check_num_queued_internal_buffers(inst, V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE);
+-	filp->private_data = NULL;
+ 
+ 	return 0;
+ }
 
 -- 
 2.49.0
