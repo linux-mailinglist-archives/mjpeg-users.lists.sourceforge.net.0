@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 37B3AB18ED5
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E56D7B18ED4
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=m9eWe1j0GVZ5aGykcs5+GtNp77Ur8wXmhGP3+V50NRU=; b=O/jaYxuf0F4wfD39G8MyAbIq2/
-	4+RXtlw0GKd2pE/uFg6mj2M+nzx/MqmebwzBahvBiBpLgihzkOTQ33+8OLmq/zqWyvp7OiE8QNhkQ
-	m62L3SsvBIZ98gg2qiCnlovDAgjce+gUNHsRRHG3+fbl6qXmAQ58GhFi6lseHAq4ORrA=;
+	bh=PrVMQK98I8IgeHfxY3rAOgggqoGEbjlNkuez2BPD1no=; b=OUiijUnaUXj4+9D7N/tdnKguIg
+	i9ueMay7rw7W7UReQ4zfcNx2wUmkDXdbfXqHHebvoEhZxbQX6230oxT55aN1jlsah7R5Rq7UMaKd0
+	pSx1FykPVTsvwjl54PRVtU3t/PhpDAkOY0YOQZ8LbgSZq3DAG5tD5xVYfILYUjXBCZQg=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChm-0006TD-2J;
-	Sat, 02 Aug 2025 13:55:22 +0000
+	id 1uiChl-0006T0-O8;
+	Sat, 02 Aug 2025 13:55:21 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8hd-0005IJ-UU
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8hZ-0000Rx-NE
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:38:58 +0000
+ Sat, 02 Aug 2025 09:38:53 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=6i8Ur/KMvfNhmoPqtosswIXCrRp0Fa2aJ3gfmIC/HXI=; b=HW7TpCCClBK7FBcakrWB98UmwV
- eu4liH6Ab9mEazQAELo7C2A0vqq/0kHx/5MZpJJcXhzUOHoKCST3zaWcZ5cZXtuGcdWC/WqDNMhiL
- qeYadDjDJTS0XjbQnvITQeEf3xutwA2bnJIY/PrmoyVlFKHFewblF/37Xr5DLzyEVxhE=;
+ bh=wOsVBDUL0fJYAyldn9oLypFAbCn4XlNfQNa1hTuPgLs=; b=QhmXEfyCmeOfIqWq7GxeI7F2Co
+ frkskjwknnVP1U63MHrRkmRKiwf9w88b8jjVHd9y3npC7lSGHMUfhKcqdJVlxoyA7wN1IEH7F9NcO
+ C8bqtWEn2/3O+cScBaqys7jaroWidZrzhQTAMTyXjV/eSffnzby91/99PQCSkMrLiJN4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=6i8Ur/KMvfNhmoPqtosswIXCrRp0Fa2aJ3gfmIC/HXI=; b=UR5SRFtY1Hi2wc6sAwjW1PW46c
- 8uo6iaZiWwsr/X+5wINSej3OyDgZSZcqwF0ESkAm2spv2s/86/6GnINlrSYvR45I/BTd8DqS8J/lX
- ayaLwC40IEjTvA3mHp7nToXvygAUCrUXfuoGzYNrSEq9kQCTkxwaQrHl9CvpXv2at8PE=;
+ bh=wOsVBDUL0fJYAyldn9oLypFAbCn4XlNfQNa1hTuPgLs=; b=Fvt5GxJwSsQpLkmuYX/cAVTt5L
+ l9K5XHHy6OhzXtQDHd/6XJRTYfmOBP0qD2JcZLBPxhtINwI7irj/kD+Z/pdLeQJOpwUma5sTUvjjr
+ ciMf7P1Askz+7OWXnUIQxKeKJ6xGovM8bin8ZExRaMYoTdM4dgVc/yn3dcaxAn++c3LQ=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8he-0005ZC-53 for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:38:58 +0000
+ id 1ui8hY-0005Yo-TF for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:38:53 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id B3C5940D8;
- Sat,  2 Aug 2025 11:30:23 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id B88723FCE;
+ Sat,  2 Aug 2025 11:30:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754127034;
- bh=P+AdXovkDs72ySz3QReqGKxKqBANHR4M/z/Qnx0Et0A=;
+ s=mail; t=1754127052;
+ bh=e9spn0Wp0nY1lMfXntKTb/kLvwEFE4ID3yslOAjGdJI=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=TYEMJ1NQIn2AHami8rz14vK1JzGQigVifiRoyt6QHmF3Iu7LxEUWe+myT+degFzvr
- js1GxPK6uXfvuzkK5py81gAkb/ClqJxrx4Q9yB2nZNuMAdOJCd1ZQz6ex+ZmHLpccd
- Mvkz9iIBZ12ifbUQkccgBT6ah7Ey34/3qfhaou9E=
+ b=HpX5BDdVS3j+pTsNcwI1BeCJShWH8n9M85Z1l5akK04RGo19pEFRLt6X/IxG5rJOl
+ poLl3ecPsVXrhmA1hnnbF5A0Kjc6WhMdGf1Q0Y9vJ8ijF78krqD2t5L4pCzXJojnGU
+ PJ/ijYO2i6nQmjKqqWUzB4vwpkcHyzab7qcD1niw=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:23:10 +0200
+Date: Sat, 02 Aug 2025 11:23:11 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-48-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-49-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,21 +141,21 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=2354;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=4867;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=P+AdXovkDs72ySz3QReqGKxKqBANHR4M/z/Qnx0Et0A=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj9QjDArsCCpetRJypejE9fiKxkH/6QF97H/
- V7Va6UoY5qJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/QAKCRByNAaPFqFW
- PC37EACiB4t1ueWIIp+xm9SL1tP9bPd4oIx6m58tUtufzqv2UhhlQY2uIeweEcdjDrnmK6wlPFf
- Zh67AxZib08g3DhnLVPtuf6zyFFx9glCJg6E37kf4tO0Cbjk2b7Wo0XqOtvRvL0mrbcFdm10XOQ
- u48ojoafbcLDoihcjqYmZZQA517dhFRTPQq0ewLAWh1vRHp5r3u6zxmRYWXvtvn07t8yRHYo1yy
- pTIdGY05xvfVpm2AwuDef2uLWLTO0ecyx5rhZzPNUGXD+b+hBJfXTGV2aZuhzrLZFz4q/HnJ3x0
- BYQRN2rUU0mfRw6XAJg2vcYskCk4xE1oHXWcvGmeORkGTZqWQquB4DHbQxT1ITU7vwv3iRSKx36
- fCognK5a0c4ZW//QBYFwwlv9k74VAtnxKtNiBK6Vbuhbjdsu+YafF0wxxd0bwQ7mVD56iAeaLTZ
- aP2D2Iy/3E+BdZ4DzVXCbcj9E+jTxZfxbaXg3u5ARjUZb/cQaha4H5DW+a/bxwe6Dc0pyaf8hr7
- jlWtg1P74osSQLocQSEkYZA+LkuSwrf7AjDO/49ylXeeTtmSe4k4UQHi0XpMZYOYBqHYmyW7gGE
- ppnTGZndhnM4xWgtUrd4XxDQx4HNaUV59HsflvBoP9BCtbJ8eruyG9ddj+y0d1cNTq36z2Yf78+
- 2X3qjhfFmyd527g==
+ bh=e9spn0Wp0nY1lMfXntKTb/kLvwEFE4ID3yslOAjGdJI=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj99eZoQBrrRU8HwZCp/lEmCC2AHXC6KN4bo
+ 5sTBWh+2PmJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/QAKCRByNAaPFqFW
+ POKlEACwPh0PROmzVn8vNI8tmgzbJ3MnsT1OqXi7X6rM2NINFWzgSBIn68R5SI9nExICwVvZOcg
+ C/VU+1NnSJmzepB4eugrvkN8R/ohZPC931mfV5qnxmgqlfzIqhHFxL/yTAzB38rIMy6W79Iz0wz
+ /2vu83MetiFDnqHirzlPi971oztZDB3goYVIWsVt2VHSjdxv84OLJy4k4K+uH28ZQLSzDtDuF+e
+ rmvsS0NnkAcB00aYRXJBygz6VJc6NX4UXXRUr2k7t7nBGdyypfMnT6wCCnfVl2D/ZJqtPwIqOA+
+ lqCYjutFAd2rqSrAH8+p49h8x6tUkSX8D/2pbGQE4XlqNLqfEqHEB9wDFguUkoTgcP63SiSTVDt
+ cjEzihdAXBLo/FZvYtllF3pzk/CygB7kQbuCX+65CBD3mA4hFxTgMUVs06EWPuGYuMMCxMYznc6
+ rJYKEUEZ83mM/c0/rdTHpa9zf4l25/nJ+N+88J4jWdYjdfgt0oihZQRHC8B9km3bomn1Chf4EMt
+ FGW4aMoIugkEgb0C7vNcfkDdTLQQQzhiK9hFvThH8lAwJAfV/9danxqiMj/hrf2T9JXXicqycZ0
+ NYKJ31e5gDAGyuFSX3Cpfv5NBB7pUKfd0az1qZiKNEJWanS9nhV99GPNis9HU370KDk2gE5jOLF
+ os4dXx+4t0F7obw==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
@@ -180,9 +180,10 @@ X-Spam-Report: Spam detection software,
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1ui8he-0005ZC-53
+X-Headers-End: 1ui8hY-0005Yo-TF
 X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:16 +0000
-Subject: [Mjpeg-users] [PATCH 48/65] media: s5p-g2d: Access v4l2_fh from file
+Subject: [Mjpeg-users] [PATCH 49/65] media: s5p-jpeg: Access v4l2_fh from
+ file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -214,60 +215,120 @@ to be available in file->private_data, initialised by v4l2_fh_add().
 Access the v4l2_fh, and from there the driver-specific structure,
 from the file * in all ioctl handlers.
 
+While at it, remove the now unused fh_to_ctx() macro.
+
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/platform/samsung/s5p-g2d/g2d.c | 10 +++++-----
- 1 file changed, 5 insertions(+), 5 deletions(-)
+ .../media/platform/samsung/s5p-jpeg/jpeg-core.c    | 25 +++++++++-------------
+ 1 file changed, 10 insertions(+), 15 deletions(-)
 
-diff --git a/drivers/media/platform/samsung/s5p-g2d/g2d.c b/drivers/media/platform/samsung/s5p-g2d/g2d.c
-index 922262f61e7b53baf1b5840d35149bf5b4b2e7ad..55f5130156b7e8690bd0eb204630a730d9f84bd6 100644
---- a/drivers/media/platform/samsung/s5p-g2d/g2d.c
-+++ b/drivers/media/platform/samsung/s5p-g2d/g2d.c
-@@ -307,7 +307,7 @@ static int vidioc_enum_fmt(struct file *file, void *prv, struct v4l2_fmtdesc *f)
+diff --git a/drivers/media/platform/samsung/s5p-jpeg/jpeg-core.c b/drivers/media/platform/samsung/s5p-jpeg/jpeg-core.c
+index 2a57efd181540183e7d2b66d51f9f2f274ddd100..81792f7f8b1671dba2023f99b2779784d9a14b8c 100644
+--- a/drivers/media/platform/samsung/s5p-jpeg/jpeg-core.c
++++ b/drivers/media/platform/samsung/s5p-jpeg/jpeg-core.c
+@@ -580,11 +580,6 @@ static inline struct s5p_jpeg_ctx *ctrl_to_ctx(struct v4l2_ctrl *c)
+ 	return container_of(c->handler, struct s5p_jpeg_ctx, ctrl_handler);
+ }
  
- static int vidioc_g_fmt(struct file *file, void *prv, struct v4l2_format *f)
+-static inline struct s5p_jpeg_ctx *fh_to_ctx(struct v4l2_fh *fh)
+-{
+-	return container_of(fh, struct s5p_jpeg_ctx, fh);
+-}
+-
+ static inline struct s5p_jpeg_ctx *file_to_ctx(struct file *filp)
  {
--	struct g2d_ctx *ctx = prv;
-+	struct g2d_ctx *ctx = file2ctx(file);
+ 	return container_of(file_to_v4l2_fh(filp), struct s5p_jpeg_ctx, fh);
+@@ -1015,8 +1010,8 @@ static int s5p_jpeg_open(struct file *file)
+ 
+ static int s5p_jpeg_release(struct file *file)
+ {
+-	struct s5p_jpeg *jpeg = video_drvdata(file);
+ 	struct s5p_jpeg_ctx *ctx = file_to_ctx(file);
++	struct s5p_jpeg *jpeg = video_drvdata(file);
+ 
+ 	mutex_lock(&jpeg->lock);
+ 	v4l2_m2m_ctx_release(ctx->fh.m2m_ctx);
+@@ -1253,7 +1248,7 @@ static bool s5p_jpeg_parse_hdr(struct s5p_jpeg_q_data *result,
+ static int s5p_jpeg_querycap(struct file *file, void *priv,
+ 			   struct v4l2_capability *cap)
+ {
+-	struct s5p_jpeg_ctx *ctx = fh_to_ctx(priv);
++	struct s5p_jpeg_ctx *ctx = file_to_ctx(file);
+ 
+ 	if (ctx->mode == S5P_JPEG_ENCODE) {
+ 		strscpy(cap->driver, S5P_JPEG_M2M_NAME,
+@@ -1301,7 +1296,7 @@ static int enum_fmt(struct s5p_jpeg_ctx *ctx,
+ static int s5p_jpeg_enum_fmt_vid_cap(struct file *file, void *priv,
+ 				   struct v4l2_fmtdesc *f)
+ {
+-	struct s5p_jpeg_ctx *ctx = fh_to_ctx(priv);
++	struct s5p_jpeg_ctx *ctx = file_to_ctx(file);
+ 
+ 	if (ctx->mode == S5P_JPEG_ENCODE)
+ 		return enum_fmt(ctx, sjpeg_formats, SJPEG_NUM_FORMATS, f,
+@@ -1314,7 +1309,7 @@ static int s5p_jpeg_enum_fmt_vid_cap(struct file *file, void *priv,
+ static int s5p_jpeg_enum_fmt_vid_out(struct file *file, void *priv,
+ 				   struct v4l2_fmtdesc *f)
+ {
+-	struct s5p_jpeg_ctx *ctx = fh_to_ctx(priv);
++	struct s5p_jpeg_ctx *ctx = file_to_ctx(file);
+ 
+ 	if (ctx->mode == S5P_JPEG_ENCODE)
+ 		return enum_fmt(ctx, sjpeg_formats, SJPEG_NUM_FORMATS, f,
+@@ -1340,7 +1335,7 @@ static int s5p_jpeg_g_fmt(struct file *file, void *priv, struct v4l2_format *f)
  	struct vb2_queue *vq;
- 	struct g2d_frame *frm;
+ 	struct s5p_jpeg_q_data *q_data = NULL;
+ 	struct v4l2_pix_format *pix = &f->fmt.pix;
+-	struct s5p_jpeg_ctx *ct = fh_to_ctx(priv);
++	struct s5p_jpeg_ctx *ct = file_to_ctx(file);
  
-@@ -359,7 +359,7 @@ static int vidioc_try_fmt(struct file *file, void *prv, struct v4l2_format *f)
- 
- static int vidioc_s_fmt(struct file *file, void *prv, struct v4l2_format *f)
+ 	vq = v4l2_m2m_get_vq(ct->fh.m2m_ctx, f->type);
+ 	if (!vq)
+@@ -1480,7 +1475,7 @@ static int vidioc_try_fmt(struct v4l2_format *f, struct s5p_jpeg_fmt *fmt,
+ static int s5p_jpeg_try_fmt_vid_cap(struct file *file, void *priv,
+ 				  struct v4l2_format *f)
  {
--	struct g2d_ctx *ctx = prv;
-+	struct g2d_ctx *ctx = file2ctx(file);
- 	struct g2d_dev *dev = ctx->dev;
- 	struct vb2_queue *vq;
- 	struct g2d_frame *frm;
-@@ -400,7 +400,7 @@ static int vidioc_s_fmt(struct file *file, void *prv, struct v4l2_format *f)
- static int vidioc_g_selection(struct file *file, void *prv,
- 			      struct v4l2_selection *s)
- {
--	struct g2d_ctx *ctx = prv;
-+	struct g2d_ctx *ctx = file2ctx(file);
- 	struct g2d_frame *f;
- 
- 	f = get_frame(ctx, s->type);
-@@ -450,7 +450,7 @@ static int vidioc_g_selection(struct file *file, void *prv,
- static int vidioc_try_selection(struct file *file, void *prv,
- 				const struct v4l2_selection *s)
- {
--	struct g2d_ctx *ctx = prv;
-+	struct g2d_ctx *ctx = file2ctx(file);
- 	struct g2d_dev *dev = ctx->dev;
- 	struct g2d_frame *f;
- 
-@@ -478,7 +478,7 @@ static int vidioc_try_selection(struct file *file, void *prv,
- static int vidioc_s_selection(struct file *file, void *prv,
- 			      struct v4l2_selection *s)
- {
--	struct g2d_ctx *ctx = prv;
-+	struct g2d_ctx *ctx = file2ctx(file);
- 	struct g2d_frame *f;
+-	struct s5p_jpeg_ctx *ctx = fh_to_ctx(priv);
++	struct s5p_jpeg_ctx *ctx = file_to_ctx(file);
+ 	struct v4l2_pix_format *pix = &f->fmt.pix;
+ 	struct s5p_jpeg_fmt *fmt;
  	int ret;
+@@ -1539,7 +1534,7 @@ static int s5p_jpeg_try_fmt_vid_cap(struct file *file, void *priv,
+ static int s5p_jpeg_try_fmt_vid_out(struct file *file, void *priv,
+ 				  struct v4l2_format *f)
+ {
+-	struct s5p_jpeg_ctx *ctx = fh_to_ctx(priv);
++	struct s5p_jpeg_ctx *ctx = file_to_ctx(file);
+ 	struct s5p_jpeg_fmt *fmt;
  
+ 	fmt = s5p_jpeg_find_format(ctx, f->fmt.pix.pixelformat,
+@@ -1686,7 +1681,7 @@ static int s5p_jpeg_s_fmt_vid_cap(struct file *file, void *priv,
+ 	if (ret)
+ 		return ret;
+ 
+-	return s5p_jpeg_s_fmt(fh_to_ctx(priv), f);
++	return s5p_jpeg_s_fmt(file_to_ctx(file), f);
+ }
+ 
+ static int s5p_jpeg_s_fmt_vid_out(struct file *file, void *priv,
+@@ -1698,7 +1693,7 @@ static int s5p_jpeg_s_fmt_vid_out(struct file *file, void *priv,
+ 	if (ret)
+ 		return ret;
+ 
+-	return s5p_jpeg_s_fmt(fh_to_ctx(priv), f);
++	return s5p_jpeg_s_fmt(file_to_ctx(file), f);
+ }
+ 
+ static int s5p_jpeg_subscribe_event(struct v4l2_fh *fh,
+@@ -1795,7 +1790,7 @@ static int exynos3250_jpeg_try_crop(struct s5p_jpeg_ctx *ctx,
+ static int s5p_jpeg_g_selection(struct file *file, void *priv,
+ 			 struct v4l2_selection *s)
+ {
+-	struct s5p_jpeg_ctx *ctx = fh_to_ctx(priv);
++	struct s5p_jpeg_ctx *ctx = file_to_ctx(file);
+ 
+ 	if (s->type != V4L2_BUF_TYPE_VIDEO_OUTPUT &&
+ 	    s->type != V4L2_BUF_TYPE_VIDEO_CAPTURE)
 
 -- 
 2.49.0
