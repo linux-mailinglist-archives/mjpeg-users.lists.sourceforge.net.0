@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id BFC07B18EE0
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5B060B18EFB
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=VRdDUaekUr8Js8rDX0O80f3zufD0o5Szi3gxEHl2pE4=; b=krAblDvc2O9sBCvHOgtf1LOVAr
-	TpppUxhARINeKKmLFN2E2kyIfrpI6kgi0JI7KM+s/h5w3TVltlnDAOBmSoWEd5ig7yuXdVnnowAcQ
-	XTskaAnD4NrsZfT/z3+9602wBYbOa/BlY8zuAJmgORAxTCKv0oHkbB1noq7/4i+Io+Dw=;
+	bh=ImsEF/1IUuioH2Xj5moK80fajjm8Z4040kpNd2BYkbY=; b=Bv5QJt80RX+8CKmeFXTZPCw0l0
+	8qLo2r1CtGeZD4zx5XRQbvjew+FmvwIBkFPx7bNAYnOHK0w0WTzY8aXWB51X0xU0IfPJdaHD7WtOI
+	g9hVDg9dmWpo8xYWFHQeYs7sGIUpnUt8i9HdeUCa+V4sXnWh7wlRQTZTMtNMCS3nLb8g=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChp-0006XT-IY;
-	Sat, 02 Aug 2025 13:55:25 +0000
+	id 1uiChz-0006l7-5e;
+	Sat, 02 Aug 2025 13:55:35 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8id-0005OX-Lx
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8n4-0001Bi-LO
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:40:00 +0000
+ Sat, 02 Aug 2025 09:44:35 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=h0zWcVBrUjDzR/5shmr8CIG94XnY64RieFlOFVmVroQ=; b=XZmOFtthu5VQRiQsuLetRzr+JU
- MdHMm/4/fV1UWU+QfQMAdlZAZoBurweMABYtGnvYUg86Z8S0pkvhp3ZIyYm6bC/rmDJHS5pr3JPl3
- frUZHbXOfl5oDclg9JLk8bMYAyfqYEjA9YC9vzRw632YYGx5G+Ps4MHkuJySEbMdAU2I=;
+ bh=/aXPwI+8rIXSFqWf4amim+D9i5cTNUhPLotWSMVf048=; b=DXAfBxrvlSsMScvPicD5X2ilYM
+ oFNopiAtypQjONFL9c9sM5nL+GzfJGPqQlngtaOZkOAjvHE2OEFJ8ezJM9QnFzcNwZPpIG/m98EDs
+ eY4snviKG5OIiip5SkSvMtOsCQXQM6tmfognoX2f3AhesicrfcDiEKo0Bo5WW5MrAg8Q=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=h0zWcVBrUjDzR/5shmr8CIG94XnY64RieFlOFVmVroQ=; b=lEhefLrcoPphgfYW5EmbpDqISv
- UYrGObtduYT6qMwESvlzy3eT3TWn5A8i8m2vVwTIQe1UhNBk2onZ7XrXqixf6IOqbTFA0UQimR0lC
- z8RXQCObpSYZSd4xfjCZjIrlR90RjIEAV2vZ7ObZBhq2jD4Y8bSVupJY3wGqU/1mditc=;
+ bh=/aXPwI+8rIXSFqWf4amim+D9i5cTNUhPLotWSMVf048=; b=F02/N+OIZqyv/vmrHDwNHRvgLw
+ vmqDOo8ycDitYi/6L6dXtqtHVQMQatGMkHDq2lYCiYmWqPvPfPp3JefaNEi4S0xO2Y085hLUwGgEf
+ pP7dYwJuqIiGOT1MoNPdN71x06nq+UCUKxDQBe0mcw6ERg4nZvQQf8WA/CMp3/Do7Kfs=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8id-0005di-Ok for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:40:00 +0000
+ id 1ui8my-0005wz-HM for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:44:29 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id 7C7583997;
- Sat,  2 Aug 2025 11:25:56 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 4C35D330E;
+ Sat,  2 Aug 2025 11:26:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754126766;
- bh=plDKQLiwBIj0x8r/FQG+sxFHvp8nFgmjt6T8+cGPkZI=;
+ s=mail; t=1754126774;
+ bh=YeeZiet6PqHm7IlGh7t3GZOdydEI6jy4AdesJo+UFJ8=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=Yg7mSLXywEATs7NdZAo/15CRPyv1tSknSnoBACCZsbidd3zRcjyh5s7g5TNfPXgb9
- gUhe1Tm6jpa01d4o5M2x6RA6R1VZl63+VBHlceA7hW5Fvnepymmk7TyYyDGBnQ6TTA
- Sw6wC1k5m0p9lWqybBEcYlPRZH86WPer4t5vumTM=
+ b=efEEkJTnS1kS5gUzaXOmI/yYslA+2pJMaHIkGKProANNbr8dxKaCBtqnVHS7MQhUm
+ 5O2inCnrkmxZUR7Sb/afzgyTKrbaPNf/CC1zw3zEX7ePOorKxhty47n27+ZtwThhbW
+ xJ9x9IaW2d+ETCWGrE3pPgiKenybAl/eZ+xNKYmQ=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:22:42 +0200
+Date: Sat, 02 Aug 2025 11:22:43 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-20-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-21-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,48 +141,48 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=1305;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=3292;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=plDKQLiwBIj0x8r/FQG+sxFHvp8nFgmjt6T8+cGPkZI=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj5cxYW858SCw6LTG+aHwiW1liG/P/5haVZ9
- 0mzExpmUPCJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+QAKCRByNAaPFqFW
- PHhwEACP6/NBzk7i6VJN72Jn8/7oEe8k4hjRvq0+0ovO2wCFUpNc5OX+ZqalxcHnw8QWm9aZoBX
- cthgY0YADO91eZH63UwrNZViYnp2K+RtXE89BkRMKucikIDs/zTZr9+wHcPCGbbw7Ue+q1HuWh3
- 4gVRKZ7fbAXbp3R244W2ws9cxUElPjUZzgiPmQqHurk6/MxXXC2MU7AgVMc80OAUyGeAODZwwmJ
- wfVDsO5348pe+cK6lIPs8PbtbOyXTzrP+qAA1+0EraPxa5RW7DJTG2+OZRvqJ2bxfWQl6EGqx0Y
- 4WIL25OQyMoRYTiak2eEHRH5de8cfpPxTqzix6noCSKq8dHwYleqMhG0F/Uhsw8SGP33AzYmhNu
- LKYAEM03Uh3l7qmXVqBDHnZOvBcenlAd9RGHeFJmDdcXyzC84PVQVKHHbQbGZWpMa3XCHcwqB6r
- dyTqw36hcSnIGas5cBvTAfz1puBJYHqsdthf3soOfaYgYWsgZnt0Wl9cIYbkJiV7BfcZgpbhqF8
- cf/WNrSpBF3AnjeYXdbvfwB2GbgLK2U2ocbsCWGGsrsv89ej4XYypUVse+T+uox6Dh+nUj+w375
- sTcNMNGfzONapg7E8wydsqThpj3t8+rIufCWwqaBcMobAYyhE0VrXzs+5ThA40cwY/dLD0VM6A/
- RxrM2yMXPUqLZUw==
+ bh=sFLeSeZ18AiPz7TNtzZuErYTeuXEDyYERBW9KVUCez8=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj5Ab8WMNqTk1vrNJmzEF9fusCZ5AJs5tg8p
+ ikoDaHa4TGJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+QAKCRByNAaPFqFW
+ PIGXD/9X1mdSs4tmw4s1JTfYvMbuDI1kxi3A97kXvrt+El+sQRTisOHlSxLE9USoyAGm9PnoFPY
+ icrGza2HD8EwUhtANb4EwK4SX8gRpvg5DXsHiY+BzBm4ZVvbrn4YKQ8EspQAqrqPqNpRCC3jLzn
+ 0GRaHqxDXvUIkwHB48fJQ6GV3QDhI0wZH4KOeyPYnI+UAT/tN3QLKewQVSIxCvc+x44Uz1UIfYt
+ kdVvO1fp4phNaCAUHr+TNYEglxeQRmyTjF7EFg8glg2DIQvarhZjR2idgNmJRc32RfKKlrWhLLG
+ qsc3G5XT4rTHdpVwmtUQZodlMjwJIMrLeeq3gmQLcuVkPx7WrqJFWrykMYjVSJW9boC6wQNseOL
+ g/jwwARgjsbT4VVBTM34U4UGM25/qXegXPcvFArnizqPHj2jNKsfNiwqCk9hQvsaZb0hejeg2C6
+ PIHxrsXkFRQdQNuT5CuoeTdUazuF9Y8PozrVwKktzkTD3iCYWR6uVAZwa5j/+W0fWDzMJe3etdR
+ iL0DtcbzUnBRXuciDmUfTXXz4QqjEoF7LYYGV9gHpobdDmtnG6aN+YRDMpFr8/cXnc76JpLWK1O
+ iZ4WMJ6IpVenQcUxz2evwcVueKdYxxj8eIkzeEvX3GLQmspDOksNr43SNDrl2k/d9vKpDQ7djH2
+ UWeorQDKZwyuLsQ==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: The 'file->private_data' pointer is reset in the
- vb2_fop_release()
- call path. For this reason a custom handler for the .release file operation
- is not needed and the driver can use vb2_fop_release() di [...] 
+ Content preview:  From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+ In preparation for a tree-wide rework automated with coccinelle that will
+ need to access a struct file pointer in the wave5_cleanup_instance() function, 
+ pass it from the callers. There is not function [...] 
  Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
-X-Headers-End: 1ui8id-0005di-Ok
-X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 20/65] media: camss: Remove custom .release
- fop()
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+X-Headers-End: 1ui8my-0005wz-HM
+X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:16 +0000
+Subject: [Mjpeg-users] [PATCH 21/65] media: chips-media: wave5: Pass file
+ pointer to wave5_cleanup_instance()
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -208,42 +208,83 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-The 'file->private_data' pointer is reset in the vb2_fop_release()
-call path. For this reason a custom handler for the .release
-file operation is not needed and the driver can use
-vb2_fop_release() directly.
+From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 
+In preparation for a tree-wide rework automated with coccinelle that
+will need to access a struct file pointer in the
+wave5_cleanup_instance() function, pass it from the callers. There is
+not functional change yet.
+
+Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/platform/qcom/camss/camss-video.c | 11 +----------
- 1 file changed, 1 insertion(+), 10 deletions(-)
+ drivers/media/platform/chips-media/wave5/wave5-helper.c  | 4 ++--
+ drivers/media/platform/chips-media/wave5/wave5-helper.h  | 2 +-
+ drivers/media/platform/chips-media/wave5/wave5-vpu-dec.c | 2 +-
+ drivers/media/platform/chips-media/wave5/wave5-vpu-enc.c | 2 +-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
 
-diff --git a/drivers/media/platform/qcom/camss/camss-video.c b/drivers/media/platform/qcom/camss/camss-video.c
-index c5d02f9ebc6aa9bfd6910944f3d40a2e5f0a908f..831486e14754ab3a24b077e21be14ea3169220a4 100644
---- a/drivers/media/platform/qcom/camss/camss-video.c
-+++ b/drivers/media/platform/qcom/camss/camss-video.c
-@@ -604,20 +604,11 @@ static const struct v4l2_ioctl_ops msm_vid_ioctl_ops = {
-  * V4L2 file operations
-  */
+diff --git a/drivers/media/platform/chips-media/wave5/wave5-helper.c b/drivers/media/platform/chips-media/wave5/wave5-helper.c
+index 031dea0ee61c6c5afddf7ff47d67d85826f16d8d..ed8ff04a899da0a3c9e0f037dac2c9548c98920f 100644
+--- a/drivers/media/platform/chips-media/wave5/wave5-helper.c
++++ b/drivers/media/platform/chips-media/wave5/wave5-helper.c
+@@ -27,7 +27,7 @@ const char *state_to_str(enum vpu_instance_state state)
+ 	}
+ }
  
--static int video_release(struct file *file)
--{
--	vb2_fop_release(file);
--
--	file->private_data = NULL;
--
--	return 0;
--}
--
- static const struct v4l2_file_operations msm_vid_fops = {
- 	.owner          = THIS_MODULE,
- 	.unlocked_ioctl = video_ioctl2,
- 	.open           = v4l2_fh_open,
--	.release        = video_release,
-+	.release        = vb2_fop_release,
- 	.poll           = vb2_fop_poll,
- 	.mmap		= vb2_fop_mmap,
- 	.read		= vb2_fop_read,
+-void wave5_cleanup_instance(struct vpu_instance *inst)
++void wave5_cleanup_instance(struct vpu_instance *inst, struct file *filp)
+ {
+ 	int i;
+ 
+@@ -78,7 +78,7 @@ int wave5_vpu_release_device(struct file *filp,
+ 		}
+ 	}
+ 
+-	wave5_cleanup_instance(inst);
++	wave5_cleanup_instance(inst, filp);
+ 
+ 	return ret;
+ }
+diff --git a/drivers/media/platform/chips-media/wave5/wave5-helper.h b/drivers/media/platform/chips-media/wave5/wave5-helper.h
+index 9937fce553fc33000bd31abcfc6d7345f6f7e485..976a402e426ff329490717925a08a76d777cbe3e 100644
+--- a/drivers/media/platform/chips-media/wave5/wave5-helper.h
++++ b/drivers/media/platform/chips-media/wave5/wave5-helper.h
+@@ -14,7 +14,7 @@
+ #define MAX_FMTS	12
+ 
+ const char *state_to_str(enum vpu_instance_state state);
+-void wave5_cleanup_instance(struct vpu_instance *inst);
++void wave5_cleanup_instance(struct vpu_instance *inst, struct file *filp);
+ int wave5_vpu_release_device(struct file *filp,
+ 			     int (*close_func)(struct vpu_instance *inst, u32 *fail_res),
+ 			     char *name);
+diff --git a/drivers/media/platform/chips-media/wave5/wave5-vpu-dec.c b/drivers/media/platform/chips-media/wave5/wave5-vpu-dec.c
+index fd71f0c43ac37a0bb56f669d4b89d6054cb181d5..f3188d720ed3e183f3400816a9c939014213711d 100644
+--- a/drivers/media/platform/chips-media/wave5/wave5-vpu-dec.c
++++ b/drivers/media/platform/chips-media/wave5/wave5-vpu-dec.c
+@@ -1840,7 +1840,7 @@ static int wave5_vpu_open_dec(struct file *filp)
+ 	return 0;
+ 
+ cleanup_inst:
+-	wave5_cleanup_instance(inst);
++	wave5_cleanup_instance(inst, filp);
+ 	return ret;
+ }
+ 
+diff --git a/drivers/media/platform/chips-media/wave5/wave5-vpu-enc.c b/drivers/media/platform/chips-media/wave5/wave5-vpu-enc.c
+index 1e5fc5f8b856c5329b2c6007649285a28749b6aa..b69a1206fa12c2ff5f3a32d269b8fd3b80a597aa 100644
+--- a/drivers/media/platform/chips-media/wave5/wave5-vpu-enc.c
++++ b/drivers/media/platform/chips-media/wave5/wave5-vpu-enc.c
+@@ -1784,7 +1784,7 @@ static int wave5_vpu_open_enc(struct file *filp)
+ 	return 0;
+ 
+ cleanup_inst:
+-	wave5_cleanup_instance(inst);
++	wave5_cleanup_instance(inst, filp);
+ 	return ret;
+ }
+ 
 
 -- 
 2.49.0
