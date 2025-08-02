@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1AAB7B18EDE
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 27F2AB18EDB
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=NdoJmzzKOAZf6sOsBgEvsRRQbRNLIwMp0i8mPwfb+zc=; b=D0gAiAGR13EdLAxB12ZCChcFHN
-	NUN6hLCHOQSCJ6jMv+UHJk5Ex21S2bEAO5dS/d82yrlqcJOOUCR4w0HRbG0yCAAY6zqeVktGEorGz
-	UvPejS3BBkd6N2xNRQ4dh3wOWUa/R9Rj1Zci8OOD3lvDFUE63XjU26XozT791oECLIA0=;
+	bh=iaVrwfS6/GI7lV8eufYuDQFmVBQhU9RCr3qss3yQefE=; b=iDA4Zks5rJND9C+iK1wvv32/Xl
+	rZsp89vwpdzL1XYV6Vh5caket9h3YQhLogef6PqO6ExlW35g0SFjI1fZUpPcw841/v3vUGTcmnzZp
+	gZ8TXKvhi9Q1UIghAQfQmB7slU1AHB1l83nsqPOjpW/32cFU4dq3MNwZBVrBzxg4mgsw=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiCho-0006Wl-Ug;
+	id 1uiCho-0006Vd-0B;
 	Sat, 02 Aug 2025 13:55:24 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8iS-00013Z-By
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8iG-0000ES-8L
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:39:48 +0000
+ Sat, 02 Aug 2025 09:39:36 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=w9Y2H/8OqLDBmIFTjdHGvz0eFRZmpsWhnlKk41L4YWg=; b=B5Msx7ezwFTJUlRQclR9GfGe42
- ZS431SfVpk0fTdlW61HOdikROy18lt9FsU6k65ZxqsHudPVSMgxNVLYqJv/kWGSR/BLfImY340UyP
- VPelPQDpdYvIi9JTGwNHsKykuai8nZYxkUWXVJzWD/t5ND/E7FqWZDEmGqETbnzaMIGg=;
+ bh=Yk/S6mP0G+LE4TcMdEujFIIfJo14yYCqih/s9G6UBEA=; b=YYzku4KdQ1NG5hEhTB/rz8tTBS
+ 3snt/i4WTpCeCStUupryALgV4wDP8YEpO/+Q7Ibt2SnXXhSTvIad1ODUd5BkahvB0bSSIQEdDbDgG
+ IwpeJynBJG74eXf1FXLGS1bVpktSW0+t9fMfpiEzNv+MYXQ8k4+vqeXwJ6kwPjdKRoXc=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=w9Y2H/8OqLDBmIFTjdHGvz0eFRZmpsWhnlKk41L4YWg=; b=m7iKfB11K+yUlmAonJbWTk4vho
- 281HLlUoDJhcpLnfCwZCclMDdpQJBJcLtKNRGAH5wOwgLz6uaR7g+5yeA82fWnqKLl7tyoIjXxwhL
- NRkA2xKJ1hurDEl2k12heYMWhRh44jD65Jc1e8n+VAEzn1EbjyyzM1NUTq/xZp6wkSf8=;
+ bh=Yk/S6mP0G+LE4TcMdEujFIIfJo14yYCqih/s9G6UBEA=; b=D5F2XX/ZNT14Cbvc4XnUol17ju
+ HlAJfc7HuOlnANQpXSEQrBW7nHl0gi3MCutCU5+ZMwaoFf8xruhfA+FQBFSAlfQpfWCuZq+esZBUM
+ n4LjUXCsR3iOQCj/o1RlAYkOGOeuMhHMmalnLqDqPkpip2h8LxtzfCNPS/sjdGj7Hi04=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8iR-0005cR-LH for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:39:48 +0000
+ id 1ui8iE-0005bm-TE for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:39:36 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id AE6443B8B;
- Sat,  2 Aug 2025 11:27:16 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id A3DB13BFA;
+ Sat,  2 Aug 2025 11:27:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754126845;
- bh=50vYXEGhZeTzddTpY4VW3qqWt6o/oRzLVr9heRBb344=;
+ s=mail; t=1754126857;
+ bh=EupQNZwVDEWPV0lRXOPIWwyqRXZFDT974pCYxdDmFr4=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=bO9ZV45xEGgF6pwv4xOp/UHbDpRuyn3tsM5Ps8cKLkUxOwstVyEmE52BbRzyaxnPi
- RejLuvxRjfRvLuJdJHjNNrN9exsHVyD1VwXr3a55aLgI0Cc7LVsjh6E6VonxeaDjK6
- ZFCSwB7kkcd7rfn+xRvUFNpPtTnXo2hQg3lcZ0EU=
+ b=hpY78CmkVv74nSpWm7mIQCCiDoYD4+PYB95WVTP4W7eZHiEy+SV4qDjjuyt3l55ad
+ Wo1Jomg7/kuakxont8Lj75UEoyxO/gXWRVep1Pym+B5WryRO5Bf/nqQHWEQxxF549z
+ O+SKZiZJEXIhWbrbWhqqK7Mujk0z12AkXw6FIywc=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:22:50 +0200
+Date: Sat, 02 Aug 2025 11:22:51 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-28-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-29-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,47 +141,48 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=6102;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=4042;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=50vYXEGhZeTzddTpY4VW3qqWt6o/oRzLVr9heRBb344=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj6BS2OkLRIRXzaVdf/zNJM4Q4XKjnvniijd
- fboQzcTYIyJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+gAKCRByNAaPFqFW
- PFmQD/wOSAarhR1JioG20KiYPWKE7F1VDzwex19iOgZ3opz7/FURvUVDym7b666cyh2qCgiZgwH
- UptIgDpZRKRd949B8/ze4g0rQq9lEcIFAoTG6ELQzVXKlE4Xo1A1AywpEIuSDOqss2HguWiclXD
- xlkbmtDShmuRY8o79e9VNxhlDzDuYGgkXYcwTWTuYiKYmp1/x9HQq8XxdkJmIsB4jlkVIxsv+En
- Vys4x++KRGGfLo8TcaE48yyO7w/avATN3ZsZhHaEJ32Kp/0USpuNsgrNSrrH4BOvF88Ut3gVBVS
- 6wrvQqkiePkw95y4c7bN6bCoWdAsWxEvV91DhkHXO1q8K3q8hISLyJc8HKtlCruwfZmJJg44jQo
- T5ClGMTBO0xYbiL2e+Y/5zdGRR31dIKoS6ptm3CvqlQ/CbrguuS/Rfz/4Tb/36mMr/+fe9AyuZu
- x9BchltjTcciuZHQChHl+P+qI7bQTTo9EZJgoIw+xWyffKaCxVvRJGPuWtGslIb+dqcqJGY4f8q
- 8o42ieKDM8ILzrxk+neDKYp2tkMbesSWcUwpwP3kG084u+8ei9qJCbrkg1qBrLBgxloK9IuPKE0
- yvbsJLuB1QptIUH2eYuA9guw/0Lr5vX6S9RUldh4Ki7dAAt7pk3mVT4S6neF9Fmhq5AlYtN/4Kr
- CkVxUsTH44vt4mg==
+ bh=EupQNZwVDEWPV0lRXOPIWwyqRXZFDT974pCYxdDmFr4=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj6938RTcCW3JLF7q2TU/zTQB1aW4uCXzbSl
+ KRPGOpR5M2JAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+gAKCRByNAaPFqFW
+ PPEoEACtOVVZcE0Jno+wySkwxbtRcY7fcEkuzlP+5mpC4ISfqOV+gM1G/t+jhOBOQxI2V/sx6dj
+ NffRk/kDtQ0yQ4OGn75YP9PwPU1u9Ho0ABWevDJPGYy5zNzO1Ho6BvS55kDKWQhWVZUBNHaX5q7
+ ydYl8Kklpn3uECXV2WO4sJhJcOUYT1yZ4VZ7O6wNgmZjaL+XavqFPr05yLv4ATGvhCQK1zttCLo
+ ZuyM2KYvgb2RWYqOlshgBkBj6Ry5xxAPHBGJltaqSdAms5rji4stoNX+CGpKTz/eZCE1XaM8lec
+ KfphPeP6gNXjr4erndbjbZ5ZG4SszKQ0+yLymE6Wdj+DQvrPjHGjJCx1xRLzDG4PzvA3ILsaB2E
+ cmu6TARWAS4IXzftMkQ7UsHq3BLGTqd1B/BroBVisfe+SI5XaE8KQyW7YdgWWMUPmgD6IqaQ0D8
+ NG5HUaRIsNxYllVZYKG+EbXmU0cfD3ELrYPOBtInFkGy717UK1q8BcTX6XcC+G8qhbJZBsiGM6w
+ SqUODvlIMVAPmeAe8idoPhTsaqG0rZJ6GHa13M4scN3OICYwSQoh2HrXwVz5Fs+X8Z993R2hRiR
+ UuwCyI5NZ+aiwhmLknbWCncfbc/sPJStc5Q8ddqgjMoRv47AcoNqw7tZnQ+l3zMnhzdNFYcsO4x
+ 6BSqqLyKW3RHXBA==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Now that it is guaranteed that file->private_data is set to
- point to the 'struct v4l2_fh' initialised by v4l2_fh_add() the v4l2-ioctl
- layer can be modified to retrieve the v4l2_fh pointer from the fil [...] 
+ Content preview: The v4l2_fh associated with an open file handle is now
+ guaranteed
+ to be available in file->private_data, initialised by v4l2_fh_add(). Access
+ the v4l2_fh, and from there the driver-specific structure, from the file
+ * in all ioctl handlers. 
  Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
-X-Headers-End: 1ui8iR-0005cR-LH
-X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 28/65] media: v4l2-ioctl: Access v4l2_fh from
- private_data
+X-Headers-End: 1ui8iE-0005bm-TE
+X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:16 +0000
+Subject: [Mjpeg-users] [PATCH 29/65] media: allegro: Access v4l2_fh from file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -207,163 +208,105 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-Now that it is guaranteed that file->private_data is set to point to the
-'struct v4l2_fh' initialised by v4l2_fh_add() the v4l2-ioctl layer can
-be modified to retrieve the v4l2_fh pointer from the file *.
+The v4l2_fh associated with an open file handle is now guaranteed
+to be available in file->private_data, initialised by v4l2_fh_add().
 
-As the __video_do_ioctl() function, that calls all the handlers modified
-by this patch goes as:
+Access the v4l2_fh, and from there the driver-specific structure,
+from the file * in all ioctl handlers.
 
-static long __video_do_ioctl(struct file *file,
-		unsigned int cmd, void *arg)
-{
-	void *fh = file->private_data;
+While at it remove the only left user of fh_to_channel() and remove
+the macro completely.
 
-	...
-
-	ret = info->func(ops, file, fh, arg);
-
-}
-
-This patch introduces no functional changes and makes it possible to
-remove in future the 'fh' argument to all ioctl handlers.
-
-Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/v4l2-core/v4l2-ioctl.c | 46 ++++++++++++++++++++----------------
- 1 file changed, 26 insertions(+), 20 deletions(-)
+ drivers/media/platform/allegro-dvt/allegro-core.c | 18 ++++++++----------
+ 1 file changed, 8 insertions(+), 10 deletions(-)
 
-diff --git a/drivers/media/v4l2-core/v4l2-ioctl.c b/drivers/media/v4l2-core/v4l2-ioctl.c
-index 8c81852c30466865eca36fd41923f6d05dbf9293..44c2f5ef3dae407d9786c5278d13efc982be2ff0 100644
---- a/drivers/media/v4l2-core/v4l2-ioctl.c
-+++ b/drivers/media/v4l2-core/v4l2-ioctl.c
-@@ -2297,8 +2297,8 @@ static int v4l_queryctrl(const struct v4l2_ioctl_ops *ops,
- 	struct video_device *vfd = video_devdata(file);
- 	struct v4l2_query_ext_ctrl qec = {};
- 	struct v4l2_queryctrl *p = arg;
--	struct v4l2_fh *vfh =
--		test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ? fh : NULL;
-+	struct v4l2_fh *vfh = test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ?
-+			      file_to_v4l2_fh(file) : NULL;
- 	int ret;
+diff --git a/drivers/media/platform/allegro-dvt/allegro-core.c b/drivers/media/platform/allegro-dvt/allegro-core.c
+index 5e3b1f5d7206d84b8ccb9ea3b3f3f1fe75becf99..81c6afcf2d06f9e39015e49d355346238c5033d8 100644
+--- a/drivers/media/platform/allegro-dvt/allegro-core.c
++++ b/drivers/media/platform/allegro-dvt/allegro-core.c
+@@ -197,8 +197,6 @@ static const struct regmap_config allegro_sram_config = {
+ 	.cache_type = REGCACHE_NONE,
+ };
  
- 	if (vfh && vfh->ctrl_handler)
-@@ -2322,8 +2322,8 @@ static int v4l_query_ext_ctrl(const struct v4l2_ioctl_ops *ops,
+-#define fh_to_channel(__fh) container_of(__fh, struct allegro_channel, fh)
+-
+ struct allegro_channel {
+ 	struct allegro_dev *dev;
+ 	struct v4l2_fh fh;
+@@ -3284,7 +3282,7 @@ static int allegro_enum_fmt_vid(struct file *file, void *fh,
+ static int allegro_g_fmt_vid_cap(struct file *file, void *fh,
+ 				 struct v4l2_format *f)
  {
- 	struct video_device *vfd = video_devdata(file);
- 	struct v4l2_query_ext_ctrl *p = arg;
--	struct v4l2_fh *vfh =
--		test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ? fh : NULL;
-+	struct v4l2_fh *vfh = test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ?
-+			      file_to_v4l2_fh(file) : NULL;
+-	struct allegro_channel *channel = fh_to_channel(fh);
++	struct allegro_channel *channel = file_to_channel(file);
  
- 	if (vfh && vfh->ctrl_handler)
- 		return v4l2_query_ext_ctrl(vfh->ctrl_handler, p);
-@@ -2339,8 +2339,8 @@ static int v4l_querymenu(const struct v4l2_ioctl_ops *ops,
+ 	f->fmt.pix.field = V4L2_FIELD_NONE;
+ 	f->fmt.pix.width = channel->width;
+@@ -3326,7 +3324,7 @@ static int allegro_try_fmt_vid_cap(struct file *file, void *fh,
+ static int allegro_s_fmt_vid_cap(struct file *file, void *fh,
+ 				 struct v4l2_format *f)
  {
- 	struct video_device *vfd = video_devdata(file);
- 	struct v4l2_querymenu *p = arg;
--	struct v4l2_fh *vfh =
--		test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ? fh : NULL;
-+	struct v4l2_fh *vfh = test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ?
-+			      file_to_v4l2_fh(file) : NULL;
+-	struct allegro_channel *channel = fh_to_channel(fh);
++	struct allegro_channel *channel = file_to_channel(file);
+ 	struct vb2_queue *vq;
+ 	int err;
  
- 	if (vfh && vfh->ctrl_handler)
- 		return v4l2_querymenu(vfh->ctrl_handler, p);
-@@ -2356,8 +2356,8 @@ static int v4l_g_ctrl(const struct v4l2_ioctl_ops *ops,
+@@ -3350,7 +3348,7 @@ static int allegro_s_fmt_vid_cap(struct file *file, void *fh,
+ static int allegro_g_fmt_vid_out(struct file *file, void *fh,
+ 				 struct v4l2_format *f)
  {
- 	struct video_device *vfd = video_devdata(file);
- 	struct v4l2_control *p = arg;
--	struct v4l2_fh *vfh =
--		test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ? fh : NULL;
-+	struct v4l2_fh *vfh = test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ?
-+			      file_to_v4l2_fh(file) : NULL;
- 	struct v4l2_ext_controls ctrls;
- 	struct v4l2_ext_control ctrl;
+-	struct allegro_channel *channel = fh_to_channel(fh);
++	struct allegro_channel *channel = file_to_channel(file);
  
-@@ -2388,8 +2388,8 @@ static int v4l_s_ctrl(const struct v4l2_ioctl_ops *ops,
- {
- 	struct video_device *vfd = video_devdata(file);
- 	struct v4l2_control *p = arg;
--	struct v4l2_fh *vfh =
--		test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ? fh : NULL;
-+	struct v4l2_fh *vfh = test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ?
-+			      file_to_v4l2_fh(file) : NULL;
- 	struct v4l2_ext_controls ctrls;
- 	struct v4l2_ext_control ctrl;
- 	int ret;
-@@ -2418,8 +2418,8 @@ static int v4l_g_ext_ctrls(const struct v4l2_ioctl_ops *ops,
- {
- 	struct video_device *vfd = video_devdata(file);
- 	struct v4l2_ext_controls *p = arg;
--	struct v4l2_fh *vfh =
--		test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ? fh : NULL;
-+	struct v4l2_fh *vfh = test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ?
-+			      file_to_v4l2_fh(file) : NULL;
+ 	f->fmt.pix.field = V4L2_FIELD_NONE;
  
- 	p->error_idx = p->count;
- 	if (vfh && vfh->ctrl_handler)
-@@ -2439,8 +2439,8 @@ static int v4l_s_ext_ctrls(const struct v4l2_ioctl_ops *ops,
+@@ -3397,7 +3395,7 @@ static int allegro_try_fmt_vid_out(struct file *file, void *fh,
+ static int allegro_s_fmt_vid_out(struct file *file, void *fh,
+ 				 struct v4l2_format *f)
  {
- 	struct video_device *vfd = video_devdata(file);
- 	struct v4l2_ext_controls *p = arg;
--	struct v4l2_fh *vfh =
--		test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ? fh : NULL;
-+	struct v4l2_fh *vfh = test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ?
-+			      file_to_v4l2_fh(file) : NULL;
+-	struct allegro_channel *channel = fh_to_channel(fh);
++	struct allegro_channel *channel = file_to_channel(file);
+ 	int err;
  
- 	p->error_idx = p->count;
- 	if (vfh && vfh->ctrl_handler)
-@@ -2460,8 +2460,8 @@ static int v4l_try_ext_ctrls(const struct v4l2_ioctl_ops *ops,
+ 	err = allegro_try_fmt_vid_out(file, fh, f);
+@@ -3438,7 +3436,7 @@ static int allegro_channel_cmd_start(struct allegro_channel *channel)
+ static int allegro_encoder_cmd(struct file *file, void *fh,
+ 			       struct v4l2_encoder_cmd *cmd)
  {
- 	struct video_device *vfd = video_devdata(file);
- 	struct v4l2_ext_controls *p = arg;
--	struct v4l2_fh *vfh =
--		test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ? fh : NULL;
-+	struct v4l2_fh *vfh = test_bit(V4L2_FL_USES_V4L2_FH, &vfd->flags) ?
-+			      file_to_v4l2_fh(file) : NULL;
+-	struct allegro_channel *channel = fh_to_channel(fh);
++	struct allegro_channel *channel = file_to_channel(file);
+ 	int err;
  
- 	p->error_idx = p->count;
- 	if (vfh && vfh->ctrl_handler)
-@@ -2756,19 +2756,25 @@ static int v4l_dbg_g_chip_info(const struct v4l2_ioctl_ops *ops,
- static int v4l_dqevent(const struct v4l2_ioctl_ops *ops,
- 				struct file *file, void *fh, void *arg)
+ 	err = v4l2_m2m_ioctl_try_encoder_cmd(file, fh, cmd);
+@@ -3488,7 +3486,7 @@ static int allegro_ioctl_streamon(struct file *file, void *priv,
+ 				  enum v4l2_buf_type type)
  {
--	return v4l2_event_dequeue(fh, arg, file->f_flags & O_NONBLOCK);
-+	struct v4l2_fh *vfh = file_to_v4l2_fh(file);
-+
-+	return v4l2_event_dequeue(vfh, arg, file->f_flags & O_NONBLOCK);
- }
+ 	struct v4l2_fh *fh = file_to_v4l2_fh(file);
+-	struct allegro_channel *channel = fh_to_channel(fh);
++	struct allegro_channel *channel = file_to_channel(file);
+ 	int err;
  
- static int v4l_subscribe_event(const struct v4l2_ioctl_ops *ops,
- 				struct file *file, void *fh, void *arg)
+ 	if (type == V4L2_BUF_TYPE_VIDEO_CAPTURE) {
+@@ -3503,7 +3501,7 @@ static int allegro_ioctl_streamon(struct file *file, void *priv,
+ static int allegro_g_parm(struct file *file, void *fh,
+ 			  struct v4l2_streamparm *a)
  {
--	return ops->vidioc_subscribe_event(fh, arg);
-+	struct v4l2_fh *vfh = file_to_v4l2_fh(file);
-+
-+	return ops->vidioc_subscribe_event(vfh, arg);
- }
+-	struct allegro_channel *channel = fh_to_channel(fh);
++	struct allegro_channel *channel = file_to_channel(file);
+ 	struct v4l2_fract *timeperframe;
  
- static int v4l_unsubscribe_event(const struct v4l2_ioctl_ops *ops,
- 				struct file *file, void *fh, void *arg)
+ 	if (a->type != V4L2_BUF_TYPE_VIDEO_OUTPUT)
+@@ -3520,7 +3518,7 @@ static int allegro_g_parm(struct file *file, void *fh,
+ static int allegro_s_parm(struct file *file, void *fh,
+ 			  struct v4l2_streamparm *a)
  {
--	return ops->vidioc_unsubscribe_event(fh, arg);
-+	struct v4l2_fh *vfh = file_to_v4l2_fh(file);
-+
-+	return ops->vidioc_unsubscribe_event(vfh, arg);
- }
+-	struct allegro_channel *channel = fh_to_channel(fh);
++	struct allegro_channel *channel = file_to_channel(file);
+ 	struct v4l2_fract *timeperframe;
+ 	int div;
  
- static int v4l_g_sliced_vbi_cap(const struct v4l2_ioctl_ops *ops,
-@@ -3072,7 +3078,7 @@ static long __video_do_ioctl(struct file *file,
- 	bool write_only = false;
- 	struct v4l2_ioctl_info default_info;
- 	const struct v4l2_ioctl_info *info;
--	void *fh = file->private_data;
-+	void *fh = file_to_v4l2_fh(file);
- 	struct v4l2_fh *vfh = NULL;
- 	int dev_debug = vfd->dev_debug;
- 	long ret = -ENOTTY;
 
 -- 
 2.49.0
