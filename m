@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9AA69B18F0C
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:42 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 92A09B18F06
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=HJIAkWFwBKclsidZKaG+/quIuNdmfXkimdEOl3u3tbA=; b=OeVVSKunBmD903QAv70tiM3ZBk
-	PoXuO7uPEM7hkMP7hEarC3XPoyZ03fNOe/gryx3tGDaD+7lgnz3486SysjyXO2fo0FDw5h6ZZXRh7
-	a/31cLlU71RSFuGWybOfyrSIBd3s4K1TIOYIrbJrnUt753ei+SLtT0PrSmo6sEvsl4GE=;
+	bh=tMPoQVeuANHHB5sbWUZCoJemfrtFmbRMUw0zHZRaTsU=; b=BqTi21DcleZMiQdJ/JN5l8SK36
+	xSR5yPZ4OAVbuw0QYKd5zbqsGmYrTT6+2lU2PSm9JjITr2OFJc9lXs7S3pB4s7pcDEnijDUNzWHro
+	rTTkORe92FzFC1dD1FZ67G0mkGN+TWU04PO2dmlQMVtFjus3VuyxUFkZaq778nI7Kab0=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiCi5-0006vo-Dq;
-	Sat, 02 Aug 2025 13:55:41 +0000
+	id 1uiCi3-0006sk-DQ;
+	Sat, 02 Aug 2025 13:55:39 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8rU-0001I1-HO
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8qw-00069o-Hd
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:49:08 +0000
+ Sat, 02 Aug 2025 09:48:35 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=PNCwnB42AmmXIjyisSPPlO75YC5lGVExeOMrVEgwe7g=; b=m+h8Xt3v077gL6vCm3XMQLXSpW
- 0czPkH4GJCIFPhelL7Qn3Q+VNG/uuOXUIL2w7NEp4hq43Ag2LgGGND0pB//dmJwqUZd5OAxxwFG+j
- mII0uPVDheUOoTXc7do+rzEYq8Hz+c3e3VxP8GPtqI2QsTFqhly6cT6pGF4j6Er7ez4g=;
+ bh=sfL29gwcY2Q2ohCvVSQu7WhdYBAzHxAqOzGUqSBDBng=; b=VvVrl0PZidvB8LzsNXl4Z/XGW1
+ TnfpduxCPDg8lZOqueihkcNN3g/fa6U1gapM26jSksLmFqU8O8TodnlHoJhF7gxgLkZaL76szs6Gu
+ GQmcMGhmJqferTSqYKoOTcYyqEu3A6hls44YyAsHZXpjlKjFcCxP8rYabrks4XjNAbKg=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=PNCwnB42AmmXIjyisSPPlO75YC5lGVExeOMrVEgwe7g=; b=Srq5m18tDZ3RJSCocVJyWXCruS
- z3KjtOUc+vi0P+SA/RSyc2EzxED3h/LfnjjYQElwLn0Mb7vF/4FHwECI4sAgL1qhkIsGtjRbXanSE
- JBF0ZEPCaRWkrZoryB5v6teVvPzbGCpMCBmB42ojRymtK5b5s5YfNqzBtnI3P43kB2qw=;
+ bh=sfL29gwcY2Q2ohCvVSQu7WhdYBAzHxAqOzGUqSBDBng=; b=lWhrjgA/nnQ8y1aNBubMUb0wuV
+ H4lPz1pTK+Q+sYk1fNdkhRHEuMjdo4P9FAdUE8jtfNglzPRtAN8ELS42lwWtzV3lv5E4uppxuTStv
+ 7StWNpI9vlPXVuwmfWLtog851zw/ra0ORTKCeWlDz1hgSQ+InAdqVpLtwD+feONjuU7A=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8rU-0006SJ-0s for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:49:08 +0000
+ id 1ui8qv-0006Pw-Mu for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:48:35 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id 03757502;
- Sat,  2 Aug 2025 11:23:09 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id E59111FB8;
+ Sat,  2 Aug 2025 11:23:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754126598;
- bh=631Jp9Q9HtN9dP9KUd1m/USa3iWCujlx3YtZUAdIf8E=;
+ s=mail; t=1754126607;
+ bh=mNwsrp8nKBFkxt7rY+U2M0OWq3GCR2R2XCAdJROLTOk=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=FeVm5O500dAmHc2FksbxPqgQmgW5GMwIICmDuqzmrqW1P+fvOYimsBC2slbLUqXrT
- UZ3uSbVeYpxuIDXjRKJglyXn/I65Mk5wCu91MEMoXSdfCsaEXVLON2seHpotu5RwP7
- 4sV78CbR0Tx7kMmKq3k42zHLANw0S2gHetQnb24A=
+ b=DSQrpcJpBnfnT7OmTg8T90ulQGNmcBlh4d8ucTOdKvpLbk0c454FckPhqvx89LmbN
+ vCwsaczWRTvaZ0k9oVxT+kZQiOzwlCqrykBbr80yOciofSaOG5y9ojqzKLOqAsSAeS
+ tXDWIcl38VAzTMKDnlZqvDHs1RcnBOQ+A2SpHYuE=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:22:26 +0200
+Date: Sat, 02 Aug 2025 11:22:27 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-4-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-5-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,21 +141,21 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=1433;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=12175;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=U3ev2gHGjMj8nv+N40Llo7W3J8u/K6ZbwlVUowvWkPY=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj3IH8fOMbXUtz0tvCIWrGh/p06iInRR+vXC
- v8mXTbAB3CJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y9wAKCRByNAaPFqFW
- PMxMD/9xdPurBF8VH9kd+ouOYLKov7Q5+LoHrIxqJ1UmDxRqFU3cO2MMwZir0jLofAtJI5rkUR3
- V/NT8hmtjI3UXxxJnEpD+ZLVGI8qtV5fTPhrqUA0Cqsou7Z1ZgYlXxaois9AatHd0k8fKXD0nGV
- WU5MTu7++Qlpxc3Colj8npAsI+74hEi7EVtryKMKExVO95DbQz8ZvFb4gN+9r8zWpNTuTkVk0Ke
- KJNA+SL0fju2ltzBe8i2SQ7BjApa2Z6059yEyxr2yJLTEfc4t0JpV/uvlW0KsiAnB2lTdFlt3T6
- FzlvYChBMTK9kTeCxaeoQwyzdAzhjXDqed3+BggT4OVG1MfcrjjGDOg89bfW1FZhaaiLIxHsIpF
- g/t2ipysNOfmIpKA92HLCwhXD3SDVxFys7fS7BZD9Za4Fad7qVXbZmC7VBViUZKhL2YE2oYRtkl
- Zrt7aTUMq+RQqNTyGuETmZjBztDsa/sRSGt6h7Nqtm4uvcZzzzQle2M1PrmN5w4zI2ruGtdtl1q
- KSbYZ3jrn7KwZ2Blc3ZvdCnk+3ve5t26EsLWgug6iwjcfsdJ3gww59pmjztFYyHyVRCaVvmbh2T
- 92VnFLQpUlDOLSaq3tzbDu3xtgyD/a7vHtT5QgPR3/f83oXPm985F2rNinVeA5rDqLEQ4hlk80q
- 2F2/YsprDujyjMw==
+ bh=DSu4UoxpEI7+C8U0CFqaBAzFa/k6azaXzHEH5+Tqsoc=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj3R4AfuAC2TJCoNxPqDBbjsGQjJnpQyMW4D
+ KkVjzOho0OJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y9wAKCRByNAaPFqFW
+ POxeD/9ExwrndtJFz6iR4YDFf0BLDxKErSKTK/afTEs5q0CH65ApkZAHCJY8P+DafxkZC6dhQs/
+ FKeKJECblq8zWsiCLBQSlKWrQ4FtBv/k+AYc/ofRZjh3EbLoeIUTJ0cbNrsQ7AGdhfhTPFFU30e
+ C4eCLQuc+225WsAE8KYIyB12r9uUmvgJQHhm8a6qGAOe6YRyuds4Joq02dAQEpapyXc3KF6R3Hn
+ jQ5QyVq6rH4whyspYj4kzz+mxZbCVCk48KKkp9wsFiFqbodkGD6mocULwH5doghE7QtLwFF3Lg4
+ a6yYMvkRM06NBl02+FeuPdvO05U0129VqG1g2sF+sblwWtuDERQrBYIUecqK5MJMGyrC1qv5Txf
+ 5F66LgYJNKZmDkSdiqxGovRdWFZ2YdCMZefML7l8oRXOS4jVQlNPDdrPIBTu/KYU2+vg4bWo1kn
+ 6zj2WN7iplFyzBWKl82TbT0J25cvW1JyDnis+1Wc0o48T2F73ZrZ5ZmCLBk6xYnpzKNXPL+Nr5u
+ 4p/tbDwClXn2GnXj6tgWCp21CkC50GbQo2ESvwSgbAjN5XUsM4YZOi5iBwpziWhN9uIGotVke2W
+ fyF4ouplFpyvQX6L5Ue3MnKLlaNVb0HiTUrQrE4uGASpLjucw9ad2cgbPlq+C7lKEFycnTYxzQc
+ mZLE0DJcIa1guEQ==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
@@ -166,9 +166,9 @@ X-Spam-Report: Spam detection software,
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  Content preview:  From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
- Most V4L2 drivers store the v4l2_fh pointer in file->private_data. The hdpvr
+ Most V4L2 drivers store the v4l2_fh pointer in file->private_data. The pvrusb2
  driver instead stores the pointer to the driver-specific structure that embeds
- the v4l2_fh. Switch to storing the v4l2_fh p [...] 
+ the v4l2_fh. Switch to storing the v4l2_fh [...] 
  Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
@@ -179,9 +179,9 @@ X-Spam-Report: Spam detection software,
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1ui8rU-0006SJ-0s
+X-Headers-End: 1ui8qv-0006Pw-Mu
 X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 04/65] media: usb: hdpvr: Store v4l2_fh
+Subject: [Mjpeg-users] [PATCH 05/65] media: usb: pvrusb2: Store v4l2_fh
  pointer in file->private_data
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -211,36 +211,305 @@ Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 
 Most V4L2 drivers store the v4l2_fh pointer in file->private_data. The
-hdpvr driver instead stores the pointer to the driver-specific structure
-that embeds the v4l2_fh. Switch to storing the v4l2_fh pointer itself to
-standardize behaviour across drivers. This also prepares for future
-refactoring that depends on v4l2_fh being stored in private_data.
+pvrusb2 driver instead stores the pointer to the driver-specific
+structure that embeds the v4l2_fh. Switch to storing the v4l2_fh pointer
+itself to standardize behaviour across drivers. This also prepares for
+future refactoring that depends on v4l2_fh being stored in private_data.
 
-No extensive driver refactoring is required, as file->private_data is
-only used to check if a file handle is the owner of the device by
-comparing pointer values. The private_data pointer is actually compared
-to a struct v4l2_fh pointer, which happens to be the first field of the
-hdpvr_fh structure.
+While at it, drop unneeded structure forward declarations.
 
 Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/usb/hdpvr/hdpvr-video.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ drivers/media/usb/pvrusb2/pvrusb2-v4l2.c | 65 +++++++++++++++++---------------
+ 1 file changed, 34 insertions(+), 31 deletions(-)
 
-diff --git a/drivers/media/usb/hdpvr/hdpvr-video.c b/drivers/media/usb/hdpvr/hdpvr-video.c
-index fd7d2a9d0449ab9ba68ddfa148a167797ea243fc..4c431bd9b50352ed1bd3da3e62625c9cff6c149d 100644
---- a/drivers/media/usb/hdpvr/hdpvr-video.c
-+++ b/drivers/media/usb/hdpvr/hdpvr-video.c
-@@ -381,7 +381,7 @@ static int hdpvr_open(struct file *file)
- 	fh->legacy_mode = true;
- 	v4l2_fh_init(&fh->fh, video_devdata(file));
- 	v4l2_fh_add(&fh->fh);
--	file->private_data = fh;
-+	file->private_data = &fh->fh;
- 	return 0;
- }
+diff --git a/drivers/media/usb/pvrusb2/pvrusb2-v4l2.c b/drivers/media/usb/pvrusb2/pvrusb2-v4l2.c
+index ad38e12405419caad056af8866b14ea621f0c2a1..7dc7c90ebf621c594bf5236276c402462d694a0a 100644
+--- a/drivers/media/usb/pvrusb2/pvrusb2-v4l2.c
++++ b/drivers/media/usb/pvrusb2/pvrusb2-v4l2.c
+@@ -21,8 +21,6 @@
+ #include <media/v4l2-common.h>
+ #include <media/v4l2-ioctl.h>
  
+-struct pvr2_v4l2_dev;
+-struct pvr2_v4l2_fh;
+ struct pvr2_v4l2;
+ 
+ struct pvr2_v4l2_dev {
+@@ -48,6 +46,11 @@ struct pvr2_v4l2_fh {
+ 	unsigned int input_cnt;
+ };
+ 
++static inline struct pvr2_v4l2_fh *to_pvr2_v4l2_fh(struct file *filp)
++{
++	return container_of(filp->private_data, struct pvr2_v4l2_fh, fh);
++}
++
+ struct pvr2_v4l2 {
+ 	struct pvr2_channel channel;
+ 
+@@ -108,7 +111,7 @@ static struct v4l2_format pvr_format [] = {
+  */
+ static int pvr2_querycap(struct file *file, void *priv, struct v4l2_capability *cap)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 
+ 	strscpy(cap->driver, "pvrusb2", sizeof(cap->driver));
+@@ -123,7 +126,7 @@ static int pvr2_querycap(struct file *file, void *priv, struct v4l2_capability *
+ 
+ static int pvr2_g_std(struct file *file, void *priv, v4l2_std_id *std)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	int val = 0;
+ 	int ret;
+@@ -136,7 +139,7 @@ static int pvr2_g_std(struct file *file, void *priv, v4l2_std_id *std)
+ 
+ static int pvr2_s_std(struct file *file, void *priv, v4l2_std_id std)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	int ret;
+ 
+@@ -148,7 +151,7 @@ static int pvr2_s_std(struct file *file, void *priv, v4l2_std_id std)
+ 
+ static int pvr2_querystd(struct file *file, void *priv, v4l2_std_id *std)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	int val = 0;
+ 	int ret;
+@@ -161,7 +164,7 @@ static int pvr2_querystd(struct file *file, void *priv, v4l2_std_id *std)
+ 
+ static int pvr2_enum_input(struct file *file, void *priv, struct v4l2_input *vi)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	struct pvr2_ctrl *cptr;
+ 	struct v4l2_input tmp;
+@@ -209,7 +212,7 @@ static int pvr2_enum_input(struct file *file, void *priv, struct v4l2_input *vi)
+ 
+ static int pvr2_g_input(struct file *file, void *priv, unsigned int *i)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	unsigned int idx;
+ 	struct pvr2_ctrl *cptr;
+@@ -231,7 +234,7 @@ static int pvr2_g_input(struct file *file, void *priv, unsigned int *i)
+ 
+ static int pvr2_s_input(struct file *file, void *priv, unsigned int inp)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	int ret;
+ 
+@@ -286,7 +289,7 @@ static int pvr2_s_audio(struct file *file, void *priv, const struct v4l2_audio *
+ 
+ static int pvr2_g_tuner(struct file *file, void *priv, struct v4l2_tuner *vt)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 
+ 	if (vt->index != 0)
+@@ -298,7 +301,7 @@ static int pvr2_g_tuner(struct file *file, void *priv, struct v4l2_tuner *vt)
+ 
+ static int pvr2_s_tuner(struct file *file, void *priv, const struct v4l2_tuner *vt)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	int ret;
+ 
+@@ -314,7 +317,7 @@ static int pvr2_s_tuner(struct file *file, void *priv, const struct v4l2_tuner *
+ 
+ static int pvr2_s_frequency(struct file *file, void *priv, const struct v4l2_frequency *vf)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	unsigned long fv;
+ 	struct v4l2_tuner vt;
+@@ -349,7 +352,7 @@ static int pvr2_s_frequency(struct file *file, void *priv, const struct v4l2_fre
+ 
+ static int pvr2_g_frequency(struct file *file, void *priv, struct v4l2_frequency *vf)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	int val = 0;
+ 	int cur_input;
+@@ -391,7 +394,7 @@ static int pvr2_enum_fmt_vid_cap(struct file *file, void *priv, struct v4l2_fmtd
+ 
+ static int pvr2_g_fmt_vid_cap(struct file *file, void *priv, struct v4l2_format *vf)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	int val;
+ 
+@@ -411,7 +414,7 @@ static int pvr2_g_fmt_vid_cap(struct file *file, void *priv, struct v4l2_format
+ 
+ static int pvr2_try_fmt_vid_cap(struct file *file, void *priv, struct v4l2_format *vf)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	int lmin, lmax, ldef;
+ 	struct pvr2_ctrl *hcp, *vcp;
+@@ -449,7 +452,7 @@ static int pvr2_try_fmt_vid_cap(struct file *file, void *priv, struct v4l2_forma
+ 
+ static int pvr2_s_fmt_vid_cap(struct file *file, void *priv, struct v4l2_format *vf)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	struct pvr2_ctrl *hcp, *vcp;
+ 	int ret = pvr2_try_fmt_vid_cap(file, fh, vf);
+@@ -466,7 +469,7 @@ static int pvr2_s_fmt_vid_cap(struct file *file, void *priv, struct v4l2_format
+ 
+ static int pvr2_streamon(struct file *file, void *priv, enum v4l2_buf_type i)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	struct pvr2_v4l2_dev *pdi = fh->pdi;
+ 	int ret;
+@@ -485,7 +488,7 @@ static int pvr2_streamon(struct file *file, void *priv, enum v4l2_buf_type i)
+ 
+ static int pvr2_streamoff(struct file *file, void *priv, enum v4l2_buf_type i)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 
+ 	if (!fh->pdi->stream) {
+@@ -500,7 +503,7 @@ static int pvr2_streamoff(struct file *file, void *priv, enum v4l2_buf_type i)
+ static int pvr2_query_ext_ctrl(struct file *file, void *priv,
+ 			       struct v4l2_query_ext_ctrl *vc)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	struct pvr2_ctrl *cptr;
+ 	int val;
+@@ -561,7 +564,7 @@ static int pvr2_query_ext_ctrl(struct file *file, void *priv,
+ 
+ static int pvr2_querymenu(struct file *file, void *priv, struct v4l2_querymenu *vm)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	unsigned int cnt = 0;
+ 	int ret;
+@@ -577,7 +580,7 @@ static int pvr2_querymenu(struct file *file, void *priv, struct v4l2_querymenu *
+ static int pvr2_g_ext_ctrls(struct file *file, void *priv,
+ 					struct v4l2_ext_controls *ctls)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	struct v4l2_ext_control *ctrl;
+ 	struct pvr2_ctrl *cptr;
+@@ -612,7 +615,7 @@ static int pvr2_g_ext_ctrls(struct file *file, void *priv,
+ static int pvr2_s_ext_ctrls(struct file *file, void *priv,
+ 		struct v4l2_ext_controls *ctls)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	struct v4l2_ext_control *ctrl;
+ 	unsigned int idx;
+@@ -637,7 +640,7 @@ static int pvr2_s_ext_ctrls(struct file *file, void *priv,
+ static int pvr2_try_ext_ctrls(struct file *file, void *priv,
+ 		struct v4l2_ext_controls *ctls)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	struct v4l2_ext_control *ctrl;
+ 	struct pvr2_ctrl *pctl;
+@@ -659,7 +662,7 @@ static int pvr2_try_ext_ctrls(struct file *file, void *priv,
+ static int pvr2_g_pixelaspect(struct file *file, void *priv,
+ 			      int type, struct v4l2_fract *f)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	struct v4l2_cropcap cap = { .type = type };
+ 	int ret;
+@@ -675,7 +678,7 @@ static int pvr2_g_pixelaspect(struct file *file, void *priv,
+ static int pvr2_g_selection(struct file *file, void *priv,
+ 			    struct v4l2_selection *sel)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	struct v4l2_cropcap cap;
+ 	int val = 0;
+@@ -726,7 +729,7 @@ static int pvr2_g_selection(struct file *file, void *priv,
+ static int pvr2_s_selection(struct file *file, void *priv,
+ 			    struct v4l2_selection *sel)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 	int ret;
+ 
+@@ -758,7 +761,7 @@ static int pvr2_s_selection(struct file *file, void *priv,
+ 
+ static int pvr2_log_status(struct file *file, void *priv)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_hdw *hdw = fh->channel.mc_head->hdw;
+ 
+ 	pvr2_hdw_trigger_module_log(hdw);
+@@ -882,7 +885,7 @@ static void pvr2_v4l2_internal_check(struct pvr2_channel *chp)
+ 
+ static int pvr2_v4l2_release(struct file *file)
+ {
+-	struct pvr2_v4l2_fh *fhp = file->private_data;
++	struct pvr2_v4l2_fh *fhp = to_pvr2_v4l2_fh(file);
+ 	struct pvr2_v4l2 *vp = fhp->pdi->v4lp;
+ 	struct pvr2_hdw *hdw = fhp->channel.mc_head->hdw;
+ 
+@@ -1000,7 +1003,7 @@ static int pvr2_v4l2_open(struct file *file)
+ 	}
+ 
+ 	fhp->file = file;
+-	file->private_data = fhp;
++	file->private_data = &fhp->fh;
+ 
+ 	fhp->fw_mode_flag = pvr2_hdw_cpufw_get_enabled(hdw);
+ 	v4l2_fh_add(&fhp->fh);
+@@ -1055,7 +1058,7 @@ static int pvr2_v4l2_iosetup(struct pvr2_v4l2_fh *fh)
+ static ssize_t pvr2_v4l2_read(struct file *file,
+ 			      char __user *buff, size_t count, loff_t *ppos)
+ {
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	int ret;
+ 
+ 	if (fh->fw_mode_flag) {
+@@ -1117,7 +1120,7 @@ static ssize_t pvr2_v4l2_read(struct file *file,
+ static __poll_t pvr2_v4l2_poll(struct file *file, poll_table *wait)
+ {
+ 	__poll_t mask = 0;
+-	struct pvr2_v4l2_fh *fh = file->private_data;
++	struct pvr2_v4l2_fh *fh = to_pvr2_v4l2_fh(file);
+ 	int ret;
+ 
+ 	if (fh->fw_mode_flag) {
 
 -- 
 2.49.0
