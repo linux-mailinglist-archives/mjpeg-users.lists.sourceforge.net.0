@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1C68CB18EE9
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 04656B18EE1
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=hIezBxUTwaYcLKvMPPH0TA/34zN3uFWJVPGNUGQ7rZY=; b=JNjVc2L1lG1UNDXRH90V4D30wA
-	/SDFY2B9w5RuPtnXtK6EO1fVBUTXhhKmpWn/7GvkPY5deRsAoGKdATfSYJLPfehvuy8WHVo80t4dE
-	/RKsdS7Xcg49n4H1ZiVSxCnar3vPI1g5gensrg69zl7P1MJrOcKhKAOeAQRvEu2eKfmw=;
+	bh=KKKcRagTddxv7TG0D//amJNV7zt14AM18Y19735MV8w=; b=joHC/1oARTw51NUO4g9NX0bmeG
+	VXVazS8uwpEfY0jKuBrgrATlEdg1xX6zC0j+hdICJQaGRFSef4TzSVFujKudd5E5fZUt4xdHyRIqK
+	13FkuMjHk9Xgp/6QVzqA5gG5XgnZmci+MzChxkCXRyMkjS701V6kJzv5mkFTZV0D8iLI=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChs-0006bm-Ue;
-	Sat, 02 Aug 2025 13:55:28 +0000
+	id 1uiChp-0006Xw-SU;
+	Sat, 02 Aug 2025 13:55:25 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8jR-000160-Ga
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8ih-0000XA-PE
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:40:49 +0000
+ Sat, 02 Aug 2025 09:40:03 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=6EiAowMi8taw41epDYTzQ1GvOSih+RUmACOUotkg1UQ=; b=LB8gQyxTpPAXbPplgKnwxCFk3a
- RLvnYIdSytMdVkKdxYoFdFE28AHkn6ufZXY1bbEulaVWZdeXGYIaBSq5leXAtOEvK9gdmbUp50GPk
- OT/5wVrijvxISCb1p2BBLFY8KqM1g3hV3yul6dYCI/llzQ5uS8GLevrPlirDViVJnqKA=;
+ bh=2lq42s8JPiS4UoCYYPIR7tPht4xaETXG/gfBCxteWFI=; b=H4lEIyDwXTPIdN/20O2gaPlNFl
+ I9Xbn+tXW9C+Q6dntd+cerHvbuSKwBx0Y/lEE6l0qlpPfNJqFWb5sticpKqeFVz6G1GpcYKXEjGF7
+ gNyOeIMwNosjv9q4dxCwNJXQ1GgDFdljKjzUf8djEuHov7131i9RZTrT+e1ugTfTsbWk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=6EiAowMi8taw41epDYTzQ1GvOSih+RUmACOUotkg1UQ=; b=NvQsCkg0nV8c7z8zPW5sxDnYnj
- YijEKijz+ssQcCaqdhftDGyIKplGdXL8Otg2v0UcWs1o1N4Toxik6Tetk0iSbxFPY0RFNkaJPsyaR
- OhFpjLI8C/5Hycvt2X/yan2ZOMlQluxKP3AHnsfcJTo/A5Vdlys0NtYTha1+0SyOwnIM=;
+ bh=2lq42s8JPiS4UoCYYPIR7tPht4xaETXG/gfBCxteWFI=; b=axvrOohqfRaK1ElB7MnwY487j3
+ DlprRI4pynVbAjMpSLlWaOirvd33mgyl6gQBbeuFdvDWBgllQo8LSpBNZ+X6WHFXRnv22uGlQWWil
+ cyC5w+bCS7UGsoRHWrCdXz8/2P9JF9YVhUkL4cooLxWO/4PnFPHi4Q3dhnEoc0D9vU1A=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8jP-0005hW-QF for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:40:49 +0000
+ id 1ui8ih-0005e5-4C for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:40:03 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id 079D63EB0;
- Sat,  2 Aug 2025 11:30:52 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 92D654129;
+ Sat,  2 Aug 2025 11:31:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754127073;
- bh=IirxBztmljSSgN2BVXB6cHuAJICj/kyqIr+6UJ76kV4=;
+ s=mail; t=1754127098;
+ bh=gIu7Q4nN31+tN7fJeeN0sXg6UA/9FufXt5i86vLgD+Y=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=TmEtBzqdBLqoZluZmZs8RWZtWynh8NG+K6Ba1+EQhY2cVQPMXqrZZI/bLcmAR0I4/
- JHinrXd1/aSAMaplfSD+nTW92cFr9EAud1X6dQtjs6yp64g4C5UV1Y6sCRs19SnxRs
- jonF1sJjFPnx6LCJpUmOEXFbILHpJm0DWXiE5iHU=
+ b=GL6CR5yUCjrJ8Di6FitQc05AJIWv3/YAnWtH8vT9/rbN5zj5cL2izsjDnupBw8yvE
+ L0lWTuvumb2ZXhIQVExAoei84xv19KDAVimC9N9bAnzu0BKdzv61ucCiFN0qXJifX0
+ hybuyN5nw7SUK45tB57L48cM/R8LXK+PwyxTM8CM=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:23:12 +0200
+Date: Sat, 02 Aug 2025 11:23:13 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-50-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-51-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,26 +141,26 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=9860;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=4052;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=IirxBztmljSSgN2BVXB6cHuAJICj/kyqIr+6UJ76kV4=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj9WlUYBZnvtf2wlXVIHJUMp9jqezOCJZkEu
- ZnI1YN6t7OJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/QAKCRByNAaPFqFW
- PNIKD/9gLwzi+0G2rYD3uhw/B90pgSgcO+CBQcWIi3EmM3D9Z5NL370hmM371eFP8iZ+KPoX2f0
- WNvQYpl+7zDqGikGkhpak7k0SmbxMaalX/OgFsHCx79mpOM06FBfqSDSDIA943JnuxIFpNn2ymB
- wF65SyOjgG0Vrp2l8HTSFSP1yugJr2jXchjFaqAwLd90RZx/qcJWBJ7H6Xzl4y8LfPDJIv1EfuJ
- QhQrrSrWgV3Ykci//zn8E1SVEnM0+D16nAXVGqI1Fm43/byjzJloxtHpzuwI1t9jKpgDWg79kNw
- VJvGq8STnkxwsw03Pr54zOR+AGKMpwu2WcEjnc76q2UX1lqOqAhGitu/HsStX4mMq8vCKEs+fC0
- MMkS3dqeBqqTemtbtodeIcWEIK2Xc6XAJe97Rj7WMwbGQncnUJgY12XhpkKKYNcyavDoNsMGEOP
- Q6eqUyYK1hFwo8/Cp0YvQWuknTsI5aznce/twxHwr+PdL3SWKa9mNtsplRx8YRFryUKkt6GVpCM
- BlziLQuxJgaPME2bQyq1e72z/X0RHeWzxSZhxXPA/Tk3i6YEcXxfa/v2hHjFnYmbnPgfHvY/8ca
- T3ICF5986+Vi7y/BaFmkldV4+Gs+luRI1xoHvEv9NEhaioZi6mtJOgg4XdXyObH6ALLGfS4602Y
- yx8stXWkxbGP4hQ==
+ bh=gIu7Q4nN31+tN7fJeeN0sXg6UA/9FufXt5i86vLgD+Y=;
+ b=kA0DAAoBcjQGjxahVjwByyZiAGiN2P2hAJjeL4C7TG81g20mJ+/1CxQtsOthszQGUM0XJNW7W
+ okCMwQAAQoAHRYhBLXEPUiAmiCKj1g4wHI0Bo8WoVY8BQJojdj9AAoJEHI0Bo8WoVY8h/YP/Rrz
+ +Cuai5dHAU1rx/elvXgMyktAPuA4wu2VdL2V1bVM4s1xdxx9aSpDpB3gUm87g00dGiGAfgAh3wd
+ mmcHoafszDQ2MPBlhouZzjL+DDhOTP8r84ZaJVQ/mMHppYjPnBC2zKjQf/ZUK3H2DRmwu+Nz5os
+ qwTvV2AsKkC4z3J1dyTi/pbkk0rvsi/+gy1QgI7+EjE7oG3p6cx9UJGenTyylr9nd27N9lYe3cD
+ IAAfl09YRRop4Wg+xsoENjcSbTjb/dHkOoneJKKYr9LAOozYGP43+LOcG5Wjk1na1F3zI6a7fBj
+ KwpT5npGhEzVMR8XPK2JpEK8Lqj4Rftu7vY5sX8xEl9ZQboZx8gm/+ZbR46Z/mHtKU5rSO+iIpJ
+ T7M11oVBNsDh8e65csMOcST1mudTVJ+tsi38V5gZVjTWYjL5OXUVBGKUDOEs9YXB7Y660wKt5NW
+ Wlta5Uzg32G9b4/vkxuo0s+r+WMn2svTvFr2hXBiDFy+3mgSPTd2+u+c1m1bA2/K7wN5jC7Vi+g
+ vhh3Nn6SjRE5nU0tGvhgnITb3nSIyvVRaD9R/3TGWkInsh3DiBfiANIct7tsVMxlob/5Fu6Kvmb
+ z4kRAbF9Mx8TXDmfyqZ+5irZIWPNW3aa9qMZOCiRyndODnDB80Z54qfqJxCYsEitNZNWMDw+Ddv
+ r/hZZ
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
@@ -173,16 +173,16 @@ X-Spam-Report: Spam detection software,
  Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
-X-Headers-End: 1ui8jP-0005hW-QF
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+X-Headers-End: 1ui8ih-0005e5-4C
 X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 50/65] media: s5p-mfc: Access v4l2_fh from file
+Subject: [Mjpeg-users] [PATCH 51/65] media: bdisp: Access v4l2_fh from file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -214,232 +214,100 @@ to be available in file->private_data, initialised by v4l2_fh_add().
 Access the v4l2_fh, and from there the driver-specific structure,
 from the file * in all ioctl handlers.
 
+While at it, remove the now unused fh_to_ctx() macro.
+
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- .../media/platform/samsung/s5p-mfc/s5p_mfc_dec.c   | 22 ++++++++++----------
- .../media/platform/samsung/s5p-mfc/s5p_mfc_enc.c   | 24 +++++++++++-----------
- 2 files changed, 23 insertions(+), 23 deletions(-)
+ drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c | 18 ++++++++----------
+ 1 file changed, 8 insertions(+), 10 deletions(-)
 
-diff --git a/drivers/media/platform/samsung/s5p-mfc/s5p_mfc_dec.c b/drivers/media/platform/samsung/s5p-mfc/s5p_mfc_dec.c
-index 3efbc336790629425c2a71e9feee8f073db55790..6a2703fe7e8cc3104fbaa3c7405e67295e87db5d 100644
---- a/drivers/media/platform/samsung/s5p-mfc/s5p_mfc_dec.c
-+++ b/drivers/media/platform/samsung/s5p-mfc/s5p_mfc_dec.c
-@@ -345,7 +345,7 @@ static int vidioc_enum_fmt_vid_out(struct file *file, void *priv,
- /* Get format */
- static int vidioc_g_fmt(struct file *file, void *priv, struct v4l2_format *f)
- {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	struct v4l2_pix_format_mplane *pix_mp;
+diff --git a/drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c b/drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c
+index fc7945d29bccc2fdf0fc48fc14d6698b321418d9..56169b70652d3aaf7c3c395a630a29023cbd9722 100644
+--- a/drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c
++++ b/drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c
+@@ -33,8 +33,6 @@
+ #define BDISP_MIN_H             1
+ #define BDISP_MAX_H             8191
  
- 	mfc_debug_enter();
-@@ -442,7 +442,7 @@ static int vidioc_try_fmt(struct file *file, void *priv, struct v4l2_format *f)
- static int vidioc_s_fmt(struct file *file, void *priv, struct v4l2_format *f)
+-#define fh_to_ctx(__fh) container_of(__fh, struct bdisp_ctx, fh)
+-
+ static inline struct bdisp_ctx *file_to_ctx(struct file *filp)
  {
- 	struct s5p_mfc_dev *dev = video_drvdata(file);
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	int ret = 0;
- 	struct v4l2_pix_format_mplane *pix_mp;
- 	const struct s5p_mfc_buf_size *buf_size = dev->variant->buf_size;
-@@ -598,7 +598,7 @@ static int vidioc_reqbufs(struct file *file, void *priv,
- 					  struct v4l2_requestbuffers *reqbufs)
+ 	return container_of(file_to_v4l2_fh(filp), struct bdisp_ctx, fh);
+@@ -686,7 +684,7 @@ static const struct v4l2_file_operations bdisp_fops = {
+ static int bdisp_querycap(struct file *file, void *fh,
+ 			  struct v4l2_capability *cap)
  {
- 	struct s5p_mfc_dev *dev = video_drvdata(file);
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
+-	struct bdisp_ctx *ctx = fh_to_ctx(fh);
++	struct bdisp_ctx *ctx = file_to_ctx(file);
+ 	struct bdisp_dev *bdisp = ctx->bdisp_dev;
  
- 	if (reqbufs->memory != V4L2_MEMORY_MMAP) {
- 		mfc_debug(2, "Only V4L2_MEMORY_MMAP is supported\n");
-@@ -619,7 +619,7 @@ static int vidioc_reqbufs(struct file *file, void *priv,
- static int vidioc_querybuf(struct file *file, void *priv,
- 						   struct v4l2_buffer *buf)
- {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	int ret;
- 	int i;
+ 	strscpy(cap->driver, bdisp->pdev->name, sizeof(cap->driver));
+@@ -698,7 +696,7 @@ static int bdisp_querycap(struct file *file, void *fh,
  
-@@ -647,7 +647,7 @@ static int vidioc_querybuf(struct file *file, void *priv,
- /* Queue a buffer */
- static int vidioc_qbuf(struct file *file, void *priv, struct v4l2_buffer *buf)
+ static int bdisp_enum_fmt(struct file *file, void *fh, struct v4l2_fmtdesc *f)
  {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
+-	struct bdisp_ctx *ctx = fh_to_ctx(fh);
++	struct bdisp_ctx *ctx = file_to_ctx(file);
+ 	const struct bdisp_fmt *fmt;
  
- 	if (ctx->state == MFCINST_ERROR) {
- 		mfc_err("Call on QBUF after unrecoverable error\n");
-@@ -666,7 +666,7 @@ static int vidioc_dqbuf(struct file *file, void *priv, struct v4l2_buffer *buf)
- 	const struct v4l2_event ev = {
- 		.type = V4L2_EVENT_EOS
- 	};
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	int ret;
+ 	if (f->index >= ARRAY_SIZE(bdisp_formats))
+@@ -718,7 +716,7 @@ static int bdisp_enum_fmt(struct file *file, void *fh, struct v4l2_fmtdesc *f)
  
- 	if (ctx->state == MFCINST_ERROR) {
-@@ -695,7 +695,7 @@ static int vidioc_dqbuf(struct file *file, void *priv, struct v4l2_buffer *buf)
- static int vidioc_expbuf(struct file *file, void *priv,
- 	struct v4l2_exportbuffer *eb)
+ static int bdisp_g_fmt(struct file *file, void *fh, struct v4l2_format *f)
  {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
+-	struct bdisp_ctx *ctx = fh_to_ctx(fh);
++	struct bdisp_ctx *ctx = file_to_ctx(file);
+ 	struct v4l2_pix_format *pix;
+ 	struct bdisp_frame *frame  = ctx_get_frame(ctx, f->type);
  
- 	if (eb->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
- 		return vb2_expbuf(&ctx->vq_src, eb);
-@@ -708,7 +708,7 @@ static int vidioc_expbuf(struct file *file, void *priv,
- static int vidioc_streamon(struct file *file, void *priv,
- 			   enum v4l2_buf_type type)
- {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	int ret = -EINVAL;
+@@ -742,7 +740,7 @@ static int bdisp_g_fmt(struct file *file, void *fh, struct v4l2_format *f)
  
- 	mfc_debug_enter();
-@@ -724,7 +724,7 @@ static int vidioc_streamon(struct file *file, void *priv,
- static int vidioc_streamoff(struct file *file, void *priv,
- 			    enum v4l2_buf_type type)
+ static int bdisp_try_fmt(struct file *file, void *fh, struct v4l2_format *f)
  {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
+-	struct bdisp_ctx *ctx = fh_to_ctx(fh);
++	struct bdisp_ctx *ctx = file_to_ctx(file);
+ 	struct v4l2_pix_format *pix = &f->fmt.pix;
+ 	const struct bdisp_fmt *format;
+ 	u32 in_w, in_h;
+@@ -792,7 +790,7 @@ static int bdisp_try_fmt(struct file *file, void *fh, struct v4l2_format *f)
  
- 	if (type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
- 		return vb2_streamoff(&ctx->vq_src, type);
-@@ -801,7 +801,7 @@ static const struct v4l2_ctrl_ops s5p_mfc_dec_ctrl_ops = {
- static int vidioc_g_selection(struct file *file, void *priv,
- 			      struct v4l2_selection *s)
+ static int bdisp_s_fmt(struct file *file, void *fh, struct v4l2_format *f)
  {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	struct s5p_mfc_dev *dev = ctx->dev;
- 	u32 left, right, top, bottom;
- 	u32 width, height;
-@@ -856,7 +856,7 @@ static int vidioc_g_selection(struct file *file, void *priv,
- static int vidioc_decoder_cmd(struct file *file, void *priv,
- 			      struct v4l2_decoder_cmd *cmd)
+-	struct bdisp_ctx *ctx = fh_to_ctx(fh);
++	struct bdisp_ctx *ctx = file_to_ctx(file);
+ 	struct vb2_queue *vq;
+ 	struct bdisp_frame *frame;
+ 	struct v4l2_pix_format *pix;
+@@ -845,8 +843,8 @@ static int bdisp_s_fmt(struct file *file, void *fh, struct v4l2_format *f)
+ static int bdisp_g_selection(struct file *file, void *fh,
+ 			     struct v4l2_selection *s)
  {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	struct s5p_mfc_dev *dev = ctx->dev;
- 	struct s5p_mfc_buf *buf;
- 	unsigned long flags;
-diff --git a/drivers/media/platform/samsung/s5p-mfc/s5p_mfc_enc.c b/drivers/media/platform/samsung/s5p-mfc/s5p_mfc_enc.c
-index 6c603dcd56649fcabe161173c64b9ea8bd055b93..c6787ccfaaa422a905dbb136d992f2d15b8e484f 100644
---- a/drivers/media/platform/samsung/s5p-mfc/s5p_mfc_enc.c
-+++ b/drivers/media/platform/samsung/s5p-mfc/s5p_mfc_enc.c
-@@ -1389,8 +1389,8 @@ static int vidioc_enum_fmt_vid_out(struct file *file, void *priv,
++	struct bdisp_ctx *ctx = file_to_ctx(file);
+ 	struct bdisp_frame *frame;
+-	struct bdisp_ctx *ctx = fh_to_ctx(fh);
  
- static int vidioc_g_fmt(struct file *file, void *priv, struct v4l2_format *f)
+ 	frame = ctx_get_frame(ctx, s->type);
+ 	if (IS_ERR(frame)) {
+@@ -923,8 +921,8 @@ static int is_rect_enclosed(struct v4l2_rect *a, struct v4l2_rect *b)
+ static int bdisp_s_selection(struct file *file, void *fh,
+ 			     struct v4l2_selection *s)
  {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
- 	struct v4l2_pix_format_mplane *pix_fmt_mp = &f->fmt.pix_mp;
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
++	struct bdisp_ctx *ctx = file_to_ctx(file);
+ 	struct bdisp_frame *frame;
+-	struct bdisp_ctx *ctx = fh_to_ctx(fh);
+ 	struct v4l2_rect *in, out;
+ 	bool valid = false;
  
- 	mfc_debug(2, "f->type = %d ctx->state = %d\n", f->type, ctx->state);
- 	if (f->type == V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE) {
-@@ -1472,8 +1472,8 @@ static int vidioc_try_fmt(struct file *file, void *priv, struct v4l2_format *f)
+@@ -1001,7 +999,7 @@ static int bdisp_s_selection(struct file *file, void *fh,
  
- static int vidioc_s_fmt(struct file *file, void *priv, struct v4l2_format *f)
+ static int bdisp_streamon(struct file *file, void *fh, enum v4l2_buf_type type)
  {
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	struct s5p_mfc_dev *dev = video_drvdata(file);
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
- 	struct v4l2_pix_format_mplane *pix_fmt_mp = &f->fmt.pix_mp;
- 	int ret = 0;
+-	struct bdisp_ctx *ctx = fh_to_ctx(fh);
++	struct bdisp_ctx *ctx = file_to_ctx(file);
  
-@@ -1531,7 +1531,7 @@ static int vidioc_reqbufs(struct file *file, void *priv,
- 					  struct v4l2_requestbuffers *reqbufs)
- {
- 	struct s5p_mfc_dev *dev = video_drvdata(file);
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	int ret = 0;
- 
- 	/* if memory is not mmp or userptr or dmabuf return error */
-@@ -1601,7 +1601,7 @@ static int vidioc_reqbufs(struct file *file, void *priv,
- static int vidioc_querybuf(struct file *file, void *priv,
- 						   struct v4l2_buffer *buf)
- {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	int ret = 0;
- 
- 	/* if memory is not mmp or userptr or dmabuf return error */
-@@ -1636,7 +1636,7 @@ static int vidioc_querybuf(struct file *file, void *priv,
- /* Queue a buffer */
- static int vidioc_qbuf(struct file *file, void *priv, struct v4l2_buffer *buf)
- {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 
- 	if (ctx->state == MFCINST_ERROR) {
- 		mfc_err("Call on QBUF after unrecoverable error\n");
-@@ -1657,10 +1657,10 @@ static int vidioc_qbuf(struct file *file, void *priv, struct v4l2_buffer *buf)
- /* Dequeue a buffer */
- static int vidioc_dqbuf(struct file *file, void *priv, struct v4l2_buffer *buf)
- {
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	const struct v4l2_event ev = {
- 		.type = V4L2_EVENT_EOS
- 	};
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
- 	int ret;
- 
- 	if (ctx->state == MFCINST_ERROR) {
-@@ -1685,7 +1685,7 @@ static int vidioc_dqbuf(struct file *file, void *priv, struct v4l2_buffer *buf)
- static int vidioc_expbuf(struct file *file, void *priv,
- 	struct v4l2_exportbuffer *eb)
- {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 
- 	if (eb->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
- 		return vb2_expbuf(&ctx->vq_src, eb);
-@@ -1698,7 +1698,7 @@ static int vidioc_expbuf(struct file *file, void *priv,
- static int vidioc_streamon(struct file *file, void *priv,
- 			   enum v4l2_buf_type type)
- {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 
- 	if (type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
- 		return vb2_streamon(&ctx->vq_src, type);
-@@ -1711,7 +1711,7 @@ static int vidioc_streamon(struct file *file, void *priv,
- static int vidioc_streamoff(struct file *file, void *priv,
- 			    enum v4l2_buf_type type)
- {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 
- 	if (type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
- 		return vb2_streamoff(&ctx->vq_src, type);
-@@ -2284,7 +2284,7 @@ static const struct v4l2_ctrl_ops s5p_mfc_enc_ctrl_ops = {
- static int vidioc_s_parm(struct file *file, void *priv,
- 			 struct v4l2_streamparm *a)
- {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 
- 	if (a->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE) {
- 		ctx->enc_params.rc_framerate_num =
-@@ -2301,7 +2301,7 @@ static int vidioc_s_parm(struct file *file, void *priv,
- static int vidioc_g_parm(struct file *file, void *priv,
- 			 struct v4l2_streamparm *a)
- {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 
- 	if (a->type == V4L2_BUF_TYPE_VIDEO_OUTPUT) {
- 		a->parm.output.timeperframe.denominator =
-@@ -2318,7 +2318,7 @@ static int vidioc_g_parm(struct file *file, void *priv,
- static int vidioc_encoder_cmd(struct file *file, void *priv,
- 			      struct v4l2_encoder_cmd *cmd)
- {
--	struct s5p_mfc_ctx *ctx = fh_to_ctx(priv);
-+	struct s5p_mfc_ctx *ctx = file_to_ctx(file);
- 	struct s5p_mfc_dev *dev = ctx->dev;
- 	struct s5p_mfc_buf *buf;
- 	unsigned long flags;
+ 	if ((type == V4L2_BUF_TYPE_VIDEO_OUTPUT) &&
+ 	    !bdisp_ctx_state_is_set(BDISP_SRC_FMT, ctx)) {
 
 -- 
 2.49.0
