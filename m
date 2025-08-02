@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id E40FCB18ECC
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3E64CB18ED8
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=S+9jfXaEh5O7I7KTLijEHWKuEvB0FcYMqP3RLl92BNU=; b=FakA6SSVnC52D09iDsGWMJ5SSO
-	e/MqQq6f62qSYVkugbdcSef+I+mFe5/8lWB6bZAdXyOGrFaHyFKUEAKLQrWB9oWTh/JeX17s+h+he
-	w54BmSAJA9KTyT8yzx9Ildklkn+93kXU605fY7vVzIElN7W0v1uEPC5ejEpe5SwZZB7Q=;
+	bh=UQsS1y4FQc9EN/Cyj7U1P5NsBEd/qXBwG8LdJ7rDbMk=; b=BcDJp9D23Vj04scpx28P7q84tR
+	fEvtM5kfCpX4W8ozukTItyQ/A6UYvpRkPWbF0G/LVjIne3s+lR45jDbbGW6dFYUMH96Y3RPAfGXDu
+	UfzkUF9jsOc2zlAlA5/WI1fbtVqlRTGYWDCj8/IxMlHteLvxEOvjhWCoKxKaMPq6N/D0=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChj-0006RE-Ij;
-	Sat, 02 Aug 2025 13:55:19 +0000
+	id 1uiChn-0006UQ-3U;
+	Sat, 02 Aug 2025 13:55:23 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8h8-0005E1-Ma
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8hx-0005KI-PJ
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:38:27 +0000
+ Sat, 02 Aug 2025 09:39:18 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=IMJC4cCit/kf4dQzsiqM9GqmQ+REEYvLkaV5PfTsOhc=; b=Jc2+etvG/XtDW0vT+Pp+NtM1mH
- 4r1sTLBPD5ZYpH9sleZZpOuiEARLuHFDWOknHpqUqiSeuGRKjbAjGWV/7WTU0dvbGzm3DlyF7LrD6
- vN3yI66/WMU68elWT3NhexgbEXbRaXxLHRGrBx+2WM8HCAymT+SHtIa3NkIc24LJiSlQ=;
+ bh=ge+FZFHNLU0GDL+ayYU0krPs3gLgHxLjd1Hg9ZQ/jyk=; b=R23SQ7ZC5q2CgI8C4laAHCrH9m
+ udfgDsfuS1i52jFj2XcP1DXTHWRRRkdyBigZINqrfTvM1bxD6ppoZVf8vnnuSdU9RFX5ln2eKkgQv
+ 1neCY6cGfA3gGS4/dam63Oz9tEycbfUG7iF7Nsat/oacKpHOthuAmRAlZevUQ/e9vJRI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=IMJC4cCit/kf4dQzsiqM9GqmQ+REEYvLkaV5PfTsOhc=; b=IewmqoYcgb1FFY6bAlqC/7aRu3
- Lne1ww6huSDsoNAatnsL2LKxTbyltJt2rM+Jxv4I2EucYOxtYTRAuAA94wPWiS4bJ7xePZV/WzXEw
- TRmfQVsPPoVnAD+jN+xF3Do6npQm/mUT7ei2rDse5DPSQrZgcbBm4Ixfv8io+7qmTWAw=;
+ bh=ge+FZFHNLU0GDL+ayYU0krPs3gLgHxLjd1Hg9ZQ/jyk=; b=ecvJg79NNd7Bw7eX96DpdY2c9D
+ ypsdBiigYDfLRilbdFP74+Oos5k5VrOPjg+IQaJtZc4FbVsqiVrCUmwYaqPi/wHhkJ1C3cbPOdlqw
+ Et5cjWALCr7GzQDvxG/2bHvj6z2s+GAp6+jBoS7AfJKDx5ad6T11cDIOUwBqR3eKcekg=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8h3-0005WO-6r for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:38:21 +0000
+ id 1ui8hx-0005aa-5C for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:39:18 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id D13D93EE9;
- Sat,  2 Aug 2025 11:29:02 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id EDA0D3C97;
+ Sat,  2 Aug 2025 11:29:10 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754126950;
- bh=QMXN795g4JQ02dbn34MUgI1SrXfUXWeSvy7JvnRGT/4=;
+ s=mail; t=1754126959;
+ bh=DR8H5PIAc8L4JOzfoP4xWpCxebhDCEnaJqqWhPBFy+0=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=a6yKtLO3p3dptqs8nDpC4CTqf6f17ThWt2kAQ1RtjLbHys7ZhKQtBaxqQGSFM14hJ
- lo2so0O2XgjC9oyqujkhkQVVJ41fDYV4TE+DbxU0VOqJKvsFvw9M/9U/KkF7+/glzq
- Xda2N5WbvBrVab8G1DXb+S/ilReE23HpnougskVQ=
+ b=hT8Gx6BmOM76bDFeML8LExuJPTAnht6Wvn57/qJhB7+ZhlNMqfXhEkASH3NW3RuyW
+ UZTqUXH/j8H6xn9lPsNIuJ1E2Ht2wzHcwFHMec6ZTXX4zFnaK3T8vOqZ9UuNg86A45
+ wLsnMm4kFRwPqYJBTI/nmtZ/BWbP+cVS1qJzP4Mw=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:23:01 +0200
+Date: Sat, 02 Aug 2025 11:23:02 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-39-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-40-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,21 +141,21 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=6555;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=3477;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=QMXN795g4JQ02dbn34MUgI1SrXfUXWeSvy7JvnRGT/4=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj8/oWIIARD+dfkmFv/taMUYIiUf/KYJk9vV
- f7+9cr+2++JAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/AAKCRByNAaPFqFW
- PKtxD/0WLPIL/mL1eF89kxSMM9GwOxEKdo8GLGfT13RWpduaSJTQpP/edD44lwWuTCc/Ppgs83F
- u9bd6x4dOVwYfaPQIN5wij1VrkrZ6Bukd6h598tHgoKq0LmK6g9AS6SSJyKCVG8ETu/fpF0ARpW
- 1oq1soPH+lkWm2YsCf88hjEAeLKuLe6T2CZB8MolKhAQOKNFewTMquWE8SfXrpMELAUh97npU/h
- GzVOcyJRfI+Me9QDMgov6AQRy+qGdm2K6R0aK8XaHuDSUkdPw4breQtXzbxvHJujLsZ3Ylt4IrG
- 5pTN90+UngJ1pYigkyC8u8WI8bF5BcOxKx+gjGXuO+zcdr++UiIKHU/iOzkeJvdSnBPE6XjtZEW
- DBYFVMgrlvKkBQ9pjwJIsek4GgkDSCUoTnyXtR5YpjSZLIOP2Hkxg/MYLR1K00HzGwNykLZfmwU
- gvHiAygX/esogRpR/rFyA6SnjaCLLoy/9Dak8v/a15IEWnRsw8DD6LGJGELTh5E3YGkkeFfBkWQ
- nk9hYsCX5zLegyyQZ6tjuv6HJc53gqm0Mq3KtJl8V5t46D4VXt+WsPiGrcRHyyYD8ibuJBlaHs2
- ocOq1NEyVZ4BCdDoTWV7kqUn46e9u4uWM6Owwwggr8iOtxOn3o1mz5KuPz3wd7z2Oc1LrqSZ3Ry
- yexlpARHGjG1bXg==
+ bh=DR8H5PIAc8L4JOzfoP4xWpCxebhDCEnaJqqWhPBFy+0=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj8EoZgkMCHL3+wASHVhjTV75Orj6SKgaDZA
+ 6AcS4LUd4KJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/AAKCRByNAaPFqFW
+ POVpD/9a3Ls6bK9algAcZ2oeiBjNz7tRIjEIwEqB46qB5Bq/kQDbriurqxVTCwNigHT9yYh0mXP
+ 7cACNJ33RBJeyO9365kZBXs/wmIKGs/p4y+dJ8d2bdWddvcupEtgqZNitoozeu7ESiwRcXbm3y+
+ BoqB1V1jDTE11ypab29+vcaKo4qzSBIP3Hrtk4YeBKLn7gvYgaFBrNEonU6NKD9ODA/LIQulZRe
+ 73jR/l7r+PYcnZ7Rx2T3rwKBgs8D83nyaNr0oEZik56YfleC18XsXP3MSfruSvbfjD6GZWeNrgd
+ 712W4aBRF81a+B6kH5V8Aovltk00OUqLELIBHSUZ7El7W4Me1pXr/QPd6vAC1H+DRpxf2j40+RN
+ TDxqmDHi3YGoi8kJ0PnEMVgSCBCaLXRuhS8dGLvwvkIDAcuHVFiPB8byYSwpkGOYBKB7luuYB7H
+ 4xIhq9bAWnGPh09Xfuwcd9HL+8K5DLRYr1sqRYZZ55yszHbxWsYKKm4yD7EKfvDRiOMJb3LBBrX
+ Z35HmnmFMEe15m2PWocAX01Sgl4eA0YFESsMERAWjZQgueknFQDoJGsL4JOMUxeaYI6kcUScc+3
+ RYuRDI3FkGlEJpgXEYQ+q+gim7m/X5v4sL1NiwSpLY259tUn9RHwSBlkYDikigIZORsM45vlmyz
+ zSJL01P1ffA0xNA==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
@@ -180,10 +180,9 @@ X-Spam-Report: Spam detection software,
  domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
-X-Headers-End: 1ui8h3-0005WO-6r
-X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 39/65] media: imx-jpeg: Access v4l2_fh from
- file
+X-Headers-End: 1ui8hx-0005aa-5C
+X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:16 +0000
+Subject: [Mjpeg-users] [PATCH 40/65] media: imx-isi: Access v4l2_fh from file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -215,152 +214,74 @@ to be available in file->private_data, initialised by v4l2_fh_add().
 Access the v4l2_fh, and from there the driver-specific structure,
 from the file * in all ioctl handlers.
 
-While at it, remove the now unused mxc_jpeg_fh_to_ctx() macro.
+While at it, remove the now unused to_isi_m2m_ctx() macro.
 
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/platform/nxp/imx-jpeg/mxc-jpeg.c | 33 +++++++++++---------------
- 1 file changed, 14 insertions(+), 19 deletions(-)
+ drivers/media/platform/nxp/imx8-isi/imx8-isi-m2m.c | 15 +++++----------
+ 1 file changed, 5 insertions(+), 10 deletions(-)
 
-diff --git a/drivers/media/platform/nxp/imx-jpeg/mxc-jpeg.c b/drivers/media/platform/nxp/imx-jpeg/mxc-jpeg.c
-index fa7d74d8c1aabd3bf74482e214165d8c1a7e89da..df3ccdf767baf0bf6687808e2c017063181a7220 100644
---- a/drivers/media/platform/nxp/imx-jpeg/mxc-jpeg.c
-+++ b/drivers/media/platform/nxp/imx-jpeg/mxc-jpeg.c
-@@ -644,11 +644,6 @@ static void print_mxc_buf(struct mxc_jpeg_dev *jpeg, struct vb2_buffer *buf,
- 	}
+diff --git a/drivers/media/platform/nxp/imx8-isi/imx8-isi-m2m.c b/drivers/media/platform/nxp/imx8-isi/imx8-isi-m2m.c
+index 850dd8ae95841d4470ac6bd7cb1e54a7510d6d5e..5501214cc6c0ce3e0188ae6d4ff4ae277b975911 100644
+--- a/drivers/media/platform/nxp/imx8-isi/imx8-isi-m2m.c
++++ b/drivers/media/platform/nxp/imx8-isi/imx8-isi-m2m.c
+@@ -74,11 +74,6 @@ to_isi_m2m_buffer(struct vb2_v4l2_buffer *buf)
+ 	return container_of(buf, struct mxc_isi_m2m_buffer, buf.vb);
  }
  
--static inline struct mxc_jpeg_ctx *mxc_jpeg_fh_to_ctx(struct v4l2_fh *fh)
+-static inline struct mxc_isi_m2m_ctx *to_isi_m2m_ctx(struct v4l2_fh *fh)
 -{
--	return container_of(fh, struct mxc_jpeg_ctx, fh);
+-	return container_of(fh, struct mxc_isi_m2m_ctx, fh);
 -}
 -
- static inline struct mxc_jpeg_ctx *mxc_jpeg_file_to_ctx(struct file *filp)
+ static inline struct mxc_isi_m2m_ctx *file_to_isi_m2m_ctx(struct file *filp)
  {
- 	return container_of(file_to_v4l2_fh(filp), struct mxc_jpeg_ctx, fh);
-@@ -1610,7 +1605,7 @@ static int mxc_jpeg_decoder_cmd(struct file *file, void *priv,
- 				struct v4l2_decoder_cmd *cmd)
+ 	return container_of(file_to_v4l2_fh(filp), struct mxc_isi_m2m_ctx, fh);
+@@ -432,7 +427,7 @@ static int mxc_isi_m2m_try_fmt_vid(struct file *file, void *fh,
+ 	const enum mxc_isi_video_type type =
+ 		f->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE ?
+ 		MXC_ISI_VIDEO_M2M_OUT : MXC_ISI_VIDEO_M2M_CAP;
+-	struct mxc_isi_m2m_ctx *ctx = to_isi_m2m_ctx(fh);
++	struct mxc_isi_m2m_ctx *ctx = file_to_isi_m2m_ctx(file);
+ 
+ 	__mxc_isi_m2m_try_fmt_vid(ctx, &f->fmt.pix_mp, type);
+ 
+@@ -442,7 +437,7 @@ static int mxc_isi_m2m_try_fmt_vid(struct file *file, void *fh,
+ static int mxc_isi_m2m_g_fmt_vid(struct file *file, void *fh,
+ 				 struct v4l2_format *f)
  {
- 	struct v4l2_fh *fh = file_to_v4l2_fh(file);
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(fh);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 	unsigned long flags;
- 	int ret;
+-	struct mxc_isi_m2m_ctx *ctx = to_isi_m2m_ctx(fh);
++	struct mxc_isi_m2m_ctx *ctx = file_to_isi_m2m_ctx(file);
+ 	const struct mxc_isi_m2m_ctx_queue_data *qdata =
+ 		mxc_isi_m2m_ctx_qdata(ctx, f->type);
  
-@@ -1643,7 +1638,7 @@ static int mxc_jpeg_encoder_cmd(struct file *file, void *priv,
- 				struct v4l2_encoder_cmd *cmd)
+@@ -457,7 +452,7 @@ static int mxc_isi_m2m_s_fmt_vid(struct file *file, void *fh,
+ 	const enum mxc_isi_video_type type =
+ 		f->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE ?
+ 		MXC_ISI_VIDEO_M2M_OUT : MXC_ISI_VIDEO_M2M_CAP;
+-	struct mxc_isi_m2m_ctx *ctx = to_isi_m2m_ctx(fh);
++	struct mxc_isi_m2m_ctx *ctx = file_to_isi_m2m_ctx(file);
+ 	struct v4l2_pix_format_mplane *pix = &f->fmt.pix_mp;
+ 	const struct mxc_isi_format_info *info;
+ 	struct vb2_queue *vq;
+@@ -489,7 +484,7 @@ static int mxc_isi_m2m_s_fmt_vid(struct file *file, void *fh,
+ static int mxc_isi_m2m_streamon(struct file *file, void *fh,
+ 				enum v4l2_buf_type type)
  {
- 	struct v4l2_fh *fh = file_to_v4l2_fh(file);
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(fh);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 	unsigned long flags;
- 	int ret;
- 
-@@ -2260,7 +2255,7 @@ static int mxc_jpeg_querycap(struct file *file, void *priv,
- static int mxc_jpeg_enum_fmt_vid_cap(struct file *file, void *priv,
- 				     struct v4l2_fmtdesc *f)
+-	struct mxc_isi_m2m_ctx *ctx = to_isi_m2m_ctx(fh);
++	struct mxc_isi_m2m_ctx *ctx = file_to_isi_m2m_ctx(file);
+ 	struct mxc_isi_m2m_ctx_queue_data *q = mxc_isi_m2m_ctx_qdata(ctx, type);
+ 	const struct v4l2_pix_format_mplane *out_pix = &ctx->queues.out.format;
+ 	const struct v4l2_pix_format_mplane *cap_pix = &ctx->queues.cap.format;
+@@ -577,7 +572,7 @@ static int mxc_isi_m2m_streamon(struct file *file, void *fh,
+ static int mxc_isi_m2m_streamoff(struct file *file, void *fh,
+ 				 enum v4l2_buf_type type)
  {
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(priv);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 	struct mxc_jpeg_q_data *q_data = mxc_jpeg_get_q_data(ctx, f->type);
+-	struct mxc_isi_m2m_ctx *ctx = to_isi_m2m_ctx(fh);
++	struct mxc_isi_m2m_ctx *ctx = file_to_isi_m2m_ctx(file);
+ 	struct mxc_isi_m2m_ctx_queue_data *q = mxc_isi_m2m_ctx_qdata(ctx, type);
+ 	struct mxc_isi_m2m *m2m = ctx->m2m;
  
- 	if (ctx->mxc_jpeg->mode == MXC_JPEG_ENCODE) {
-@@ -2300,7 +2295,7 @@ static int mxc_jpeg_enum_fmt_vid_cap(struct file *file, void *priv,
- static int mxc_jpeg_enum_fmt_vid_out(struct file *file, void *priv,
- 				     struct v4l2_fmtdesc *f)
- {
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(priv);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 	u32 type = ctx->mxc_jpeg->mode == MXC_JPEG_DECODE ?  MXC_JPEG_FMT_TYPE_ENC :
- 							     MXC_JPEG_FMT_TYPE_RAW;
- 	int ret;
-@@ -2441,7 +2436,7 @@ static int mxc_jpeg_try_fmt(struct v4l2_format *f,
- static int mxc_jpeg_try_fmt_vid_cap(struct file *file, void *priv,
- 				    struct v4l2_format *f)
- {
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(priv);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 	struct mxc_jpeg_dev *jpeg = ctx->mxc_jpeg;
- 	struct device *dev = jpeg->dev;
- 	struct mxc_jpeg_q_data tmp_q;
-@@ -2460,7 +2455,7 @@ static int mxc_jpeg_try_fmt_vid_cap(struct file *file, void *priv,
- static int mxc_jpeg_try_fmt_vid_out(struct file *file, void *priv,
- 				    struct v4l2_format *f)
- {
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(priv);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 	struct mxc_jpeg_dev *jpeg = ctx->mxc_jpeg;
- 	struct device *dev = jpeg->dev;
- 	struct mxc_jpeg_q_data tmp_q;
-@@ -2512,20 +2507,20 @@ static int mxc_jpeg_s_fmt(struct mxc_jpeg_ctx *ctx,
- static int mxc_jpeg_s_fmt_vid_cap(struct file *file, void *priv,
- 				  struct v4l2_format *f)
- {
--	return mxc_jpeg_s_fmt(mxc_jpeg_fh_to_ctx(priv), f);
-+	return mxc_jpeg_s_fmt(mxc_jpeg_file_to_ctx(file), f);
- }
- 
- static int mxc_jpeg_s_fmt_vid_out(struct file *file, void *priv,
- 				  struct v4l2_format *f)
- {
- 	int ret;
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(priv);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 	struct vb2_queue *dst_vq;
- 	struct mxc_jpeg_q_data *q_data_cap;
- 	enum v4l2_buf_type cap_type = V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE;
- 	struct v4l2_format fc;
- 
--	ret = mxc_jpeg_s_fmt(mxc_jpeg_fh_to_ctx(priv), f);
-+	ret = mxc_jpeg_s_fmt(ctx, f);
- 	if (ret)
- 		return ret;
- 
-@@ -2554,7 +2549,7 @@ static int mxc_jpeg_s_fmt_vid_out(struct file *file, void *priv,
- static int mxc_jpeg_g_fmt_vid(struct file *file, void *priv,
- 			      struct v4l2_format *f)
- {
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(priv);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 	struct mxc_jpeg_dev *jpeg = ctx->mxc_jpeg;
- 	struct device *dev = jpeg->dev;
- 	struct v4l2_pix_format_mplane   *pix_mp = &f->fmt.pix_mp;
-@@ -2592,7 +2587,7 @@ static int mxc_jpeg_g_fmt_vid(struct file *file, void *priv,
- 
- static int mxc_jpeg_dec_g_selection(struct file *file, void *fh, struct v4l2_selection *s)
- {
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(fh);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 	struct mxc_jpeg_q_data *q_data_cap;
- 
- 	if (s->type != V4L2_BUF_TYPE_VIDEO_CAPTURE && s->type != V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE)
-@@ -2621,7 +2616,7 @@ static int mxc_jpeg_dec_g_selection(struct file *file, void *fh, struct v4l2_sel
- 
- static int mxc_jpeg_enc_g_selection(struct file *file, void *fh, struct v4l2_selection *s)
- {
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(fh);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 	struct mxc_jpeg_q_data *q_data_out;
- 
- 	if (s->type != V4L2_BUF_TYPE_VIDEO_OUTPUT && s->type != V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
-@@ -2649,7 +2644,7 @@ static int mxc_jpeg_enc_g_selection(struct file *file, void *fh, struct v4l2_sel
- 
- static int mxc_jpeg_g_selection(struct file *file, void *fh, struct v4l2_selection *s)
- {
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(fh);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 
- 	if (ctx->mxc_jpeg->mode == MXC_JPEG_DECODE)
- 		return mxc_jpeg_dec_g_selection(file, fh, s);
-@@ -2659,7 +2654,7 @@ static int mxc_jpeg_g_selection(struct file *file, void *fh, struct v4l2_selecti
- 
- static int mxc_jpeg_s_selection(struct file *file, void *fh, struct v4l2_selection *s)
- {
--	struct mxc_jpeg_ctx *ctx = mxc_jpeg_fh_to_ctx(fh);
-+	struct mxc_jpeg_ctx *ctx = mxc_jpeg_file_to_ctx(file);
- 	struct mxc_jpeg_q_data *q_data_out;
- 
- 	if (ctx->mxc_jpeg->mode != MXC_JPEG_ENCODE)
 
 -- 
 2.49.0
