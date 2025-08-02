@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 04656B18EE1
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7167DB18EDC
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=KKKcRagTddxv7TG0D//amJNV7zt14AM18Y19735MV8w=; b=joHC/1oARTw51NUO4g9NX0bmeG
-	VXVazS8uwpEfY0jKuBrgrATlEdg1xX6zC0j+hdICJQaGRFSef4TzSVFujKudd5E5fZUt4xdHyRIqK
-	13FkuMjHk9Xgp/6QVzqA5gG5XgnZmci+MzChxkCXRyMkjS701V6kJzv5mkFTZV0D8iLI=;
+	bh=zspKtJqn6QOyFCq3EpLKObwLEdfIHzaoNOo+5VHe/WA=; b=lLOYqbkowUwV6w34a5DiDMW8k8
+	I2FKALLID+im6gNyhQyvLJWMEjn2thxa0PWWaF7vA0sNMarUHtUzHR4x8/IfT6JSfy7nlh+ZnzzJC
+	Ax4uptRMsdZKzevUpg/hUgMZb9fnMS+mmq4/V2lyiCES+k5d8gxSHOtQyxt8R8EhPQxU=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChp-0006Xw-SU;
-	Sat, 02 Aug 2025 13:55:25 +0000
+	id 1uiCho-0006Vv-AF;
+	Sat, 02 Aug 2025 13:55:24 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8ih-0000XA-PE
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8iG-0005MA-PK
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:40:03 +0000
+ Sat, 02 Aug 2025 09:39:37 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=2lq42s8JPiS4UoCYYPIR7tPht4xaETXG/gfBCxteWFI=; b=H4lEIyDwXTPIdN/20O2gaPlNFl
- I9Xbn+tXW9C+Q6dntd+cerHvbuSKwBx0Y/lEE6l0qlpPfNJqFWb5sticpKqeFVz6G1GpcYKXEjGF7
- gNyOeIMwNosjv9q4dxCwNJXQ1GgDFdljKjzUf8djEuHov7131i9RZTrT+e1ugTfTsbWk=;
+ bh=suCThTzjyuHQkeZA4Jsohjv7qrMMp677xLqFl4IjbXI=; b=Y6vtCplfXfU1YeiLC0cCirACcs
+ L+ZpeZ20lSHo18AB6fDdvM6cXT5HOZPQJr2uFKmNeNQnYO2XWpN7Mns2Z3uxlOXX1LY2RA7TDxoj1
+ PodmCtcDHcEssBbTif2BSPZqctMOpyIWyni6ferF01ALJhiqmX1BOvUeyC8pqvqVR3Fo=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=2lq42s8JPiS4UoCYYPIR7tPht4xaETXG/gfBCxteWFI=; b=axvrOohqfRaK1ElB7MnwY487j3
- DlprRI4pynVbAjMpSLlWaOirvd33mgyl6gQBbeuFdvDWBgllQo8LSpBNZ+X6WHFXRnv22uGlQWWil
- cyC5w+bCS7UGsoRHWrCdXz8/2P9JF9YVhUkL4cooLxWO/4PnFPHi4Q3dhnEoc0D9vU1A=;
+ bh=suCThTzjyuHQkeZA4Jsohjv7qrMMp677xLqFl4IjbXI=; b=DcoZTY3fC+uwFjzh7wimk0ywOm
+ vleXxTfvQ+XngNHmTuTdCq2c/xkW4gnnWAzRpFntwP6GMtG2khkvaIqYoiDl8Iq0dEoQSoYPraxwV
+ 8ZNVpRIcd5OLZFjQHsoNeLG3Xig4jK4T0c3+YG4HalztKtha/zyQm8wCTK1u9rXkePhI=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8ih-0005e5-4C for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:40:03 +0000
+ id 1ui8iG-0005bt-VR for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:39:37 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id 92D654129;
- Sat,  2 Aug 2025 11:31:14 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id ACBF54335;
+ Sat,  2 Aug 2025 11:31:38 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754127098;
- bh=gIu7Q4nN31+tN7fJeeN0sXg6UA/9FufXt5i86vLgD+Y=;
+ s=mail; t=1754127108;
+ bh=Gv9lbTXbRA6yPchkZ3lS+TOW5kUSmV4lOuM2BHAl6rc=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=GL6CR5yUCjrJ8Di6FitQc05AJIWv3/YAnWtH8vT9/rbN5zj5cL2izsjDnupBw8yvE
- L0lWTuvumb2ZXhIQVExAoei84xv19KDAVimC9N9bAnzu0BKdzv61ucCiFN0qXJifX0
- hybuyN5nw7SUK45tB57L48cM/R8LXK+PwyxTM8CM=
+ b=prjR2qMEqDFUpRAMyRMQie2Nv0psrCvqJct/SVaw4UJ1ZnQGtwemB81zuwIxfhYmA
+ UT5xqYwRWk4pliCkOwyDtOZIWgQ02ealWQ9qhJOwpXw0HYOuCGUOVZSW9E4Olza9D9
+ 1kBxLlAAFwfvVJtSUCBdG3fkfFioLN9du/EPH7ao=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:23:13 +0200
+Date: Sat, 02 Aug 2025 11:23:14 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-51-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-52-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,26 +141,26 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=4052;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=2303;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=gIu7Q4nN31+tN7fJeeN0sXg6UA/9FufXt5i86vLgD+Y=;
- b=kA0DAAoBcjQGjxahVjwByyZiAGiN2P2hAJjeL4C7TG81g20mJ+/1CxQtsOthszQGUM0XJNW7W
- okCMwQAAQoAHRYhBLXEPUiAmiCKj1g4wHI0Bo8WoVY8BQJojdj9AAoJEHI0Bo8WoVY8h/YP/Rrz
- +Cuai5dHAU1rx/elvXgMyktAPuA4wu2VdL2V1bVM4s1xdxx9aSpDpB3gUm87g00dGiGAfgAh3wd
- mmcHoafszDQ2MPBlhouZzjL+DDhOTP8r84ZaJVQ/mMHppYjPnBC2zKjQf/ZUK3H2DRmwu+Nz5os
- qwTvV2AsKkC4z3J1dyTi/pbkk0rvsi/+gy1QgI7+EjE7oG3p6cx9UJGenTyylr9nd27N9lYe3cD
- IAAfl09YRRop4Wg+xsoENjcSbTjb/dHkOoneJKKYr9LAOozYGP43+LOcG5Wjk1na1F3zI6a7fBj
- KwpT5npGhEzVMR8XPK2JpEK8Lqj4Rftu7vY5sX8xEl9ZQboZx8gm/+ZbR46Z/mHtKU5rSO+iIpJ
- T7M11oVBNsDh8e65csMOcST1mudTVJ+tsi38V5gZVjTWYjL5OXUVBGKUDOEs9YXB7Y660wKt5NW
- Wlta5Uzg32G9b4/vkxuo0s+r+WMn2svTvFr2hXBiDFy+3mgSPTd2+u+c1m1bA2/K7wN5jC7Vi+g
- vhh3Nn6SjRE5nU0tGvhgnITb3nSIyvVRaD9R/3TGWkInsh3DiBfiANIct7tsVMxlob/5Fu6Kvmb
- z4kRAbF9Mx8TXDmfyqZ+5irZIWPNW3aa9qMZOCiRyndODnDB80Z54qfqJxCYsEitNZNWMDw+Ddv
- r/hZZ
+ bh=Gv9lbTXbRA6yPchkZ3lS+TOW5kUSmV4lOuM2BHAl6rc=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj9vdOmSnLOUwNwZy60z/PGCExXr86n8sWQN
+ A1xKQtQDdiJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/QAKCRByNAaPFqFW
+ PM7LEADD+AAAj6JZRdP++0YsTAt4fObDpya+EVPh0Cb6TnbK5FzsF4T3lKA6HhvS/ZooVnw7Qt6
+ ZpWIDwjI5j7u+vUeC1Do3HIjmUMHE7dy6rPcFFFYJ8i/gRomOvyDoOZs+iBbQp/jNPmks7dD1/0
+ XvAOPjC8OwzdASEGKKnYyY7Nlx9vpxlhz/1PlG7c69xJu7QXyP6Oh14W7IEpbixZCSduafhQWDy
+ anWvYa0l/kB3kjG0SvbpfqoyCoYyS7dOmtMccsrqvkN6Jg/P3cMEXaqjm7u+YPuwI6hbNbNzThW
+ 2A6reQ1Ppsheu3gX/KTOuV1GbuBoEtugJuj2SYYrN2tkIwcs+b070nlaGrUjnaCjBR6vrl5rgg9
+ 3r/tBLDf4cYBpghzvw9pWiNuxfaYcPmGta1lFZvZD6EvNKv7qpCJeubCbOY7+y4fSXliKRWunTv
+ A6ghHNWLKUjZeIEG/SB9kODMGrjXog5eevGf8bg3APXdUQewvBQ5wtPLBJ5hDKa/nrrOpatS+73
+ S33mhSyYAbGnXk/FvdKW0CyYkhKhFYpAJD/G4PEFPl/KfH0FgL98LWJRailHu0zYoRvIN47ABBk
+ A+HmZuJVgKFOB0gKqfCbqdNp9mK0h6YBD2sX8h0jI/O1LvaFppcRnZAMDdydv7fRr+pji3KSqGE
+ /UkNMoMG/NlhRdg==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
@@ -173,16 +173,21 @@ X-Spam-Report: Spam detection software,
  Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URI: ideasonboard.com]
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
-X-Headers-End: 1ui8ih-0005e5-4C
-X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 51/65] media: bdisp: Access v4l2_fh from file
+X-Headers-End: 1ui8iG-0005bt-VR
+X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:16 +0000
+Subject: [Mjpeg-users] [PATCH 52/65] media: st: delta: Access v4l2_fh from
+ file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -218,96 +223,57 @@ While at it, remove the now unused fh_to_ctx() macro.
 
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c | 18 ++++++++----------
- 1 file changed, 8 insertions(+), 10 deletions(-)
+ drivers/media/platform/st/sti/delta/delta-v4l2.c | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
 
-diff --git a/drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c b/drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c
-index fc7945d29bccc2fdf0fc48fc14d6698b321418d9..56169b70652d3aaf7c3c395a630a29023cbd9722 100644
---- a/drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c
-+++ b/drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c
-@@ -33,8 +33,6 @@
- #define BDISP_MIN_H             1
- #define BDISP_MAX_H             8191
+diff --git a/drivers/media/platform/st/sti/delta/delta-v4l2.c b/drivers/media/platform/st/sti/delta/delta-v4l2.c
+index adff43271b2dc059abbbf82d90cd13482f6bca30..6c1a53c771f746813a6062cb3ffc139250ff7146 100644
+--- a/drivers/media/platform/st/sti/delta/delta-v4l2.c
++++ b/drivers/media/platform/st/sti/delta/delta-v4l2.c
+@@ -24,8 +24,6 @@
  
--#define fh_to_ctx(__fh) container_of(__fh, struct bdisp_ctx, fh)
+ #define DELTA_PREFIX "[---:----]"
+ 
+-#define to_ctx(__fh) container_of(__fh, struct delta_ctx, fh)
 -
- static inline struct bdisp_ctx *file_to_ctx(struct file *filp)
+ static inline struct delta_ctx *file_to_ctx(struct file *filp)
  {
- 	return container_of(file_to_v4l2_fh(filp), struct bdisp_ctx, fh);
-@@ -686,7 +684,7 @@ static const struct v4l2_file_operations bdisp_fops = {
- static int bdisp_querycap(struct file *file, void *fh,
- 			  struct v4l2_capability *cap)
- {
--	struct bdisp_ctx *ctx = fh_to_ctx(fh);
-+	struct bdisp_ctx *ctx = file_to_ctx(file);
- 	struct bdisp_dev *bdisp = ctx->bdisp_dev;
- 
- 	strscpy(cap->driver, bdisp->pdev->name, sizeof(cap->driver));
-@@ -698,7 +696,7 @@ static int bdisp_querycap(struct file *file, void *fh,
- 
- static int bdisp_enum_fmt(struct file *file, void *fh, struct v4l2_fmtdesc *f)
- {
--	struct bdisp_ctx *ctx = fh_to_ctx(fh);
-+	struct bdisp_ctx *ctx = file_to_ctx(file);
- 	const struct bdisp_fmt *fmt;
- 
- 	if (f->index >= ARRAY_SIZE(bdisp_formats))
-@@ -718,7 +716,7 @@ static int bdisp_enum_fmt(struct file *file, void *fh, struct v4l2_fmtdesc *f)
- 
- static int bdisp_g_fmt(struct file *file, void *fh, struct v4l2_format *f)
- {
--	struct bdisp_ctx *ctx = fh_to_ctx(fh);
-+	struct bdisp_ctx *ctx = file_to_ctx(file);
- 	struct v4l2_pix_format *pix;
- 	struct bdisp_frame *frame  = ctx_get_frame(ctx, f->type);
- 
-@@ -742,7 +740,7 @@ static int bdisp_g_fmt(struct file *file, void *fh, struct v4l2_format *f)
- 
- static int bdisp_try_fmt(struct file *file, void *fh, struct v4l2_format *f)
- {
--	struct bdisp_ctx *ctx = fh_to_ctx(fh);
-+	struct bdisp_ctx *ctx = file_to_ctx(file);
- 	struct v4l2_pix_format *pix = &f->fmt.pix;
- 	const struct bdisp_fmt *format;
- 	u32 in_w, in_h;
-@@ -792,7 +790,7 @@ static int bdisp_try_fmt(struct file *file, void *fh, struct v4l2_format *f)
- 
- static int bdisp_s_fmt(struct file *file, void *fh, struct v4l2_format *f)
- {
--	struct bdisp_ctx *ctx = fh_to_ctx(fh);
-+	struct bdisp_ctx *ctx = file_to_ctx(file);
- 	struct vb2_queue *vq;
- 	struct bdisp_frame *frame;
- 	struct v4l2_pix_format *pix;
-@@ -845,8 +843,8 @@ static int bdisp_s_fmt(struct file *file, void *fh, struct v4l2_format *f)
- static int bdisp_g_selection(struct file *file, void *fh,
+ 	return container_of(file_to_v4l2_fh(filp), struct delta_ctx, fh);
+@@ -727,7 +725,7 @@ static int delta_s_fmt_frame(struct file *file, void *fh, struct v4l2_format *f)
+ static int delta_g_selection(struct file *file, void *fh,
  			     struct v4l2_selection *s)
  {
-+	struct bdisp_ctx *ctx = file_to_ctx(file);
- 	struct bdisp_frame *frame;
--	struct bdisp_ctx *ctx = fh_to_ctx(fh);
+-	struct delta_ctx *ctx = to_ctx(fh);
++	struct delta_ctx *ctx = file_to_ctx(file);
+ 	struct delta_frameinfo *frameinfo = &ctx->frameinfo;
+ 	struct v4l2_rect crop;
  
- 	frame = ctx_get_frame(ctx, s->type);
- 	if (IS_ERR(frame)) {
-@@ -923,8 +921,8 @@ static int is_rect_enclosed(struct v4l2_rect *a, struct v4l2_rect *b)
- static int bdisp_s_selection(struct file *file, void *fh,
- 			     struct v4l2_selection *s)
+@@ -809,7 +807,7 @@ static int delta_try_decoder_cmd(struct file *file, void *fh,
+ 	return 0;
+ }
+ 
+-static int delta_decoder_stop_cmd(struct delta_ctx *ctx, void *fh)
++static int delta_decoder_stop_cmd(struct delta_ctx *ctx)
  {
-+	struct bdisp_ctx *ctx = file_to_ctx(file);
- 	struct bdisp_frame *frame;
--	struct bdisp_ctx *ctx = fh_to_ctx(fh);
- 	struct v4l2_rect *in, out;
- 	bool valid = false;
- 
-@@ -1001,7 +999,7 @@ static int bdisp_s_selection(struct file *file, void *fh,
- 
- static int bdisp_streamon(struct file *file, void *fh, enum v4l2_buf_type type)
+ 	const struct delta_dec *dec = ctx->dec;
+ 	struct delta_dev *delta = ctx->dev;
+@@ -872,14 +870,14 @@ static int delta_decoder_stop_cmd(struct delta_ctx *ctx, void *fh)
+ static int delta_decoder_cmd(struct file *file, void *fh,
+ 			     struct v4l2_decoder_cmd *cmd)
  {
--	struct bdisp_ctx *ctx = fh_to_ctx(fh);
-+	struct bdisp_ctx *ctx = file_to_ctx(file);
+-	struct delta_ctx *ctx = to_ctx(fh);
++	struct delta_ctx *ctx = file_to_ctx(file);
+ 	int ret = 0;
  
- 	if ((type == V4L2_BUF_TYPE_VIDEO_OUTPUT) &&
- 	    !bdisp_ctx_state_is_set(BDISP_SRC_FMT, ctx)) {
+ 	ret = delta_try_decoder_cmd(file, fh, cmd);
+ 	if (ret)
+ 		return ret;
+ 
+-	return delta_decoder_stop_cmd(ctx, fh);
++	return delta_decoder_stop_cmd(ctx);
+ }
+ 
+ static int delta_subscribe_event(struct v4l2_fh *fh,
 
 -- 
 2.49.0
