@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 697E6B18EDF
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 37B3AB18ED5
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=KIuxe1xTkkntbGuxEbU5m+eqRJTe3TJPCp6R1HviD8Q=; b=eH8oMqDBkihhn1J7uCgxvQSk/7
-	dTibPXt6V9WdINX3HbqNByHVf04LYwkTyJYpqBQ8MlruoLP/Aw/LwFX+na9GVBmumNUqJbL13mcit
-	7MqY1Wn11zbp+AHxhnQtSojZgg1f/AiVR1iw8Xsf/Kvw+31pI9sa6ap2mmhV3DxNIh2A=;
+	bh=m9eWe1j0GVZ5aGykcs5+GtNp77Ur8wXmhGP3+V50NRU=; b=O/jaYxuf0F4wfD39G8MyAbIq2/
+	4+RXtlw0GKd2pE/uFg6mj2M+nzx/MqmebwzBahvBiBpLgihzkOTQ33+8OLmq/zqWyvp7OiE8QNhkQ
+	m62L3SsvBIZ98gg2qiCnlovDAgjce+gUNHsRRHG3+fbl6qXmAQ58GhFi6lseHAq4ORrA=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChp-0006X5-8n;
-	Sat, 02 Aug 2025 13:55:25 +0000
+	id 1uiChm-0006TD-2J;
+	Sat, 02 Aug 2025 13:55:22 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8iW-0000FV-43
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8hd-0005IJ-UU
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:39:52 +0000
+ Sat, 02 Aug 2025 09:38:58 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=EZgWWT6FaI5bOAPdGlJpJZMyJnI2n39PodtPAfsGzq8=; b=UetFO9BSg0aFoepMJkICAXqPq5
- uuXbcJHn8Vkt2HvNaEbXHPl5MBWEkwv4Qh5ibJMn3j70elUjBvch7XMAjxvaOuIaaVQcQ3LtZNUyi
- 2eAAAWkz1Y2VhA8AhK4611K5MeFuyaBazTWRX0bVlbMnm5T/sFwpzxzHWWXvFvj0SoL8=;
+ bh=6i8Ur/KMvfNhmoPqtosswIXCrRp0Fa2aJ3gfmIC/HXI=; b=HW7TpCCClBK7FBcakrWB98UmwV
+ eu4liH6Ab9mEazQAELo7C2A0vqq/0kHx/5MZpJJcXhzUOHoKCST3zaWcZ5cZXtuGcdWC/WqDNMhiL
+ qeYadDjDJTS0XjbQnvITQeEf3xutwA2bnJIY/PrmoyVlFKHFewblF/37Xr5DLzyEVxhE=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=EZgWWT6FaI5bOAPdGlJpJZMyJnI2n39PodtPAfsGzq8=; b=Luxik9eqf0+e+IwTzU3I9hKeUX
- drW086LFAs0BAjcB+FRlzMwcjodH1qjdfjPgq6fq6aePu7c1cB2iGQ4XpPk0kliCG8ZF277w0/yYQ
- nAwHjA8Da5+qQXX/Mm5sgIDolJ2t+O8XEPeB7irjtEMwiCveTK63blxxPiNcWI/e0CHo=;
+ bh=6i8Ur/KMvfNhmoPqtosswIXCrRp0Fa2aJ3gfmIC/HXI=; b=UR5SRFtY1Hi2wc6sAwjW1PW46c
+ 8uo6iaZiWwsr/X+5wINSej3OyDgZSZcqwF0ESkAm2spv2s/86/6GnINlrSYvR45I/BTd8DqS8J/lX
+ ayaLwC40IEjTvA3mHp7nToXvygAUCrUXfuoGzYNrSEq9kQCTkxwaQrHl9CvpXv2at8PE=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8iV-0005cq-1v for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:39:51 +0000
+ id 1ui8he-0005ZC-53 for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:38:58 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id 7DE8F4176;
- Sat,  2 Aug 2025 11:30:14 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id B3C5940D8;
+ Sat,  2 Aug 2025 11:30:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754127023;
- bh=Eczg8ECb72+TCEnmOt8zTT17kJTYh4uwIayf3SmW1JY=;
+ s=mail; t=1754127034;
+ bh=P+AdXovkDs72ySz3QReqGKxKqBANHR4M/z/Qnx0Et0A=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=Vxlu84YDp7Jd4jfVvLAsxFy34pgccx9f3xa0paw8IVe29SHPH8VpJZNnUMsWiYUHR
- CVAa+3L3e1L2pJwimqcrq6hgVVAwuh3wbs1CibLsfxSfHpoZiR4VCfYxo3Keoo0n2z
- jKyrW2ft8hyaVFcJL9t+p6SpGIothGx1EIXMmAGs=
+ b=TYEMJ1NQIn2AHami8rz14vK1JzGQigVifiRoyt6QHmF3Iu7LxEUWe+myT+degFzvr
+ js1GxPK6uXfvuzkK5py81gAkb/ClqJxrx4Q9yB2nZNuMAdOJCd1ZQz6ex+ZmHLpccd
+ Mvkz9iIBZ12ifbUQkccgBT6ah7Ey34/3qfhaou9E=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:23:09 +0200
+Date: Sat, 02 Aug 2025 11:23:10 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-47-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-48-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,35 +141,36 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=3613;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=2354;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=Eczg8ECb72+TCEnmOt8zTT17kJTYh4uwIayf3SmW1JY=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj9+KKN9ybzE3g+ZGFi3JToB55y8XEuI2gwH
- zGCFuhA0OaJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/QAKCRByNAaPFqFW
- PK7OD/9WLUC3p8SXYZRT43b0K+nuWhWGgtGSBt4/ElOwk1n834rKblsRtgx7mkJ5VuJ4K5EQne2
- BF+d4Tb8DowDc+0OGKbKv5JsSZEhB585l9MaqLEuOf2fk//TGgpX4Nca+xgE0zwVLfF70GO6MwS
- +02OV5Z1/vzKbiRBFF1QYTr/uNe5E+fp6DzAimCXUzHjJgioOH6sB6N/SAh6RenycGWdl9pf/Ed
- iXUQYCbjRdKXpqFHpvrx7g7xwfdtHWu2toSHl6zfBIXn7MScpWqxIPGLsPJwP+8sJsXlTXlBdEw
- cBS7biGwPdh0BKeqXIY6uvCr4s6/yFy43FpmZBa7XPCxVWWfsVSDNkPpXcMyPEMAwg+mTX2/uPb
- uLCmk86pOQVWNfm7auaVF11/tqG3d161P5E1UfnGuqKOxd+h9E4s+2ChkF4PSmBGtOGxna/6vFM
- +KwSnv7523PD5w/Jd3jz/TXYgI1nItgpGbCd3Cn08d1NHBaDy7Gvqd8Hfpv1pkYGUYMwGWPczt8
- WTBgBFLE9pkdsp2SvyM2jnTtf3yWZYu6279qfF4CJ2byI/AT3TglvJv9FnXxp8PHMsIiXTKyzQO
- 826gtpZOi9+L67vdX/KwzWvmaFFUJEWqOMK67CHgq9IUcDDgY2PhDr4GsAqzTTaAmmvt0MAXtN7
- C6/29ZoK3kBsz0A==
+ bh=P+AdXovkDs72ySz3QReqGKxKqBANHR4M/z/Qnx0Et0A=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj9QjDArsCCpetRJypejE9fiKxkH/6QF97H/
+ V7Va6UoY5qJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/QAKCRByNAaPFqFW
+ PC37EACiB4t1ueWIIp+xm9SL1tP9bPd4oIx6m58tUtufzqv2UhhlQY2uIeweEcdjDrnmK6wlPFf
+ Zh67AxZib08g3DhnLVPtuf6zyFFx9glCJg6E37kf4tO0Cbjk2b7Wo0XqOtvRvL0mrbcFdm10XOQ
+ u48ojoafbcLDoihcjqYmZZQA517dhFRTPQq0ewLAWh1vRHp5r3u6zxmRYWXvtvn07t8yRHYo1yy
+ pTIdGY05xvfVpm2AwuDef2uLWLTO0ecyx5rhZzPNUGXD+b+hBJfXTGV2aZuhzrLZFz4q/HnJ3x0
+ BYQRN2rUU0mfRw6XAJg2vcYskCk4xE1oHXWcvGmeORkGTZqWQquB4DHbQxT1ITU7vwv3iRSKx36
+ fCognK5a0c4ZW//QBYFwwlv9k74VAtnxKtNiBK6Vbuhbjdsu+YafF0wxxd0bwQ7mVD56iAeaLTZ
+ aP2D2Iy/3E+BdZ4DzVXCbcj9E+jTxZfxbaXg3u5ARjUZb/cQaha4H5DW+a/bxwe6Dc0pyaf8hr7
+ jlWtg1P74osSQLocQSEkYZA+LkuSwrf7AjDO/49ylXeeTtmSe4k4UQHi0XpMZYOYBqHYmyW7gGE
+ ppnTGZndhnM4xWgtUrd4XxDQx4HNaUV59HsflvBoP9BCtbJ8eruyG9ddj+y0d1cNTq36z2Yf78+
+ 2X3qjhfFmyd527g==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
-X-Spam-Score: 1.8 (+)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: Spam detection software,
  running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: The s3c-camif driver keeps track of which user owns the vb2
- queue by using the 'void *priv' argument passed to ioctl handlers. As the
- driver uses v4l2_fh_open() the priv argument points to the v4l2_fh handle
- associated with the open file. 
- Content analysis details:   (1.8 points, 5.0 required)
+ Content preview: The v4l2_fh associated with an open file handle is now
+ guaranteed
+ to be available in file->private_data, initialised by v4l2_fh_add(). Access
+ the v4l2_fh, and from there the driver-specific structure, from the file
+ * in all ioctl handlers. 
+ Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
@@ -179,12 +180,9 @@ X-Spam-Report: Spam detection software,
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
- 2.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
- [URI: rect.top (top)]
-X-Headers-End: 1ui8iV-0005cq-1v
-X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 47/65] media: s3c-camif: Set queue owner using
- file
+X-Headers-End: 1ui8he-0005ZC-53
+X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:16 +0000
+Subject: [Mjpeg-users] [PATCH 48/65] media: s5p-g2d: Access v4l2_fh from file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -210,107 +208,66 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-The s3c-camif driver keeps track of which user owns the vb2 queue
-by using the 'void *priv' argument passed to ioctl handlers.
+The v4l2_fh associated with an open file handle is now guaranteed
+to be available in file->private_data, initialised by v4l2_fh_add().
 
-As the driver uses v4l2_fh_open() the priv argument points to the
-v4l2_fh handle associated with the open file.
-
-Use file_to_v4l2_fh(file) instead of the raw 'priv' argument for better
-consistency.
+Access the v4l2_fh, and from there the driver-specific structure,
+from the file * in all ioctl handlers.
 
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- .../media/platform/samsung/s3c-camif/camif-capture.c | 20 ++++++++++----------
- 1 file changed, 10 insertions(+), 10 deletions(-)
+ drivers/media/platform/samsung/s5p-g2d/g2d.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
 
-diff --git a/drivers/media/platform/samsung/s3c-camif/camif-capture.c b/drivers/media/platform/samsung/s3c-camif/camif-capture.c
-index cae15a4ce5fd83f00ced8b2dfbb5f5a6f7483ca4..ed1a1d693293b33d8da3190ac8ee6dd212a64b88 100644
---- a/drivers/media/platform/samsung/s3c-camif/camif-capture.c
-+++ b/drivers/media/platform/samsung/s3c-camif/camif-capture.c
-@@ -791,7 +791,7 @@ static int s3c_camif_vidioc_s_fmt(struct file *file, void *priv,
- 	out_frame->rect.top = 0;
+diff --git a/drivers/media/platform/samsung/s5p-g2d/g2d.c b/drivers/media/platform/samsung/s5p-g2d/g2d.c
+index 922262f61e7b53baf1b5840d35149bf5b4b2e7ad..55f5130156b7e8690bd0eb204630a730d9f84bd6 100644
+--- a/drivers/media/platform/samsung/s5p-g2d/g2d.c
++++ b/drivers/media/platform/samsung/s5p-g2d/g2d.c
+@@ -307,7 +307,7 @@ static int vidioc_enum_fmt(struct file *file, void *prv, struct v4l2_fmtdesc *f)
  
- 	if (vp->owner == NULL)
--		vp->owner = priv;
-+		vp->owner = file_to_v4l2_fh(file);
+ static int vidioc_g_fmt(struct file *file, void *prv, struct v4l2_format *f)
+ {
+-	struct g2d_ctx *ctx = prv;
++	struct g2d_ctx *ctx = file2ctx(file);
+ 	struct vb2_queue *vq;
+ 	struct g2d_frame *frm;
  
- 	pr_debug("%ux%u. payload: %u. fmt: 0x%08x. %d %d. sizeimage: %d. bpl: %d\n",
- 		 out_frame->f_width, out_frame->f_height, vp->payload,
-@@ -841,7 +841,7 @@ static int s3c_camif_streamon(struct file *file, void *priv,
- 	if (type != V4L2_BUF_TYPE_VIDEO_CAPTURE)
- 		return -EINVAL;
+@@ -359,7 +359,7 @@ static int vidioc_try_fmt(struct file *file, void *prv, struct v4l2_format *f)
  
--	if (vp->owner && vp->owner != priv)
-+	if (vp->owner && vp->owner != file_to_v4l2_fh(file))
- 		return -EBUSY;
+ static int vidioc_s_fmt(struct file *file, void *prv, struct v4l2_format *f)
+ {
+-	struct g2d_ctx *ctx = prv;
++	struct g2d_ctx *ctx = file2ctx(file);
+ 	struct g2d_dev *dev = ctx->dev;
+ 	struct vb2_queue *vq;
+ 	struct g2d_frame *frm;
+@@ -400,7 +400,7 @@ static int vidioc_s_fmt(struct file *file, void *prv, struct v4l2_format *f)
+ static int vidioc_g_selection(struct file *file, void *prv,
+ 			      struct v4l2_selection *s)
+ {
+-	struct g2d_ctx *ctx = prv;
++	struct g2d_ctx *ctx = file2ctx(file);
+ 	struct g2d_frame *f;
  
- 	if (s3c_vp_active(vp))
-@@ -872,7 +872,7 @@ static int s3c_camif_streamoff(struct file *file, void *priv,
- 	if (type != V4L2_BUF_TYPE_VIDEO_CAPTURE)
- 		return -EINVAL;
+ 	f = get_frame(ctx, s->type);
+@@ -450,7 +450,7 @@ static int vidioc_g_selection(struct file *file, void *prv,
+ static int vidioc_try_selection(struct file *file, void *prv,
+ 				const struct v4l2_selection *s)
+ {
+-	struct g2d_ctx *ctx = prv;
++	struct g2d_ctx *ctx = file2ctx(file);
+ 	struct g2d_dev *dev = ctx->dev;
+ 	struct g2d_frame *f;
  
--	if (vp->owner && vp->owner != priv)
-+	if (vp->owner && vp->owner != file_to_v4l2_fh(file))
- 		return -EBUSY;
- 
- 	ret = vb2_streamoff(&vp->vb_queue, type);
-@@ -888,9 +888,9 @@ static int s3c_camif_reqbufs(struct file *file, void *priv,
+@@ -478,7 +478,7 @@ static int vidioc_try_selection(struct file *file, void *prv,
+ static int vidioc_s_selection(struct file *file, void *prv,
+ 			      struct v4l2_selection *s)
+ {
+-	struct g2d_ctx *ctx = prv;
++	struct g2d_ctx *ctx = file2ctx(file);
+ 	struct g2d_frame *f;
  	int ret;
  
- 	pr_debug("[vp%d] rb count: %d, owner: %p, priv: %p\n",
--		 vp->id, rb->count, vp->owner, priv);
-+		 vp->id, rb->count, vp->owner, file_to_v4l2_fh(file));
- 
--	if (vp->owner && vp->owner != priv)
-+	if (vp->owner && vp->owner != file_to_v4l2_fh(file))
- 		return -EBUSY;
- 
- 	if (rb->count)
-@@ -910,7 +910,7 @@ static int s3c_camif_reqbufs(struct file *file, void *priv,
- 
- 	vp->reqbufs_count = rb->count;
- 	if (vp->owner == NULL && rb->count > 0)
--		vp->owner = priv;
-+		vp->owner = file_to_v4l2_fh(file);
- 
- 	return ret;
- }
-@@ -929,7 +929,7 @@ static int s3c_camif_qbuf(struct file *file, void *priv,
- 
- 	pr_debug("[vp%d]\n", vp->id);
- 
--	if (vp->owner && vp->owner != priv)
-+	if (vp->owner && vp->owner != file_to_v4l2_fh(file))
- 		return -EBUSY;
- 
- 	return vb2_qbuf(&vp->vb_queue, vp->vdev.v4l2_dev->mdev, buf);
-@@ -942,7 +942,7 @@ static int s3c_camif_dqbuf(struct file *file, void *priv,
- 
- 	pr_debug("[vp%d] sequence: %d\n", vp->id, vp->frame_sequence);
- 
--	if (vp->owner && vp->owner != priv)
-+	if (vp->owner && vp->owner != file_to_v4l2_fh(file))
- 		return -EBUSY;
- 
- 	return vb2_dqbuf(&vp->vb_queue, buf, file->f_flags & O_NONBLOCK);
-@@ -954,14 +954,14 @@ static int s3c_camif_create_bufs(struct file *file, void *priv,
- 	struct camif_vp *vp = video_drvdata(file);
- 	int ret;
- 
--	if (vp->owner && vp->owner != priv)
-+	if (vp->owner && vp->owner != file_to_v4l2_fh(file))
- 		return -EBUSY;
- 
- 	create->count = max_t(u32, 1, create->count);
- 	ret = vb2_create_bufs(&vp->vb_queue, create);
- 
- 	if (!ret && vp->owner == NULL)
--		vp->owner = priv;
-+		vp->owner = file_to_v4l2_fh(file);
- 
- 	return ret;
- }
 
 -- 
 2.49.0
