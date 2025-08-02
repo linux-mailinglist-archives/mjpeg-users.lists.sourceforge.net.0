@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0A247B18EFD
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 13B96B18EFA
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=JIhwt+VF5K5uP2f8+6fEjCmxbRsgG9EfDjpGZPycFfo=; b=XtQTw7j5GftNAtBs3K/4GoFbuq
-	sf1b3eqOCjM2Lb9h8TfV84ds2ymffe8YMipTpvVG5Vfuga0JV/c2t7amAZDnpF6OTG073HPyhdCTP
-	mTVocex/aIall5O6Y84o6DsO3NY2eZegX98GvKcvGkPZTq0B/f9br8I1sK0nr/XJZWeQ=;
+	bh=fLwF2cOuIUDnd/Uni/x1yR4xdoDrxYDdFGyD5IWqaDM=; b=YJfyuo2dwhXA1lc12QfJwR4ryh
+	EmkrGnPAeFprYmsbKr7v0Qm3nAY5ujZa3B9mZNBxWumHgE4CuGtV4MehnxsXPpmSNxqw/VDaFbEcQ
+	3LblNR+Q86CwojsTvpcDiaaFOOuS95HpTQKEByQ98KPUSQIg1CNBxQDgr1YCFG2BXeTw=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChz-0006mr-RZ;
-	Sat, 02 Aug 2025 13:55:35 +0000
+	id 1uiChy-0006kZ-R2;
+	Sat, 02 Aug 2025 13:55:34 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8nB-0000fV-PJ
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8mx-0000f3-UW
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:44:41 +0000
+ Sat, 02 Aug 2025 09:44:27 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=xVyu7zb4i+vAmltXy3rOL4h677GGzMZS2dhrlF6n7Z4=; b=B5exGUePyR+nynhW298ngc2a2c
- uUQwV9Y8uTDqlD9soQNjXqF2Q/2Mj2YpDZqQelmrPpa2R7Xm6RPs+eORyQLh6mdHeyH+ShQYI0QuC
- ZonGxdvWLvW3G6NjAVKTERcMAvgOGpXD9Vazp54/vq+mTQUQiZKrqiSjf0XxZiU1LAfg=;
+ bh=Bbo8kwqsKioWX4+xOyLcW9XlYLzGSGQQ74rWE9TaMSU=; b=XXpNKIeFq/h5SVP1/M0BdAIeb1
+ y4wp9IXyirlLKnqqSTgFYsH95IDcHZ+zfxV4UpJkMiWgzg2HJAKI8TwSg7L/tf76pbHy55ZfenPs9
+ CkWruP92Qx4mt29iO4amxlt67B01wq0WgodkkqiMewg20HDnzlKvQy96TmT/MpQRIc5A=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=xVyu7zb4i+vAmltXy3rOL4h677GGzMZS2dhrlF6n7Z4=; b=edQzypg5z66uW77Me9aF0w8DCF
- eFvm975VCuLSs6/bOGnwmisHqosi/WBbwD3pvAEed3YlVhOQ1zAzRIIVBmw7RMWM7ASXb3YYu5Rcc
- 0Ipn5bL6FpP7Q4hhDJ7Z+xlPuHC2cNFDhWugAeN/bV8Jx8AFD9lem22R4oH8uC8E+O7g=;
+ bh=Bbo8kwqsKioWX4+xOyLcW9XlYLzGSGQQ74rWE9TaMSU=; b=I/NnlYaPXVQ9inu3Y2ZWVQdV7o
+ he1NnbS7BMS6AaULS6NziiMkK8Wl2net4o1KZXksOOqmuoJVmeCTf+IGNiwMrVlASmM2VWmky4ocd
+ B2v5kuL8PlN4ZYOBLhOjZxUHLpY7B110RDagC7ncWE3QtagUQEzrEGMxrJksAH6i7Vco=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8nA-0005xz-Gp for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:44:41 +0000
+ id 1ui8mt-0005wb-4g for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:44:23 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id 6F1A939D0;
- Sat,  2 Aug 2025 11:32:53 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 8FDB1434B;
+ Sat,  2 Aug 2025 11:33:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754127181;
- bh=plUDcgbQkGw4JyRbthC79SLTx+gbob3U9axm5vZyPtk=;
+ s=mail; t=1754127189;
+ bh=HJZkrhFG+jzm747g4Ehf7uDDScTqxfq9NHQKM9RJ9+c=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=SkX6QI0fVpdZyZWipUKoRAh6k0e+KWR2tAAJnBI4jQ23/Jqyuwg3nvBEqmr2hdkvu
- f3kK5CxdreRfQcAG/s/J8ryTY8EWe3hohBJEYgb614t2SVt/j3dRn/xosIhuT7TpD9
- IIMKMGph9jDhippZQMTJbMZkOzAa9CJnWTL5yD2w=
+ b=drO4QQ4w5C/9gxSKad/aI2GIngo7vFtEHIHzrGgn7kZAWSwLR5wrEh4HQvq6Jm6OI
+ ZusDu7tyhzItb/PJ3UgESd1YUquS1Fmh3fVSitOAj7wJomAczSa4RbhwDqiVZJfF3B
+ Qtx/E4NpY2guxQIm3G7R7AMgxzqza3IQPTFKsu6c=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:23:22 +0200
+Date: Sat, 02 Aug 2025 11:23:23 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-60-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-61-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,26 +141,26 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=7314;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=2886;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=plUDcgbQkGw4JyRbthC79SLTx+gbob3U9axm5vZyPtk=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj+Gv25IxJxmaQk2kge3awblRwS1LI4XdRw4
- Rr8AM7v8PyJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/gAKCRByNAaPFqFW
- PKg0D/40XOP1ymiqV3UZQ3VXGNXxWoOIIzNeadTf1tfqQ0EWWeJ1hUxsU5M5ACuvX6TBofNvS50
- kh+QpYAgXd6q4dudHmxvocEcg8NOyRQ5uW2Cyrs/GqSqaN7SMh6q76tjdsA8tbXXh0o3oyDe36B
- qjtT/cC2i5fIerKN3xco2Cpff20JshnqvaKgBVIcK8Ze+iVAqqAiO2cWAFUOts/lJk+5kN9yRDN
- qfGrm8F90EMGjayFJq6JiDsE+d3pCUIY9ZQb+zaqdNUGPGc1FzzQbYmd744+C9o8qo3OBLOgGT+
- EFCV4vdHx7xoSCsRkBSiPnKCx/ztAthTj1AsUTGJyzsAGNRiTAJRIItVGRO8dXkgSv2+ZryniHl
- 9Bf1/2lj18fmhHdihFTmpREVk0r5kVu3+GmZMdRqaZN8iG4yB6UzGURtlj6ejN+rF6yOolxUf+N
- k/p3Lk+q7ULyckIqziFqIJ4v0pihZUwPacSTI2LXjwAoqSK1EQngHats7fi1V1PVOVMHNqeHr+e
- +trroR5QY+A8Oa/hYZbYaDpK1CvEhT1pzcwWvkToNgcrwafRJc5WCAU2lDs9CF4KnQCrpvcLqMy
- SXVP98AjcOz2xZDPMONZFIfxUuwv4TEh+ccR0/QCEUpUVsLzM28z9M5iF1oaU3d6+ktbS7+13FQ
- O+Ls+rwA+ykB7OA==
+ bh=HJZkrhFG+jzm747g4Ehf7uDDScTqxfq9NHQKM9RJ9+c=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj/LYqcTTKP5IO38I6jRkZtnPsad4yNU/BBM
+ LhZkqOCQmyJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/wAKCRByNAaPFqFW
+ PBUoD/9IzXwsCQmzZriXZwyHxu8ZbHSG9GOn5AFJ5yuxmyL+uefno6h2zKTZMm8PDQQEMO/jVe0
+ WSC2PXgtp2l2beUGIlkrSqMAWd2ooWmRvUskEkWBmBzeG506UdTZjbx/418DFC8Z8zaeB0nVCdc
+ /wGf0Gy1y1swBI602aZLOtqjRfjKcD5vu9ozAisDD4RHfMWfPbDX7hndsvy/b185ErMEK6rG3SI
+ Ux1cGTjjJ4rFaeg9XyTreQ3dPyg7tPSoaubiZa2cunxMtK5RPQmbqJkWG2EF56aX6LYWLUshWQm
+ 1+WDzhvT0criVSZX0gp0EGUYaemxF1Gcd13bOgQ6l5Cmlq3KeKDlns0Q17hjXxdnwz6revxZAGl
+ FrTVFgF3IyThahVOUI6yq/UMj0LI82p9bgOwi4Mu4aUOoLzz09jWVkYPdh+Jma4I3Ker4Qw8XYW
+ mPuw1AHdEAi8T2Ygj8ksbEaFPQkxSNfmMk1ocWww69os41oVrZ0VF6a+r8xmZe/EudJmIWtW9Rb
+ 4S+lSn8e7w2Jt7CcII/wZZJqnFDuYyP/Ty87GGVE8d7K9g7Bx4Z4dOZNVB1u2OPb+8W/gcu4E/5
+ TYrxi33Ung3k9TQRPV8LyxI/8QGtcQZubSmmlE2e7kjnp6Rzuo/gnwA9C0Ba04DByNeihtvEVG2
+ QGndJvaTcNt3y7g==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
@@ -177,17 +177,17 @@ X-Spam-Report: Spam detection software,
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
  for more information. [URI: ideasonboard.com]
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
-X-Headers-End: 1ui8nA-0005xz-Gp
-X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:16 +0000
-Subject: [Mjpeg-users] [PATCH 60/65] media: usb: uvc: Access v4l2_fh from
- file
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+X-Headers-End: 1ui8mt-0005wb-4g
+X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
+Subject: [Mjpeg-users] [PATCH 61/65] media: staging: imx: Access v4l2_fh
+ from file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -221,175 +221,68 @@ from the file * in all ioctl handlers.
 
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/usb/uvc/uvc_v4l2.c | 36 ++++++++++++++++++------------------
- 1 file changed, 18 insertions(+), 18 deletions(-)
+ drivers/staging/media/imx/imx-media-csc-scaler.c | 12 +++++-------
+ 1 file changed, 5 insertions(+), 7 deletions(-)
 
-diff --git a/drivers/media/usb/uvc/uvc_v4l2.c b/drivers/media/usb/uvc/uvc_v4l2.c
-index 09677ed639ae9252a57ce09cdbcfd567ad7aabc2..10196d62f287502b0dd472ac68ec6914ca4eb06b 100644
---- a/drivers/media/usb/uvc/uvc_v4l2.c
-+++ b/drivers/media/usb/uvc/uvc_v4l2.c
-@@ -391,7 +391,7 @@ static int uvc_v4l2_try_format(struct uvc_streaming *stream,
- static int uvc_ioctl_g_fmt(struct file *file, void *fh,
- 			   struct v4l2_format *fmt)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_streaming *stream = handle->stream;
- 	const struct uvc_format *format;
- 	const struct uvc_frame *frame;
-@@ -427,7 +427,7 @@ static int uvc_ioctl_g_fmt(struct file *file, void *fh,
- static int uvc_ioctl_s_fmt(struct file *file, void *fh,
- 			   struct v4l2_format *fmt)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_streaming *stream = handle->stream;
- 	struct uvc_streaming_control probe;
- 	const struct uvc_format *format;
-@@ -460,7 +460,7 @@ static int uvc_ioctl_g_parm(struct file *file, void *fh,
- 			    struct v4l2_streamparm *parm)
- {
- 	u32 numerator, denominator;
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_streaming *stream = handle->stream;
+diff --git a/drivers/staging/media/imx/imx-media-csc-scaler.c b/drivers/staging/media/imx/imx-media-csc-scaler.c
+index c4ee0eebb3730e709c3d4a95935d0047a645e411..1869c5792ecb46682491ecbf33674c6044915261 100644
+--- a/drivers/staging/media/imx/imx-media-csc-scaler.c
++++ b/drivers/staging/media/imx/imx-media-csc-scaler.c
+@@ -23,8 +23,6 @@
  
- 	if (parm->type != stream->type)
-@@ -496,7 +496,7 @@ static int uvc_ioctl_g_parm(struct file *file, void *fh,
- static int uvc_ioctl_s_parm(struct file *file, void *fh,
- 			    struct v4l2_streamparm *parm)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_streaming *stream = handle->stream;
- 	struct uvc_streaming_control probe;
- 	struct v4l2_fract timeperframe;
-@@ -641,7 +641,7 @@ static int uvc_ioctl_querycap(struct file *file, void *fh,
- static int uvc_ioctl_enum_fmt(struct file *file, void *fh,
- 			      struct v4l2_fmtdesc *fmt)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_streaming *stream = handle->stream;
- 	enum v4l2_buf_type type = fmt->type;
- 	const struct uvc_format *format;
-@@ -665,7 +665,7 @@ static int uvc_ioctl_enum_fmt(struct file *file, void *fh,
- static int uvc_ioctl_try_fmt(struct file *file, void *fh,
- 			     struct v4l2_format *fmt)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_streaming *stream = handle->stream;
- 	struct uvc_streaming_control probe;
+ #include "imx-media.h"
  
-@@ -675,7 +675,7 @@ static int uvc_ioctl_try_fmt(struct file *file, void *fh,
- static int uvc_ioctl_enum_input(struct file *file, void *fh,
- 				struct v4l2_input *input)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_video_chain *chain = handle->chain;
- 	const struct uvc_entity *selector = chain->selector;
- 	struct uvc_entity *iterm = NULL;
-@@ -717,7 +717,7 @@ static int uvc_ioctl_enum_input(struct file *file, void *fh,
+-#define fh_to_ctx(__fh)	container_of(__fh, struct ipu_csc_scaler_ctx, fh)
+-
+ #define IMX_CSC_SCALER_NAME "imx-csc-scaler"
  
- static int uvc_ioctl_g_input(struct file *file, void *fh, unsigned int *input)
+ enum {
+@@ -184,7 +182,7 @@ static int ipu_csc_scaler_enum_fmt(struct file *file, void *fh,
+ static int ipu_csc_scaler_g_fmt(struct file *file, void *priv,
+ 				struct v4l2_format *f)
  {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_video_chain *chain = handle->chain;
- 	u8 *buf;
+-	struct ipu_csc_scaler_ctx *ctx = fh_to_ctx(priv);
++	struct ipu_csc_scaler_ctx *ctx = file_to_ctx(file);
+ 	struct ipu_csc_scaler_q_data *q_data;
+ 
+ 	q_data = get_q_data(ctx, f->type);
+@@ -197,7 +195,7 @@ static int ipu_csc_scaler_g_fmt(struct file *file, void *priv,
+ static int ipu_csc_scaler_try_fmt(struct file *file, void *priv,
+ 				  struct v4l2_format *f)
+ {
+-	struct ipu_csc_scaler_ctx *ctx = fh_to_ctx(priv);
++	struct ipu_csc_scaler_ctx *ctx = file_to_ctx(file);
+ 	struct ipu_csc_scaler_q_data *q_data = get_q_data(ctx, f->type);
+ 	struct ipu_image test_in, test_out;
+ 	enum v4l2_field field;
+@@ -245,8 +243,8 @@ static int ipu_csc_scaler_try_fmt(struct file *file, void *priv,
+ static int ipu_csc_scaler_s_fmt(struct file *file, void *priv,
+ 				struct v4l2_format *f)
+ {
++	struct ipu_csc_scaler_ctx *ctx = file_to_ctx(file);
+ 	struct ipu_csc_scaler_q_data *q_data;
+-	struct ipu_csc_scaler_ctx *ctx = fh_to_ctx(priv);
+ 	struct vb2_queue *vq;
  	int ret;
-@@ -745,7 +745,7 @@ static int uvc_ioctl_g_input(struct file *file, void *fh, unsigned int *input)
  
- static int uvc_ioctl_s_input(struct file *file, void *fh, unsigned int input)
+@@ -301,7 +299,7 @@ static int ipu_csc_scaler_s_fmt(struct file *file, void *priv,
+ static int ipu_csc_scaler_g_selection(struct file *file, void *priv,
+ 				      struct v4l2_selection *s)
  {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_streaming *stream = handle->stream;
- 	struct uvc_video_chain *chain = handle->chain;
- 	u8 *buf;
-@@ -780,7 +780,7 @@ static int uvc_ioctl_s_input(struct file *file, void *fh, unsigned int input)
- static int uvc_ioctl_query_ext_ctrl(struct file *file, void *fh,
- 				    struct v4l2_query_ext_ctrl *qec)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_video_chain *chain = handle->chain;
+-	struct ipu_csc_scaler_ctx *ctx = fh_to_ctx(priv);
++	struct ipu_csc_scaler_ctx *ctx = file_to_ctx(file);
+ 	struct ipu_csc_scaler_q_data *q_data;
  
- 	return uvc_query_v4l2_ctrl(chain, qec);
-@@ -808,7 +808,7 @@ static int uvc_ctrl_check_access(struct uvc_video_chain *chain,
- static int uvc_ioctl_g_ext_ctrls(struct file *file, void *fh,
- 				 struct v4l2_ext_controls *ctrls)
+ 	switch (s->target) {
+@@ -339,7 +337,7 @@ static int ipu_csc_scaler_g_selection(struct file *file, void *priv,
+ static int ipu_csc_scaler_s_selection(struct file *file, void *priv,
+ 				      struct v4l2_selection *s)
  {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_video_chain *chain = handle->chain;
- 	struct v4l2_ext_control *ctrl = ctrls->controls;
- 	unsigned int i;
-@@ -892,7 +892,7 @@ static int uvc_ioctl_s_try_ext_ctrls(struct uvc_fh *handle,
- static int uvc_ioctl_s_ext_ctrls(struct file *file, void *fh,
- 				 struct v4l2_ext_controls *ctrls)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
+-	struct ipu_csc_scaler_ctx *ctx = fh_to_ctx(priv);
++	struct ipu_csc_scaler_ctx *ctx = file_to_ctx(file);
+ 	struct ipu_csc_scaler_q_data *q_data;
  
- 	return uvc_ioctl_s_try_ext_ctrls(handle, ctrls, VIDIOC_S_EXT_CTRLS);
- }
-@@ -900,7 +900,7 @@ static int uvc_ioctl_s_ext_ctrls(struct file *file, void *fh,
- static int uvc_ioctl_try_ext_ctrls(struct file *file, void *fh,
- 				   struct v4l2_ext_controls *ctrls)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 
- 	return uvc_ioctl_s_try_ext_ctrls(handle, ctrls, VIDIOC_TRY_EXT_CTRLS);
- }
-@@ -908,7 +908,7 @@ static int uvc_ioctl_try_ext_ctrls(struct file *file, void *fh,
- static int uvc_ioctl_querymenu(struct file *file, void *fh,
- 			       struct v4l2_querymenu *qm)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_video_chain *chain = handle->chain;
- 
- 	return uvc_query_v4l2_menu(chain, qm);
-@@ -917,7 +917,7 @@ static int uvc_ioctl_querymenu(struct file *file, void *fh,
- static int uvc_ioctl_g_selection(struct file *file, void *fh,
- 				 struct v4l2_selection *sel)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_streaming *stream = handle->stream;
- 
- 	if (sel->type != stream->type)
-@@ -951,7 +951,7 @@ static int uvc_ioctl_g_selection(struct file *file, void *fh,
- static int uvc_ioctl_enum_framesizes(struct file *file, void *fh,
- 				     struct v4l2_frmsizeenum *fsize)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_streaming *stream = handle->stream;
- 	const struct uvc_format *format = NULL;
- 	const struct uvc_frame *frame = NULL;
-@@ -991,7 +991,7 @@ static int uvc_ioctl_enum_framesizes(struct file *file, void *fh,
- static int uvc_ioctl_enum_frameintervals(struct file *file, void *fh,
- 					 struct v4l2_frmivalenum *fival)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_streaming *stream = handle->stream;
- 	const struct uvc_format *format = NULL;
- 	const struct uvc_frame *frame = NULL;
-@@ -1063,7 +1063,7 @@ static int uvc_ioctl_subscribe_event(struct v4l2_fh *fh,
- static long uvc_ioctl_default(struct file *file, void *fh, bool valid_prio,
- 			      unsigned int cmd, void *arg)
- {
--	struct uvc_fh *handle = fh;
-+	struct uvc_fh *handle = to_uvc_fh(file);
- 	struct uvc_video_chain *chain = handle->chain;
- 
- 	switch (cmd) {
+ 	switch (s->target) {
 
 -- 
 2.49.0
