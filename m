@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A168B18EEF
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3E91AB18EF8
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=+TPHmvXxHH/6wEJtHnXqYVCgwur+ik4y/lRr9N8Qd8s=; b=LAAJuG7WiOIBTQDAlFN1phk62w
-	XBb2LlBTrvX4lei/qwc2oEg/c7Oi9KT95TEXdxlj9ZKKLmM6T37NA+i7hvyUEVFU5j0zFIXlpiJBV
-	tB9jmiCLsK5lX7+V2dwQNPiPz4gFUmUW3XiBsZHdmLv3EaTzNVsw3m1k7tq4bxKEqdGM=;
+	bh=E9B65vbrAJPgHKrU3XQsJmrKdCg1xv6sV5q7geOe0UY=; b=mnPqMikB6l0AGJc05AiHcMQJ02
+	UX5sKanTBD309tzlElSRrcITMQWestEGWbAiJqkEPYcEJAITO4gGAXZRTIZyShaXcnUSVNMkCj/6s
+	TKEnvNxTVRor2VPDOIWX1V3258LGtsqgRkCj+0rPRS7n3RNvpykU0JfXd2wiNnmcRJQo=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChv-0006eh-0J;
-	Sat, 02 Aug 2025 13:55:31 +0000
+	id 1uiChy-0006jS-37;
+	Sat, 02 Aug 2025 13:55:34 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8lu-0000dE-AP
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8mn-0000Y4-5B
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:43:22 +0000
+ Sat, 02 Aug 2025 09:44:17 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=LcKzZMjcJSQpf0+/vQZwOvvZ6kmatLo1oju952aUH84=; b=Drb+hsZCLibU33vogivvEZdjYJ
- mbuJH9YpzrxuyMOPOHf10ADz6LxX+AWphgdgn5kh6kXR/Z9uabUI6HYBIM8GL1UYX1ewk7HHuEUmI
- sNV4M86E61RnFTC4izs/lP7SrCsat9WLKC8ZVKQMeZ1ATbqMWThgwExF2R94v5KtXz2w=;
+ bh=BOQIcVCnDJuLbDdxo/mPvQJ+D+r8j4AKxLhSV0E3Z5w=; b=Bks7GAkPlgkkD5tqt2vn8dexyN
+ /uMfAHH5ArfMHXT6SDeS1nVUdsy2zKET3cwlh4Br/8Cj0VPF3GrvS0zPQUl+8xTG0qCsc+rvFWWsM
+ LRyKyoI0SH0GD0WkVRy4t/mM68xBwkEvxqZRSJAtavd11e0YjkElfAdZ+XP2zEJA8Hz4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=LcKzZMjcJSQpf0+/vQZwOvvZ6kmatLo1oju952aUH84=; b=ey4J6tleMjF6RyuIs4aIR3+L0z
- 3ts3I6b4588577/IQg+j41QXeK9s9S1Tij0YIk+Y2cTBA0su4ms1iJkdr2/nMsY6tLklCLJJBRXSX
- 7dz3beB0Leybm4+9a/MW3mzyDAPS4XLQGSp3FHIi3L8NJnrV77Mm9bV1B4V8YuNEE/GQ=;
+ bh=BOQIcVCnDJuLbDdxo/mPvQJ+D+r8j4AKxLhSV0E3Z5w=; b=TP7uczUzPOhaeciPsnftjIDq3F
+ q4Otk+5du9hLRfoOIo0nYNPJwoWh0f9QEtJA4FfccUKaaYhIVLRpEvH4r/ci+B6wry3CN4XUBSCDL
+ emPlpK/dDC+QIuNjMuotKp/bXzADiD4y3wCR8uIvyZy8eMJ2E3oQWaAHR49MI54ywmmI=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8lt-0005rT-GC for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:43:21 +0000
+ id 1ui8mm-0005w6-Jf for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:44:17 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id 5C5733382;
- Sat,  2 Aug 2025 11:25:32 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 92F0C3484;
+ Sat,  2 Aug 2025 11:25:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754126745;
- bh=w27FBrYuy5luuq8sfLJhkAyXcxYLO6q6OgUGzOvjXCg=;
+ s=mail; t=1754126756;
+ bh=W7Xf+mYBvYt6o9va9RI60UvIC8rElGReU++HhnCmVfg=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=KfCGdKe1K3Fc0zAQ4xzG9+N4gRTgUX7hp2XSLsiS8QJYWuuBMu/dxj1woEa4oaDSG
- ePa2piLt7m4G65UgqLGBXtTVqiJuzfB5hKjMmfZtMDLqdf2V+hRecSUEVTop8muZJ9
- 6AtH6ZyFsW2g9mm1rqXW6sWXRXQIwCNR02B0Uaeg=
+ b=FmxGWJBO4E5gfmQ58+RSnlUN52ZRP+BEdoqkKtsfvQR6jjDAnirS/9gNoOYc57lfI
+ RexzJSryXfalvYWYRWKmdwZ8L2tq10eTyRsJFwKGBOzBN7fqkrTHkfy8UsCflim1KR
+ F/nX+wFryQEtYqk1VrqnVMHTDoDHwqd89mcMY3hM=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:22:40 +0200
+Date: Sat, 02 Aug 2025 11:22:41 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-18-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-19-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,21 +141,21 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=954;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=2008;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=w27FBrYuy5luuq8sfLJhkAyXcxYLO6q6OgUGzOvjXCg=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj5leh6NZr7YBb5F3lUqdPDVAoAv/E+Apn8a
- VdBJqbYhJOJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+QAKCRByNAaPFqFW
- PDjxEACcu4vUKoDreIA9sdrRv0rPntbmVcO2EIY5HI+PZ7TWdXhWtE/uwJnsTBw8XW8YyxFL1Ko
- B7edSHJtyHk7hhRiCEQshw3WA5B3rs82kRtrhLR3zwlgcyLE96k1J2SJQpEzrtt9p9E51UWfD0U
- BqcZAisqTFozP7zQW0WGKc8lEyJt0/F2RNj3Ic0vjqTjBg90DgZsPtueqxNGkinh50/AXDKsZxA
- +HMqE2gTktb4hQIXKTjZpa+e+3ILeB5U0Mnrz1/6EBcONhc0haAuWp1Vf5xRpZkQxJXpVtBEi47
- RusW/FbWHWez/uMc68lFdXOe005GtLsYoP9jbKJmi9am2yQGdjulGsavfIHnnwNdSSwhRFKyeEj
- Frh8FHbh6zi6N/2qZQqS2HLKV0PQvUit8vqN86W8YqZ30843b51yZ1uMMqXDa4JpeJV+5by9KaL
- XXbn9tYid9Mu+NVhfQxXxTiUFZRRWTUMhKJ/fb+7d6Ckohv/KfMZT2NCIIsQQNLzJb7V9iR5jJT
- Qw6Q2Yr6GB/yGn+78O8+pyIAfOS1/O36Otr4bdVWOkjkBzfXrJ/RksX8plhoJE390pM1Wbd0GC2
- 9ByBL0oNCt/Vvv8CMMv1vO87h4lAeh3jTbr5YVmfD3+1X/gXXOZRR1GBpkDZJLW8ctFkCmxHueY
- fs0wBGy3WUnSD6w==
+ bh=UzWhpz4xRfaNWR/lEJP22EOtdoViE3HjL6eKhJD+k4E=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj5QI9RGxRjTZ4i0/Oxsr0jsuAyLpLtzBDRp
+ lLra/Ptx/+JAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+QAKCRByNAaPFqFW
+ PLxcD/9DQ1eh+7ORvSewCGfbUsdvwcusgLEdfimWMtixIHeb8GHjJBgZDHWANs4tzRhizZXc00D
+ eB14EgzGTuYSfBh+SeiIQc2W821bIB4AF47VJ7paLr+6Ehpkjta3Z9R8684aE4hVEiozkIjYbTm
+ YDe7CD5rgm8Jxkr6rX3dnXVv3MwvobNjhi4ZLVj6k9GQi4Knz4hcfrM/vftFhzLuQJ7iO0z72Pt
+ kNNyNzwedzcS25WOSLeBekAuKEUA5on008vbsIrI+w6ZkD1g3nPmRoK0ak2y8wZBKOFoxpWVg41
+ hHb++Y41ZeyaCZqGPftDkbkZiTaN/mlWTMoxSmxYGEQK98fuyUmJlocZW7DqkRmRr+0QaBXBuUX
+ 2P/KOa1ID1yyoeGLNOtc/IJoi0NMW/2fxW504y5sisWA36Esidq6GNT+5Brx9IwS98eXy8ujgHC
+ OeQ9v8xXeq/kiAy1xvlranHBEXkvrjxMJrC+Mh8Q075Ps5z2MIKmHxhkZ3hp3a0UEtZOHnSr1w3
+ e++lQSZIhkz5edb0mFzoBAz4eZuAcMxacVvDKu6o0H//a5qBlxcGCrWKfBGmMCamzv5ClbFVnOg
+ WvJO6KxSYl0EQPtZIbie3YGK/346Ea3AjdRLlWbUUCy1XZ+IuhfreqtwvYzPbTByCucwYBv86xb
+ RdlrEzhdk+VnUcg==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
@@ -165,11 +165,11 @@ X-Spam-Report: Spam detection software,
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: The RZ G2/L CRU driver sets file->private_data to the
- driver-specific
- structure, but the following call to v4l2_fh_open() overwrites it with a
- pointer to the just allocated v4l2_fh. Remove the mis-leading assignment in
- the driver. 
+ Content preview:  From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+ The custom video_open() function in the camss driver open-codes the
+ v4l2_fh_open()
+ helper, with an additional mutex that protects the whole function. Given
+ that the function does not modify any data g [...] 
  Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
@@ -180,10 +180,10 @@ X-Spam-Report: Spam detection software,
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1ui8lt-0005rT-GC
+X-Headers-End: 1ui8mm-0005w6-Jf
 X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 18/65] media: rzg2l-cru: Do not set
- file->private_data
+Subject: [Mjpeg-users] [PATCH 19/65] media: camss: Replace .open() file
+ operation with v4l2_fh_open()
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -209,29 +209,70 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-The RZ G2/L CRU driver sets file->private_data to the driver-specific
-structure, but the following call to v4l2_fh_open() overwrites it
-with a pointer to the just allocated v4l2_fh.
+From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 
-Remove the mis-leading assignment in the driver.
+The custom video_open() function in the camss driver open-codes the
+v4l2_fh_open() helper, with an additional mutex that protects the whole
+function. Given that the function does not modify any data guarded by
+the lock, there's no need for using the mutex and the function can be
+replaced by v4l2_fh_open().
 
+Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/platform/renesas/rzg2l-cru/rzg2l-video.c | 1 -
- 1 file changed, 1 deletion(-)
+ drivers/media/platform/qcom/camss/camss-video.c | 32 +------------------------
+ 1 file changed, 1 insertion(+), 31 deletions(-)
 
-diff --git a/drivers/media/platform/renesas/rzg2l-cru/rzg2l-video.c b/drivers/media/platform/renesas/rzg2l-cru/rzg2l-video.c
-index a8817a7066b22f8a8dd1fdab50efabc486e4dfdb..941badc90ff55c5225644f88de1d70239eb3a247 100644
---- a/drivers/media/platform/renesas/rzg2l-cru/rzg2l-video.c
-+++ b/drivers/media/platform/renesas/rzg2l-cru/rzg2l-video.c
-@@ -1078,7 +1078,6 @@ static int rzg2l_cru_open(struct file *file)
- 	if (ret)
- 		return ret;
+diff --git a/drivers/media/platform/qcom/camss/camss-video.c b/drivers/media/platform/qcom/camss/camss-video.c
+index 8d05802d1735a35cb1a1a0a81c6666b1517dd2e6..c5d02f9ebc6aa9bfd6910944f3d40a2e5f0a908f 100644
+--- a/drivers/media/platform/qcom/camss/camss-video.c
++++ b/drivers/media/platform/qcom/camss/camss-video.c
+@@ -604,36 +604,6 @@ static const struct v4l2_ioctl_ops msm_vid_ioctl_ops = {
+  * V4L2 file operations
+  */
  
--	file->private_data = cru;
- 	ret = v4l2_fh_open(file);
- 	if (ret)
- 		goto err_unlock;
+-static int video_open(struct file *file)
+-{
+-	struct video_device *vdev = video_devdata(file);
+-	struct camss_video *video = video_drvdata(file);
+-	struct v4l2_fh *vfh;
+-	int ret;
+-
+-	mutex_lock(&video->lock);
+-
+-	vfh = kzalloc(sizeof(*vfh), GFP_KERNEL);
+-	if (vfh == NULL) {
+-		ret = -ENOMEM;
+-		goto error_alloc;
+-	}
+-
+-	v4l2_fh_init(vfh, vdev);
+-	v4l2_fh_add(vfh);
+-
+-	file->private_data = vfh;
+-
+-	mutex_unlock(&video->lock);
+-
+-	return 0;
+-
+-error_alloc:
+-	mutex_unlock(&video->lock);
+-
+-	return ret;
+-}
+-
+ static int video_release(struct file *file)
+ {
+ 	vb2_fop_release(file);
+@@ -646,7 +616,7 @@ static int video_release(struct file *file)
+ static const struct v4l2_file_operations msm_vid_fops = {
+ 	.owner          = THIS_MODULE,
+ 	.unlocked_ioctl = video_ioctl2,
+-	.open           = video_open,
++	.open           = v4l2_fh_open,
+ 	.release        = video_release,
+ 	.poll           = vb2_fop_poll,
+ 	.mmap		= vb2_fop_mmap,
 
 -- 
 2.49.0
