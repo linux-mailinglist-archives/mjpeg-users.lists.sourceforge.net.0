@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id A8F50B18EFC
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 07E96B18ECD
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=QR8GjlVDRueV7iy7mWT7g0HO/nA7L5IX5aBcvGFlOSM=; b=QoWBehBRQeRqOrdSzQ8FE/FpKq
-	amSZDYiE738k4HUfoEOzTiUZMdvum10CZUvchczvhqtsv2bOQg42U5t6oC8rxeXOGgmKJKFDjejA9
-	yg5VorRSnLp3IYvPQ2lVYWsOlXYWc8OM1f7NxftQVuGmf1GgErQGodrBGIb5/vCiGSeg=;
+	bh=TI2GUX1cFbPqVeWANox7WTizfKhbbpnLzTqGYomx3Pg=; b=lMnaD3LrUoWmdySPw/qYorbg4f
+	Z/pUCZ2po9SdyhpHuGC8I9bIyB+/ChH8DVgqUEXM3xXfF5BhzWFJLirBWYcpJEk5pTYiqXw+TWpTe
+	XExr5WAspF7UMrsTIhPKsXFZjJaeD3fmh0mCIi+oXBFq0VFxbm5B3fesUVo+z1MzyWnc=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChz-0006lp-GN;
-	Sat, 02 Aug 2025 13:55:35 +0000
+	id 1uiChi-0006Qq-Is;
+	Sat, 02 Aug 2025 13:55:18 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8n5-0005nd-2u
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8eS-0000KT-Il
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:44:35 +0000
+ Sat, 02 Aug 2025 09:35:40 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Of/pyhY51fEbo8biAiJj0de/J+O1utRU+3CQhJYJAV4=; b=JI2h75v9FBQ5ZJvFCHuB9TLLt+
- aO8nWJiYHRHplC8mxV79CmpFi5dLzh5hf03R4F1IUxZKMA0k5JVl4rGynqWLN5jdQ8NCJpCat0h5I
- mfYzEZhuX6zAnb3CYfuFjtS4lCz9kq3xXG9/sI7MW/QKj0czymgfmfJPnW7D1VmNbos0=;
+ bh=LUnemaKYCWAr4Ylyk/PuSDUyjWu1Apnp5WIlbtoezyw=; b=ljxj7xSaB9S/ytz/DU7Pk0QtWg
+ dUgaB/r9LhKLD/sCqdn+T5eoRyFHwaE6lks3CvJtvuOhrR9zps8U4W8DWlLJPWXO/fEmLUrjUosIH
+ OKRBosFy4u9s6IaZvtf5CxLyl45jSn8STzdhJfKyzH8ArvCcWlczYmxnZB2L1OnhK+yQ=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=Of/pyhY51fEbo8biAiJj0de/J+O1utRU+3CQhJYJAV4=; b=DQ3LKofoF1LGhW6cBVq/koT25t
- VPISQLG9EQH+ePLfOSLHhD/fVix3682N8e5Cvz6zw/mC3R2taNll9JB0VH0qJ6sRqdi+5smpXrBM5
- heDF8K4F5xeyABXU4Ll0THNoaGFnn7Xe85hK43RKi4MxJYPgexX7atsLFvAjM3SmnuZw=;
+ bh=LUnemaKYCWAr4Ylyk/PuSDUyjWu1Apnp5WIlbtoezyw=; b=ce+7/c8h3IYV3tAnT7AK1dsJKn
+ gwaRlCREfj8SWK6ANTzZ+tdAPDJDSz5TKUYLUqtOvMfj3adDEs77WOtbTdHstcNtGhUN7crvBYQdn
+ 6B5kw8H7xpGS2UWu7n0Xxw4C0RrT6CM/cGGcit6rV4MGq/+fb4KEqs8qUc0y9HDC44pY=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8n5-0005xU-AS for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:44:35 +0000
+ id 1ui8eS-0005Ln-2V for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:35:40 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id 01DB643F7;
- Sat,  2 Aug 2025 11:33:17 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 022AA467C;
+ Sat,  2 Aug 2025 11:33:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754127205;
- bh=ugZh/KFY5LMHBtI9abTRXe3/VfduYxDNcYofd35iW9A=;
+ s=mail; t=1754127217;
+ bh=STH9snK10gtXsl0Tkj6PDu+gh4QvT10JOLkLT1jU1Tk=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=EczlcoJFbDCzor1UJYwkUixhGK8xZeYVEQgf2zjsTBoG5f3rAGBr7ZW1udpXzsSw+
- PaCYNja9CGEUBK6a+A2RNVXvzoKvVL32iD4f04zH888Qbzd4RYSYDndijzhdNMtOLt
- NZnCMhc90PQkjsXpC98MWxGN6mqpLpHHRq5RnIBc=
+ b=GWqhxXE8irHZjTwzjw01vy/67LkCfP0pfmdBF7ezLwvyg/uNIQNc+TtMFG9aSke3p
+ NZulEiSKLMd11OqQyyXrX5YsDoHpqfjgzaGJIRoJ7eNeumumTzNYN1CzR1Eil0nkY6
+ WuWgQcq2WLxWmfoETRaKF36owSar3DypycTneFaU=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:23:25 +0200
+Date: Sat, 02 Aug 2025 11:23:26 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-63-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-64-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,21 +141,21 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=1027;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=1003;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=JegptJK/Wh+Y3waXfEoaG6eqZD0SkxAIytfm8Tqanf8=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj/rV2onUyAj1Ve0S8AEhrBpSnCKsJ7/mmH6
- Rix8TpQ+3qJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/wAKCRByNAaPFqFW
- PMNMD/sFA/FTtUQGAqxj6hcVIegtJidGsIWt+OwDUeT5SttZ1yGE+mxy2mXyIdarbOQRkDlWrMz
- B3b0dcbhFM4O+ag1TuALQllprFLcTPBkpxlhhWFyJykxUpkFgS1xtTSAd3OtI0g6WSnJbzxDCa0
- C9cO3jGU0z8et+LJRu+rRi4ArnjZjaupgMEge5SBvFM89JAWolUppy8FnADTJtXrxOtgkO85LGj
- Hz0R4ns95HNI772/U/Q8VLX9xYHRe/uCOmhT54PffiApIqBNBR9o2GDX6ztDGTlvoT9hIK+PXdP
- eaa6kiu+1gExaMU7Aah5FJb57ikuODm3RKJ6XU7BZCul4E06C9JqYLCSCibSI+hSpiFe+HKe/Mb
- 3Rf8vrJXbkAmPOl1xZ9AmjJZxX9rqKaZfZJIM1cHRyD8D+GY84dqNby5rdwSvWCbp4MRCUq3Hgd
- GhhNicEEatld6fs7qLN4+BWYAuHCmAlTRAC6J63J+0Hq+aVAxo8M6vGGJbzJH2sFw4UWFO8WonQ
- JqhqQPdO/rK7VQd+3mnogYjsUfLjUF2J6M4D8sQrRcYJm1QTvq1ZAwhDmWWw0wW5fdT/AZUrem4
- V6ryoP66+qtsLSW3sfdCkUEvbEq+eSSy9izUSKGe8I0631Q/ugWwMQ6GLbyuDYhoS5q8+3BajEh
- Q+6reTO4wHR944A==
+ bh=p6i7vq6AGF+FzCieEq6uikbi372+gaeFOto0fi3HS6o=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj/W2cYpWyQz48RU91dp2DTutVfBmqMPGp+b
+ WBa4MAGzGaJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/wAKCRByNAaPFqFW
+ PMUSD/9KnL/eRvaIxpn9zFQhhB4f8NrjuBZWdfgaHkoDnaAqP1i19guBgcJE3f9tcOMNs3VJfDZ
+ OWLWtP5TybilDpd3yyvSJo01d7v5vEUDoelSS6krxhp9p/0AJQxZOiZiXAokVzbF5Zfkdsp7TPk
+ luOqefJFbETRJilJyM58wla5jNWMaffzAtHKLBChcvUofPfW1oYsgglGuzmEBcafZThzNqQZK3t
+ F5Ma3lrVztWQBboT/QKUGXHnZ1d/2e0t6D3OEU8ZIE7CN/6ZGKOY7bNX6vBKkKOUaPlVh20SzvX
+ L6P+QGDBoKq1oI8I3lx0eyIwfS5JeqysXHFE/oMB6LuRHFBqQoIwYdnZyDSmnIan9MrD7XwsSZq
+ zrB3YBSb6Z5E2lPzqUYVE/sVJMz0QvQNwNmWm4fLdlSDl7Dwz/5cszF4QFIXWtydcVyJ4l5fOSK
+ JKIB7XSb1c2qXe2TIQSCd8yEMmS3h8AouJat8td4arP/Pdi8mb5boQRMOgpeEe9EVCuNCfAkQO4
+ EX/HxyD0IWJ4n6tjJ8mzv/SAqJeqI1ZoHooJK7O9bWT5KbqDxQlhL9sUDB7JppOc3Cwct7bRRlB
+ 2Tycx4bL9LvT1T3yAc/ni3fuaDQxyS6awmAgRZPFb1L3CUZDflx8hBAi8ITTNdMyYqaPij5mAw/
+ rRmA9IGOhm6GMYw==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
@@ -167,11 +167,11 @@ X-Spam-Report: Spam detection software,
  the administrator of that system for details.
  Content preview:  From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
  The V4L2_FL_USES_V4L2_FH flag is set by v4l2_fh_init(). It is not meant to
- be set manually by drivers. Drop it from the ipu6-isys driver. Signed-off-by:
+ be set manually by drivers. Drop it from the ipu7-isys driver. Signed-off-by:
  Laurent Pinchart <laurent.pinchart@ideasonboard.com> Signed-off-by: Jacopo
  Mondi <jacopo.mondi@ideasonboard.com> ---
- drivers/media/pci/intel/ipu6/ipu6-isys-video.c
- | 1 - 1 file changed, [...] 
+ drivers/staging/media/ipu7/ipu7-isys-video.c
+ | 1 - 1 file changed, 1 [...] 
  Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
@@ -182,9 +182,9 @@ X-Spam-Report: Spam detection software,
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1ui8n5-0005xU-AS
-X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:16 +0000
-Subject: [Mjpeg-users] [PATCH 63/65] media: ipu6: isys: Don't set
+X-Headers-End: 1ui8eS-0005Ln-2V
+X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
+Subject: [Mjpeg-users] [PATCH 64/65] media: staging: ipu7: isys: Don't set
  V4L2_FL_USES_V4L2_FH manually
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -214,21 +214,21 @@ Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 
 The V4L2_FL_USES_V4L2_FH flag is set by v4l2_fh_init(). It is not meant
-to be set manually by drivers. Drop it from the ipu6-isys driver.
+to be set manually by drivers. Drop it from the ipu7-isys driver.
 
 Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/pci/intel/ipu6/ipu6-isys-video.c | 1 -
+ drivers/staging/media/ipu7/ipu7-isys-video.c | 1 -
  1 file changed, 1 deletion(-)
 
-diff --git a/drivers/media/pci/intel/ipu6/ipu6-isys-video.c b/drivers/media/pci/intel/ipu6/ipu6-isys-video.c
-index 24a2ef93474cc400f64eb1d50bc760ee66124d1b..f3f3bc0615e5dc698be5c479dfed8ef2eb49cbfb 100644
---- a/drivers/media/pci/intel/ipu6/ipu6-isys-video.c
-+++ b/drivers/media/pci/intel/ipu6/ipu6-isys-video.c
-@@ -1306,7 +1306,6 @@ int ipu6_isys_video_init(struct ipu6_isys_video *av)
- 	__ipu6_isys_vidioc_try_fmt_meta_cap(av, &format_meta);
- 	av->meta_fmt = format_meta.fmt.meta;
+diff --git a/drivers/staging/media/ipu7/ipu7-isys-video.c b/drivers/staging/media/ipu7/ipu7-isys-video.c
+index 8756da3a8fb0bfaf88da199b4608c7850888e6a2..6b31c766bc5835f8b6e28ad75efead918934349b 100644
+--- a/drivers/staging/media/ipu7/ipu7-isys-video.c
++++ b/drivers/staging/media/ipu7/ipu7-isys-video.c
+@@ -1082,7 +1082,6 @@ int ipu7_isys_video_init(struct ipu7_isys_video *av)
+ 	__ipu_isys_vidioc_try_fmt_vid_cap(av, &format);
+ 	av->pix_fmt = format.fmt.pix;
  
 -	set_bit(V4L2_FL_USES_V4L2_FH, &av->vdev.flags);
  	video_set_drvdata(&av->vdev, av);
