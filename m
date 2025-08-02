@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id D33D5B18EDA
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1413FB18ECF
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=u+GPUvVOlz/3fcOHRbXGit0E0ukTKxRc8ZmMlvGgi0E=; b=W/ABYbUqw4ArQUT0pQcn4nhgLt
-	wKZ9jIp0BWPIjG7/HjNvbs7sApTNH1IJ5TFKQE+57ndKK1fdBP6nzZohmc4w9//eEjLCEJU6/Tvdq
-	Na000TKcbNxcxrX8Wr+id8O7yNV3txOl7oAb9bSGDz5BcjA3ChufqUeduBn0IWPIIEkE=;
+	bh=DDhLuGJz8ZiRt7X77nzAJE8j0k6+MHgANXXXXNKLr1I=; b=VaeX+h5mkv+8LiOxC78m6NPZrW
+	XlYJReQI3sUZj1peeK2iXDEz1oTA/0DmipQ1VcmO01GJDNDk15XklLHiXxXd5iCJUTaCIq32t2MSF
+	U2f//e0ogywsOVT7P7OyM2u6TQkqgNEndhWvlvTmcsS7wJFERfBTbBCCy55MOZu1EWqg=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChn-0006VA-Mu;
-	Sat, 02 Aug 2025 13:55:23 +0000
+	id 1uiChk-0006Re-FA;
+	Sat, 02 Aug 2025 13:55:20 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8iA-000136-Tq
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8hB-00010q-1U
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:39:30 +0000
+ Sat, 02 Aug 2025 09:38:29 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=3esl01F0TNGChw4fMFEuoIOQIcgg6tOSbWUfStrIbRc=; b=Bplg1VfmaJ7lHbyrzu5D5VDo7H
- tsrodafgeFmf9eYSzp9fNd5h6rC62zCbzBAAcLoeTfN/d8ie/7HB+X/qKqlwK6AwYH1yV1sseup4u
- 384k6bD/RuIUXYrmAOhVUwNKhEPjgXJf2foJtv38o4+2TrY2L0s146dfhB2eeQBNHsGQ=;
+ bh=GCT8PIxSQ81umA/AXX8QA/prHpS3xpUCn0+JSSYAixc=; b=dR5oUFT+vrFB1mrvqndEFQ46fF
+ J/QIn4JOLTCFzGZlEJMLEofoaCWSI7EVGw3Ww6axzyemfGDOuKSzSHXrP4X/trsKq8s5RU7ZB6zTB
+ wav27Lo8ux3Mc7BIXeLnQye44nY8DtcpABpkjH9erk5BJ9K1yI5MWB6Il/24YgVQmTww=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=3esl01F0TNGChw4fMFEuoIOQIcgg6tOSbWUfStrIbRc=; b=GyGBajJ6fqk4zXoeM6NPo2LCPz
- y5oYGPK5GjBEvAOO6Tewalk15xnMzZtU53FYJ11UaKwHQrzpRHquyv4UfqgTFdNeEOt261754FnhI
- I8uMW+SjrSyvyCyrw31NpGFNA+qb1LvLRKtoWZuxJCPDKEAi1An5/8ZnvIXOSe3HLPXE=;
+ bh=GCT8PIxSQ81umA/AXX8QA/prHpS3xpUCn0+JSSYAixc=; b=LuAr735RxQXhGGedSncHFSHDSc
+ owQoklYEq5a44yx+l5Xj/86Hf7X1Cb6F+ogpQAoZ8KEjtdUliQV/nK3qW+lgYq0/tcOHRECIZ165c
+ mYJ27cPEG/jSOzm24S/e3TuTm/7ojaxX086gETRCE02A+qg5MdAiQJGYrYtvDzqw6d+c=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8i9-0005bW-VQ for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:39:30 +0000
+ id 1ui8hA-0005Wn-At for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:38:28 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id ECBE63C6E;
- Sat,  2 Aug 2025 11:29:41 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 1F3D640D7;
+ Sat,  2 Aug 2025 11:29:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754126989;
- bh=myVmSWYpHXIiztgrX4Nbrz2tt4YIb4c7beKoOCYKNI8=;
+ s=mail; t=1754126997;
+ bh=N/+SmX8uCSElsoQI/Kb0w5aCmhV7erqVc0DGwURG/AA=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=QbRPXMxClSG+25IAt4oxV96cFHKcviPLixdfqrSDzLcPwvWgGgvIRo50l5ww6D3IK
- Kmv9Ks6g/gci/i2jR1Ii5hzUnPUR3QYANiVjpHd5IsdNJWzE+5wygun8SqKXIHhqCi
- xz+TVzEYqOd0uNepbZV7dK/LW9Ec3RfJXm4/uk2I=
+ b=O2ythKO2VLeSyaJW1M/PqCX/Mkk5kckpbF0P3b/mXShykQUmZpyRwP7cnS0GIDbL/
+ 1DUlZhDvcIq3FFW01jGr4U4d4DEVv0toEN/a34f1d+8i68oIA7/0jOonpdg6HBRSO7
+ wRvxI6vA7eAfOnezFzDfnkMhxtBedOLidMjxv5pM=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:23:05 +0200
+Date: Sat, 02 Aug 2025 11:23:06 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-43-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-44-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,21 +141,21 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=2197;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=4093;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=myVmSWYpHXIiztgrX4Nbrz2tt4YIb4c7beKoOCYKNI8=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj8bCtcXrZDq0XjKLnfeb21Qxsw9vktTvwYZ
- I8b1Ve5FRiJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/AAKCRByNAaPFqFW
- PJerD/wPNsB4FoQmDjS+Q2bgvOYg1HMkC42KAS+62lqBwK9OjkMw5wdywbBTFVeAO7/aoTCDScD
- yaUKSkF5RIqchlj+RO4Fa3fXWvdbRYfYpEFp0EnPQxkJDfsd9xAIXoVxPIaEasZ77ZQWuXrwfn5
- 9EnPq+6b9yaVDD6W0KF2Cm5V7S9Zbm8l7NrJRBO79plfdkHjIux7O67NnUg2I+6yfQIPw/lP5Ka
- zdWfiKBOmgWFRUQm4sI/0lHkPp+KThqrCq9CAMoxKILayA4NNC4JtPrP7ungcho77BKXBKL5mXW
- h1EoMrBYp+mRVweuy/YfN5F7wCaS7v1moLkiVEAY0S45X685QTspJhlewfsMyDIOJUCNTCPejJV
- biw7C0PdiRlREDEAwu5Ek1ACd09LU9uov8HmE5kki5FRUIRJHNqNI+gquFNumbhuRwfLpCneuLY
- u2i4QhmC/EJ2NVmyQFGPJthMLMjeAD1fNVa8a0W+AosRLcgV164/Zzk41RNSGleeJSKNbEj8mvy
- 2JhIDecUDT+kETEC5GSA2UJElubl0KSPWDHdrDa7P+fnFfWsX3DYhIxPU+4ZB5gXoHiCWoxYBSq
- yFlTXFLCz9RCU7s879GUKIUTEZIvGggHd9u7cMgyh5Bc2/9Cm+qwEvi0fAgKJ+fGwx0ZxFRIrSn
- mpL2fgUgHW/KBvA==
+ bh=N/+SmX8uCSElsoQI/Kb0w5aCmhV7erqVc0DGwURG/AA=;
+ b=owEBbAKT/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj8GhGRoLbVmqgvZIfiBugvAzZbpSmTSf59f
+ 8yjByt2IQaJAjIEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/AAKCRByNAaPFqFW
+ PHoxD/dZpPaC6C0cHgs+6v+St9wjgRkVaZQPtX28YtuVqRe+UWHscNIwGphLs9NBDuLq0g5atP1
+ LlhxmW2GY0FLrU4ODHwmd2p6qM2Z/1jKYgj7s1BQO2pqpNekk0WFWK/1MBsyFftm2KbE6oxHHb3
+ MjzTehWud6ey9ZZ/xS0hq47jkIbh6C5rPk0jX8ArRlL/YT7DyODiZjLZ8k+HfWKXGaqHpCLH03e
+ k/ubxOnY0OApTrAZHcAFipujf6N9fp7vOhuJC9xF14G7CDyfWpB9prIJmN0KTo0HIYmkwXijHZ7
+ 4hZq9Q6YOdfcUTg4V9X6r7bqBaPLXLGiqhMscoH26A1VxzfD8nW80Pdh81jYWLRnGY36eA+vI5l
+ ifXsoAohqQtUSZNhDJVW7R4RAw4hSqkoQMRaDZp4V0oE6bE8IPS/MYKYYk6DB4BCctHM4IoY4p9
+ YIuYtS8UzM4mMzVTAekk4U0uJPhk48PVxf6M62ZzNCIMVW/6zKhpm/neqruVAO8i+MvPzeIxTvs
+ OgqunbBOS20rPOU/kLg7qxZXeDBSf2bxjfnD+vNmdF4d8meyw+aAL9iesbcUAUnh7p8+K1IXNXs
+ wkwZ3h4Awk9cg/sCpbpXDN22PLzLj8gBJQ1zdSBXuK34VXa2RLneYzBhWuyXvnhKBo7xKyVWcy6
+ m59/g+/Cysrlb
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
@@ -180,9 +180,9 @@ X-Spam-Report: Spam detection software,
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1ui8i9-0005bW-VQ
-X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:16 +0000
-Subject: [Mjpeg-users] [PATCH 43/65] media: rockhip: rga: Access v4l2_fh
+X-Headers-End: 1ui8hA-0005Wn-At
+X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
+Subject: [Mjpeg-users] [PATCH 44/65] media: rockchip: rkvdec: Access v4l2_fh
  from file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -215,51 +215,97 @@ to be available in file->private_data, initialised by v4l2_fh_add().
 Access the v4l2_fh, and from there the driver-specific structure,
 from the file * in all ioctl handlers.
 
+While at it, remove the now unused fh_to_rkvdec_ctx() macro.
+
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/platform/rockchip/rga/rga.c | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
+ drivers/media/platform/rockchip/rkvdec/rkvdec.c | 14 +++++++-------
+ drivers/media/platform/rockchip/rkvdec/rkvdec.h |  5 -----
+ 2 files changed, 7 insertions(+), 12 deletions(-)
 
-diff --git a/drivers/media/platform/rockchip/rga/rga.c b/drivers/media/platform/rockchip/rga/rga.c
-index 45c42c7ad846fab985e573ef7acf4a5bc1a4cac1..7c657df623f2897cd1ce2b6fa4c4b4de369f1c64 100644
---- a/drivers/media/platform/rockchip/rga/rga.c
-+++ b/drivers/media/platform/rockchip/rga/rga.c
-@@ -462,7 +462,7 @@ static int vidioc_enum_fmt(struct file *file, void *prv, struct v4l2_fmtdesc *f)
- static int vidioc_g_fmt(struct file *file, void *prv, struct v4l2_format *f)
+diff --git a/drivers/media/platform/rockchip/rkvdec/rkvdec.c b/drivers/media/platform/rockchip/rkvdec/rkvdec.c
+index 481c2488f9ac64e70869ed21e5053cfbc4ed6e0e..9fa80ab3c62b7753e6c992aefd106ee99ed375e4 100644
+--- a/drivers/media/platform/rockchip/rkvdec/rkvdec.c
++++ b/drivers/media/platform/rockchip/rkvdec/rkvdec.c
+@@ -354,7 +354,7 @@ static int rkvdec_try_capture_fmt(struct file *file, void *priv,
+ 				  struct v4l2_format *f)
  {
- 	struct v4l2_pix_format_mplane *pix_fmt = &f->fmt.pix_mp;
--	struct rga_ctx *ctx = prv;
-+	struct rga_ctx *ctx = file_to_rga_ctx(file);
- 	struct vb2_queue *vq;
- 	struct rga_frame *frm;
+ 	struct v4l2_pix_format_mplane *pix_mp = &f->fmt.pix_mp;
+-	struct rkvdec_ctx *ctx = fh_to_rkvdec_ctx(priv);
++	struct rkvdec_ctx *ctx = file_to_rkvdec_ctx(file);
+ 	const struct rkvdec_coded_fmt_desc *coded_desc;
  
-@@ -504,7 +504,7 @@ static int vidioc_try_fmt(struct file *file, void *prv, struct v4l2_format *f)
- static int vidioc_s_fmt(struct file *file, void *prv, struct v4l2_format *f)
+ 	/*
+@@ -387,7 +387,7 @@ static int rkvdec_try_output_fmt(struct file *file, void *priv,
+ 				 struct v4l2_format *f)
  {
- 	struct v4l2_pix_format_mplane *pix_fmt = &f->fmt.pix_mp;
--	struct rga_ctx *ctx = prv;
-+	struct rga_ctx *ctx = file_to_rga_ctx(file);
- 	struct rockchip_rga *rga = ctx->rga;
- 	struct vb2_queue *vq;
- 	struct rga_frame *frm;
-@@ -561,7 +561,7 @@ static int vidioc_s_fmt(struct file *file, void *prv, struct v4l2_format *f)
- static int vidioc_g_selection(struct file *file, void *prv,
- 			      struct v4l2_selection *s)
- {
--	struct rga_ctx *ctx = prv;
-+	struct rga_ctx *ctx = file_to_rga_ctx(file);
- 	struct rga_frame *f;
- 	bool use_frame = false;
+ 	struct v4l2_pix_format_mplane *pix_mp = &f->fmt.pix_mp;
+-	struct rkvdec_ctx *ctx = fh_to_rkvdec_ctx(priv);
++	struct rkvdec_ctx *ctx = file_to_rkvdec_ctx(file);
+ 	const struct rkvdec_coded_fmt_desc *desc;
  
-@@ -609,7 +609,7 @@ static int vidioc_g_selection(struct file *file, void *prv,
- static int vidioc_s_selection(struct file *file, void *prv,
- 			      struct v4l2_selection *s)
+ 	desc = rkvdec_find_coded_fmt_desc(pix_mp->pixelformat);
+@@ -418,7 +418,7 @@ static int rkvdec_try_output_fmt(struct file *file, void *priv,
+ static int rkvdec_s_capture_fmt(struct file *file, void *priv,
+ 				struct v4l2_format *f)
  {
--	struct rga_ctx *ctx = prv;
-+	struct rga_ctx *ctx = file_to_rga_ctx(file);
- 	struct rockchip_rga *rga = ctx->rga;
- 	struct rga_frame *f;
- 	int ret = 0;
+-	struct rkvdec_ctx *ctx = fh_to_rkvdec_ctx(priv);
++	struct rkvdec_ctx *ctx = file_to_rkvdec_ctx(file);
+ 	struct vb2_queue *vq;
+ 	int ret;
+ 
+@@ -439,7 +439,7 @@ static int rkvdec_s_capture_fmt(struct file *file, void *priv,
+ static int rkvdec_s_output_fmt(struct file *file, void *priv,
+ 			       struct v4l2_format *f)
+ {
+-	struct rkvdec_ctx *ctx = fh_to_rkvdec_ctx(priv);
++	struct rkvdec_ctx *ctx = file_to_rkvdec_ctx(file);
+ 	struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
+ 	const struct rkvdec_coded_fmt_desc *desc;
+ 	struct v4l2_format *cap_fmt;
+@@ -504,7 +504,7 @@ static int rkvdec_s_output_fmt(struct file *file, void *priv,
+ static int rkvdec_g_output_fmt(struct file *file, void *priv,
+ 			       struct v4l2_format *f)
+ {
+-	struct rkvdec_ctx *ctx = fh_to_rkvdec_ctx(priv);
++	struct rkvdec_ctx *ctx = file_to_rkvdec_ctx(file);
+ 
+ 	*f = ctx->coded_fmt;
+ 	return 0;
+@@ -513,7 +513,7 @@ static int rkvdec_g_output_fmt(struct file *file, void *priv,
+ static int rkvdec_g_capture_fmt(struct file *file, void *priv,
+ 				struct v4l2_format *f)
+ {
+-	struct rkvdec_ctx *ctx = fh_to_rkvdec_ctx(priv);
++	struct rkvdec_ctx *ctx = file_to_rkvdec_ctx(file);
+ 
+ 	*f = ctx->decoded_fmt;
+ 	return 0;
+@@ -532,7 +532,7 @@ static int rkvdec_enum_output_fmt(struct file *file, void *priv,
+ static int rkvdec_enum_capture_fmt(struct file *file, void *priv,
+ 				   struct v4l2_fmtdesc *f)
+ {
+-	struct rkvdec_ctx *ctx = fh_to_rkvdec_ctx(priv);
++	struct rkvdec_ctx *ctx = file_to_rkvdec_ctx(file);
+ 	u32 fourcc;
+ 
+ 	fourcc = rkvdec_enum_decoded_fmt(ctx, f->index, ctx->image_fmt);
+diff --git a/drivers/media/platform/rockchip/rkvdec/rkvdec.h b/drivers/media/platform/rockchip/rkvdec/rkvdec.h
+index 35effe9467845fdfc4ffea432211d1d2e75a08b0..481aaa4bffe975fa106fb22e78bef90ade86a6cf 100644
+--- a/drivers/media/platform/rockchip/rkvdec/rkvdec.h
++++ b/drivers/media/platform/rockchip/rkvdec/rkvdec.h
+@@ -124,11 +124,6 @@ struct rkvdec_ctx {
+ 	void *priv;
+ };
+ 
+-static inline struct rkvdec_ctx *fh_to_rkvdec_ctx(struct v4l2_fh *fh)
+-{
+-	return container_of(fh, struct rkvdec_ctx, fh);
+-}
+-
+ static inline struct rkvdec_ctx *file_to_rkvdec_ctx(struct file *filp)
+ {
+ 	return container_of(file_to_v4l2_fh(filp), struct rkvdec_ctx, fh);
 
 -- 
 2.49.0
