@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5A6BFB18ED2
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C5D2AB18EE6
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=reRzsfK1aPS2I9hj1GSm3qnou1A8LAX+fU1CzdT3QN8=; b=DhaviPYzvPvgpdMhU5gdOcHQLn
-	ToEzxtQnH9LgUaL/VbGwhDJR885C5a3SibzZRrstLpIWByEsU3DjwpHLmOicB92kuGwblBFPv+JPN
-	B8GINiXfXRKYCmXM1d8vRIb7rn+GBLvY8dRZjyYUe8paGqmhJeDjeDTwGnqJiSO8xTsA=;
+	bh=jl+kUJTAuysggT5d6Qug2Pw7F6kdBZgkiSaYHbj8hkE=; b=BXgwK2+JfDtqa7hlA81nIjTOjK
+	CBkgQy+mONI4L3awEXINGQdCO4RCott/FnvvNmHH5JDRqP/P/uJbk/+fnnl8tjmHCp1FXzLiOC8M5
+	HsyqAKLoG21i/2GTcq62lmZqd+h4PVJ1FwnvIPKlisn2LgQwCGmlAbCH6Ek+7NtwnYL4=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChl-0006SL-46;
-	Sat, 02 Aug 2025 13:55:21 +0000
+	id 1uiChr-0006a5-L8;
+	Sat, 02 Aug 2025 13:55:27 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8hN-0000C0-Fc
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8jE-0000J5-EB
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:38:41 +0000
+ Sat, 02 Aug 2025 09:40:36 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=NnJFayxAX0kmQE/T3D7u0+c6R7BABaV1mDJCJcKZ48A=; b=LiMr7kgN4OGd3OLSeiVkqaOM9J
- G34LmtoylZD23PIvyj/ZUsNOi3JiHprvGBx3UsWBVCk8H2OF325YahWI8yEddoarmQEWHFUCgG4zU
- ljP2vIiW58G+Vt8mW3VDtSozo5cgyCjza8ObKTgxAvfTGL/IAg8jF8VaIKaOo9fwyxpM=;
+ bh=hOMY/Wb6k3Ta9pVYnFqHmu4cAKmBsBERcuiz2DVpx80=; b=fDdjnyjsFvsQF2JFVzTB5HFzr8
+ 2bh0A16hocauL2Bcd1ornXNs+grVkadyK72EmfiYelxGygzddnZBWgvn33UXlIibJdLfbnC+ftyv0
+ TS2Bdolc09ASg+zOVLZ3qtcc6KLeELMnIssHhJZb97ginoQdCcsrLdAimwKJGmguPba8=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=NnJFayxAX0kmQE/T3D7u0+c6R7BABaV1mDJCJcKZ48A=; b=bIevIO5rJi0ghrg29G1TbZzvdl
- yCWwA1xq4u1Dk+y98Uc38gDu16mHgWXv+3+UUacHEsUbnbQBimvWviVPTBq4yA9Rsi6KPcftIKpgG
- mzVsQ/nGHb0ze0zksgvAMJ4sTm4fOW21g5E/liqlRTepqA5UsuZfQZNMgdgR5ZQPElPw=;
+ bh=hOMY/Wb6k3Ta9pVYnFqHmu4cAKmBsBERcuiz2DVpx80=; b=M/rhof7wGjvK5DEdNAESoK+hfA
+ BA2LhTERUX1UpwNkFIOlDQp3qe4mxXo2Ebht4YQW52UEiDmEfx0y4oUMym0zy69gaIXlhUmtsh2ga
+ NR8mDfI3NcU/w9ioD4Mo6LHXHiL9DbLF7rJljn+Gcq6lZFOQGnugm36d+AtA9DH/hZFs=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8hM-0005Xp-Ep for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:38:41 +0000
+ id 1ui8jD-0005gm-Qg for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:40:36 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id 526283C59;
- Sat,  2 Aug 2025 11:27:56 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 8152C3C67;
+ Sat,  2 Aug 2025 11:28:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754126884;
- bh=uvJNgedmjfRxRB2KK4uHDM5CEa3owfvsuNtv/dXg1mo=;
+ s=mail; t=1754126893;
+ bh=41vTx83z/Uwja6XVkgBfBZsgFkv9BjK18LAN6EVk9C4=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=OBeOdY71KXuivBYjHPJgVimqGpuOLlDp9yx3lDomohHUG5a7oNWQ0hvXoW69O0kNS
- NYAx54HROgkP695bPQtJ6+Ecd/T7MLt4bvONc/Y0dZA46ll9Mm2L78xgrOkpmJ6k0A
- 8PHaFKCiNki5tve7zAVZ45WyVeGD7Vm3ILrEKz8E=
+ b=pVvNcAuntI593b3+8JOouhdzGDFt2tmHaE57Nr/H0+gti/BMJpEEIFHA5+uFfKKEi
+ /TinR7qedy9WiH2jyXomKJZiyq8x2qshMpdc2vFlrCpho2CEsAjd95XWFp6F9VNkLH
+ qOhagXfR5W5AHnPYjhQSxrZyg7F3cCClyLs7v+n8=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:22:54 +0200
+Date: Sat, 02 Aug 2025 11:22:55 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-32-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-33-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,21 +141,21 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=10324;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=2772;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=uvJNgedmjfRxRB2KK4uHDM5CEa3owfvsuNtv/dXg1mo=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj7S/3Fw9ygciMykqOxZ3oq/ihDfFUViWqKi
- 5ekTs5Vd8+JAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+wAKCRByNAaPFqFW
- POEiEAC74ewm4UwRerFfJAL8tK4Q4dfsUPWoOIltfCRNJ1oWZqybDtlPV8YdYeLQyI11uX/Y0Qd
- 3gtrtoMmI8vcaJUptDw6CuyJeboT6CzFR2Tt2KELXHeOLzjUIh8ZT+teCZq9OZcrjtWXHjkD2Ny
- 4vwfiGJ1pPmbrsNVWLGrxqn8cxwJGATdHC3ErwAUIJ3avwjcBz0yoGnAjGaMA+D5DXNmLEZZWzb
- 3R3Ud12Gqonq3xtBR8CGHFcBvZeNcPORqEEzJJza4FalTw2nGr65CohPNq3D0VZDOkRHir+qYTX
- XG23CyC/G4jYE1NDrbeTkGYe/iodpC+m6up/5gupugz/DlzBunaRa+tcXzKtfQ+sNZaZx2lpFq2
- 5pY45Vh2WLgNv1Xr+q76rvA3O1/Bn/Io4Zv+A7C5j8wXQNQfWpK2j8GKyCJ8aW3e2jR/irOrLF6
- dARDLFGe3XP6LFU5Y4XqKwPczmTfxyHekKMxO0DssGbUttMuqE1qMGb0s336UeYPtPRyWcy7KDk
- T3uhKRB6h6VVTLmxsyaCUwh3KJlVjLNUcVQWzZ2c9xMlt5mHgGTH7Up6OYnBtk9UCjyv/PDbF8Q
- 1ETZeraVs8AOHlUnD6RRH7+nlH6yptXdMTIVT5IwSeOOFouJa78kh1G9qXzpu8F3CmG3mrdVdAT
- co8wEuknSM/h/VA==
+ bh=41vTx83z/Uwja6XVkgBfBZsgFkv9BjK18LAN6EVk9C4=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj7pwyrSBi9rnZ2weNb65Z8p51fNTUj4IIin
+ TQAaww2RVaJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+wAKCRByNAaPFqFW
+ PAMDD/9Ug9QwsOwqd/AgPzEvnOkucjAOnVc54Ut2Iym9meadtfaDDV1mc7FXlnf4QLXhPrr78BW
+ mpb135tIptu5FHRKG7ysZfYALCQMddnU3UUQx0/gn5ZIZ5zPK4m9roV/TBUt4NtkFNAEaGV8NLQ
+ 9FEY9ol3rYLDbWKjxpoZe+VhhCMaZiOBw5yagf67MDewREcw+UUrbGSHW4ru40PKZciqbc/vj0e
+ nQfpCOMoiEF91JYrkF/d2z0t/W67gr7LDYsHVhwa/juCbCz2Wu5KQFwJkwZkJNSo2XbrEJdiJ4w
+ jnU91qYWYQryas5efYVfY85hlacIcp74d7FCyJCPUdYt8NZ/hyYn8/VfC6qTgKHjcL/9vUZ3uu+
+ H32Q5uHhBqaFOo33iNE4+ZRkxfXJ5OcPoqWx+OWYYHE3044p0atCe5/EpNW+pdAD9SD5D+D4UTZ
+ kv3SB4HWGcxMS+9txidCBc03zJCYCS8Vc6QIc/VosL0FGTOMEiMfJr6LSwuOipAKCDgNrX2V8sT
+ OTZ9kYNFRnph4i25ZZq1/kHy+UJ5IMzKBGRFfCzBCuOngdJG5UtWh9IEQa9OTuiAJTnDo8qoqwT
+ viKs/nKaDQkiXseRHCpINPwJEHsdfM+BRPU5LJEZzEfrGdcAxUCWkgHfZ07hCSfQ953aDjIBp9O
+ TtEBNodMx+bGSzA==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
@@ -180,9 +180,10 @@ X-Spam-Report: Spam detection software,
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1ui8hM-0005Xp-Ep
+X-Headers-End: 1ui8jD-0005gm-Qg
 X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 32/65] media: wave5: Access v4l2_fh from file
+Subject: [Mjpeg-users] [PATCH 33/65] media: m2m-deinterlace: Access v4l2_fh
+ from file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -216,221 +217,73 @@ from the file * in all ioctl handlers.
 
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- .../platform/chips-media/wave5/wave5-helper.c      |  2 +-
- .../platform/chips-media/wave5/wave5-vpu-dec.c     | 18 ++++++++--------
- .../platform/chips-media/wave5/wave5-vpu-enc.c     | 24 +++++++++++-----------
- 3 files changed, 22 insertions(+), 22 deletions(-)
+ drivers/media/platform/m2m-deinterlace.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
 
-diff --git a/drivers/media/platform/chips-media/wave5/wave5-helper.c b/drivers/media/platform/chips-media/wave5/wave5-helper.c
-index 0bce62f0c03902ae367182ee04774c79accc4712..f03ad9c0de2215794b2456c39652785fff236966 100644
---- a/drivers/media/platform/chips-media/wave5/wave5-helper.c
-+++ b/drivers/media/platform/chips-media/wave5/wave5-helper.c
-@@ -142,7 +142,7 @@ int wave5_vpu_subscribe_event(struct v4l2_fh *fh, const struct v4l2_event_subscr
- 
- int wave5_vpu_g_fmt_out(struct file *file, void *fh, struct v4l2_format *f)
+diff --git a/drivers/media/platform/m2m-deinterlace.c b/drivers/media/platform/m2m-deinterlace.c
+index 51c2f206cb1f601ec2f3d07fffbf63c86f4cdc01..e07e57d4206baa5e7a467298cb240c3a2cd57cd8 100644
+--- a/drivers/media/platform/m2m-deinterlace.c
++++ b/drivers/media/platform/m2m-deinterlace.c
+@@ -517,13 +517,13 @@ static int vidioc_g_fmt(struct deinterlace_ctx *ctx, struct v4l2_format *f)
+ static int vidioc_g_fmt_vid_out(struct file *file, void *priv,
+ 				struct v4l2_format *f)
  {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	int i;
+-	return vidioc_g_fmt(priv, f);
++	return vidioc_g_fmt(file_to_ctx(file), f);
+ }
  
- 	f->fmt.pix_mp.width = inst->src_fmt.width;
-diff --git a/drivers/media/platform/chips-media/wave5/wave5-vpu-dec.c b/drivers/media/platform/chips-media/wave5/wave5-vpu-dec.c
-index 88eb933a51448788373775e423ae2ac5042cf8b6..72af0faa3ef2e6fb83749044eb91a58f39a3a986 100644
---- a/drivers/media/platform/chips-media/wave5/wave5-vpu-dec.c
-+++ b/drivers/media/platform/chips-media/wave5/wave5-vpu-dec.c
-@@ -506,7 +506,7 @@ static int wave5_vpu_dec_enum_fmt_cap(struct file *file, void *fh, struct v4l2_f
- 
- static int wave5_vpu_dec_try_fmt_cap(struct file *file, void *fh, struct v4l2_format *f)
+ static int vidioc_g_fmt_vid_cap(struct file *file, void *priv,
+ 				struct v4l2_format *f)
  {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	struct dec_info *p_dec_info = &inst->codec_info->dec_info;
- 	const struct v4l2_frmsize_stepwise *frmsize;
- 	const struct vpu_format *vpu_fmt;
-@@ -547,7 +547,7 @@ static int wave5_vpu_dec_try_fmt_cap(struct file *file, void *fh, struct v4l2_fo
+-	return vidioc_g_fmt(priv, f);
++	return vidioc_g_fmt(file_to_ctx(file), f);
+ }
  
- static int wave5_vpu_dec_s_fmt_cap(struct file *file, void *fh, struct v4l2_format *f)
+ static int vidioc_try_fmt(struct v4l2_format *f, struct deinterlace_fmt *fmt)
+@@ -544,8 +544,8 @@ static int vidioc_try_fmt(struct v4l2_format *f, struct deinterlace_fmt *fmt)
+ static int vidioc_try_fmt_vid_cap(struct file *file, void *priv,
+ 				  struct v4l2_format *f)
  {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	int i, ret;
++	struct deinterlace_ctx *ctx = file_to_ctx(file);
+ 	struct deinterlace_fmt *fmt;
+-	struct deinterlace_ctx *ctx = priv;
  
- 	dev_dbg(inst->dev->dev,
-@@ -606,7 +606,7 @@ static int wave5_vpu_dec_s_fmt_cap(struct file *file, void *fh, struct v4l2_form
+ 	fmt = find_format(f);
+ 	if (!fmt || !(fmt->types & MEM2MEM_CAPTURE))
+@@ -638,20 +638,20 @@ static int vidioc_s_fmt_vid_cap(struct file *file, void *priv,
+ 	ret = vidioc_try_fmt_vid_cap(file, priv, f);
+ 	if (ret)
+ 		return ret;
+-	return vidioc_s_fmt(priv, f);
++	return vidioc_s_fmt(file_to_ctx(file), f);
+ }
  
- static int wave5_vpu_dec_g_fmt_cap(struct file *file, void *fh, struct v4l2_format *f)
+ static int vidioc_s_fmt_vid_out(struct file *file, void *priv,
+ 				struct v4l2_format *f)
  {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	int i;
- 
- 	f->fmt.pix_mp.width = inst->dst_fmt.width;
-@@ -630,7 +630,7 @@ static int wave5_vpu_dec_g_fmt_cap(struct file *file, void *fh, struct v4l2_form
- 
- static int wave5_vpu_dec_enum_fmt_out(struct file *file, void *fh, struct v4l2_fmtdesc *f)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	const struct vpu_format *vpu_fmt;
- 
- 	dev_dbg(inst->dev->dev, "%s: index: %u\n", __func__, f->index);
-@@ -647,7 +647,7 @@ static int wave5_vpu_dec_enum_fmt_out(struct file *file, void *fh, struct v4l2_f
- 
- static int wave5_vpu_dec_try_fmt_out(struct file *file, void *fh, struct v4l2_format *f)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	const struct v4l2_frmsize_stepwise *frmsize;
- 	const struct vpu_format *vpu_fmt;
- 	int width, height;
-@@ -678,7 +678,7 @@ static int wave5_vpu_dec_try_fmt_out(struct file *file, void *fh, struct v4l2_fo
- 
- static int wave5_vpu_dec_s_fmt_out(struct file *file, void *fh, struct v4l2_format *f)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	const struct vpu_format *vpu_fmt;
- 	int i, ret;
- 
-@@ -727,7 +727,7 @@ static int wave5_vpu_dec_s_fmt_out(struct file *file, void *fh, struct v4l2_form
- 
- static int wave5_vpu_dec_g_selection(struct file *file, void *fh, struct v4l2_selection *s)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 
- 	dev_dbg(inst->dev->dev, "%s: type: %u | target: %u\n", __func__, s->type, s->target);
- 
-@@ -761,7 +761,7 @@ static int wave5_vpu_dec_g_selection(struct file *file, void *fh, struct v4l2_se
- 
- static int wave5_vpu_dec_s_selection(struct file *file, void *fh, struct v4l2_selection *s)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 
- 	if (s->type != V4L2_BUF_TYPE_VIDEO_CAPTURE)
- 		return -EINVAL;
-@@ -872,7 +872,7 @@ static int wave5_vpu_dec_start(struct vpu_instance *inst)
- 
- static int wave5_vpu_dec_decoder_cmd(struct file *file, void *fh, struct v4l2_decoder_cmd *dc)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	struct v4l2_m2m_ctx *m2m_ctx = inst->v4l2_fh.m2m_ctx;
+-	struct deinterlace_ctx *ctx = priv;
++	struct deinterlace_ctx *ctx = file_to_ctx(file);
  	int ret;
  
-diff --git a/drivers/media/platform/chips-media/wave5/wave5-vpu-enc.c b/drivers/media/platform/chips-media/wave5/wave5-vpu-enc.c
-index 322c1498758a0a569eb94cab0d6612ce18cd4c7b..279f23e1304a9e47e31c9a0bdd0efbf4c18622e1 100644
---- a/drivers/media/platform/chips-media/wave5/wave5-vpu-enc.c
-+++ b/drivers/media/platform/chips-media/wave5/wave5-vpu-enc.c
-@@ -360,7 +360,7 @@ static int wave5_vpu_enc_enum_framesizes(struct file *f, void *fh, struct v4l2_f
+ 	ret = vidioc_try_fmt_vid_out(file, priv, f);
+ 	if (ret)
+ 		return ret;
  
- static int wave5_vpu_enc_enum_fmt_cap(struct file *file, void *fh, struct v4l2_fmtdesc *f)
+-	ret = vidioc_s_fmt(priv, f);
++	ret = vidioc_s_fmt(ctx, f);
+ 	if (!ret)
+ 		ctx->colorspace = f->fmt.pix.colorspace;
+ 
+@@ -661,8 +661,8 @@ static int vidioc_s_fmt_vid_out(struct file *file, void *priv,
+ static int vidioc_streamon(struct file *file, void *priv,
+ 			   enum v4l2_buf_type type)
  {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	const struct vpu_format *vpu_fmt;
++	struct deinterlace_ctx *ctx = file_to_ctx(file);
+ 	struct deinterlace_q_data *s_q_data, *d_q_data;
+-	struct deinterlace_ctx *ctx = priv;
  
- 	dev_dbg(inst->dev->dev, "%s: index: %u\n", __func__, f->index);
-@@ -377,7 +377,7 @@ static int wave5_vpu_enc_enum_fmt_cap(struct file *file, void *fh, struct v4l2_f
- 
- static int wave5_vpu_enc_try_fmt_cap(struct file *file, void *fh, struct v4l2_format *f)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	const struct v4l2_frmsize_stepwise *frmsize;
- 	const struct vpu_format *vpu_fmt;
- 	int width, height;
-@@ -411,7 +411,7 @@ static int wave5_vpu_enc_try_fmt_cap(struct file *file, void *fh, struct v4l2_fo
- 
- static int wave5_vpu_enc_s_fmt_cap(struct file *file, void *fh, struct v4l2_format *f)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	int i, ret;
- 
- 	dev_dbg(inst->dev->dev, "%s: fourcc: %u width: %u height: %u num_planes: %u field: %u\n",
-@@ -445,7 +445,7 @@ static int wave5_vpu_enc_s_fmt_cap(struct file *file, void *fh, struct v4l2_form
- 
- static int wave5_vpu_enc_g_fmt_cap(struct file *file, void *fh, struct v4l2_format *f)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	int i;
- 
- 	f->fmt.pix_mp.width = inst->dst_fmt.width;
-@@ -469,7 +469,7 @@ static int wave5_vpu_enc_g_fmt_cap(struct file *file, void *fh, struct v4l2_form
- 
- static int wave5_vpu_enc_enum_fmt_out(struct file *file, void *fh, struct v4l2_fmtdesc *f)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	const struct vpu_format *vpu_fmt;
- 
- 	dev_dbg(inst->dev->dev, "%s: index: %u\n", __func__, f->index);
-@@ -486,7 +486,7 @@ static int wave5_vpu_enc_enum_fmt_out(struct file *file, void *fh, struct v4l2_f
- 
- static int wave5_vpu_enc_try_fmt_out(struct file *file, void *fh, struct v4l2_format *f)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	const struct v4l2_frmsize_stepwise *frmsize;
- 	const struct vpu_format *vpu_fmt;
- 	int width, height;
-@@ -515,7 +515,7 @@ static int wave5_vpu_enc_try_fmt_out(struct file *file, void *fh, struct v4l2_fo
- 
- static int wave5_vpu_enc_s_fmt_out(struct file *file, void *fh, struct v4l2_format *f)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	const struct vpu_format *vpu_fmt;
- 	const struct v4l2_format_info *info;
- 	int i, ret;
-@@ -576,7 +576,7 @@ static int wave5_vpu_enc_s_fmt_out(struct file *file, void *fh, struct v4l2_form
- 
- static int wave5_vpu_enc_g_selection(struct file *file, void *fh, struct v4l2_selection *s)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 
- 	dev_dbg(inst->dev->dev, "%s: type: %u | target: %u\n", __func__, s->type, s->target);
- 
-@@ -605,7 +605,7 @@ static int wave5_vpu_enc_g_selection(struct file *file, void *fh, struct v4l2_se
- 
- static int wave5_vpu_enc_s_selection(struct file *file, void *fh, struct v4l2_selection *s)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 
- 	if (s->type != V4L2_BUF_TYPE_VIDEO_OUTPUT)
- 		return -EINVAL;
-@@ -628,7 +628,7 @@ static int wave5_vpu_enc_s_selection(struct file *file, void *fh, struct v4l2_se
- 
- static int wave5_vpu_enc_encoder_cmd(struct file *file, void *fh, struct v4l2_encoder_cmd *ec)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 	struct v4l2_m2m_ctx *m2m_ctx = inst->v4l2_fh.m2m_ctx;
- 	int ret;
- 
-@@ -661,7 +661,7 @@ static int wave5_vpu_enc_encoder_cmd(struct file *file, void *fh, struct v4l2_en
- 
- static int wave5_vpu_enc_g_parm(struct file *file, void *fh, struct v4l2_streamparm *a)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 
- 	dev_dbg(inst->dev->dev, "%s: type: %u\n", __func__, a->type);
- 
-@@ -681,7 +681,7 @@ static int wave5_vpu_enc_g_parm(struct file *file, void *fh, struct v4l2_streamp
- 
- static int wave5_vpu_enc_s_parm(struct file *file, void *fh, struct v4l2_streamparm *a)
- {
--	struct vpu_instance *inst = wave5_to_vpu_inst(fh);
-+	struct vpu_instance *inst = file_to_vpu_inst(file);
- 
- 	dev_dbg(inst->dev->dev, "%s: type: %u\n", __func__, a->type);
- 
+ 	s_q_data = get_q_data(V4L2_BUF_TYPE_VIDEO_OUTPUT);
+ 	d_q_data = get_q_data(V4L2_BUF_TYPE_VIDEO_CAPTURE);
 
 -- 
 2.49.0
