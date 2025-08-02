@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id E7921B18ED7
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9B334B18ED3
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=EXaffvuXyDZwPLx1tKOs682NHi5uAGXuguJbpZosmBI=; b=LuOE4Rr3ak/tuT3KVPUXnfSrzP
-	ow2hN1Ok2OrpDwikdRLpiHGTDhYkxtVf5jQ3lpqXyaXWursOoz2l3wqDVrc7Qc5axXF2MtlPcTKmX
-	vR8saQIlUh2VxAxH3vWOIjw8wJERFQusGwundy4zCyqAdE3xj+SDlcryXRRLUIkPjky4=;
+	bh=tpFkMVfbPyvh42FO2S/dmAA8IWKjiE+INJDERCKev6M=; b=lzwt6hIwwwxeI346a3IOJyacgl
+	dndP55ExRaQOPzjt4ypajPfcguABSozxoozYz4LWPr+BtNIEcuXJQEExXmoYvETVm9lsMvwcjPhgT
+	rViEplGxUHXn17jWcaHd5ft5OPI60o6CAodRptsdkCHvvB/GPtg8h8zoI9uVXXvbecTg=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChm-0006U0-PF;
-	Sat, 02 Aug 2025 13:55:22 +0000
+	id 1uiChl-0006Sk-EG;
+	Sat, 02 Aug 2025 13:55:21 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8hr-00012b-Cw
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8hR-0005Gi-Uv
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:39:11 +0000
+ Sat, 02 Aug 2025 09:38:46 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=41y6FGHHPTAf0VyK8tKl2ppCA7RO1T0OVdpGp0Yq5bI=; b=Aa+5wiL+EnVnAdh5sqT5xdf7m3
- qu4L3zlwUTEld1OozN6UKVPelo2Z9yV88rJLCwieASpyeJzZHggKXRqgcLcRHa7byulisNe+Tr2Lq
- VlmvFUt5Op/9TR+5VJqXV8DhYVWS778M6ecNpmcpXZvxcVEhIHXUSdPfIG+39xFQ/3QQ=;
+ bh=MSBxn982U+psi7SolKGkPu8STkKK7xcIoNcxQV+Kb2g=; b=AyQg39qiDY20/PneCKlB5suQ2f
+ coHXG+Hf0Kh+lmJ5us4wjsSYSK6GGuakpfPew3AjPQhirIY2VL36TFsN22risJOefz6YozkIq4grO
+ 3H3rfhatDmk8Rb3tCPYocDRPE1XLjvPhl8QyBltb84KQul/SkoMaByCMdZhBLviiKvBw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=41y6FGHHPTAf0VyK8tKl2ppCA7RO1T0OVdpGp0Yq5bI=; b=LVQelX7NEvXIB+Rc+sU1nSj2wi
- G2QtJIUOlk9FVBdpuff0HRymd40bYSKmtM9UKhrzsj3aXr2tTFTh+z5WRHKUzJGX96bIxzTJpOhRg
- GK+WoMSRs0sl4C9DhxzLkSfmW9kGCY4c0A9XZh+r89QeeVZOpj9M+XFPWFazHd/4Wqb0=;
+ bh=MSBxn982U+psi7SolKGkPu8STkKK7xcIoNcxQV+Kb2g=; b=adkX7u9YCHEET+B6X1sipz46ZB
+ aflh3ImQMDX/QlO668bgLiWo00SxOpQzDoRPv8QtdJ30HqhiLhsaSIs34E+iI/EaavrVHzCTqHo4w
+ ZASEBtpxKrDHQZ59ozMYmtvaPTCYcpwMljqhypbOOnorTYLZ558rbpKKC+8QXoSp4dI8=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8hq-0005a3-4D for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:39:11 +0000
+ id 1ui8hR-0005Y5-C8 for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:38:46 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id B4CC23C6C;
- Sat,  2 Aug 2025 11:28:45 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 395973E43;
+ Sat,  2 Aug 2025 11:28:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754126933;
- bh=TREA8Gw7i9MWzaBdbk/QKhP4Ggubbbr1P2XTmejXLMg=;
+ s=mail; t=1754126942;
+ bh=MthwYUOLpqBn0ba6jZYKpMy9cQjcqOQkTUKOiMmYskY=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=jNijr26x5+M7V7u6frcDFOc1kw8nkayNoUX+tkfFN+81P3tAoLJU0zqTc4xceh+JS
- CcXmq6ErvT/tUMPRINb7C733Z753O0Kg4oUaHuaQtM+H3G/r9kIUq//VNa+n/wDzQx
- ZCPA5vqvcGKXQtSSlbt/9zBRQyOy0nPGCuzDVOHk=
+ b=WrzWKhJzGGme5zOuQKXcQS/gNGIUjt+o1Z00R2tij+Qj4M9aA/SV+y5Z26X7R3HR1
+ nYV72q1Za8zMTe1MdtszLQQRIrdrEHwMHomB/rG6zrt8mk52l3LNAcujKID2JmXYOv
+ 3WD21E56BSQ+HYPkYABpAkGGxFx8a7Yv2PLlaV8g=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:22:59 +0200
+Date: Sat, 02 Aug 2025 11:23:00 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-37-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-38-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,26 +141,26 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=15817;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=4867;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=TREA8Gw7i9MWzaBdbk/QKhP4Ggubbbr1P2XTmejXLMg=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj7OFz+gN+wVUa5VrMIM4YwXqynriZsOLr8/
- lEjqmJBecSJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+wAKCRByNAaPFqFW
- PDXFEACF7S0bzNNPSEx0ZGozCHIVTditcgtd3bjzpugZNSpCFcQL5RnblDMNXaTZ9JUxJojuT/y
- t7OKO86LZRZm2RaF2T/6UvtXUSmcunX6qFk8BFTn+mqubhxy+CO/Ex+SzTPlemYp9t/THLIcQhF
- OXvmdmnwpq1yYBHiGd7Bw5wLQ5Q/vHV4weIFVDAL5V/ORd+T/gUXFXg0ySeCUbaaYFVxXIaiSEm
- 7lReb8gjHZq2461gV6GQbUzU/jmKEyy8SBZXc2ND0v6I7ubcUYW1P63TQ7hPnmEiyNpJmK5C58l
- Uuw1V9L9I/1P6g6+n1/Ml523MwfsS2+dPX+KEElKiZlXqAlVc9HQRXZrrgen4CFJH3qP55z+464
- zGhiK5n7WozA50CkGjspJc+tAWCqThw78zGzqSNXIXvp1UT5FdprbpNvQjybL4/KaQyWhsPNcgC
- NxNPp4zJYrcrsFSwbfgsR6FaAijZ6DVcwq3ZH/likfl+LXm5/KTHjO2PDpbdL05tlYPkRpkO7/F
- CKCJBfmdL1z8l1M91mAgY3pgCBkMxOlUIVTgWWFM8hjvhrFE4Gm01woUGeD/JbRlN55KcosvY1H
- zB7VSNQY8qhwoExGJoDLy4EfRmxMZfIvdCO/eX+32eNNEYPOZVQsXYs6+Zm1CBonwBKKzxqMddf
- UeHloDAzu4agKiw==
+ bh=MthwYUOLpqBn0ba6jZYKpMy9cQjcqOQkTUKOiMmYskY=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj8TQAFq4EkLSez561K0ZCn/vn/BBJTmiqEC
+ bdHNw8gzSWJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y/AAKCRByNAaPFqFW
+ PJFxD/0TIoksJkRESbXqmBqgUb3qo3kiE82eWw0Z6Q17TElBpWIw99pBtQOEfWrjRc99I2UNoAc
+ mCWz87rZyt3b6rGydUaLt9eHY90h2RMG8ZuGxvsCjUqNu2QgiOXjLWK+BThZ6GSsaJU/obfD58m
+ M5vJxlycDcFVA5yj4c9cYo9gOkSEthg2q7w+YAK5woOn3Vhbu23YWdJCoZpSNqcddOpyHsiqnEZ
+ avPs8NZ686jUTHS/YnHe3ZYCI/gQcUffV4SXamBdh+FkxWa0WALMw86oWkcaFkX5WXmX9wNfith
+ /kP9lim1JndmUQqWhp2EC7h7aowy/H3g4BtOWW9Z00CDQZ+3e4LiZ7Kqddsxq0uE5QNF7jPETC1
+ hJybOhHs6dvry1LAO5LFktHgr2lIdVTZQs9thfuO2XeQoqVM6z4bBjwLozzZsiN6urjUYoUz1XC
+ iYuPhRgfbhwGyHjeVLsCHuXYR6JmLQXWLDCs6ZamO1AxcA1+VIjV3MS9lbcssLjGWrs++h+MJbD
+ KljduZoHMhOINt+uFXu/pPJDBZ/AC/9qe73RGy3LvPoTSfbm+fTyCcLaqIn3INSuce3gG9VafpX
+ 3OWHslj9R1uowlyL4FDQTnn2sNB+gM5WCqNDA5Sjx3AwLtjkJT1LApcSPeOOfKoBM/c3R1RVeVD
+ u4zEl7mhyZWHBtw==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
@@ -173,16 +173,16 @@ X-Spam-Report: Spam detection software,
  Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
-X-Headers-End: 1ui8hq-0005a3-4D
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+X-Headers-End: 1ui8hR-0005Y5-C8
 X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:16 +0000
-Subject: [Mjpeg-users] [PATCH 37/65] media: mtk: vcodec: Access v4l2_fh from
+Subject: [Mjpeg-users] [PATCH 38/65] media: tegra-vde: Access v4l2_fh from
  file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -215,351 +215,119 @@ to be available in file->private_data, initialised by v4l2_fh_add().
 Access the v4l2_fh, and from there the driver-specific structure,
 from the file * in all ioctl handlers.
 
-While at modify mtk_vcodec_enc_get_chip_name() to accept a ctx instead
-of a raw void *.
-
-While at it, remove the now unused fh_to_enc_ctx() macro.
-
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- .../mediatek/vcodec/decoder/mtk_vcodec_dec.c       | 36 ++++++++++-----------
- .../mediatek/vcodec/encoder/mtk_vcodec_enc.c       | 37 +++++++++++-----------
- .../mediatek/vcodec/encoder/mtk_vcodec_enc_drv.h   |  5 ---
- 3 files changed, 36 insertions(+), 42 deletions(-)
+ drivers/media/platform/nvidia/tegra-vde/v4l2.c | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
 
-diff --git a/drivers/media/platform/mediatek/vcodec/decoder/mtk_vcodec_dec.c b/drivers/media/platform/mediatek/vcodec/decoder/mtk_vcodec_dec.c
-index 98838217b97d45ed2b5431fdf87c94e0ff79fc57..d691bd533103b100e7d1817e834696cc5b3990ce 100644
---- a/drivers/media/platform/mediatek/vcodec/decoder/mtk_vcodec_dec.c
-+++ b/drivers/media/platform/mediatek/vcodec/decoder/mtk_vcodec_dec.c
-@@ -87,7 +87,7 @@ static int stateful_try_decoder_cmd(struct file *file, void *priv, struct v4l2_d
- 
- static int stateful_decoder_cmd(struct file *file, void *priv, struct v4l2_decoder_cmd *cmd)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 	struct vb2_queue *src_vq, *dst_vq;
- 	int ret;
- 
-@@ -132,7 +132,7 @@ static int stateless_try_decoder_cmd(struct file *file, void *priv, struct v4l2_
- 
- static int stateless_decoder_cmd(struct file *file, void *priv, struct v4l2_decoder_cmd *cmd)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 	int ret;
- 
- 	ret = v4l2_m2m_ioctl_stateless_try_decoder_cmd(file, priv, cmd);
-@@ -158,7 +158,7 @@ static int stateless_decoder_cmd(struct file *file, void *priv, struct v4l2_deco
- 
- static int vidioc_try_decoder_cmd(struct file *file, void *priv, struct v4l2_decoder_cmd *cmd)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 
- 	if (ctx->dev->vdec_pdata->uses_stateless_api)
- 		return stateless_try_decoder_cmd(file, priv, cmd);
-@@ -168,7 +168,7 @@ static int vidioc_try_decoder_cmd(struct file *file, void *priv, struct v4l2_dec
- 
- static int vidioc_decoder_cmd(struct file *file, void *priv, struct v4l2_decoder_cmd *cmd)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 
- 	if (ctx->dev->vdec_pdata->uses_stateless_api)
- 		return stateless_decoder_cmd(file, priv, cmd);
-@@ -233,7 +233,7 @@ void mtk_vcodec_dec_set_default_params(struct mtk_vcodec_dec_ctx *ctx)
- static int vidioc_vdec_qbuf(struct file *file, void *priv,
- 			    struct v4l2_buffer *buf)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 
- 	if (ctx->state == MTK_STATE_ABORT) {
- 		mtk_v4l2_vdec_err(ctx, "[%d] Call on QBUF after unrecoverable error", ctx->id);
-@@ -246,7 +246,7 @@ static int vidioc_vdec_qbuf(struct file *file, void *priv,
- static int vidioc_vdec_dqbuf(struct file *file, void *priv,
- 			     struct v4l2_buffer *buf)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 
- 	if (ctx->state == MTK_STATE_ABORT) {
- 		mtk_v4l2_vdec_err(ctx, "[%d] Call on DQBUF after unrecoverable error", ctx->id);
-@@ -259,7 +259,7 @@ static int vidioc_vdec_dqbuf(struct file *file, void *priv,
- static int vidioc_vdec_querycap(struct file *file, void *priv,
- 				struct v4l2_capability *cap)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 	struct device *dev = &ctx->dev->plat_dev->dev;
- 
- 	strscpy(cap->driver, dev->driver->name, sizeof(cap->driver));
-@@ -354,7 +354,7 @@ static int vidioc_try_fmt_vid_cap_mplane(struct file *file, void *priv,
- 				struct v4l2_format *f)
- {
- 	const struct mtk_video_fmt *fmt;
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 	const struct mtk_vcodec_dec_pdata *dec_pdata = ctx->dev->vdec_pdata;
- 
- 	fmt = mtk_vdec_find_format(f, dec_pdata);
-@@ -372,7 +372,7 @@ static int vidioc_try_fmt_vid_out_mplane(struct file *file, void *priv,
- {
- 	struct v4l2_pix_format_mplane *pix_fmt_mp = &f->fmt.pix_mp;
- 	const struct mtk_video_fmt *fmt;
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 	const struct mtk_vcodec_dec_pdata *dec_pdata = ctx->dev->vdec_pdata;
- 
- 	fmt = mtk_vdec_find_format(f, dec_pdata);
-@@ -393,7 +393,7 @@ static int vidioc_try_fmt_vid_out_mplane(struct file *file, void *priv,
- static int vidioc_vdec_g_selection(struct file *file, void *priv,
- 			struct v4l2_selection *s)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 	struct mtk_q_data *q_data;
- 
- 	if (s->type != V4L2_BUF_TYPE_VIDEO_CAPTURE)
-@@ -442,7 +442,7 @@ static int vidioc_vdec_g_selection(struct file *file, void *priv,
- static int vidioc_vdec_s_selection(struct file *file, void *priv,
- 				struct v4l2_selection *s)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 
- 	if (s->type != V4L2_BUF_TYPE_VIDEO_CAPTURE)
- 		return -EINVAL;
-@@ -464,7 +464,7 @@ static int vidioc_vdec_s_selection(struct file *file, void *priv,
- static int vidioc_vdec_s_fmt(struct file *file, void *priv,
- 			     struct v4l2_format *f)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 	struct v4l2_pix_format_mplane *pix_mp;
- 	struct mtk_q_data *q_data;
- 	int ret = 0;
-@@ -594,7 +594,7 @@ static int vidioc_enum_framesizes(struct file *file, void *priv,
- 				struct v4l2_frmsizeenum *fsize)
- {
- 	int i = 0;
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 	const struct mtk_vcodec_dec_pdata *dec_pdata = ctx->dev->vdec_pdata;
- 
- 	if (fsize->index != 0)
-@@ -623,10 +623,10 @@ static int vidioc_enum_framesizes(struct file *file, void *priv,
- 	return -EINVAL;
- }
- 
--static int vidioc_enum_fmt(struct v4l2_fmtdesc *f, void *priv,
-+static int vidioc_enum_fmt(struct file *file, struct v4l2_fmtdesc *f,
- 			   bool output_queue)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 	const struct mtk_vcodec_dec_pdata *dec_pdata = ctx->dev->vdec_pdata;
- 	const struct mtk_video_fmt *fmt;
- 	int i, j = 0;
-@@ -660,19 +660,19 @@ static int vidioc_enum_fmt(struct v4l2_fmtdesc *f, void *priv,
- static int vidioc_vdec_enum_fmt_vid_cap(struct file *file, void *priv,
- 					struct v4l2_fmtdesc *f)
- {
--	return vidioc_enum_fmt(f, priv, false);
-+	return vidioc_enum_fmt(file, f, false);
- }
- 
- static int vidioc_vdec_enum_fmt_vid_out(struct file *file, void *priv,
- 					struct v4l2_fmtdesc *f)
- {
--	return vidioc_enum_fmt(f, priv, true);
-+	return vidioc_enum_fmt(file, f, true);
- }
- 
- static int vidioc_vdec_g_fmt(struct file *file, void *priv,
- 			     struct v4l2_format *f)
- {
--	struct mtk_vcodec_dec_ctx *ctx = fh_to_dec_ctx(priv);
-+	struct mtk_vcodec_dec_ctx *ctx = file_to_dec_ctx(file);
- 	struct v4l2_pix_format_mplane *pix_mp = &f->fmt.pix_mp;
- 	struct vb2_queue *vq;
- 	struct mtk_q_data *q_data;
-diff --git a/drivers/media/platform/mediatek/vcodec/encoder/mtk_vcodec_enc.c b/drivers/media/platform/mediatek/vcodec/encoder/mtk_vcodec_enc.c
-index a01dc25a769911cd85a8d19c58e0c0a12b92ad50..d815e962ab8981c53000851e8f2bc61faf28056d 100644
---- a/drivers/media/platform/mediatek/vcodec/encoder/mtk_vcodec_enc.c
-+++ b/drivers/media/platform/mediatek/vcodec/encoder/mtk_vcodec_enc.c
-@@ -159,7 +159,7 @@ static int vidioc_enum_framesizes(struct file *file, void *fh,
- 				  struct v4l2_frmsizeenum *fsize)
- {
- 	const struct mtk_video_fmt *fmt;
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(fh);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 
- 	if (fsize->index != 0)
- 		return -EINVAL;
-@@ -183,7 +183,7 @@ static int vidioc_enum_fmt_vid_cap(struct file *file, void *priv,
- 				   struct v4l2_fmtdesc *f)
- {
- 	const struct mtk_vcodec_enc_pdata *pdata =
--		fh_to_enc_ctx(priv)->dev->venc_pdata;
-+		file_to_enc_ctx(file)->dev->venc_pdata;
- 
- 	return vidioc_enum_fmt(f, pdata->capture_formats,
- 			       pdata->num_capture_formats);
-@@ -193,15 +193,14 @@ static int vidioc_enum_fmt_vid_out(struct file *file, void *priv,
- 				   struct v4l2_fmtdesc *f)
- {
- 	const struct mtk_vcodec_enc_pdata *pdata =
--		fh_to_enc_ctx(priv)->dev->venc_pdata;
-+		file_to_enc_ctx(file)->dev->venc_pdata;
- 
- 	return vidioc_enum_fmt(f, pdata->output_formats,
- 			       pdata->num_output_formats);
- }
- 
--static int mtk_vcodec_enc_get_chip_name(void *priv)
-+static int mtk_vcodec_enc_get_chip_name(struct mtk_vcodec_enc_ctx *ctx)
- {
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
- 	struct device *dev = &ctx->dev->plat_dev->dev;
- 
- 	if (of_device_is_compatible(dev->of_node, "mediatek,mt8173-vcodec-enc"))
-@@ -221,9 +220,9 @@ static int mtk_vcodec_enc_get_chip_name(void *priv)
- static int vidioc_venc_querycap(struct file *file, void *priv,
- 				struct v4l2_capability *cap)
- {
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 	struct device *dev = &ctx->dev->plat_dev->dev;
--	int platform_name = mtk_vcodec_enc_get_chip_name(priv);
-+	int platform_name = mtk_vcodec_enc_get_chip_name(ctx);
- 
- 	strscpy(cap->driver, dev->driver->name, sizeof(cap->driver));
- 	snprintf(cap->card, sizeof(cap->card), "MT%d video encoder", platform_name);
-@@ -234,7 +233,7 @@ static int vidioc_venc_querycap(struct file *file, void *priv,
- static int vidioc_venc_s_parm(struct file *file, void *priv,
- 			      struct v4l2_streamparm *a)
- {
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 	struct v4l2_fract *timeperframe = &a->parm.output.timeperframe;
- 
- 	if (a->type != V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
-@@ -257,7 +256,7 @@ static int vidioc_venc_s_parm(struct file *file, void *priv,
- static int vidioc_venc_g_parm(struct file *file, void *priv,
- 			      struct v4l2_streamparm *a)
- {
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 
- 	if (a->type != V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
- 		return -EINVAL;
-@@ -414,7 +413,7 @@ static void mtk_venc_set_param(struct mtk_vcodec_enc_ctx *ctx,
- static int vidioc_venc_s_fmt_cap(struct file *file, void *priv,
- 			     struct v4l2_format *f)
- {
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 	const struct mtk_vcodec_enc_pdata *pdata = ctx->dev->venc_pdata;
- 	struct vb2_queue *vq;
- 	struct mtk_q_data *q_data = mtk_venc_get_q_data(ctx, f->type);
-@@ -469,7 +468,7 @@ static int vidioc_venc_s_fmt_cap(struct file *file, void *priv,
- static int vidioc_venc_s_fmt_out(struct file *file, void *priv,
- 			     struct v4l2_format *f)
- {
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 	const struct mtk_vcodec_enc_pdata *pdata = ctx->dev->venc_pdata;
- 	struct vb2_queue *vq;
- 	struct mtk_q_data *q_data = mtk_venc_get_q_data(ctx, f->type);
-@@ -524,7 +523,7 @@ static int vidioc_venc_g_fmt(struct file *file, void *priv,
- 			     struct v4l2_format *f)
- {
- 	struct v4l2_pix_format_mplane *pix = &f->fmt.pix_mp;
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 	struct vb2_queue *vq;
- 	struct mtk_q_data *q_data = mtk_venc_get_q_data(ctx, f->type);
- 	int i;
-@@ -557,7 +556,7 @@ static int vidioc_try_fmt_vid_cap_mplane(struct file *file, void *priv,
- 					 struct v4l2_format *f)
- {
- 	const struct mtk_video_fmt *fmt;
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 	const struct mtk_vcodec_enc_pdata *pdata = ctx->dev->venc_pdata;
- 
- 	fmt = mtk_venc_find_format(f->fmt.pix.pixelformat, pdata);
-@@ -579,7 +578,7 @@ static int vidioc_try_fmt_vid_out_mplane(struct file *file, void *priv,
- 					 struct v4l2_format *f)
- {
- 	const struct mtk_video_fmt *fmt;
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 	const struct mtk_vcodec_enc_pdata *pdata = ctx->dev->venc_pdata;
- 
- 	fmt = mtk_venc_find_format(f->fmt.pix.pixelformat, pdata);
-@@ -600,7 +599,7 @@ static int vidioc_try_fmt_vid_out_mplane(struct file *file, void *priv,
- static int vidioc_venc_g_selection(struct file *file, void *priv,
- 				     struct v4l2_selection *s)
- {
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 	struct mtk_q_data *q_data = mtk_venc_get_q_data(ctx, s->type);
- 
- 	if (s->type != V4L2_BUF_TYPE_VIDEO_OUTPUT)
-@@ -630,7 +629,7 @@ static int vidioc_venc_g_selection(struct file *file, void *priv,
- static int vidioc_venc_s_selection(struct file *file, void *priv,
- 				     struct v4l2_selection *s)
- {
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 	struct mtk_q_data *q_data = mtk_venc_get_q_data(ctx, s->type);
- 
- 	if (s->type != V4L2_BUF_TYPE_VIDEO_OUTPUT)
-@@ -655,7 +654,7 @@ static int vidioc_venc_s_selection(struct file *file, void *priv,
- static int vidioc_venc_qbuf(struct file *file, void *priv,
- 			    struct v4l2_buffer *buf)
- {
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 
- 	if (ctx->state == MTK_STATE_ABORT) {
- 		mtk_v4l2_venc_err(ctx, "[%d] Call on QBUF after unrecoverable error",
-@@ -669,7 +668,7 @@ static int vidioc_venc_qbuf(struct file *file, void *priv,
- static int vidioc_venc_dqbuf(struct file *file, void *priv,
- 			     struct v4l2_buffer *buf)
- {
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 	int ret;
- 
- 	if (ctx->state == MTK_STATE_ABORT) {
-@@ -707,7 +706,7 @@ static int vidioc_venc_dqbuf(struct file *file, void *priv,
- static int vidioc_encoder_cmd(struct file *file, void *priv,
- 			      struct v4l2_encoder_cmd *cmd)
- {
--	struct mtk_vcodec_enc_ctx *ctx = fh_to_enc_ctx(priv);
-+	struct mtk_vcodec_enc_ctx *ctx = file_to_enc_ctx(file);
- 	struct vb2_queue *src_vq, *dst_vq;
- 	int ret;
- 
-diff --git a/drivers/media/platform/mediatek/vcodec/encoder/mtk_vcodec_enc_drv.h b/drivers/media/platform/mediatek/vcodec/encoder/mtk_vcodec_enc_drv.h
-index 402e7d31d03d1985ad5ff2831faffc5c31b63467..5b304a5512366ed7109469a3b8f90b240baf2a11 100644
---- a/drivers/media/platform/mediatek/vcodec/encoder/mtk_vcodec_enc_drv.h
-+++ b/drivers/media/platform/mediatek/vcodec/encoder/mtk_vcodec_enc_drv.h
-@@ -217,11 +217,6 @@ struct mtk_vcodec_enc_dev {
- 	struct mtk_vcodec_dbgfs dbgfs;
+diff --git a/drivers/media/platform/nvidia/tegra-vde/v4l2.c b/drivers/media/platform/nvidia/tegra-vde/v4l2.c
+index 0c50f4ff82e0a8f4935325d00691c58072182926..d94978ae2baf3394206ad7c3eb7a400aeee47cf7 100644
+--- a/drivers/media/platform/nvidia/tegra-vde/v4l2.c
++++ b/drivers/media/platform/nvidia/tegra-vde/v4l2.c
+@@ -46,9 +46,9 @@ static const struct v4l2_ctrl_config ctrl_cfgs[] = {
+ 	},
  };
  
--static inline struct mtk_vcodec_enc_ctx *fh_to_enc_ctx(struct v4l2_fh *fh)
--{
--	return container_of(fh, struct mtk_vcodec_enc_ctx, fh);
--}
--
- static inline struct mtk_vcodec_enc_ctx *file_to_enc_ctx(struct file *filp)
+-static inline struct tegra_ctx *fh_to_tegra_ctx(struct v4l2_fh *fh)
++static inline struct tegra_ctx *file_to_tegra_ctx(struct file *file)
  {
- 	return container_of(file_to_v4l2_fh(filp), struct mtk_vcodec_enc_ctx, fh);
+-	return container_of(fh, struct tegra_ctx, fh);
++	return container_of(file_to_v4l2_fh(file), struct tegra_ctx, fh);
+ }
+ 
+ static void tegra_set_control_data(struct tegra_ctx *ctx, void *data, u32 id)
+@@ -506,7 +506,7 @@ static int tegra_querycap(struct file *file, void *priv,
+ static int tegra_enum_decoded_fmt(struct file *file, void *priv,
+ 				  struct v4l2_fmtdesc *f)
+ {
+-	struct tegra_ctx *ctx = fh_to_tegra_ctx(priv);
++	struct tegra_ctx *ctx = file_to_tegra_ctx(file);
+ 
+ 	if (WARN_ON(!ctx->coded_fmt_desc))
+ 		return -EINVAL;
+@@ -522,7 +522,7 @@ static int tegra_enum_decoded_fmt(struct file *file, void *priv,
+ static int tegra_g_decoded_fmt(struct file *file, void *priv,
+ 			       struct v4l2_format *f)
+ {
+-	struct tegra_ctx *ctx = fh_to_tegra_ctx(priv);
++	struct tegra_ctx *ctx = file_to_tegra_ctx(file);
+ 
+ 	*f = ctx->decoded_fmt;
+ 	return 0;
+@@ -531,8 +531,8 @@ static int tegra_g_decoded_fmt(struct file *file, void *priv,
+ static int tegra_try_decoded_fmt(struct file *file, void *priv,
+ 				 struct v4l2_format *f)
+ {
++	struct tegra_ctx *ctx = file_to_tegra_ctx(file);
+ 	struct v4l2_pix_format_mplane *pix_mp = &f->fmt.pix_mp;
+-	struct tegra_ctx *ctx = fh_to_tegra_ctx(priv);
+ 	const struct tegra_coded_fmt_desc *coded_desc;
+ 	unsigned int i;
+ 
+@@ -571,7 +571,7 @@ static int tegra_try_decoded_fmt(struct file *file, void *priv,
+ static int tegra_s_decoded_fmt(struct file *file, void *priv,
+ 			       struct v4l2_format *f)
+ {
+-	struct tegra_ctx *ctx = fh_to_tegra_ctx(priv);
++	struct tegra_ctx *ctx = file_to_tegra_ctx(file);
+ 	struct vb2_queue *vq;
+ 	int err;
+ 
+@@ -593,7 +593,7 @@ static int tegra_s_decoded_fmt(struct file *file, void *priv,
+ static int tegra_enum_coded_fmt(struct file *file, void *priv,
+ 				struct v4l2_fmtdesc *f)
+ {
+-	struct tegra_ctx *ctx = fh_to_tegra_ctx(priv);
++	struct tegra_ctx *ctx = file_to_tegra_ctx(file);
+ 	const struct tegra_vde_soc *soc = ctx->vde->soc;
+ 
+ 	if (f->index >= soc->num_coded_fmts)
+@@ -607,7 +607,7 @@ static int tegra_enum_coded_fmt(struct file *file, void *priv,
+ static int tegra_g_coded_fmt(struct file *file, void *priv,
+ 			     struct v4l2_format *f)
+ {
+-	struct tegra_ctx *ctx = fh_to_tegra_ctx(priv);
++	struct tegra_ctx *ctx = file_to_tegra_ctx(file);
+ 
+ 	*f = ctx->coded_fmt;
+ 	return 0;
+@@ -631,7 +631,7 @@ static int tegra_try_coded_fmt(struct file *file, void *priv,
+ 			       struct v4l2_format *f)
+ {
+ 	struct v4l2_pix_format_mplane *pix_mp = &f->fmt.pix_mp;
+-	struct tegra_ctx *ctx = fh_to_tegra_ctx(priv);
++	struct tegra_ctx *ctx = file_to_tegra_ctx(file);
+ 	const struct tegra_vde_soc *soc = ctx->vde->soc;
+ 	int size = pix_mp->plane_fmt[0].sizeimage;
+ 	const struct tegra_coded_fmt_desc *desc;
+@@ -656,7 +656,7 @@ static int tegra_try_coded_fmt(struct file *file, void *priv,
+ static int tegra_s_coded_fmt(struct file *file, void *priv,
+ 			     struct v4l2_format *f)
+ {
+-	struct tegra_ctx *ctx = fh_to_tegra_ctx(priv);
++	struct tegra_ctx *ctx = file_to_tegra_ctx(file);
+ 	struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
+ 	const struct tegra_coded_fmt_desc *desc;
+ 	struct vb2_queue *peer_vq, *vq;
+@@ -718,7 +718,7 @@ static int tegra_s_coded_fmt(struct file *file, void *priv,
+ static int tegra_enum_framesizes(struct file *file, void *priv,
+ 				 struct v4l2_frmsizeenum *fsize)
+ {
+-	struct tegra_ctx *ctx = fh_to_tegra_ctx(priv);
++	struct tegra_ctx *ctx = file_to_tegra_ctx(file);
+ 	const struct tegra_coded_fmt_desc *fmt;
+ 
+ 	if (fsize->index)
+@@ -852,8 +852,8 @@ static int tegra_open(struct file *file)
+ 
+ static int tegra_release(struct file *file)
+ {
++	struct tegra_ctx *ctx = file_to_tegra_ctx(file);
+ 	struct v4l2_fh *fh = file_to_v4l2_fh(file);
+-	struct tegra_ctx *ctx = fh_to_tegra_ctx(fh);
+ 	struct tegra_vde *vde = ctx->vde;
+ 
+ 	v4l2_fh_del(fh, file);
 
 -- 
 2.49.0
