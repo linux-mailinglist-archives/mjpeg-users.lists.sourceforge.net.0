@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id D8A78B18EF4
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7A33DB18EF0
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=K7lMlSd66r7OS4agpWmosFc88axxu958vzBOJh6SGpU=; b=DrurWZ5fafxSLqiYtdmaMEzE6v
-	WDJM517Xd8jbaa5WwlXuMsyrMoeMe84ZKknPCrU1n0wJD1r147wlIXdCSkF9ovdxi1NwB4hmyrPHk
-	C5RPWAA+QwqG6B3USmX+uCi0J/KiNWD1/0Nv/MKkbPOtGI+3DRwtwMivdi7uRljemavk=;
+	bh=TEJqpAa7lGEKAamK/5LZ2fXEGPLK1QjwrgMw1cPabZA=; b=i51ksLuMr0wCUMucBQNBIzCMWw
+	pOFxJyh4/yu2tkfKDBUPBTLz+rz2h6QVkbffO5KKVKTn2A9XnhR0NdXhc43wlVHhlIV5upJJChvhb
+	98gWywLrDXv4aw5eHloZfQTXtafc28LOlmb4RanuL02w+NFhrjtDGmE9DuOkT2lBXqUQ=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChw-0006h9-NK;
-	Sat, 02 Aug 2025 13:55:32 +0000
+	id 1uiChv-0006f9-B3;
+	Sat, 02 Aug 2025 13:55:31 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8mP-0001AY-4c
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8m0-00019z-Bo
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:43:53 +0000
+ Sat, 02 Aug 2025 09:43:28 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=/Llv1fI0uT6DmpUWMCn5fuuhh8HoW1BKSHm4iiuLz88=; b=BjcEQF3m76xeDoVsUn/v2kq24w
- A6GsilxieNB2dxQ/5VsCvj5dTrY/fafabX7FW9qmJlh0HoFaCYrBqcpr+qGO7Qbq2d+/bc8GRlvOZ
- Mk9UjO4QAtuTG3PwC//vEb9qRQmW90R3Ye9+95Zv7WpLpCA+HN344TWy0Cfock0UUzdk=;
+ bh=zu38eHwF6cgFWlutg5tile+goZkpM4PT8CVDTMOyKGI=; b=GTHWRq5oc77eLW1sh9BVubkdzD
+ wQr40CLPqF37V/jaqOrNgTpHNL5CNaLdOawIxWS7XKctFaia+93Kr/qvxjvW/+GWi8IthWVlOfTIt
+ K7ZIvIdLbFjhZB0ll61nb31JidLSsb8/xHJfOb8J2B/wENnDVdYhxVTrA6WCUrytWows=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=/Llv1fI0uT6DmpUWMCn5fuuhh8HoW1BKSHm4iiuLz88=; b=DzAg8Nlg/xWp9FGf4wy7fV9+bj
- 0IBSSfjjZ/myNBbxaJabVvMOCe8gbhnH/osW7l3HBCJRLSoHJszu3w8ZgRR65oXXQ0LSQPHH+gxhx
- hIFsJq5ZdQoa2mJ1DSh6hron/c6xbzQxAGcJLi2XvjyC8oiYbg4loUFKLHGTnXInHrGw=;
+ bh=zu38eHwF6cgFWlutg5tile+goZkpM4PT8CVDTMOyKGI=; b=IXt+KOjC9zhDUF+AYlqDUsPryc
+ Z5zpZRn2IdZHSopkZGHz6j3gtEqQ9dg8jT7DOnCjCu/T3pM/bX3qmaEO8NNBMxdOWfJfQ5gbGyoMe
+ HNbz3F5FKQSkzuX6fxtjHxIJ0wQuZwOT2U+AipUe9D/SvL3wp9W00/0cn/NlbB5OkXMY=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8mO-0005uS-Ig for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:43:53 +0000
+ id 1ui8lz-0005sk-S9 for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:43:28 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id AFB0232DD;
- Sat,  2 Aug 2025 11:24:52 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 39A70330B;
+ Sat,  2 Aug 2025 11:25:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754126702;
- bh=J8TTwhJddKQQCi/2/sZ0CDO0sHlrqQEKhYX28Jwyu0w=;
+ s=mail; t=1754126710;
+ bh=dO9x6/VIVj6bTEsPK3lsquc2JUWgPxCjD+OB8gyY8EI=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=tM1rKmPr+fH2WfgPtZCZkJjqcu/w7/G+w6cz92yWycqLT5VpOjmPaMdaJfqzClFxZ
- 5ClT7kBVW481USto1xQwyh7d2yBzFeZ57f9JBGoGwhKuk1y/tiNNcIzdVEmbigKo+i
- EUoFs8UzINRMjvZZz5Sw6nhUJny7Gin1ywKuJ6B0=
+ b=kMU4DgdmjQKEw5APBDTpC7/xsmKu4JDUI/gfBamVSR4hVRyM6IzMlC5+RXI5DwMu9
+ dIgl0Xdc1+ZeL7bWgDQKKc3vqcqeRucizw8huGBTW6ZcjIv7CRc3vnPV6hFo5V1DhW
+ oUk0q7by7K/kLWQOfaXN01E8fmJjaym0xSbTUjhg=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:22:36 +0200
+Date: Sat, 02 Aug 2025 11:22:37 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-14-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-15-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,21 +141,21 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=3037;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=1073;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=hzBP7yKh2YjUysXVlLoN8hpVPYpgEzv7aW1XCIBS1I0=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj4AOSO5FBCFS9eBnS6KgpFdnr2VL0H2UfS/
- DqQ0HfrHvGJAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+AAKCRByNAaPFqFW
- PMm3D/oDVbxrw1/iCgPXqStUx8dfqUJ7S6vGmdOYo0/z1iksjHzSYi48UbwtNPUG7fuHA21WJ1+
- kiPRiGKCdr7IvMGFPn+j/bFV9E/BXMYyPGvHFiWXtgSOqAJotOWsw8+b5INDo9uPZMDDeMOFy0C
- zLQcJ3eXtVeuSokKmLg35b4Wrd+FPqOMgjTOLd34T47bVZpmQoDbBQIfCm7CXbW4gE3j9D64rMC
- odNDo8AGXh8fTYMNENAeaX8+x5JZ0aWkkTxhu4OZ/dlnmjhSj73sELzFd0fXHcaMhaMakMrK/iL
- zokSPIqRSpg0tDyguHqphECalSY8+YnokUIspV0vSEyhl7stnE4cLs3mlbY4+dh6QlNaSmlAf3l
- 64oz6QQbIt20Gpbq8xnXVgNweOalGy4qJ4QEcrx5XDGMYZbVZ5GY44CbagDYuC5Zj/CrI0eN4O5
- MfKakB5B6wFkn+t+p20yWBTnCDW2MFBuQVeHNCCJcm0vs6G8FgrBiMrueeIYm4ejGumx2u+je3Y
- WoQxW0Cb9mtc6ZDqQfo0qZSej9IbCTT/UPvbcjJuLxbmi4zZn9yYpAZR5AVslfu8ZAXjvw4k/wh
- FznYp7H1Ps4G02wLUtxgZNLFh9Jl/HWXlDKawTwpi1Y9HJXZPnI7IbQZ3dd7nGmJEpFneZx4LR+
- Q6bzQiwDKqZ7sEA==
+ bh=0VP/r2vlVhnFVYKofY26Y91mhgecgJPyrhx9vTNdS8M=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj52mJZbEKi2xzPTCbRBAU/vdaACQYQlG+Xy
+ SMzPz1qhe2JAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+QAKCRByNAaPFqFW
+ PB2GEADA7hMCuMVfeDlEpQ62CtlmzW48xyXjOFzVROOd3wLvASETZNeK3+0Q6FLDTI6TGFb/zco
+ lm6i6s+vWnrcZXkABPvZ8X3GyoNhSEZt8omQCyWjX+JN0x3DtRaHfIbluyIrSUL3MlIX17uG86e
+ 8VoqzaLuLF9026rG4XoVdFawhCO+LTD2NjKYSvnLJ+7pTYmPAvHYGyrG/jWZqOSAYHQStI5IRSr
+ RJnkUgRuvf55ehCgVhwg5t4Py74KWzCXU9qzjCszWEgyx5nyRb+/DSRVtx/vvwNjf9k7A9q8aTU
+ 6oR2TIlPV6Xo6VEzJJLlhvpjpbyzOhbDx8lcWtHNH/dm98xNWPB96alwum/oP1n+8bwObfjDq/Q
+ g1fhdUfYPTsRj3HftB0ACQ1GUc6M1IB49/f54llbyQB/DL4Aljr79EG5+LjJfhmv+vj4P0Zz0SQ
+ FftkiNVi7VY6Z0ZOx4rC2oyyCSb+8DF9AnUVqZb/ArUZZGesBqVEy0U3OazFNeAOhTryUCDEGV9
+ BoMDZ3I5B3vBt6UGMDhq6T7lpEPz5WV3HdjiU+uJev+S8HUL7Yn3OAblvyv7ItfIgMdw5SFmRld
+ aqHQOX5LVKQbyRI2QukK/0Imm58hWZQFye8fdAG39IMFR8AacdA3nP+YmKSqOFc6DHUwR89p72O
+ gxMmoyNTVU3+8LA==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
@@ -166,9 +166,10 @@ X-Spam-Report: Spam detection software,
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  Content preview:  From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
- The v4l2_fh initialized and added in vpu_v4l2_open() is delete and cleaned
- up when the last reference to the vpu_inst is released. This may happen later
- than at vpu_v4l2_close() time. 
+ The visl_v4l2fh_to_ctx() function is unused. Drop it. Signed-off-by: Laurent
+ Pinchart <laurent.pinchart@ideasonboard.com> Signed-off-by: Jacopo Mondi
+ <jacopo.mondi@ideasonboard.com> --- drivers/media/test-drivers/visl/visl.h
+ | 5 ----- 1 file changed, 5 d [...] 
  Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
@@ -179,10 +180,10 @@ X-Spam-Report: Spam detection software,
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1ui8mO-0005uS-Ig
+X-Headers-End: 1ui8lz-0005sk-S9
 X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 14/65] media: amphion: Delete v4l2_fh
- synchronously in .release()
+Subject: [Mjpeg-users] [PATCH 15/65] media: visl: Drop visl_v4l2fh_to_ctx()
+ function
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -210,83 +211,30 @@ Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
 From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 
-The v4l2_fh initialized and added in vpu_v4l2_open() is delete and
-cleaned up when the last reference to the vpu_inst is released. This may
-happen later than at vpu_v4l2_close() time.
-
-Not deleting and cleaning up the v4l2_fh when closing the file handle to
-the video device is not ideal, as the v4l2_fh will still be present in
-the video device's fh_list, and will store a copy of events queued to
-the video device. There may also be other side effects of keeping alive
-an object that represents an open file handle after the file handle is
-closed.
-
-The v4l2_fh instance is embedded in the vpu_inst structure, and is
-accessed in two different ways:
-
-- in vpu_notify_eos() and vpu_notify_source_change(), to queue V4L2
-  events to the file handle ; and
-
-- through the driver to access the v4l2_fh.m2m_ctx pointer.
-
-The v4l2_fh.m2m_ctx pointer is not touched by v4l2_fh_del() and
-v4l2_fh_exit(). It is set to NULL by the driver when closing the file
-handle, in vpu_v4l2_close().
-
-The vpu_notify_eos() and vpu_notify_source_change() functions are called
-in vpu_set_last_buffer_dequeued() and vdec_handle_resolution_change()
-respectively, only if the v4l2_fh.m2m_ctx pointer is not NULL. There is
-therefore a guarantee that no new event will be queued to the v4l2_fh
-after vpu_v4l2_close() destroys the m2m_ctx.
-
-The vpu_notify_eos() function is also called from vpu_vb2_buf_finish(),
-which is guaranteed to be called for all queued buffers when
-vpu_v4l2_close() calls v4l2_m2m_ctx_release(), and will not be called
-later.
-
-It is therefore safe to assume that the driver will not touch the
-v4l2_fh, except to check the m2m_ctx pointer, after vpu_v4l2_close()
-destroys the m2m_ctx. We can safely delete and cleanup the v4l2_fh
-synchronously in vpu_v4l2_close().
+The visl_v4l2fh_to_ctx() function is unused. Drop it.
 
 Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/platform/amphion/vpu_v4l2.c | 7 +++++--
- 1 file changed, 5 insertions(+), 2 deletions(-)
+ drivers/media/test-drivers/visl/visl.h | 5 -----
+ 1 file changed, 5 deletions(-)
 
-diff --git a/drivers/media/platform/amphion/vpu_v4l2.c b/drivers/media/platform/amphion/vpu_v4l2.c
-index 306d94e0f8e79faaacfa35b28e5786860f7bd1ca..57ca6262bb04b356a85e217ef51cfb13cb9a0a36 100644
---- a/drivers/media/platform/amphion/vpu_v4l2.c
-+++ b/drivers/media/platform/amphion/vpu_v4l2.c
-@@ -724,8 +724,6 @@ static int vpu_v4l2_release(struct vpu_inst *inst)
- 
- 	v4l2_ctrl_handler_free(&inst->ctrl_handler);
- 	mutex_destroy(&inst->lock);
--	v4l2_fh_del(&inst->fh);
--	v4l2_fh_exit(&inst->fh);
- 
- 	call_void_vop(inst, cleanup);
- 
-@@ -794,6 +792,8 @@ int vpu_v4l2_open(struct file *file, struct vpu_inst *inst)
- 
- 	return 0;
- error:
-+	v4l2_fh_del(&inst->fh);
-+	v4l2_fh_exit(&inst->fh);
- 	vpu_inst_put(inst);
- 	return ret;
+diff --git a/drivers/media/test-drivers/visl/visl.h b/drivers/media/test-drivers/visl/visl.h
+index ad3d0ab791d6aec4fb120dcfe86000e498f6713d..2971e8b37ff6660f68b5f4bbf199e0f8657f6686 100644
+--- a/drivers/media/test-drivers/visl/visl.h
++++ b/drivers/media/test-drivers/visl/visl.h
+@@ -166,11 +166,6 @@ static inline struct visl_ctx *visl_file_to_ctx(struct file *file)
+ 	return container_of(file_to_v4l2_fh(file), struct visl_ctx, fh);
  }
-@@ -813,6 +813,9 @@ int vpu_v4l2_close(struct file *file)
- 	call_void_vop(inst, release);
- 	vpu_inst_unlock(inst);
  
-+	v4l2_fh_del(&inst->fh);
-+	v4l2_fh_exit(&inst->fh);
-+
- 	vpu_inst_unregister(inst);
- 	vpu_inst_put(inst);
- 
+-static inline struct visl_ctx *visl_v4l2fh_to_ctx(struct v4l2_fh *v4l2_fh)
+-{
+-	return container_of(v4l2_fh, struct visl_ctx, fh);
+-}
+-
+ void *visl_find_control_data(struct visl_ctx *ctx, u32 id);
+ struct v4l2_ctrl *visl_find_control(struct visl_ctx *ctx, u32 id);
+ u32 visl_control_num_elems(struct visl_ctx *ctx, u32 id);
 
 -- 
 2.49.0
