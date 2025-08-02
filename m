@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id DF12AB18ECB
-	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7E066B18EE8
+	for <lists+mjpeg-users@lfdr.de>; Sat,  2 Aug 2025 15:55:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
 	List-Id:Subject:To:In-Reply-To:References:Message-Id:MIME-Version:Date:From:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=q0WKEz8VnZyP1rtFtA/vJRGpx7PU5KrLxbExt42xAe8=; b=MW1EFsEcM3qp0bKoUdBPdjbYNC
-	yJsKVcsF69fYrcuzDBc3d0JVwjKLnwgBHXnTToQ2p4KlZHwJ6bgbU2nIiIt9r/RYQy0fLFC7R0sZQ
-	mepN3SN/pfbIiuZKr0nynsdCOmbv9scstzj6QpoqsaAsBUdtutkNYddNY3TZIRvZXnlY=;
+	bh=AsQT69cyeGxgB4mCeM7fyYUVZoWuA9yskGYGdNCWyqg=; b=gGic2Nq7Mb8u4YIsNRg62YkTXv
+	wT/Sg+PEe1fn8/hLTvliRgeYi7WZs75u+AEKdx1h6xDeZ4BWM5VWg8QIcC+8UK+KQzqtLXvkJg8w8
+	l4GzRaTuiw0omWNZgxbavUBR5oGV5EIlQqEGSpMOjAkVbcJgDIJYMbBVsfsorjcY1Z6A=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1uiChi-0006Qw-TJ;
-	Sat, 02 Aug 2025 13:55:18 +0000
+	id 1uiChs-0006b3-Bb;
+	Sat, 02 Aug 2025 13:55:28 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8gs-0000Q3-4X
+ (envelope-from <jacopo.mondi@ideasonboard.com>) id 1ui8jO-0000aE-30
  for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:38:10 +0000
+ Sat, 02 Aug 2025 09:40:46 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Cc:To:In-Reply-To:References:Message-Id:
  Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:Date:From:Sender:
  Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
  :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=FtClegwhGOj3TUULgu/KStK0IU0pgse9s+yd429MuSw=; b=Lf57ZYcXT091wGKJyULtQqCnqt
- bi2GlC0wTsys8bQ4xC1j+KfBVUq1GtKlGMd9PaWaDbVDlYYmcoulnp+jFir6wIN8wjMhXSQb83q4E
- 6hFp2QVJt4n9ns6pwdG43bmMEB+RNDYZ43WA7CYiK2G+Wvx9RtR5ZVZUwIuHei+Nl2R8=;
+ bh=AgSeUqkC6t2fiaQ1H871ZMuJZDvSAYAUq5Sk2XPucv8=; b=MwlQsYRAJ7XslKJFQkqh/ucGaJ
+ 1kJI3idyaMBfOSIaWiIPHavbKqZUyssEHcHVxkuT6+JKggEY+HIjSxhk2q/Mf6Z5FQTi4Y6ccWvbw
+ 0y9UrtXNa+BUKUr6JEww1tpcHmi8EHU/UBYDlb8uBdgMSR7TSdg9UQFnWfabvzju9p1Y=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Cc:To:In-Reply-To:References:Message-Id:Content-Transfer-Encoding:
@@ -40,29 +40,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=FtClegwhGOj3TUULgu/KStK0IU0pgse9s+yd429MuSw=; b=id4Dqq3Wq1+kLP14ldx8kfXw5v
- g8QtiC2l1d9E0NKMA1ft5uz1QGvZE9aJrHjeFODecS+3e0rZjUfx/o/+spObv7c3BVMXK/tuBfpAo
- vWgzzNRe95nO3rQjZyGLYDnj3bTmebVaW8VQKSxkCZOxA5LTpPNwQhnmtwBW/ueGxDjE=;
+ bh=AgSeUqkC6t2fiaQ1H871ZMuJZDvSAYAUq5Sk2XPucv8=; b=GEfx6pGi4my42SL/vBZpEErrEj
+ imhKTEuaOlVaS3O8sDy9GHqWsEdCECPZgCdjtg/8NQL/c7HRsOk/vxVLsshjxT4vU13CYQlrok56a
+ qetszMkHd+OQ4WMYRJ5FsA2vo5ARK/Dfrk7OlAw7u8BXDL9GocFvfIn127RfrZYKHchc=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ui8gr-0005Vf-5q for mjpeg-users@lists.sourceforge.net;
- Sat, 02 Aug 2025 09:38:09 +0000
+ id 1ui8jN-0005hQ-EA for mjpeg-users@lists.sourceforge.net;
+ Sat, 02 Aug 2025 09:40:45 +0000
 Received: from [192.168.0.172] (mob-5-90-138-121.net.vodafone.it
  [5.90.138.121])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id CC5683C6D;
- Sat,  2 Aug 2025 11:28:22 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 0FD193C9F;
+ Sat,  2 Aug 2025 11:28:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754126912;
- bh=Yp1jjNiETSRS2rD3cxKSnrkZYfH6FttVwhmOY8Rcezk=;
+ s=mail; t=1754126925;
+ bh=SiP0pV3uc5ehXCmjBOQ+pI87XyOKqpx8plOTytPDacg=;
  h=From:Date:Subject:References:In-Reply-To:To:Cc:From;
- b=oK65F9MO8UcjP/6hNhgPAYoZhlvkq+dE7764WQSpH/hkcjX6Rb/KkkY+fdKSTjt/w
- vphJVC/FyJaBkl11e29u1Z0eoaSgGKTIkW1Jj3s18ZoJGyaAy73X9YcFntU/aVGsMH
- /iZO1twyf28r7e1D1UCrv+Y0xTXqjwXq+IpXKl2Q=
+ b=San+pDECzI88V7mT/YALl0VxYF7B/l+IylhbNl1u7nEBfG63br+nLorQpng0+of/H
+ WTXMeTOHHqH/KLsDJsMUnPmBrIWFB50jsfcJVQlhTNjhjMVd+X1TGdiHQmF+LBAlb9
+ aR7UsSdVcYen71YQY8NoGVoCRLGdVOINtcFEVK8M=
 From: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Date: Sat, 02 Aug 2025 11:22:57 +0200
+Date: Sat, 02 Aug 2025 11:22:58 +0200
 MIME-Version: 1.0
-Message-Id: <20250802-media-private-data-v1-35-eb140ddd6a9d@ideasonboard.com>
+Message-Id: <20250802-media-private-data-v1-36-eb140ddd6a9d@ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 In-Reply-To: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
 To: Mauro Carvalho Chehab <mchehab@kernel.org>, 
@@ -141,21 +141,21 @@ To: Mauro Carvalho Chehab <mchehab@kernel.org>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>, 
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 X-Mailer: b4 0.14.2
-X-Developer-Signature: v=1; a=openpgp-sha256; l=4214;
+X-Developer-Signature: v=1; a=openpgp-sha256; l=3371;
  i=jacopo.mondi@ideasonboard.com; h=from:subject:message-id;
- bh=Yp1jjNiETSRS2rD3cxKSnrkZYfH6FttVwhmOY8Rcezk=;
- b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj7JJ72BFggMdAsaEou9LTKKektiwy1ugItg
- 8aerb8YmN2JAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+wAKCRByNAaPFqFW
- PJHtD/9WyqYuwWJOfh5g1VWiGjbVTpkIX1b5Uy2x8MLlx18cgSLdj6+x0f3DRopLkV84ATY/RtQ
- SK5fk+ANG0EEnfKcLyRzCTvwxZxWeHrA1GEK3tL8oLQ2K4D8Wdagi+UKvyGctv1Bf3dWz6/yEB/
- +w5HKX+Lzcu05OXTc/1vscZyEtMlghlNRqXnUAHnqNpPHfGIce5jL35BdelLLgMnkrBGHR3KmVD
- 4kMad1YfWVBYAHWYaQ67XSrnW+gBZfVJ7wARnBFv7ty6GzdLgLaWTg4j26wUUScYyIoDmVRwiw5
- nu0iMGSqrJVJQoKr6v/RQLJKnzG61raDiylsrMrnqyc/J9WaqyvraNo4aqlu2UMFJwZgKFKXDtV
- R9oYbRdEIMmkD6MOkJO9E54OrbDgACoNAPBbpqOu3YUxs0aaSGh1Yk+qlV4uF517fqQ+CnUj1Qo
- OYwd67H7yXEFNYBtND7I79bBFukORypozZATF7RHkA8N/cI4aR1f6hKGdPxpqDN0J5sZKTeA601
- uKd/AtqDWuNgOmlehluKCWwIuJDAHQZWX/YAXbsZAMVRWOHNuazhbs9VRgk0s3Csk6g956oz/oP
- w95XKEOp39XUgt08MC/mLmzTY/mCwS1I5rOl5p4mDsb2Y2OpI11ZzG8bidnmbz6do8Q57zSEqKH
- htnfly2T+xeCKBQ==
+ bh=SiP0pV3uc5ehXCmjBOQ+pI87XyOKqpx8plOTytPDacg=;
+ b=owEBbQKS/ZANAwAKAXI0Bo8WoVY8AcsmYgBojdj7rzoS7q8iiibhw66Yirn2/oG1c8uoKKblm
+ P50PaQA172JAjMEAAEKAB0WIQS1xD1IgJogio9YOMByNAaPFqFWPAUCaI3Y+wAKCRByNAaPFqFW
+ POLLD/40E/BbhBjjzsyc19BPpJfqJe0r65dUiQbnbXZ3LgvyF1h2ul+hKU/fqvksQk1bq1ZbsfN
+ 6owSmRIx4H0FnCJBIhSgnO120esGna89Qtmsbx2qEFYRY09ZPg2yWkDozlFtrbhEPBqjwSj0v4p
+ +43Y1catQVyppG3ZzUQaykBE4yjxkA1JbGM8Jz2QJ0wrUAl8uqF2ym5gpe4AyaPYbCGa01o+oOa
+ LCvsjzHHZmmAGik2wIMae4UpHiLycx5R+3yRgjVTN7dUb9JNdAHSVfgJB8G/6gqOrDWX4XFcQw0
+ VByW7JksnjYBsU38s+2e5Fp0sOfYn+pPVNRDX1vVcM3MwAi6TCIY3YVfLoCwo8qFOkZNqX2osFZ
+ NbFvecCKIBzhz1NJKPoCKKQ0+XFWKm9QhILFXei++xKR2oQlgmIfNnsZ9c+wzNvMJkh+HcrMn3L
+ nPlrbBu8DrN2SdKfUTodgpl1Iu/DDXveB9WDlgZogU3csDxHBscgBgTm728lJG7CnY9DNAjGwai
+ 2Rru7p4yZIHRHUg8wCdEef7swc6/d1tboP38PG3y1Q8mQwC/uUOQa0RRJXPTT4xtAKJ10xWnw/U
+ UIcJgH+LwN5mUoFyiSCqIoe23/Xrax2pXFhoMrTwNDPZiATmoTxP0B2QBeTXbq+FfTpkqu0SDec
+ 2l1n9uL3CHjcg6A==
 X-Developer-Key: i=jacopo.mondi@ideasonboard.com; a=openpgp;
  fpr=72392EDC88144A65C701EA9BA5826A2587AD026B
 X-Spam-Score: -0.2 (/)
@@ -180,9 +180,13 @@ X-Spam-Report: Spam detection software,
  domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
-X-Headers-End: 1ui8gr-0005Vf-5q
+ 0.0 RCVD_IN_DNSWL_BLOCKED  RBL: ADMINISTRATOR NOTICE: The query to DNSWL
+ was blocked.  See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#DnsBlocklists-dnsbl-block
+ for more information. [213.167.242.64 listed in list.dnswl.org]
+X-Headers-End: 1ui8jN-0005hQ-EA
 X-Mailman-Approved-At: Sat, 02 Aug 2025 13:55:15 +0000
-Subject: [Mjpeg-users] [PATCH 35/65] media: mtk_mdp_m2m: Access v4l2_fh from
+Subject: [Mjpeg-users] [PATCH 36/65] media: mtk: mdp3: Access v4l2_fh from
  file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -219,99 +223,79 @@ While at it, remove the now unused fh_to_ctx() macro.
 
 Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 ---
- drivers/media/platform/mediatek/mdp/mtk_mdp_m2m.c | 21 ++++++++-------------
- 1 file changed, 8 insertions(+), 13 deletions(-)
+ drivers/media/platform/mediatek/mdp3/mtk-mdp3-m2m.c | 17 ++++++-----------
+ 1 file changed, 6 insertions(+), 11 deletions(-)
 
-diff --git a/drivers/media/platform/mediatek/mdp/mtk_mdp_m2m.c b/drivers/media/platform/mediatek/mdp/mtk_mdp_m2m.c
-index 3d836b5efa3807e4dc882956040014e244eeb660..03c07948dfdd07c6395c391ccad1788b08b1a867 100644
---- a/drivers/media/platform/mediatek/mdp/mtk_mdp_m2m.c
-+++ b/drivers/media/platform/mediatek/mdp/mtk_mdp_m2m.c
-@@ -348,11 +348,6 @@ static int mtk_mdp_try_crop(struct mtk_mdp_ctx *ctx, u32 type,
- 	return 0;
- }
+diff --git a/drivers/media/platform/mediatek/mdp3/mtk-mdp3-m2m.c b/drivers/media/platform/mediatek/mdp3/mtk-mdp3-m2m.c
+index 2e0619542d2a9ad73457853e4f5008e6eb130cdd..9ef956b565a791429a477dc96567453cb189d817 100644
+--- a/drivers/media/platform/mediatek/mdp3/mtk-mdp3-m2m.c
++++ b/drivers/media/platform/mediatek/mdp3/mtk-mdp3-m2m.c
+@@ -10,11 +10,6 @@
+ #include <media/videobuf2-dma-contig.h>
+ #include "mtk-mdp3-m2m.h"
  
--static inline struct mtk_mdp_ctx *fh_to_ctx(struct v4l2_fh *fh)
+-static inline struct mdp_m2m_ctx *fh_to_ctx(struct v4l2_fh *fh)
 -{
--	return container_of(fh, struct mtk_mdp_ctx, fh);
+-	return container_of(fh, struct mdp_m2m_ctx, fh);
 -}
 -
- static inline struct mtk_mdp_ctx *file_to_ctx(struct file *filp)
+ static inline struct mdp_m2m_ctx *file_to_ctx(struct file *filp)
  {
- 	return container_of(file_to_v4l2_fh(filp), struct mtk_mdp_ctx, fh);
-@@ -594,7 +589,7 @@ static const struct vb2_ops mtk_mdp_m2m_qops = {
- static int mtk_mdp_m2m_querycap(struct file *file, void *fh,
- 				struct v4l2_capability *cap)
+ 	return container_of(file_to_v4l2_fh(filp), struct mdp_m2m_ctx, fh);
+@@ -290,7 +285,7 @@ static int mdp_m2m_querycap(struct file *file, void *fh,
+ static int mdp_m2m_enum_fmt_mplane(struct file *file, void *fh,
+ 				   struct v4l2_fmtdesc *f)
  {
--	struct mtk_mdp_ctx *ctx = fh_to_ctx(fh);
-+	struct mtk_mdp_ctx *ctx = file_to_ctx(file);
- 	struct mtk_mdp_dev *mdp = ctx->mdp_dev;
+-	struct mdp_m2m_ctx *ctx = fh_to_ctx(fh);
++	struct mdp_m2m_ctx *ctx = file_to_ctx(file);
  
- 	strscpy(cap->driver, MTK_MDP_MODULE_NAME, sizeof(cap->driver));
-@@ -632,7 +627,7 @@ static int mtk_mdp_m2m_enum_fmt_vid_out(struct file *file, void *priv,
- static int mtk_mdp_m2m_g_fmt_mplane(struct file *file, void *fh,
- 				    struct v4l2_format *f)
- {
--	struct mtk_mdp_ctx *ctx = fh_to_ctx(fh);
-+	struct mtk_mdp_ctx *ctx = file_to_ctx(file);
- 	struct mtk_mdp_frame *frame;
- 	struct v4l2_pix_format_mplane *pix_mp;
- 	int i;
-@@ -671,7 +666,7 @@ static int mtk_mdp_m2m_g_fmt_mplane(struct file *file, void *fh,
- static int mtk_mdp_m2m_try_fmt_mplane(struct file *file, void *fh,
- 				      struct v4l2_format *f)
- {
--	struct mtk_mdp_ctx *ctx = fh_to_ctx(fh);
-+	struct mtk_mdp_ctx *ctx = file_to_ctx(file);
- 
- 	if (!mtk_mdp_try_fmt_mplane(ctx, f))
- 		return -EINVAL;
-@@ -681,7 +676,7 @@ static int mtk_mdp_m2m_try_fmt_mplane(struct file *file, void *fh,
- static int mtk_mdp_m2m_s_fmt_mplane(struct file *file, void *fh,
- 				    struct v4l2_format *f)
- {
--	struct mtk_mdp_ctx *ctx = fh_to_ctx(fh);
-+	struct mtk_mdp_ctx *ctx = file_to_ctx(file);
- 	struct vb2_queue *vq;
- 	struct mtk_mdp_frame *frame;
- 	struct v4l2_pix_format_mplane *pix_mp;
-@@ -727,7 +722,7 @@ static int mtk_mdp_m2m_s_fmt_mplane(struct file *file, void *fh,
- static int mtk_mdp_m2m_reqbufs(struct file *file, void *fh,
- 			       struct v4l2_requestbuffers *reqbufs)
- {
--	struct mtk_mdp_ctx *ctx = fh_to_ctx(fh);
-+	struct mtk_mdp_ctx *ctx = file_to_ctx(file);
- 
- 	return v4l2_m2m_reqbufs(file, ctx->m2m_ctx, reqbufs);
+ 	return mdp_enum_fmt_mplane(ctx->mdp_dev, f);
  }
-@@ -735,7 +730,7 @@ static int mtk_mdp_m2m_reqbufs(struct file *file, void *fh,
- static int mtk_mdp_m2m_streamon(struct file *file, void *fh,
- 				enum v4l2_buf_type type)
+@@ -298,7 +293,7 @@ static int mdp_m2m_enum_fmt_mplane(struct file *file, void *fh,
+ static int mdp_m2m_g_fmt_mplane(struct file *file, void *fh,
+ 				struct v4l2_format *f)
  {
--	struct mtk_mdp_ctx *ctx = fh_to_ctx(fh);
-+	struct mtk_mdp_ctx *ctx = file_to_ctx(file);
- 	int ret;
+-	struct mdp_m2m_ctx *ctx = fh_to_ctx(fh);
++	struct mdp_m2m_ctx *ctx = file_to_ctx(file);
+ 	struct mdp_frame *frame;
+ 	struct v4l2_pix_format_mplane *pix_mp;
  
- 	if (!mtk_mdp_ctx_state_is_set(ctx, MTK_MDP_VPU_INIT)) {
-@@ -773,8 +768,8 @@ static inline bool mtk_mdp_is_target_crop(u32 target)
- static int mtk_mdp_m2m_g_selection(struct file *file, void *fh,
- 				       struct v4l2_selection *s)
+@@ -316,7 +311,7 @@ static int mdp_m2m_g_fmt_mplane(struct file *file, void *fh,
+ static int mdp_m2m_s_fmt_mplane(struct file *file, void *fh,
+ 				struct v4l2_format *f)
  {
-+	struct mtk_mdp_ctx *ctx = file_to_ctx(file);
- 	struct mtk_mdp_frame *frame;
--	struct mtk_mdp_ctx *ctx = fh_to_ctx(fh);
+-	struct mdp_m2m_ctx *ctx = fh_to_ctx(fh);
++	struct mdp_m2m_ctx *ctx = file_to_ctx(file);
+ 	struct mdp_frame *frame = ctx_get_frame(ctx, f->type);
+ 	struct mdp_frame *capture;
+ 	const struct mdp_format *fmt;
+@@ -359,7 +354,7 @@ static int mdp_m2m_s_fmt_mplane(struct file *file, void *fh,
+ static int mdp_m2m_try_fmt_mplane(struct file *file, void *fh,
+ 				  struct v4l2_format *f)
+ {
+-	struct mdp_m2m_ctx *ctx = fh_to_ctx(fh);
++	struct mdp_m2m_ctx *ctx = file_to_ctx(file);
+ 
+ 	if (!mdp_try_fmt_mplane(ctx->mdp_dev, f, &ctx->curr_param, ctx->id))
+ 		return -EINVAL;
+@@ -370,7 +365,7 @@ static int mdp_m2m_try_fmt_mplane(struct file *file, void *fh,
+ static int mdp_m2m_g_selection(struct file *file, void *fh,
+ 			       struct v4l2_selection *s)
+ {
+-	struct mdp_m2m_ctx *ctx = fh_to_ctx(fh);
++	struct mdp_m2m_ctx *ctx = file_to_ctx(file);
+ 	struct mdp_frame *frame;
  	bool valid = false;
  
- 	if (s->type == V4L2_BUF_TYPE_VIDEO_CAPTURE) {
-@@ -840,8 +835,8 @@ static int mtk_mdp_check_scaler_ratio(struct mtk_mdp_variant *var, int src_w,
- static int mtk_mdp_m2m_s_selection(struct file *file, void *fh,
- 				   struct v4l2_selection *s)
+@@ -422,7 +417,7 @@ static int mdp_m2m_g_selection(struct file *file, void *fh,
+ static int mdp_m2m_s_selection(struct file *file, void *fh,
+ 			       struct v4l2_selection *s)
  {
-+	struct mtk_mdp_ctx *ctx = file_to_ctx(file);
- 	struct mtk_mdp_frame *frame;
--	struct mtk_mdp_ctx *ctx = fh_to_ctx(fh);
- 	struct v4l2_rect new_r;
- 	struct mtk_mdp_variant *variant = ctx->mdp_dev->variant;
- 	int ret;
+-	struct mdp_m2m_ctx *ctx = fh_to_ctx(fh);
++	struct mdp_m2m_ctx *ctx = file_to_ctx(file);
+ 	struct mdp_frame *frame = ctx_get_frame(ctx, s->type);
+ 	struct mdp_frame *capture;
+ 	struct v4l2_rect r;
 
 -- 
 2.49.0
