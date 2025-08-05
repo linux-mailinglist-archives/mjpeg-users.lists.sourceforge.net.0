@@ -2,193 +2,101 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id A5E78B1BFFB
+	by mail.lfdr.de (Postfix) with ESMTPS id 893EEB1BFFA
 	for <lists+mjpeg-users@lfdr.de>; Wed,  6 Aug 2025 07:34:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:
-	List-Id:Subject:In-Reply-To:MIME-Version:References:Message-ID:To:From:Date:
+	List-Id:Subject:Message-ID:Date:To:From:References:In-Reply-To:MIME-Version:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=TEO0iwU7yQ9qOh4uvW/PbN5tU/hJ+9CEgAh/jnMyBjw=; b=YCDCcSf8JDr+jil5t2LrBqvA+0
-	uhgEGhDKkdjUd3MGYVdQ3+EaaQn4oD1llAuDvPvhsGW44TQopnZgKyVigEzb4RDcbgPYE0Fl6j+Fs
-	8fqGkNtyP6oKLfGHNlewE9ORbXoD4xadJTk3fTu+uZ/t4znY7p/TOBuLzUO9LTovPeEM=;
+	bh=IP6zwRXq3pDwtvV3zmzZTfJs3XAb3X/76mtcD9iaZcc=; b=ORZREONSTiQjun11qRUeoIWE3n
+	BPX7fxPyNzP/6Y6jJwyzgiEz+Xb6hXsd+M/3uUHE+beA5RovI9oB/21sVsgfYWA7GiklDqib/J61m
+	1tgYjyeV7qtEYNWAIWw/vwgtO8u+XvuJ5DumodVxDRMhFRltI3GjuQ+/KtQAhoiHdu9o=;
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1ujWnY-0006Mr-LB;
+	id 1ujWnY-0006Mx-UI;
 	Wed, 06 Aug 2025 05:34:49 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <mtr@pengutronix.de>) id 1ujCac-0002wD-RM
+ (envelope-from <kieran.bingham@ideasonboard.com>) id 1ujESE-0003gu-BN
  for mjpeg-users@lists.sourceforge.net;
- Tue, 05 Aug 2025 08:00:06 +0000
+ Tue, 05 Aug 2025 09:59:35 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=In-Reply-To:Content-Type:MIME-Version:References:
- Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:
+ d=sourceforge.net; s=x; h=Message-ID:Date:To:Cc:From:Subject:References:
+ In-Reply-To:Content-Transfer-Encoding:MIME-Version:Content-Type:Sender:
+ Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
+ :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=Z0+kVcQ30B6s2dMupE/DYDbmCCyyFje/ABslI99ShoQ=; b=USOSmRKkmwTsm1f6bQ4ZiDWDl5
+ KkUpixphmkmhjdMu37Wi0aALxe1giEMYakZMwmtBLuL7z9l5vDTFzkPPRQqglgPHjelWwYR3U9wck
+ Q/ER/zoYFlO+FmV8+/u7dveZmCMYAahNh+FgnTToUkhFG3SAH5mZ8SKIvBgaq07BHpDo=;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
+ ; h=Message-ID:Date:To:Cc:From:Subject:References:In-Reply-To:
+ Content-Transfer-Encoding:MIME-Version:Content-Type:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Q4Kz+0M++8wkHThtIz8edv/c+YcSRG12fi9jswJR/MU=; b=ME3LD3UFo/A7JxiSF4yIyKiAUR
- XmkzQZ/zZqOcS1gv9xnX/uU8bfVilGAjoByDUJGoFQbAV+lvpiek1MCqVKZdG0O6rvDGXjrsrpjoe
- s9ALRAnSMTYKg8dUy6iTlyODDRmNtKmeheS7niIVNTbnVVfBrqUpa7yZaegAl/nn4GoY=;
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
- ;
- h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:Subject:Cc:To
- :From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=Q4Kz+0M++8wkHThtIz8edv/c+YcSRG12fi9jswJR/MU=; b=ORj3GhZxx3KTg/xtq6Lgbj5uH/
- x8OhuSpzwz0fsAYfmdG6sMWiWktPvtZuSb5v0KBqiHEDYVQ/We/1NvuWzdo2caexWEDt0ZDRrMHfL
- YxHkDysSx+nwVfiuPZQDggO3gpQz2LcU5yg4W1wZacOraKw2+warQznnFaLaySaHI++U=;
-Received: from metis.whiteo.stw.pengutronix.de ([185.203.201.7])
+ bh=Z0+kVcQ30B6s2dMupE/DYDbmCCyyFje/ABslI99ShoQ=; b=SSRsk+epj2ugs8mBCZgkcl/MIS
+ 6gfceCI9V67x/ZgeuiGcsfunJoJ6RETSgisY29NbyiCzUmqEmUWVT+I1X9oOXNdJD6MsRkcu/dTwN
+ 7uAzEkjadpDOXjl7LXhqM6FIcw/hlxINMZfOVcv+rnKa1g7HysU0YMkNx+C91Yp9M6J0=;
+Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ujCac-0000WJ-2G for mjpeg-users@lists.sourceforge.net;
- Tue, 05 Aug 2025 08:00:06 +0000
-Received: from drehscheibe.grey.stw.pengutronix.de ([2a0a:edc0:0:c01:1d::a2])
- by metis.whiteo.stw.pengutronix.de with esmtps
- (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
- (envelope-from <mtr@pengutronix.de>)
- id 1ujCGr-0005yg-GC; Tue, 05 Aug 2025 09:39:41 +0200
-Received: from pty.whiteo.stw.pengutronix.de ([2a0a:edc0:2:b01:1d::c5])
- by drehscheibe.grey.stw.pengutronix.de with esmtps (TLS1.3) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.96)
- (envelope-from <mtr@pengutronix.de>) id 1ujCGr-00C0KZ-0d;
- Tue, 05 Aug 2025 09:39:41 +0200
-Received: from mtr by pty.whiteo.stw.pengutronix.de with local (Exim 4.96)
- (envelope-from <mtr@pengutronix.de>) id 1ujCGr-00A7fC-02;
- Tue, 05 Aug 2025 09:39:41 +0200
-Date: Tue, 5 Aug 2025 09:39:40 +0200
-From: Michael Tretter <m.tretter@pengutronix.de>
-To: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Message-ID: <aJG1PC0poVY-QZRb@pengutronix.de>
-Mail-Followup-To: Michael Tretter <m.tretter@pengutronix.de>,
- Jacopo Mondi <jacopo.mondi@ideasonboard.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- Devarsh Thakkar <devarsht@ti.com>, Benoit Parrot <bparrot@ti.com>,
- Hans Verkuil <hverkuil@kernel.org>, Mike Isely <isely@pobox.com>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
- Hans de Goede <hansg@kernel.org>,
- Parthiban Veerasooran <parthiban.veerasooran@microchip.com>,
- Christian Gromm <christian.gromm@microchip.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Alex Shi <alexs@kernel.org>, Yanteng Si <si.yanteng@linux.dev>,
- Dongliang Mu <dzm91@hust.edu.cn>, Jonathan Corbet <corbet@lwn.net>,
- Tomasz Figa <tfiga@chromium.org>,
- Marek Szyprowski <m.szyprowski@samsung.com>,
- Andy Walls <awalls@md.metrocast.net>,
- Pengutronix Kernel Team <kernel@pengutronix.de>,
- Bin Liu <bin.liu@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- AngeloGioacchino Del Regno <angelogioacchino.delregno@collabora.com>,
- Dmitry Osipenko <digetx@gmail.com>,
- Thierry Reding <thierry.reding@gmail.com>,
- Jonathan Hunter <jonathanh@nvidia.com>,
- Mirela Rabulea <mirela.rabulea@nxp.com>,
- Shawn Guo <shawnguo@kernel.org>,
- Sascha Hauer <s.hauer@pengutronix.de>,
- Fabio Estevam <festevam@gmail.com>,
- Kieran Bingham <kieran.bingham+renesas@ideasonboard.com>,
- Michal Simek <michal.simek@amd.com>, Ming Qian <ming.qian@nxp.com>,
- Zhou Peng <eagle.zhou@nxp.com>,
- Xavier Roumegue <xavier.roumegue@oss.nxp.com>,
- Philipp Zabel <p.zabel@pengutronix.de>,
- Vikash Garodia <quic_vgarodia@quicinc.com>,
- Dikshita Agarwal <quic_dikshita@quicinc.com>,
- Abhinav Kumar <abhinav.kumar@linux.dev>,
- Bryan O'Donoghue <bryan.odonoghue@linaro.org>,
- Sylwester Nawrocki <sylvester.nawrocki@gmail.com>,
- Jernej Skrabec <jernej.skrabec@gmail.com>,
- Chen-Yu Tsai <wens@csie.org>, Samuel Holland <samuel@sholland.org>,
- Daniel Almeida <daniel.almeida@collabora.com>,
- Neil Armstrong <neil.armstrong@linaro.org>,
- Kevin Hilman <khilman@baylibre.com>,
- Jerome Brunet <jbrunet@baylibre.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Nas Chung <nas.chung@chipsnmedia.com>,
- Jackson Lee <jackson.lee@chipsnmedia.com>,
- Minghsiu Tsai <minghsiu.tsai@mediatek.com>,
- Houlong Wei <houlong.wei@mediatek.com>,
- Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
- Tiffany Lin <tiffany.lin@mediatek.com>,
- Yunfei Dong <yunfei.dong@mediatek.com>,
- Geert Uytterhoeven <geert+renesas@glider.be>,
- Magnus Damm <magnus.damm@gmail.com>,
- Mikhail Ulyanov <mikhail.ulyanov@cogentembedded.com>,
- Jacob Chen <jacob-chen@iotwrt.com>,
- Ezequiel Garcia <ezequiel@vanguardiasur.com.ar>,
- Heiko Stuebner <heiko@sntech.de>,
- Detlev Casanova <detlev.casanova@collabora.com>,
- Krzysztof Kozlowski <krzk@kernel.org>,
- Alim Akhtar <alim.akhtar@samsung.com>,
- Sylwester Nawrocki <s.nawrocki@samsung.com>,
- =?utf-8?Q?=C5=81ukasz?= Stelmach <l.stelmach@samsung.com>,
- Andrzej Pietrasiewicz <andrzejtp2010@gmail.com>,
- Jacek Anaszewski <jacek.anaszewski@gmail.com>,
- Andrzej Hajda <andrzej.hajda@intel.com>,
- Fabien Dessenne <fabien.dessenne@foss.st.com>,
- Hugues Fruchet <hugues.fruchet@foss.st.com>,
- Jean-Christophe Trotin <jean-christophe.trotin@foss.st.com>,
- Maxime Coquelin <mcoquelin.stm32@gmail.com>,
- Alexandre Torgue <alexandre.torgue@foss.st.com>,
- Nicolas Dufresne <nicolas.dufresne@collabora.com>,
- Benjamin Gaignard <benjamin.gaignard@collabora.com>,
- Steve Longerbeam <slongerbeam@gmail.com>,
- Maxime Ripard <mripard@kernel.org>,
- Paul Kocialkowski <paulk@sys-base.io>,
- Niklas =?utf-8?Q?S=C3=B6derlund?= <niklas.soderlund@ragnatech.se>,
- Robert Foss <rfoss@kernel.org>, Todor Tomov <todor.too@gmail.com>,
- Vladimir Zapolskiy <vladimir.zapolskiy@linaro.org>,
- Corentin Labbe <clabbe@baylibre.com>,
- Sakari Ailus <sakari.ailus@linux.intel.com>,
- Bingbu Cao <bingbu.cao@intel.com>,
- Tianshu Qiu <tian.shu.qiu@intel.com>,
- Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>,
- linux-media@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-staging@lists.linux.dev, linux-doc@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org, linux-tegra@vger.kernel.org,
- imx@lists.linux.dev, linux-renesas-soc@vger.kernel.org,
- linux-arm-msm@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
- linux-sunxi@lists.linux.dev, linux-usb@vger.kernel.org,
- linux-amlogic@lists.infradead.org,
- linux-rockchip@lists.infradead.org,
- linux-stm32@st-md-mailman.stormreply.com,
- mjpeg-users@lists.sourceforge.net
-References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
- <20250802-media-private-data-v1-29-eb140ddd6a9d@ideasonboard.com>
+ id 1ujESE-0001rx-E3 for mjpeg-users@lists.sourceforge.net;
+ Tue, 05 Aug 2025 09:59:35 +0000
+Received: from pendragon.ideasonboard.com
+ (cpc89244-aztw30-2-0-cust6594.18-1.cable.virginm.net [86.31.185.195])
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id D96F2AD0;
+ Tue,  5 Aug 2025 11:58:34 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
+ s=mail; t=1754387915;
+ bh=RV+XSnddoBH4JRWHZZy+4T5rBIZcZFEquw455N0WQVA=;
+ h=In-Reply-To:References:Subject:From:Cc:To:Date:From;
+ b=aPIOyP3CCN60ghQ95OYLB9emUWH/n0b6O3gtc9ZoA+uMAITK5524gPFOoFe3iPgrR
+ PeGZgkGvvmEIfAIjVWqinSJN2vlhZuO+XIf+jbLxH1tzVI09y3TIRrSaAcZCkteW9d
+ f9FcX+PdukMOKmU3dXioC96DYHeFg17Pwv6UxHrs=
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20250802-media-private-data-v1-29-eb140ddd6a9d@ideasonboard.com>
-X-Sent-From: Pengutronix Hildesheim
-X-URL: http://www.pengutronix.de/
-X-Accept-Language: de,en
-X-Accept-Content-Type: text/plain
-X-SA-Exim-Connect-IP: 2a0a:edc0:0:c01:1d::a2
-X-SA-Exim-Mail-From: mtr@pengutronix.de
-X-SA-Exim-Scanned: No (on metis.whiteo.stw.pengutronix.de);
- SAEximRunCond expanded to false
-X-PTX-Original-Recipient: mjpeg-users@lists.sourceforge.net
-X-Spam-Score: 0.0 (/)
+In-Reply-To: <20250802-media-private-data-v1-42-eb140ddd6a9d@ideasonboard.com>
+References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
+ <20250802-media-private-data-v1-42-eb140ddd6a9d@ideasonboard.com>
+From: Kieran Bingham <kieran.bingham+renesas@ideasonboard.com>
+To: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
+Date: Tue, 05 Aug 2025 10:59:19 +0100
+Message-ID: <175438795943.1641235.15440393062572657340@ping.linuxembedded.co.uk>
+User-Agent: alot/0.9.1
+X-Spam-Score: 2.3 (++)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hi Jacopo, On Sat, 02 Aug 2025 11:22:51 +0200, Jacopo Mondi
- wrote: > The v4l2_fh associated with an open file handle is now guaranteed
- > to be available in file->private_data, initialised by v4l2_fh_add(). >
- > A [...] 
- Content analysis details:   (0.0 points, 5.0 required)
+ Content preview: Quoting Jacopo Mondi (2025-08-02 10:23:04) > The v4l2_fh
+ associated
+ with an open file handle is now guaranteed > to be available in
+ file->private_data, 
+ initialised by v4l2_fh_add(). > > Access the v4l [...] 
+ Content analysis details:   (2.3 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
-X-Headers-End: 1ujCac-0000WJ-2G
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 2.5 SUSPICIOUS_RECIPS      Similar addresses in recipient list
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URI: ideasonboard.com]
+X-Headers-End: 1ujESE-0001rx-E3
 X-Mailman-Approved-At: Wed, 06 Aug 2025 05:34:42 +0000
-Subject: Re: [Mjpeg-users] [PATCH 29/65] media: allegro: Access v4l2_fh from
+Subject: Re: [Mjpeg-users] [PATCH 42/65] media: renesas: Access v4l2_fh from
  file
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -202,206 +110,176 @@ List-Help: <mailto:mjpeg-users-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/mjpeg-users>,
  <mailto:mjpeg-users-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: MJPEG-tools user list <mjpeg-users@lists.sourceforge.net>
-Cc: Heiko Stuebner <heiko@sntech.de>, Devarsh Thakkar <devarsht@ti.com>,
- Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>,
- Alim Akhtar <alim.akhtar@samsung.com>,
- Christian Gromm <christian.gromm@microchip.com>,
- Dmitry Osipenko <digetx@gmail.com>, linux-stm32@st-md-mailman.stormreply.com,
- Marek Szyprowski <m.szyprowski@samsung.com>, linux-samsung-soc@vger.kernel.org,
- Robert Foss <rfoss@kernel.org>, Geert Uytterhoeven <geert+renesas@glider.be>,
- Samuel Holland <samuel@sholland.org>, Kevin Hilman <khilman@baylibre.com>,
- Jacob Chen <jacob-chen@iotwrt.com>, Steve Longerbeam <slongerbeam@gmail.com>,
- Bingbu Cao <bingbu.cao@intel.com>, linux-sunxi@lists.linux.dev,
- Sascha Hauer <s.hauer@pengutronix.de>,
- =?utf-8?Q?=C5=81ukasz?= Stelmach <l.stelmach@samsung.com>,
- Andrzej Pietrasiewicz <andrzejtp2010@gmail.com>,
- Nas Chung <nas.chung@chipsnmedia.com>, Andy Walls <awalls@md.metrocast.net>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Vladimir Zapolskiy <vladimir.zapolskiy@linaro.org>, linux-usb@vger.kernel.org,
- linux-kernel@vger.kernel.org, Pengutronix Kernel Team <kernel@pengutronix.de>,
- Ming Qian <ming.qian@nxp.com>, Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
- Sylwester Nawrocki <s.nawrocki@samsung.com>, linux-doc@vger.kernel.org,
- Yunfei Dong <yunfei.dong@mediatek.com>,
- Thierry Reding <thierry.reding@gmail.com>,
- Krzysztof Kozlowski <krzk@kernel.org>, Yanteng Si <si.yanteng@linux.dev>,
- Magnus Damm <magnus.damm@gmail.com>, Jonathan Hunter <jonathanh@nvidia.com>,
- linux-rockchip@lists.infradead.org, Dongliang Mu <dzm91@hust.edu.cn>,
- Fabien Dessenne <fabien.dessenne@foss.st.com>,
- Ezequiel Garcia <ezequiel@vanguardiasur.com.ar>,
- Jerome Brunet <jbrunet@baylibre.com>, Tianshu Qiu <tian.shu.qiu@intel.com>,
- linux-media@vger.kernel.org, Paul Kocialkowski <paulk@sys-base.io>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- linux-arm-msm@vger.kernel.org, Maxime Ripard <mripard@kernel.org>,
- Houlong Wei <houlong.wei@mediatek.com>, linux-amlogic@lists.infradead.org,
- Michal Simek <michal.simek@amd.com>, linux-arm-kernel@lists.infradead.org,
- Neil Armstrong <neil.armstrong@linaro.org>, Zhou Peng <eagle.zhou@nxp.com>,
- linux-renesas-soc@vger.kernel.org, Maxime Coquelin <mcoquelin.stm32@gmail.com>,
- linux-mediatek@lists.infradead.org,
- Nicolas Dufresne <nicolas.dufresne@collabora.com>,
- Jacek Anaszewski <jacek.anaszewski@gmail.com>, imx@lists.linux.dev,
- Xavier Roumegue <xavier.roumegue@oss.nxp.com>,
- Vikash Garodia <quic_vgarodia@quicinc.com>, linux-tegra@vger.kernel.org,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
- Andrzej Hajda <andrzej.hajda@intel.com>, Fabio Estevam <festevam@gmail.com>,
- Jean-Christophe Trotin <jean-christophe.trotin@foss.st.com>,
- Detlev Casanova <detlev.casanova@collabora.com>,
- Benjamin Gaignard <benjamin.gaignard@collabora.com>,
- Jonathan Corbet <corbet@lwn.net>, Mike Isely <isely@pobox.com>,
- Jackson Lee <jackson.lee@chipsnmedia.com>, linux-staging@lists.linux.dev,
- Jernej Skrabec <jernej.skrabec@gmail.com>, Chen-Yu Tsai <wens@csie.org>,
- Bryan O'Donoghue <bryan.odonoghue@linaro.org>, Bin Liu <bin.liu@mediatek.com>,
- mjpeg-users@lists.sourceforge.net,
- Sylwester Nawrocki <sylvester.nawrocki@gmail.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- Dikshita Agarwal <quic_dikshita@quicinc.com>, Tomasz Figa <tfiga@chromium.org>,
- Kieran Bingham <kieran.bingham+renesas@ideasonboard.com>,
- Sakari Ailus <sakari.ailus@linux.intel.com>, Shawn Guo <shawnguo@kernel.org>,
- Hans de Goede <hansg@kernel.org>, Minghsiu Tsai <minghsiu.tsai@mediatek.com>,
- Daniel Almeida <daniel.almeida@collabora.com>,
- Alexandre Torgue <alexandre.torgue@foss.st.com>,
- Todor Tomov <todor.too@gmail.com>, Mirela Rabulea <mirela.rabulea@nxp.com>,
- Alex Shi <alexs@kernel.org>, Hugues Fruchet <hugues.fruchet@foss.st.com>,
- Corentin Labbe <clabbe@baylibre.com>,
- Mikhail Ulyanov <mikhail.ulyanov@cogentembedded.com>,
- Abhinav Kumar <abhinav.kumar@linux.dev>, Benoit Parrot <bparrot@ti.com>,
- Parthiban Veerasooran <parthiban.veerasooran@microchip.com>,
- Hans Verkuil <hverkuil@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- Tiffany Lin <tiffany.lin@mediatek.com>,
- AngeloGioacchino Del Regno <angelogioacchino.delregno@collabora.com>,
- Philipp Zabel <p.zabel@pengutronix.de>,
- Niklas =?utf-8?Q?S=C3=B6derlund?= <niklas.soderlund@ragnatech.se>
+Cc: imx@lists.linux.dev, linux-samsung-soc@vger.kernel.org,
+ linux-doc@vger.kernel.org, linux-arm-msm@vger.kernel.org,
+ mjpeg-users@lists.sourceforge.net, linux-staging@lists.linux.dev,
+ linux-kernel@vger.kernel.org, linux-stm32@st-md-mailman.stormreply.com,
+ linux-renesas-soc@vger.kernel.org, linux-rockchip@lists.infradead.org,
+ linux-usb@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ linux-sunxi@lists.linux.dev, linux-arm-kernel@lists.infradead.org,
+ linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-Hi Jacopo,
-
-On Sat, 02 Aug 2025 11:22:51 +0200, Jacopo Mondi wrote:
+Quoting Jacopo Mondi (2025-08-02 10:23:04)
 > The v4l2_fh associated with an open file handle is now guaranteed
 > to be available in file->private_data, initialised by v4l2_fh_add().
 > 
 > Access the v4l2_fh, and from there the driver-specific structure,
 > from the file * in all ioctl handlers.
 > 
-> While at it remove the only left user of fh_to_channel() and remove
-> the macro completely.
-
-Thanks for the cleanup!
-
-Minor suggestion below, but even without it
-
+> While at it, remove the now unused fh_to_ctx() macro.
 > 
 > Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 
-Reviewed-by: Michael Tretter <m.tretter@pengutronix.de>
+Reviewed-by: Kieran Bingham <kieran.bingham+renesas@ideasonboard.com>
 
 > ---
->  drivers/media/platform/allegro-dvt/allegro-core.c | 18 ++++++++----------
->  1 file changed, 8 insertions(+), 10 deletions(-)
+>  drivers/media/platform/renesas/rcar_fdp1.c | 11 +++--------
+>  drivers/media/platform/renesas/rcar_jpu.c  | 21 ++++++++-------------
+>  2 files changed, 11 insertions(+), 21 deletions(-)
 > 
-> diff --git a/drivers/media/platform/allegro-dvt/allegro-core.c b/drivers/media/platform/allegro-dvt/allegro-core.c
-> index 5e3b1f5d7206d84b8ccb9ea3b3f3f1fe75becf99..81c6afcf2d06f9e39015e49d355346238c5033d8 100644
-> --- a/drivers/media/platform/allegro-dvt/allegro-core.c
-> +++ b/drivers/media/platform/allegro-dvt/allegro-core.c
-> @@ -197,8 +197,6 @@ static const struct regmap_config allegro_sram_config = {
->  	.cache_type = REGCACHE_NONE,
+> diff --git a/drivers/media/platform/renesas/rcar_fdp1.c b/drivers/media/platform/renesas/rcar_fdp1.c
+> index e78d8fb104e9544d27c8ace38888995ca170483f..84c3901a2e5dc3e7ccfb3b44062e839f8f19ee02 100644
+> --- a/drivers/media/platform/renesas/rcar_fdp1.c
+> +++ b/drivers/media/platform/renesas/rcar_fdp1.c
+> @@ -630,11 +630,6 @@ struct fdp1_ctx {
+>         struct fdp1_field_buffer        *previous;
 >  };
 >  
-> -#define fh_to_channel(__fh) container_of(__fh, struct allegro_channel, fh)
+> -static inline struct fdp1_ctx *fh_to_ctx(struct v4l2_fh *fh)
+> -{
+> -       return container_of(fh, struct fdp1_ctx, fh);
+> -}
 > -
->  struct allegro_channel {
->  	struct allegro_dev *dev;
->  	struct v4l2_fh fh;
-> @@ -3284,7 +3282,7 @@ static int allegro_enum_fmt_vid(struct file *file, void *fh,
->  static int allegro_g_fmt_vid_cap(struct file *file, void *fh,
->  				 struct v4l2_format *f)
+>  static inline struct fdp1_ctx *file_to_ctx(struct file *filp)
 >  {
-> -	struct allegro_channel *channel = fh_to_channel(fh);
-> +	struct allegro_channel *channel = file_to_channel(file);
+>         return container_of(file_to_v4l2_fh(filp), struct fdp1_ctx, fh);
+> @@ -1411,8 +1406,8 @@ static int fdp1_enum_fmt_vid_out(struct file *file, void *priv,
 >  
->  	f->fmt.pix.field = V4L2_FIELD_NONE;
->  	f->fmt.pix.width = channel->width;
-> @@ -3326,7 +3324,7 @@ static int allegro_try_fmt_vid_cap(struct file *file, void *fh,
->  static int allegro_s_fmt_vid_cap(struct file *file, void *fh,
->  				 struct v4l2_format *f)
+>  static int fdp1_g_fmt(struct file *file, void *priv, struct v4l2_format *f)
 >  {
-> -	struct allegro_channel *channel = fh_to_channel(fh);
-> +	struct allegro_channel *channel = file_to_channel(file);
->  	struct vb2_queue *vq;
->  	int err;
+> +       struct fdp1_ctx *ctx = file_to_ctx(file);
+>         struct fdp1_q_data *q_data;
+> -       struct fdp1_ctx *ctx = fh_to_ctx(priv);
 >  
-> @@ -3350,7 +3348,7 @@ static int allegro_s_fmt_vid_cap(struct file *file, void *fh,
->  static int allegro_g_fmt_vid_out(struct file *file, void *fh,
->  				 struct v4l2_format *f)
+>         if (!v4l2_m2m_get_vq(ctx->fh.m2m_ctx, f->type))
+>                 return -EINVAL;
+> @@ -1589,7 +1584,7 @@ static void fdp1_try_fmt_capture(struct fdp1_ctx *ctx,
+>  
+>  static int fdp1_try_fmt(struct file *file, void *priv, struct v4l2_format *f)
 >  {
-> -	struct allegro_channel *channel = fh_to_channel(fh);
-> +	struct allegro_channel *channel = file_to_channel(file);
+> -       struct fdp1_ctx *ctx = fh_to_ctx(priv);
+> +       struct fdp1_ctx *ctx = file_to_ctx(file);
 >  
->  	f->fmt.pix.field = V4L2_FIELD_NONE;
+>         if (f->type == V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE)
+>                 fdp1_try_fmt_output(ctx, NULL, &f->fmt.pix_mp);
+> @@ -1660,7 +1655,7 @@ static void fdp1_set_format(struct fdp1_ctx *ctx,
 >  
-> @@ -3397,7 +3395,7 @@ static int allegro_try_fmt_vid_out(struct file *file, void *fh,
->  static int allegro_s_fmt_vid_out(struct file *file, void *fh,
->  				 struct v4l2_format *f)
+>  static int fdp1_s_fmt(struct file *file, void *priv, struct v4l2_format *f)
 >  {
-> -	struct allegro_channel *channel = fh_to_channel(fh);
-> +	struct allegro_channel *channel = file_to_channel(file);
->  	int err;
+> -       struct fdp1_ctx *ctx = fh_to_ctx(priv);
+> +       struct fdp1_ctx *ctx = file_to_ctx(file);
+>         struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
+>         struct vb2_queue *vq = v4l2_m2m_get_vq(m2m_ctx, f->type);
 >  
->  	err = allegro_try_fmt_vid_out(file, fh, f);
-> @@ -3438,7 +3436,7 @@ static int allegro_channel_cmd_start(struct allegro_channel *channel)
->  static int allegro_encoder_cmd(struct file *file, void *fh,
->  			       struct v4l2_encoder_cmd *cmd)
+> diff --git a/drivers/media/platform/renesas/rcar_jpu.c b/drivers/media/platform/renesas/rcar_jpu.c
+> index 058fcfb967bd98440f33272db42f0d973299d572..9c70a74a2969fce6446b0f26e0637a68eade3942 100644
+> --- a/drivers/media/platform/renesas/rcar_jpu.c
+> +++ b/drivers/media/platform/renesas/rcar_jpu.c
+> @@ -480,11 +480,6 @@ static struct jpu_ctx *ctrl_to_ctx(struct v4l2_ctrl *c)
+>         return container_of(c->handler, struct jpu_ctx, ctrl_handler);
+>  }
+>  
+> -static struct jpu_ctx *fh_to_ctx(struct v4l2_fh *fh)
+> -{
+> -       return container_of(fh, struct jpu_ctx, fh);
+> -}
+> -
+>  static struct jpu_ctx *file_to_ctx(struct file *filp)
 >  {
-> -	struct allegro_channel *channel = fh_to_channel(fh);
-> +	struct allegro_channel *channel = file_to_channel(file);
->  	int err;
->  
->  	err = v4l2_m2m_ioctl_try_encoder_cmd(file, fh, cmd);
-> @@ -3488,7 +3486,7 @@ static int allegro_ioctl_streamon(struct file *file, void *priv,
->  				  enum v4l2_buf_type type)
+>         return container_of(file_to_v4l2_fh(filp), struct jpu_ctx, fh);
+> @@ -661,7 +656,7 @@ static u8 jpu_parse_hdr(void *buffer, unsigned long size, unsigned int *width,
+>  static int jpu_querycap(struct file *file, void *priv,
+>                         struct v4l2_capability *cap)
 >  {
->  	struct v4l2_fh *fh = file_to_v4l2_fh(file);
-> -	struct allegro_channel *channel = fh_to_channel(fh);
-> +	struct allegro_channel *channel = file_to_channel(file);
-
-You could remove the local fh entirely, if you change
-
-	return v4l2_m2m_streamon(file, fh->m2m_ctx, type);
-
-to
-
-	return v4l2_m2m_streamon(file, channel->fh.m2m_ctx, type);
-
-in the allegro_ioctl_streamon() function.
-
-Michael
-
->  	int err;
+> -       struct jpu_ctx *ctx = fh_to_ctx(priv);
+> +       struct jpu_ctx *ctx = file_to_ctx(file);
 >  
->  	if (type == V4L2_BUF_TYPE_VIDEO_CAPTURE) {
-> @@ -3503,7 +3501,7 @@ static int allegro_ioctl_streamon(struct file *file, void *priv,
->  static int allegro_g_parm(struct file *file, void *fh,
->  			  struct v4l2_streamparm *a)
+>         if (ctx->encoder)
+>                 strscpy(cap->card, DRV_NAME " encoder", sizeof(cap->card));
+> @@ -719,7 +714,7 @@ static int jpu_enum_fmt(struct v4l2_fmtdesc *f, u32 type)
+>  static int jpu_enum_fmt_cap(struct file *file, void *priv,
+>                             struct v4l2_fmtdesc *f)
 >  {
-> -	struct allegro_channel *channel = fh_to_channel(fh);
-> +	struct allegro_channel *channel = file_to_channel(file);
->  	struct v4l2_fract *timeperframe;
+> -       struct jpu_ctx *ctx = fh_to_ctx(priv);
+> +       struct jpu_ctx *ctx = file_to_ctx(file);
 >  
->  	if (a->type != V4L2_BUF_TYPE_VIDEO_OUTPUT)
-> @@ -3520,7 +3518,7 @@ static int allegro_g_parm(struct file *file, void *fh,
->  static int allegro_s_parm(struct file *file, void *fh,
->  			  struct v4l2_streamparm *a)
+>         return jpu_enum_fmt(f, ctx->encoder ? JPU_ENC_CAPTURE :
+>                             JPU_DEC_CAPTURE);
+> @@ -728,7 +723,7 @@ static int jpu_enum_fmt_cap(struct file *file, void *priv,
+>  static int jpu_enum_fmt_out(struct file *file, void *priv,
+>                             struct v4l2_fmtdesc *f)
 >  {
-> -	struct allegro_channel *channel = fh_to_channel(fh);
-> +	struct allegro_channel *channel = file_to_channel(file);
->  	struct v4l2_fract *timeperframe;
->  	int div;
+> -       struct jpu_ctx *ctx = fh_to_ctx(priv);
+> +       struct jpu_ctx *ctx = file_to_ctx(file);
 >  
+>         return jpu_enum_fmt(f, ctx->encoder ? JPU_ENC_OUTPUT : JPU_DEC_OUTPUT);
+>  }
+> @@ -828,7 +823,7 @@ static int __jpu_try_fmt(struct jpu_ctx *ctx, struct jpu_fmt **fmtinfo,
+>  
+>  static int jpu_try_fmt(struct file *file, void *priv, struct v4l2_format *f)
+>  {
+> -       struct jpu_ctx *ctx = fh_to_ctx(priv);
+> +       struct jpu_ctx *ctx = file_to_ctx(file);
+>  
+>         if (!v4l2_m2m_get_vq(ctx->fh.m2m_ctx, f->type))
+>                 return -EINVAL;
+> @@ -839,7 +834,7 @@ static int jpu_try_fmt(struct file *file, void *priv, struct v4l2_format *f)
+>  static int jpu_s_fmt(struct file *file, void *priv, struct v4l2_format *f)
+>  {
+>         struct vb2_queue *vq;
+> -       struct jpu_ctx *ctx = fh_to_ctx(priv);
+> +       struct jpu_ctx *ctx = file_to_ctx(file);
+>         struct v4l2_m2m_ctx *m2m_ctx = ctx->fh.m2m_ctx;
+>         struct jpu_fmt *fmtinfo;
+>         struct jpu_q_data *q_data;
+> @@ -868,8 +863,8 @@ static int jpu_s_fmt(struct file *file, void *priv, struct v4l2_format *f)
+>  
+>  static int jpu_g_fmt(struct file *file, void *priv, struct v4l2_format *f)
+>  {
+> +       struct jpu_ctx *ctx = file_to_ctx(file);
+>         struct jpu_q_data *q_data;
+> -       struct jpu_ctx *ctx = fh_to_ctx(priv);
+>  
+>         if (!v4l2_m2m_get_vq(ctx->fh.m2m_ctx, f->type))
+>                 return -EINVAL;
+> @@ -902,8 +897,8 @@ static const struct v4l2_ctrl_ops jpu_ctrl_ops = {
+>  
+>  static int jpu_streamon(struct file *file, void *priv, enum v4l2_buf_type type)
+>  {
+> -       struct jpu_ctx *ctx = fh_to_ctx(priv);
+>         struct jpu_q_data *src_q_data, *dst_q_data, *orig, adj, *ref;
+> +       struct jpu_ctx *ctx = file_to_ctx(file);
+>         enum v4l2_buf_type adj_type;
+>  
+>         src_q_data = jpu_get_q_data(ctx, V4L2_BUF_TYPE_VIDEO_OUTPUT_MPLANE);
+> @@ -1284,8 +1279,8 @@ static int jpu_open(struct file *file)
+>  
+>  static int jpu_release(struct file *file)
+>  {
+> -       struct jpu *jpu = video_drvdata(file);
+>         struct jpu_ctx *ctx = file_to_ctx(file);
+> +       struct jpu *jpu = video_drvdata(file);
+>  
+>         v4l2_m2m_ctx_release(ctx->fh.m2m_ctx);
+>         v4l2_ctrl_handler_free(&ctx->ctrl_handler);
 > 
 > -- 
 > 2.49.0
-> 
-> 
+>
 
 
 _______________________________________________
