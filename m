@@ -2,37 +2,37 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id D3978B1F26F
-	for <lists+mjpeg-users@lfdr.de>; Sat,  9 Aug 2025 08:00:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 248EDB1F275
+	for <lists+mjpeg-users@lfdr.de>; Sat,  9 Aug 2025 08:00:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
 	Reply-To:From:List-Subscribe:List-Help:List-Post:List-Archive:
 	List-Unsubscribe:List-Id:Subject:In-Reply-To:References:To:MIME-Version:Date:
 	Message-ID:Sender:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=Jhr9r6wGHUdyIXO3IDHkvJJwGWoxLF68LW2oxHT9ZWk=; b=GCZnm9TfLV72LP8cJISd08MnKk
-	5u9wZbOyr5CbbQ7kzGn2mWVPv1O7h8+WLkMAGKS0OrCl7GMHzC4zx0FGrhYXnepP3R38he2MB+dq0
-	WBBIvxVMrlw09c5v56PtsjL8mDBTRgpF9agpmmmlqaTQUVJtppA1RYIFVpKT37F519zE=;
+	bh=7edBbzrhbWhAyM7GTRzidhMJ11yZuw2DeIthuCPAgqI=; b=cB7Xrjun2Ys7yWkZ5WhzeVp1+p
+	yWQFrQ1FX/GejpucfmEHUYdhMWQbfdPbXBM88S8WCgY2OA/q0kHll0BL1f+fpMkgJAduALwiKsRH8
+	uMxeQsosg6zFT91xg7K/z7Fxc/uXznVcwNQa1JoWx78Xonr2s+o2EJq6UKJvjH8u1HOg=;
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1ukcd0-0008DO-Ey;
+	id 1ukcd0-0008Dt-P2;
 	Sat, 09 Aug 2025 06:00:27 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <hverkuil+cisco@kernel.org>) id 1ujdWf-0004D6-ML
+ (envelope-from <hverkuil+cisco@kernel.org>) id 1ujua4-0008VL-UG
  for mjpeg-users@lists.sourceforge.net;
- Wed, 06 Aug 2025 12:45:49 +0000
+ Thu, 07 Aug 2025 06:58:29 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
  References:Cc:To:Subject:From:MIME-Version:Date:Message-ID:Sender:Reply-To:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=xKGDRsqFgvk2YU3exuaMI1xuCkXUmQU/g9XtAmSq1/M=; b=IMZZzS3QqTb9sfGhzgoGzucvKR
- SGMQL4CMSDYNtVaCRq13LdnxoQQ/gdqClMYP1TQ3egQout+PUce9q+cS4+0DsYfCjXwaVYGW9u0Qm
- 7KMNhR+xBa7uTSQOIrv+JSCd1ddUadnhMq5uOVzh+YKFo0wzjJSgW4hQ1h7giI5/rUGg=;
+ bh=Cjn7iFOjPRb8qVGhwqQkhAl0V4bzxrYAWCtxnBYOqC4=; b=az0XUotOxo0N2JLlyI7zvUx78W
+ YsGz8rxfnVFIa92LugSS3YAzcfJmkC9FZDQDGmc7QdCqR/F3M3qFRj2KKw8u/tPwBX7jRCcyns5sg
+ Rvq0NkA9fqLNGdyVPruWsOK8EZqN+TvCOXjLUlyLjMe2xn8ahZI4kkkC69Zje5/HvNOQ=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:Cc:To:
@@ -40,31 +40,31 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=xKGDRsqFgvk2YU3exuaMI1xuCkXUmQU/g9XtAmSq1/M=; b=FHWjotjoF7BF6s/dJ1aScRvMPO
- q8RxdP4XaKUuz6iU5QfGM5YNg2livyitKwUAJJIlJCWrAdzPFT9W8n1Kmss2OzhSzq6JJceTQV38i
- ZIGOeXyuC4udYZfIbstvGDwikpguLfusZL5YwKlL5B64V7gcK9y8IenuRn1mQZowlv2g=;
-Received: from tor.source.kernel.org ([172.105.4.254])
+ bh=Cjn7iFOjPRb8qVGhwqQkhAl0V4bzxrYAWCtxnBYOqC4=; b=NXpoTkiha1DT0TJzrw1psNcq0K
+ NeyOfG0yM7+KbpY5Y6xAB1767fuVRi5+3pBhKAbqdPg/Z8eA4EfN+6DGIibs7POWHQwbUW2CXwxdD
+ CMWr0MH8dxZU2ZGTlTg4Uix9TybsI7onJaSc2ga8AvZykvDdXxg8USpiUTX3+FoFvQ6I=;
+Received: from sea.source.kernel.org ([172.234.252.31])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ujdWd-0005Dy-Kc for mjpeg-users@lists.sourceforge.net;
- Wed, 06 Aug 2025 12:45:49 +0000
+ id 1ujua5-0000Vx-7w for mjpeg-users@lists.sourceforge.net;
+ Thu, 07 Aug 2025 06:58:29 +0000
 Received: from smtp.kernel.org (transwarp.subspace.kernel.org [100.75.92.58])
- by tor.source.kernel.org (Postfix) with ESMTP id 8F522601FA;
- Wed,  6 Aug 2025 12:45:36 +0000 (UTC)
-Received: by smtp.kernel.org (Postfix) with ESMTPSA id BF4AAC4CEE7;
- Wed,  6 Aug 2025 12:45:15 +0000 (UTC)
+ by sea.source.kernel.org (Postfix) with ESMTP id AF050437A3;
+ Thu,  7 Aug 2025 06:58:23 +0000 (UTC)
+Received: by smtp.kernel.org (Postfix) with ESMTPSA id 3474EC4CEEB;
+ Thu,  7 Aug 2025 06:58:03 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=k20201202; t=1754484336;
- bh=vrDmqWuCtRp3CsCvQLuDwTzU8RUf2CvrKumyU6zb3Ok=;
+ s=k20201202; t=1754549903;
+ bh=tNf8yXWpoqOnHiYWPw3fqpNsTnL+1s/P0u4Xeao7oac=;
  h=Date:From:Subject:To:Cc:References:In-Reply-To:From;
- b=piY2QrqAz8Re20EZatq7znUbw5pHCiVHNr0AmhNRPE0MDM10HmfpdWd02d9i8tbdW
- E75PTNGi/w0FYgFIJnvX/BXnS/SvXPyQ9seXxkOyOZ7zJ0aOfRRVdb4s/IB6OlYGWX
- eGzXx+834KiDOoCU+8nK8fwVzqTKOTwSyOvq/we5j7dBgmFBvFnhVcaikg4QxsG3Ow
- eNHI0m7J7krY4D/AW4W0Ic/ki873otG6+qi8XZAxpJKL+nl6ve+/h5UhD3smasksSI
- 31GfEPq8TJIP3QV/nzR3fqXJ0rFvGtrMjgIfsvva9ewHG8nil9RVHiEcnK1j0r7efu
- ou/p/iGbORZsA==
-Message-ID: <e9aaf929-5e0d-4379-996b-a564acd3e331@kernel.org>
-Date: Wed, 6 Aug 2025 14:45:14 +0200
+ b=FiIz5oVgOYMO6q4869RWcOtlVdu9nL+0h0TxLPttL1GsnNHj8WeGZvdTa0hQ9g2IF
+ b2wpXZEdscZwcYTFUfD3Vak7J29IVobTHxanKkkz14AEYU/ukIZ++vsVvVAw99umRg
+ fszGhSjaHM5r+e6TZDl+fqCQot/inXgAQ76e8uSvp7C7I/EYbVds7D778J5GQxDrvP
+ K/8R8NLvCgWzWtfarV/vXEHBez0mayIYSmeKfaDsccXFY1Pe71Jfa20pHWGtm9MUgF
+ 6fVTDAxHrEq3NGzLwa0Z2/p/Q8or6h4Ic4LhSq8VFOMX6ph8bptUk/1SV7iMmp4cMZ
+ 528aoa8dBtCjQ==
+Message-ID: <d8875dea-aa04-41fc-b1b4-519d06ed6cba@kernel.org>
+Date: Thu, 7 Aug 2025 08:58:01 +0200
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
 To: Jacopo Mondi <jacopo.mondi@ideasonboard.com>,
@@ -140,35 +140,33 @@ To: Jacopo Mondi <jacopo.mondi@ideasonboard.com>,
  Bingbu Cao <bingbu.cao@intel.com>, Tianshu Qiu <tian.shu.qiu@intel.com>,
  Stanislaw Gruszka <stanislaw.gruszka@linux.intel.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
- <20250802-media-private-data-v1-27-eb140ddd6a9d@ideasonboard.com>
+ <20250802-media-private-data-v1-58-eb140ddd6a9d@ideasonboard.com>
 Content-Language: en-US, nl
-In-Reply-To: <20250802-media-private-data-v1-27-eb140ddd6a9d@ideasonboard.com>
+In-Reply-To: <20250802-media-private-data-v1-58-eb140ddd6a9d@ideasonboard.com>
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  On 02/08/2025 11:22,
- Jacopo Mondi wrote: > From: Laurent Pinchart
- <laurent.pinchart@ideasonboard.com> > > Multiple drivers that use v4l2_fh
- and call v4l2_fh_del() manually reset > the file->private_da [...] 
+ Content preview:  On 02/08/2025 11:23, Jacopo Mondi wrote: > The __fh parameter
+ is assigned to an unsued variable. Remove it > and remove the unused struct
+ zoran_fh type. > > Signed-off-by: Jacopo Mondi <jacopo.mondi@i [...] 
  Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
  -0.0 DKIMWL_WL_HIGH         DKIMwl.org - High trust sender
-X-Headers-End: 1ujdWd-0005Dy-Kc
+X-Headers-End: 1ujua5-0000Vx-7w
 X-Mailman-Approved-At: Sat, 09 Aug 2025 06:00:15 +0000
-Subject: Re: [Mjpeg-users] [PATCH 27/65] media: Reset file->private_data to
- NULL in v4l2_fh_del()
+Subject: Re: [Mjpeg-users] [PATCH 58/65] media: zoran: Remove access to __fh
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -195,207 +193,68 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-On 02/08/2025 11:22, Jacopo Mondi wrote:
-> From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+On 02/08/2025 11:23, Jacopo Mondi wrote:
+> The __fh parameter is assigned to an unsued variable. Remove it
+> and remove the unused struct zoran_fh type.
 > 
-> Multiple drivers that use v4l2_fh and call v4l2_fh_del() manually reset
-> the file->private_data pointer to NULL in their video device .release()
-> file operation handler. Move the code to the v4l2_fh_del() function to
-> avoid direct access to file->private_data in drivers. This requires
-> adding a file pointer argument to the function.
-> 
-> Changes to drivers have been generated with the following coccinelle
-> semantic patch:
-> 
-> @@
-> expression fh;
-> identifier filp;
-> identifier release;
-> type ret;
-> @@
-> ret release(..., struct file *filp, ...)
-> {
-> 	<...
-> -	filp->private_data = NULL;
-> 	...
-> -	v4l2_fh_del(fh);
-> +	v4l2_fh_del(fh, filp);
-> 	...>
-> }
-> 
-> @@
-> expression fh;
-> identifier filp;
-> identifier release;
-> type ret;
-> @@
-> ret release(..., struct file *filp, ...)
-> {
-> 	<...
-> -	v4l2_fh_del(fh);
-> +	v4l2_fh_del(fh, filp);
-> 	...
-> -	filp->private_data = NULL;
-> 	...>
-> }
-> 
-> @@
-> expression fh;
-> identifier filp;
-> identifier release;
-> type ret;
-> @@
-> ret release(..., struct file *filp, ...)
-> {
-> 	<...
-> -	v4l2_fh_del(fh);
-> +	v4l2_fh_del(fh, filp);
-> 	...>
-> }
-> 
-> Manual changes have been applied to Documentation/ to update the usage
-> patterns, to drivers/media/v4l2-core/v4l2-fh.c to update the
-> v4l2_fh_del() prototype and reset file->private_data, and to
-> include/media/v4l2-fh.h to update the v4l2_fh_del() function prototype
-> and its documentation.
-> 
-> Additionally, white space issues have been fixed manually in
-> drivers/usb/gadget/function/uvc_v4l2.c
-> 
-> Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 > Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
 > ---
->  Documentation/driver-api/media/v4l2-fh.rst                         | 4 ++--
->  Documentation/translations/zh_CN/video4linux/v4l2-framework.txt    | 4 ++--
->  drivers/media/pci/cx18/cx18-fileops.c                              | 4 ++--
->  drivers/media/pci/ivtv/ivtv-fileops.c                              | 4 ++--
->  drivers/media/pci/saa7164/saa7164-encoder.c                        | 2 +-
->  drivers/media/pci/saa7164/saa7164-vbi.c                            | 2 +-
->  drivers/media/platform/allegro-dvt/allegro-core.c                  | 2 +-
->  drivers/media/platform/amlogic/meson-ge2d/ge2d.c                   | 2 +-
->  drivers/media/platform/amphion/vpu_v4l2.c                          | 4 ++--
->  drivers/media/platform/chips-media/coda/coda-common.c              | 4 ++--
->  drivers/media/platform/chips-media/wave5/wave5-helper.c            | 2 +-
->  drivers/media/platform/imagination/e5010-jpeg-enc.c                | 4 ++--
->  drivers/media/platform/m2m-deinterlace.c                           | 2 +-
->  drivers/media/platform/mediatek/jpeg/mtk_jpeg_core.c               | 4 ++--
->  drivers/media/platform/mediatek/mdp/mtk_mdp_m2m.c                  | 4 ++--
->  drivers/media/platform/mediatek/mdp3/mtk-mdp3-m2m.c                | 4 ++--
->  .../media/platform/mediatek/vcodec/decoder/mtk_vcodec_dec_drv.c    | 4 ++--
->  .../media/platform/mediatek/vcodec/encoder/mtk_vcodec_enc_drv.c    | 4 ++--
->  drivers/media/platform/nvidia/tegra-vde/v4l2.c                     | 2 +-
->  drivers/media/platform/nxp/dw100/dw100.c                           | 2 +-
->  drivers/media/platform/nxp/imx-jpeg/mxc-jpeg.c                     | 4 ++--
->  drivers/media/platform/nxp/imx-pxp.c                               | 2 +-
->  drivers/media/platform/nxp/imx8-isi/imx8-isi-m2m.c                 | 2 +-
->  drivers/media/platform/nxp/mx2_emmaprp.c                           | 2 +-
->  drivers/media/platform/qcom/iris/iris_vidc.c                       | 3 +--
->  drivers/media/platform/qcom/venus/core.c                           | 2 +-
->  drivers/media/platform/renesas/rcar_fdp1.c                         | 2 +-
->  drivers/media/platform/renesas/rcar_jpu.c                          | 4 ++--
->  drivers/media/platform/renesas/vsp1/vsp1_video.c                   | 2 +-
->  drivers/media/platform/rockchip/rga/rga.c                          | 2 +-
->  drivers/media/platform/rockchip/rkvdec/rkvdec.c                    | 2 +-
->  drivers/media/platform/samsung/exynos-gsc/gsc-m2m.c                | 4 ++--
->  drivers/media/platform/samsung/exynos4-is/fimc-m2m.c               | 4 ++--
->  drivers/media/platform/samsung/s5p-g2d/g2d.c                       | 2 +-
->  drivers/media/platform/samsung/s5p-jpeg/jpeg-core.c                | 4 ++--
->  drivers/media/platform/samsung/s5p-mfc/s5p_mfc.c                   | 4 ++--
->  drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c                   | 4 ++--
->  drivers/media/platform/st/sti/delta/delta-v4l2.c                   | 4 ++--
->  drivers/media/platform/st/sti/hva/hva-v4l2.c                       | 4 ++--
->  drivers/media/platform/st/stm32/dma2d/dma2d.c                      | 2 +-
->  drivers/media/platform/sunxi/sun8i-di/sun8i-di.c                   | 2 +-
->  drivers/media/platform/sunxi/sun8i-rotate/sun8i_rotate.c           | 2 +-
->  drivers/media/platform/ti/omap3isp/ispvideo.c                      | 5 ++---
->  drivers/media/platform/ti/vpe/vpe.c                                | 2 +-
->  drivers/media/platform/verisilicon/hantro_drv.c                    | 4 ++--
->  drivers/media/test-drivers/vicodec/vicodec-core.c                  | 2 +-
->  drivers/media/test-drivers/vim2m.c                                 | 2 +-
->  drivers/media/test-drivers/visl/visl-core.c                        | 2 +-
->  drivers/media/usb/pvrusb2/pvrusb2-v4l2.c                           | 3 +--
->  drivers/media/v4l2-core/v4l2-fh.c                                  | 7 ++++---
->  drivers/media/v4l2-core/v4l2-subdev.c                              | 5 ++---
->  drivers/staging/media/imx/imx-media-csc-scaler.c                   | 4 ++--
->  drivers/staging/media/meson/vdec/vdec.c                            | 2 +-
->  drivers/staging/media/sunxi/cedrus/cedrus.c                        | 2 +-
->  drivers/staging/most/video/video.c                                 | 4 ++--
->  drivers/usb/gadget/function/uvc_v4l2.c                             | 3 +--
->  include/media/v4l2-fh.h                                            | 5 ++++-
->  57 files changed, 89 insertions(+), 90 deletions(-)
+>  drivers/media/pci/zoran/zoran.h        | 6 ------
+>  drivers/media/pci/zoran/zoran_driver.c | 3 +--
+>  2 files changed, 1 insertion(+), 8 deletions(-)
 > 
-
-<snip>
-
-> diff --git a/drivers/media/v4l2-core/v4l2-fh.c b/drivers/media/v4l2-core/v4l2-fh.c
-> index b59b1084d8cdf1b62da12879e21dbe56c2109648..df3ba9d4674bd25626cfcddc2d0cb28c233e3cc3 100644
-> --- a/drivers/media/v4l2-core/v4l2-fh.c
-> +++ b/drivers/media/v4l2-core/v4l2-fh.c
-> @@ -67,7 +67,7 @@ int v4l2_fh_open(struct file *filp)
->  }
->  EXPORT_SYMBOL_GPL(v4l2_fh_open);
+> diff --git a/drivers/media/pci/zoran/zoran.h b/drivers/media/pci/zoran/zoran.h
+> index 1cd990468d3de9db8b14b72483972041c57bfee2..d05e222b392156bf1b3b4c83c6591db642c3c377 100644
+> --- a/drivers/media/pci/zoran/zoran.h
+> +++ b/drivers/media/pci/zoran/zoran.h
+> @@ -154,12 +154,6 @@ struct zoran_jpg_settings {
 >  
-> -void v4l2_fh_del(struct v4l2_fh *fh)
-> +void v4l2_fh_del(struct v4l2_fh *fh, struct file *filp)
+>  struct zoran;
+>  
+> -/* zoran_fh contains per-open() settings */
+> -struct zoran_fh {
+> -	struct v4l2_fh fh;
+> -	struct zoran *zr;
+> -};
+> -
+>  struct card_info {
+>  	enum card_type type;
+>  	char name[32];
+> diff --git a/drivers/media/pci/zoran/zoran_driver.c b/drivers/media/pci/zoran/zoran_driver.c
+> index f42f596d3e6295e31e3b33cd83c5f7243911bd30..ec7fc1da4cc02f5a344cb49bb9a783c41c758195 100644
+> --- a/drivers/media/pci/zoran/zoran_driver.c
+> +++ b/drivers/media/pci/zoran/zoran_driver.c
+> @@ -511,12 +511,11 @@ static int zoran_s_fmt_vid_cap(struct file *file, void *__fh,
 
-Instead of adding a second argument, perhaps it is better to
-just provide the filp pointer. After all, you can get the v4l2_fh
-from filp->private_data.
+This driver uses __fh as the name for the second argument of the ioctl
+callbacks. Can you take this opportunity to rename it to either 'fh' or 'priv'?
 
-It simplifies the code a bit.
+Generally it's not a good idea to prefix variables with __ for no good reason.
+
+Grepping for __fh also shows two other drivers:
+
+drivers/media/platform/chips-media/coda/coda-common.c:#define fh_to_ctx(__fh)   container_of(__fh, struct coda_ctx, fh)
+drivers/media/platform/samsung/s5p-mfc/s5p_mfc_common.h:#define fh_to_ctx(__fh) container_of(__fh, struct s5p_mfc_ctx, fh)
+
+I think it is a good idea to rename __fh to fh there as well.
 
 Regards,
 
 	Hans
 
+>  			       struct v4l2_format *fmt)
 >  {
->  	unsigned long flags;
+>  	struct zoran *zr = video_drvdata(file);
+> -	struct zoran_fh *fh = __fh;
+>  	int i;
+>  	int res = 0;
 >  
-> @@ -75,6 +75,8 @@ void v4l2_fh_del(struct v4l2_fh *fh)
->  	list_del_init(&fh->list);
->  	spin_unlock_irqrestore(&fh->vdev->fh_lock, flags);
->  	v4l2_prio_close(fh->vdev->prio, fh->prio);
-> +
-> +	filp->private_data = NULL;
->  }
->  EXPORT_SYMBOL_GPL(v4l2_fh_del);
+>  	if (fmt->fmt.pix.pixelformat == V4L2_PIX_FMT_MJPEG)
+> -		return zoran_s_fmt_vid_out(file, fh, fmt);
+> +		return zoran_s_fmt_vid_out(file, __fh, fmt);
 >  
-> @@ -94,10 +96,9 @@ int v4l2_fh_release(struct file *filp)
->  	struct v4l2_fh *fh = file_to_v4l2_fh(filp);
->  
->  	if (fh) {
-> -		v4l2_fh_del(fh);
-> +		v4l2_fh_del(fh, filp);
->  		v4l2_fh_exit(fh);
->  		kfree(fh);
-> -		filp->private_data = NULL;
->  	}
->  	return 0;
->  }
-
-<snip>
-
-> diff --git a/include/media/v4l2-fh.h b/include/media/v4l2-fh.h
-> index d8fcf49f10e09452b73499f4a9bd1285bc2835a5..5e4c761635120608e0b588e0b0daf63e69588d38 100644
-> --- a/include/media/v4l2-fh.h
-> +++ b/include/media/v4l2-fh.h
-> @@ -114,12 +114,15 @@ int v4l2_fh_open(struct file *filp);
->   * v4l2_fh_del - Remove file handle from the list of file handles.
->   *
->   * @fh: pointer to &struct v4l2_fh
-> + * @filp: pointer to &struct file associated with @fh
-> + *
-> + * The function resets filp->private_data to NULL.
->   *
->   * .. note::
->   *    Must be called in v4l2_file_operations->release\(\) handler if the driver
->   *    uses &struct v4l2_fh.
->   */
-> -void v4l2_fh_del(struct v4l2_fh *fh);
-> +void v4l2_fh_del(struct v4l2_fh *fh, struct file *filp);
->  
->  /**
->   * v4l2_fh_exit - Release resources related to a file handle.
+>  	for (i = 0; i < NUM_FORMATS; i++)
+>  		if (fmt->fmt.pix.pixelformat == zoran_formats[i].fourcc)
 > 
 
 
