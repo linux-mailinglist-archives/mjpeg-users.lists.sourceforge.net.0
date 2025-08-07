@@ -2,7 +2,7 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 43D9CB1F27C
+	by mail.lfdr.de (Postfix) with ESMTPS id 8E8EEB1F27D
 	for <lists+mjpeg-users@lfdr.de>; Sat,  9 Aug 2025 08:00:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
@@ -10,29 +10,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Id:Subject:In-Reply-To:MIME-Version:References:Message-ID:To:From:Date:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=umgbARGlKacp47mR8WEzxbyvTsWf4xpTSVWzBcaqfmU=; b=Ir5gKV6MJX3pV+WAtlcoV/eWwA
-	hz8+S9CgFuBqkZse0dt5kXH/tcwmJuR49Jp9DhKZVPe2vjWW8H7Q0woxdBqo+qkUAwPxMxw78JNEn
-	cGZnp1RiyafZ7mUNymgpHOncW2sH3cWjXVFG6auC4nR5enznQPOtAClmhaMtw82LL1ws=;
+	bh=u5xnqkMtbUkXgsHjyNpcTUxO5EeXgY+I3gPJHgF6SKg=; b=RiVGGhqWaHFrzd7cN2v4tPOvXv
+	Q6TtYJ+gdEL0caXsBwJpGCKcpFYBmm5D72uaePQlh+8GC0+qQnvw4S+PjCDyqyFp7OrMsK0ET8HL/
+	gGE2TgeJ9uo8DC18CpRXQ4umU2FHGB+vkeFb0tuxGqkG4Z8a+QY70o0UH9WQWMlPN2JQ=;
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1ukcd4-0008HN-AN;
+	id 1ukcd4-0008Ho-Jg;
 	Sat, 09 Aug 2025 06:00:31 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
  (envelope-from <laurent.pinchart@ideasonboard.com>)
- id 1uk404-0007x3-Qj for mjpeg-users@lists.sourceforge.net;
- Thu, 07 Aug 2025 17:01:56 +0000
+ id 1uk7Bu-0002vF-Ug for mjpeg-users@lists.sourceforge.net;
+ Thu, 07 Aug 2025 20:26:22 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=In-Reply-To:Content-Type:MIME-Version:References:
  Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=0hHjzk6OEPx/DxrUXCoCYF+jY9b4wb5tpgfvkFuR/rI=; b=C8rgrknfK2deTg4HJymzJORYPu
- 9mYI7tSCEM6aMnQnehJPCQNLvJ/nVnswFF5BF2j79JJC/Q3xLYXV5H+UDUusVoPowmOz+9hhlXcxO
- vk9Z7JiVVaakaAuT82KiIcyi9a9mCo7tLwh8z3CEUJpLI4GqBViaquQaqlZ4TTWi7OEw=;
+ bh=K4VVJCY7mMLNK0dJeXCXxMvd9Tr70iu5isC+puMOxwM=; b=cSUTKt/y7Qba2JYjXTQ+56oxGq
+ P8Llf09E8y6gSgy/51DS4WaAECgx5cOdshxFOXqNfFBqJrER4taMeXpfsT8VQPFurGqHOs0HXCkLY
+ r6jROYbGgUmKWizRfG+28VzVGneVHl13BD/kGku71jwyUTlmkwJIL5wPineGEAMX2yFI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:Subject:Cc:To
@@ -40,35 +40,37 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=0hHjzk6OEPx/DxrUXCoCYF+jY9b4wb5tpgfvkFuR/rI=; b=HGLGF/5cFNZlcc6HdRZybt/MYk
- gudWL4u77ymjXiLrgQBMWP5GSuTSmVIpD9q2rb67wuVvL2qPik1sz6/EUNwyzl3OAgjpaJjpaupRC
- 5YSNOEbGM67gkDlIg4g9NoitnQtX/Qf50vQ4uuliGKOletucx++ZQWpeawq/I/NyTwdM=;
+ bh=K4VVJCY7mMLNK0dJeXCXxMvd9Tr70iu5isC+puMOxwM=; b=MI1ZZZEYsisRKOv1wpRmwLX/rE
+ Ru9Bes9cTUd/hXUiQN3vZ9qBgHD/ZuTTAf3MEo3x9jguoBAWQpTFlg9Zw4daFrjQSbER/MCKAH3HL
+ es7XrQrdeLMaVnTyvKt1CeV6Mcdp5Hquo1FBcNY1Ro137/sWyFr0G6s82zA4GSmR4PnY=;
 Received: from perceval.ideasonboard.com ([213.167.242.64])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1uk404-0002yv-9R for mjpeg-users@lists.sourceforge.net;
- Thu, 07 Aug 2025 17:01:56 +0000
+ id 1uk7Bt-0007Hx-T8 for mjpeg-users@lists.sourceforge.net;
+ Thu, 07 Aug 2025 20:26:22 +0000
 Received: from pendragon.ideasonboard.com (81-175-209-231.bb.dnainternet.fi
  [81.175.209.231])
- by perceval.ideasonboard.com (Postfix) with UTF8SMTPSA id 609F3DF3;
- Thu,  7 Aug 2025 19:01:00 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with UTF8SMTPSA id 40EAFAD0;
+ Thu,  7 Aug 2025 22:25:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1754586061;
- bh=eCCvrUfJfnarnq3XXGkIUqgdLZRCxGn7qHjBBcKOTfw=;
+ s=mail; t=1754598319;
+ bh=o7LUjJMhR9kVMO0RUKgNBEeUWS6IQRa/l/xrEqZlJRU=;
  h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=qa00LrRfBwStZ0MwGF3BUrJozKPWBnVWsdgf1+OsXtES651W59SuzWCKxRv+u0MzL
- vdERPfJcXzpEuCfXJ6WUgW/ioMSeo/eds5iVtoV11pjp77cqXeHbO0+r7ju3n1fnSe
- peqJ6m9QUqBn7XnXj1slNAXIOCZtBOMXK7pPJ91I=
-Date: Thu, 7 Aug 2025 20:01:35 +0300
+ b=aW6JtiQ2/8Hfpq3R5Kl9ViTTqFaBbWQnRGDqk2G/G2RnJfHu6Pt/0jkrXy1vWhYFF
+ rW2JzUMUG1eq+u0S3BS8urig9CSDZiqXutOKIKblGLko41IDQcwQOwFNODkRGwRix6
+ gxhAuEzBuWlII8bO++3bbYIixr3rqneaI1t4QCzY=
+Date: Thu, 7 Aug 2025 23:25:53 +0300
 From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
-To: Sakari Ailus <sakari.ailus@linux.intel.com>
-Message-ID: <20250807170135.GH11583@pendragon.ideasonboard.com>
+To: Hans Verkuil <hverkuil+cisco@kernel.org>
+Message-ID: <20250807202553.GB28610@pendragon.ideasonboard.com>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
- <20250802-media-private-data-v1-64-eb140ddd6a9d@ideasonboard.com>
- <aJRswZIVKCuzqCpr@kekkonen.localdomain>
+ <20250802-media-private-data-v1-27-eb140ddd6a9d@ideasonboard.com>
+ <e9aaf929-5e0d-4379-996b-a564acd3e331@kernel.org>
+ <20250807085003.GE11583@pendragon.ideasonboard.com>
+ <20250807170004.GG11583@pendragon.ideasonboard.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <aJRswZIVKCuzqCpr@kekkonen.localdomain>
+In-Reply-To: <20250807170004.GG11583@pendragon.ideasonboard.com>
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: Spam detection software,
  running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
@@ -76,10 +78,10 @@ X-Spam-Report: Spam detection software,
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hi Sakari, On Thu, Aug 07, 2025 at 09:07:13AM +0000, Sakari
- Ailus wrote: > On Sat, Aug 02, 2025 at 11:23:26AM +0200, Jacopo Mondi wrote:
- > > From: Laurent Pinchart <laurent.pinchart@ideasonboard.com> > > > > The
- [...] Content analysis details:   (-0.2 points, 5.0 required)
+ Content preview:  On Thu, Aug 07, 2025 at 08:00:06PM +0300, Laurent Pinchart
+ wrote: > On Thu, Aug 07, 2025 at 11:50:07AM +0300, Laurent Pinchart wrote:
+ > > On Wed, Aug 06, 2025 at 02:45:14PM +0200, Hans Verkuil wrote: [...] 
+ Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
@@ -89,10 +91,10 @@ X-Spam-Report: Spam detection software,
  domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
-X-Headers-End: 1uk404-0002yv-9R
-X-Mailman-Approved-At: Sat, 09 Aug 2025 06:00:15 +0000
-Subject: Re: [Mjpeg-users] [PATCH 64/65] media: staging: ipu7: isys: Don't
- set V4L2_FL_USES_V4L2_FH manually
+X-Headers-End: 1uk7Bt-0007Hx-T8
+X-Mailman-Approved-At: Sat, 09 Aug 2025 06:00:13 +0000
+Subject: Re: [Mjpeg-users] [PATCH 27/65] media: Reset file->private_data to
+ NULL in v4l2_fh_del()
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -159,8 +161,8 @@ Cc: Heiko Stuebner <heiko@sntech.de>, Devarsh Thakkar <devarsht@ti.com>,
  Mauro Carvalho Chehab <mchehab@kernel.org>,
  Dikshita Agarwal <quic_dikshita@quicinc.com>, Tomasz Figa <tfiga@chromium.org>,
  Kieran Bingham <kieran.bingham+renesas@ideasonboard.com>,
- Shawn Guo <shawnguo@kernel.org>, Hans de Goede <hansg@kernel.org>,
- Minghsiu Tsai <minghsiu.tsai@mediatek.com>,
+ Sakari Ailus <sakari.ailus@linux.intel.com>, Shawn Guo <shawnguo@kernel.org>,
+ Hans de Goede <hansg@kernel.org>, Minghsiu Tsai <minghsiu.tsai@mediatek.com>,
  Daniel Almeida <daniel.almeida@collabora.com>,
  Alexandre Torgue <alexandre.torgue@foss.st.com>,
  Todor Tomov <todor.too@gmail.com>, Mirela Rabulea <mirela.rabulea@nxp.com>,
@@ -179,23 +181,236 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-Hi Sakari,
-
-On Thu, Aug 07, 2025 at 09:07:13AM +0000, Sakari Ailus wrote:
-> On Sat, Aug 02, 2025 at 11:23:26AM +0200, Jacopo Mondi wrote:
-> > From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+On Thu, Aug 07, 2025 at 08:00:06PM +0300, Laurent Pinchart wrote:
+> On Thu, Aug 07, 2025 at 11:50:07AM +0300, Laurent Pinchart wrote:
+> > On Wed, Aug 06, 2025 at 02:45:14PM +0200, Hans Verkuil wrote:
+> > > On 02/08/2025 11:22, Jacopo Mondi wrote:
+> > > > From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+> > > > 
+> > > > Multiple drivers that use v4l2_fh and call v4l2_fh_del() manually reset
+> > > > the file->private_data pointer to NULL in their video device .release()
+> > > > file operation handler. Move the code to the v4l2_fh_del() function to
+> > > > avoid direct access to file->private_data in drivers. This requires
+> > > > adding a file pointer argument to the function.
+> > > > 
+> > > > Changes to drivers have been generated with the following coccinelle
+> > > > semantic patch:
+> > > > 
+> > > > @@
+> > > > expression fh;
+> > > > identifier filp;
+> > > > identifier release;
+> > > > type ret;
+> > > > @@
+> > > > ret release(..., struct file *filp, ...)
+> > > > {
+> > > > 	<...
+> > > > -	filp->private_data = NULL;
+> > > > 	...
+> > > > -	v4l2_fh_del(fh);
+> > > > +	v4l2_fh_del(fh, filp);
+> > > > 	...>
+> > > > }
+> > > > 
+> > > > @@
+> > > > expression fh;
+> > > > identifier filp;
+> > > > identifier release;
+> > > > type ret;
+> > > > @@
+> > > > ret release(..., struct file *filp, ...)
+> > > > {
+> > > > 	<...
+> > > > -	v4l2_fh_del(fh);
+> > > > +	v4l2_fh_del(fh, filp);
+> > > > 	...
+> > > > -	filp->private_data = NULL;
+> > > > 	...>
+> > > > }
+> > > > 
+> > > > @@
+> > > > expression fh;
+> > > > identifier filp;
+> > > > identifier release;
+> > > > type ret;
+> > > > @@
+> > > > ret release(..., struct file *filp, ...)
+> > > > {
+> > > > 	<...
+> > > > -	v4l2_fh_del(fh);
+> > > > +	v4l2_fh_del(fh, filp);
+> > > > 	...>
+> > > > }
+> > > > 
+> > > > Manual changes have been applied to Documentation/ to update the usage
+> > > > patterns, to drivers/media/v4l2-core/v4l2-fh.c to update the
+> > > > v4l2_fh_del() prototype and reset file->private_data, and to
+> > > > include/media/v4l2-fh.h to update the v4l2_fh_del() function prototype
+> > > > and its documentation.
+> > > > 
+> > > > Additionally, white space issues have been fixed manually in
+> > > > drivers/usb/gadget/function/uvc_v4l2.c
+> > > > 
+> > > > Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+> > > > Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
+> > > > ---
+> > > >  Documentation/driver-api/media/v4l2-fh.rst                         | 4 ++--
+> > > >  Documentation/translations/zh_CN/video4linux/v4l2-framework.txt    | 4 ++--
+> > > >  drivers/media/pci/cx18/cx18-fileops.c                              | 4 ++--
+> > > >  drivers/media/pci/ivtv/ivtv-fileops.c                              | 4 ++--
+> > > >  drivers/media/pci/saa7164/saa7164-encoder.c                        | 2 +-
+> > > >  drivers/media/pci/saa7164/saa7164-vbi.c                            | 2 +-
+> > > >  drivers/media/platform/allegro-dvt/allegro-core.c                  | 2 +-
+> > > >  drivers/media/platform/amlogic/meson-ge2d/ge2d.c                   | 2 +-
+> > > >  drivers/media/platform/amphion/vpu_v4l2.c                          | 4 ++--
+> > > >  drivers/media/platform/chips-media/coda/coda-common.c              | 4 ++--
+> > > >  drivers/media/platform/chips-media/wave5/wave5-helper.c            | 2 +-
+> > > >  drivers/media/platform/imagination/e5010-jpeg-enc.c                | 4 ++--
+> > > >  drivers/media/platform/m2m-deinterlace.c                           | 2 +-
+> > > >  drivers/media/platform/mediatek/jpeg/mtk_jpeg_core.c               | 4 ++--
+> > > >  drivers/media/platform/mediatek/mdp/mtk_mdp_m2m.c                  | 4 ++--
+> > > >  drivers/media/platform/mediatek/mdp3/mtk-mdp3-m2m.c                | 4 ++--
+> > > >  .../media/platform/mediatek/vcodec/decoder/mtk_vcodec_dec_drv.c    | 4 ++--
+> > > >  .../media/platform/mediatek/vcodec/encoder/mtk_vcodec_enc_drv.c    | 4 ++--
+> > > >  drivers/media/platform/nvidia/tegra-vde/v4l2.c                     | 2 +-
+> > > >  drivers/media/platform/nxp/dw100/dw100.c                           | 2 +-
+> > > >  drivers/media/platform/nxp/imx-jpeg/mxc-jpeg.c                     | 4 ++--
+> > > >  drivers/media/platform/nxp/imx-pxp.c                               | 2 +-
+> > > >  drivers/media/platform/nxp/imx8-isi/imx8-isi-m2m.c                 | 2 +-
+> > > >  drivers/media/platform/nxp/mx2_emmaprp.c                           | 2 +-
+> > > >  drivers/media/platform/qcom/iris/iris_vidc.c                       | 3 +--
+> > > >  drivers/media/platform/qcom/venus/core.c                           | 2 +-
+> > > >  drivers/media/platform/renesas/rcar_fdp1.c                         | 2 +-
+> > > >  drivers/media/platform/renesas/rcar_jpu.c                          | 4 ++--
+> > > >  drivers/media/platform/renesas/vsp1/vsp1_video.c                   | 2 +-
+> > > >  drivers/media/platform/rockchip/rga/rga.c                          | 2 +-
+> > > >  drivers/media/platform/rockchip/rkvdec/rkvdec.c                    | 2 +-
+> > > >  drivers/media/platform/samsung/exynos-gsc/gsc-m2m.c                | 4 ++--
+> > > >  drivers/media/platform/samsung/exynos4-is/fimc-m2m.c               | 4 ++--
+> > > >  drivers/media/platform/samsung/s5p-g2d/g2d.c                       | 2 +-
+> > > >  drivers/media/platform/samsung/s5p-jpeg/jpeg-core.c                | 4 ++--
+> > > >  drivers/media/platform/samsung/s5p-mfc/s5p_mfc.c                   | 4 ++--
+> > > >  drivers/media/platform/st/sti/bdisp/bdisp-v4l2.c                   | 4 ++--
+> > > >  drivers/media/platform/st/sti/delta/delta-v4l2.c                   | 4 ++--
+> > > >  drivers/media/platform/st/sti/hva/hva-v4l2.c                       | 4 ++--
+> > > >  drivers/media/platform/st/stm32/dma2d/dma2d.c                      | 2 +-
+> > > >  drivers/media/platform/sunxi/sun8i-di/sun8i-di.c                   | 2 +-
+> > > >  drivers/media/platform/sunxi/sun8i-rotate/sun8i_rotate.c           | 2 +-
+> > > >  drivers/media/platform/ti/omap3isp/ispvideo.c                      | 5 ++---
+> > > >  drivers/media/platform/ti/vpe/vpe.c                                | 2 +-
+> > > >  drivers/media/platform/verisilicon/hantro_drv.c                    | 4 ++--
+> > > >  drivers/media/test-drivers/vicodec/vicodec-core.c                  | 2 +-
+> > > >  drivers/media/test-drivers/vim2m.c                                 | 2 +-
+> > > >  drivers/media/test-drivers/visl/visl-core.c                        | 2 +-
+> > > >  drivers/media/usb/pvrusb2/pvrusb2-v4l2.c                           | 3 +--
+> > > >  drivers/media/v4l2-core/v4l2-fh.c                                  | 7 ++++---
+> > > >  drivers/media/v4l2-core/v4l2-subdev.c                              | 5 ++---
+> > > >  drivers/staging/media/imx/imx-media-csc-scaler.c                   | 4 ++--
+> > > >  drivers/staging/media/meson/vdec/vdec.c                            | 2 +-
+> > > >  drivers/staging/media/sunxi/cedrus/cedrus.c                        | 2 +-
+> > > >  drivers/staging/most/video/video.c                                 | 4 ++--
+> > > >  drivers/usb/gadget/function/uvc_v4l2.c                             | 3 +--
+> > > >  include/media/v4l2-fh.h                                            | 5 ++++-
+> > > >  57 files changed, 89 insertions(+), 90 deletions(-)
+> > > > 
+> > > 
+> > > <snip>
+> > > 
+> > > > diff --git a/drivers/media/v4l2-core/v4l2-fh.c b/drivers/media/v4l2-core/v4l2-fh.c
+> > > > index b59b1084d8cdf1b62da12879e21dbe56c2109648..df3ba9d4674bd25626cfcddc2d0cb28c233e3cc3 100644
+> > > > --- a/drivers/media/v4l2-core/v4l2-fh.c
+> > > > +++ b/drivers/media/v4l2-core/v4l2-fh.c
+> > > > @@ -67,7 +67,7 @@ int v4l2_fh_open(struct file *filp)
+> > > >  }
+> > > >  EXPORT_SYMBOL_GPL(v4l2_fh_open);
+> > > >  
+> > > > -void v4l2_fh_del(struct v4l2_fh *fh)
+> > > > +void v4l2_fh_del(struct v4l2_fh *fh, struct file *filp)
+> > > 
+> > > Instead of adding a second argument, perhaps it is better to
+> > > just provide the filp pointer. After all, you can get the v4l2_fh
+> > > from filp->private_data.
+> > > 
+> > > It simplifies the code a bit.
 > > 
-> > The V4L2_FL_USES_V4L2_FH flag is set by v4l2_fh_init(). It is not meant
-> > to be set manually by drivers. Drop it from the ipu7-isys driver.
-> > 
-> > Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
-> > Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
+> > That's an interesting idea. I'll give it a try.
 > 
-> Thanks, Jacopo!
+> We end up with code like (e.g. in v4l2_fh_release(), with similar
+> constructs in lots of drivers)
 > 
-> Reviewed-by: Sakari Ailus <sakari.ailus@linux.intel.com>
+> 	if (fh) {
+> 		v4l2_fh_del(filp);
+> 		v4l2_fh_exit(fh);
+> 		kfree(fh);
+> 	}
+> 
+> compared to
+> 
+> 	if (fh) {
+> 		v4l2_fh_del(fh, filp);
+> 		v4l2_fh_exit(fh);
+> 		kfree(fh);
+> 	}
+> 
+> with the existing patch. I find the fact that v4l2_fh_del() takes a
+> different pointer than v4l2_fh_exit() a bit disturbing. If you think
+> it's better I'll drop the fh argument in v2.
 
-Can we get you review on patch 63/65 too (for the IPU6 driver) too ?
+I gave it a try, and looking at the function prototype, its
+documentation, the imbalance with v4l2_fh_add(), and the code in the
+callers, I think keeping both arguments would look cleaner. Please tell
+me if you feel strongly about this, I can still submit a patch to drop
+the argument. It can very easily be scripted with coccinelle and doesn't
+conflict with the rest of the series, so it could also be done later.
+
+> > > >  {
+> > > >  	unsigned long flags;
+> > > >  
+> > > > @@ -75,6 +75,8 @@ void v4l2_fh_del(struct v4l2_fh *fh)
+> > > >  	list_del_init(&fh->list);
+> > > >  	spin_unlock_irqrestore(&fh->vdev->fh_lock, flags);
+> > > >  	v4l2_prio_close(fh->vdev->prio, fh->prio);
+> > > > +
+> > > > +	filp->private_data = NULL;
+> > > >  }
+> > > >  EXPORT_SYMBOL_GPL(v4l2_fh_del);
+> > > >  
+> > > > @@ -94,10 +96,9 @@ int v4l2_fh_release(struct file *filp)
+> > > >  	struct v4l2_fh *fh = file_to_v4l2_fh(filp);
+> > > >  
+> > > >  	if (fh) {
+> > > > -		v4l2_fh_del(fh);
+> > > > +		v4l2_fh_del(fh, filp);
+> > > >  		v4l2_fh_exit(fh);
+> > > >  		kfree(fh);
+> > > > -		filp->private_data = NULL;
+> > > >  	}
+> > > >  	return 0;
+> > > >  }
+> > > 
+> > > <snip>
+> > > 
+> > > > diff --git a/include/media/v4l2-fh.h b/include/media/v4l2-fh.h
+> > > > index d8fcf49f10e09452b73499f4a9bd1285bc2835a5..5e4c761635120608e0b588e0b0daf63e69588d38 100644
+> > > > --- a/include/media/v4l2-fh.h
+> > > > +++ b/include/media/v4l2-fh.h
+> > > > @@ -114,12 +114,15 @@ int v4l2_fh_open(struct file *filp);
+> > > >   * v4l2_fh_del - Remove file handle from the list of file handles.
+> > > >   *
+> > > >   * @fh: pointer to &struct v4l2_fh
+> > > > + * @filp: pointer to &struct file associated with @fh
+> > > > + *
+> > > > + * The function resets filp->private_data to NULL.
+> > > >   *
+> > > >   * .. note::
+> > > >   *    Must be called in v4l2_file_operations->release\(\) handler if the driver
+> > > >   *    uses &struct v4l2_fh.
+> > > >   */
+> > > > -void v4l2_fh_del(struct v4l2_fh *fh);
+> > > > +void v4l2_fh_del(struct v4l2_fh *fh, struct file *filp);
+> > > >  
+> > > >  /**
+> > > >   * v4l2_fh_exit - Release resources related to a file handle.
 
 -- 
 Regards,
