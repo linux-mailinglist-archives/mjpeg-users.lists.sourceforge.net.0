@@ -2,7 +2,7 @@ Return-Path: <mjpeg-users-bounces@lists.sourceforge.net>
 X-Original-To: lists+mjpeg-users@lfdr.de
 Delivered-To: lists+mjpeg-users@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id CF8EFB1F26E
+	by mail.lfdr.de (Postfix) with ESMTPS id DD0F9B1F272
 	for <lists+mjpeg-users@lfdr.de>; Sat,  9 Aug 2025 08:00:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
@@ -10,29 +10,29 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Id:Subject:In-Reply-To:MIME-Version:References:Message-ID:To:From:Date:
 	Sender:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	bh=ckkQyDBcLb+5P/z5IIcT2KekbjKFjI4lo2shHNZEllA=; b=UNFa+Xt/SzkidRsEzaRIXkG4fk
-	x9GWkU9rEVF6KLnPL/UNMetLurirSdysoZfbjuedTRYf1P9WgtlWZsmxp5WBt4D9EsegINfUqneAz
-	3c9Ysyk3WS1L0MndluB1+ZgFCkq5ctsj++WtG0lvmZvdlVTxKoZIOkEAj3XMjaK1Xchk=;
+	bh=dvCNd+adr6ba74VW7GcljqQy2IMkp6Q+8T7oG+LjBX4=; b=HkRxMr2cC+32eXNvsuA2hjW0FF
+	RVkKhAJiBzRIgl3pedRLptLKhUXAR+H/pG5MUI/oaMZnFTsv70yZZq40FDhe14XaTwpMaA8ngVRKS
+	Ae+ARGIoUKb7Vdn5vew9Mi97UZxlXRuflYFRHAo7idr4ECkydVP83k/NtaYYpHOgKN9U=;
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <mjpeg-users-bounces@lists.sourceforge.net>)
-	id 1ukccz-0008Ce-Cy;
+	id 1ukccz-0008Cx-O2;
 	Sat, 09 Aug 2025 06:00:26 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <sakari.ailus@linux.intel.com>) id 1ukHg7-0007zo-7a
+ (envelope-from <sakari.ailus@linux.intel.com>) id 1ukHgT-0001le-6X
  for mjpeg-users@lists.sourceforge.net;
- Fri, 08 Aug 2025 07:38:15 +0000
+ Fri, 08 Aug 2025 07:38:37 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=In-Reply-To:Content-Type:MIME-Version:References:
  Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Opw/GpESMUHtKVvdKHDSTUQ7/D3L/jGqJSbfELlyDmA=; b=R6na2SLIIM+HPlWVL4qlKsxeNJ
- y/CS0g/5ztHup0u2QHaiR8u2GFPOVOSR6XgEDB21/i4bgMPLHl/pplzsQevHOzQEsJvl9oHFZUN4d
- XmzwW3aFNHGrMGzWtytrFmEtlJHumNh3yGPezWOoNOU2WOyxgMakpg5RT/Ws/UIeY0sw=;
+ bh=vC9kSzidZ3lEzWsQIFhc/wqeFJziVL3H7AjboZgOxSk=; b=CWCGQIK05rD8bWrH6PEjbwb7W8
+ h3Wj9qPnfnQSuCPsII9OXenOByIoia5yABLRovzoP/4DYr4YoodI7dzoYMpqyVPw30FsSR2C9iN0S
+ jG4n8+6R1a9YBtV1fIh5ytxtPn7qDqBTGqJo7QuzPmqsbsVVD+XQNKZqDgKJmBB5/JS0=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:Subject:Cc:To
@@ -40,77 +40,78 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=Opw/GpESMUHtKVvdKHDSTUQ7/D3L/jGqJSbfELlyDmA=; b=EVyIQp+8kMM50ygExfuSky8dXh
- XKX2GUMasmCYBkWbbH/IC4LnmitR6hZK3zk6lBdeOHUVdb+hqBx5CetPZ67pF8kXBlKXWnJLvKGS2
- RSNxYBJabNkztnpa2cxbZfqrdwGeLWMDedCnxyXS+0iOyysXztweDiNZDNfnMmZuPmRQ=;
+ bh=vC9kSzidZ3lEzWsQIFhc/wqeFJziVL3H7AjboZgOxSk=; b=CeWwUdZ7j4XgQsoTRDkxwKtq7g
+ Mooz7PRMM3Frzf5HZovVutyi6fMD4flolnvvCCXJq8fDZXZz0m+riy6P3Cf6nnFFBoZXdN40wCYDm
+ b3JEXCFNOfLgP7KgH+q/Di2QL+a/e1TrNcRpVSUPJ+nuXPAMj08tSFJMJAz3igtMCujE=;
 Received: from mgamail.intel.com ([192.198.163.7])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ukHg6-0001Pw-QM for mjpeg-users@lists.sourceforge.net;
- Fri, 08 Aug 2025 07:38:15 +0000
+ id 1ukHgS-0001RV-Mx for mjpeg-users@lists.sourceforge.net;
+ Fri, 08 Aug 2025 07:38:37 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple;
  d=intel.com; i=@intel.com; q=dns/txt; s=Intel;
- t=1754638694; x=1786174694;
+ t=1754638716; x=1786174716;
  h=date:from:to:cc:subject:message-id:references:
  mime-version:in-reply-to;
- bh=D0yQI0889uGDxttAL1VW9IziZZW2CO6lra8hHuRfDUc=;
- b=fdKpEOG4OZza7z1YqNcfg/HsdgGsrbJjB6bx2qRzgt8uFvWahGX+y+lm
- /xOjb36Mlbpumg5nAQqR7ZUY6c59pcuImxsvant6v85RVmqiORK/ROREs
- ZX4J8RCrf6v50okqEh9oNY5AqJd9p8Y/+6fHUgzcNYeSiImZo7kfwc7QN
- NC4L0BC4x2stzFoqvZjtBX/q65desf3HNWOlBcFdQ8dS+pqpgFU1Db/WQ
- GxtcNdhmKttdudj1imGXRRpE5Av8WeXOdiqXwZIWH0zX1aEUTBrHtVmYD
- Rr/p1edFqOoGntlTGstfE0nXy0h71niarfx7hVz8H0pZuu+BMoqyx99h1 w==;
-X-CSE-ConnectionGUID: 8lj7W28ZSqaeWA1EZTEjVQ==
-X-CSE-MsgGUID: qcrjHkXTSJKdGiro/+2sUw==
-X-IronPort-AV: E=McAfee;i="6800,10657,11514"; a="82427401"
-X-IronPort-AV: E=Sophos;i="6.17,274,1747724400"; d="scan'208";a="82427401"
+ bh=fbLBorPezoJWXQtvSg4WV87SLfHofuZpGSIX8FwjR+A=;
+ b=nfZ4Ww5sGF4TlmMyVQ9TpIdDlTEpjPBlDmWxfit6hrxZBJWZ5bVoxEWn
+ vGlJW0VEnGZjy7g03WdQiU6PLpDR+wMOMhvta0TDKAqIcIBR00srZtsVW
+ TIggVxcZlLz+WW3TPmfNqHAVxAPFxAkdybG7hzbNpMeYeY9hy6rH9zwQc
+ tMPDCFWXh4ggZlzSbWFGdXIwiiGO5oJbr7lxNMVMhU0CDIEalbFQ8PdGB
+ t8bqd3G7Gelnm938J7BADEjeiWDdsGVbN0WU+srAXXAER3PoEQ1EwJ/7A
+ jRR3DOpWE02+RyGXv0OiINgrXMRAB2uXR7nsImr4XihHUQgTQXAznjXHu g==;
+X-CSE-ConnectionGUID: 6wcYzURYR4W4CU+kNuc9fg==
+X-CSE-MsgGUID: vFw1MC2ySbmjUF7N6KTz3w==
+X-IronPort-AV: E=McAfee;i="6800,10657,11514"; a="82427465"
+X-IronPort-AV: E=Sophos;i="6.17,274,1747724400"; d="scan'208";a="82427465"
 Received: from fmviesa002.fm.intel.com ([10.60.135.142])
  by fmvoesa101.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 08 Aug 2025 00:22:21 -0700
-X-CSE-ConnectionGUID: hM7JLmW/RPCNPH3wwurmHw==
-X-CSE-MsgGUID: QgYUze20SyS8phiQ3aIPmQ==
+ 08 Aug 2025 00:22:44 -0700
+X-CSE-ConnectionGUID: OdNPlVlrR9m1H28JVd9Cfw==
+X-CSE-MsgGUID: 6MIOtN9XTOqpGi12upForA==
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="6.17,274,1747724400"; d="scan'208";a="188944094"
+X-IronPort-AV: E=Sophos;i="6.17,274,1747724400"; d="scan'208";a="188944168"
 Received: from fpallare-mobl4.ger.corp.intel.com (HELO kekkonen.fi.intel.com)
  ([10.245.245.151])
  by fmviesa002-auth.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 08 Aug 2025 00:22:10 -0700
+ 08 Aug 2025 00:22:33 -0700
 Received: from kekkonen.localdomain (localhost [127.0.0.1])
- by kekkonen.fi.intel.com (Postfix) with SMTP id 7740C11FC4D;
- Fri,  8 Aug 2025 10:22:07 +0300 (EEST)
-Date: Fri, 8 Aug 2025 07:22:07 +0000
+ by kekkonen.fi.intel.com (Postfix) with SMTP id 7FB8211FC97;
+ Fri,  8 Aug 2025 10:22:31 +0300 (EEST)
+Date: Fri, 8 Aug 2025 07:22:31 +0000
 Organization: Intel Finland Oy - BIC 0357606-4 - c/o Alberga Business Park,
  6 krs, Bertel Jungin Aukio 5, 02600 Espoo
 From: Sakari Ailus <sakari.ailus@linux.intel.com>
-To: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
-Message-ID: <aJWlnxqLtAModloU@kekkonen.localdomain>
+To: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Message-ID: <aJWltxB6NfXg53KI@kekkonen.localdomain>
 References: <20250802-media-private-data-v1-0-eb140ddd6a9d@ideasonboard.com>
- <20250802-media-private-data-v1-63-eb140ddd6a9d@ideasonboard.com>
+ <20250802-media-private-data-v1-64-eb140ddd6a9d@ideasonboard.com>
+ <aJRswZIVKCuzqCpr@kekkonen.localdomain>
+ <20250807170135.GH11583@pendragon.ideasonboard.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20250802-media-private-data-v1-63-eb140ddd6a9d@ideasonboard.com>
+In-Reply-To: <20250807170135.GH11583@pendragon.ideasonboard.com>
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  On Sat, Aug 02, 2025 at 11:23:25AM +0200, Jacopo Mondi wrote:
- > From: Laurent Pinchart <laurent.pinchart@ideasonboard.com> > > The
- V4L2_FL_USES_V4L2_FH
- flag is set by v4l2_fh_init(). It is not meant > [...] 
+ Content preview:  On Thu, Aug 07, 2025 at 08:01:35PM +0300, Laurent Pinchart
+ wrote: > Hi Sakari, > > On Thu, Aug 07, 2025 at 09:07:13AM +0000, Sakari
+ Ailus wrote: > > On Sat, Aug 02, 2025 at 11:23:26AM +0200, Jacopo Mo [...]
  Content analysis details:   (-0.0 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.0 DKIMWL_WL_HIGH         DKIMwl.org - High trust sender
-X-Headers-End: 1ukHg6-0001Pw-QM
+X-Headers-End: 1ukHgS-0001RV-Mx
 X-Mailman-Approved-At: Sat, 09 Aug 2025 06:00:13 +0000
-Subject: Re: [Mjpeg-users] [PATCH 63/65] media: ipu6: isys: Don't set
- V4L2_FL_USES_V4L2_FH manually
+Subject: Re: [Mjpeg-users] [PATCH 64/65] media: staging: ipu7: isys: Don't
+ set V4L2_FL_USES_V4L2_FH manually
 X-BeenThere: mjpeg-users@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -133,7 +134,7 @@ Cc: Heiko Stuebner <heiko@sntech.de>, Devarsh Thakkar <devarsht@ti.com>,
  Samuel Holland <samuel@sholland.org>, Kevin Hilman <khilman@baylibre.com>,
  Jacob Chen <jacob-chen@iotwrt.com>, Steve Longerbeam <slongerbeam@gmail.com>,
  Bingbu Cao <bingbu.cao@intel.com>, linux-sunxi@lists.linux.dev,
- Sascha Hauer <s.hauer@pengutronix.de>,
+ linux-tegra@vger.kernel.org, Sascha Hauer <s.hauer@pengutronix.de>,
  =?utf-8?Q?=C5=81ukasz?= Stelmach <l.stelmach@samsung.com>,
  Andrzej Pietrasiewicz <andrzejtp2010@gmail.com>,
  Nas Chung <nas.chung@chipsnmedia.com>, Andy Walls <awalls@md.metrocast.net>,
@@ -144,8 +145,7 @@ Cc: Heiko Stuebner <heiko@sntech.de>, Devarsh Thakkar <devarsht@ti.com>,
  Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
  Sylwester Nawrocki <s.nawrocki@samsung.com>, linux-doc@vger.kernel.org,
  Yunfei Dong <yunfei.dong@mediatek.com>, linux-kernel@vger.kernel.org,
- Thierry Reding <thierry.reding@gmail.com>,
- Krzysztof Kozlowski <krzk@kernel.org>, Yanteng Si <si.yanteng@linux.dev>,
+ Thierry Reding <thierry.reding@gmail.com>, Yanteng Si <si.yanteng@linux.dev>,
  Magnus Damm <magnus.damm@gmail.com>, Jonathan Hunter <jonathanh@nvidia.com>,
  linux-rockchip@lists.infradead.org, Dongliang Mu <dzm91@hust.edu.cn>,
  Fabien Dessenne <fabien.dessenne@foss.st.com>,
@@ -162,15 +162,16 @@ Cc: Heiko Stuebner <heiko@sntech.de>, Devarsh Thakkar <devarsht@ti.com>,
  Nicolas Dufresne <nicolas.dufresne@collabora.com>,
  Jacek Anaszewski <jacek.anaszewski@gmail.com>, imx@lists.linux.dev,
  Xavier Roumegue <xavier.roumegue@oss.nxp.com>,
- Vikash Garodia <quic_vgarodia@quicinc.com>, linux-tegra@vger.kernel.org,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
+ Vikash Garodia <quic_vgarodia@quicinc.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Jernej Skrabec <jernej.skrabec@gmail.com>,
  Andrzej Hajda <andrzej.hajda@intel.com>, Fabio Estevam <festevam@gmail.com>,
  Jean-Christophe Trotin <jean-christophe.trotin@foss.st.com>,
  Detlev Casanova <detlev.casanova@collabora.com>,
  Benjamin Gaignard <benjamin.gaignard@collabora.com>,
  Jonathan Corbet <corbet@lwn.net>, Mike Isely <isely@pobox.com>,
  Jackson Lee <jackson.lee@chipsnmedia.com>, linux-staging@lists.linux.dev,
- Jernej Skrabec <jernej.skrabec@gmail.com>, Chen-Yu Tsai <wens@csie.org>,
+ Krzysztof Kozlowski <krzk@kernel.org>, Chen-Yu Tsai <wens@csie.org>,
  Bryan O'Donoghue <bryan.odonoghue@linaro.org>, Bin Liu <bin.liu@mediatek.com>,
  mjpeg-users@lists.sourceforge.net,
  Sylwester Nawrocki <sylvester.nawrocki@gmail.com>,
@@ -187,7 +188,8 @@ Cc: Heiko Stuebner <heiko@sntech.de>, Devarsh Thakkar <devarsht@ti.com>,
  Mikhail Ulyanov <mikhail.ulyanov@cogentembedded.com>,
  Abhinav Kumar <abhinav.kumar@linux.dev>, Benoit Parrot <bparrot@ti.com>,
  Parthiban Veerasooran <parthiban.veerasooran@microchip.com>,
- Hans Verkuil <hverkuil@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Hans Verkuil <hverkuil@kernel.org>,
+ Jacopo Mondi <jacopo.mondi@ideasonboard.com>,
  Tiffany Lin <tiffany.lin@mediatek.com>,
  AngeloGioacchino Del Regno <angelogioacchino.delregno@collabora.com>,
  Philipp Zabel <p.zabel@pengutronix.de>,
@@ -196,16 +198,26 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: mjpeg-users-bounces@lists.sourceforge.net
 
-On Sat, Aug 02, 2025 at 11:23:25AM +0200, Jacopo Mondi wrote:
-> From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+On Thu, Aug 07, 2025 at 08:01:35PM +0300, Laurent Pinchart wrote:
+> Hi Sakari,
 > 
-> The V4L2_FL_USES_V4L2_FH flag is set by v4l2_fh_init(). It is not meant
-> to be set manually by drivers. Drop it from the ipu6-isys driver.
+> On Thu, Aug 07, 2025 at 09:07:13AM +0000, Sakari Ailus wrote:
+> > On Sat, Aug 02, 2025 at 11:23:26AM +0200, Jacopo Mondi wrote:
+> > > From: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+> > > 
+> > > The V4L2_FL_USES_V4L2_FH flag is set by v4l2_fh_init(). It is not meant
+> > > to be set manually by drivers. Drop it from the ipu7-isys driver.
+> > > 
+> > > Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+> > > Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
+> > 
+> > Thanks, Jacopo!
+> > 
+> > Reviewed-by: Sakari Ailus <sakari.ailus@linux.intel.com>
 > 
-> Signed-off-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
-> Signed-off-by: Jacopo Mondi <jacopo.mondi@ideasonboard.com>
+> Can we get you review on patch 63/65 too (for the IPU6 driver) too ?
 
-Reviewed-by: Sakari Ailus <sakari.ailus@linux.intel.com>
+Done.
 
 -- 
 Sakari Ailus
